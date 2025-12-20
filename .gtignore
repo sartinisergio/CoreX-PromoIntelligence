@@ -1,0 +1,24 @@
+# Virtual environment
+venv/
+.venv/
+
+# Settings con API key
+data/.settings.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Outputs (opzionale, rimuovi se vuoi salvare)
+# data/outputs/
