@@ -74,7 +74,12 @@ st.sidebar.title("⚙️ Configurazione")
 # Input API Key con valore salvato
 st.sidebar.subheader("🔑 OpenAI API Key")
 
-saved_api_key = settings.get("api_key", "")
+# Leggi API Key: prima da Streamlit Secrets (cloud), poi da settings locali
+try:
+    saved_api_key = st.secrets.get("OPENAI_API_KEY", "") or settings.get("api_key", "")
+except:
+    saved_api_key = settings.get("api_key", "")
+
 
 api_key = st.sidebar.text_input(
     "Inserisci la tua API Key",
