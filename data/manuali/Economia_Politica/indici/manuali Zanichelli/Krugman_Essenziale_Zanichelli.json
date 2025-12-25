@@ -1,0 +1,506 @@
+{
+  "id": "Krugman_essenziale",
+  "title": "Essenziale di Economia",
+  "author": "Krugman Paul, Wells Robin",
+  "publisher": "Zanichelli",
+  "subject": "Economia Politica",
+  "type": "zanichelli",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "I principi fondamentali",
+      "page_start": 1,
+      "sections": [
+        {
+          "title": "I principi alla base delle scelte individuali: il nucleo dell'economia",
+          "page_start": 5
+        },
+        {
+          "title": "L'interazione: come funziona un sistema economico",
+          "page_start": 10
+        },
+        {
+          "title": "Le interazioni nell'intero sistema economico",
+          "page_start": 15
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "I modelli economici: trade-off e scambio",
+      "page_start": 22,
+      "sections": [
+        {
+          "title": "I modelli in economia: alcuni esempi importanti",
+          "page_start": 23
+        },
+        {
+          "title": "Il vantaggio comparato e il commercio internazionale nel mondo reale",
+          "page_start": 32
+        },
+        {
+          "title": "Le transazioni: il diagramma di flusso circolare",
+          "page_start": 32
+        },
+        {
+          "title": "Usare i modelli",
+          "page_start": 36
+        },
+        {
+          "title": "Quando e perché gli economisti sono in disaccordo",
+          "page_start": 37
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Domanda e offerta",
+      "page_start": 57,
+      "sections": [
+        {
+          "title": "Domanda e offerta: il modello di un mercato concorrenziale",
+          "page_start": 58
+        },
+        {
+          "title": "La curva di domanda",
+          "page_start": 59
+        },
+        {
+          "title": "La curva di offerta",
+          "page_start": 68
+        },
+        {
+          "title": "Domanda, offerta ed equilibrio",
+          "page_start": 75
+        },
+        {
+          "title": "I cambiamenti della domanda e dell'offerta",
+          "page_start": 79
+        },
+        {
+          "title": "Mercati concorrenziali e altri mercati",
+          "page_start": 84
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Controlli dei prezzi e della quantità: interferire nel funzionamento dei mercati",
+      "page_start": 90,
+      "sections": [
+        {
+          "title": "Surplus del consumatore e curva di domanda",
+          "page_start": 91
+        },
+        {
+          "title": "Surplus del produttore e curva di offerta",
+          "page_start": 93
+        },
+        {
+          "title": "I benefici dello scambio",
+          "page_start": 95
+        },
+        {
+          "title": "Perché i governi vogliono controllare i prezzi",
+          "page_start": 97
+        },
+        {
+          "title": "I livelli massimi di prezzo",
+          "page_start": 98
+        },
+        {
+          "title": "I livelli minimi di prezzo",
+          "page_start": 106
+        },
+        {
+          "title": "I controlli della quantità",
+          "page_start": 111
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Elasticità e tassazione",
+      "page_start": 123,
+      "sections": [
+        {
+          "title": "Definire e misurare l'elasticità",
+          "page_start": 124
+        },
+        {
+          "title": "Interpretare l'elasticità della domanda al prezzo",
+          "page_start": 127
+        },
+        {
+          "title": "Altre elasticità della domanda",
+          "page_start": 136
+        },
+        {
+          "title": "L'elasticità dell'offerta al prezzo",
+          "page_start": 138
+        },
+        {
+          "title": "Una sinossi dell'elasticità",
+          "page_start": 141
+        },
+        {
+          "title": "Costi e benefici della tassazione",
+          "page_start": 141
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Dietro la curva di offerta: fattori di produzione e costi",
+      "page_start": 156,
+      "sections": [
+        {
+          "title": "La funzione di produzione",
+          "page_start": 157
+        },
+        {
+          "title": "Due concetti chiave: il costo marginale e il costo medio",
+          "page_start": 163
+        },
+        {
+          "title": "I costi di lungo e di breve periodo",
+          "page_start": 170
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "La concorrenza perfetta e la curva di offerta",
+      "page_start": 181,
+      "sections": [
+        {
+          "title": "La concorrenza perfetta",
+          "page_start": 182
+        },
+        {
+          "title": "Produzione e profitti",
+          "page_start": 185
+        },
+        {
+          "title": "La curva di offerta di settore",
+          "page_start": 196
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Il monopolio",
+      "page_start": 207,
+      "sections": [
+        {
+          "title": "I tipi di struttura di mercato",
+          "page_start": 208
+        },
+        {
+          "title": "Il significato del monopolio",
+          "page_start": 208
+        },
+        {
+          "title": "Il monopolista e la massimizzazione del profitto",
+          "page_start": 214
+        },
+        {
+          "title": "Il monopolio e le politiche pubbliche",
+          "page_start": 222
+        },
+        {
+          "title": "Il potere di mercato di nuova generazione",
+          "page_start": 226
+        },
+        {
+          "title": "La discriminazione dei prezzi",
+          "page_start": 230
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "L'oligopolio e la concorrenza monopolistica",
+      "page_start": 242,
+      "sections": [
+        {
+          "title": "Cos'è l'oligopolio",
+          "page_start": 243
+        },
+        {
+          "title": "I giochi degli oligopolisti",
+          "page_start": 250
+        },
+        {
+          "title": "La concorrenza monopolistica",
+          "page_start": 255
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Esternalità e beni pubblici",
+      "page_start": 264,
+      "sections": [
+        {
+          "title": "Le esternalità",
+          "page_start": 265
+        },
+        {
+          "title": "Politiche pubbliche in materia di inquinamento",
+          "page_start": 270
+        },
+        {
+          "title": "L'analisi economica del cambiamento climatico",
+          "page_start": 276
+        },
+        {
+          "title": "L'analisi economica delle esternalità positive",
+          "page_start": 279
+        },
+        {
+          "title": "I beni pubblici",
+          "page_start": 282
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "L'economia dello stato sociale",
+      "page_start": 294,
+      "sections": [
+        {
+          "title": "Povertà, disuguaglianza e politiche pubbliche",
+          "page_start": 295
+        },
+        {
+          "title": "Lo stato sociale negli Stati Uniti",
+          "page_start": 304
+        },
+        {
+          "title": "L'economia dell'assistenza sanitaria",
+          "page_start": 308
+        },
+        {
+          "title": "Il dibattito sullo stato sociale",
+          "page_start": 315
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Macroeconomia: un quadro generale",
+      "page_start": 323,
+      "sections": [
+        {
+          "title": "La natura della macroeconomia",
+          "page_start": 324
+        },
+        {
+          "title": "Il ciclo economico",
+          "page_start": 327
+        },
+        {
+          "title": "La crescita economica di lungo periodo",
+          "page_start": 332
+        },
+        {
+          "title": "Inflazione e deflazione",
+          "page_start": 333
+        },
+        {
+          "title": "Gli squilibri internazionali",
+          "page_start": 335
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Il PIL e l'IPC: seguire l'andamento della macroeconomia",
+      "page_start": 342,
+      "sections": [
+        {
+          "title": "I conti economici nazionali",
+          "page_start": 343
+        },
+        {
+          "title": "Il PIL reale: una misura della produzione aggregata",
+          "page_start": 350
+        },
+        {
+          "title": "Gli indici dei prezzi e il livello generale dei prezzi",
+          "page_start": 353
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Disoccupazione e inflazione",
+      "page_start": 364,
+      "sections": [
+        {
+          "title": "Il tasso di disoccupazione",
+          "page_start": 365
+        },
+        {
+          "title": "Il tasso naturale di disoccupazione",
+          "page_start": 370
+        },
+        {
+          "title": "Inflazione e deflazione",
+          "page_start": 378
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "La crescita economica di lungo periodo",
+      "page_start": 390,
+      "sections": [
+        {
+          "title": "Sistemi economici a confronto nel tempo e nello spazio",
+          "page_start": 391
+        },
+        {
+          "title": "Le fonti della crescita di lungo periodo",
+          "page_start": 395
+        },
+        {
+          "title": "Le ragioni delle differenze tra i tassi di crescita",
+          "page_start": 402
+        },
+        {
+          "title": "Successo, delusione e fallimento",
+          "page_start": 407
+        },
+        {
+          "title": "La crescita mondiale è sostenibile?",
+          "page_start": 412
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "La domanda aggregata e l'offerta aggregata",
+      "page_start": 421,
+      "sections": [
+        {
+          "title": "La domanda aggregata",
+          "page_start": 422
+        },
+        {
+          "title": "L'offerta aggregata",
+          "page_start": 430
+        },
+        {
+          "title": "Il modello DA-OA",
+          "page_start": 439
+        },
+        {
+          "title": "La politica macroeconomica",
+          "page_start": 447
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "La politica fiscale",
+      "page_start": 455,
+      "sections": [
+        {
+          "title": "Fondamenti di politica fiscale",
+          "page_start": 456
+        },
+        {
+          "title": "La politica fiscale e il moltiplicatore",
+          "page_start": 463
+        },
+        {
+          "title": "Il saldo di bilancio",
+          "page_start": 467
+        },
+        {
+          "title": "Le implicazioni della politica fiscale nel lungo periodo",
+          "page_start": 471
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Moneta, sistema bancario e sistema della Federal Reserve",
+      "page_start": 484,
+      "sections": [
+        {
+          "title": "Il significato della moneta",
+          "page_start": 485
+        },
+        {
+          "title": "Il ruolo monetario delle banche",
+          "page_start": 490
+        },
+        {
+          "title": "Determinare l'offerta di moneta",
+          "page_start": 494
+        },
+        {
+          "title": "Il sistema della Federal Reserve, la banca centrale degli Stati Uniti",
+          "page_start": 499
+        },
+        {
+          "title": "L'evoluzione del sistema bancario statunitense",
+          "page_start": 505
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "title": "La politica monetaria",
+      "page_start": 518,
+      "sections": [
+        {
+          "title": "La domanda di moneta",
+          "page_start": 519
+        },
+        {
+          "title": "La moneta e i tassi di interesse",
+          "page_start": 524
+        },
+        {
+          "title": "La politica monetaria e la domanda aggregata",
+          "page_start": 529
+        },
+        {
+          "title": "Moneta, produzione e prezzi nel lungo periodo",
+          "page_start": 535
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Commercio internazionale, flussi di capitali e tassi di cambio",
+      "page_start": 543,
+      "sections": [
+        {
+          "title": "Il vantaggio comparato e il commercio internazionale",
+          "page_start": 544
+        },
+        {
+          "title": "Domanda, offerta e commercio internazionale",
+          "page_start": 553
+        },
+        {
+          "title": "Gli effetti del protezionismo",
+          "page_start": 559
+        },
+        {
+          "title": "I flussi di capitali e la bilancia dei pagamenti",
+          "page_start": 562
+        },
+        {
+          "title": "Il ruolo dei tassi di cambio",
+          "page_start": 568
+        }
+      ]
+    }
+  ]
+}

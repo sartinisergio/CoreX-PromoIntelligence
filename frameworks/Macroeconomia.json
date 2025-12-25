@@ -1,0 +1,253 @@
+{
+  "framework": {
+    "name": "Framework Unico Valutazione Macroeconomia - Multischool",
+    "version": "1.0",
+    "description": "Framework integrato per valutare allineamento programmi Macroeconomia e manuali per Economia/Scienze Politiche, con pluralismo keynesiano/classico.",
+    "date": "2025-12-15"
+  },
+  "scale": {
+    "1": "livello minimo/assente",
+    "2": "livello molto basso/sporadico",
+    "3": "livello moderato/base",
+    "4": "livello alto/articolato",
+    "5": "livello massimo/avanzato"
+  },
+  "syllabus_modules": [
+    {
+      "id": 1,
+      "name": "Scuole pensiero macroeconomiche",
+      "core_contents": [
+        "Classica (Say), Keynesiana (moltiplicatore)",
+        "Monetarista (Friedman), Nuova classica"
+      ],
+      "learning_outcomes": [
+        "Pluralismo teorico",
+        "Confronto scuole"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Misurazione aggregati macro",
+      "core_contents": [
+        "PIL nominale/reale, deflatore",
+        "Disoccupazione NAIRU, conti settoriali"
+      ],
+      "learning_outcomes": [
+        "Contabilità nazionale",
+        "Indicatori macro"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "IS-LM breve periodo",
+      "core_contents": [
+        "Curva IS/LM, equilibrio IS-LM",
+        "Moltiplicatore keynesiano"
+      ],
+      "learning_outcomes": [
+        "Politiche IS-LM",
+        "Trappola liquidità"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "AD-AS breve/lungo periodo",
+      "core_contents": [
+        "Curva AD/AS breve, Phillips breve",
+        "AS verticale lungo periodo"
+      ],
+      "learning_outcomes": [
+        "Shock domanda/offerta",
+        "Accelerazionismo"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Crescita economica",
+      "core_contents": [
+        "Solow-Swan steady state",
+        "Crescita endogena Romer"
+      ],
+      "learning_outcomes": [
+        "Convergenza economica",
+        "Capitale umano"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Politica monetaria",
+      "core_contents": [
+        "Regola Taylor, QE, mandato BCE",
+        "Offerta moneta"
+      ],
+      "learning_outcomes": [
+        "Inflation targeting",
+        "Neutralità moneta"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Politica fiscale",
+      "core_contents": [
+        "Moltiplicatore fiscale",
+        "Debito sostenibile r-g"
+      ],
+      "learning_outcomes": [
+        "Regole Maastricht",
+        "Fiscal cliff"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Cicli economici crisi",
+      "core_contents": [
+        "RBC, DSGE, crisi 2008",
+        "Bailout bancario"
+      ],
+      "learning_outcomes": [
+        "Bolle speculative",
+        "Risoluzioni crisi"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Apertura internazionale",
+      "core_contents": [
+        "Mundell-Fleming",
+        "Trilemma impossibile"
+      ],
+      "learning_outcomes": [
+        "Tassi cambio",
+        "Parità potere acquisto"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Inflazione disoccupazione",
+      "core_contents": [
+        "NAIRU dinamico, isteresi",
+        "Inflazione importata"
+      ],
+      "learning_outcomes": [
+        "Politiche disinflazione",
+        "Curva Phillips"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Macroeconomia moderna",
+      "core_contents": [
+        "Aspettative razionali",
+        "DSGE vs Minsky"
+      ],
+      "learning_outcomes": [
+        "Debito verde",
+        "Finanza funzionale"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Modelli avanzati",
+      "core_contents": [
+        "Crescita endogena avanzata",
+        "DSGE complete"
+      ],
+      "learning_outcomes": [
+        "Analisi temporale",
+        "Politiche strutturali"
+      ]
+    }
+  ],
+  "criteria": [
+    {"id":"scuole_macro","name":"Scuole macro","type":"contenuto","levels":{"1":"Solo keynes","2":"Keynes+classica","3":"Tre scuole","4":"Quattro+confronto","5":"Pluralismo critico"}},
+    {"id":"analisi_temporale","name":"Analisi temporale","type":"contenuto","levels":{"1":"Statica","2":"Breve periodo","3":"Breve+lungo","4":"Esplicita transizione","5":"Chiarissima dinamica"}},
+    {"id":"is_lm","name":"IS-LM","type":"contenuto","levels":{"1":"Grafico base","2":"Equilibrio","3":"Moltiplicatore","4":"Politiche IS-LM","5":"Rigorosa completa"}},
+    {"id":"ad_as","name":"AD-AS","type":"contenuto","levels":{"1":"Statica","2":"Breve periodo","3":"Phillips breve","4":"AS verticale","5":"Accelerazionismo completa"}},
+    {"id":"modelli_crescita","name":"Modelli crescita","type":"contenuto","levels":{"1":"Base","2":"Solow","3":"Solow+endogena","4":"Convergenza","5":"Endogena dettagliata"}},
+    {"id":"politica_monetaria","name":"Politica monetaria","type":"contenuto","levels":{"1":"Base","2":"Taylor","3":"QE moderno","4":"Mandato BCE","5":"Inflation targeting"}},
+    {"id":"politica_fiscale","name":"Politica fiscale","type":"contenuto","levels":{"1":"Base","2":"Moltiplicatore","3":"Debito r-g","4":"Maastricht","5":"Sostenibilità dinamica"}},
+    {"id":"cicli_crisi","name":"Cicli/crisi","type":"contenuto","levels":{"1":"Assenti","2":"2008 cenni","3":"RBC","4":"DSGE","5":"Analisi completa 2008"}},
+    {"id":"internazionale","name":"Internazionale","type":"contenuto","levels":{"1":"Base","2":"Mundell","3":"Trilemma","4":"PPA","5":"Aperto completo"}},
+    {"id":"chiarezza_grafica","name":"Chiarezza grafica","type":"didattico","levels":{"1":"Povera","2":"Base","3":"Buona IS-LM","4":"Ottima AD-AS","5":"Eccellente dinamica"}},
+    {"id":"esempi_storici","name":"Esempi storici","type":"didattico","levels":{"1":"Teorici","2":"Qualche crisi","3":"Adeguati","4":"Ricchi 2008","5":"Eccellenti casi"}},
+    {"id":"errori_studenti","name":"Errori studenti","type":"didattico","levels":{"1":"Assenti","2":"Cenni","3":"Box equilibri","4":"Proattivo","5":"Prevenzione completa"}},
+    {"id":"collegamenti_indirizzi","name":"Collegamenti indirizzi","type":"didattico","levels":{"1":"Isolati","2":"Pochi","3":"Adeguati","4":"Ricchi Eco/Pol","5":"Integrazione eccellente"}},
+    {"id":"supporto_digitale","name":"Supporto digitale","type":"didattico","levels":{"1":"Nessuno","2":"Base","3":"Sufficiente","4":"Simulazioni","5":"Ricco dinamico"}}
+  ],
+  "program_profiles": [
+    {
+      "id": "economia",
+      "name": "Economia (L-33)",
+      "priority_modules": [5,6,7,8,9,12],
+      "requirements": {
+        "scuole_macro": {"required_level": 4, "weight": 0.09},
+        "analisi_temporale": {"required_level": 5, "weight": 0.14},
+        "is_lm": {"required_level": 5, "weight": 0.13},
+        "ad_as": {"required_level": 5, "weight": 0.13},
+        "modelli_crescita": {"required_level": 5, "weight": 0.15},
+        "politica_monetaria": {"required_level": 5, "weight": 0.12},
+        "politica_fiscale": {"required_level": 4, "weight": 0.12},
+        "cicli_crisi": {"required_level": 4, "weight": 0.12},
+        "internazionale": {"required_level": 4, "weight": 0.10},
+        "chiarezza_grafica": {"required_level": 5, "weight": 0.08},
+        "esempi_storici": {"required_level": 4, "weight": 0.07},
+        "errori_studenti": {"required_level": 4, "weight": 0.05},
+        "collegamenti_indirizzi": {"required_level": 4, "weight": 0.08},
+        "supporto_digitale": {"required_level": 4, "weight": 0.05}
+      }
+    },
+    {
+      "id": "scienze_politiche",
+      "name": "Scienze Politiche (L-36)",
+      "priority_modules": [3,4,7,9,10],
+      "requirements": {
+        "scuole_macro": {"required_level": 5, "weight": 0.12},
+        "analisi_temporale": {"required_level": 4, "weight": 0.12},
+        "is_lm": {"required_level": 5, "weight": 0.11},
+        "ad_as": {"required_level": 5, "weight": 0.12},
+        "modelli_crescita": {"required_level": 3, "weight": 0.09},
+        "politica_monetaria": {"required_level": 4, "weight": 0.11},
+        "politica_fiscale": {"required_level": 5, "weight": 0.13},
+        "cicli_crisi": {"required_level": 4, "weight": 0.12},
+        "internazionale": {"required_level": 5, "weight": 0.13},
+        "chiarezza_grafica": {"required_level": 4, "weight": 0.08},
+        "esempi_storici": {"required_level": 5, "weight": 0.09},
+        "errori_studenti": {"required_level": 4, "weight": 0.06},
+        "collegamenti_indirizzi": {"required_level": 5, "weight": 0.08},
+        "supporto_digitale": {"required_level": 4, "weight": 0.06}
+      }
+    }
+  ],
+  "manual_profiles": [
+    {
+      "id": "manuale_A",
+      "name": "Manuale A - Macroeconomia Completa",
+      "scores": {
+        "scuole_macro": 5, "analisi_temporale": 5, "is_lm": 5, "ad_as": 5,
+        "modelli_crescita": 5, "politica_monetaria": 5, "politica_fiscale": 5,
+        "cicli_crisi": 5, "internazionale": 5, "chiarezza_grafica": 5,
+        "esempi_storici": 5, "errori_studenti": 4, "collegamenti_indirizzi": 5,
+        "supporto_digitale": 5
+      }
+    }
+  ],
+  "alignment_method": {
+    "description": "Allineamento = media ponderata: score_i = max(0, 1 - |required-offered|/4)",
+    "formula": "alignment = Σ(weight_i × score_i) / Σ(weight_i)",
+    "interpretation": {
+      "85-100": "Eccellente - Equilibrato breve/lungo+crescita - Adozione consigliata",
+      "70-84": "Buono - Solido IS-LM-AD-AS - Raccomandato+integrazioni",
+      "55-69": "Sufficiente - Lacune crescita/scuole - Con riserva",
+      "<55": "Sconsigliato - Unidimensionale - Non adottare"
+    }
+  },
+  "example_match": {
+    "program_id": "economia",
+    "manual_id": "manuale_A",
+    "overall_alignment": 97.8,
+    "judgment": "Eccellente",
+    "recommendation": "Manuale perfetto Economia. Completo Solow/endogena, IS-LM-AD-AS dinamici, analisi temporale eccellente.",
+    "strong_criteria": ["modelli_crescita", "analisi_temporale", "is_lm"],
+    "weak_criteria": []
+  }
+}

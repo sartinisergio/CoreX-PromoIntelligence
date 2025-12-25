@@ -1,0 +1,115 @@
+{
+  "id": "Overby_Fondamenti",
+  "title": "Fondamenti di Chimica",
+  "author": "Overby, Chang",
+  "publisher": "McGraw-Hill",
+  "subject": "chimica generale",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Introduzione",
+      "sections": []
+    },
+    {
+      "number": 2,
+      "title": "Atomi, molecole e ioni",
+      "sections": []
+    },
+    {
+      "number": 3,
+      "title": "Stechiometria",
+      "sections": []
+    },
+    {
+      "number": 4,
+      "title": "La struttura elettronica degli atomi",
+      "sections": []
+    },
+    {
+      "number": 5,
+      "title": "La tavola periodica",
+      "sections": []
+    },
+    {
+      "number": 6,
+      "title": "Il legame chimico I",
+      "sections": []
+    },
+    {
+      "number": 7,
+      "title": "Il legame chimico II",
+      "sections": []
+    },
+    {
+      "number": 8,
+      "title": "I gas",
+      "sections": []
+    },
+    {
+      "number": 9,
+      "title": "Le forze intermolecolari, i liquidi e i solidi",
+      "sections": []
+    },
+    {
+      "number": 10,
+      "title": "Le proprietà fisiche delle soluzioni",
+      "sections": []
+    },
+    {
+      "number": 11,
+      "title": "Reazioni in soluzioni acquose",
+      "sections": []
+    },
+    {
+      "number": 12,
+      "title": "Bilanci energetici nelle reazioni chimiche",
+      "sections": []
+    },
+    {
+      "number": 13,
+      "title": "Termodinamica",
+      "sections": []
+    },
+    {
+      "number": 14,
+      "title": "Cinetica chimica",
+      "sections": []
+    },
+    {
+      "number": 15,
+      "title": "Equilibrio chimico",
+      "sections": []
+    },
+    {
+      "number": 16,
+      "title": "Acidi e basi",
+      "sections": []
+    },
+    {
+      "number": 17,
+      "title": "Equilibri acido-base ed equilibri di solubilità",
+      "sections": []
+    },
+    {
+      "number": 18,
+      "title": "Elettrochimica",
+      "sections": []
+    },
+    {
+      "number": 19,
+      "title": "La chimica dei composti di coordinazione",
+      "sections": []
+    },
+    {
+      "number": 20,
+      "title": "La chimica nucleare",
+      "sections": []
+    },
+    {
+      "number": 21,
+      "title": "Introduzione alla chimica organica",
+      "sections": []
+    }
+  ]
+}

@@ -1,0 +1,1114 @@
+{
+  "id": "Knight_Fondamenti",
+  "title": "Fondamenti di fisica",
+  "author": "Knight",
+  "publisher": "Piccin",
+  "subject": "Fisica_Generale",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Rappresentazione del moto",
+      "page_start": 2,
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "Moto: un primo sguardo",
+          "page_start": 3
+        },
+        {
+          "number": "1.2",
+          "title": "Posizione e tempo: descrivere la natura con i numeri",
+          "page_start": 5
+        },
+        {
+          "number": "1.3",
+          "title": "Velocità",
+          "page_start": 9
+        },
+        {
+          "number": "1.4",
+          "title": "Cifre significative, notazione scientifica, unità di misura",
+          "page_start": 11
+        },
+        {
+          "number": "1.5",
+          "title": "Vettori e moto: un primo sguardo",
+          "page_start": 16
+        },
+        {
+          "number": "1.6",
+          "title": "Dove andremo partendo da qui?",
+          "page_start": 20
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Il moto in una dimensione",
+      "page_start": 29,
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "Descrizione del moto",
+          "page_start": 30
+        },
+        {
+          "number": "2.2",
+          "title": "Moto uniforme",
+          "page_start": 34
+        },
+        {
+          "number": "2.3",
+          "title": "Velocità istantanea",
+          "page_start": 37
+        },
+        {
+          "number": "2.4",
+          "title": "Accelerazione",
+          "page_start": 39
+        },
+        {
+          "number": "2.5",
+          "title": "Moto ad accelerazione costante",
+          "page_start": 43
+        },
+        {
+          "number": "2.6",
+          "title": "Risoluzione dei problemi sul moto unidimensionale",
+          "page_start": 46
+        },
+        {
+          "number": "2.7",
+          "title": "Caduta libera",
+          "page_start": 51
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Vettori e moto in due dimensioni",
+      "page_start": 66,
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "Uso dei vettori",
+          "page_start": 67
+        },
+        {
+          "number": "3.2",
+          "title": "Uso dei vettori nei diagrammi del moto",
+          "page_start": 70
+        },
+        {
+          "number": "3.3",
+          "title": "Sistemi di riferimento",
+          "page_start": null
+        },
+        {
+          "number": "3.4",
+          "title": "Moto su un piano inclinato",
+          "page_start": 77
+        },
+        {
+          "number": "3.5",
+          "title": "Moti relativi",
+          "page_start": 80
+        },
+        {
+          "number": "3.6",
+          "title": "Moto in due dimensioni: moto del proiettile",
+          "page_start": 81
+        },
+        {
+          "number": "3.7",
+          "title": "Moto del proiettile: risoluzione dei problemi",
+          "page_start": 84
+        },
+        {
+          "number": "3.8",
+          "title": "Moto in due dimensioni: moto circolare",
+          "page_start": 87
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Forze e leggi di Newton sul moto",
+      "page_start": 100,
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "Moto e forze",
+          "page_start": 101
+        },
+        {
+          "number": "4.2",
+          "title": "Breve catalogo di forze",
+          "page_start": 104
+        },
+        {
+          "number": "4.3",
+          "title": "Identificazione delle forze",
+          "page_start": 108
+        },
+        {
+          "number": "4.4",
+          "title": "Che cosa fanno le forze?",
+          "page_start": 110
+        },
+        {
+          "number": "4.5",
+          "title": "Seconda legge di Newton",
+          "page_start": 113
+        },
+        {
+          "number": "4.6",
+          "title": "Diagrammi di corpo libero",
+          "page_start": 115
+        },
+        {
+          "number": "4.7",
+          "title": "Terza legge di Newton",
+          "page_start": 117
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Applicando le leggi di Newton",
+      "page_start": 130,
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "L'equilibrio",
+          "page_start": 131
+        },
+        {
+          "number": "5.2",
+          "title": "La seconda legge di Newton applicata alla dinamica",
+          "page_start": 132
+        },
+        {
+          "number": "5.3",
+          "title": "Massa e peso",
+          "page_start": 137
+        },
+        {
+          "number": "5.4",
+          "title": "Le forze normali",
+          "page_start": 140
+        },
+        {
+          "number": "5.5",
+          "title": "L'attrito",
+          "page_start": 142
+        },
+        {
+          "number": "5.6",
+          "title": "Forza di resistenza di un mezzo",
+          "page_start": 147
+        },
+        {
+          "number": "5.7",
+          "title": "Corpi in interazione",
+          "page_start": 149
+        },
+        {
+          "number": "5.8",
+          "title": "Corde e carrucole",
+          "page_start": 151
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Moto circolare, orbite e gravità",
+      "page_start": 166,
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "Moto circolare uniforme",
+          "page_start": 167
+        },
+        {
+          "number": "6.2",
+          "title": "Dinamica del moto circolare uniforme",
+          "page_start": 169
+        },
+        {
+          "number": "6.3",
+          "title": "Forze apparenti nel moto circolare",
+          "page_start": 175
+        },
+        {
+          "number": "6.4",
+          "title": "Orbite circolari e assenza di peso",
+          "page_start": 179
+        },
+        {
+          "number": "6.5",
+          "title": "Legge di gravitazione universale di Newton",
+          "page_start": 181
+        },
+        {
+          "number": "6.6",
+          "title": "Gravità e orbite",
+          "page_start": 185
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Moto rotatorio",
+      "page_start": 197,
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "Descrizione del moto circolare",
+          "page_start": null
+        },
+        {
+          "number": "7.2",
+          "title": "La rotazione di un corpo rigido",
+          "page_start": 203
+        },
+        {
+          "number": "7.3",
+          "title": "Momento",
+          "page_start": 206
+        },
+        {
+          "number": "7.4",
+          "title": "Momento gravitazionale e centro di gravità",
+          "page_start": 211
+        },
+        {
+          "number": "7.5",
+          "title": "Dinamica rotazionale e momenti di inerzia",
+          "page_start": 214
+        },
+        {
+          "number": "7.6",
+          "title": "Uso della seconda legge di Newton per le rotazioni",
+          "page_start": 218
+        },
+        {
+          "number": "7.7",
+          "title": "Moto di rotolamento",
+          "page_start": 221
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Equilibrio ed elasticità",
+      "page_start": 234,
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "Momento ed equilibrio statico",
+          "page_start": 235
+        },
+        {
+          "number": "8.2",
+          "title": "Stabilità ed equilibrio",
+          "page_start": 239
+        },
+        {
+          "number": "8.3",
+          "title": "Molle e legge di Hooke",
+          "page_start": 241
+        },
+        {
+          "number": "8.4",
+          "title": "Allungamento e compressione dei materiali",
+          "page_start": 244
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "La quantità di moto",
+      "page_start": 264,
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "L'impulso",
+          "page_start": 265
+        },
+        {
+          "number": "9.2",
+          "title": "La quantità di moto e il teorema dell'impulso",
+          "page_start": 266
+        },
+        {
+          "number": "9.3",
+          "title": "Risoluzione dei problemi su impulso e quantità di moto",
+          "page_start": 270
+        },
+        {
+          "number": "9.4",
+          "title": "Conservazione della quantità di moto",
+          "page_start": 273
+        },
+        {
+          "number": "9.5",
+          "title": "Urti anelastici",
+          "page_start": 278
+        },
+        {
+          "number": "9.6",
+          "title": "La quantità di moto e gli urti in due dimensioni",
+          "page_start": 279
+        },
+        {
+          "number": "9.7",
+          "title": "Il momento angolare",
+          "page_start": 280
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Energia e lavoro",
+      "page_start": 295,
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "Il modello energetico di base",
+          "page_start": 296
+        },
+        {
+          "number": "10.2",
+          "title": "Il lavoro",
+          "page_start": 300
+        },
+        {
+          "number": "10.3",
+          "title": "Energia cinetica",
+          "page_start": 304
+        },
+        {
+          "number": "10.4",
+          "title": "Energia potenziale",
+          "page_start": 307
+        },
+        {
+          "number": "10.5",
+          "title": "Energia termica",
+          "page_start": 310
+        },
+        {
+          "number": "10.6",
+          "title": "Applicazione della legge di conservazione dell'energia",
+          "page_start": 312
+        },
+        {
+          "number": "10.7",
+          "title": "L'energia negli urti",
+          "page_start": 316
+        },
+        {
+          "number": "10.8",
+          "title": "Potenza",
+          "page_start": 319
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "L'uso dell'energia",
+      "page_start": 330,
+      "sections": [
+        {
+          "number": "11.1",
+          "title": "La trasformazione dell'energia",
+          "page_start": 331
+        },
+        {
+          "number": "11.2",
+          "title": "L'energia nel corpo umano",
+          "page_start": 334
+        },
+        {
+          "number": "11.3",
+          "title": "Temperatura, energia termica e calore",
+          "page_start": 339
+        },
+        {
+          "number": "11.4",
+          "title": "Il primo principio della termodinamica",
+          "page_start": 342
+        },
+        {
+          "number": "11.5",
+          "title": "Macchine termiche",
+          "page_start": 344
+        },
+        {
+          "number": "11.6",
+          "title": "Pompe di calore, frigoriferi e condizionatori d'aria",
+          "page_start": 347
+        },
+        {
+          "number": "11.7",
+          "title": "L'entropia e il secondo principio della termodinamica",
+          "page_start": 349
+        },
+        {
+          "number": "11.8",
+          "title": "Sistemi, energia ed entropia",
+          "page_start": 352
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Le proprietà termiche della materia",
+      "page_start": 370,
+      "sections": [
+        {
+          "number": "12.1",
+          "title": "Il modello atomico della materia",
+          "page_start": 371
+        },
+        {
+          "number": "12.2",
+          "title": "Il modello atomico di un gas ideale",
+          "page_start": 373
+        },
+        {
+          "number": "12.3",
+          "title": "Le trasformazioni di un gas ideale",
+          "page_start": 380
+        },
+        {
+          "number": "12.4",
+          "title": "Dilatazione termica",
+          "page_start": 387
+        },
+        {
+          "number": "12.5",
+          "title": "Calore specifico e calore latente",
+          "page_start": 389
+        },
+        {
+          "number": "12.6",
+          "title": "Calorimetria",
+          "page_start": 394
+        },
+        {
+          "number": "12.7",
+          "title": "Calore specifico dei gas",
+          "page_start": 396
+        },
+        {
+          "number": "12.8",
+          "title": "Trasferimento di calore",
+          "page_start": 398
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Fluidi",
+      "page_start": 414,
+      "sections": [
+        {
+          "number": "13.1",
+          "title": "Fluidi e densità",
+          "page_start": 415
+        },
+        {
+          "number": "13.2",
+          "title": "La pressione",
+          "page_start": 416
+        },
+        {
+          "number": "13.3",
+          "title": "Misura e utilizzo della pressione",
+          "page_start": 420
+        },
+        {
+          "number": "13.4",
+          "title": "Galleggiamento",
+          "page_start": 424
+        },
+        {
+          "number": "13.5",
+          "title": "Fluidi in movimento",
+          "page_start": 428
+        },
+        {
+          "number": "13.6",
+          "title": "Dinamica dei fluidi",
+          "page_start": 432
+        },
+        {
+          "number": "13.7",
+          "title": "La viscosità e l'equazione di Poiseuille",
+          "page_start": 436
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Oscillazioni",
+      "page_start": 456,
+      "sections": [
+        {
+          "number": "14.1",
+          "title": "Equilibrio e oscillazione",
+          "page_start": 457
+        },
+        {
+          "number": "14.2",
+          "title": "Forze di richiamo lineari e moto armonico semplice",
+          "page_start": 459
+        },
+        {
+          "number": "14.3",
+          "title": "Descrizione del moto armonico semplice",
+          "page_start": 461
+        },
+        {
+          "number": "14.4",
+          "title": "Energia nel moto armonico semplice",
+          "page_start": 466
+        },
+        {
+          "number": "14.5",
+          "title": "Il moto del pendolo",
+          "page_start": 471
+        },
+        {
+          "number": "14.6",
+          "title": "Oscillazioni smorzate",
+          "page_start": 473
+        },
+        {
+          "number": "14.7",
+          "title": "Oscillazioni forzate e risonanza",
+          "page_start": 175
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Onde viaggianti e suono",
+      "page_start": 489,
+      "sections": [
+        {
+          "number": "15.1",
+          "title": "Il modello delle onde",
+          "page_start": 490
+        },
+        {
+          "number": "15.2",
+          "title": "Onde viaggianti",
+          "page_start": 491
+        },
+        {
+          "number": "15.3",
+          "title": "Descrizione grafica",
+          "page_start": null
+        },
+        {
+          "number": "15.4",
+          "title": "Onde sonore e onde luminose",
+          "page_start": 500
+        },
+        {
+          "number": "15.5",
+          "title": "Energia e intensità",
+          "page_start": 502
+        },
+        {
+          "number": "15.6",
+          "title": "L'intensità sonora percepita",
+          "page_start": 505
+        },
+        {
+          "number": "15.7",
+          "title": "Effetto Doppler e onde d'urto",
+          "page_start": 508
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Sovrapposizione",
+      "page_start": null,
+      "sections": [
+        {
+          "number": "16.1",
+          "title": "Il principio di sovrapposizione",
+          "page_start": 522
+        },
+        {
+          "number": "16.2",
+          "title": "Onde stazionarie",
+          "page_start": 523
+        },
+        {
+          "number": "16.3",
+          "title": "Onde stazionarie su una corda",
+          "page_start": 525
+        },
+        {
+          "number": "16.4",
+          "title": "Onde sonore stazionarie",
+          "page_start": 530
+        },
+        {
+          "number": "16.5",
+          "title": "Eloquio e udibilità",
+          "page_start": 535
+        },
+        {
+          "number": "16.6",
+          "title": "Interferenza delle onde prodotte da due sorgenti",
+          "page_start": 537
+        },
+        {
+          "number": "16.7",
+          "title": "Battimenti",
+          "page_start": 542
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Ottica ondulatoria",
+      "page_start": 560,
+      "sections": [
+        {
+          "number": "17.1",
+          "title": "Che cos'è la luce?",
+          "page_start": 561
+        },
+        {
+          "number": "17.2",
+          "title": "L'interferenza della luce",
+          "page_start": 564
+        },
+        {
+          "number": "17.3",
+          "title": "Il reticolo di diffrazione",
+          "page_start": 568
+        },
+        {
+          "number": "17.4",
+          "title": "Interferenza da film sottile",
+          "page_start": 572
+        },
+        {
+          "number": "17.5",
+          "title": "Diffrazione da singola fenditura",
+          "page_start": 577
+        },
+        {
+          "number": "17.6",
+          "title": "Diffrazione da un'apertura circolare",
+          "page_start": 580
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Ottica geometrica",
+      "page_start": 591,
+      "sections": [
+        {
+          "number": "18.1",
+          "title": "Il modello del raggio luminoso",
+          "page_start": 592
+        },
+        {
+          "number": "18.2",
+          "title": "La riflessione",
+          "page_start": 595
+        },
+        {
+          "number": "18.3",
+          "title": "La rifrazione",
+          "page_start": 598
+        },
+        {
+          "number": "18.4",
+          "title": "Formazione dell'immagine per rifrazione",
+          "page_start": 603
+        },
+        {
+          "number": "18.5",
+          "title": "Lenti sottili: il ray tracing",
+          "page_start": 604
+        },
+        {
+          "number": "18.6",
+          "title": "Formazione dell'immagine con specchi sferici",
+          "page_start": 611
+        },
+        {
+          "number": "18.7",
+          "title": "L'equazione delle lenti sottili",
+          "page_start": 615
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Strumenti ottici",
+      "page_start": 629,
+      "sections": [
+        {
+          "number": "19.1",
+          "title": "La macchina fotografica",
+          "page_start": 630
+        },
+        {
+          "number": "19.2",
+          "title": "L'occhio umano",
+          "page_start": 632
+        },
+        {
+          "number": "19.3",
+          "title": "La lente d'ingrandimento",
+          "page_start": 635
+        },
+        {
+          "number": "19.4",
+          "title": "Il microscopio",
+          "page_start": 637
+        },
+        {
+          "number": "19.5",
+          "title": "Il telescopio",
+          "page_start": 639
+        },
+        {
+          "number": "19.6",
+          "title": "Colori e dispersione",
+          "page_start": 641
+        },
+        {
+          "number": "19.7",
+          "title": "Risoluzione degli strumenti ottici",
+          "page_start": 643
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Campi elettrici e forze",
+      "page_start": 662,
+      "sections": [
+        {
+          "number": "20.1",
+          "title": "Cariche e forze",
+          "page_start": 663
+        },
+        {
+          "number": "20.2",
+          "title": "Cariche, atomi e molecole",
+          "page_start": 669
+        },
+        {
+          "number": "20.3",
+          "title": "La legge di Coulomb",
+          "page_start": 671
+        },
+        {
+          "number": "20.4",
+          "title": "Il concetto di campo elettrico",
+          "page_start": 675
+        },
+        {
+          "number": "20.5",
+          "title": "Le applicazioni del campo elettrico",
+          "page_start": 678
+        },
+        {
+          "number": "20.6",
+          "title": "Conduttori e campi elettrici",
+          "page_start": 682
+        },
+        {
+          "number": "20.7",
+          "title": "Forze e momenti nei campi elettrici",
+          "page_start": 684
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "title": "Il potenziale elettrico",
+      "page_start": 695,
+      "sections": [
+        {
+          "number": "21.1",
+          "title": "L'energia potenziale elettrica",
+          "page_start": null
+        },
+        {
+          "number": "21.2",
+          "title": "Sorgenti di potenziale elettrico",
+          "page_start": 698
+        },
+        {
+          "number": "21.3",
+          "title": "Il potenziale elettrico e la conservazione dell'energia",
+          "page_start": 701
+        },
+        {
+          "number": "21.4",
+          "title": "Calcolo del potenziale elettrico",
+          "page_start": 704
+        },
+        {
+          "number": "21.5",
+          "title": "Connessione tra potenziale e campo elettrico",
+          "page_start": 711
+        },
+        {
+          "number": "21.6",
+          "title": "L'elettrocardiogramma",
+          "page_start": 714
+        },
+        {
+          "number": "21.7",
+          "title": "Capacità e condensatori",
+          "page_start": 715
+        },
+        {
+          "number": "21.8",
+          "title": "Energia e condensatori",
+          "page_start": 719
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "title": "Correnti e resistenze",
+      "page_start": 732,
+      "sections": [
+        {
+          "number": "22.1",
+          "title": "Un modello della corrente",
+          "page_start": 733
+        },
+        {
+          "number": "22.2",
+          "title": "Definizione e descrizione della corrente",
+          "page_start": 735
+        },
+        {
+          "number": "22.3",
+          "title": "Batterie e fem",
+          "page_start": 737
+        },
+        {
+          "number": "22.4",
+          "title": "Collegamento tra potenziale",
+          "page_start": null
+        },
+        {
+          "number": "22.5",
+          "title": "La legge di Ohm e i circuiti con resistori",
+          "page_start": 743
+        },
+        {
+          "number": "22.6",
+          "title": "Energia e potenza",
+          "page_start": 746
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "title": "Circuiti",
+      "page_start": 759,
+      "sections": [
+        {
+          "number": "23.1",
+          "title": "Elementi e schema di un circuito",
+          "page_start": 760
+        },
+        {
+          "number": "23.2",
+          "title": "Le leggi di Kirchhoff",
+          "page_start": 761
+        },
+        {
+          "number": "23.3",
+          "title": "Circuiti in serie e in parallelo",
+          "page_start": 764
+        },
+        {
+          "number": "23.4",
+          "title": "Misure di tensione e di corrente",
+          "page_start": 768
+        },
+        {
+          "number": "23.5",
+          "title": "Circuiti più complessi",
+          "page_start": 769
+        },
+        {
+          "number": "23.6",
+          "title": "Condensatori in parallelo",
+          "page_start": null
+        },
+        {
+          "number": "23.7",
+          "title": "Circuiti RC",
+          "page_start": 774
+        },
+        {
+          "number": "23.8",
+          "title": "Elettricità nel sistema nervoso",
+          "page_start": 777
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "title": "Campi magnetici e forze magnetiche",
+      "page_start": 797,
+      "sections": [
+        {
+          "number": "24.1",
+          "title": "Magnetismo",
+          "page_start": 798
+        },
+        {
+          "number": "24.2",
+          "title": "Il campo magnetico",
+          "page_start": 799
+        },
+        {
+          "number": "24.3",
+          "title": "Anche le correnti elettriche producono campi magnetici",
+          "page_start": 803
+        },
+        {
+          "number": "24.4",
+          "title": "Calcolo del campo magnetico prodotto da una corrente",
+          "page_start": 806
+        },
+        {
+          "number": "24.5",
+          "title": "I campi magnetici esercitano forze sulle cariche in movimento",
+          "page_start": 811
+        },
+        {
+          "number": "24.6",
+          "title": "I campi magnetici esercitano forze sulle correnti",
+          "page_start": 817
+        },
+        {
+          "number": "24.7",
+          "title": "I campi magnetici esercitano dei momenti sui dipoli",
+          "page_start": 821
+        },
+        {
+          "number": "24.8",
+          "title": "I magneti e i materiali magnetici",
+          "page_start": 824
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "title": "Induzione magnetica",
+      "page_start": null,
+      "sections": [
+        {
+          "number": "25.1",
+          "title": "Correnti indotte",
+          "page_start": 839
+        },
+        {
+          "number": "25.2",
+          "title": "Fem di movimento",
+          "page_start": 840
+        },
+        {
+          "number": "25.3",
+          "title": "Il flusso magnetico",
+          "page_start": 843
+        },
+        {
+          "number": "25.4",
+          "title": "La legge di Faraday",
+          "page_start": 848
+        },
+        {
+          "number": "25.5",
+          "title": "Le onde elettromagnetiche",
+          "page_start": 851
+        },
+        {
+          "number": "25.6",
+          "title": "Il modello a fotoni delle onde elettromagnetiche",
+          "page_start": 858
+        },
+        {
+          "number": "25.7",
+          "title": "Lo spettro elettromagnetico",
+          "page_start": 859
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "title": "Elettricità con corrente alternata",
+      "page_start": 876,
+      "sections": [
+        {
+          "number": "26.1",
+          "title": "Corrente alternata",
+          "page_start": 877
+        },
+        {
+          "number": "26.2",
+          "title": "Elettricità in AC e trasformatori",
+          "page_start": 879
+        },
+        {
+          "number": "26.3",
+          "title": "Elettricità domestica",
+          "page_start": 883
+        },
+        {
+          "number": "26.4",
+          "title": "Effetti biologici e sicurezza elettrica",
+          "page_start": 885
+        },
+        {
+          "number": "26.5",
+          "title": "Circuiti con condensatori",
+          "page_start": 888
+        },
+        {
+          "number": "26.6",
+          "title": "Induttori e circuiti a induzione",
+          "page_start": 890
+        },
+        {
+          "number": "26.7",
+          "title": "Circuiti oscillanti",
+          "page_start": 893
+        }
+      ]
+    }
+  ],
+  "id": "Knight_Fondamenti_Piccin",
+  "title": "",
+  "author": "",
+  "publisher": "",
+  "subject": "",
+  "type": "Competitor",
+  "format_detected": "capitolo"
+}

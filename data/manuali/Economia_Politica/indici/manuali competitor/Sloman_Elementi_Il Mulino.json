@@ -1,0 +1,404 @@
+{
+  "id": "Sloman_Elementi",
+  "title": "Elementi di Economia",
+  "author": "Sloman, Garratt",
+  "publisher": "Il Mulino",
+  "subject": "Economia politica",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Mercati, domanda e offerta",
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "La domanda"
+        },
+        {
+          "number": "1.2",
+          "title": "L'offerta"
+        },
+        {
+          "number": "1.3",
+          "title": "La determinazione del prezzo"
+        },
+        {
+          "number": "1.4",
+          "title": "L'economia di mercato"
+        },
+        {
+          "number": "1.5",
+          "title": "L'economia comportamentale"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Domanda individuale e domanda di mercato",
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "Economia e scelta razionale"
+        },
+        {
+          "number": "2.2",
+          "title": "L'insieme delle alternative e il vincolo di bilancio"
+        },
+        {
+          "number": "2.3",
+          "title": "Preferenze e loro rappresentazione: le curve di indifferenza"
+        },
+        {
+          "number": "2.4",
+          "title": "L'ottimo del consumatore"
+        },
+        {
+          "number": "2.5",
+          "title": "Effetti sulla quantità domandata di variazioni del reddito"
+        },
+        {
+          "number": "2.6",
+          "title": "Effetti sulla quantità domandata di variazioni dei prezzi"
+        },
+        {
+          "number": "2.7",
+          "title": "Domanda di mercato, domanda inversa e surplus dei consumatori"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Elasticità e aggiustamento dei mercati",
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "Elasticità della domanda rispetto al prezzo"
+        },
+        {
+          "number": "3.2",
+          "title": "Elasticità della domanda e spesa totale"
+        },
+        {
+          "number": "3.3",
+          "title": "Elasticità dell'offerta rispetto al prezzo"
+        },
+        {
+          "number": "3.4",
+          "title": "Altre elasticità"
+        },
+        {
+          "number": "3.5",
+          "title": "I mercati e l'aggiustamento nel tempo"
+        },
+        {
+          "number": "3.6",
+          "title": "Mercati con prezzi controllati"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Produzione, costi, ricavi e profitti",
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "La produzione nel breve periodo"
+        },
+        {
+          "number": "4.2",
+          "title": "La produzione nel lungo periodo"
+        },
+        {
+          "number": "4.3",
+          "title": "I costi nel breve periodo"
+        },
+        {
+          "number": "4.4",
+          "title": "I costi nel lungo periodo"
+        },
+        {
+          "number": "4.5",
+          "title": "Ricavi"
+        },
+        {
+          "number": "4.6",
+          "title": "Massimizzazione del profitto"
+        },
+        {
+          "number": "4.7",
+          "title": "Limiti della teoria tradizionale"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Forme di mercato",
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "Il grado di concorrenza"
+        },
+        {
+          "number": "5.2",
+          "title": "Concorrenza perfetta"
+        },
+        {
+          "number": "5.3",
+          "title": "Monopolio"
+        },
+        {
+          "number": "5.4",
+          "title": "Concorrenza monopolistica"
+        },
+        {
+          "number": "5.5",
+          "title": "Oligopolio"
+        },
+        {
+          "number": "5.6",
+          "title": "La teoria dei giochi"
+        },
+        {
+          "number": "5.7",
+          "title": "Discriminazione di prezzo"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Fallimenti del mercato e intervento pubblico",
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "L'efficienza sociale"
+        },
+        {
+          "number": "6.2",
+          "title": "Esternalità e beni pubblici"
+        },
+        {
+          "number": "6.3",
+          "title": "Il potere monopolistico come causa di fallimento del mercato"
+        },
+        {
+          "number": "6.4",
+          "title": "Altri fallimenti del mercato"
+        },
+        {
+          "number": "6.5",
+          "title": "Intervento pubblico: tasse e sussidi"
+        },
+        {
+          "number": "6.6",
+          "title": "Intervento pubblico: leggi e regolamentazioni"
+        },
+        {
+          "number": "6.7",
+          "title": "Altre forme di intervento pubblico"
+        },
+        {
+          "number": "6.8",
+          "title": "Più o meno intervento pubblico?"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Problematiche macroeconomiche",
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "Obiettivi macroeconomici"
+        },
+        {
+          "number": "7.2",
+          "title": "Il flusso circolare del reddito"
+        },
+        {
+          "number": "7.3",
+          "title": "Crescita economica e andamento ciclico"
+        },
+        {
+          "number": "7.4",
+          "title": "Disoccupazione"
+        },
+        {
+          "number": "7.5",
+          "title": "Domanda e offerta aggregata"
+        },
+        {
+          "number": "7.6",
+          "title": "Inflazione"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "La determinazione del reddito nazionale",
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "Il dibattito sul funzionamento del mercato"
+        },
+        {
+          "number": "8.2",
+          "title": "La funzione del consumo"
+        },
+        {
+          "number": "8.3",
+          "title": "Il moltiplicatore keynesiano"
+        },
+        {
+          "number": "8.4",
+          "title": "L'effetto della tassazione sul moltiplicatore"
+        },
+        {
+          "number": "8.5",
+          "title": "Prezzi variabili"
+        },
+        {
+          "number": "8.6",
+          "title": "L'analisi keynesiana delle fluttuazioni cicliche"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "La moneta",
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "Significato e funzioni della moneta"
+        },
+        {
+          "number": "9.2",
+          "title": "Il sistema finanziario"
+        },
+        {
+          "number": "9.3",
+          "title": "L'offerta di moneta"
+        },
+        {
+          "number": "9.4",
+          "title": "La domanda di moneta"
+        },
+        {
+          "number": "9.5",
+          "title": "L'equilibrio"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "La politica economica",
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "La politica fiscale"
+        },
+        {
+          "number": "10.2",
+          "title": "La politica monetaria"
+        },
+        {
+          "number": "10.3",
+          "title": "La politica economica che agisce sulla domanda aggregata: discrezionalità o regole fisse?"
+        },
+        {
+          "number": "10.4",
+          "title": "Le politiche pubbliche dal lato dell'offerta su imprese e industrie"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Il modello IS-LM",
+      "sections": [
+        {
+          "number": "11.1",
+          "title": "Il mercato dei beni e il ruolo del tasso di interesse"
+        },
+        {
+          "number": "11.2",
+          "title": "Il mercato dei beni e la curva IS"
+        },
+        {
+          "number": "11.3",
+          "title": "Il mercato della moneta e la curva LM"
+        },
+        {
+          "number": "11.4",
+          "title": "Equilibrio e disequilibrio macroeconomico"
+        },
+        {
+          "number": "11.5",
+          "title": "Politiche fiscali e monetarie"
+        },
+        {
+          "number": "11.6",
+          "title": "Keynesiani e monetaristi: il ruolo dello stato nell'economia"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Il commercio internazionale e la globalizzazione",
+      "sections": [
+        {
+          "number": "12.1",
+          "title": "L'interdipendenza globale"
+        },
+        {
+          "number": "12.2",
+          "title": "I vantaggi del libero scambio"
+        },
+        {
+          "number": "12.3",
+          "title": "Gli argomenti contro il commercio internazionale: il protezionismo"
+        },
+        {
+          "number": "12.4",
+          "title": "Il sistema commerciale mondiale e l'OMC"
+        },
+        {
+          "number": "12.5",
+          "title": "Gli accordi di libero scambio"
+        },
+        {
+          "number": "12.6",
+          "title": "L'Unione Europea"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Bilancia dei pagamenti e tassi di cambio",
+      "sections": [
+        {
+          "number": "13.1",
+          "title": "Bilancia dei pagamenti"
+        },
+        {
+          "number": "13.2",
+          "title": "Tassi di cambio"
+        },
+        {
+          "number": "13.3",
+          "title": "Tassi di cambio e bilancia dei pagamenti"
+        },
+        {
+          "number": "13.4",
+          "title": "Regime di cambi fissi e regime di cambi flessibili"
+        },
+        {
+          "number": "13.5",
+          "title": "Le origini dell'euro"
+        },
+        {
+          "number": "13.6",
+          "title": "L'Unione monetaria europea"
+        }
+      ]
+    }
+  ]
+}

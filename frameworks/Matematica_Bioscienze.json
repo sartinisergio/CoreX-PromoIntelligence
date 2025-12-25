@@ -1,0 +1,452 @@
+{
+  "framework": {
+    "name": "Framework Unico Valutazione Matematica per Bioscienze",
+    "version": "1.0",
+    "description": "Framework integrato per valutare allineamento tra programmi di Matematica universitaria per Bioscienze e manuali di testo, per contesti Biologia/Farmacia/Ambientali/Agraria.",
+    "date": "2025-12-15"
+  },
+  "scale": {
+    "1": "livello minimo/assente",
+    "2": "livello molto basso/sporadico",
+    "3": "livello moderato/base",
+    "4": "livello alto/articolato",
+    "5": "livello massimo/avanzato"
+  },
+  "syllabus_modules": [
+    {
+      "id": 1,
+      "name": "Funzioni e modellizzazione biologica",
+      "core_contents": [
+        "Funzioni lineari, potenza, esponenziali",
+        "Funzioni logaritmiche, semilogaritmiche",
+        "Modelli crescita esponenziale/lineare",
+        "Curve dose-risposta"
+      ],
+      "learning_outcomes": [
+        "Modellizzare fenomeni biologici",
+        "Interpretare grafici sperimentali",
+        "Applicare funzioni a dati bio"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Limiti e derivate biologiche",
+      "core_contents": [
+        "Limiti intuitivi, velocità istantanea",
+        "Derivate funzioni biologiche",
+        "Derivate funzioni elementari",
+        "Variazioni percentuali, cinetiche"
+      ],
+      "learning_outcomes": [
+        "Calcolare velocità istantanee",
+        "Analizzare tassi cambiamento bio",
+        "Interpretare derivate biologiche"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Massimi, minimi e ottimizzazione",
+      "core_contents": [
+        "Derivate prime/seconde",
+        "Massimi/minimi funzioni biologiche",
+        "Ottimizzazione dosaggi",
+        "Curve sigmoidee Michaelis-Menten"
+      ],
+      "learning_outcomes": [
+        "Ottimizzare dosaggi terapeutici",
+        "Analizzare curve enzimatiche",
+        "Trovare estremi biologici"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Integrali e aree biologiche",
+      "core_contents": [
+        "Integrali definiti intuitivi",
+        "Aree sotto curva (farmacocinetica)",
+        "Calcolo lavoro, quantità accumulate",
+        "Integrazione numerica trapezoidale"
+      ],
+      "learning_outcomes": [
+        "Calcolare AUC farmacocinetiche",
+        "Quantificare accumuli biologici",
+        "Applicare integrazione bio"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Equazioni differenziali biologiche",
+      "core_contents": [
+        "ED separabili crescita batterica",
+        "Modello logistico popolazione",
+        "Decadimento radioattivo",
+        "Cinetiche enzimatiche Michaelis-Menten"
+      ],
+      "learning_outcomes": [
+        "Modellizzare crescita popolazioni",
+        "Risolvere ED biologiche semplici",
+        "Analizzare decadimenti"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Matrici e sistemi lineari biologici",
+      "core_contents": [
+        "Matrici 2x2, determinanti",
+        "Sistemi lineari Gauss",
+        "Matrici Leontief ecologia",
+        "Analisi bilancio massa"
+      ],
+      "learning_outcomes": [
+        "Risolvere bilanci ecologici",
+        "Analizzare flussi massa",
+        "Applicare matrici bio"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Statistica descrittiva",
+      "core_contents": [
+        "Medie, mediana, moda",
+        "Varianza, deviazione standard",
+        "Grafici istogrammi, boxplot",
+        "Correlazione lineare Pearson"
+      ],
+      "learning_outcomes": [
+        "Descrivere dati sperimentali",
+        "Interpretare dispersione",
+        "Calcolare correlazioni"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Distribuzioni di probabilità",
+      "core_contents": [
+        "Probabilità elementari",
+        "Distribuzione binomiale",
+        "Distribuzione normale, regola 68-95-99.7",
+        "Distribuzione Poisson mutazioni"
+      ],
+      "learning_outcomes": [
+        "Applicare distribuzioni bio",
+        "Interpretare normalità",
+        "Calcolare probabilità mutazioni"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Test statistici base",
+      "core_contents": [
+        "Test t-student",
+        "Test chi-quadrato",
+        "Intervalli confidenza",
+        "p-value interpretazione"
+      ],
+      "learning_outcomes": [
+        "Eseguire test significatività",
+        "Interpretare p-value",
+        "Costruire intervalli confidenza"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Analisi dati sperimentali",
+      "core_contents": [
+        "Regressione lineare semplice",
+        "Trasformazioni dati (log, reciproco)",
+        "Lineweaver-Burk enzimi",
+        "Validazione modelli"
+      ],
+      "learning_outcomes": [
+        "Eseguire regressioni enzimatiche",
+        "Validare modelli biologici",
+        "Trasformare dati sperimentali"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Matematica discreta biologica",
+      "core_contents": [
+        "Combinatoria base, permutazioni",
+        "Probabilità condizionale",
+        "Catene Markov ecologia",
+        "Grafi reti trofiche"
+      ],
+      "learning_outcomes": [
+        "Modellizzare reti trofiche",
+        "Analizzare catene Markov",
+        "Calcolare probabilità condizionali"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Strumenti informatici e laboratorio",
+      "core_contents": [
+        "Fogli calcolo (Excel) analisi dati",
+        "Software statistici base",
+        "Grafici scientifici",
+        "Report numerici biologici"
+      ],
+      "learning_outcomes": [
+        "Analizzare dati con Excel",
+        "Creare grafici scientifici",
+        "Produrre report numerici"
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "id": "copertura_contenuti",
+      "name": "Copertura contenuti",
+      "type": "contenuto",
+      "levels": {
+        "1": "Copre meno di 6 moduli bio-math.",
+        "2": "6-8 moduli con copertura superficiale.",
+        "3": "9 moduli con trattazione base.",
+        "4": "10-11 moduli ben coperti.",
+        "5": "Tutti i 12 moduli completamente."
+      }
+    },
+    {
+      "id": "applicazioni_biologiche",
+      "name": "Applicazioni biologiche",
+      "type": "contenuto",
+      "levels": {
+        "1": "Applicazioni generiche non bio.",
+        "2": "Qualche sporadico esempio bio.",
+        "3": "Applicazioni biologiche adeguate.",
+        "4": "Ricchi modelli biologici reali.",
+        "5": "Eccellenti applicazioni bioscienze."
+      }
+    },
+    {
+      "id": "statistica_descrittiva",
+      "name": "Statistica descrittiva",
+      "type": "contenuto",
+      "levels": {
+        "1": "Statistica generica.",
+        "2": "Medie/varianze base.",
+        "3": "Statistica descrittiva adeguata.",
+        "4": "Boxplot/correlazioni complete.",
+        "5": "Statistica bio completa."
+      }
+    },
+    {
+      "id": "probabilita_distribuzioni",
+      "name": "Probabilità/distribuzioni",
+      "type": "contenuto",
+      "levels": {
+        "1": "Probabilità astratta.",
+        "2": "Distribuzioni base.",
+        "3": "Binomiale/Normale introdotte.",
+        "4": "Poisson applicata mutazioni.",
+        "5": "Distribuzioni bio dettagliate."
+      }
+    },
+    {
+      "id": "test_statistici",
+      "name": "Test statistici",
+      "type": "contenuto",
+      "levels": {
+        "1": "Test assenti.",
+        "2": "Teoria test generici.",
+        "3": "t-test/chi2 base.",
+        "4": "p-value/intervalli spiegati.",
+        "5": "Test pratici bioscienze."
+      }
+    },
+    {
+      "id": "ed_biologiche",
+      "name": "ED biologiche",
+      "type": "contenuto",
+      "levels": {
+        "1": "ED generiche.",
+        "2": "Crescita esponenziale base.",
+        "3": "Logistica introdotta.",
+        "4": "Michaelis-Menten enzimi.",
+        "5": "ED bio complete e applicate."
+      }
+    },
+    {
+      "id": "regressione_lineare",
+      "name": "Regressione lineare",
+      "type": "contenuto",
+      "levels": {
+        "1": "Regressione generica.",
+        "2": "Lineare semplice.",
+        "3": "Lineweaver-Burk base.",
+        "4": "Trasformazioni dati bio.",
+        "5": "Regressione enzimatica completa."
+      }
+    },
+    {
+      "id": "grafici_visualizzazioni",
+      "name": "Grafici visualizzazioni",
+      "type": "didattico",
+      "levels": {
+        "1": "Grafici poveri.",
+        "2": "Grafici base.",
+        "3": "Buoni grafici standard.",
+        "4": "Boxplot/curves bio chiare.",
+        "5": "Visualizzazioni eccellenti bio."
+      }
+    },
+    {
+      "id": "matrici_ecologiche",
+      "name": "Matrici ecologiche",
+      "type": "contenuto",
+      "levels": {
+        "1": "Matrici assenti.",
+        "2": "Matrici 2x2 teoriche.",
+        "3": "Leontief introdotto.",
+        "4": "Bilanci massa ecologici.",
+        "5": "Matrici bio applicate."
+      }
+    },
+    {
+      "id": "software_pratici",
+      "name": "Software pratici",
+      "type": "didattico",
+      "levels": {
+        "1": "Nessun software.",
+        "2": "Teoria software.",
+        "3": "Excel base.",
+        "4": "Analisi dati pratica.",
+        "5": "Strumenti bio pratici."
+      }
+    },
+    {
+      "id": "errori_studenti_bio",
+      "name": "Errori studenti bio",
+      "type": "didattico",
+      "levels": {
+        "1": "Nessun supporto errori.",
+        "2": "Errori generici.",
+        "3": "Qualche box bio-math.",
+        "4": "Supporto proattivo bio.",
+        "5": "Prevenzione eccellente."
+      }
+    },
+    {
+      "id": "chiarezza_esposizione",
+      "name": "Chiarezza esposizione",
+      "type": "didattico",
+      "levels": {
+        "1": "Confusa per bioscienze.",
+        "2": "Abbastanza chiara.",
+        "3": "Buona chiarezza.",
+        "4": "Molto intuitiva bio.",
+        "5": "Perfetta per bioscienze."
+      }
+    },
+    {
+      "id": "collegamenti_disciplinari",
+      "name": "Collegamenti disciplinari",
+      "type": "didattico",
+      "levels": {
+        "1": "Matematica isolata.",
+        "2": "Pochi collegamenti.",
+        "3": "Adeguati collegamenti.",
+        "4": "Ricchi Bio/Chim/Amb.",
+        "5": "Integrazione eccellente."
+      }
+    },
+    {
+      "id": "laboratorio_matematico",
+      "name": "Laboratorio matematico",
+      "type": "didattico",
+      "levels": {
+        "1": "Separato da laboratorio.",
+        "2": "Cenni analisi dati.",
+        "3": "Qualche integrazione.",
+        "4": "Analisi dati sperimentali.",
+        "5": "Integrato perfettamente."
+      }
+    }
+  ],
+  "program_profiles": [
+    {
+      "id": "biologia_biotecnologie",
+      "name": "Biologia/Biotecnologie",
+      "priority_modules": [3,5,7,8,9,10],
+      "requirements": {
+        "copertura_contenuti": {"required_level": 5, "weight": 0.10},
+        "applicazioni_biologiche": {"required_level": 5, "weight": 0.14},
+        "statistica_descrittiva": {"required_level": 5, "weight": 0.13},
+        "probabilita_distribuzioni": {"required_level": 4, "weight": 0.12},
+        "test_statistici": {"required_level": 4, "weight": 0.11},
+        "ed_biologiche": {"required_level": 5, "weight": 0.13},
+        "regressione_lineare": {"required_level": 5, "weight": 0.12},
+        "grafici_visualizzazioni": {"required_level": 4, "weight": 0.09},
+        "matrici_ecologiche": {"required_level": 3, "weight": 0.08},
+        "software_pratici": {"required_level": 4, "weight": 0.09},
+        "errori_studenti_bio": {"required_level": 4, "weight": 0.06},
+        "chiarezza_esposizione": {"required_level": 5, "weight": 0.08},
+        "collegamenti_disciplinari": {"required_level": 5, "weight": 0.09},
+        "laboratorio_matematico": {"required_level": 4, "weight": 0.06}
+      }
+    },
+    {
+      "id": "farmacia",
+      "name": "Farmacia",
+      "priority_modules": [3,4,5,7,8,9,10],
+      "requirements": {
+        "copertura_contenuti": {"required_level": 5, "weight": 0.10},
+        "applicazioni_biologiche": {"required_level": 5, "weight": 0.13},
+        "statistica_descrittiva": {"required_level": 4, "weight": 0.12},
+        "probabilita_distribuzioni": {"required_level": 4, "weight": 0.12},
+        "test_statistici": {"required_level": 5, "weight": 0.13},
+        "ed_biologiche": {"required_level": 4, "weight": 0.12},
+        "regressione_lineare": {"required_level": 5, "weight": 0.14},
+        "grafici_visualizzazioni": {"required_level": 4, "weight": 0.09},
+        "matrici_ecologiche": {"required_level": 2, "weight": 0.07},
+        "software_pratici": {"required_level": 4, "weight": 0.09},
+        "errori_studenti_bio": {"required_level": 4, "weight": 0.06},
+        "chiarezza_esposizione": {"required_level": 5, "weight": 0.08},
+        "collegamenti_disciplinari": {"required_level": 4, "weight": 0.09},
+        "laboratorio_matematico": {"required_level": 4, "weight": 0.06}
+      }
+    }
+  ],
+  "manual_profiles": [
+    {
+      "id": "manuale_A",
+      "name": "Manuale A - Matematica Bio Completa",
+      "scores": {
+        "copertura_contenuti": 5,
+        "applicazioni_biologiche": 5,
+        "statistica_descrittiva": 5,
+        "probabilita_distribuzioni": 5,
+        "test_statistici": 4,
+        "ed_biologiche": 5,
+        "regressione_lineare": 5,
+        "grafici_visualizzazioni": 5,
+        "matrici_ecologiche": 4,
+        "software_pratici": 4,
+        "errori_studenti_bio": 4,
+        "chiarezza_esposizione": 5,
+        "collegamenti_disciplinari": 5,
+        "laboratorio_matematico": 4
+      }
+    }
+  ],
+  "alignment_method": {
+    "description": "Allineamento = media ponderata dei criteri: score_i = max(0, 1 - |required_level_i - offered_score_i| / 4)",
+    "formula": "alignment = Σ(weight_i × score_i) / Σ(weight_i)",
+    "interpretation": {
+      "85-100": "Eccellente - Perfetto per bioscienze - Adozione consigliata",
+      "70-84": "Buono - Solido modellizzazione bio - Raccomandato+integrazioni",
+      "55-69": "Sufficiente - Lacune statistiche/modelli - Con riserva",
+      "<55": "Sconsigliato - Troppo astratto - Non adottare"
+    }
+  },
+  "example_match": {
+    "program_id": "biologia_biotecnologie",
+    "manual_id": "manuale_A",
+    "overall_alignment": 93.7,
+    "judgment": "Eccellente",
+    "recommendation": "Manuale perfetto per Biologia/Biotecnologie. Eccellente copertura ED biologiche, regressione enzimatica e applicazioni reali.",
+    "strong_criteria": ["applicazioni_biologiche", "ed_biologiche", "regressione_lineare"],
+    "weak_criteria": ["test_statistici", "matrici_ecologiche"]
+  }
+}

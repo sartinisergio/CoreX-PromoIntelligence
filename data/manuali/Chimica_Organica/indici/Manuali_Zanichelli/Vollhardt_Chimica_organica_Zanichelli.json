@@ -1,0 +1,1505 @@
+{
+  "id": "vollhardt_chimica_organica",
+  "title": "Chimica organica",
+  "author": "Vollhardt",
+  "publisher": "Zanichelli",
+  "subject": "Chimica Organica",
+  "type": "Zanichelli",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Struttura e proprietà delle molecole organiche: Forze di legame, orbitali atomici e molecolari, acidità e basicità, molecole polari e apolari",
+      "page_start": 1,
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "Lo scopo della chimica organica: una visione generale",
+          "page_start": 1
+        },
+        {
+          "number": "1.2",
+          "title": "Forze di Coulomb: una visione semplificata del legame",
+          "page_start": 4
+        },
+        {
+          "number": "1.3",
+          "title": "Legami ionici e covalenti: la regola dell’ottetto",
+          "page_start": 5
+        },
+        {
+          "number": "1.4",
+          "title": "I modelli di legame a elettroni puntiformi: le strutture di Lewis",
+          "page_start": 11
+        },
+        {
+          "number": "1.5",
+          "title": "Formule di risonanza",
+          "page_start": 16
+        },
+        {
+          "number": "1.6",
+          "title": "Orbitali atomici: una descrizione quantomeccanica degli elettroni attorno al nucleo",
+          "page_start": 21
+        },
+        {
+          "number": "1.7",
+          "title": "Orbitali molecolari e legame covalente",
+          "page_start": 26
+        },
+        {
+          "number": "1.8",
+          "title": "Orbitali ibridi: formazione di legami in molecole complesse",
+          "page_start": 28
+        },
+        {
+          "number": "1.9",
+          "title": "Struttura e formule delle molecole organiche",
+          "page_start": 33
+        },
+        {
+          "number": "1.10",
+          "title": "Cinetica e termodinamica di semplici processi chimici",
+          "page_start": 36
+        },
+        {
+          "number": "1.11",
+          "title": "Le chiavi del successo: usare frecce curve per muovere gli elettroni e descrivere le reazioni chimiche",
+          "page_start": 42
+        },
+        {
+          "number": "1.12",
+          "title": "Acidi e basi",
+          "page_start": 45
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Struttura e reattività degli alcani: Energie di dissociazione di legame, alogenazione radicalica e reattività correlata",
+      "page_start": 53,
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "Gruppi funzionali: i punti focali della reattività",
+          "page_start": 53
+        },
+        {
+          "number": "2.2",
+          "title": "Alcani a catena lineare e ramificata",
+          "page_start": 56
+        },
+        {
+          "number": "2.3",
+          "title": "Nomenclatura degli alcani",
+          "page_start": 57
+        },
+        {
+          "number": "2.4",
+          "title": "Struttura e proprietà fisiche degli alcani",
+          "page_start": 61
+        },
+        {
+          "number": "2.5",
+          "title": "Rotazioni attorno a legami singoli: conformazioni",
+          "page_start": 64
+        },
+        {
+          "number": "2.6",
+          "title": "Rotazioni in etani sostituiti",
+          "page_start": 66
+        },
+        {
+          "number": "2.7",
+          "title": "Energia dei legami di un alcano: i radicali",
+          "page_start": 70
+        },
+        {
+          "number": "2.8",
+          "title": "Struttura dei radicali alchilici: l’iperconiugazione",
+          "page_start": 73
+        },
+        {
+          "number": "2.9",
+          "title": "Conversione del petrolio: la pirolisi",
+          "page_start": 74
+        },
+        {
+          "number": "2.10",
+          "title": "Clorurazione del metano: il meccanismo radicalico a catena",
+          "page_start": 77
+        },
+        {
+          "number": "2.11",
+          "title": "Altre alogenazioni radicaliche del metano",
+          "page_start": 82
+        },
+        {
+          "number": "2.12",
+          "title": "Le chiavi del successo: usare meccanismi “conosciuti” come modelli per meccanismi “sconosciuti”",
+          "page_start": 83
+        },
+        {
+          "number": "2.13",
+          "title": "La clorurazione di alcani superiori: reattività e selettività",
+          "page_start": 84
+        },
+        {
+          "number": "2.14",
+          "title": "Selettività nell’alogenazione radicalica con fluoro e bromo",
+          "page_start": 87
+        },
+        {
+          "number": "2.15",
+          "title": "Alogenazioni radicaliche di interesse sintetico",
+          "page_start": 89
+        },
+        {
+          "number": "2.16",
+          "title": "Le sostanze clorurate di sintesi e lo strato di ozono della stratosfera",
+          "page_start": 90
+        },
+        {
+          "number": "2.17",
+          "title": "Combustione e stabilità relativa degli alcani",
+          "page_start": 92
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Cicloalcani",
+      "page_start": 95,
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "Nomenclatura e proprietà fisiche dei cicloalcani",
+          "page_start": 95
+        },
+        {
+          "number": "3.2",
+          "title": "La struttura dei cicloalcani e la tensione d’anello",
+          "page_start": 98
+        },
+        {
+          "number": "3.3",
+          "title": "Il cicloesano: un cicloalcano senza tensioni",
+          "page_start": 102
+        },
+        {
+          "number": "3.4",
+          "title": "Cicloesani sostituiti",
+          "page_start": 107
+        },
+        {
+          "number": "3.5",
+          "title": "Cicloalcani superiori",
+          "page_start": 111
+        },
+        {
+          "number": "3.6",
+          "title": "Cicloalcani policiclici",
+          "page_start": 112
+        },
+        {
+          "number": "3.7",
+          "title": "Prodotti carbociclici in natura",
+          "page_start": 113
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Stereoisomeri",
+      "page_start": 117,
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "Le molecole chirali",
+          "page_start": 118
+        },
+        {
+          "number": "4.2",
+          "title": "L’attività ottica",
+          "page_start": 121
+        },
+        {
+          "number": "4.3",
+          "title": "La configurazione assoluta: le regole di sequenza R,S",
+          "page_start": 124
+        },
+        {
+          "number": "4.4",
+          "title": "Le proiezioni di Fischer",
+          "page_start": 128
+        },
+        {
+          "number": "4.5",
+          "title": "Le molecole che contengono diversi stereocentri: i diastereoisomeri",
+          "page_start": 131
+        },
+        {
+          "number": "4.6",
+          "title": "I composti meso",
+          "page_start": 134
+        },
+        {
+          "number": "4.7",
+          "title": "La stereochimica nelle reazioni chimiche",
+          "page_start": 137
+        },
+        {
+          "number": "4.8",
+          "title": "Risoluzione: separazione di enantiomeri",
+          "page_start": 142
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Proprietà e reazioni degli alogenuri alchilici: Sostituzioni nucleofile bimolecolari",
+      "page_start": 145,
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "Proprietà fisiche degli alogenuri alchilici",
+          "page_start": 145
+        },
+        {
+          "number": "5.2",
+          "title": "La sostituzione nucleofila",
+          "page_start": 147
+        },
+        {
+          "number": "5.3",
+          "title": "I meccanismi di reazione implicano gruppi funzionali polari: l’uso delle frecce per muovere gli elettroni",
+          "page_start": 150
+        },
+        {
+          "number": "5.4",
+          "title": "Uno sguardo più da vicino al meccanismo delle sostituzioni nucleofile: la cinetica",
+          "page_start": 152
+        },
+        {
+          "number": "5.5",
+          "title": "Attacco da davanti o da retro? La stereochimica della reazione SN2",
+          "page_start": 154
+        },
+        {
+          "number": "5.6",
+          "title": "Conseguenze dell’inversione nelle reazioni SN2",
+          "page_start": 157
+        },
+        {
+          "number": "5.7",
+          "title": "Struttura e reattività SN2: il gruppo uscente",
+          "page_start": 159
+        },
+        {
+          "number": "5.8",
+          "title": "Struttura e reattività SN2: il nucleofilo",
+          "page_start": 160
+        },
+        {
+          "number": "5.9",
+          "title": "Le chiavi del successo: scegliendo tra molteplici decorsi meccanicistici",
+          "page_start": 166
+        },
+        {
+          "number": "5.10",
+          "title": "Struttura e reattività SN2: il substrato",
+          "page_start": 167
+        },
+        {
+          "number": "5.11",
+          "title": "Le reazioni SN2 a prima vista",
+          "page_start": 171
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Ulteriori reazioni degli alogenuri alchilici: Sostituzioni unimolecolari e vie di eliminazione",
+      "page_start": 173,
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "Solvolisi di alogenuri alchilici terziari e secondari",
+          "page_start": 173
+        },
+        {
+          "number": "6.2",
+          "title": "Sostituzione nucleofila unimolecolare",
+          "page_start": 174
+        },
+        {
+          "number": "6.3",
+          "title": "Conseguenze stereochimiche delle reazioni SN1",
+          "page_start": 177
+        },
+        {
+          "number": "6.4",
+          "title": "Effetti del solvente, dei gruppi uscenti e del nucleofilo nella sostituzione unimolecolare",
+          "page_start": 179
+        },
+        {
+          "number": "6.5",
+          "title": "Effetti del gruppo alchilico sulla reazione SN1: la stabilità del carbocatione",
+          "page_start": 181
+        },
+        {
+          "number": "6.6",
+          "title": "Eliminazione unimolecolare: E1",
+          "page_start": 184
+        },
+        {
+          "number": "6.7",
+          "title": "Eliminazione bimolecolare: E2",
+          "page_start": 186
+        },
+        {
+          "number": "6.8",
+          "title": "Le chiavi del successo: sostituzione o eliminazione – la struttura determina il funzionamento",
+          "page_start": 190
+        },
+        {
+          "number": "6.9",
+          "title": "Sommario della reattività degli alogenuri alchilici",
+          "page_start": 192
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Gruppo funzionale ossidrilico: gli alcoli",
+      "page_start": 195,
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "Nomenclatura degli alcoli",
+          "page_start": 195
+        },
+        {
+          "number": "7.2",
+          "title": "Struttura e proprietà fisiche degli alcoli",
+          "page_start": 197
+        },
+        {
+          "number": "7.3",
+          "title": "Alcoli come acidi e basi",
+          "page_start": 199
+        },
+        {
+          "number": "7.4",
+          "title": "Fonti industriali di alcoli: monossido di carbonio ed etilene",
+          "page_start": 202
+        },
+        {
+          "number": "7.5",
+          "title": "Sintesi degli alcoli mediante reazioni di sostituzione nucleofila",
+          "page_start": 202
+        },
+        {
+          "number": "7.6",
+          "title": "Sintesi degli alcoli: relazione di ossidazione-riduzione tra alcoli e composti carbonilici",
+          "page_start": 203
+        },
+        {
+          "number": "7.7",
+          "title": "Reagenti organometallici: fonte di carbonio nucleofilo per la sintesi di alcoli",
+          "page_start": 208
+        },
+        {
+          "number": "7.8",
+          "title": "Reagenti organometallici nella sintesi degli alcoli",
+          "page_start": 211
+        },
+        {
+          "number": "7.9",
+          "title": "Le chiavi del successo: un’introduzione alla strategia sintetica",
+          "page_start": 213
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Ulteriori reazioni degli alcoli e chimica degli eteri",
+      "page_start": 223,
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "Reazioni di alcoli con una base: preparazione degli alcossidi",
+          "page_start": 224
+        },
+        {
+          "number": "8.2",
+          "title": "Reazioni di alcoli con acidi forti: ioni alchilossonio nelle reazioni di sostituzione e di eliminazione degli alcoli",
+          "page_start": 225
+        },
+        {
+          "number": "8.3",
+          "title": "Riarrangiamenti di carbocationi",
+          "page_start": 227
+        },
+        {
+          "number": "8.4",
+          "title": "Sintesi di esteri a partire da alcoli e formazione di alogenuri alchilici",
+          "page_start": 232
+        },
+        {
+          "number": "8.5",
+          "title": "Nomenclatura e proprietà fisica degli eteri",
+          "page_start": 236
+        },
+        {
+          "number": "8.6",
+          "title": "La sintesi degli eteri di Williamson",
+          "page_start": 238
+        },
+        {
+          "number": "8.7",
+          "title": "La sintesi degli eteri: alcoli e acidi minerali",
+          "page_start": 242
+        },
+        {
+          "number": "8.8",
+          "title": "Reazioni degli eteri",
+          "page_start": 244
+        },
+        {
+          "number": "8.9",
+          "title": "Reazione degli epossidi (ossaciclopropani)",
+          "page_start": 245
+        },
+        {
+          "number": "8.10",
+          "title": "Gli analoghi solforati di alcoli ed eteri",
+          "page_start": 249
+        },
+        {
+          "number": "8.11",
+          "title": "Proprietà fisiologiche e usi degli alcoli e degli eteri",
+          "page_start": 251
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Uso della spettroscopia a risonanza magnetica nucelare per determinare la struttura delle molecole",
+      "page_start": 255,
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "Test fisici e chimici",
+          "page_start": 255
+        },
+        {
+          "number": "9.2",
+          "title": "Definire la spettroscopia",
+          "page_start": 256
+        },
+        {
+          "number": "9.3",
+          "title": "La risonanza magnetica nucleare dell’idrogeno",
+          "page_start": 258
+        },
+        {
+          "number": "9.4",
+          "title": "Gli spettri NMR possono essere usati per analizzare le strutture molecolari",
+          "page_start": 262
+        },
+        {
+          "number": "9.5",
+          "title": "Test per l’equivalenza chimica",
+          "page_start": 266
+        },
+        {
+          "number": "9.6",
+          "title": "Integrazione",
+          "page_start": 270
+        },
+        {
+          "number": "9.7",
+          "title": "Accoppiamento spin-spin: l’effetto di idrogeni vicini non equivalenti",
+          "page_start": 272
+        },
+        {
+          "number": "9.8",
+          "title": "Accoppiamento spin-spin: alcune complicazioni",
+          "page_start": 279
+        },
+        {
+          "number": "9.9",
+          "title": "Risonanza magnetica nucleare del carbonio-13",
+          "page_start": 284
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Alcheni: spettroscopia infrarossa e spettrometria di massa",
+      "page_start": 291,
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "Dare il nome agli alcheni",
+          "page_start": 291
+        },
+        {
+          "number": "10.2",
+          "title": "Struttura e legami nell’etene: il legame pi greco (π)",
+          "page_start": 294
+        },
+        {
+          "number": "10.3",
+          "title": "Proprietà fisiche degli alcheni",
+          "page_start": 297
+        },
+        {
+          "number": "10.4",
+          "title": "La risonanza magnetica nucleare degli alcheni",
+          "page_start": 298
+        },
+        {
+          "number": "10.5",
+          "title": "Idrogenazione catalitica degli alcheni: la stabilità relativa dei doppi legami",
+          "page_start": 303
+        },
+        {
+          "number": "10.6",
+          "title": "Preparazione degli alcheni da alogenuri alchilici e alchilsolfonati: l’eliminazione bimolecolare rivisitata",
+          "page_start": 305
+        },
+        {
+          "number": "10.7",
+          "title": "Preparazione degli alcheni mediante disidratazione degli alcoli",
+          "page_start": 309
+        },
+        {
+          "number": "10.8",
+          "title": "La spettroscopia infrarossa",
+          "page_start": 310
+        },
+        {
+          "number": "10.9",
+          "title": "Misurare la massa molecolare dei composti organici: la spettrometria di massa",
+          "page_start": 314
+        },
+        {
+          "number": "10.10",
+          "title": "Pattern di frammentazione di molecole organiche",
+          "page_start": 318
+        },
+        {
+          "number": "10.11",
+          "title": "Il grado di insaturazione: un altro aiuto per identificare la struttura molecolare",
+          "page_start": 322
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Reazioni degli alcheni",
+      "page_start": 325,
+      "sections": [
+        {
+          "number": "11.1",
+          "title": "Perché procedono le reazioni di addizione: aspetto termodinamico",
+          "page_start": 325
+        },
+        {
+          "number": "11.2",
+          "title": "Idrogenazione catalitica",
+          "page_start": 326
+        },
+        {
+          "number": "11.3",
+          "title": "Carattere basico e nucleofilo del legame π: addizione elettrofila di acidi alogenidrici",
+          "page_start": 330
+        },
+        {
+          "number": "11.4",
+          "title": "Sintesi di alcoli mediante idratazione elettrofila: controllo termodinamico",
+          "page_start": 334
+        },
+        {
+          "number": "11.5",
+          "title": "Addizione elettrofila di alogeni agli alcheni",
+          "page_start": 336
+        },
+        {
+          "number": "11.6",
+          "title": "La generalità dell’addizione elettrofila",
+          "page_start": 338
+        },
+        {
+          "number": "11.7",
+          "title": "Ossimercuriazione-demercuriazione: un’addizione elettrofila speciale",
+          "page_start": 341
+        },
+        {
+          "number": "11.8",
+          "title": "Idroborazione-ossidazione: un’idratazione stereospecifica anti-Markovnikov",
+          "page_start": 344
+        },
+        {
+          "number": "11.9",
+          "title": "Diazometano, carbeni e sintesi del ciclopropano",
+          "page_start": 346
+        },
+        {
+          "number": "11.10",
+          "title": "Sintesi di epossidi: epossidazione mediante acidi perossicarbossilici",
+          "page_start": 348
+        },
+        {
+          "number": "11.11",
+          "title": "Diidrossilazione vicinale sin con tetrossido di osmio",
+          "page_start": 350
+        },
+        {
+          "number": "11.12",
+          "title": "Rottura ossidativa: l’ozonolisi",
+          "page_start": 351
+        },
+        {
+          "number": "11.13",
+          "title": "Addizioni radicaliche: formazione di prodotti anti-Markovnikov",
+          "page_start": 353
+        },
+        {
+          "number": "11.14",
+          "title": "Dimerizzazione, oligomerizzazione e polimerizzazione degli alcheni",
+          "page_start": 354
+        },
+        {
+          "number": "11.15",
+          "title": "Sintesi di polimeri",
+          "page_start": 356
+        },
+        {
+          "number": "11.16",
+          "title": "L’etilene: un’importante materia prima industriale",
+          "page_start": 358
+        },
+        {
+          "number": "11.17",
+          "title": "Alcheni in natura: i feromoni degli insetti",
+          "page_start": 359
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Alchini: Il triplo legame carbonio-carbonio",
+      "page_start": 361,
+      "sections": [
+        {
+          "number": "12.1",
+          "title": "Nomenclatura degli alchini",
+          "page_start": 361
+        },
+        {
+          "number": "12.2",
+          "title": "Proprietà e legami degli alchini",
+          "page_start": 362
+        },
+        {
+          "number": "12.3",
+          "title": "Spettroscopia degli alchini",
+          "page_start": 365
+        },
+        {
+          "number": "12.4",
+          "title": "Preparazione di alchini mediante doppia eliminazione",
+          "page_start": 369
+        },
+        {
+          "number": "12.5",
+          "title": "Preparazione di alchini da alchinil anioni",
+          "page_start": 371
+        },
+        {
+          "number": "12.6",
+          "title": "Riduzione degli alchini: la reattività relativa dei due legami π",
+          "page_start": 372
+        },
+        {
+          "number": "12.7",
+          "title": "Reazioni di addizione elettrofila ad alchini",
+          "page_start": 375
+        },
+        {
+          "number": "12.8",
+          "title": "Addizioni anti-Markovnikov ai tripli legami",
+          "page_start": 378
+        },
+        {
+          "number": "12.9",
+          "title": "Comportamento chimico degli alogenuri alchenilici",
+          "page_start": 379
+        },
+        {
+          "number": "12.10",
+          "title": "L’acetilene come materiale di partenza industriale",
+          "page_start": 380
+        },
+        {
+          "number": "12.11",
+          "title": "Alchini in natura e in ambito medico",
+          "page_start": 382
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Sistemi π delocalizzati: Studio mediante spettroscopia visibile e ultravioletta",
+      "page_start": 385,
+      "sections": [
+        {
+          "number": "13.1",
+          "title": "Sovrapposizione di tre orbitali p adiacenti: delocalizzazione elettronica nel sistema 2-propenilico (allilico)",
+          "page_start": 385
+        },
+        {
+          "number": "13.2",
+          "title": "Alogenazione radicalica allilica",
+          "page_start": 388
+        },
+        {
+          "number": "13.3",
+          "title": "Sostituzione nucleofila di alogenuri allilici: SN1 e SN2",
+          "page_start": 390
+        },
+        {
+          "number": "13.4",
+          "title": "Reagenti organometallici allilici: utili nucleofili a tre atomi di carbonio",
+          "page_start": 391
+        },
+        {
+          "number": "13.5",
+          "title": "Due doppi legami adiacenti: i dieni coniugati",
+          "page_start": 392
+        },
+        {
+          "number": "13.6",
+          "title": "Attacco elettrofilo sui dieni coniugati: controllo cinetico e termodinamico",
+          "page_start": 395
+        },
+        {
+          "number": "13.7",
+          "title": "Delocalizzazione attraverso più di due legami π: coniugazione estesa e benzene",
+          "page_start": 399
+        },
+        {
+          "number": "13.8",
+          "title": "Una trasformazione speciale dei dieni coniugati: la cicloaddizione di Diels-Alder",
+          "page_start": 401
+        },
+        {
+          "number": "13.9",
+          "title": "Reazioni elettrocicliche",
+          "page_start": 409
+        },
+        {
+          "number": "13.10",
+          "title": "Polimerizzazione di dieni coniugati: la gomma",
+          "page_start": 414
+        },
+        {
+          "number": "13.11",
+          "title": "Spettri elettronici: spettroscopia ultravioletta e visibile",
+          "page_start": 417
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Benzene e aromaticità: Sostituzione elettrofila aromatica",
+      "page_start": 423,
+      "sections": [
+        {
+          "number": "14.1",
+          "title": "Nomenclatura dei derivati del benzene",
+          "page_start": 424
+        },
+        {
+          "number": "14.2",
+          "title": "Struttura ed energia di risonanza del benzene: un primo sguardo all’aromaticità",
+          "page_start": 426
+        },
+        {
+          "number": "14.3",
+          "title": "Orbitali molecolari π del benzene",
+          "page_start": 428
+        },
+        {
+          "number": "14.4",
+          "title": "Caratteristiche spettrali del benzene",
+          "page_start": 430
+        },
+        {
+          "number": "14.5",
+          "title": "Idrocarburi policiclici aromatici",
+          "page_start": 435
+        },
+        {
+          "number": "14.6",
+          "title": "Altri polieni ciclici: la regola di Hückel",
+          "page_start": 438
+        },
+        {
+          "number": "14.7",
+          "title": "La regola di Hückel e le molecole recanti una carica",
+          "page_start": 442
+        },
+        {
+          "number": "14.8",
+          "title": "Sintesi di derivati del benzene: sostituzione elettrofila aromatica",
+          "page_start": 444
+        },
+        {
+          "number": "14.9",
+          "title": "Alogenazione del benzene: la necessità di un catalizzatore",
+          "page_start": 446
+        },
+        {
+          "number": "14.10",
+          "title": "Nitrazione e solfonazione del benzene",
+          "page_start": 448
+        },
+        {
+          "number": "14.11",
+          "title": "Alchilazione di Friedel-Crafts",
+          "page_start": 451
+        },
+        {
+          "number": "14.12",
+          "title": "Limiti delle alchilazioni di Friedel-Crafts",
+          "page_start": 454
+        },
+        {
+          "number": "14.13",
+          "title": "Acilazione di Friedel-Crafts (alcanoilazione)",
+          "page_start": 455
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Attacco elettrofilo sui derivati del benzene: Controllo della regioselettività dei sostituenti",
+      "page_start": 459,
+      "sections": [
+        {
+          "number": "15.1",
+          "title": "Effetto attivante o disattivante dei sostituenti sull’anello benzenico",
+          "page_start": 460
+        },
+        {
+          "number": "15.2",
+          "title": "Effetti orientanti elettron-donatori di gruppi alchilici",
+          "page_start": 462
+        },
+        {
+          "number": "15.3",
+          "title": "Effetti orientanti di sostituenti coniugati all’anello benzenico",
+          "page_start": 465
+        },
+        {
+          "number": "15.4",
+          "title": "Attacco elettrofilo su benzeni disostituiti",
+          "page_start": 471
+        },
+        {
+          "number": "15.5",
+          "title": "Le chiavi del successo: strategie per la sintesi di benzeni sostituiti",
+          "page_start": 474
+        },
+        {
+          "number": "15.6",
+          "title": "Reattività di idrocarburi policiclici aromatici",
+          "page_start": 480
+        },
+        {
+          "number": "15.7",
+          "title": "Gli idrocarburi policiclici aromatici e il cancro",
+          "page_start": 482
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Aldeidi e chetoni: Il gruppo carbonilico",
+      "page_start": 485,
+      "sections": [
+        {
+          "number": "16.1",
+          "title": "Fornire un nome ad aldeidi e chetoni",
+          "page_start": 485
+        },
+        {
+          "number": "16.2",
+          "title": "La struttura del gruppo carbonilico",
+          "page_start": 487
+        },
+        {
+          "number": "16.3",
+          "title": "Proprietà spettroscopiche di aldeidi e chetoni",
+          "page_start": 489
+        },
+        {
+          "number": "16.4",
+          "title": "Preparazione di aldeidi e chetoni",
+          "page_start": 494
+        },
+        {
+          "number": "16.5",
+          "title": "Reattività del gruppo carbonilico: meccanismi di addizione",
+          "page_start": 496
+        },
+        {
+          "number": "16.6",
+          "title": "L’addizione di acqua porta alla formazione di idrati",
+          "page_start": 498
+        },
+        {
+          "number": "16.7",
+          "title": "L’addizione di alcoli porta alla formazione di emiacetali e acetali",
+          "page_start": 500
+        },
+        {
+          "number": "16.8",
+          "title": "Acetali come gruppi protettivi",
+          "page_start": 502
+        },
+        {
+          "number": "16.9",
+          "title": "Addizione nucleofila di ammoniaca e dei suoi derivati",
+          "page_start": 505
+        },
+        {
+          "number": "16.10",
+          "title": "Deossigenazione del gruppo carbonilico",
+          "page_start": 509
+        },
+        {
+          "number": "16.11",
+          "title": "Addizione di acido cianidrico a dare cianoidrine",
+          "page_start": 511
+        },
+        {
+          "number": "16.12",
+          "title": "Addizioni di ilidi di fosforo: la reazione di Wittig",
+          "page_start": 511
+        },
+        {
+          "number": "16.13",
+          "title": "Ossidazione con acidi perossocarbossilici: l’ossidazione di Baeyer-Villiger",
+          "page_start": 514
+        },
+        {
+          "number": "16.14",
+          "title": "Saggi ossidativi per le aldeidi",
+          "page_start": 515
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Enoli, enolati e la condensazione aldolica: Aldeidi e chetoni α,β-insaturi",
+      "page_start": 517,
+      "sections": [
+        {
+          "number": "17.1",
+          "title": "Acidità di aldeidi e chetoni: gli ioni enolato",
+          "page_start": 518
+        },
+        {
+          "number": "17.2",
+          "title": "Equilibri cheto-enolici",
+          "page_start": 520
+        },
+        {
+          "number": "17.3",
+          "title": "L’alogenazione di aldeidi e chetoni",
+          "page_start": 523
+        },
+        {
+          "number": "17.4",
+          "title": "Alchilazione di aldeidi e chetoni",
+          "page_start": 524
+        },
+        {
+          "number": "17.5",
+          "title": "Attacco di enolati alla funzione carbonilica: la condensazione aldolica",
+          "page_start": 527
+        },
+        {
+          "number": "17.6",
+          "title": "Condensazione aldolica incrociata",
+          "page_start": 530
+        },
+        {
+          "number": "17.7",
+          "title": "Le chiavi del successo: meccanismi di reazione competitivi e la condensazione aldolica intramolecolare",
+          "page_start": 531
+        },
+        {
+          "number": "17.8",
+          "title": "Proprietà di aldeidi e chetoni α,β-insaturi",
+          "page_start": 533
+        },
+        {
+          "number": "17.9",
+          "title": "Addizioni coniugate ad aldeidi e chetoni α,β-insaturi",
+          "page_start": 535
+        },
+        {
+          "number": "17.10",
+          "title": "Addizioni 1,2 e 1,4 di reagenti organometallici",
+          "page_start": 537
+        },
+        {
+          "number": "17.11",
+          "title": "Addizione coniugata di ioni enolati: l’addizione di Michael e l’anellazione di Robinson",
+          "page_start": 539
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Acidi carbossilici",
+      "page_start": 543,
+      "sections": [
+        {
+          "number": "18.1",
+          "title": "La nomenclatura degli acidi carbossilici",
+          "page_start": 543
+        },
+        {
+          "number": "18.2",
+          "title": "Proprietà strutturali e fisiche degli acidi carbossilici",
+          "page_start": 545
+        },
+        {
+          "number": "18.3",
+          "title": "Spettroscopia e spettrometria di massa degli acidi carbossilici",
+          "page_start": 546
+        },
+        {
+          "number": "18.4",
+          "title": "Carattere acido e basico degli acidi carbossilici",
+          "page_start": 550
+        },
+        {
+          "number": "18.5",
+          "title": "La sintesi industriale degli acidi carbossilici",
+          "page_start": 553
+        },
+        {
+          "number": "18.6",
+          "title": "Metodi per l’introduzione del gruppo funzionale carbossilico",
+          "page_start": 554
+        },
+        {
+          "number": "18.7",
+          "title": "La sostituzione al carbonio carbossilico: il meccanismo di addizione-eliminazione",
+          "page_start": 556
+        },
+        {
+          "number": "18.8",
+          "title": "Derivati degli acidi carbossilici: alogenuri acilici e anidridi",
+          "page_start": 560
+        },
+        {
+          "number": "18.9",
+          "title": "Derivati degli acidi carbossilici: esteri",
+          "page_start": 563
+        },
+        {
+          "number": "18.10",
+          "title": "Derivati degli acidi carbossilici: ammidi",
+          "page_start": 567
+        },
+        {
+          "number": "18.11",
+          "title": "Riduzione di acidi carbossilici con litio alluminio idruro",
+          "page_start": 569
+        },
+        {
+          "number": "18.12",
+          "title": "Bromurazione nella posizione adiacente al gruppo carbossilico: la reazione di Hell-Volhard-Zelinsky",
+          "page_start": 569
+        },
+        {
+          "number": "18.13",
+          "title": "Attività biologica degli acidi carbossilici",
+          "page_start": 570
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Derivati degli acidi carbossilici",
+      "page_start": 575,
+      "sections": [
+        {
+          "number": "19.1",
+          "title": "Reattività relativa, strutture e spettri dei derivati carbossilici",
+          "page_start": 575
+        },
+        {
+          "number": "19.2",
+          "title": "Reattività chimica degli alogenuri acilici",
+          "page_start": 580
+        },
+        {
+          "number": "19.3",
+          "title": "Reattività chimica delle carbossianidridi",
+          "page_start": 583
+        },
+        {
+          "number": "19.4",
+          "title": "Reattività chimica degli esteri",
+          "page_start": 585
+        },
+        {
+          "number": "19.5",
+          "title": "Gli esteri in natura: cere, grassi, oli e lipidi",
+          "page_start": 591
+        },
+        {
+          "number": "19.6",
+          "title": "Le ammidi: i derivati degli acidi carbossilici meno reattivi",
+          "page_start": 593
+        },
+        {
+          "number": "19.7",
+          "title": "Gli anioni delle ammidi e la loro alogenazione: il riarrangiamento di Hofmann",
+          "page_start": 596
+        },
+        {
+          "number": "19.8",
+          "title": "Gli alcanonitrili: una speciale classe di derivati di acidi carbossilici",
+          "page_start": 598
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Ammine e loro derivati: Gruppi funzionali contenenti azoto",
+      "page_start": 603,
+      "sections": [
+        {
+          "number": "20.1",
+          "title": "Nomenclatura delle ammine",
+          "page_start": 603
+        },
+        {
+          "number": "20.2",
+          "title": "Proprietà strutturali e fisiche delle ammine",
+          "page_start": 605
+        },
+        {
+          "number": "20.3",
+          "title": "Spettroscopia del gruppo amminico",
+          "page_start": 606
+        },
+        {
+          "number": "20.4",
+          "title": "Acidità e basicità delle ammine",
+          "page_start": 609
+        },
+        {
+          "number": "20.5",
+          "title": "Sintesi di ammine mediante alchilazione",
+          "page_start": 613
+        },
+        {
+          "number": "20.6",
+          "title": "Sintesi di ammine mediante amminazione riduttiva",
+          "page_start": 616
+        },
+        {
+          "number": "20.7",
+          "title": "Sintesi di ammine da ammidi carbossiliche",
+          "page_start": 618
+        },
+        {
+          "number": "20.8",
+          "title": "Reazioni dei sali quaternari di ammonio: eliminazione di Hofmann",
+          "page_start": 619
+        },
+        {
+          "number": "20.9",
+          "title": "Reazione di Mannich: alchilazione di enoli mediante ioni imminio",
+          "page_start": 620
+        },
+        {
+          "number": "20.10",
+          "title": "Nitrosazione di ammine",
+          "page_start": 622
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "title": "Chimica dei sostituenti del benzene: Alchilbenzeni, fenoli e benzenammine",
+      "page_start": 627,
+      "sections": [
+        {
+          "number": "21.1",
+          "title": "Reattività al carbonio fenilmetilico (benzilico): stabilizzazione per risonanza benzilica",
+          "page_start": 627
+        },
+        {
+          "number": "21.2",
+          "title": "Ossidazioni e riduzioni benziliche",
+          "page_start": 631
+        },
+        {
+          "number": "21.3",
+          "title": "Nomenclatura e proprietà dei fenoli",
+          "page_start": 633
+        },
+        {
+          "number": "21.4",
+          "title": "Preparazione dei fenoli: sostituzione nucleofila aromatica",
+          "page_start": 636
+        },
+        {
+          "number": "21.5",
+          "title": "Reattività del gruppo ossidrilico dei fenoli",
+          "page_start": 645
+        },
+        {
+          "number": "21.6",
+          "title": "Sostituzioni elettrofile di fenoli",
+          "page_start": 647
+        },
+        {
+          "number": "21.7",
+          "title": "Una reazione elettrociclica dell’anello benzenico: il riarrangiamento di Claisen",
+          "page_start": 651
+        },
+        {
+          "number": "21.8",
+          "title": "Ossidazione dei fenoli: i benzochinoni",
+          "page_start": 653
+        },
+        {
+          "number": "21.9",
+          "title": "Processi di ossidazione-riduzione in natura",
+          "page_start": 655
+        },
+        {
+          "number": "21.10",
+          "title": "Sali di arendiazonio",
+          "page_start": 659
+        },
+        {
+          "number": "21.11",
+          "title": "Sostituzione elettrofila con i sali di arendiazonio: i derivati diazo",
+          "page_start": 661
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "title": "Gli enolati degli esteri e la condensazione di Claisen: Sintesi di composti β-dicarbonilici; equivalenti di acil-anioni",
+      "page_start": 663,
+      "sections": [
+        {
+          "number": "22.1",
+          "title": "Composti β-dicarbonilici: condensazioni di Claisen",
+          "page_start": 663
+        },
+        {
+          "number": "22.2",
+          "title": "I composti β-dicarbonilici come intermedi sintetici",
+          "page_start": 671
+        },
+        {
+          "number": "22.3",
+          "title": "Reattività chimica degli anioni dei β-dicarbonili: le addizioni di Michael",
+          "page_start": 675
+        },
+        {
+          "number": "22.4",
+          "title": "Equivalenti di acil-anioni: preparazione di α-idrossichetoni",
+          "page_start": 678
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "title": "Carboidrati: Composti polifunzionali in natura",
+      "page_start": 683,
+      "sections": [
+        {
+          "number": "23.1",
+          "title": "Nomenclatura e struttura dei carboidrati",
+          "page_start": 683
+        },
+        {
+          "number": "23.2",
+          "title": "Conformazioni e forme cicliche degli zuccheri",
+          "page_start": 687
+        },
+        {
+          "number": "23.3",
+          "title": "Anomeri di zuccheri semplici: mutarotazione del glucosio",
+          "page_start": 692
+        },
+        {
+          "number": "23.4",
+          "title": "Chimica polifunzionale degli zuccheri: ossidazione ad acidi carbossilici",
+          "page_start": 693
+        },
+        {
+          "number": "23.5",
+          "title": "Rottura ossidativa degli zuccheri",
+          "page_start": 695
+        },
+        {
+          "number": "23.6",
+          "title": "Riduzione di monosaccaridi ad alditoli",
+          "page_start": 696
+        },
+        {
+          "number": "23.7",
+          "title": "Condensazione del gruppo carbonilico con derivati amminici",
+          "page_start": 697
+        },
+        {
+          "number": "23.8",
+          "title": "Formazione di esteri ed eteri: i glicosidi",
+          "page_start": 697
+        },
+        {
+          "number": "23.9",
+          "title": "Costruzione e degradazione passaggio per passaggio degli zuccheri",
+          "page_start": 700
+        },
+        {
+          "number": "23.10",
+          "title": "Configurazioni relative degli aldosi: un esercizio per la determinazione della struttura",
+          "page_start": 702
+        },
+        {
+          "number": "23.11",
+          "title": "Zuccheri complessi naturali: i disaccaridi",
+          "page_start": 705
+        },
+        {
+          "number": "23.12",
+          "title": "Polisaccaridi e altri zuccheri naturali",
+          "page_start": 708
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "title": "Eterocicli: Gli eteroatomi nei composti organici ciclici",
+      "page_start": 713,
+      "sections": [
+        {
+          "number": "24.1",
+          "title": "Nomenclatura degli eterocicli",
+          "page_start": 715
+        },
+        {
+          "number": "24.2",
+          "title": "Eterocicli non aromatici",
+          "page_start": 716
+        },
+        {
+          "number": "24.3",
+          "title": "Struttura e proprietà degli eterociclopentadieni aromatici",
+          "page_start": 718
+        },
+        {
+          "number": "24.4",
+          "title": "Reazioni di eterociclopentadieni aromatici",
+          "page_start": 721
+        },
+        {
+          "number": "24.5",
+          "title": "Struttura e preparazione della piridina: un azabenzene",
+          "page_start": 724
+        },
+        {
+          "number": "24.6",
+          "title": "Reazioni della piridina",
+          "page_start": 728
+        },
+        {
+          "number": "24.7",
+          "title": "Chinolina e isochinolina: le benzopiridine",
+          "page_start": 730
+        },
+        {
+          "number": "24.8",
+          "title": "Gli alcaloidi: eterocicli azotati naturali con spiccate attività biologiche",
+          "page_start": 732
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "title": "Amminoacidi, peptidi, proteine e acidi nucleici: Polimeri naturali contenenti azoto",
+      "page_start": 735,
+      "sections": [
+        {
+          "number": "25.1",
+          "title": "Struttura e proprietà degli amminoacidi",
+          "page_start": 735
+        },
+        {
+          "number": "25.2",
+          "title": "La sintesi degli amminoacidi: una combinazione della chimica delle ammine e degli acidi carbossilici",
+          "page_start": 740
+        },
+        {
+          "number": "25.3",
+          "title": "Sintesi di amminoacidi enantiomericamente puri",
+          "page_start": 742
+        },
+        {
+          "number": "25.4",
+          "title": "Peptidi e proteine: oligomeri e polimeri di amminoacidi",
+          "page_start": 744
+        },
+        {
+          "number": "25.5",
+          "title": "Determinazione della struttura primaria: sequenziamento degli amminoacidi",
+          "page_start": 750
+        },
+        {
+          "number": "25.6",
+          "title": "Sintesi di polipeptidi: una sfida nell’applicazione dei gruppi protettivi",
+          "page_start": 756
+        },
+        {
+          "number": "25.7",
+          "title": "Sintesi peptidica in fase solida di Merrifield",
+          "page_start": 759
+        },
+        {
+          "number": "25.8",
+          "title": "I polipeptidi in natura: trasporto di ossigeno mediante le proteine mioglobina ed emoglobina",
+          "page_start": 760
+        },
+        {
+          "number": "25.9",
+          "title": "La biosintesi delle proteine: gli acidi nucleici",
+          "page_start": 762
+        },
+        {
+          "number": "25.10",
+          "title": "La sintesi delle proteine mediante RNA",
+          "page_start": 766
+        }
+      ]
+    }
+  ]
+}

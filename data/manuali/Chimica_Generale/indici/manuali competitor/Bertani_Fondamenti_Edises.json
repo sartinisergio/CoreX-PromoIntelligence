@@ -1,0 +1,599 @@
+{
+  "id": "Bertani_Fondamenti",
+  "title": "Fondamenti di Chimica",
+  "author": "Bertani e al.",
+  "publisher": "Edises",
+  "subject": "chimica generale",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Introduzione",
+      "page_start": 2,
+      "sections": [
+        {
+          "title": "Gli elementi e i materiali in natura",
+          "page_start": 2
+        },
+        {
+          "title": "La tecnologia e la scienza moderna",
+          "page_start": 5
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "La materia e la sua struttura",
+      "page_start": 8,
+      "sections": [
+        {
+          "title": "Uno sguardo alla storia",
+          "page_start": 8
+        },
+        {
+          "title": "Le particelle fondamentali dell'atomo",
+          "page_start": 8
+        },
+        {
+          "title": "I primi modelli atomici",
+          "page_start": 11
+        },
+        {
+          "title": "La struttura del nucleo atomico",
+          "page_start": 14
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "La meccanica quantistica – L'equazione di Schrödinger",
+      "page_start": 20,
+      "sections": [
+        {
+          "title": "La crisi della fisica classica",
+          "page_start": 20
+        },
+        {
+          "title": "Generalità sulle onde elettromagnetiche",
+          "page_start": 20
+        },
+        {
+          "title": "La teoria ondulatoria di Maxwell",
+          "page_start": 20
+        },
+        {
+          "title": "La nascita della teoria dei quanti",
+          "page_start": 23
+        },
+        {
+          "title": "La teoria corpuscolare di Planck",
+          "page_start": 27
+        },
+        {
+          "title": "Il modello atomico dell'atomo di idrogeno di Bohr-Sommerfeld",
+          "page_start": 28
+        },
+        {
+          "title": "La critica del modello atomico di Bohr-Sommerfeld",
+          "page_start": 32
+        },
+        {
+          "title": "Il principio di indeterminazione di Heisenberg",
+          "page_start": 34
+        },
+        {
+          "title": "L'equazione di De Broglie",
+          "page_start": 35
+        },
+        {
+          "title": "L'equazione di Schrödinger generale",
+          "page_start": 36
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "La struttura elettronica degli atomi e le proprietà periodiche",
+      "page_start": 48,
+      "sections": [
+        {
+          "title": "L'equazione di Schrödinger in coordinate cartesiane applicata all'atomo di idrogeno",
+          "page_start": 48
+        },
+        {
+          "title": "L'equazione di Schrödinger in coordinate polari applicata all'atomo di idrogeno",
+          "page_start": 48
+        },
+        {
+          "title": "Gli orbitali",
+          "page_start": 50
+        },
+        {
+          "title": "Le funzioni d'onda orbitali atomici",
+          "page_start": 51
+        },
+        {
+          "title": "Approfondimenti sulla rappresentazione con le superfici di equiprobabilità degli orbitali atomici s, p, d e f",
+          "page_start": 56
+        },
+        {
+          "title": "Gli atomi con più elettroni",
+          "page_start": 58
+        },
+        {
+          "title": "Le configurazioni elettroniche degli atomi",
+          "page_start": 67
+        },
+        {
+          "title": "La tavola periodica di Mendeleev. Cenni storici",
+          "page_start": 72
+        },
+        {
+          "title": "Le proprietà periodiche degli elementi",
+          "page_start": 76
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Il legame chimico – Proprietà generali e legame ionico",
+      "page_start": 94,
+      "sections": [
+        {
+          "title": "Il legame chimico",
+          "page_start": 94
+        },
+        {
+          "title": "I parametri della struttura molecolare",
+          "page_start": 94
+        },
+        {
+          "title": "I simboli di Lewis",
+          "page_start": 96
+        },
+        {
+          "title": "La classificazione dei legami chimici",
+          "page_start": 97
+        },
+        {
+          "title": "Il legame ionico",
+          "page_start": 98
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Il legame covalente",
+      "page_start": 108,
+      "sections": [
+        {
+          "title": "Introduzione",
+          "page_start": 108
+        },
+        {
+          "title": "La teoria di Lewis nel legame covalente",
+          "page_start": 108
+        },
+        {
+          "title": "Le formule di struttura elettroniche (o formule di Lewis)",
+          "page_start": 112
+        },
+        {
+          "title": "La forma delle molecole e la teoria VSEPR",
+          "page_start": 120
+        },
+        {
+          "title": "La teoria del legame di valenza",
+          "page_start": 130
+        },
+        {
+          "title": "La teoria degli orbitali molecolari",
+          "page_start": 150
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Il legame metallico e i legami deboli",
+      "page_start": 170,
+      "sections": [
+        {
+          "title": "Il legame metallico",
+          "page_start": 170
+        },
+        {
+          "title": "Le funzioni d'onda di Bloch",
+          "page_start": 171
+        },
+        {
+          "title": "Le proprietà metalliche",
+          "page_start": 176
+        },
+        {
+          "title": "I legami deboli",
+          "page_start": 181
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Unità di massa atomica, mole, formule chimiche e nomenclatura in chimica inorganica",
+      "page_start": 186,
+      "sections": [
+        {
+          "title": "La massa di un atomo: la massa atomica assoluta, l'unità di massa atomica, la massa atomica relativa",
+          "page_start": 186
+        },
+        {
+          "title": "La mole e il numero di Avogadro",
+          "page_start": 189
+        },
+        {
+          "title": "La massa di una mole: la massa molare",
+          "page_start": 190
+        },
+        {
+          "title": "Le formule chimiche",
+          "page_start": 192
+        },
+        {
+          "title": "Gli elementi e i composti",
+          "page_start": 198
+        },
+        {
+          "title": "Il numero di ossidazione",
+          "page_start": 199
+        },
+        {
+          "title": "La nomenclatura nella chimica inorganica",
+          "page_start": 205
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Le reazioni chimiche: classificazione, bilanciamento e calcoli stechiometrici",
+      "page_start": 224,
+      "sections": [
+        {
+          "title": "Introduzione",
+          "page_start": 224
+        },
+        {
+          "title": "La rappresentazione delle equazioni chimiche",
+          "page_start": 224
+        },
+        {
+          "title": "La classificazione delle reazioni chimiche",
+          "page_start": 225
+        },
+        {
+          "title": "Le reazioni di ossidoriduzione",
+          "page_start": 228
+        },
+        {
+          "title": "Le reazioni di non-ossidoriduzione",
+          "page_start": 229
+        },
+        {
+          "title": "Descrizione delle reazioni in soluzione acquosa",
+          "page_start": 232
+        },
+        {
+          "title": "Il bilanciamento delle reazioni chimiche",
+          "page_start": 233
+        },
+        {
+          "title": "I calcoli stechiometrici",
+          "page_start": 247
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Gli stati di aggregazione della materia: lo stato gassoso",
+      "page_start": 258,
+      "sections": [
+        {
+          "title": "Gli stati di aggregazione della materia",
+          "page_start": 258
+        },
+        {
+          "title": "Il gas ideale o perfetto",
+          "page_start": 259
+        },
+        {
+          "title": "I gas reali",
+          "page_start": 273
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Gli stati di aggregazione della materia: lo stato liquido",
+      "page_start": 286,
+      "sections": [
+        {
+          "title": "I passaggi di fase di aggregazione della materia: solido → liquido e liquido → vapore",
+          "page_start": 286
+        },
+        {
+          "title": "Lo stato liquido",
+          "page_start": 287
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Gli stati di aggregazione della materia: lo stato solido",
+      "page_start": 298,
+      "sections": [
+        {
+          "title": "Le proprietà macroscopiche dei solidi. I solidi amorfi",
+          "page_start": 298
+        },
+        {
+          "title": "I solidi cristallini",
+          "page_start": 298
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Le soluzioni liquide",
+      "page_start": 322,
+      "sections": [
+        {
+          "title": "Le soluzioni e i modi di esprimerne le composizioni",
+          "page_start": 322
+        },
+        {
+          "title": "Le basi dell'analisi chimica quantitativa",
+          "page_start": 328
+        },
+        {
+          "title": "La solubilità",
+          "page_start": 334
+        },
+        {
+          "title": "Le soluzioni liquide ideali",
+          "page_start": 337
+        },
+        {
+          "title": "Le soluzioni liquide reali",
+          "page_start": 342
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Termodinamica chimica: le funzioni di stato energia interna ed entalpia",
+      "page_start": 350,
+      "sections": [
+        {
+          "title": "Scopo e caratteristiche della termodinamica chimica",
+          "page_start": 350
+        },
+        {
+          "title": "I sistemi termodinamici",
+          "page_start": 350
+        },
+        {
+          "title": "Le grandezze estensive e le grandezze intensive",
+          "page_start": 351
+        },
+        {
+          "title": "Le grandezze funzioni di stato",
+          "page_start": 352
+        },
+        {
+          "title": "Lo stato di un sistema termodinamico",
+          "page_start": 352
+        },
+        {
+          "title": "Il calore. Il principio zero della termodinamica",
+          "page_start": 353
+        },
+        {
+          "title": "Il lavoro di un sistema termodinamico",
+          "page_start": 354
+        },
+        {
+          "title": "La convenzione termodinamica sui segni di calore e di lavoro",
+          "page_start": 354
+        },
+        {
+          "title": "Il lavoro di volume (lavoro meccanico)",
+          "page_start": 355
+        },
+        {
+          "title": "L'energia interna in termodinamica",
+          "page_start": 357
+        },
+        {
+          "title": "Il primo principio della termodinamica",
+          "page_start": 357
+        },
+        {
+          "title": "La funzione di stato entalpia",
+          "page_start": 360
+        },
+        {
+          "title": "Capacità termica media e capacità termica effettiva",
+          "page_start": 363
+        },
+        {
+          "title": "La misura sperimentale del calore di reazione: il calorimetro",
+          "page_start": 364
+        },
+        {
+          "title": "La termochimica",
+          "page_start": 365
+        },
+        {
+          "title": "La legge di Hess",
+          "page_start": 369
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Termodinamica chimica: le funzioni di stato entropia ed energia libera di Gibbs",
+      "page_start": 376,
+      "sections": [
+        {
+          "title": "Introduzione",
+          "page_start": 376
+        },
+        {
+          "title": "L'entropia: trattazione attraverso proprietà microscopiche",
+          "page_start": 376
+        },
+        {
+          "title": "L'entropia: trattazione attraverso proprietà macroscopiche",
+          "page_start": 379
+        },
+        {
+          "title": "La funzione di stato entropia",
+          "page_start": 382
+        },
+        {
+          "title": "La funzione di stato energia libera di Gibbs",
+          "page_start": 393
+        },
+        {
+          "title": "Dipendenza dell'energia libera dalla temperatura e dalla pressione",
+          "page_start": 400
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "L'equilibrio chimico: equilibrio in fase gassosa",
+      "page_start": 410,
+      "sections": [
+        {
+          "title": "L'equilibrio chimico da un punto di vista termodinamico. L'isoterma di reazione di van 't Hoff",
+          "page_start": 410
+        },
+        {
+          "title": "Le diverse espressioni della costante di equilibrio",
+          "page_start": 411
+        },
+        {
+          "title": "Reazioni chimiche ed equilibrio",
+          "page_start": 417
+        },
+        {
+          "title": "Lo spostamento dell'equilibrio",
+          "page_start": 424
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "L'equilibrio chimico: equilibrio in soluzione acquosa",
+      "page_start": 432,
+      "sections": [
+        {
+          "title": "Introduzione",
+          "page_start": 432
+        },
+        {
+          "title": "Gli equilibri ionici in soluzione acquosa",
+          "page_start": 432
+        },
+        {
+          "title": "Le soluzioni neutre, acide e basiche",
+          "page_start": 433
+        },
+        {
+          "title": "Gli acidi, le basi e la loro forza",
+          "page_start": 434
+        },
+        {
+          "title": "I sali e la reazione di idrolisi",
+          "page_start": 440
+        },
+        {
+          "title": "Le soluzioni tampone",
+          "page_start": 442
+        },
+        {
+          "title": "Gli indicatori acido-base",
+          "page_start": 446
+        },
+        {
+          "title": "Il calcolo delle concentrazioni delle specie presenti all'equilibrio: il procedimento algebrico",
+          "page_start": 448
+        },
+        {
+          "title": "Le basi dell'analisi chimica quantitativa volumetrica",
+          "page_start": 477
+        },
+        {
+          "title": "Elettroliti solubili ed elettroliti poco solubili",
+          "page_start": 481
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Equilibri tra fasi diverse: sistemi ad un componente",
+      "page_start": 496,
+      "sections": [
+        {
+          "title": "Sistemi chimici omogenei ed eterogenei",
+          "page_start": 496
+        },
+        {
+          "title": "La regola delle fasi",
+          "page_start": 499
+        },
+        {
+          "title": "L'equazione di Clausius-Clapeyron",
+          "page_start": 503
+        },
+        {
+          "title": "Applicazione dell'equazione di Clausius-Clapeyron agli equilibri di fase ad un componente",
+          "page_start": 505
+        },
+        {
+          "title": "Diagrammi di fase per i sistemi ad un componente",
+          "page_start": 508
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Equilibri tra fasi diverse: sistemi a due componenti",
+      "page_start": 514,
+      "sections": [
+        {
+          "title": "Le soluzioni liquide, solide e gassose",
+          "page_start": 514
+        },
+        {
+          "title": "Le proprietà colligative",
+          "page_start": 514
+        },
+        {
+          "title": "Diagrammi di fase per il sistema solido-liquido",
+          "page_start": 524
+        },
+        {
+          "title": "La natura delle fasi speciali derivabili da una fusione di sistemi a due componenti",
+          "page_start": 526
+        },
+        {
+          "title": "Diagrammi di fase con completa miscibilità allo stato liquido e completa immiscibilità allo stato solido",
+          "page_start": 530
+        },
+        {
+          "title": "Diagrammi di fase con completa miscibilità allo stato liquido e completa miscibilità allo stato solido",
+          "page_start": 535
+        }
+      ]
+    }
+  ]
+}

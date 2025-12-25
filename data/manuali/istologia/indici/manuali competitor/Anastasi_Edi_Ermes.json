@@ -1,0 +1,1201 @@
+{
+  "id": "anastasi_cellule",
+  "title": "Dalle cellule ai sistemi",
+  "author": "Anastasi e al.",
+  "publisher": "Edi-Ermes",
+  "subject": "Istologia",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Dalle macromolecole agli organismi: Processi catalitici e meccanismi di autoassemblaggio",
+      "page_start": 3,
+      "sections": [
+        {
+          "number": "",
+          "title": "Sintesi delle macromolecole",
+          "page_start": 3
+        },
+        {
+          "number": "",
+          "title": "Sintesi degli acidi nucleici",
+          "page_start": 3
+        },
+        {
+          "number": "",
+          "title": "Sintesi delle proteine",
+          "page_start": 5
+        },
+        {
+          "number": "",
+          "title": "Sintesi dei polisaccaridi",
+          "page_start": 6
+        },
+        {
+          "number": "",
+          "title": "Sintesi dei lipidi",
+          "page_start": 7
+        },
+        {
+          "number": "",
+          "title": "Autoassemblaggio",
+          "page_start": 8
+        },
+        {
+          "number": "",
+          "title": "Conclusioni",
+          "page_start": 10
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Membrana cellulare: Individualità cellulare e scambi con l'ambiente",
+      "page_start": 11,
+      "sections": [
+        {
+          "number": "",
+          "title": "Lipidi di membrana",
+          "page_start": 11
+        },
+        {
+          "number": "",
+          "title": "Fluidità della membrana plasmatica",
+          "page_start": 16
+        },
+        {
+          "number": "",
+          "title": "Asimmetria lipidica della membrana plasmatica",
+          "page_start": 16
+        },
+        {
+          "number": "",
+          "title": "Eterogeneità lipidica della membrana plasmatica",
+          "page_start": 17
+        },
+        {
+          "number": "",
+          "title": "Zattere lipidiche",
+          "page_start": 17
+        },
+        {
+          "number": "",
+          "title": "Proteine di membrana",
+          "page_start": 21
+        },
+        {
+          "number": "",
+          "title": "Scheletro di membrana",
+          "page_start": 22
+        },
+        {
+          "number": "",
+          "title": "Carboidrati di membrana",
+          "page_start": 22
+        },
+        {
+          "number": "",
+          "title": "Transito di molecole attraverso la membrana plasmatica",
+          "page_start": 25
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Ribosoma e proteasoma: Biosintesi e degradazione delle proteine",
+      "page_start": 31,
+      "sections": [
+        {
+          "number": "",
+          "title": "Ribosomi",
+          "page_start": 31
+        },
+        {
+          "number": "",
+          "title": "Sintesi proteica",
+          "page_start": 33
+        },
+        {
+          "number": "",
+          "title": "Poliribosomi liberi e associati al reticolo endoplasmatico",
+          "page_start": 37
+        },
+        {
+          "number": "",
+          "title": "Complessi degradativi strutturati: esosoma e proteasoma",
+          "page_start": 39
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Via secretoria e biogenesi degli organelli: Traffico di proteine destinate a organelli e secrezione",
+      "page_start": 45,
+      "sections": [
+        {
+          "number": "",
+          "title": "Segregazione di funzioni e biogenesi degli organelli",
+          "page_start": 45
+        },
+        {
+          "number": "",
+          "title": "Fusione di membrana",
+          "page_start": 46
+        },
+        {
+          "number": "",
+          "title": "Formazione di vescicole: la curvatura della membrana",
+          "page_start": 50
+        },
+        {
+          "number": "",
+          "title": "Via secretoria: dal reticolo endoplasmatico al complesso di Golgi",
+          "page_start": 51
+        },
+        {
+          "number": "",
+          "title": "Reticolo endoplasmatico",
+          "page_start": 53
+        },
+        {
+          "number": "",
+          "title": "Complesso di Golgi",
+          "page_start": 65
+        },
+        {
+          "number": "",
+          "title": "Via secretoria: dal complesso di Golgi alla membrana plasmatica",
+          "page_start": 73
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Via endocitica e degradativa: Recupero delle componenti di membrana e catabolismo di macromolecole esogene ed endogene",
+      "page_start": 79,
+      "sections": [
+        {
+          "number": "",
+          "title": "Endocitosi",
+          "page_start": 79
+        },
+        {
+          "number": "",
+          "title": "Autofagia",
+          "page_start": 96
+        },
+        {
+          "number": "",
+          "title": "Lisofagia",
+          "page_start": 98
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Perossisoma: β-ossidazione degli acidi grassi e detossificazione ROS",
+      "page_start": 101,
+      "sections": [
+        {
+          "number": "",
+          "title": "Morfologia",
+          "page_start": 101
+        },
+        {
+          "number": "",
+          "title": "Biogenesi",
+          "page_start": 101
+        },
+        {
+          "number": "",
+          "title": "Degradazione e turnover",
+          "page_start": 103
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Mitocondrio: Accoppiamento tra glicolisi e fosforilazione",
+      "page_start": 105,
+      "sections": [
+        {
+          "number": "",
+          "title": "Origine dei mitocondri e trasmissione del DNA mitocondriale",
+          "page_start": 105
+        },
+        {
+          "number": "",
+          "title": "Morfologia",
+          "page_start": 105
+        },
+        {
+          "number": "",
+          "title": "Traslocazione delle molecole citoplasmatiche attraverso le membrane mitocondriali",
+          "page_start": 111
+        },
+        {
+          "number": "",
+          "title": "Localizzazione dei principali complessi macromolecolari nel mitocondrio",
+          "page_start": 111
+        },
+        {
+          "number": "",
+          "title": "Funzioni",
+          "page_start": 114
+        },
+        {
+          "number": "",
+          "title": "Interazioni con altri compartimenti cellulari",
+          "page_start": 117
+        },
+        {
+          "number": "",
+          "title": "Ruolo mitocondriale nell'apoptosi",
+          "page_start": 119
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Nucleo cellulare: Strutturazione ed espressione dell'informazione genica",
+      "page_start": 123,
+      "sections": [
+        {
+          "number": "",
+          "title": "Trascrizione del DNA",
+          "page_start": 123
+        },
+        {
+          "number": "",
+          "title": "Replicazione del DNA",
+          "page_start": 123
+        },
+        {
+          "number": "",
+          "title": "Funzioni, morfologia, struttura e composizione del nucleo",
+          "page_start": 126
+        },
+        {
+          "number": "",
+          "title": "Involucro nucleare",
+          "page_start": 128
+        },
+        {
+          "number": "",
+          "title": "Nucleoscheletro",
+          "page_start": 131
+        },
+        {
+          "number": "",
+          "title": "Cromatina",
+          "page_start": 134
+        },
+        {
+          "number": "",
+          "title": "Nucleolo",
+          "page_start": 137
+        },
+        {
+          "number": "",
+          "title": "Subdomini e corpi nucleari",
+          "page_start": 140
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Proliferazione e morte cellulare: Sopravvivenza, proliferazione, differenziamento e ricambio nelle popolazioni cellulari",
+      "page_start": 149,
+      "sections": [
+        {
+          "number": "",
+          "title": "Proliferazione cellulare",
+          "page_start": 149
+        },
+        {
+          "number": "",
+          "title": "Meiosi",
+          "page_start": 161
+        },
+        {
+          "number": "",
+          "title": "Senescenza cellulare",
+          "page_start": 167
+        },
+        {
+          "number": "",
+          "title": "Morte cellulare",
+          "page_start": 169
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Citoscheletro e movimento cellulare: Acquisizione e modulazione della forma cellulare e delle interazioni dinamiche con l'ambiente",
+      "page_start": 177,
+      "sections": [
+        {
+          "number": "",
+          "title": "Citoscheletro",
+          "page_start": 177
+        },
+        {
+          "number": "",
+          "title": "Specializzazioni di membrana",
+          "page_start": 198
+        },
+        {
+          "number": "",
+          "title": "Movimento cellulare",
+          "page_start": 204
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Regolazione dell'espressione genica e differenziamento cellulare: Repressori, attivatori e meccanismi epigenetici",
+      "page_start": 211,
+      "sections": [
+        {
+          "number": "",
+          "title": "Principi di differenziamento cellulare",
+          "page_start": 211
+        },
+        {
+          "number": "",
+          "title": "Meccanismi del differenziamento",
+          "page_start": 211
+        },
+        {
+          "number": "",
+          "title": "Meccanismi di controllo dell'espressione genica",
+          "page_start": 214
+        },
+        {
+          "number": "",
+          "title": "Mantenimento e reversibilità del differenziamento",
+          "page_start": 218
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Cellule staminali: Popolazioni cellulari in equilibrio tra proliferazione e differenziamento",
+      "page_start": 221,
+      "sections": [
+        {
+          "number": "",
+          "title": "Cellule staminali e loro caratteristiche",
+          "page_start": 221
+        },
+        {
+          "number": "",
+          "title": "Classificazione delle cellule staminali",
+          "page_start": 221
+        },
+        {
+          "number": "",
+          "title": "Cellule staminali embrionali",
+          "page_start": 224
+        },
+        {
+          "number": "",
+          "title": "Cellule staminali e tumori",
+          "page_start": 230
+        },
+        {
+          "number": "",
+          "title": "Isolamento di cellule staminali a fini terapeutici",
+          "page_start": 231
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Rapporti cellula-cellula e cellula-matrice extracellulare: Modulazione delle interazioni tra cellule e tra cellula e matrice extracellulare",
+      "page_start": 233,
+      "sections": [
+        {
+          "number": "",
+          "title": "Polarità cellulare",
+          "page_start": 233
+        },
+        {
+          "number": "",
+          "title": "Interazioni tra cellule",
+          "page_start": 235
+        },
+        {
+          "number": "",
+          "title": "Giunzioni cellulari",
+          "page_start": 238
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Generalità sui tessuti: Organizzazione tridimensionale di popolazioni cellulari nei diversi tessuti che compongono organi e sistemi",
+      "page_start": 257,
+      "sections": [
+        {
+          "number": "",
+          "title": "Classificazione morfofunzionale dei tessuti",
+          "page_start": 257
+        },
+        {
+          "number": "",
+          "title": "Istogenesi",
+          "page_start": 257
+        },
+        {
+          "number": "",
+          "title": "Organizzazione dei tessuti nella organogenesi",
+          "page_start": 260
+        },
+        {
+          "number": "",
+          "title": "Tessuto connettivo",
+          "page_start": 261
+        },
+        {
+          "number": "",
+          "title": "Tessuto epiteliale",
+          "page_start": 265
+        },
+        {
+          "number": "",
+          "title": "Tessuto nervoso",
+          "page_start": 265
+        },
+        {
+          "number": "",
+          "title": "Tessuto muscolare",
+          "page_start": 266
+        },
+        {
+          "number": "",
+          "title": "Organizzazione tridimensionale dei tessuti e caratteristiche del citoscheletro",
+          "page_start": 268
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Matrice extracellulare: Struttura, composizione e rimaneggiamento della matrice extracellulare",
+      "page_start": 271,
+      "sections": [
+        {
+          "number": "",
+          "title": "Membrana basale",
+          "page_start": 271
+        },
+        {
+          "number": "",
+          "title": "Componenti molecolari della matrice extracellulare",
+          "page_start": 275
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Tessuti di origine mesenchimale: Ruolo della componente extracellulare e complessità dei citotipi",
+      "page_start": 291,
+      "sections": [
+        {
+          "number": "",
+          "title": "Tessuto connettivo embrionale o mesenchima",
+          "page_start": 291
+        },
+        {
+          "number": "",
+          "title": "Vasculogenesi e angiogenesi",
+          "page_start": 291
+        },
+        {
+          "number": "",
+          "title": "Cellule del tessuto connettivo dall'embrione all'adulto",
+          "page_start": 293
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Tessuti connettivi propriamente detti: Caratteristiche comuni dei connettivi non specializzati e loro ruolo nella costituzione degli organi",
+      "page_start": 307,
+      "sections": [
+        {
+          "number": "",
+          "title": "Tessuti connettivi adulti propriamente detti",
+          "page_start": 307
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Organo adiposo: Tessuto adiposo bianco e tessuto adiposo bruno: due tessuti che concorrono a formare l'organo adiposo",
+      "page_start": 315,
+      "sections": [
+        {
+          "number": "",
+          "title": "Tessuto adiposo bianco e tessuto adiposo bruno",
+          "page_start": 316
+        },
+        {
+          "number": "",
+          "title": "Ruolo endocrino degli adipociti",
+          "page_start": 319
+        },
+        {
+          "number": "",
+          "title": "Metabolismo lipidico",
+          "page_start": 320
+        },
+        {
+          "number": "",
+          "title": "Plasticità dell'organo adiposo",
+          "page_start": 321
+        },
+        {
+          "number": "",
+          "title": "Ciclo vitale degli adipociti",
+          "page_start": 324
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Tessuto cartilagineo: Formazione degli elementi scheletrici embrionali e della componente articolare dello scheletro adulto",
+      "page_start": 329,
+      "sections": [
+        {
+          "number": "",
+          "title": "Cartilagine ialina",
+          "page_start": 329
+        },
+        {
+          "number": "",
+          "title": "Cartilagine elastica",
+          "page_start": 334
+        },
+        {
+          "number": "",
+          "title": "Cartilagine fibrosa",
+          "page_start": 334
+        },
+        {
+          "number": "",
+          "title": "Cartilagine cellulare, tessuto cordoide e tessuto condroide",
+          "page_start": 336
+        },
+        {
+          "number": "",
+          "title": "Sviluppo della cartilagine",
+          "page_start": 336
+        },
+        {
+          "number": "",
+          "title": "Calcificazione e mineralizzazione",
+          "page_start": 344
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Tessuto osseo: Impalcatura scheletrica dinamica e riserva di sali minerali per il metabolismo generale",
+      "page_start": 351,
+      "sections": [
+        {
+          "number": "",
+          "title": "Funzioni del tessuto osseo",
+          "page_start": 351
+        },
+        {
+          "number": "",
+          "title": "Struttura del tessuto osseo",
+          "page_start": 352
+        },
+        {
+          "number": "",
+          "title": "Matrice ossea",
+          "page_start": 355
+        },
+        {
+          "number": "",
+          "title": "Elementi cellulari",
+          "page_start": 358
+        },
+        {
+          "number": "",
+          "title": "Organizzazione del tessuto osseo lamellare",
+          "page_start": 369
+        },
+        {
+          "number": "",
+          "title": "Rimodellamento del tessuto osseo lamellare",
+          "page_start": 373
+        },
+        {
+          "number": "",
+          "title": "Sviluppo e biogenesi dell'osso",
+          "page_start": 376
+        },
+        {
+          "number": "",
+          "title": "Forme specializzate di tessuto osseo",
+          "page_start": 385
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "title": "Sangue: Popolazioni cellulari multifunzionali in continuo ricambio (elementi figurati) in sospensione nella ECM fluida (plasma)",
+      "page_start": 391,
+      "sections": [
+        {
+          "number": "",
+          "title": "Plasma",
+          "page_start": 391
+        },
+        {
+          "number": "",
+          "title": "Elementi figurati",
+          "page_start": 393
+        },
+        {
+          "number": "",
+          "title": "Emopoiesi",
+          "page_start": 417
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "title": "Tessuti epiteliali di rivestimento: Variabilità dei morfotipi cellulari e dei loro rapporti giunzionali nei diversi distretti funzionali",
+      "page_start": 435,
+      "sections": [
+        {
+          "number": "",
+          "title": "Classificazione degli epiteli",
+          "page_start": 435
+        },
+        {
+          "number": "",
+          "title": "Epiteli semplici",
+          "page_start": 438
+        },
+        {
+          "number": "",
+          "title": "Epiteli stratificati",
+          "page_start": 447
+        },
+        {
+          "number": "",
+          "title": "Epiteli sensoriali",
+          "page_start": 451
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "title": "Tessuti epiteliali ghiandolari: Sintesi e rilascio di macromolecole. Secrezione esocrina e secrezione endocrina",
+      "page_start": 457,
+      "sections": [
+        {
+          "number": "",
+          "title": "Tessuto ghiandolare esocrino",
+          "page_start": 457
+        },
+        {
+          "number": "",
+          "title": "Tessuto ghiandolare endocrino",
+          "page_start": 466
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "title": "Tessuto nervoso: Comunicazione cellulare mediata da neurosecreti. Basi molecolari e ultrastrutturali dell'eccitabilità e della trasmissione di informazione a livello tessutale",
+      "page_start": 477,
+      "sections": [
+        {
+          "number": "",
+          "title": "Neurone",
+          "page_start": 477
+        },
+        {
+          "number": "",
+          "title": "Fibre nervose",
+          "page_start": 485
+        },
+        {
+          "number": "",
+          "title": "Sinapsi",
+          "page_start": 497
+        },
+        {
+          "number": "",
+          "title": "Neuroglia",
+          "page_start": 510
+        },
+        {
+          "number": "",
+          "title": "Neurogenesi",
+          "page_start": 519
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "title": "Tessuti muscolari: Basi molecolari e ultrastrutturali della contrazione muscolare",
+      "page_start": 529,
+      "sections": [
+        {
+          "number": "",
+          "title": "Nomenclatura e classificazione",
+          "page_start": 529
+        },
+        {
+          "number": "",
+          "title": "Tessuto muscolare scheletrico",
+          "page_start": 530
+        },
+        {
+          "number": "",
+          "title": "Tessuto muscolare cardiaco",
+          "page_start": 556
+        },
+        {
+          "number": "",
+          "title": "Tessuto muscolare liscio",
+          "page_start": 564
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "title": "Sistema tegumentario: Processi di citomorfosi: da cellula staminale a cheratinocito; barriere di permeabilità e sistemi di difesa aspecifici",
+      "page_start": 577,
+      "sections": [
+        {
+          "number": "",
+          "title": "Cute",
+          "page_start": 577
+        },
+        {
+          "number": "",
+          "title": "Innervazione della cute",
+          "page_start": 597
+        },
+        {
+          "number": "",
+          "title": "Vascolarizzazione della cute",
+          "page_start": 599
+        },
+        {
+          "number": "",
+          "title": "Annessi cutanei",
+          "page_start": 600
+        },
+        {
+          "number": "",
+          "title": "Pigmenti",
+          "page_start": 615
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "title": "Sistema muscoloscheletrico: Sostegno e movimento del corpo umano",
+      "page_start": 621,
+      "sections": [
+        {
+          "number": "",
+          "title": "Classificazione dei muscoli su base morfologica e biomeccanica",
+          "page_start": 635
+        },
+        {
+          "number": "",
+          "title": "Classificazione dei muscoli su base biochimica, strutturale e funzionale",
+          "page_start": 637
+        },
+        {
+          "number": "",
+          "title": "Unit\u00e0 motorie e propriocettori: innervazione motoria e sensitiva",
+          "page_start": 638
+        },
+        {
+          "number": "",
+          "title": "Attivit\u00e0 secretorie del muscolo",
+          "page_start": 639
+        },
+        {
+          "number": "",
+          "title": "Organogenesi",
+          "page_start": 641
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "title": "Sistema circolatorio: Conduzione del flusso ematico dal cuore ai distretti periferici e della linfa dai distretti periferici al cuore",
+      "page_start": 649,
+      "sections": [
+        {
+          "number": "",
+          "title": "Tronchi linfatici e dotti linfatici principali",
+          "page_start": 676
+        },
+        {
+          "number": "",
+          "title": "Invecchiamento",
+          "page_start": 676
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "title": "Sistema emopoietico e linfoide: Differenziamento di popolazioni staminali ematiche in organi dotati di nicchie e fattori differenziativi; meccanismi di difesa specifici mediati da anticorpi",
+      "page_start": 681,
+      "sections": [
+        {
+          "number": "",
+          "title": "Organi emopoietici embrionali e adulti",
+          "page_start": 681
+        },
+        {
+          "number": "",
+          "title": "Organi linfoidi",
+          "page_start": 685
+        },
+        {
+          "number": "",
+          "title": "Complesso maggiore di istocompatibilit\u00e0",
+          "page_start": 705
+        },
+        {
+          "number": "",
+          "title": "Anticorpi",
+          "page_start": 707
+        },
+        {
+          "number": "",
+          "title": "Linfocitopoiesi",
+          "page_start": 710
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "title": "Sistema digerente: Dalla masticazione all'assorbimento selettivo dei metaboliti; riassorbimento dell'acqua ed escrezione dei cataboliti",
+      "page_start": 717,
+      "sections": [
+        {
+          "number": "",
+          "title": "Caratteristiche morfofunzionali",
+          "page_start": 717
+        },
+        {
+          "number": "",
+          "title": "Sviluppo",
+          "page_start": 717
+        },
+        {
+          "number": "",
+          "title": "Anatomia microscopica",
+          "page_start": 720
+        },
+        {
+          "number": "",
+          "title": "Bocca",
+          "page_start": 720
+        },
+        {
+          "number": "",
+          "title": "Faringe",
+          "page_start": 737
+        },
+        {
+          "number": "",
+          "title": "Tubo digerente",
+          "page_start": 740
+        },
+        {
+          "number": "",
+          "title": "Esofago",
+          "page_start": 742
+        },
+        {
+          "number": "",
+          "title": "Stomaco",
+          "page_start": 744
+        },
+        {
+          "number": "",
+          "title": "Intestino tenue",
+          "page_start": 752
+        },
+        {
+          "number": "",
+          "title": "Intestino crasso",
+          "page_start": 761
+        },
+        {
+          "number": "",
+          "title": "Peritoneo: mesoteli",
+          "page_start": 767
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "title": "Ghiandole annesse al sistema digerente: Idrolisi enzimatica dei metaboliti essenziali a opera di secreti di ghiandole extramurali e utilizzo di cataboliti per i processi digestivi",
+      "page_start": 771,
+      "sections": [
+        {
+          "number": "",
+          "title": "Ghiandole salivari",
+          "page_start": 771
+        },
+        {
+          "number": "",
+          "title": "Pancreas",
+          "page_start": 778
+        },
+        {
+          "number": "",
+          "title": "Fegato",
+          "page_start": 784
+        },
+        {
+          "number": "",
+          "title": "Cistifellea e vie biliari extraepatiche",
+          "page_start": 800
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "title": "Sistema respiratorio: Conduzione dell'aria e plasma, scambi gassosi fra aria e plasma, fonazione",
+      "page_start": 809,
+      "sections": [
+        {
+          "number": "",
+          "title": "Sviluppo",
+          "page_start": 809
+        },
+        {
+          "number": "",
+          "title": "Naso esterno, cavit\u00e0 nasali e seni paranasali",
+          "page_start": 809
+        },
+        {
+          "number": "",
+          "title": "Faringe",
+          "page_start": 814
+        },
+        {
+          "number": "",
+          "title": "Laringe",
+          "page_start": 814
+        },
+        {
+          "number": "",
+          "title": "Trachea",
+          "page_start": 817
+        },
+        {
+          "number": "",
+          "title": "Albero bronchiale",
+          "page_start": 820
+        },
+        {
+          "number": "",
+          "title": "Alveoli polmonari",
+          "page_start": 823
+        },
+        {
+          "number": "",
+          "title": "Pleura",
+          "page_start": 829
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "title": "Sistema urinario: Ultrafiltrazione del plasma; rilascio selettivo dei cataboliti e riassorbimento di acqua e sali",
+      "page_start": 835,
+      "sections": [
+        {
+          "number": "",
+          "title": "Sviluppo",
+          "page_start": 835
+        },
+        {
+          "number": "",
+          "title": "Rene",
+          "page_start": 840
+        },
+        {
+          "number": "",
+          "title": "Calici e pelvi renale",
+          "page_start": 862
+        },
+        {
+          "number": "",
+          "title": "Uretere",
+          "page_start": 862
+        },
+        {
+          "number": "",
+          "title": "Vescica urinaria",
+          "page_start": 862
+        },
+        {
+          "number": "",
+          "title": "Uretra",
+          "page_start": 863
+        },
+        {
+          "number": "",
+          "title": "Epitelio di transizione",
+          "page_start": 865
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "title": "Sistema riproduttore: Differenziamento, maturazione e trasporto dei gameti nei due sessi. Ciclo mestruale, fecondazione, sviluppo",
+      "page_start": 871,
+      "sections": [
+        {
+          "number": "",
+          "title": "Sviluppo",
+          "page_start": 871
+        },
+        {
+          "number": "",
+          "title": "Sistema genitale maschile",
+          "page_start": 871
+        },
+        {
+          "number": "",
+          "title": "Sistema genitale femminile",
+          "page_start": 897
+        },
+        {
+          "number": "",
+          "title": "Capacitazione e Fecondazione",
+          "page_start": 919
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "title": "Sistema endocrino: Sistemi cellulari diffusi in altri tessuti od organi, o strutturati in organi, capaci di secernere ormoni, inducendo risposte in cellule bersaglio dotate di recettori specifici",
+      "page_start": 927,
+      "sections": [
+        {
+          "number": "",
+          "title": "Organizzazione morfofunzionale",
+          "page_start": 927
+        },
+        {
+          "number": "",
+          "title": "Sistema ipotalamoipofisario",
+          "page_start": 931
+        },
+        {
+          "number": "",
+          "title": "Ghiandola pineale",
+          "page_start": 943
+        },
+        {
+          "number": "",
+          "title": "Ghiandola tiroide",
+          "page_start": 946
+        },
+        {
+          "number": "",
+          "title": "Ghiandole paratiroidi",
+          "page_start": 950
+        },
+        {
+          "number": "",
+          "title": "Ghiandole surrenali",
+          "page_start": 953
+        },
+        {
+          "number": "",
+          "title": "Isole pancreatiche",
+          "page_start": 962
+        },
+        {
+          "number": "",
+          "title": "Sistema endocrino diffuso",
+          "page_start": 969
+        },
+        {
+          "number": "",
+          "title": "Paragangli",
+          "page_start": 975
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "title": "Sistema nervoso: Analisi, processazione e integrazione delle informazioni sensitive speciali, somatiche e viscerali finalizzate all'elaborazione di una risposta motoria coordinata (somatica e viscerale)",
+      "page_start": 981,
+      "sections": [
+        {
+          "number": "",
+          "title": "Caratteristiche morfofunzionali",
+          "page_start": 981
+        },
+        {
+          "number": "",
+          "title": "Sistema nervoso centrale",
+          "page_start": 986
+        },
+        {
+          "number": "",
+          "title": "Sistema nervoso periferico",
+          "page_start": 1036
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "title": "Recettori e organi di senso: Modalit\u00e0 di accesso al sistema nervoso delle informazioni sensoriali dall'ambiente esterno e dal corpo umano",
+      "page_start": 1055,
+      "sections": [
+        {
+          "number": "",
+          "title": "Recettori",
+          "page_start": 1055
+        },
+        {
+          "number": "",
+          "title": "Organi di senso",
+          "page_start": 1066
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "title": "Metodiche di indagine: Basi teoriche e procedurali",
+      "page_start": 1129,
+      "sections": [
+        {
+          "number": "",
+          "title": "Colorazione",
+          "page_start": 1150
+        },
+        {
+          "number": "",
+          "title": "Immunoenzimatica",
+          "page_start": 1151
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,801 @@
+{
+  "id": "Manotti Lanfredi_fondamenti",
+  "title": "Fondamenti di chimica",
+  "author": "Manotti Lanfredi, Tiripicchio",
+  "publisher": "Zanichelli",
+  "subject": "chimica generale",
+  "type": "Zanichelli",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Teoria atomica della materia",
+      "page_start": 1,
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "Cenni allo sviluppo storico della teoria atomica della materia",
+          "page_start": 1
+        },
+        {
+          "number": "1.2",
+          "title": "Equazioni chimiche. Relazione massa-energia",
+          "page_start": 6
+        },
+        {
+          "number": "1.3",
+          "title": "Particelle fondamentali dell'atomo",
+          "page_start": 9
+        },
+        {
+          "number": "1.4",
+          "title": "Numero atomico, numero di massa. Isotopi",
+          "page_start": 10
+        },
+        {
+          "number": "1.5",
+          "title": "Pesi atomici e unità di massa atomica",
+          "page_start": 11
+        },
+        {
+          "number": "1.6",
+          "title": "Mole. Numero di Avogadro. Masse atomiche (o molecolari) assolute",
+          "page_start": 15
+        },
+        {
+          "number": "1.7",
+          "title": "Cenni alla spettrometria di massa (determinazione sperimentale dei pesi atomici assoluti)",
+          "page_start": 19
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Struttura elettronica degli atomi",
+      "page_start": 27,
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "Cenni sulle radiazioni elettromagnetiche",
+          "page_start": 27
+        },
+        {
+          "number": "2.2",
+          "title": "Modello atomico planetario e spettri atomici",
+          "page_start": 29
+        },
+        {
+          "number": "2.3",
+          "title": "Modello atomico di Bohr",
+          "page_start": 31
+        },
+        {
+          "number": "2.4",
+          "title": "Postulato di De Broglie. Principio di indeterminazione di Heisenberg",
+          "page_start": 34
+        },
+        {
+          "number": "2.5",
+          "title": "Meccanica quantistica od ondulatoria",
+          "page_start": 35
+        },
+        {
+          "number": "2.6",
+          "title": "Atomi polielettronici",
+          "page_start": 42
+        },
+        {
+          "number": "2.7",
+          "title": "Proprietà periodiche",
+          "page_start": 53
+        },
+        {
+          "number": "2.8",
+          "title": "Tipi di elementi",
+          "page_start": 59
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Legame chimico",
+      "page_start": 69,
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "Energia di legame",
+          "page_start": 69
+        },
+        {
+          "number": "3.2",
+          "title": "Legame ionico",
+          "page_start": 71
+        },
+        {
+          "number": "3.3",
+          "title": "Legame covalente",
+          "page_start": 75
+        },
+        {
+          "number": "3.4",
+          "title": "Legame metallico",
+          "page_start": 108
+        },
+        {
+          "number": "3.5",
+          "title": "Legami deboli",
+          "page_start": 116
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Nomenclatura dei composti inorganici e reazioni chimiche",
+      "page_start": 133,
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "Numero di ossidazione",
+          "page_start": 133
+        },
+        {
+          "number": "4.2",
+          "title": "Classificazione e nomenclatura dei composti inorganici",
+          "page_start": 136
+        },
+        {
+          "number": "4.3",
+          "title": "Reazioni chimiche",
+          "page_start": 145
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Stato gassoso",
+      "page_start": 163,
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "Proprietà dei gas",
+          "page_start": 163
+        },
+        {
+          "number": "5.2",
+          "title": "Equazione dei gas perfetti (o ideali)",
+          "page_start": 163
+        },
+        {
+          "number": "5.3",
+          "title": "Leggi semplici dedotte dall'equazione dei gas perfetti",
+          "page_start": 165
+        },
+        {
+          "number": "5.4",
+          "title": "Applicazioni dell'equazione dei gas perfetti",
+          "page_start": 166
+        },
+        {
+          "number": "5.5",
+          "title": "Miscele gassose",
+          "page_start": 167
+        },
+        {
+          "number": "5.6",
+          "title": "Diffusione ed effusione dei gas. Legge di Graham",
+          "page_start": 168
+        },
+        {
+          "number": "5.7",
+          "title": "Cenni sulla teoria cinetica dei gas",
+          "page_start": 170
+        },
+        {
+          "number": "5.8",
+          "title": "Gas reali. Equazione di van der Waals",
+          "page_start": 172
+        },
+        {
+          "number": "5.9",
+          "title": "Liquefazione dei gas",
+          "page_start": 175
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Stato liquido",
+      "page_start": 187,
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "Proprietà dei liquidi",
+          "page_start": 187
+        },
+        {
+          "number": "6.2",
+          "title": "Evaporazione di un liquido e tensione di vapore",
+          "page_start": 189
+        },
+        {
+          "number": "6.3",
+          "title": "Ebollizione di un liquido",
+          "page_start": 192
+        },
+        {
+          "number": "6.4",
+          "title": "Sublimazione. Fusione e solidificazione",
+          "page_start": 193
+        },
+        {
+          "number": "6.5",
+          "title": "Diagrammi di stato di H2O e CO2",
+          "page_start": 195
+        },
+        {
+          "number": "6.6",
+          "title": "Fluidi supercritici",
+          "page_start": 197
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Stato solido",
+      "page_start": 205,
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "Tipi di solidi e loro proprietà",
+          "page_start": 205
+        },
+        {
+          "number": "7.2",
+          "title": "Reticoli cristallini e celle elementari",
+          "page_start": 206
+        },
+        {
+          "number": "7.3",
+          "title": "Diffrazione dei raggi X da parte dei cristalli",
+          "page_start": 212
+        },
+        {
+          "number": "7.4",
+          "title": "Tipi di solidi cristallini",
+          "page_start": 214
+        },
+        {
+          "number": "7.5",
+          "title": "Difetti nei cristalli",
+          "page_start": 225
+        },
+        {
+          "number": "7.6",
+          "title": "Allotropia, polimorfismo e isomorfismo",
+          "page_start": 227
+        },
+        {
+          "number": "7.7",
+          "title": "Cristalli liquidi",
+          "page_start": 228
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Soluzioni",
+      "page_start": 237,
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "Natura delle soluzioni",
+          "page_start": 237
+        },
+        {
+          "number": "8.2",
+          "title": "Entalpia di soluzione",
+          "page_start": 239
+        },
+        {
+          "number": "8.3",
+          "title": "Concentrazioni delle soluzioni",
+          "page_start": 240
+        },
+        {
+          "number": "8.4",
+          "title": "Solubilità dei gas",
+          "page_start": 245
+        },
+        {
+          "number": "8.5",
+          "title": "Tensione di vapore delle soluzioni",
+          "page_start": 246
+        },
+        {
+          "number": "8.6",
+          "title": "Proprietà colligative delle soluzioni",
+          "page_start": 248
+        },
+        {
+          "number": "8.7",
+          "title": "Colloidi o dispersioni colloidali",
+          "page_start": 257
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Termodinamica chimica",
+      "page_start": 273,
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "Terminologia termodinamica",
+          "page_start": 273
+        },
+        {
+          "number": "9.2",
+          "title": "Primo principio della termodinamica",
+          "page_start": 275
+        },
+        {
+          "number": "9.3",
+          "title": "Calori o entalpie di reazione",
+          "page_start": 276
+        },
+        {
+          "number": "9.4",
+          "title": "Equazioni termochimiche e diagrammi entalpici",
+          "page_start": 279
+        },
+        {
+          "number": "9.5",
+          "title": "Determinazione dei calori di reazione",
+          "page_start": 280
+        },
+        {
+          "number": "9.6",
+          "title": "Entalpie normali (o standard) di formazione",
+          "page_start": 283
+        },
+        {
+          "number": "9.7",
+          "title": "Applicazione dei calori standard di formazione",
+          "page_start": 285
+        },
+        {
+          "number": "9.8",
+          "title": "Energie di legame",
+          "page_start": 287
+        },
+        {
+          "number": "9.9",
+          "title": "Entropia e secondo principio della termodinamica",
+          "page_start": 289
+        },
+        {
+          "number": "9.10",
+          "title": "Entropia come funzione di probabilità",
+          "page_start": 293
+        },
+        {
+          "number": "9.11",
+          "title": "Terzo principio della termodinamica. Entropie assolute normali (o standard)",
+          "page_start": 294
+        },
+        {
+          "number": "9.12",
+          "title": "Criterio di spontaneità. Energia libera di Gibbs",
+          "page_start": 296
+        },
+        {
+          "number": "9.13",
+          "title": "Energia libera normale (o standard) di formazione e suo utilizzo",
+          "page_start": 300
+        },
+        {
+          "number": "9.14",
+          "title": "Variazione dell'energia libera con la temperatura",
+          "page_start": 302
+        },
+        {
+          "number": "9.15",
+          "title": "Energia libera di Gibbs e costante di equilibrio",
+          "page_start": 303
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Equilibrio chimico",
+      "page_start": 317,
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "Equilibri nei sistemi omogenei",
+          "page_start": 317
+        },
+        {
+          "number": "10.2",
+          "title": "Utilizzo della costante di equilibrio",
+          "page_start": 320
+        },
+        {
+          "number": "10.3",
+          "title": "Equilibri eterogenei implicanti fasi gassose",
+          "page_start": 321
+        },
+        {
+          "number": "10.4",
+          "title": "Spostamento dell'equilibrio. Principio dell'equilibrio mobile",
+          "page_start": 322
+        },
+        {
+          "number": "10.5",
+          "title": "Dipendenza della costante di equilibrio dalla temperatura",
+          "page_start": 327
+        },
+        {
+          "number": "10.6",
+          "title": "Scelta delle migliori condizioni di reazione",
+          "page_start": 327
+        },
+        {
+          "number": "10.7",
+          "title": "Regola delle fasi per gli equilibri eterogenei",
+          "page_start": 329
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Equilibri tra le fasi",
+      "page_start": 343,
+      "sections": [
+        {
+          "number": "11.1",
+          "title": "Sistemi a un componente",
+          "page_start": 343
+        },
+        {
+          "number": "11.2",
+          "title": "Sistemi a due componenti. Miscele binarie liquide",
+          "page_start": 345
+        },
+        {
+          "number": "11.3",
+          "title": "Sistemi condensati a due componenti",
+          "page_start": 352
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Equilibri in soluzione",
+      "page_start": 363,
+      "sections": [
+        {
+          "number": "12.1",
+          "title": "Equilibri di solubilità",
+          "page_start": 363
+        },
+        {
+          "number": "12.2",
+          "title": "Equilibri acido-base",
+          "page_start": 367
+        },
+        {
+          "number": "12.3",
+          "title": "Scala di pH e di pOH",
+          "page_start": 382
+        },
+        {
+          "number": "12.4",
+          "title": "Equilibri idrolitici o idrolisi",
+          "page_start": 388
+        },
+        {
+          "number": "12.5",
+          "title": "Soluzioni tampone",
+          "page_start": 393
+        },
+        {
+          "number": "12.6",
+          "title": "Titolazioni acido-base",
+          "page_start": 395
+        },
+        {
+          "number": "12.7",
+          "title": "Anfoterismo",
+          "page_start": 400
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Elettrochimica",
+      "page_start": 419,
+      "sections": [
+        {
+          "number": "13.1",
+          "title": "Introduzione",
+          "page_start": 419
+        },
+        {
+          "number": "13.2",
+          "title": "Conduzione elettrolitica ed elettrolisi",
+          "page_start": 419
+        },
+        {
+          "number": "13.3",
+          "title": "Stechiometria dell'elettrolisi. Leggi di Faraday",
+          "page_start": 422
+        },
+        {
+          "number": "13.4",
+          "title": "Celle galvaniche",
+          "page_start": 424
+        },
+        {
+          "number": "13.5",
+          "title": "Lavoro elettrico e lavoro chimico",
+          "page_start": 429
+        },
+        {
+          "number": "13.6",
+          "title": "Potenziali di elettrodo standard",
+          "page_start": 432
+        },
+        {
+          "number": "13.7",
+          "title": "Forza elettromotrice standard di una cella galvanica",
+          "page_start": 437
+        },
+        {
+          "number": "13.8",
+          "title": "Forza elettromotrice non standard. Equazione di Nernst",
+          "page_start": 437
+        },
+        {
+          "number": "13.9",
+          "title": "Applicazioni dei potenziali di elettrodo",
+          "page_start": 440
+        },
+        {
+          "number": "13.10",
+          "title": "Celle galvaniche di importanza tecnica",
+          "page_start": 452
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Cinetica chimica",
+      "page_start": 471,
+      "sections": [
+        {
+          "number": "14.1",
+          "title": "Finalità della cinetica chimica",
+          "page_start": 471
+        },
+        {
+          "number": "14.2",
+          "title": "Velocità di reazione",
+          "page_start": 472
+        },
+        {
+          "number": "14.3",
+          "title": "Influenza della concentrazione dei reagenti",
+          "page_start": 474
+        },
+        {
+          "number": "14.4",
+          "title": "Meccanismi di reazione",
+          "page_start": 480
+        },
+        {
+          "number": "14.5",
+          "title": "Influenza delle radiazioni",
+          "page_start": 483
+        },
+        {
+          "number": "14.6",
+          "title": "Influenza della temperatura",
+          "page_start": 483
+        },
+        {
+          "number": "14.7",
+          "title": "Teoria dello stato di transizione o del complesso attivato",
+          "page_start": 486
+        },
+        {
+          "number": "14.8",
+          "title": "Catalizzatori e catalisi",
+          "page_start": 487
+        },
+        {
+          "number": "14.9",
+          "title": "Derivazione della costante di equilibrio da considerazioni cinetiche",
+          "page_start": 491
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Composti di coordinazione",
+      "page_start": 499,
+      "sections": [
+        {
+          "number": "15.1",
+          "title": "Composti di coordinazione. Leganti",
+          "page_start": 499
+        },
+        {
+          "number": "15.2",
+          "title": "Nomenclatura dei composti di coordinazione",
+          "page_start": 502
+        },
+        {
+          "number": "15.3",
+          "title": "Struttura dei composti di coordinazione",
+          "page_start": 503
+        },
+        {
+          "number": "15.4",
+          "title": "Isomeria",
+          "page_start": 505
+        },
+        {
+          "number": "15.5",
+          "title": "Il legame nei composti di coordinazione",
+          "page_start": 510
+        },
+        {
+          "number": "15.6",
+          "title": "I colori dei composti di coordinazione",
+          "page_start": 516
+        },
+        {
+          "number": "15.7",
+          "title": "La serie spettrochimica dei leganti",
+          "page_start": 517
+        },
+        {
+          "number": "15.8",
+          "title": "Reazioni di sostituzione dei leganti e stabilità degli ioni complessi",
+          "page_start": 519
+        },
+        {
+          "number": "15.9",
+          "title": "Applicazioni dei composti di coordinazione",
+          "page_start": 521
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Chimica nucleare",
+      "page_start": 529,
+      "sections": [
+        {
+          "number": "16.1",
+          "title": "Energia di legame nucleare. Stabilità dei nuclei",
+          "page_start": 529
+        },
+        {
+          "number": "16.2",
+          "title": "Equazioni nucleari bilanciate",
+          "page_start": 532
+        },
+        {
+          "number": "16.3",
+          "title": "Reazioni di decadimento nucleare",
+          "page_start": 533
+        },
+        {
+          "number": "16.4",
+          "title": "Cinetica delle reazioni di decadimento nucleare",
+          "page_start": 536
+        },
+        {
+          "number": "16.5",
+          "title": "Fissione e fusione nucleari",
+          "page_start": 539
+        },
+        {
+          "number": "16.6",
+          "title": "Applicazioni di radionuclidi",
+          "page_start": 541
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Elementi di chimica inorganica",
+      "page_start": 547,
+      "sections": [
+        {
+          "number": "17.1",
+          "title": "Introduzione",
+          "page_start": 547
+        },
+        {
+          "number": "17.2",
+          "title": "Idrogeno",
+          "page_start": 548
+        },
+        {
+          "number": "17.3",
+          "title": "Gruppo 1. Metalli alcalini",
+          "page_start": 551
+        },
+        {
+          "number": "17.4",
+          "title": "Gruppo 2. Metalli alcalino-terrosi",
+          "page_start": 555
+        },
+        {
+          "number": "17.5",
+          "title": "Gruppo 13",
+          "page_start": 559
+        },
+        {
+          "number": "17.6",
+          "title": "Gruppo 14",
+          "page_start": 564
+        },
+        {
+          "number": "17.7",
+          "title": "Gruppo 15",
+          "page_start": 572
+        },
+        {
+          "number": "17.8",
+          "title": "Gruppo 16. Calcogeni",
+          "page_start": 579
+        },
+        {
+          "number": "17.9",
+          "title": "Gruppo 17. Alogeni",
+          "page_start": 585
+        },
+        {
+          "number": "17.10",
+          "title": "Gruppo 18. Gas nobili",
+          "page_start": 590
+        },
+        {
+          "number": "17.11",
+          "title": "Elementi di transizione",
+          "page_start": 591
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Elementi di chimica organica",
+      "page_start": 599,
+      "sections": [
+        {
+          "number": "18.1",
+          "title": "Introduzione",
+          "page_start": 599
+        },
+        {
+          "number": "18.2",
+          "title": "Idrocarburi",
+          "page_start": 599
+        },
+        {
+          "number": "18.3",
+          "title": "Gruppi funzionali",
+          "page_start": 611
+        },
+        {
+          "number": "18.4",
+          "title": "Cenni ai polimeri sintetici",
+          "page_start": 623
+        }
+      ]
+    }
+  ]
+}

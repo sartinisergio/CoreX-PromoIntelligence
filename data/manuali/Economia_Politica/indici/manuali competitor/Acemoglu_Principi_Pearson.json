@@ -1,0 +1,155 @@
+{
+  "id": "Acemoglu_Principi",
+  "title": "Principi di economia",
+  "author": "Acemoglu",
+  "publisher": "Pearson",
+  "subject": "Economia politica",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Principi e pratica dell'economia",
+      "sections": []
+    },
+    {
+      "number": 2,
+      "title": "Metodi e questioni economiche",
+      "sections": []
+    },
+    {
+      "number": 3,
+      "title": "Ottimizzazione: la scelta migliore",
+      "sections": []
+    },
+    {
+      "number": 4,
+      "title": "Domanda, offerta, equilibrio",
+      "sections": []
+    },
+    {
+      "number": 5,
+      "title": "Consumatori e incentivi",
+      "sections": []
+    },
+    {
+      "number": 6,
+      "title": "Imprese e incentivi",
+      "sections": []
+    },
+    {
+      "number": 7,
+      "title": "La concorrenza perfetta e la mano invisibile",
+      "sections": []
+    },
+    {
+      "number": 8,
+      "title": "Commercio internazionale",
+      "sections": []
+    },
+    {
+      "number": 9,
+      "title": "Esternalità e beni pubblici",
+      "sections": []
+    },
+    {
+      "number": 10,
+      "title": "Lo Stato nel sistema economico: imposte e regolazione",
+      "sections": []
+    },
+    {
+      "number": 11,
+      "title": "I mercati dei fattori di produzione",
+      "sections": []
+    },
+    {
+      "number": 12,
+      "title": "Monopolio",
+      "sections": []
+    },
+    {
+      "number": 13,
+      "title": "Teoria dei giochi e gioco strategico",
+      "sections": []
+    },
+    {
+      "number": 14,
+      "title": "Oligopolio e concorrenza monopolistica",
+      "sections": []
+    },
+    {
+      "number": 15,
+      "title": "Trade-off che coinvolgono tempo e rischio",
+      "sections": []
+    },
+    {
+      "number": 16,
+      "title": "L'economia dell'informazione",
+      "sections": []
+    },
+    {
+      "number": 17,
+      "title": "Aste e contrattazioni",
+      "sections": []
+    },
+    {
+      "number": 18,
+      "title": "Economia sociale",
+      "sections": []
+    },
+    {
+      "number": 19,
+      "title": "La ricchezza delle nazioni: definire e misurare gli aggregati economici",
+      "sections": []
+    },
+    {
+      "number": 20,
+      "title": "Il reddito aggregato",
+      "sections": []
+    },
+    {
+      "number": 21,
+      "title": "Crescita economica",
+      "sections": []
+    },
+    {
+      "number": 22,
+      "title": "Perché non tutto il mondo si è sviluppato?",
+      "sections": []
+    },
+    {
+      "number": 23,
+      "title": "Occupazione e disoccupazione",
+      "sections": []
+    },
+    {
+      "number": 24,
+      "title": "Il mercato del credito",
+      "sections": []
+    },
+    {
+      "number": 25,
+      "title": "Il sistema monetario",
+      "sections": []
+    },
+    {
+      "number": 26,
+      "title": "Le fluttuazioni di breve periodo",
+      "sections": []
+    },
+    {
+      "number": 27,
+      "title": "Politiche macroeconomiche anticicliche",
+      "sections": []
+    },
+    {
+      "number": 28,
+      "title": "Macroeconomia e commercio internazionale",
+      "sections": []
+    },
+    {
+      "number": 29,
+      "title": "Macroeconomia in economia aperta",
+      "sections": []
+    }
+  ]
+}

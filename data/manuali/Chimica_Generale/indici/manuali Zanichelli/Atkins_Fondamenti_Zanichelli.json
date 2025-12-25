@@ -1,0 +1,354 @@
+{
+  "id": "Atkins_Fondamenti",
+  "title": "Fondamenti di Chimica generale",
+  "author": "Atkins",
+  "publisher": "Zanichelli",
+  "subject": "chimica generale",
+  "type": "Zanichelli",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "FOCUS 1 - Gli atomi",
+      "page_start": 1,
+      "sections": [
+        {
+          "title": "CAPITOLO 1A - L'osservazione degli atomi",
+          "page_start": 2
+        },
+        {
+          "title": "CAPITOLO 1B - La teoria quantistica",
+          "page_start": 12
+        },
+        {
+          "title": "CAPITOLO 1C - Funzioni d'onda e livelli energetici",
+          "page_start": 24
+        },
+        {
+          "title": "CAPITOLO 1D - L'atomo di idrogeno",
+          "page_start": 32
+        },
+        {
+          "title": "CAPITOLO 1E - Gli atomi multielettronici",
+          "page_start": 45
+        },
+        {
+          "title": "CAPITOLO 1F - La periodicità",
+          "page_start": 55
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "FOCUS 2 - I legami tra gli atomi",
+      "page_start": 73,
+      "sections": [
+        {
+          "title": "CAPITOLO 2A - I legami ionici",
+          "page_start": 74
+        },
+        {
+          "title": "CAPITOLO 2B - I legami covalenti",
+          "page_start": 84
+        },
+        {
+          "title": "CAPITOLO 2C - Le eccezioni alla regola dell'ottetto",
+          "page_start": 96
+        },
+        {
+          "title": "CAPITOLO 2D - Le proprietà dei legami",
+          "page_start": 104
+        },
+        {
+          "title": "CAPITOLO 2E - Il modello VSEPR",
+          "page_start": 113
+        },
+        {
+          "title": "CAPITOLO 2F - La teoria del legame di valenza",
+          "page_start": 127
+        },
+        {
+          "title": "CAPITOLO 2G - La teoria degli orbitali molecolari",
+          "page_start": 140
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "FOCUS 3 - Gli stati della materia",
+      "page_start": 163,
+      "sections": [
+        {
+          "title": "CAPITOLO 3A - La natura dei gas",
+          "page_start": 165
+        },
+        {
+          "title": "CAPITOLO 3B - Le leggi dei gas in azione",
+          "page_start": 181
+        },
+        {
+          "title": "CAPITOLO 3C - Il moto molecolare nei gas",
+          "page_start": 190
+        },
+        {
+          "title": "CAPITOLO 3D - Le forze intermolecolari",
+          "page_start": 200
+        },
+        {
+          "title": "CAPITOLO 3E - I gas reali",
+          "page_start": 212
+        },
+        {
+          "title": "CAPITOLO 3F - I liquidi",
+          "page_start": 218
+        },
+        {
+          "title": "CAPITOLO 3G - I solidi",
+          "page_start": 224
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "FOCUS 4 - La termodinamica",
+      "page_start": 249,
+      "sections": [
+        {
+          "title": "CAPITOLO 4A - L'energia interna",
+          "page_start": 251
+        },
+        {
+          "title": "CAPITOLO 4B - Lavoro e calore",
+          "page_start": 260
+        },
+        {
+          "title": "CAPITOLO 4C - L'entalpia",
+          "page_start": 275
+        },
+        {
+          "title": "CAPITOLO 4D - La termochimica",
+          "page_start": 286
+        },
+        {
+          "title": "CAPITOLO 4E - I diversi contributi all'entalpia",
+          "page_start": 305
+        },
+        {
+          "title": "CAPITOLO 4F - L'entropia",
+          "page_start": 312
+        },
+        {
+          "title": "CAPITOLO 4G - L'interpretazione molecolare dell'entropia",
+          "page_start": 325
+        },
+        {
+          "title": "CAPITOLO 4H - Le entropie assolute",
+          "page_start": 332
+        },
+        {
+          "title": "CAPITOLO 4I - I cambiamenti di entropia globali",
+          "page_start": 339
+        },
+        {
+          "title": "CAPITOLO 4J - L'energia libera di Gibbs",
+          "page_start": 348
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "FOCUS 5 - L'equilibrio",
+      "page_start": 369,
+      "sections": [
+        {
+          "title": "CAPITOLO 5A - La pressione di vapore",
+          "page_start": 370
+        },
+        {
+          "title": "CAPITOLO 5B - Gli equilibri di fase nei sistemi a un solo componente",
+          "page_start": 378
+        },
+        {
+          "title": "CAPITOLO 5C - Gli equilibri di fase nei sistemi a due componenti",
+          "page_start": 387
+        },
+        {
+          "title": "CAPITOLO 5D - La solubilità",
+          "page_start": 397
+        },
+        {
+          "title": "CAPITOLO 5E - Le proprietà colligative",
+          "page_start": 409
+        },
+        {
+          "title": "CAPITOLO 5F - L'equilibrio chimico",
+          "page_start": 423
+        },
+        {
+          "title": "CAPITOLO 5G - Forme alternative della costante di equilibrio",
+          "page_start": 436
+        },
+        {
+          "title": "CAPITOLO 5H - Calcoli relativi agli equilibri",
+          "page_start": 441
+        },
+        {
+          "title": "CAPITOLO 5I - La risposta dei sistemi all'equilibrio alla variazione delle condizioni",
+          "page_start": 452
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "FOCUS 6 - Le reazioni",
+      "page_start": 471,
+      "sections": [
+        {
+          "title": "CAPITOLO 6A - La natura degli acidi e delle basi",
+          "page_start": 473
+        },
+        {
+          "title": "CAPITOLO 6B - Autoprotolisi e pH",
+          "page_start": 482
+        },
+        {
+          "title": "CAPITOLO 6C - Gli acidi e le basi deboli",
+          "page_start": 490
+        },
+        {
+          "title": "CAPITOLO 6D - Il pH delle soluzioni acquose",
+          "page_start": 502
+        },
+        {
+          "title": "CAPITOLO 6E - Gli acidi e le basi poliprotici",
+          "page_start": 513
+        },
+        {
+          "title": "CAPITOLO 6F - Il pH delle soluzioni molto diluite",
+          "page_start": 525
+        },
+        {
+          "title": "CAPITOLO 6G - I tamponi",
+          "page_start": 531
+        },
+        {
+          "title": "CAPITOLO 6H - Le titolazioni acido-base",
+          "page_start": 544
+        },
+        {
+          "title": "CAPITOLO 6I - Gli equilibri di solubilità",
+          "page_start": 560
+        },
+        {
+          "title": "CAPITOLO 6J - La precipitazione",
+          "page_start": 569
+        },
+        {
+          "title": "CAPITOLO 6K - La rappresentazione delle reazioni redox",
+          "page_start": 577
+        },
+        {
+          "title": "CAPITOLO 6L - Le celle galvaniche",
+          "page_start": 585
+        },
+        {
+          "title": "CAPITOLO 6M - I potenziali standard",
+          "page_start": 596
+        },
+        {
+          "title": "CAPITOLO 6N - Le applicazioni dei potenziali di elettrodo",
+          "page_start": 606
+        },
+        {
+          "title": "CAPITOLO 6O - L'elettrolisi",
+          "page_start": 621
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "FOCUS 7 - La cinetica",
+      "page_start": 635,
+      "sections": [
+        {
+          "title": "CAPITOLO 7A - La velocità di reazione",
+          "page_start": 636
+        },
+        {
+          "title": "CAPITOLO 7B - Le leggi cinetiche integrate",
+          "page_start": 650
+        },
+        {
+          "title": "CAPITOLO 7C - I meccanismi di reazione",
+          "page_start": 661
+        },
+        {
+          "title": "CAPITOLO 7D - I modelli di reazione",
+          "page_start": 675
+        },
+        {
+          "title": "CAPITOLO 7E - La catalisi",
+          "page_start": 686
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "FOCUS 8 - I materiali",
+      "page_start": 699,
+      "sections": [
+        {
+          "title": "CAPITOLO 8A - Le proprietà periodiche",
+          "page_start": 700
+        },
+        {
+          "title": "CAPITOLO 8B - L'idrogeno",
+          "page_start": 713
+        },
+        {
+          "title": "CAPITOLO 8C - Il gruppo 1: i metalli alcalini",
+          "page_start": 718
+        },
+        {
+          "title": "CAPITOLO 8D - Il gruppo 2: i metalli alcalino-terrosi",
+          "page_start": 723
+        },
+        {
+          "title": "CAPITOLO 8E - Il gruppo 13: la famiglia del boro",
+          "page_start": 730
+        },
+        {
+          "title": "CAPITOLO 8F - Il gruppo 14: la famiglia del carbonio",
+          "page_start": 738
+        },
+        {
+          "title": "CAPITOLO 8G - Il gruppo 15: la famiglia dell'azoto",
+          "page_start": 749
+        },
+        {
+          "title": "CAPITOLO 8H - Il gruppo 16: la famiglia dell'ossigeno",
+          "page_start": 759
+        },
+        {
+          "title": "CAPITOLO 8I - Il gruppo 17: gli alogeni",
+          "page_start": 771
+        },
+        {
+          "title": "CAPITOLO 8J - Il gruppo 18: i gas nobili",
+          "page_start": 778
+        },
+        {
+          "title": "CAPITOLO 8K - Alcuni elementi del blocco d in rassegna",
+          "page_start": 782
+        },
+        {
+          "title": "CAPITOLO 8L - I composti di coordinazione",
+          "page_start": 796
+        },
+        {
+          "title": "CAPITOLO 8M - La struttura elettronica dei complessi dei metalli del blocco d",
+          "page_start": 809
+        }
+      ]
+    }
+  ]
+}

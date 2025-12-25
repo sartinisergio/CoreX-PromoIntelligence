@@ -1,0 +1,686 @@
+{
+  "id": "Palmisano_Elementi",
+  "title": "Elementi di Chimica",
+  "author": "Palmisano",
+  "publisher": "Edises",
+  "subject": "chimica generale",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "La natura atomica della materia",
+      "page_start": 1,
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "Legge della costanza delle masse o di Lavoisier",
+          "page_start": 1
+        },
+        {
+          "number": "1.2",
+          "title": "Legge delle proporzioni definite o di Proust",
+          "page_start": 2
+        },
+        {
+          "number": "1.3",
+          "title": "Teoria atomica di Dalton, legge delle proporzioni multiple",
+          "page_start": 2
+        },
+        {
+          "number": "1.4",
+          "title": "Determinazione dei pesi atomici: legge di Gay-Lussac, principio di Avogadro, regola di Cannizzaro",
+          "page_start": 4
+        },
+        {
+          "number": "1.5",
+          "title": "Scala dei pesi atomici",
+          "page_start": 6
+        },
+        {
+          "number": "1.6",
+          "title": "Peso equivalente",
+          "page_start": 7
+        },
+        {
+          "number": "1.7",
+          "title": "La mole",
+          "page_start": 8
+        },
+        {
+          "number": "1.8",
+          "title": "Formule chimiche",
+          "page_start": 10
+        },
+        {
+          "number": "1.9",
+          "title": "Calcoli stechiometrici",
+          "page_start": 11
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "La struttura dell'atomo",
+      "page_start": 17,
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "La scoperta dell'elettrone, del protone e del neutrone. Loro caratteristiche",
+          "page_start": 17
+        },
+        {
+          "number": "2.2",
+          "title": "Modelli atomici di Thomson e di Rutherford",
+          "page_start": 20
+        },
+        {
+          "number": "2.3",
+          "title": "Numero atomico, numero di massa. Isotopi",
+          "page_start": 21
+        },
+        {
+          "number": "2.4",
+          "title": "Spettri atomici",
+          "page_start": 25
+        },
+        {
+          "number": "2.5",
+          "title": "Spettro di emissione di un corpo nero",
+          "page_start": 28
+        },
+        {
+          "number": "2.6",
+          "title": "L'effetto fotoelettrico",
+          "page_start": 29
+        },
+        {
+          "number": "2.7",
+          "title": "Il modello atomico di Bohr",
+          "page_start": 30
+        },
+        {
+          "number": "2.8",
+          "title": "Principio di indeterminazione e modello ondulatorio di Schrodinger",
+          "page_start": 33
+        },
+        {
+          "number": "2.9",
+          "title": "Orbitali atomici e loro rappresentazione",
+          "page_start": 37
+        },
+        {
+          "number": "2.10",
+          "title": "Atomi polielettronici e loro struttura elettronica",
+          "page_start": 40
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Il sistema periodico",
+      "page_start": 47,
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "Proprietà chimiche degli elementi e loro periodicità",
+          "page_start": 47
+        },
+        {
+          "number": "3.2",
+          "title": "Rappresentazione del sistema periodico",
+          "page_start": 48
+        },
+        {
+          "number": "3.3",
+          "title": "La struttura della tavola periodica",
+          "page_start": 50
+        },
+        {
+          "number": "3.4",
+          "title": "Descrizione della tavola periodica",
+          "page_start": 52
+        },
+        {
+          "number": "3.5",
+          "title": "Proprietà periodiche degli elementi",
+          "page_start": 54
+        },
+        {
+          "number": "3.6",
+          "title": "Proprietà metalliche, non metalliche e semimetalliche degli elementi",
+          "page_start": 62
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Il legame chimico",
+      "page_start": 66,
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "Energia di legame",
+          "page_start": 66
+        },
+        {
+          "number": "4.2",
+          "title": "Tipi di legami chimici",
+          "page_start": 66
+        },
+        {
+          "number": "4.3",
+          "title": "Legame ionico",
+          "page_start": 67
+        },
+        {
+          "number": "4.4",
+          "title": "Valenza ionica o elettrovalenza",
+          "page_start": 68
+        },
+        {
+          "number": "4.5",
+          "title": "Legame covalente",
+          "page_start": 69
+        },
+        {
+          "number": "4.6",
+          "title": "Elettronegatività",
+          "page_start": 75
+        },
+        {
+          "number": "4.7",
+          "title": "Strutture di Lewis",
+          "page_start": 76
+        },
+        {
+          "number": "4.8",
+          "title": "Risonanza",
+          "page_start": 79
+        },
+        {
+          "number": "4.9",
+          "title": "Carica formale",
+          "page_start": 81
+        },
+        {
+          "number": "4.10",
+          "title": "Legame di coordinazione o dativo",
+          "page_start": 82
+        },
+        {
+          "number": "4.11",
+          "title": "Teoria del legame di valenza",
+          "page_start": 84
+        },
+        {
+          "number": "4.12",
+          "title": "Orbitali ibridi",
+          "page_start": 88
+        },
+        {
+          "number": "4.13",
+          "title": "Teoria VSEPR",
+          "page_start": 96
+        },
+        {
+          "number": "4.14",
+          "title": "Legame metallico",
+          "page_start": 99
+        },
+        {
+          "number": "4.15",
+          "title": "Legami deboli",
+          "page_start": 105
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Numero di ossidazione, nomenclatura e reazioni chimiche",
+      "page_start": 111,
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "Il numero di ossidazione: concetto ed uso",
+          "page_start": 111
+        },
+        {
+          "number": "5.2",
+          "title": "Nomenclatura: generalità",
+          "page_start": 114
+        },
+        {
+          "number": "5.3",
+          "title": "Gli idruri: nomenclatura e proprietà",
+          "page_start": 120
+        },
+        {
+          "number": "5.4",
+          "title": "Gli ossidi: nomenclatura e proprietà",
+          "page_start": 121
+        },
+        {
+          "number": "5.5",
+          "title": "Le reazioni chimiche: generalità",
+          "page_start": 124
+        },
+        {
+          "number": "5.6",
+          "title": "Peso equivalente per le sostanze ossidanti e riducenti",
+          "page_start": 134
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Lo stato gassoso",
+      "page_start": 137,
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "Lo stato gassoso: generalità",
+          "page_start": 137
+        },
+        {
+          "number": "6.2",
+          "title": "Miscele gassose. Pressioni parziali. Legge di Dalton",
+          "page_start": 145
+        },
+        {
+          "number": "6.3",
+          "title": "Un modello per i gas ideali: la teoria cinetica dei gas e la distribuzione delle velocità di Maxwell-Boltzmann",
+          "page_start": 148
+        },
+        {
+          "number": "6.4",
+          "title": "I gas reali. L'equazione di van der Waals",
+          "page_start": 151
+        },
+        {
+          "number": "6.5",
+          "title": "La liquefazione dei gas",
+          "page_start": 153
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Termodinamica e cinetica chimica",
+      "page_start": 158,
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "Sistemi, stati e funzioni di stato",
+          "page_start": 158
+        },
+        {
+          "number": "7.2",
+          "title": "Energia interna, lavoro, calore",
+          "page_start": 159
+        },
+        {
+          "number": "7.3",
+          "title": "Primo principio della termodinamica",
+          "page_start": 160
+        },
+        {
+          "number": "7.4",
+          "title": "La funzione di stato entalpia",
+          "page_start": 162
+        },
+        {
+          "number": "7.5",
+          "title": "Termochimica",
+          "page_start": 164
+        },
+        {
+          "number": "7.6",
+          "title": "Entalpia di formazione",
+          "page_start": 165
+        },
+        {
+          "number": "7.7",
+          "title": "Legge di Hess",
+          "page_start": 167
+        },
+        {
+          "number": "7.8",
+          "title": "Trasformazioni spontanee e disordine",
+          "page_start": 170
+        },
+        {
+          "number": "7.9",
+          "title": "Processi reversibili ed irreversibili",
+          "page_start": 171
+        },
+        {
+          "number": "7.10",
+          "title": "Entropia e secondo principio della termodinamica",
+          "page_start": 173
+        },
+        {
+          "number": "7.11",
+          "title": "Terzo principio della termodinamica e variazione di entropia di reazione",
+          "page_start": 174
+        },
+        {
+          "number": "7.12",
+          "title": "Variazione di entropia nei sistemi isolati",
+          "page_start": 175
+        },
+        {
+          "number": "7.13",
+          "title": "Energia libera",
+          "page_start": 176
+        },
+        {
+          "number": "7.14",
+          "title": "Cinetica chimica: definizioni e generalità",
+          "page_start": 180
+        },
+        {
+          "number": "7.15",
+          "title": "Velocità di reazione",
+          "page_start": 181
+        },
+        {
+          "number": "7.16",
+          "title": "Legge cinetica",
+          "page_start": 183
+        },
+        {
+          "number": "7.17",
+          "title": "Legge cinetica integrata",
+          "page_start": 185
+        },
+        {
+          "number": "7.18",
+          "title": "Dipendenza della velocità di reazione dalla temperatura",
+          "page_start": 187
+        },
+        {
+          "number": "7.19",
+          "title": "Catalisi e catalizzatori",
+          "page_start": 189
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Lo stato solido e lo stato liquido",
+      "page_start": 196,
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "I solidi: generalità",
+          "page_start": 196
+        },
+        {
+          "number": "8.2",
+          "title": "Concetti di struttura nei solidi cristallini",
+          "page_start": 196
+        },
+        {
+          "number": "8.3",
+          "title": "Sistemi cristallini. Reticoli di Bravais",
+          "page_start": 198
+        },
+        {
+          "number": "8.4",
+          "title": "Tipi di solidi. Allotropia, polimorfismo e isomorfismo",
+          "page_start": 200
+        },
+        {
+          "number": "8.5",
+          "title": "Solidi amorfi",
+          "page_start": 206
+        },
+        {
+          "number": "8.6",
+          "title": "I liquidi: generalità",
+          "page_start": 207
+        },
+        {
+          "number": "8.7",
+          "title": "L'evaporazione. La tensione o pressione di vapore e la sua dipendenza dalla temperatura",
+          "page_start": 208
+        },
+        {
+          "number": "8.8",
+          "title": "Passaggi di stato nei sistemi ad un componente: curve di riscaldamento e di raffreddamento, principio di Le Chatelier",
+          "page_start": 212
+        },
+        {
+          "number": "8.9",
+          "title": "Esempi di diagrammi di stato ad un componente: diagramma di stato dell'acqua e del biossido di carbonio",
+          "page_start": 215
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Sistemi liquidi a più componenti",
+      "page_start": 221,
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "I sistemi a due o più componenti: generalità",
+          "page_start": 221
+        },
+        {
+          "number": "9.2",
+          "title": "Modi di esprimere la concentrazione",
+          "page_start": 222
+        },
+        {
+          "number": "9.3",
+          "title": "Principi generali per la formazione delle soluzioni",
+          "page_start": 228
+        },
+        {
+          "number": "9.4",
+          "title": "La tensione di vapore nelle soluzioni. La legge di Raoult. Le proprietà colligative",
+          "page_start": 230
+        },
+        {
+          "number": "9.5",
+          "title": "Le proprietà colligative e la natura fisica del soluto: elettroliti e non elettroliti",
+          "page_start": 237
+        },
+        {
+          "number": "9.6",
+          "title": "Soluzioni ideali e non ideali. La distillazione frazionata. Miscele azeotropiche",
+          "page_start": 241
+        },
+        {
+          "number": "9.7",
+          "title": "Regola delle fasi",
+          "page_start": 245
+        },
+        {
+          "number": "9.8",
+          "title": "Miscele di due liquidi",
+          "page_start": 247
+        },
+        {
+          "number": "9.9",
+          "title": "Curve di raffreddamento. Miscele eutettiche",
+          "page_start": 248
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Equilibri chimici",
+      "page_start": 255,
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "Generalità",
+          "page_start": 255
+        },
+        {
+          "number": "10.2",
+          "title": "La legge di azione di massa. La costante di equilibrio",
+          "page_start": 256
+        },
+        {
+          "number": "10.3",
+          "title": "La costante di equilibrio e le velocità di reazione",
+          "page_start": 257
+        },
+        {
+          "number": "10.4",
+          "title": "Derivazione termodinamica della costante d'equilibrio",
+          "page_start": 258
+        },
+        {
+          "number": "10.5",
+          "title": "Relazione tra Kc e KP e loro dipendenza dalla temperatura",
+          "page_start": 262
+        },
+        {
+          "number": "10.6",
+          "title": "Altri fattori che influenzano l'equilibrio chimico",
+          "page_start": 265
+        },
+        {
+          "number": "10.7",
+          "title": "Gli equilibri nelle reazioni eterogenee",
+          "page_start": 270
+        },
+        {
+          "number": "10.8",
+          "title": "La costante di equilibrio espressa in funzione del grado di dissociazione",
+          "page_start": 272
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Equilibri acido-base e di solubilità",
+      "page_start": 277,
+      "sections": [
+        {
+          "number": "11.1",
+          "title": "Gli equilibri ionici acido-base: aspetti generali",
+          "page_start": 277
+        },
+        {
+          "number": "11.2",
+          "title": "Autoionizzazione dell'acqua",
+          "page_start": 281
+        },
+        {
+          "number": "11.3",
+          "title": "Soluzioni acquose contenenti acidi o basi forti, acidi o basi deboli monoprotici e poliprotici",
+          "page_start": 283
+        },
+        {
+          "number": "11.4",
+          "title": "Soluzioni tampone",
+          "page_start": 293
+        },
+        {
+          "number": "11.5",
+          "title": "Gli ioni come acidi o basi",
+          "page_start": 298
+        },
+        {
+          "number": "11.6",
+          "title": "Titolazioni acido-base",
+          "page_start": 303
+        },
+        {
+          "number": "11.7",
+          "title": "Equilibri di solubilità",
+          "page_start": 306
+        },
+        {
+          "number": "11.8",
+          "title": "Legge di Henry",
+          "page_start": 312
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Celle galvaniche ed elettrolitiche",
+      "page_start": 317,
+      "sections": [
+        {
+          "number": "12.1",
+          "title": "Le pile",
+          "page_start": 317
+        },
+        {
+          "number": "12.2",
+          "title": "Potenziale di un semielemento",
+          "page_start": 319
+        },
+        {
+          "number": "12.3",
+          "title": "Equazione di Nernst",
+          "page_start": 327
+        },
+        {
+          "number": "12.4",
+          "title": "Pile di concentrazione",
+          "page_start": 330
+        },
+        {
+          "number": "12.5",
+          "title": "Relazione tra energia libera di reazione e f.e.m. di una pila",
+          "page_start": 332
+        },
+        {
+          "number": "12.6",
+          "title": "Calcolo del valore della costante di equilibrio di una reazione redox",
+          "page_start": 334
+        },
+        {
+          "number": "12.7",
+          "title": "L'elettrolisi",
+          "page_start": 336
+        },
+        {
+          "number": "12.8",
+          "title": "Aspetti quantitativi dell'elettrolisi: leggi di Faraday",
+          "page_start": 340
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Chimica organica, biochimica e chimica ambientale",
+      "page_start": 348,
+      "sections": [
+        {
+          "number": "13.1",
+          "title": "Il ruolo del carbonio",
+          "page_start": 348
+        },
+        {
+          "number": "13.2",
+          "title": "I composti binari tra carbonio e idrogeno: gli idrocarburi. Classificazione e generalità",
+          "page_start": 348
+        },
+        {
+          "number": "13.3",
+          "title": "Altre classi di composti",
+          "page_start": 359
+        },
+        {
+          "number": "13.4",
+          "title": "Biochimica. La cellula: cenni sulla struttura e sulle funzioni principali",
+          "page_start": 366
+        },
+        {
+          "number": "13.5",
+          "title": "Chimica ambientale",
+          "page_start": 381
+        }
+      ]
+    }
+  ]
+}

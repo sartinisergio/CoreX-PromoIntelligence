@@ -1,0 +1,816 @@
+{
+  "id": "The Core_Economia",
+  "title": "Economia: comprendere il mondo",
+  "author": "The Core Team",
+  "publisher": "Il Mulino",
+  "subject": "Economia politica",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "La rivoluzione capitalista",
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "La diseguaglianza del reddito"
+        },
+        {
+          "number": "1.2",
+          "title": "Misurare il reddito e il tenore di vita"
+        },
+        {
+          "number": "1.3",
+          "title": "Il bastone da hockey della storia: la crescita del reddito"
+        },
+        {
+          "number": "1.4",
+          "title": "La rivoluzione tecnologica permanente"
+        },
+        {
+          "number": "1.5",
+          "title": "L'economia e l'ambiente"
+        },
+        {
+          "number": "1.6",
+          "title": "Definire il capitalismo: proprietà privata, mercati e imprese"
+        },
+        {
+          "number": "1.7",
+          "title": "Il capitalismo come sistema economico"
+        },
+        {
+          "number": "1.8",
+          "title": "I vantaggi della specializzazione"
+        },
+        {
+          "number": "1.9",
+          "title": "Il capitalismo come causa della svolta nel bastone da hockey"
+        },
+        {
+          "number": "1.10",
+          "title": "Varietà di capitalismi: istituzioni, governi ed economia"
+        },
+        {
+          "number": "1.11",
+          "title": "L'economia come campo di studi"
+        },
+        {
+          "number": "1.12",
+          "title": "Conclusioni"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Progresso tecnico, demografia e crescita economica",
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "Economisti, storici e Rivoluzione industriale"
+        },
+        {
+          "number": "2.2",
+          "title": "I modelli economici: vedere meglio guardando meno cose"
+        },
+        {
+          "number": "2.3",
+          "title": "Concetti di base: prezzi, costi e rendite da innovazione"
+        },
+        {
+          "number": "2.4",
+          "title": "Il modello di un'economia dinamica: tecnologia e costi"
+        },
+        {
+          "number": "2.5",
+          "title": "Il modello di un'economia dinamica: innovazione e profitto"
+        },
+        {
+          "number": "2.6",
+          "title": "La Rivoluzione industriale inglese"
+        },
+        {
+          "number": "2.7",
+          "title": "L'economia malthusiana"
+        },
+        {
+          "number": "2.8",
+          "title": "Aumento del tenore di vita e crescita demografica"
+        },
+        {
+          "number": "2.9",
+          "title": "Trappola malthusiana e stagnazione economica"
+        },
+        {
+          "number": "2.10",
+          "title": "La fuga dalla trappola malthusiana"
+        },
+        {
+          "number": "2.11",
+          "title": "Conclusioni"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Scarsità, lavoro e scelta",
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "Lavoro e produzione"
+        },
+        {
+          "number": "3.2",
+          "title": "Le preferenze"
+        },
+        {
+          "number": "3.3",
+          "title": "Il costo opportunità"
+        },
+        {
+          "number": "3.4",
+          "title": "L'insieme possibile"
+        },
+        {
+          "number": "3.5",
+          "title": "Scelta e scarsità"
+        },
+        {
+          "number": "3.6",
+          "title": "Crescita economica e tempo di lavoro"
+        },
+        {
+          "number": "3.7",
+          "title": "Effetto reddito ed effetto sostituzione"
+        },
+        {
+          "number": "3.8",
+          "title": "È valido questo modello?"
+        },
+        {
+          "number": "3.9",
+          "title": "L'orario di lavoro: l'evoluzione nel tempo"
+        },
+        {
+          "number": "3.10",
+          "title": "L'orario di lavoro: le differenze fra i Paesi"
+        },
+        {
+          "number": "3.11",
+          "title": "Conclusioni"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Le interazioni sociali",
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "Interazioni sociali e teoria dei giochi"
+        },
+        {
+          "number": "4.2",
+          "title": "L'equilibrio del gioco della mano invisibile"
+        },
+        {
+          "number": "4.3",
+          "title": "Il dilemma del prigioniero"
+        },
+        {
+          "number": "4.4",
+          "title": "Preferenze sociali: l'altruismo"
+        },
+        {
+          "number": "4.5",
+          "title": "Preferenze altruistiche nel dilemma del prigioniero"
+        },
+        {
+          "number": "4.6",
+          "title": "Beni pubblici, opportunismo e giochi ripetuti"
+        },
+        {
+          "number": "4.7",
+          "title": "Cooperazione e reazioni punitive"
+        },
+        {
+          "number": "4.8",
+          "title": "Esperimenti in laboratorio e sul campo"
+        },
+        {
+          "number": "4.9",
+          "title": "Cooperazione, contrattazione e norme sociali"
+        },
+        {
+          "number": "4.10",
+          "title": "Spartirsi una torta (o lasciarla sul tavolo)"
+        },
+        {
+          "number": "4.11",
+          "title": "Contadini equi e studenti egoisti?"
+        },
+        {
+          "number": "4.12",
+          "title": "La concorrenza nel gioco dell'ultimatum"
+        },
+        {
+          "number": "4.13",
+          "title": "Conflitti e scelta tra equilibri di Nash"
+        },
+        {
+          "number": "4.14",
+          "title": "Conclusioni"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Proprietà e potere: tra scambio e conflitto",
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "Istituzioni e potere"
+        },
+        {
+          "number": "5.2",
+          "title": "Valutare istituzioni ed esiti: il criterio di Pareto"
+        },
+        {
+          "number": "5.3",
+          "title": "Valutare istituzioni ed esiti: l'equità"
+        },
+        {
+          "number": "5.4",
+          "title": "Un modello di scelta e conflitto"
+        },
+        {
+          "number": "5.5",
+          "title": "Allocazioni tecnicamente possibili"
+        },
+        {
+          "number": "5.6",
+          "title": "Allocazioni imposte con la forza"
+        },
+        {
+          "number": "5.7",
+          "title": "Allocazioni economicamente possibili e surplus"
+        },
+        {
+          "number": "5.8",
+          "title": "La curva dei punti Pareto-efficienti"
+        },
+        {
+          "number": "5.9",
+          "title": "La divisione del surplus e la politica"
+        },
+        {
+          "number": "5.10",
+          "title": "Contrattare per ottenere una distribuzione efficiente del surplus"
+        },
+        {
+          "number": "5.11",
+          "title": "Angela e Bruno: la morale della storia"
+        },
+        {
+          "number": "5.12",
+          "title": "Misurare la diseguaglianza economica"
+        },
+        {
+          "number": "5.13",
+          "title": "Le politiche redistributive possono aumentare l'efficienza"
+        },
+        {
+          "number": "5.14",
+          "title": "Conclusioni"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "L'impresa: proprietari, manager e dipendenti",
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "Imprese, mercati e divisione del lavoro"
+        },
+        {
+          "number": "6.2",
+          "title": "I soldi degli altri: la separazione tra proprietà e controllo"
+        },
+        {
+          "number": "6.3",
+          "title": "Il lavoro degli altri"
+        },
+        {
+          "number": "6.4",
+          "title": "Rendite da occupazione"
+        },
+        {
+          "number": "6.5",
+          "title": "Le determinanti della rendita da occupazione"
+        },
+        {
+          "number": "6.6",
+          "title": "Il salario e l'effetto disciplinante della rendita da occupazione"
+        },
+        {
+          "number": "6.7",
+          "title": "Impegno e profitti"
+        },
+        {
+          "number": "6.8",
+          "title": "Utilizzare il modello: i proprietari, i dipendenti e l'economia"
+        },
+        {
+          "number": "6.9",
+          "title": "Un altro tipo di impresa"
+        },
+        {
+          "number": "6.10",
+          "title": "Principali e agenti: interazioni con contratti incompleti"
+        },
+        {
+          "number": "6.11",
+          "title": "Conclusioni"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "L'impresa e i suoi clienti",
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "La scelta del prezzo"
+        },
+        {
+          "number": "7.2",
+          "title": "Le economie di scala e i vantaggi della dimensione"
+        },
+        {
+          "number": "7.3",
+          "title": "La funzione di costo"
+        },
+        {
+          "number": "7.4",
+          "title": "Domanda e curve di isoprofitto"
+        },
+        {
+          "number": "7.5",
+          "title": "La scelta di prezzo e quantità per massimizzare i profitti"
+        },
+        {
+          "number": "7.6",
+          "title": "La massimizzazione del profitto con ricavi e costi marginali"
+        },
+        {
+          "number": "7.7",
+          "title": "I vantaggi derivanti dallo scambio"
+        },
+        {
+          "number": "7.8",
+          "title": "L'elasticità della domanda"
+        },
+        {
+          "number": "7.9",
+          "title": "L'elasticità della domanda e la politica economica"
+        },
+        {
+          "number": "7.10",
+          "title": "Fissazione del prezzo, concorrenza e potere di mercato"
+        },
+        {
+          "number": "7.11",
+          "title": "Selezione del prodotto, innovazione e pubblicità"
+        },
+        {
+          "number": "7.12",
+          "title": "Prezzi, costi e fallimenti del mercato"
+        },
+        {
+          "number": "7.13",
+          "title": "Conclusioni"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Domanda, offerta e mercati concorrenziali",
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "Comprare e vendere: domanda e offerta"
+        },
+        {
+          "number": "8.2",
+          "title": "Il mercato e il prezzo di equilibrio"
+        },
+        {
+          "number": "8.3",
+          "title": "La scelta ottimale di un'impresa price-taker"
+        },
+        {
+          "number": "8.4",
+          "title": "Offerta di mercato ed equilibrio"
+        },
+        {
+          "number": "8.5",
+          "title": "L'equilibrio concorrenziale"
+        },
+        {
+          "number": "8.6",
+          "title": "Variazioni della domanda e dell'offerta"
+        },
+        {
+          "number": "8.7",
+          "title": "L'effetto delle imposte"
+        },
+        {
+          "number": "8.8",
+          "title": "Il modello di concorrenza perfetta"
+        },
+        {
+          "number": "8.9",
+          "title": "Alla ricerca degli equilibri concorrenziali"
+        },
+        {
+          "number": "8.10",
+          "title": "Imprese price-taker e imprese price-setter"
+        },
+        {
+          "number": "8.11",
+          "title": "Conclusioni"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Il mercato del lavoro: salari, profitti e disoccupazione",
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "Le curve della fissazione del salario e del prezzo"
+        },
+        {
+          "number": "9.2",
+          "title": "Misurare occupazione e disoccupazione"
+        },
+        {
+          "number": "9.3",
+          "title": "La curva della fissazione del salario: occupazione e salari reali"
+        },
+        {
+          "number": "9.4",
+          "title": "La decisione di assumere"
+        },
+        {
+          "number": "9.5",
+          "title": "La curva della fissazione del prezzo: salari e profitti"
+        },
+        {
+          "number": "9.6",
+          "title": "Salari, profitti e disoccupazione"
+        },
+        {
+          "number": "9.7",
+          "title": "Domanda di beni e servizi e disoccupazione"
+        },
+        {
+          "number": "9.8",
+          "title": "Equilibrio nel mercato del lavoro e distribuzione del reddito"
+        },
+        {
+          "number": "9.9",
+          "title": "Offerta di lavoro, domanda di lavoro e potere contrattuale"
+        },
+        {
+          "number": "9.10",
+          "title": "La contrattazione salariale e il ruolo dei sindacati"
+        },
+        {
+          "number": "9.11",
+          "title": "Politiche del lavoro contro la disoccupazione e le disuguaglianze"
+        },
+        {
+          "number": "9.12",
+          "title": "Riepilogando: i baristi e il mercato del pane"
+        },
+        {
+          "number": "9.13",
+          "title": "Conclusioni"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Banche, moneta e mercato del credito",
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "Moneta e ricchezza"
+        },
+        {
+          "number": "10.2",
+          "title": "Prendere in prestito per anticipare i consumi"
+        },
+        {
+          "number": "10.3",
+          "title": "Impazienza e rendimenti marginali del consumo decrescenti"
+        },
+        {
+          "number": "10.4",
+          "title": "Distribuire i consumi nel tempo in modo ottimale"
+        },
+        {
+          "number": "10.5",
+          "title": "Dare in prestito o mettere da parte per posticipare i consumi"
+        },
+        {
+          "number": "10.6",
+          "title": "Investire: un modo alternativo per posticipare i consumi"
+        },
+        {
+          "number": "10.7",
+          "title": "Attività, passività e patrimonio netto"
+        },
+        {
+          "number": "10.8",
+          "title": "Le banche, la moneta e il ruolo della banca centrale"
+        },
+        {
+          "number": "10.9",
+          "title": "Il mercato della moneta e i tassi di interesse"
+        },
+        {
+          "number": "10.10",
+          "title": "L'attività bancaria e lo stato patrimoniale di una banca"
+        },
+        {
+          "number": "10.11",
+          "title": "Come il tasso di riferimento influenza le decisioni di spesa"
+        },
+        {
+          "number": "10.12",
+          "title": "L'accesso al credito: un problema principale-agente"
+        },
+        {
+          "number": "10.13",
+          "title": "Gli effetti sulla disuguaglianza"
+        },
+        {
+          "number": "10.14",
+          "title": "Conclusioni"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Rendite, prezzi e dinamica del mercato",
+      "sections": [
+        {
+          "number": "11.1",
+          "title": "La ricerca di rendite spinge i prezzi verso l'equilibrio"
+        },
+        {
+          "number": "11.2",
+          "title": "L'organizzazione del mercato può influenzare i prezzi"
+        },
+        {
+          "number": "11.3",
+          "title": "Equilibri di breve e di lungo periodo"
+        },
+        {
+          "number": "11.4",
+          "title": "Prezzi, rendite e dinamiche di mercato: il prezzo del petrolio"
+        },
+        {
+          "number": "11.5",
+          "title": "Il valore di un investimento: concetti di base"
+        },
+        {
+          "number": "11.6",
+          "title": "Variazioni nella domanda e nell'offerta di attività finanziarie"
+        },
+        {
+          "number": "11.7",
+          "title": "Le bolle finanziarie"
+        },
+        {
+          "number": "11.8",
+          "title": "Spiegare le bolle con un semplice modello"
+        },
+        {
+          "number": "11.9",
+          "title": "Mercati che non raggiungono l'equilibrio"
+        },
+        {
+          "number": "11.10",
+          "title": "Mercati con prezzi amministrati"
+        },
+        {
+          "number": "11.11",
+          "title": "Il ruolo delle rendite economiche"
+        },
+        {
+          "number": "11.12",
+          "title": "Conclusioni"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Mercati, efficienza e politiche pubbliche",
+      "sections": [
+        {
+          "number": "12.1",
+          "title": "Gli effetti esterni dell'inquinamento"
+        },
+        {
+          "number": "12.2",
+          "title": "Esternalità e contrattazione"
+        },
+        {
+          "number": "12.3",
+          "title": "Esternalità, politiche pubbliche e distribuzione del reddito"
+        },
+        {
+          "number": "12.4",
+          "title": "Diritti di proprietà, contratti e fallimenti del mercato"
+        },
+        {
+          "number": "12.5",
+          "title": "Beni pubblici"
+        },
+        {
+          "number": "12.6",
+          "title": "I mercati mancanti: assicurazioni e bidoni"
+        },
+        {
+          "number": "12.7",
+          "title": "Contratti incompleti ed esternalità nel mercato del credito"
+        },
+        {
+          "number": "12.8",
+          "title": "I limiti dei mercati"
+        },
+        {
+          "number": "12.9",
+          "title": "Fallimenti del mercato e politiche pubbliche"
+        },
+        {
+          "number": "12.10",
+          "title": "Conclusioni"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Fluttuazioni economiche e disoccupazione",
+      "sections": [
+        {
+          "number": "13.1",
+          "title": "Crescita e fluttuazioni"
+        },
+        {
+          "number": "13.2",
+          "title": "Fluttuazioni della produzione e disoccupazione"
+        },
+        {
+          "number": "13.3",
+          "title": "Misurare l'economia aggregata"
+        },
+        {
+          "number": "13.4",
+          "title": "Le componenti del PIL"
+        },
+        {
+          "number": "13.5",
+          "title": "Come le famiglie affrontano gli shock"
+        },
+        {
+          "number": "13.6",
+          "title": "Perché il consumo tende a essere più stabile?"
+        },
+        {
+          "number": "13.7",
+          "title": "Perché la spesa per investimenti è più volatile?"
+        },
+        {
+          "number": "13.8",
+          "title": "Misurare l'economia: l'Inflazione"
+        },
+        {
+          "number": "13.9",
+          "title": "Conclusioni"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Disoccupazione e politica fiscale",
+      "sections": [
+        {
+          "number": "14.1",
+          "title": "La propagazione degli shock"
+        },
+        {
+          "number": "14.2",
+          "title": "Il modello del moltiplicatore"
+        },
+        {
+          "number": "14.3",
+          "title": "La ricchezza delle famiglie e la spese per consumi"
+        },
+        {
+          "number": "14.4",
+          "title": "La spesa per investimenti"
+        },
+        {
+          "number": "14.5",
+          "title": "Il moltiplicatore con spesa pubblica ed esportazioni"
+        },
+        {
+          "number": "14.6",
+          "title": "La politica fiscale"
+        },
+        {
+          "number": "14.7",
+          "title": "Il moltiplicatore e le politiche economiche"
+        },
+        {
+          "number": "14.8",
+          "title": "La politica di bilancio dello Stato"
+        },
+        {
+          "number": "14.9",
+          "title": "La politica fiscale in un'economia aperta"
+        },
+        {
+          "number": "14.10",
+          "title": "Domanda aggregata e disoccupazione"
+        },
+        {
+          "number": "14.11",
+          "title": "Conclusioni"
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Inflazione, disoccupazione e politica monetaria",
+      "sections": [
+        {
+          "number": "15.1",
+          "title": "Che c'è di male nell'inflazione?"
+        },
+        {
+          "number": "15.2",
+          "title": "L'inflazione come effetto dell'incoerenza tra piani individuali"
+        },
+        {
+          "number": "15.3",
+          "title": "Inflazione, ciclo economico e curva di Phillips"
+        },
+        {
+          "number": "15.4",
+          "title": "Inflazione e disoccupazione: vincoli e preferenze"
+        },
+        {
+          "number": "15.5",
+          "title": "Cosa è accaduto alla curva di Phillips?"
+        },
+        {
+          "number": "15.6",
+          "title": "L'inflazione attesa e la curva di Phillips"
+        },
+        {
+          "number": "15.7",
+          "title": "Inflazione e shock di offerta"
+        },
+        {
+          "number": "15.8",
+          "title": "La politica monetaria"
+        },
+        {
+          "number": "15.9",
+          "title": "Il tasso di cambio come canale di trasmissione"
+        },
+        {
+          "number": "15.10",
+          "title": "Shock e politiche dal lato della domanda"
+        },
+        {
+          "number": "15.11",
+          "title": "Prima della crisi finanziaria globale"
+        },
+        {
+          "number": "15.12",
+          "title": "Un'altra spiegazione del trade-off tra inflazione e disoccupazione"
+        },
+        {
+          "number": "15.13",
+          "title": "Conclusioni"
+        }
+      ]
+    }
+  ]
+}

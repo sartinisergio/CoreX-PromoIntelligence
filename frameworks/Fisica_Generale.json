@@ -1,0 +1,527 @@
+{
+  "framework": {
+    "name": "Framework Unico Valutazione Fisica Generale - Bioscienze",
+    "version": "1.0",
+    "description": "Framework integrato per valutare allineamento tra programmi di Fisica Generale universitaria e manuali di testo, per contesti Biologia/Biotecnologie/Scienze Naturali/Farmacia/Agraria.",
+    "date": "2025-12-15"
+  },
+  "scale": {
+    "1": "livello minimo/assente",
+    "2": "livello molto basso/sporadico",
+    "3": "livello moderato/base",
+    "4": "livello alto/articolato",
+    "5": "livello massimo/avanzato"
+  },
+  "syllabus_modules": [
+    {
+      "id": 1,
+      "name": "Grandezze fisiche e misurazioni biologiche",
+      "core_contents": [
+        "Unità SI, precisione misure laboratorio",
+        "Errori sperimentali, propagazione errori",
+        "Grafici dati biologici, regressione lineare",
+        "Ordini grandezza (cellule, organi, ecosistemi)"
+      ],
+      "learning_outcomes": [
+        "Analisi dati laboratorio",
+        "Stime biologiche",
+        "Interpretazione misure"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Meccanica per sistemi biologici",
+      "core_contents": [
+        "Forze peso/elastico/muscolo",
+        "Equilibrio statico (animali, piante)",
+        "Moto fluidi biologici (sangue, linfa)",
+        "Leve biomeccaniche, postura"
+      ],
+      "learning_outcomes": [
+        "Analisi forze biomeccaniche",
+        "Modelli moti biologici",
+        "Equilibri viventi"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Fluide e fenomeni biologici",
+      "core_contents": [
+        "Pressione idrostatica, principio Pascal/Archimede",
+        "Viscosità, flusso Poiseuille vasi sanguigni",
+        "Osmosi, pressione osmotica",
+        "Diffusione, legge Fick cellule"
+      ],
+      "learning_outcomes": [
+        "Circolazione sanguigna",
+        "Osmoregolazione",
+        "Trasporto membrana"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Termologia e biofisica termica",
+      "core_contents": [
+        "Temperatura corporea, omeotermia",
+        "Calore specifico tessuti",
+        "Cambi stato acqua biologica",
+        "Conduzione/convezione biologica"
+      ],
+      "learning_outcomes": [
+        "Regolazione termica",
+        "Bilanci termici organismi",
+        "Isolamento naturale"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Termodinamica biologica",
+      "core_contents": [
+        "1° principio metabolismo",
+        "Entalpia reazioni biochimiche",
+        "2° principio, entropia biologica",
+        "Rendimento respirazione/mitocondri"
+      ],
+      "learning_outcomes": [
+        "Bilanci energetici cellulari",
+        "Efficienza metabolismo",
+        "Entropia viventi"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Onde acustiche e ultrasuoni",
+      "core_contents": [
+        "Onde longitudinali, suono biologico",
+        "Intensità sonora, decibel udito",
+        "Risonanza cavità (voce, eco-localizzazione)",
+        "Ultrasuoni diagnostica medica"
+      ],
+      "learning_outcomes": [
+        "Eco-localizzazione",
+        "Ecografia",
+        "Risonanza vocale"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Ottica biologica",
+      "core_contents": [
+        "Rifrazione occhio umano",
+        "Lenti, difetti vista/correzione",
+        "Microscopia ottica biologica",
+        "Fibre ottiche endoscopia"
+      ],
+      "learning_outcomes": [
+        "Ottica occhio",
+        "Microscopia",
+        "Imaging biomedico"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Elettricità biomedica",
+      "core_contents": [
+        "Potenziali membrana, elettroforesi",
+        "Bioelettricità (cuore, muscoli)",
+        "Resistività tessuti",
+        "Elettrocardiogramma base"
+      ],
+      "learning_outcomes": [
+        "Potenziali azione",
+        "Elettroforesi DNA",
+        "ECG semplificato"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Magnetismo ambientale",
+      "core_contents": [
+        "Campo magnetico Terra, magnetorecezione",
+        "NMR base (risonanza magnetica)",
+        "Effetti magnetici su organismi",
+        "Magnetismo suoli/agricoltura"
+      ],
+      "learning_outcomes": [
+        "Navigazione magnetica",
+        "RMN biomedica",
+        "Effetti ambientali"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Radiazioni e biosfera",
+      "core_contents": [
+        "Spettro elettromagnetico biologico",
+        "Effetto serra, ozono",
+        "Dosimetria radiazioni",
+        "Radioattività naturale"
+      ],
+      "learning_outcomes": [
+        "Protezione radiazioni",
+        "Bilancio serra",
+        "Dosaggio biologico"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Meccanica ondulatoria biologica",
+      "core_contents": [
+        "Vibrazioni damped (cuore, respirazione)",
+        "Onde superficiali (onde cerebrali)",
+        "Interferenza/diffrazione biologica",
+        "Coerenza laser biologia"
+      ],
+      "learning_outcomes": [
+        "Ritmi biologici",
+        "Onde EEG",
+        "Imaging coerente"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Strumentazione biomedica",
+      "core_contents": [
+        "Sensori pressione/temperatura",
+        "Spettrofotometri biochimici",
+        "Bilance analitiche",
+        "pHmetri, conduttimetri"
+      ],
+      "learning_outcomes": [
+        "Uso strumenti laboratorio",
+        "Calibrazione",
+        "Manutenzione base"
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "id": "copertura_contenuti",
+      "name": "Copertura contenuti",
+      "type": "contenuto",
+      "levels": {
+        "1": "Copre meno di 4 moduli sui 12 richiesti.",
+        "2": "Copre 4-6 moduli in modo superficiale.",
+        "3": "Copre 7-9 moduli con trattazione base.",
+        "4": "Copre 10-11 moduli con buona profondità.",
+        "5": "Copre tutti i 12 moduli con completezza."
+      }
+    },
+    {
+      "id": "profondita_adeguata",
+      "name": "Profondità adeguata",
+      "type": "contenuto",
+      "levels": {
+        "1": "Livello troppo fisico-matematico per bioscienze.",
+        "2": "Prevalentemente fisico generico.",
+        "3": "Adeguato per corsi introduttivi bioscienze.",
+        "4": "Calibrato per biologia/biotecnologie.",
+        "5": "Perfettamente tarato per bioscienze."
+      }
+    },
+    {
+      "id": "esempi_biologici",
+      "name": "Esempi biologici",
+      "type": "contenuto",
+      "levels": {
+        "1": "Esempi puramente fisici, nessun contesto bio.",
+        "2": "Qualche sporadico esempio biologico.",
+        "3": "Esempi biologici regolari ma non centrali.",
+        "4": "Prevalenza di esempi da sistemi biologici.",
+        "5": "Esempi biologici ricchi e contestualizzati."
+      }
+    },
+    {
+      "id": "esercizi_laboratoriali",
+      "name": "Esercizi laboratoriali",
+      "type": "didattico",
+      "levels": {
+        "1": "Solo esercizi teorici astratti.",
+        "2": "Qualche esercizio laboratorio generico.",
+        "3": "Esercizi misti teoria/laboratorio.",
+        "4": "Prevalenza esercizi laboratorio biologico.",
+        "5": "Ricco apparato esercizi laboratorio bio."
+      }
+    },
+    {
+      "id": "laboratorio_biofisico",
+      "name": "Laboratorio biofisico",
+      "type": "didattico",
+      "levels": {
+        "1": "Nessun riferimento a esperimenti biofisici.",
+        "2": "Cenni generici a laboratori fisici.",
+        "3": "Qualche esperimento biofisico descritto.",
+        "4": "Laboratori biofisici ben documentati.",
+        "5": "Ricco apparato esperimenti biofisici."
+      }
+    },
+    {
+      "id": "calcolo_vettoriale",
+      "name": "Calcolo vettoriale",
+      "type": "contenuto",
+      "levels": {
+        "1": "Vettori assenti o solo grafici.",
+        "2": "Vettori base senza applicazioni bio.",
+        "3": "Vettori adeguati per bioscienze.",
+        "4": "Vettori ben dosati con esempi bio.",
+        "5": "Vettori calibrati perfettamente per bio."
+      }
+    },
+    {
+      "id": "collegamenti_biologici",
+      "name": "Collegamenti biologici",
+      "type": "contenuto",
+      "levels": {
+        "1": "Fisica isolata da biologia/chimica.",
+        "2": "Collegamenti sporadici e superficiali.",
+        "3": "Collegamenti regolari con discipline bio.",
+        "4": "Integrazione sistematica bio/chim/fisica.",
+        "5": "Approccio fortemente interdisciplinare."
+      }
+    },
+    {
+      "id": "chiarezza_espositiva",
+      "name": "Chiarezza espositiva",
+      "type": "didattico",
+      "levels": {
+        "1": "Figure confuse, esposizione tecnica.",
+        "2": "Figure base, testo prevalentemente matematico.",
+        "3": "Figure chiare, buona esposizione.",
+        "4": "Figure eccellenti con didascalie bio.",
+        "5": "Esposizione cristallina con figure biofisiche."
+      }
+    },
+    {
+      "id": "propedeuticita",
+      "name": "Propedeuticità",
+      "type": "didattico",
+      "levels": {
+        "1": "Struttura caotica, prerequisiti confusi.",
+        "2": "Propedeuticità implicita.",
+        "3": "Propedeuticità adeguata per bioscienze.",
+        "4": "Struttura impeccabile da Chim1 a Biofisica.",
+        "5": "Progettazione propedeutica perfetta."
+      }
+    },
+    {
+      "id": "aggiornamento",
+      "name": "Aggiornamento",
+      "type": "didattico",
+      "levels": {
+        "1": "Contenuti datati, applicazioni obsolete.",
+        "2": "Qualche aggiornamento recente.",
+        "3": "Standard aggiornato per bioscienze.",
+        "4": "Applicazioni moderne rilevanti.",
+        "5": "All'avanguardia con tecniche recenti."
+      }
+    },
+    {
+      "id": "problemi_laboratorio",
+      "name": "Problemi laboratorio",
+      "type": "didattico",
+      "levels": {
+        "1": "Nessun problema laboratorio.",
+        "2": "Qualche problema generico.",
+        "3": "Problemi laboratorio misti.",
+        "4": "Ricchi problemi laboratorio biofisico.",
+        "5": "Eccellente apparato problemi laboratorio."
+      }
+    },
+    {
+      "id": "intuizione_biofisica",
+      "name": "Intuizione biofisica",
+      "type": "didattico",
+      "levels": {
+        "1": "Solo formule senza analogie biologiche.",
+        "2": "Qualche analogia biologica sporadica.",
+        "3": "Buone analogie biologiche regolari.",
+        "4": "Eccellenti analogie biofisiche.",
+        "5": "Intuizione biofisica straordinaria."
+      }
+    },
+    {
+      "id": "errori_studenti",
+      "name": "Errori studenti",
+      "type": "didattico",
+      "levels": {
+        "1": "Nessun supporto per errori comuni.",
+        "2": "Qualche cenno generico.",
+        "3": "Box su errori frequenti studenti.",
+        "4": "Supporto proattivo per difficoltà.",
+        "5": "Prevenzione eccellente errori studenti."
+      }
+    },
+    {
+      "id": "allineamento_programmi",
+      "name": "Allineamento programmi",
+      "type": "didattico",
+      "levels": {
+        "1": "Diverge significativamente da linee guida.",
+        "2": "Allineamento parziale.",
+        "3": "Allineamento adeguato con bioscienze.",
+        "4": "Ottimo allineamento programmi.",
+        "5": "Perfetto match linee guida bio."
+      }
+    },
+    {
+      "id": "supporto_digitale",
+      "name": "Supporto digitale",
+      "type": "didattico",
+      "levels": {
+        "1": "Nessun supporto digitale.",
+        "2": "Risorse digitali base.",
+        "3": "Supporto digitale adeguato.",
+        "4": "Ricco apparato digitale biofisico.",
+        "5": "Ecosistema digitale eccellente."
+      }
+    },
+    {
+      "id": "appendici_biologiche",
+      "name": "Appendici biologiche",
+      "type": "didattico",
+      "levels": {
+        "1": "Nessuna appendice utile.",
+        "2": "Appendici generiche.",
+        "3": "Appendici utili per bioscienze.",
+        "4": "Appendici complete biofisiche.",
+        "5": "Appendici eccellenti e complete."
+      }
+    }
+  ],
+  "program_profiles": [
+    {
+      "id": "biologia_biotecnologie",
+      "name": "Biologia/Biotecnologie",
+      "priority_modules": [3,4,5,7,8,12],
+      "requirements": {
+        "copertura_contenuti": {"required_level": 5, "weight": 0.10},
+        "profondita_adeguata": {"required_level": 5, "weight": 0.09},
+        "esempi_biologici": {"required_level": 5, "weight": 0.14},
+        "esercizi_laboratoriali": {"required_level": 4, "weight": 0.12},
+        "laboratorio_biofisico": {"required_level": 5, "weight": 0.13},
+        "calcolo_vettoriale": {"required_level": 2, "weight": 0.04},
+        "collegamenti_biologici": {"required_level": 5, "weight": 0.12},
+        "chiarezza_espositiva": {"required_level": 4, "weight": 0.08},
+        "propedeuticita": {"required_level": 4, "weight": 0.07},
+        "aggiornamento": {"required_level": 4, "weight": 0.06},
+        "problemi_laboratorio": {"required_level": 4, "weight": 0.08},
+        "intuizione_biofisica": {"required_level": 4, "weight": 0.07},
+        "errori_studenti": {"required_level": 3, "weight": 0.05},
+        "allineamento_programmi": {"required_level": 4, "weight": 0.06},
+        "supporto_digitale": {"required_level": 4, "weight": 0.05},
+        "appendici_biologiche": {"required_level": 3, "weight": 0.04}
+      }
+    },
+    {
+      "id": "scienze_naturali",
+      "name": "Scienze Naturali/Ambientali",
+      "priority_modules": [3,4,5,9,10],
+      "requirements": {
+        "copertura_contenuti": {"required_level": 4, "weight": 0.09},
+        "profondita_adeguata": {"required_level": 4, "weight": 0.09},
+        "esempi_biologici": {"required_level": 4, "weight": 0.12},
+        "esercizi_laboratoriali": {"required_level": 3, "weight": 0.10},
+        "laboratorio_biofisico": {"required_level": 4, "weight": 0.11},
+        "calcolo_vettoriale": {"required_level": 3, "weight": 0.05},
+        "collegamenti_biologici": {"required_level": 5, "weight": 0.14},
+        "chiarezza_espositiva": {"required_level": 4, "weight": 0.08},
+        "propedeuticita": {"required_level": 4, "weight": 0.07},
+        "aggiornamento": {"required_level": 5, "weight": 0.07},
+        "problemi_laboratorio": {"required_level": 3, "weight": 0.07},
+        "intuizione_biofisica": {"required_level": 4, "weight": 0.07},
+        "errori_studenti": {"required_level": 3, "weight": 0.05},
+        "allineamento_programmi": {"required_level": 4, "weight": 0.06},
+        "supporto_digitale": {"required_level": 4, "weight": 0.06},
+        "appendici_biologiche": {"required_level": 3, "weight": 0.04}
+      }
+    },
+    {
+      "id": "farmacia_agraria",
+      "name": "Farmacia/Agraria",
+      "priority_modules": [3,4,5,7,12],
+      "requirements": {
+        "copertura_contenuti": {"required_level": 5, "weight": 0.10},
+        "profondita_adeguata": {"required_level": 4, "weight": 0.09},
+        "esempi_biologici": {"required_level": 4, "weight": 0.13},
+        "esercizi_laboratoriali": {"required_level": 4, "weight": 0.11},
+        "laboratorio_biofisico": {"required_level": 4, "weight": 0.12},
+        "calcolo_vettoriale": {"required_level": 2, "weight": 0.04},
+        "collegamenti_biologici": {"required_level": 4, "weight": 0.12},
+        "chiarezza_espositiva": {"required_level": 4, "weight": 0.08},
+        "propedeuticita": {"required_level": 4, "weight": 0.07},
+        "aggiornamento": {"required_level": 4, "weight": 0.06},
+        "problemi_laboratorio": {"required_level": 4, "weight": 0.07},
+        "intuizione_biofisica": {"required_level": 4, "weight": 0.07},
+        "errori_studenti": {"required_level": 3, "weight": 0.05},
+        "allineamento_programmi": {"required_level": 4, "weight": 0.06},
+        "supporto_digitale": {"required_level": 4, "weight": 0.05},
+        "appendici_biologiche": {"required_level": 4, "weight": 0.04}
+      }
+    }
+  ],
+  "manual_profiles": [
+    {
+      "id": "manuale_A",
+      "name": "Manuale A - Biofisica Completa",
+      "scores": {
+        "copertura_contenuti": 5,
+        "profondita_adeguata": 5,
+        "esempi_biologici": 5,
+        "esercizi_laboratoriali": 4,
+        "laboratorio_biofisico": 5,
+        "calcolo_vettoriale": 2,
+        "collegamenti_biologici": 5,
+        "chiarezza_espositiva": 5,
+        "propedeuticita": 4,
+        "aggiornamento": 4,
+        "problemi_laboratorio": 4,
+        "intuizione_biofisica": 5,
+        "errori_studenti": 3,
+        "allineamento_programmi": 5,
+        "supporto_digitale": 4,
+        "appendici_biologiche": 4
+      }
+    },
+    {
+      "id": "manuale_B",
+      "name": "Manuale B - Fisica Generica",
+      "scores": {
+        "copertura_contenuti": 3,
+        "profondita_adeguata": 2,
+        "esempi_biologici": 2,
+        "esercizi_laboratoriali": 2,
+        "laboratorio_biofisico": 1,
+        "calcolo_vettoriale": 4,
+        "collegamenti_biologici": 1,
+        "chiarezza_espositiva": 4,
+        "propedeuticita": 3,
+        "aggiornamento": 3,
+        "problemi_laboratorio": 2,
+        "intuizione_biofisica": 2,
+        "errori_studenti": 2,
+        "allineamento_programmi": 1,
+        "supporto_digitale": 2,
+        "appendici_biologiche": 1
+      }
+    }
+  ],
+  "alignment_method": {
+    "description": "Allineamento = media ponderata dei criteri: score_i = max(0, 1 - |required_level_i - offered_score_i| / 4)",
+    "formula": "alignment = Σ(weight_i × score_i) / Σ(weight_i)",
+    "interpretation": {
+      "85-100": "Eccellente - Perfetto per bioscienze - Adozione consigliata",
+      "70-84": "Buono - Solido biofisico - Raccomandato+integrazioni",
+      "55-69": "Sufficiente - Lacune applicazioni bio - Con riserva",
+      "<55": "Sconsigliato - Troppo fisico generico - Non adottare"
+    }
+  },
+  "example_match": {
+    "program_id": "biologia_biotecnologie",
+    "manual_id": "manuale_A",
+    "overall_alignment": 92.1,
+    "judgment": "Eccellente",
+    "recommendation": "Perfetto per Biologia/Biotecnologie. Adozione immediata consigliata.",
+    "strong_criteria": ["esempi_biologici", "laboratorio_biofisico", "collegamenti_biologici"],
+    "weak_criteria": ["calcolo_vettoriale", "errori_studenti"]
+  }
+}

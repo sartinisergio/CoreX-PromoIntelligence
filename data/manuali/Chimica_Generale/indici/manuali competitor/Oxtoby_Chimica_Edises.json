@@ -1,0 +1,988 @@
+{
+  "id": "Oxtoby_Chimica",
+  "title": "Chimica",
+  "author": "Oxtoby",
+  "publisher": "Edises",
+  "subject": "chimica generale",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "L'atomo nella chimica moderna",
+      "page_start": 2,
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "La natura della chimica moderna",
+          "page_start": 2
+        },
+        {
+          "number": "1.2",
+          "title": "Gli elementi: i mattoni costitutivi della materia",
+          "page_start": 5
+        },
+        {
+          "number": "1.3",
+          "title": "Prove sperimentali indirette dell'esistenza degli atomi: leggi delle combinazioni chimiche",
+          "page_start": 8
+        },
+        {
+          "number": "1.4",
+          "title": "La struttura fisica dell'atomo",
+          "page_start": 15
+        },
+        {
+          "number": "1.5",
+          "title": "Spettometria di massa, isotopi e misura delle masse relative",
+          "page_start": 23
+        },
+        {
+          "number": "1.6",
+          "title": "La mole: contare le molecole pesando",
+          "page_start": 26
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Formule chimiche, equazioni chimiche e resa di reazione",
+      "page_start": 34,
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "Formule empiriche e molecolari",
+          "page_start": 34
+        },
+        {
+          "number": "2.2",
+          "title": "Formule chimiche e composizione percentuale",
+          "page_start": 35
+        },
+        {
+          "number": "2.3",
+          "title": "Bilanciamento delle equazioni chimiche",
+          "page_start": 37
+        },
+        {
+          "number": "2.4",
+          "title": "Relazioni di massa nelle reazioni chimiche",
+          "page_start": 39
+        },
+        {
+          "number": "2.5",
+          "title": "Reagente limitante e resa percentuale",
+          "page_start": 41
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Gusci atomici e modelli classici del legame chimico",
+      "page_start": 50,
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "Rappresentazioni delle molecole",
+          "page_start": 50
+        },
+        {
+          "number": "3.2",
+          "title": "La tavola periodica",
+          "page_start": 53
+        },
+        {
+          "number": "3.3",
+          "title": "Forze ed energia potenziale negli atomi",
+          "page_start": 56
+        },
+        {
+          "number": "3.4",
+          "title": "Energia di ionizzazione, modello atomico a gusci ed effetto schermo",
+          "page_start": 62
+        },
+        {
+          "number": "3.5",
+          "title": "Affinità elettronica",
+          "page_start": 69
+        },
+        {
+          "number": "3.6",
+          "title": "Elettronegatività: la tendenza degli atomi ad attrarre elettroni nelle molecole",
+          "page_start": 71
+        },
+        {
+          "number": "3.7",
+          "title": "Forze ed energia potenziale nelle molecole: formazione dei legami chimici",
+          "page_start": 74
+        },
+        {
+          "number": "3.8",
+          "title": "Il legame ionico",
+          "page_start": 77
+        },
+        {
+          "number": "3.9",
+          "title": "Il legame covalente e covalente polare",
+          "page_start": 81
+        },
+        {
+          "number": "3.10",
+          "title": "Legami a coppie di elettroni e formule di Lewis per le molecole",
+          "page_start": 88
+        },
+        {
+          "number": "3.11",
+          "title": "La forma delle molecole: teoria della repulsione delle coppie elettroniche del guscio di valenza (VSEPR)",
+          "page_start": "<disponibile online>"
+        },
+        {
+          "number": "3.12",
+          "title": "Numeri di ossidazione",
+          "page_start": 94
+        },
+        {
+          "number": "3.13",
+          "title": "Nomenclatura dei composti inorganici",
+          "page_start": 97
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Introduzione alla meccanica quantistica",
+      "page_start": 106,
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "Nozioni preliminari: onde e luce",
+          "page_start": 106
+        },
+        {
+          "number": "4.2",
+          "title": "Prove sperimentali della quantizzazione dell'energia negli atomi",
+          "page_start": 110
+        },
+        {
+          "number": "4.3",
+          "title": "Il modello atomico di Bohr: previsione dei livelli discreti di energia",
+          "page_start": 119
+        },
+        {
+          "number": "4.4",
+          "title": "Prove sperimentali del dualismo onda-particella",
+          "page_start": 123
+        },
+        {
+          "number": "4.5",
+          "title": "L'equazione di Schrödinger",
+          "page_start": 133
+        },
+        {
+          "number": "4.6",
+          "title": "Trattazione quantomeccanica del sistema modello \"particella nella scatola\"",
+          "page_start": 137
+        },
+        {
+          "number": "4.7",
+          "title": "Un approfondimento Funzioni d'onda per particelle in scatole bi- e tridimensionali",
+          "page_start": "<disponibile online>"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Meccanica quantistica e struttura dell'atomo",
+      "page_start": 142,
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "L'atomo di idrogeno",
+          "page_start": 142
+        },
+        {
+          "number": "5.2",
+          "title": "Modello a gusci per atomi polielettronici",
+          "page_start": "<disponibile online>"
+        },
+        {
+          "number": "5.3",
+          "title": "Il principio dell'Aufbau e la configurazione elettronica",
+          "page_start": 159
+        },
+        {
+          "number": "5.4",
+          "title": "Gusci atomici e tavola periodica: spettroscopia fotoelettronica",
+          "page_start": "<disponibile online>"
+        },
+        {
+          "number": "5.5",
+          "title": "Proprietà periodiche e struttura elettronica",
+          "page_start": 164
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Meccanica quantistica e struttura molecolare",
+      "page_start": 173,
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "Descrizione quantistica del legame chimico",
+          "page_start": 173
+        },
+        {
+          "number": "6.2",
+          "title": "Orbitali molecolari esatti per la molecola più semplice: H2+",
+          "page_start": 177
+        },
+        {
+          "number": "6.3",
+          "title": "Teoria degli orbitali molecolari e approssimazione della combinazione lineare degli orbitali atomici (LCAO) per H2+",
+          "page_start": 183
+        },
+        {
+          "number": "6.4",
+          "title": "Molecole biatomiche omonucleari: atomi del primo periodo",
+          "page_start": 187
+        },
+        {
+          "number": "6.5",
+          "title": "Molecole biatomiche omonucleari: atomi del secondo periodo",
+          "page_start": 189
+        },
+        {
+          "number": "6.6",
+          "title": "Molecole biatomiche eteronucleari",
+          "page_start": 198
+        },
+        {
+          "number": "6.7",
+          "title": "Considerazioni conclusive sul metodo LCAO per le molecole biatomiche",
+          "page_start": 201
+        },
+        {
+          "number": "6.8",
+          "title": "Teoria del legame di valenza e legame a coppia di elettroni",
+          "page_start": 202
+        },
+        {
+          "number": "6.9",
+          "title": "Ibridizzazione degli orbitali nelle molecole poliatomiche",
+          "page_start": 208
+        },
+        {
+          "number": "6.10",
+          "title": "Previsione delle strutture molecolari e della forma delle molecole",
+          "page_start": 215
+        },
+        {
+          "number": "6.11",
+          "title": "Applicazione combinata dei metodi LCAO e VB",
+          "page_start": "<disponibile online>"
+        },
+        {
+          "number": "6.12",
+          "title": "Riassunto e confronto tra i metodi LCAO e del legame di valenza",
+          "page_start": "<disponibile online>"
+        },
+        {
+          "number": "6.13",
+          "title": "Un approfondimento Proprietà degli orbitali molecolari esatti per H2+",
+          "page_start": "<disponibile online>"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Il legame nelle molecole organiche",
+      "page_start": 223,
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "Raffinazione del petrolio e idrocarburi",
+          "page_start": 223
+        },
+        {
+          "number": "7.2",
+          "title": "Alcani a catena lineare",
+          "page_start": 224
+        },
+        {
+          "number": "7.3",
+          "title": "Alcheni e alchini",
+          "page_start": 230
+        },
+        {
+          "number": "7.4",
+          "title": "Idrocarburi aromatici",
+          "page_start": 233
+        },
+        {
+          "number": "7.5",
+          "title": "Fullereni",
+          "page_start": 235
+        },
+        {
+          "number": "7.6",
+          "title": "Gruppi funzionali e reazioni organiche",
+          "page_start": 237
+        },
+        {
+          "number": "7.7",
+          "title": "Pesticidi e farmaci",
+          "page_start": "<disponibile online>"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Il legame nei composti dei metalli di transizione e nei complessi di coordinazione",
+      "page_start": 249,
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "La chimica dei metalli di transizione",
+          "page_start": 249
+        },
+        {
+          "number": "8.2",
+          "title": "Introduzione alla chimica di coordinazione",
+          "page_start": 256
+        },
+        {
+          "number": "8.3",
+          "title": "Struttura dei complessi di coordinazione",
+          "page_start": 262
+        },
+        {
+          "number": "8.4",
+          "title": "Teoria del campo cristallino: proprietà ottiche e magnetiche",
+          "page_start": 266
+        },
+        {
+          "number": "8.5",
+          "title": "Proprietà ottiche e serie spettrochimica",
+          "page_start": 273
+        },
+        {
+          "number": "8.6",
+          "title": "Il legame nei complessi di coordinazione",
+          "page_start": 275
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Lo stato gassoso",
+      "page_start": 291,
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "La chimica dei gas",
+          "page_start": 291
+        },
+        {
+          "number": "9.2",
+          "title": "Pressione e temperatura dei gas",
+          "page_start": 293
+        },
+        {
+          "number": "9.3",
+          "title": "La legge dei gas ideali",
+          "page_start": 300
+        },
+        {
+          "number": "9.4",
+          "title": "Miscele di gas",
+          "page_start": 302
+        },
+        {
+          "number": "9.5",
+          "title": "La teoria cinetica dei gas",
+          "page_start": 304
+        },
+        {
+          "number": "9.6",
+          "title": "Gas reali: gli effetti delle forze intermolecolari",
+          "page_start": 312
+        },
+        {
+          "number": "9.7",
+          "title": "Un approfondimento Collisioni molecolari e processi cinetici",
+          "page_start": 316
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Solidi, liquidi e transizioni di fase",
+      "page_start": 327,
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "Proprietà di gas, liquidi e solidi: interpretazione molecolare",
+          "page_start": 327
+        },
+        {
+          "number": "10.2",
+          "title": "Le forze intermolecolari e la struttura molecolare",
+          "page_start": 333
+        },
+        {
+          "number": "10.3",
+          "title": "Le forze intermolecolari nei liquidi",
+          "page_start": 338
+        },
+        {
+          "number": "10.4",
+          "title": "L'equilibrio di fase",
+          "page_start": 342
+        },
+        {
+          "number": "10.5",
+          "title": "Le transizioni di fase",
+          "page_start": 344
+        },
+        {
+          "number": "10.6",
+          "title": "I diagrammi di fase",
+          "page_start": 346
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Le soluzioni",
+      "page_start": 353,
+      "sections": [
+        {
+          "number": "11.1",
+          "title": "La composizione delle soluzioni",
+          "page_start": 353
+        },
+        {
+          "number": "11.2",
+          "title": "La natura delle specie disciolte",
+          "page_start": 356
+        },
+        {
+          "number": "11.3",
+          "title": "Stechiometria delle reazioni in soluzione: le titolazioni acido-base",
+          "page_start": 359
+        },
+        {
+          "number": "11.4",
+          "title": "Stechiometria delle reazioni in soluzione: le titolazioni di ossido-riduzione",
+          "page_start": 362
+        },
+        {
+          "number": "11.5",
+          "title": "Equilibri di fase in soluzione: soluti non volatili",
+          "page_start": 366
+        },
+        {
+          "number": "11.6",
+          "title": "Equilibri di fase in soluzione: soluti volatili",
+          "page_start": 373
+        },
+        {
+          "number": "11.7",
+          "title": "Le dispersioni colloidali",
+          "page_start": "<disponibile online>"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Processi termodinamici e termochimica",
+      "page_start": 385,
+      "sections": [
+        {
+          "number": "12.1",
+          "title": "Sistemi, stati e processi",
+          "page_start": 385
+        },
+        {
+          "number": "12.2",
+          "title": "Il primo principio della termodinamica: energia interna, lavoro e calore",
+          "page_start": 389
+        },
+        {
+          "number": "12.3",
+          "title": "Capacità termica, calorimetria ed entalpia",
+          "page_start": 395
+        },
+        {
+          "number": "12.4",
+          "title": "Applicazioni del primo principio della termodinamica ai processi dei gas ideali",
+          "page_start": 398
+        },
+        {
+          "number": "12.5",
+          "title": "I contributi molecolari all'energia interna e alla capacità termica",
+          "page_start": "<disponibile online>"
+        },
+        {
+          "number": "12.6",
+          "title": "Processi reversibili nei gas ideali",
+          "page_start": 401
+        },
+        {
+          "number": "12.7",
+          "title": "Termochimica",
+          "page_start": 405
+        },
+        {
+          "number": "12.8",
+          "title": "Un approfondimento – La distribuzione dell'energia molecolare",
+          "page_start": "<disponibile online>"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Processi spontanei ed equilibrio termodinamico",
+      "page_start": 418,
+      "sections": [
+        {
+          "number": "13.1",
+          "title": "La natura dei processi spontanei",
+          "page_start": 418
+        },
+        {
+          "number": "13.2",
+          "title": "Entropia e spontaneità: una interpretazione statistica molecolare",
+          "page_start": 421
+        },
+        {
+          "number": "13.3",
+          "title": "Entropia e calore: le basi sperimentali del secondo principio della termodinamica",
+          "page_start": 425
+        },
+        {
+          "number": "13.4",
+          "title": "Variazioni di entropia nei processi reversibili",
+          "page_start": 427
+        },
+        {
+          "number": "13.5",
+          "title": "Variazioni di entropia e spontaneità",
+          "page_start": 430
+        },
+        {
+          "number": "13.6",
+          "title": "Il terzo principio della termodinamica",
+          "page_start": 433
+        },
+        {
+          "number": "13.7",
+          "title": "L'energia libera di Gibbs",
+          "page_start": 435
+        },
+        {
+          "number": "13.8",
+          "title": "Un approfondimento Cicli di Carnot, rendimento ed entropia",
+          "page_start": "<disponibile online>"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Equilibrio chimico",
+      "page_start": 444,
+      "sections": [
+        {
+          "number": "14.1",
+          "title": "La natura dell'equilibrio chimico",
+          "page_start": 444
+        },
+        {
+          "number": "14.2",
+          "title": "La legge empirica di azione di massa",
+          "page_start": 447
+        },
+        {
+          "number": "14.3",
+          "title": "Descrizione termodinamica dello stato di equilibrio",
+          "page_start": 453
+        },
+        {
+          "number": "14.4",
+          "title": "La legge di azione di massa per gli equilibri consecutivi e simultanei",
+          "page_start": 459
+        },
+        {
+          "number": "14.5",
+          "title": "Calcoli di equilibrio per reazioni in fase gassosa e reazioni eterogenee",
+          "page_start": 461
+        },
+        {
+          "number": "14.6",
+          "title": "La direzione dello spostamento nelle reazioni di equilibrio: descrizione empirica",
+          "page_start": 465
+        },
+        {
+          "number": "14.7",
+          "title": "La direzione dello spostamento nelle reazioni di equilibrio: spiegazione termodinamica",
+          "page_start": 470
+        },
+        {
+          "number": "14.8",
+          "title": "Distribuzione di una singola specie tra fasi immiscibili: processi di estrazione e di separazione",
+          "page_start": "<disponibile online>"
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Equilibri acido-base",
+      "page_start": 480,
+      "sections": [
+        {
+          "number": "15.1",
+          "title": "Classificazione di acidi e basi",
+          "page_start": 480
+        },
+        {
+          "number": "15.2",
+          "title": "Proprietà di acidi e basi in soluzioni acquose: lo schema di Brønsted-Lowry",
+          "page_start": 486
+        },
+        {
+          "number": "15.3",
+          "title": "Forza di acidi e basi",
+          "page_start": 489
+        },
+        {
+          "number": "15.4",
+          "title": "Equilibri che coinvolgono acidi e basi deboli",
+          "page_start": 496
+        },
+        {
+          "number": "15.5",
+          "title": "Soluzioni tampone",
+          "page_start": 499
+        },
+        {
+          "number": "15.6",
+          "title": "Curve di titolazione acido-base",
+          "page_start": "<disponibile online>"
+        },
+        {
+          "number": "15.7",
+          "title": "Acidi poliprotici",
+          "page_start": "<disponibile online>"
+        },
+        {
+          "number": "15.8",
+          "title": "Acidi e basi organici: struttura e reattività",
+          "page_start": "<disponibile online>"
+        },
+        {
+          "number": "15.9",
+          "title": "Un approfondimento Trattazione esatta degli equilibri acido-base",
+          "page_start": "<disponibile online>"
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Equilibri di solubilità e precipitazione",
+      "page_start": 507,
+      "sections": [
+        {
+          "number": "16.1",
+          "title": "La natura degli equilibri di solubilità",
+          "page_start": 507
+        },
+        {
+          "number": "16.2",
+          "title": "Equilibri ionici tra solidi e soluzioni",
+          "page_start": 510
+        },
+        {
+          "number": "16.3",
+          "title": "Precipitazione e prodotto di solubilità",
+          "page_start": 513
+        },
+        {
+          "number": "16.4",
+          "title": "Effetti del pH sulla solubilità",
+          "page_start": 516
+        },
+        {
+          "number": "16.5",
+          "title": "Ioni complessi e solubilità",
+          "page_start": "<disponibile online>"
+        },
+        {
+          "number": "16.6",
+          "title": "Un approfondimento Precipitazione selettiva di ioni",
+          "page_start": "<disponibile online>"
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Elettrochimica",
+      "page_start": 522,
+      "sections": [
+        {
+          "number": "17.1",
+          "title": "Celle elettrochimiche",
+          "page_start": 522
+        },
+        {
+          "number": "17.2",
+          "title": "Potenziale di cella ed energia libera di Gibbs",
+          "page_start": 527
+        },
+        {
+          "number": "17.3",
+          "title": "Effetti della concentrazione ed equazione di Nernst",
+          "page_start": 533
+        },
+        {
+          "number": "17.4",
+          "title": "Elettrochimica molecolare",
+          "page_start": "<disponibile online>"
+        },
+        {
+          "number": "17.5",
+          "title": "Pile e celle a combustibile",
+          "page_start": "<disponibile online>"
+        },
+        {
+          "number": "17.6",
+          "title": "Corrosione e sua prevenzione",
+          "page_start": "<disponibile online>"
+        },
+        {
+          "number": "17.7",
+          "title": "Elettrometallurgia",
+          "page_start": "<disponibile online>"
+        },
+        {
+          "number": "17.8",
+          "title": "Un approfondimento Elettrolisi dell'acqua e delle soluzioni acquose",
+          "page_start": "<disponibile online>"
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Cinetica chimica",
+      "page_start": 545,
+      "sections": [
+        {
+          "number": "18.1",
+          "title": "Velocità delle reazioni chimiche",
+          "page_start": 545
+        },
+        {
+          "number": "18.2",
+          "title": "Leggi cinetiche",
+          "page_start": 548
+        },
+        {
+          "number": "18.3",
+          "title": "Meccanismi di reazione",
+          "page_start": 554
+        },
+        {
+          "number": "18.4",
+          "title": "Meccanismi e velocità di reazione",
+          "page_start": 558
+        },
+        {
+          "number": "18.5",
+          "title": "Effetto della temperatura sulla velocità di reazione",
+          "page_start": 562
+        },
+        {
+          "number": "18.6",
+          "title": "Le teorie molecolari delle reazioni elementari",
+          "page_start": "<disponibile online>"
+        },
+        {
+          "number": "18.7",
+          "title": "Reazioni in soluzione",
+          "page_start": "<disponibile online>"
+        },
+        {
+          "number": "18.8",
+          "title": "La catalisi",
+          "page_start": 566
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Chimica nucleare <disponibile online>",
+      "page_start": "<disponibile online>",
+      "sections": [
+        {
+          "number": "19.1",
+          "title": "La radioattività"
+        },
+        {
+          "number": "19.2",
+          "title": "Struttura nucleare e processi di decadimento nucleare"
+        },
+        {
+          "number": "19.3",
+          "title": "Relazione tra massa ed energia"
+        },
+        {
+          "number": "19.4",
+          "title": "Cinetica del decadimento radioattivo"
+        },
+        {
+          "number": "19.5",
+          "title": "Radiazioni in biologia e medicina"
+        },
+        {
+          "number": "19.6",
+          "title": "Fissione nucleare"
+        },
+        {
+          "number": "19.7",
+          "title": "Fusione nucleare e nucleosintesi"
+        },
+        {
+          "number": "19.8",
+          "title": "Un approfondimento Il modello a strati del nucleo"
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Spettroscopia molecolare e fotochimica: l'interazione delle molecole con la luce <disponibile online>",
+      "page_start": "<disponibile online>",
+      "sections": [
+        {
+          "number": "20.1",
+          "title": "Introduzione alla spettroscopia molecolare"
+        },
+        {
+          "number": "20.2",
+          "title": "Metodi sperimentali in spettroscopia molecolare"
+        },
+        {
+          "number": "20.3",
+          "title": "Spettroscopia rotazionale e vibrazionale"
+        },
+        {
+          "number": "20.4",
+          "title": "Spettroscopia di risonanza magnetica nucleare"
+        },
+        {
+          "number": "20.5",
+          "title": "Spettroscopia elettronica e processi di rilassamento degli stati eccitati"
+        },
+        {
+          "number": "20.6",
+          "title": "Introduzione alla chimica dell'atmosfera"
+        },
+        {
+          "number": "20.7",
+          "title": "La fotosintesi"
+        },
+        {
+          "number": "20.8",
+          "title": "Un approfondimento La relazione di Einstein sulle radiazioni e i laser"
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "title": "Strutture e legami nei solidi <disponibile online>",
+      "page_start": "<disponibile online>",
+      "sections": [
+        {
+          "number": "21.1",
+          "title": "Simmetria cristallina e cella unitaria"
+        },
+        {
+          "number": "21.2",
+          "title": "Strutture cristalline"
+        },
+        {
+          "number": "21.3",
+          "title": "Forze di coesione nei solidi"
+        },
+        {
+          "number": "21.4",
+          "title": "Difetti in strutture solide e solidi amorfi"
+        },
+        {
+          "number": "21.5",
+          "title": "Un approfondimento – Energie reticolari dei cristalli"
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "title": "Materiali inorganici <disponibile online>",
+      "page_start": "<disponibile online>",
+      "sections": [
+        {
+          "number": "22.1",
+          "title": "I minerali: materiali inorganici presenti in natura"
+        },
+        {
+          "number": "22.2",
+          "title": "Proprietà dei materiali ceramici"
+        },
+        {
+          "number": "22.3",
+          "title": "Ceramici a base di silicati"
+        },
+        {
+          "number": "22.4",
+          "title": "Ceramici non silicati"
+        },
+        {
+          "number": "22.5",
+          "title": "Conduzione elettrica nei materiali"
+        },
+        {
+          "number": "22.6",
+          "title": "Teoria delle bande di conduzione"
+        },
+        {
+          "number": "22.7",
+          "title": "Semiconduttori"
+        },
+        {
+          "number": "22.8",
+          "title": "Pigmenti e fosfori: schermi ottici"
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "title": "Materiali polimerici e materia condensata soffice <disponibile online>",
+      "page_start": "<disponibile online>",
+      "sections": [
+        {
+          "number": "23.1",
+          "title": "Reazioni di polimerizzazione per polimeri sintetici"
+        },
+        {
+          "number": "23.2",
+          "title": "Applicazioni dei polimeri sintetici"
+        },
+        {
+          "number": "23.3",
+          "title": "Cristalli liquidi"
+        },
+        {
+          "number": "23.4",
+          "title": "Polimeri naturali"
+        }
+      ]
+    }
+  ]
+}

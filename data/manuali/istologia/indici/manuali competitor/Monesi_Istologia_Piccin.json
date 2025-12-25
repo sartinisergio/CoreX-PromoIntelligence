@@ -1,0 +1,906 @@
+{
+  "id": "Monesi_Istologia",
+  "title": "Istologia",
+  "author": "Monesi e al.",
+  "publisher": "Piccin",
+  "subject": "Istologia",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Metodologie per lo studio di cellule e tessuti",
+      "page_start": 1,
+      "sections": [
+        {
+          "title": "La materia vivente",
+          "page_start": 1
+        },
+        {
+          "title": "Le cellule",
+          "page_start": 2
+        },
+        {
+          "title": "Forme e dimensioni delle cellule",
+          "page_start": 3
+        },
+        {
+          "title": "Organizzazione generale della cellula",
+          "page_start": 4
+        },
+        {
+          "title": "La composizione chimica della cellula",
+          "page_start": 6
+        },
+        {
+          "title": "Come si studiano cellule e tessuti",
+          "page_start": 6
+        },
+        {
+          "title": "Lo studio morfologico dei tessuti",
+          "page_start": 7
+        },
+        {
+          "title": "Gli strumenti per l'analisi microscopica e submicroscopica di cellule e tessuti",
+          "page_start": 7
+        },
+        {
+          "title": "La preservazione dei campioni tissutali e l'allestimento dei preparati per la microscopia",
+          "page_start": 12
+        },
+        {
+          "title": "Le cellule sono \"trasparenti\": come renderle visibili?",
+          "page_start": 13
+        },
+        {
+          "title": "Metodi istochimici di colorazione",
+          "page_start": 15
+        },
+        {
+          "title": "Immunoistochimica",
+          "page_start": 18
+        },
+        {
+          "title": "Citometria a flusso",
+          "page_start": 22
+        },
+        {
+          "title": "Visualizzazione di rapporti funzionali tra molecole",
+          "page_start": 23
+        },
+        {
+          "title": "Visualizzazione e misurazione di concentrazioni ioniche intracellulari",
+          "page_start": 24
+        },
+        {
+          "title": "Ibridazione molecolare in situ",
+          "page_start": 25
+        },
+        {
+          "title": "Il mantenimento in vita delle cellule al di fuori dell'organismo di origine",
+          "page_start": 27
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Struttura della cellula: membrana plasmatica e matrice pericellulare",
+      "page_start": 31,
+      "sections": [
+        {
+          "title": "Generalità",
+          "page_start": 31
+        },
+        {
+          "title": "La membrana plasmatica",
+          "page_start": 32
+        },
+        {
+          "title": "La matrice pericellulare o glicocalice",
+          "page_start": 44
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Struttura della cellula: nucleo e ciclo cellulare",
+      "page_start": 47,
+      "sections": [
+        {
+          "title": "Generalità sul nucleo",
+          "page_start": 47
+        },
+        {
+          "title": "Struttura del nucleo interfasico",
+          "page_start": 49
+        },
+        {
+          "title": "Organizzazione del genoma eucariotico",
+          "page_start": 56
+        },
+        {
+          "title": "La regolazione dell'espressione genica",
+          "page_start": 59
+        },
+        {
+          "title": "RNA non-codificanti proteine e loro ruolo nella regolazione dell'espressione genica",
+          "page_start": 66
+        },
+        {
+          "title": "La divisione cellulare",
+          "page_start": 70
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Reticolo endoplasmatico, apparato di Golgi, traffico vescicolare e lisosomi",
+      "page_start": 87,
+      "sections": [
+        {
+          "title": "Introduzione",
+          "page_start": 87
+        },
+        {
+          "title": "Reticolo endoplasmatico liscio",
+          "page_start": 88
+        },
+        {
+          "title": "Reticolo endoplasmatico granulare",
+          "page_start": 92
+        },
+        {
+          "title": "Apparato o complesso di Golgi",
+          "page_start": 102
+        },
+        {
+          "title": "Traffico vescicolare",
+          "page_start": 110
+        },
+        {
+          "title": "Lisosomi",
+          "page_start": 119
+        },
+        {
+          "title": "Lo studio del traffico vescicolare",
+          "page_start": 125
+        },
+        {
+          "title": "Autofagia: la cellula che mangia se stessa",
+          "page_start": 126
+        },
+        {
+          "title": "Nuovi tipi di vescicole: microvescicole e esosomi",
+          "page_start": 127
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Bioenergetica e metabolismo: mitocondri e perossisomi",
+      "page_start": 129,
+      "sections": [
+        {
+          "title": "Generalità",
+          "page_start": 129
+        },
+        {
+          "title": "Organizzazione strutturale e funzione dei mitocondri",
+          "page_start": 131
+        },
+        {
+          "title": "Fissione e fusione dei mitocondri",
+          "page_start": 132
+        },
+        {
+          "title": "L'ATP costituisce la più importante fonte di energia per la cellula e viene principalmente prodotto nei mitocondri",
+          "page_start": 135
+        },
+        {
+          "title": "Il sistema genetico dei mitocondri",
+          "page_start": 141
+        },
+        {
+          "title": "Generalità e struttura dei perossisomi",
+          "page_start": 144
+        },
+        {
+          "title": "Funzione dei perossisomi",
+          "page_start": 145
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Citoscheletro",
+      "page_start": 151,
+      "sections": [
+        {
+          "title": "Generalità",
+          "page_start": 151
+        },
+        {
+          "title": "Microfilamenti",
+          "page_start": 152
+        },
+        {
+          "title": "Microtubuli",
+          "page_start": 161
+        },
+        {
+          "title": "Filamenti intermedi",
+          "page_start": 169
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Giunzioni cellulari",
+      "page_start": 177,
+      "sections": [
+        {
+          "title": "Generalità",
+          "page_start": 177
+        },
+        {
+          "title": "Classificazione dei dispositivi di giunzione",
+          "page_start": 178
+        },
+        {
+          "title": "Giunzioni occludenti",
+          "page_start": 179
+        },
+        {
+          "title": "Giunzioni ancoranti",
+          "page_start": 184
+        },
+        {
+          "title": "Giunzioni comunicanti",
+          "page_start": 192
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Generalità e classificazione dei tessuti",
+      "page_start": 199,
+      "sections": [
+        {
+          "title": "Premessa",
+          "page_start": 199
+        },
+        {
+          "title": "Dalla classificazione morfologica allo studio funzionale e \"clinically oriented\"",
+          "page_start": 199
+        },
+        {
+          "title": "L'istologia è essenziale per comprendere la patologia",
+          "page_start": 201
+        },
+        {
+          "title": "I tessuti formano organi e sistemi",
+          "page_start": 201
+        },
+        {
+          "title": "Caratteristiche istologiche e funzionali dei tessuti",
+          "page_start": 201
+        },
+        {
+          "title": "Come si riconoscono i vari tessuti nei preparati istologici",
+          "page_start": 201
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Istogenesi, differenziamento e omeostasi tessutale",
+      "page_start": 205,
+      "sections": [
+        {
+          "title": "Il differenziamento cellulare",
+          "page_start": 205
+        },
+        {
+          "title": "Dinamicità dei tessuti",
+          "page_start": 210
+        },
+        {
+          "title": "Il rinnovamento dei tessuti",
+          "page_start": 212
+        },
+        {
+          "title": "Cellule staminali",
+          "page_start": 213
+        },
+        {
+          "title": "Meccanismi di controllo della dimensione di tessuti e organi",
+          "page_start": 221
+        },
+        {
+          "title": "Cellule staminali e cancro",
+          "page_start": 223
+        },
+        {
+          "title": "Cellule staminali pluripotenti indotte",
+          "page_start": 224
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Epiteli di rivestimento",
+      "page_start": 229,
+      "sections": [
+        {
+          "title": "Generalità sui tessuti epiteliali",
+          "page_start": 229
+        },
+        {
+          "title": "Generalità sugli epiteli di rivestimento",
+          "page_start": 230
+        },
+        {
+          "title": "Classificazione e tipologia degli epiteli di rivestimento",
+          "page_start": 232
+        },
+        {
+          "title": "Epiteli monostratificati o semplici",
+          "page_start": 235
+        },
+        {
+          "title": "Epiteli pluristratificati o composti",
+          "page_start": 250
+        },
+        {
+          "title": "Caratteri citologici degli epiteli",
+          "page_start": 265
+        },
+        {
+          "title": "Processi di rinnovamento degli epiteli di rivestimento",
+          "page_start": 273
+        },
+        {
+          "title": "Innervazione degli epiteli",
+          "page_start": 279
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Epiteli ghiandolari esocrini",
+      "page_start": 283,
+      "sections": [
+        {
+          "title": "Generalità sulle ghiandole",
+          "page_start": 283
+        },
+        {
+          "title": "Ghiandole esocrine ed endocrine",
+          "page_start": 284
+        },
+        {
+          "title": "Sviluppo delle ghiandole",
+          "page_start": 284
+        },
+        {
+          "title": "Classificazione delle ghiandole esocrine",
+          "page_start": 285
+        },
+        {
+          "title": "Ghiandole unicellulari",
+          "page_start": 286
+        },
+        {
+          "title": "Ghiandole pluricellulari",
+          "page_start": 287
+        },
+        {
+          "title": "Le ghiandole esocrine si possono classificare sulla base delle modalità di secrezione",
+          "page_start": 298
+        },
+        {
+          "title": "Le ghiandole esocrine possono essere classificate anche in base alla natura chimica del loro secreto",
+          "page_start": 298
+        },
+        {
+          "title": "Le mucine",
+          "page_start": 301
+        },
+        {
+          "title": "Prostata",
+          "page_start": 304
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Epiteli ghiandolari endocrini – Il sistema endocrino",
+      "page_start": 309,
+      "sections": [
+        {
+          "title": "Generalità",
+          "page_start": 309
+        },
+        {
+          "title": "Il sistema endocrino",
+          "page_start": 309
+        },
+        {
+          "title": "Ormoni e loro recettori",
+          "page_start": 312
+        },
+        {
+          "title": "Caratteristiche citologiche e ultrastrutturali delle cellule a secrezione endocrina",
+          "page_start": 315
+        },
+        {
+          "title": "Le ghiandole endocrine: classificazione",
+          "page_start": 317
+        },
+        {
+          "title": "L'asse ipotalamo-ipofisario",
+          "page_start": 318
+        },
+        {
+          "title": "Ghiandola pineale",
+          "page_start": 331
+        },
+        {
+          "title": "Tiroide",
+          "page_start": 334
+        },
+        {
+          "title": "Le ghiandole paratiroidi",
+          "page_start": 343
+        },
+        {
+          "title": "La ghiandola surrenale",
+          "page_start": 346
+        },
+        {
+          "title": "Il pancreas endocrino",
+          "page_start": 355
+        },
+        {
+          "title": "Il sistema neuroendocrino diffuso (SNED)",
+          "page_start": 359
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Epiteli sensoriali",
+      "page_start": 361,
+      "sections": [
+        {
+          "title": "Generalità sugli epiteli sensoriali",
+          "page_start": 361
+        },
+        {
+          "title": "Epitelio olfattivo",
+          "page_start": 362
+        },
+        {
+          "title": "Epitelio gustativo",
+          "page_start": 363
+        },
+        {
+          "title": "Epiteli sensoriali dell'udito e dell'equilibrio",
+          "page_start": 366
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Generalità sui tessuti connettivi",
+      "page_start": 373,
+      "sections": [
+        {
+          "title": "Tessuti connettivi: caratteristiche generali",
+          "page_start": 373
+        },
+        {
+          "title": "Origine del tessuto connettivo",
+          "page_start": 373
+        },
+        {
+          "title": "Struttura generale del tessuto connettivo",
+          "page_start": 374
+        },
+        {
+          "title": "Il tessuto connettivo svolge molteplici funzioni",
+          "page_start": 376
+        },
+        {
+          "title": "La matrice extracellulare è altamente dinamica e viene continuamente rimodellata",
+          "page_start": 378
+        },
+        {
+          "title": "Istologia applicata",
+          "page_start": 379
+        },
+        {
+          "title": "Le interazioni fra cellule e ECM sono reciproche",
+          "page_start": 380
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Tessuto connettivo propriamente detto",
+      "page_start": 383,
+      "sections": [
+        {
+          "title": "Generalità sul tessuto connettivo p.d.",
+          "page_start": 383
+        },
+        {
+          "title": "Classificazione del tessuto connettivo p.d.",
+          "page_start": 384
+        },
+        {
+          "title": "Le fibre del tessuto connettivo p.d.",
+          "page_start": 385
+        },
+        {
+          "title": "La sostanza fondamentale o amorfa",
+          "page_start": 400
+        },
+        {
+          "title": "La membrana basale",
+          "page_start": 408
+        },
+        {
+          "title": "Le cellule del tessuto connettivo",
+          "page_start": 409
+        },
+        {
+          "title": "Varietà di tessuto connettivo",
+          "page_start": 424
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Tessuto cartilagineo",
+      "page_start": 433,
+      "sections": [
+        {
+          "title": "Generalità",
+          "page_start": 433
+        },
+        {
+          "title": "Cartilagine ialina",
+          "page_start": 435
+        },
+        {
+          "title": "Cartilagine elastica",
+          "page_start": 446
+        },
+        {
+          "title": "Cartilagine fibrosa o fibrocartilagine",
+          "page_start": 447
+        },
+        {
+          "title": "Tessuto cordoide o vescicoloso",
+          "page_start": 448
+        },
+        {
+          "title": "Nutrizione, modificazioni regressive e rigenerazione della cartilagine",
+          "page_start": 448
+        },
+        {
+          "title": "Funzioni ed istofisiologia della cartilagine",
+          "page_start": 449
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Tessuto osseo",
+      "page_start": 453,
+      "sections": [
+        {
+          "title": "Introduzione",
+          "page_start": 453
+        },
+        {
+          "title": "Generalità sul tessuto osseo",
+          "page_start": 455
+        },
+        {
+          "title": "Procedure per l'allestimento di preparati istologici del tessuto osseo",
+          "page_start": 457
+        },
+        {
+          "title": "Le cellule dell'osso",
+          "page_start": 458
+        },
+        {
+          "title": "La sostanza intercellulare",
+          "page_start": 474
+        },
+        {
+          "title": "Periostio",
+          "page_start": 478
+        },
+        {
+          "title": "Endostio",
+          "page_start": 479
+        },
+        {
+          "title": "Struttura microscopica e caratteristiche meccaniche dell'osso",
+          "page_start": 479
+        },
+        {
+          "title": "Istogenesi del tessuto osseo (osteogenesi)",
+          "page_start": 483
+        },
+        {
+          "title": "Rimodellamento osseo",
+          "page_start": 497
+        },
+        {
+          "title": "Riparazione delle fratture",
+          "page_start": 501
+        },
+        {
+          "title": "Istofisiologia del tessuto osseo",
+          "page_start": 503
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "title": "I tessuti del dente e del parodonto",
+      "page_start": 511,
+      "sections": [
+        {
+          "title": "Struttura del dente",
+          "page_start": 511
+        },
+        {
+          "title": "Lo smalto",
+          "page_start": 512
+        },
+        {
+          "title": "La dentina",
+          "page_start": 515
+        },
+        {
+          "title": "Il cemento",
+          "page_start": 520
+        },
+        {
+          "title": "La polpa dentaria",
+          "page_start": 521
+        },
+        {
+          "title": "Il parodonto",
+          "page_start": 523
+        },
+        {
+          "title": "Istologia applicata",
+          "page_start": 525
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Tessuto adiposo",
+      "page_start": 527,
+      "sections": [
+        {
+          "title": "Generalità sul tessuto adiposo",
+          "page_start": 527
+        },
+        {
+          "title": "Tessuto adiposo bianco (uniloculare)",
+          "page_start": 530
+        },
+        {
+          "title": "Tessuto adiposo bruno (multiloculare)",
+          "page_start": 532
+        },
+        {
+          "title": "Plasticità dell'organo adiposo (transdifferenziamento)",
+          "page_start": 535
+        },
+        {
+          "title": "Adipochine",
+          "page_start": 536
+        },
+        {
+          "title": "Adipogenesi",
+          "page_start": 538
+        },
+        {
+          "title": "Tessuto adiposo midollare",
+          "page_start": 540
+        },
+        {
+          "title": "Tessuto adiposo come sorgente di cellule staminali mesenchimali",
+          "page_start": 541
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Il sangue e la linfa",
+      "page_start": 547,
+      "sections": [
+        {
+          "title": "Generalità sul sangue",
+          "page_start": 547
+        },
+        {
+          "title": "Metodiche per lo studio del sangue",
+          "page_start": 548
+        },
+        {
+          "title": "Plasma",
+          "page_start": 549
+        },
+        {
+          "title": "Eritrociti o globuli rossi",
+          "page_start": 553
+        },
+        {
+          "title": "Leucociti o globuli bianchi",
+          "page_start": 564
+        },
+        {
+          "title": "Piastrine",
+          "page_start": 578
+        },
+        {
+          "title": "La linfa",
+          "page_start": 588
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "title": "Emopoiesi",
+      "page_start": 591,
+      "sections": [
+        {
+          "title": "Generalità",
+          "page_start": 591
+        },
+        {
+          "title": "Sedi dell'emopoiesi",
+          "page_start": 592
+        },
+        {
+          "title": "Il midollo osseo",
+          "page_start": 592
+        },
+        {
+          "title": "Il sistema emopoietico",
+          "page_start": 597
+        },
+        {
+          "title": "Le linee differenziative",
+          "page_start": 602
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "title": "Tessuto linfoide e sistema immunitario",
+      "page_start": 615,
+      "sections": [
+        {
+          "title": "Tessuto linfoide",
+          "page_start": 615
+        },
+        {
+          "title": "Organizzazione strutturale del tessuto linfoide",
+          "page_start": 617
+        },
+        {
+          "title": "Il sistema immunitario",
+          "page_start": 625
+        },
+        {
+          "title": "Immunità innata o naturale",
+          "page_start": 626
+        },
+        {
+          "title": "Immunità adattativa o acquisita",
+          "page_start": 638
+        },
+        {
+          "title": "Differenziamento dei linfociti B e T",
+          "page_start": 645
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "title": "Tessuti muscolari",
+      "page_start": 665,
+      "sections": [
+        {
+          "title": "Generalità",
+          "page_start": 665
+        },
+        {
+          "title": "Tessuto muscolare striato scheletrico",
+          "page_start": 667
+        },
+        {
+          "title": "Tessuto muscolare striato cardiaco",
+          "page_start": 708
+        },
+        {
+          "title": "Tessuto muscolare liscio",
+          "page_start": 717
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "title": "Tessuto nervoso",
+      "page_start": 732,
+      "sections": [
+        {
+          "title": "Generalità sul tessuto nervoso",
+          "page_start": 732
+        },
+        {
+          "title": "Il neurone",
+          "page_start": 737
+        },
+        {
+          "title": "Sinapsi interneuronali",
+          "page_start": 751
+        },
+        {
+          "title": "Come funziona un neurone",
+          "page_start": 762
+        },
+        {
+          "title": "La neuroglia",
+          "page_start": 763
+        },
+        {
+          "title": "Rapporto tra assoni del SNC e del SNP e le cellule della neuroglia: il concetto di fibra nervosa",
+          "page_start": 786
+        },
+        {
+          "title": "Matrice extracellulare del tessuto nervoso",
+          "page_start": 796
+        },
+        {
+          "title": "Neurogenesi e rigenerazione del tessuto nervoso",
+          "page_start": 796
+        },
+        {
+          "title": "Citoarchitettura del tessuto nervoso",
+          "page_start": 801
+        },
+        {
+          "title": "Terminazioni nervose periferiche",
+          "page_start": 804
+        },
+        {
+          "title": "Sistema nervoso autonomo",
+          "page_start": 808
+        },
+        {
+          "title": "Rivestimenti connettivali dell'encefalo",
+          "page_start": 810
+        },
+        {
+          "title": "Note storiche",
+          "page_start": 812
+        },
+        {
+          "title": "Tecniche istologiche per lo studio del tessuto nervoso",
+          "page_start": 813
+        }
+      ]
+    }
+  ]
+}

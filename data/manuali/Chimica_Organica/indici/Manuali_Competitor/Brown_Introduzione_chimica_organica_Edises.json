@@ -1,0 +1,326 @@
+{
+  "id": "Brown_Introduzione",
+  "title": "Introduzione alla chimica organica",
+  "author": "Brown",
+  "publisher": "Edises",
+  "subject": "Chimica_Organica",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Legame covalente e forma delle molecole",
+      "page_start": 1,
+      "sections": [
+        {"number": "1.1", "title": "Come si può descrivere la struttura elettronica degli atomi?", "page_start": 3},
+        {"number": "1.2", "title": "Cos'è il modello di Lewis del legame chimico?", "page_start": 9},
+        {"number": "1.3", "title": "Come si possono prevedere gli angoli di legame e la forma delle molecole?", "page_start": 18},
+        {"number": "1.4", "title": "Come si può prevedere se una molecola è polare o apolare?", "page_start": 22},
+        {"number": "1.5", "title": "Cos'è la risonanza?", "page_start": 24},
+        {"number": "1.6", "title": "Cos'è il modello di sovrapposizione degli orbitali per il legame covalente?", "page_start": 26},
+        {"number": "1.7", "title": "Cosa sono i gruppi funzionali?", "page_start": 31}
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Acidi e basi, elettrofili e nucleofili",
+      "page_start": 45,
+      "sections": [
+        {"number": "2.1", "title": "Cos'è la simbologia delle frecce curve?", "page_start": 46},
+        {"number": "2.2", "title": "Cosa sono gli acidi e le basi secondo Arrhenius?", "page_start": 48},
+        {"number": "2.3", "title": "Cosa sono gli acidi e le basi secondo Brønsted e Lowry?", "page_start": 49},
+        {"number": "2.4", "title": "Come si può misurare la forza di un acido o di una base?", "page_start": 51},
+        {"number": "2.5", "title": "Come si può determinare la posizione dell'equilibrio in una reazione acido-base?", "page_start": 53},
+        {"number": "2.6", "title": "Qual è la relazione tra struttura molecolare e acidità?", "page_start": 55},
+        {"number": "2.7", "title": "Cosa sono gli acidi e le basi secondo Lewis?", "page_start": 60},
+        {"number": "2.8", "title": "Cosa sono gli elettrofili e i nucleofili?", "page_start": 63},
+        {"number": "2.9", "title": "Si può prevedere la forza di un nucleofilo solo dalla sua basicità?", "page_start": 65}
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Alcani e cicloalcani",
+      "page_start": 73,
+      "sections": [
+        {"number": "3.1", "title": "Cosa sono gli alcani?", "page_start": 74},
+        {"number": "3.2", "title": "Cos'è l'isomeria costituzionale degli alcani?", "page_start": 76},
+        {"number": "3.3", "title": "Qual è la nomenclatura degli alcani?", "page_start": 78},
+        {"number": "3.4", "title": "Cosa sono i cicloalcani?", "page_start": 83},
+        {"number": "3.5", "title": "Come si applica il sistema di nomenclatura IUPAC alle molecole che contengono gruppi funzionali?", "page_start": 84},
+        {"number": "3.6", "title": "Quali sono le conformazioni degli alcani e dei cicloalcani?", "page_start": 86},
+        {"number": "3.7", "title": "Cos'è l'isomeria cis-trans dei cicloalcani?", "page_start": 92},
+        {"number": "3.8", "title": "Quali sono le proprietà fisiche degli alcani e dei cicloalcani?", "page_start": 96},
+        {"number": "3.9", "title": "Quali sono le reazioni caratteristiche degli alcani?", "page_start": 99},
+        {"number": "3.10", "title": "Quali sono le fonti degli alcani?", "page_start": 100}
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Alcheni e alchini",
+      "page_start": 113,
+      "sections": [
+        {"number": "4.1", "title": "Quali sono le strutture e le forme di alcheni e alchini?", "page_start": 119},
+        {"number": "4.2", "title": "Qual è la nomenclatura di alcheni e alchini?", "page_start": 122},
+        {"number": "4.3", "title": "Quali sono le proprietà fisiche di alcheni e alchini?", "page_start": 130},
+        {"number": "4.4", "title": "Perché gli 1-alchini (alchini terminali) sono acidi deboli?", "page_start": 131}
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Meccanismi di reazione, reazioni di alcheni e alchini",
+      "page_start": 139,
+      "sections": [
+        {"number": "5.1", "title": "Quali sono le reazioni caratteristiche degli alcheni?", "page_start": 139},
+        {"number": "5.2", "title": "Cos'è l'energia libera?", "page_start": 141},
+        {"number": "5.3", "title": "Cosa determina la velocità di una reazione e come possiamo influire su di essa?", "page_start": 145},
+        {"number": "5.4", "title": "Cos'è un meccanismo di reazione?", "page_start": 151},
+        {"number": "5.5", "title": "Cosa sono i meccanismi di addizione elettrofila agli alcheni?", "page_start": 153},
+        {"number": "5.6", "title": "Cosa sono i riarrangiamenti carbocationici?", "page_start": 164},
+        {"number": "5.7", "title": "Cos'è l'idroborazione-ossidazione di un alchene?", "page_start": 167},
+        {"number": "5.8", "title": "Come si può ridurre un alchene ad alcano?", "page_start": 169},
+        {"number": "5.9", "title": "Come si può usare un anione acetiluro per formare un nuovo legame carbonio-carbonio?", "page_start": 172},
+        {"number": "5.10", "title": "Come si possono ridurre gli alchini ad alcheni e alcani?", "page_start": 174}
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Chiralità: l'asimmetria delle molecole",
+      "page_start": 185,
+      "sections": [
+        {"number": "6.1", "title": "Cosa sono gli stereoisomeri?", "page_start": 186},
+        {"number": "6.2", "title": "Cosa sono gli enantiomeri?", "page_start": 186},
+        {"number": "6.3", "title": "Come si designa la configurazione di uno stereocentro?", "page_start": 191},
+        {"number": "6.4", "title": "Cos'è la regola 2n?", "page_start": 193},
+        {"number": "6.5", "title": "Come si descrive la chiralità di molecole cicliche aventi due stereocentri?", "page_start": 197},
+        {"number": "6.6", "title": "Come si descrive la chiralità di molecole aventi tre o più stereocentri?", "page_start": 200},
+        {"number": "6.7", "title": "Quali sono le proprietà degli stereoisomeri?", "page_start": 200},
+        {"number": "6.8", "title": "Come si rileva la chiralità in laboratorio?", "page_start": 201},
+        {"number": "6.9", "title": "Qual è l'importanza della chiralità nel mondo biologico?", "page_start": 202},
+        {"number": "6.10", "title": "Come si possono separare gli enantiomeri?", "page_start": 203}
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Alogenoalcani",
+      "page_start": 217,
+      "sections": [
+        {"number": "7.1", "title": "Qual è la nomenclatura degli alogenoalcani?", "page_start": 218},
+        {"number": "7.2", "title": "Quali sono le reazioni caratteristiche degli alogenoalcani?", "page_start": 220},
+        {"number": "7.3", "title": "Quali sono i prodotti delle reazioni di sostituzione nucleofila alifatica?", "page_start": 222},
+        {"number": "7.4", "title": "Quali sono i meccanismi di sostituzione nucleofila SN2 e SN1?", "page_start": 224},
+        {"number": "7.5", "title": "Cosa determina la prevalenza di SN1 o SN2?", "page_start": 228},
+        {"number": "7.6", "title": "Come si può prevedere la prevalenza di SN2 o SN1 in base alle condizioni sperimentali?", "page_start": 233},
+        {"number": "7.7", "title": "Quali sono i prodotti della β-eliminazione?", "page_start": 235},
+        {"number": "7.8", "title": "Quali sono i meccanismi della β-eliminazione E1 ed E2?", "page_start": 238},
+        {"number": "7.9", "title": "In quali casi la sostituzione nucleofila e la β-eliminazione competono tra loro?", "page_start": 241}
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Alcoli, eteri e tioli",
+      "page_start": 253,
+      "sections": [
+        {"number": "8.1", "title": "Cosa sono gli alcoli?", "page_start": 254},
+        {"number": "8.2", "title": "Quali sono le reazioni caratteristiche degli alcoli?", "page_start": 259},
+        {"number": "8.3", "title": "Cosa sono gli eteri?", "page_start": 272},
+        {"number": "8.4", "title": "Cosa sono gli epossidi?", "page_start": 276},
+        {"number": "8.5", "title": "Cosa sono i tioli?", "page_start": 280},
+        {"number": "8.6", "title": "Quali sono le reazioni caratteristiche dei tioli?", "page_start": 283}
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Il benzene e l'aromaticità",
+      "page_start": 293,
+      "sections": [
+        {"number": "9.1", "title": "Qual è la struttura del benzene?", "page_start": 294},
+        {"number": "9.2", "title": "Cosa è l'aromaticità?", "page_start": 298},
+        {"number": "9.3", "title": "Qual è la nomenclatura dei derivati del benzene e quali sono le loro proprietà fisiche?", "page_start": 302},
+        {"number": "9.4", "title": "Qual è la posizione benzilica e come contribuisce alla reattività del benzene?", "page_start": 305},
+        {"number": "9.5", "title": "Qual è il meccanismo della sostituzione elettrofila aromatica?", "page_start": 305},
+        {"number": "9.6", "title": "Cosa sono i fenoli?", "page_start": 314}
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Ammine",
+      "page_start": 327,
+      "sections": [
+        {"number": "10.1", "title": "Cosa sono le ammine?", "page_start": 327},
+        {"number": "10.2", "title": "Qual è la nomenclatura delle ammine?", "page_start": 330},
+        {"number": "10.3", "title": "Quali sono le proprietà fisiche caratteristiche delle ammine?", "page_start": 333},
+        {"number": "10.4", "title": "Quali sono le proprietà acido-base delle ammine?", "page_start": 335},
+        {"number": "10.5", "title": "Quali reazioni danno le ammine con gli acidi?", "page_start": 339},
+        {"number": "10.6", "title": "Come si sintetizzano le arilammine?", "page_start": 341},
+        {"number": "10.7", "title": "In che modo le ammine agiscono da nucleofili?", "page_start": 342}
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Aldeidi e chetoni",
+      "page_start": 353,
+      "sections": [
+        {"number": "11.1", "title": "Cosa sono le aldeidi e i chetoni?", "page_start": 354},
+        {"number": "11.2", "title": "Qual è la nomenclatura delle aldeidi e dei chetoni?", "page_start": 354},
+        {"number": "11.3", "title": "Quali sono le proprietà fisiche delle aldeidi e dei chetoni?", "page_start": 358},
+        {"number": "11.4", "title": "Qual è la reazione più comune delle aldeidi e dei chetoni?", "page_start": 359},
+        {"number": "11.5", "title": "Cosa sono i reattivi di Grignard e come reagiscono con le aldeidi e i chetoni?", "page_start": 359},
+        {"number": "11.6", "title": "Cosa sono gli emiacetali e gli acetali?", "page_start": 364},
+        {"number": "11.7", "title": "Come reagiscono le aldeidi e i chetoni con l'ammoniaca e le ammine?", "page_start": 370},
+        {"number": "11.8", "title": "Cos'è la tautomeria cheto-enolica?", "page_start": 374},
+        {"number": "11.9", "title": "Come si ossidano le aldeidi e i chetoni?", "page_start": 377},
+        {"number": "11.10", "title": "Come si riducono le aldeidi e i chetoni?", "page_start": 380}
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Acidi carbossilici",
+      "page_start": 393,
+      "sections": [
+        {"number": "12.1", "title": "Cosa sono gli acidi carbossilici?", "page_start": 393},
+        {"number": "12.2", "title": "Qual è la nomenclatura degli acidi carbossilici?", "page_start": 394},
+        {"number": "12.3", "title": "Quali sono le proprietà fisiche degli acidi carbossilici?", "page_start": 397},
+        {"number": "12.4", "title": "Quali sono le proprietà acido-base degli acidi carbossilici?", "page_start": 398},
+        {"number": "12.5", "title": "Come può essere ridotto il gruppo carbossilico?", "page_start": 402},
+        {"number": "12.6", "title": "Cos'è l'esterificazione di Fischer?", "page_start": 405},
+        {"number": "12.7", "title": "Cosa sono i cloruri acilici?", "page_start": 409},
+        {"number": "12.8", "title": "Cos'è la decarbossilazione?", "page_start": 411}
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Derivati funzionali degli acidi carbossilici",
+      "page_start": 425,
+      "sections": [
+        {"number": "13.1", "title": "Quali sono i principali derivati degli acidi carbossilici e qual è la loro nomenclatura?", "page_start": 426},
+        {"number": "13.2", "title": "Quali sono le reazioni caratteristiche dei derivati degli acidi carbossilici?", "page_start": 431},
+        {"number": "13.3", "title": "Cos'è l'idrolisi?", "page_start": 432},
+        {"number": "13.4", "title": "Come reagiscono i derivati degli acidi carbossilici con gli alcoli?", "page_start": 437},
+        {"number": "13.5", "title": "Come reagiscono i derivati degli acidi carbossilici con l'ammoniaca e le ammine?", "page_start": 440},
+        {"number": "13.6", "title": "Come possono essere interconvertiti i derivati degli acidi carbossilici?", "page_start": 442},
+        {"number": "13.7", "title": "Come reagiscono gli esteri con i reattivi di Grignard?", "page_start": 443},
+        {"number": "13.8", "title": "Come possono essere ridotti i derivati degli acidi carbossilici?", "page_start": 445}
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Anioni enolato",
+      "page_start": 461,
+      "sections": [
+        {"number": "14.1", "title": "Cosa sono gli anioni enolato e come si formano?", "page_start": 462},
+        {"number": "14.2", "title": "Cos'è la reazione aldolica?", "page_start": 465},
+        {"number": "14.3", "title": "Cosa sono le condensazioni di Claisen e di Dieckmann?", "page_start": 472},
+        {"number": "14.4", "title": "Come intervengono nei processi biologici le reazioni aldoliche e le condensazioni di Claisen?", "page_start": 479},
+        {"number": "14.5", "title": "Cos'è la reazione di Michael?", "page_start": 481}
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Chimica dei polimeri organici",
+      "page_start": 499,
+      "sections": [
+        {"number": "15.1", "title": "Qual è l'architettura dei polimeri?", "page_start": 500},
+        {"number": "15.2", "title": "Qual è la nomenclatura dei polimeri e come si rappresenta la loro struttura?", "page_start": 500},
+        {"number": "15.3", "title": "Qual è la morfologia dei polimeri? Materiali cristallini e amorfi", "page_start": 502},
+        {"number": "15.4", "title": "Cos'è la polimerizzazione a stadi?", "page_start": 503},
+        {"number": "15.5", "title": "Cos'è la polimerizzazione a catena?", "page_start": 508},
+        {"number": "15.6", "title": "Quali plastiche sono comunemente riciclate in grandi quantità?", "page_start": 514}
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Carboidrati",
+      "page_start": 521,
+      "sections": [
+        {"number": "16.1", "title": "Cosa sono i carboidrati?", "page_start": 521},
+        {"number": "16.2", "title": "Cosa sono i monosaccaridi?", "page_start": 522},
+        {"number": "16.3", "title": "Quali sono le strutture cicliche dei monosaccaridi?", "page_start": 526},
+        {"number": "16.4", "title": "Quali sono le reazioni caratteristiche dei monosaccaridi?", "page_start": 531},
+        {"number": "16.5", "title": "Cosa sono i disaccaridi e gli oligosaccaridi?", "page_start": 536},
+        {"number": "16.6", "title": "Cosa sono i polisaccaridi?", "page_start": 539}
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Amminoacidi e proteine",
+      "page_start": 553,
+      "sections": [
+        {"number": "17.1", "title": "Quali sono le molteplici funzioni delle proteine?", "page_start": 555},
+        {"number": "17.2", "title": "Cosa sono gli amminoacidi?", "page_start": 556},
+        {"number": "17.3", "title": "Quali sono le proprietà acido-base degli amminoacidi?", "page_start": 559},
+        {"number": "17.4", "title": "Cosa sono i polipeptidi e le proteine?", "page_start": 566},
+        {"number": "17.5", "title": "Cos'è la struttura primaria di polipeptidi e proteine?", "page_start": 567},
+        {"number": "17.6", "title": "Quali sono le forme tridimensionali di polipeptidi e proteine?", "page_start": 571}
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Lipidi",
+      "page_start": 585,
+      "sections": [
+        {"number": "18.1", "title": "Cosa sono i trigliceridi?", "page_start": 585},
+        {"number": "18.2", "title": "Cosa sono i saponi e i detergenti?", "page_start": 590},
+        {"number": "18.3", "title": "Cosa sono i fosfolipidi?", "page_start": 592},
+        {"number": "18.4", "title": "Cosa sono gli steroidi?", "page_start": 594},
+        {"number": "18.5", "title": "Cosa sono le prostaglandine?", "page_start": 599},
+        {"number": "18.6", "title": "Cosa sono le vitamine liposolubili?", "page_start": 602}
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Acidi nucleici",
+      "page_start": 611,
+      "sections": [
+        {"number": "19.1", "title": "Cosa sono i nucleosidi e i nucleotidi?", "page_start": 612},
+        {"number": "19.2", "title": "Qual è la struttura del DNA?", "page_start": 615},
+        {"number": "19.3", "title": "Cos'è l'acido ribonucleico (RNA)?", "page_start": 623},
+        {"number": "19.4", "title": "Cos'è il codice genetico?", "page_start": 626},
+        {"number": "19.5", "title": "Come si sequenzia il DNA?", "page_start": 628}
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Spettroscopia",
+      "page_start": "online",
+      "sections": [
+        {"number": "20.1", "title": "Cos'è la radiazione elettromagnetica?", "page_start": "online"},
+        {"number": "20.2", "title": "Cos'è la spettroscopia molecolare?", "page_start": "online"},
+        {"number": "20.3", "title": "Cos'è la spettroscopia infrarossa?", "page_start": "online"},
+        {"number": "20.4", "title": "Come si interpretano gli spettri infrarossi?", "page_start": "online"},
+        {"number": "20.5", "title": "Cos'è la risonanza magnetica nucleare?", "page_start": "online"},
+        {"number": "20.6", "title": "Cos'è la schermatura?", "page_start": "online"},
+        {"number": "20.7", "title": "Cos'è uno spettro NMR?", "page_start": "online"},
+        {"number": "20.8", "title": "Quanti segnali di risonanza sono presenti nello spettro NMR di un particolare composto?", "page_start": "online"},
+        {"number": "20.9", "title": "Cos'è l'integrazione dei segnali?", "page_start": "online"},
+        {"number": "20.10", "title": "Cos'è il chemical shift?", "page_start": "online"},
+        {"number": "20.11", "title": "Cos'è la molteplicità del segnale?", "page_start": "online"},
+        {"number": "20.12", "title": "Cos'è la spettroscopia 13C-NMR e in cosa differisce dalla spettroscopia 1H-NMR?", "page_start": "online"},
+        {"number": "20.13", "title": "Come si risolve un problema relativo alla NMR?", "page_start": "online"}
+      ]
+    },
+    {
+      "number": 21,
+      "title": "Chimica organica del metabolismo",
+      "page_start": "online",
+      "sections": [
+        {"number": "21.1", "title": "Quali sono gli intermedi chiave nella glicolisi, nella β-ossidazione degli acidi grassi e nel ciclo dell'acido citrico?", "page_start": "online"},
+        {"number": "21.2", "title": "Cos'è la glicolisi?", "page_start": "online"},
+        {"number": "21.3", "title": "Quali sono le dieci reazioni della glicolisi?", "page_start": "online"},
+        {"number": "21.4", "title": "Qual è il destino del piruvato?", "page_start": "online"},
+        {"number": "21.5", "title": "Quali sono le reazioni della β-ossidazione degli acidi grassi?", "page_start": "online"},
+        {"number": "21.6", "title": "Quali sono le reazioni del ciclo dell'acido citrico?", "page_start": "online"}
+      ]
+    },
+    {
+      "number": 22,
+      "title": "Reattività dei derivati del benzene e dei composti eterociclici aromatici",
+      "page_start": "online",
+      "sections": [
+        {"number": "22.1", "title": "Qual è l'effetto dei sostituenti legati al benzene sulla sostituzione elettrofila aromatica?", "page_start": "online"},
+        {"number": "22.2", "title": "Qual è la posizione benzilica e come contribuisce alla reattività del benzene?", "page_start": "online"},
+        {"number": "22.3", "title": "Qual è la reattività della piridina verso la sostituzione elettrofila aromatica?", "page_start": "online"},
+        {"number": "22.4", "title": "Qual è il meccanismo di sostituzione nucleofila aromatica nella piridina?", "page_start": "online"},
+        {"number": "22.5", "title": "Qual è la reattività di pirrolo, furano e tiofene verso la sostituzione elettrofila aromatica?", "page_start": "online"}
+      ]
+    }
+  ]
+}

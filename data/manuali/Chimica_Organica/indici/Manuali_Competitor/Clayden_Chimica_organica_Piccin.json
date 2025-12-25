@@ -1,0 +1,2081 @@
+{
+  "id": "clayden_chimica_organica",
+  "title": "Chimica organica",
+  "author": "Clayden et al.",
+  "publisher": "Piccin",
+  "subject": "Chimica Organica",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Cos'è la chimica organica?",
+      "page_start": 1,
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "La chimica organica e noi",
+          "page_start": 1
+        },
+        {
+          "number": "1.2",
+          "title": "Composti organici",
+          "page_start": 2
+        },
+        {
+          "number": "1.3",
+          "title": "Chimica organica e industria",
+          "page_start": 6
+        },
+        {
+          "number": "1.4",
+          "title": "La chimica organica e la tavola periodica",
+          "page_start": 11
+        },
+        {
+          "number": "1.5",
+          "title": "La chimica organica e questo libro",
+          "page_start": 13
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Le strutture organiche",
+      "page_start": 14,
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "Le strutture idrocarburiche e i gruppi funzionali",
+          "page_start": 15
+        },
+        {
+          "number": "2.2",
+          "title": "Disegnando le molecole",
+          "page_start": 16
+        },
+        {
+          "number": "2.3",
+          "title": "Strutture idrocarburiche",
+          "page_start": 21
+        },
+        {
+          "number": "2.4",
+          "title": "I gruppi funzionali",
+          "page_start": 26
+        },
+        {
+          "number": "2.5",
+          "title": "Gli atomi di carbonio che portano dei gruppi funzionali possono essere classificati in base al loro grado di ossidazione",
+          "page_start": 31
+        },
+        {
+          "number": "2.6",
+          "title": "Dare un nome ai composti",
+          "page_start": 32
+        },
+        {
+          "number": "2.7",
+          "title": "Come vengono chiamati realmente i composti dai chimici?",
+          "page_start": 35
+        },
+        {
+          "number": "2.8",
+          "title": "Che nome diamo ai composti?",
+          "page_start": 39
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Identificazione delle strutture organiche",
+      "page_start": 44,
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "Introduzione",
+          "page_start": 44
+        },
+        {
+          "number": "3.2",
+          "title": "Spettrometria di massa",
+          "page_start": 47
+        },
+        {
+          "number": "3.3",
+          "title": "La spettrometria di massa individua gli isotopi",
+          "page_start": 49
+        },
+        {
+          "number": "3.4",
+          "title": "La composizione atomica può essere determinata mediante spettrometria di massa ad alta risoluzione",
+          "page_start": 51
+        },
+        {
+          "number": "3.5",
+          "title": "La spettroscopia infrarossa",
+          "page_start": 53
+        },
+        {
+          "number": "3.6",
+          "title": "Introduzione alla spettroscopia NMR",
+          "page_start": 58
+        },
+        {
+          "number": "3.7",
+          "title": "Il chemical shift nella spettroscopia 13C NMR",
+          "page_start": 63
+        },
+        {
+          "number": "3.8",
+          "title": "Le principali caratteristiche della spettroscopia 1H NMR",
+          "page_start": 69
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "La struttura delle molecole",
+      "page_start": 84,
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "Introduzione",
+          "page_start": 84
+        },
+        {
+          "number": "4.2",
+          "title": "Gli elettroni si trovano negli orbitali atomici",
+          "page_start": 87
+        },
+        {
+          "number": "4.3",
+          "title": "Gli orbitali molecolari - le molecole diatomiche",
+          "page_start": 92
+        },
+        {
+          "number": "4.4",
+          "title": "Legami fra atomi diversi",
+          "page_start": 99
+        },
+        {
+          "number": "4.5",
+          "title": "L'ibridazione degli orbitali atomici",
+          "page_start": 103
+        },
+        {
+          "number": "4.6",
+          "title": "Rotazione e rigidità",
+          "page_start": 109
+        },
+        {
+          "number": "4.7",
+          "title": "Conclusioni",
+          "page_start": 110
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Nucleofili ed elettrofili",
+      "page_start": 116,
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "Nucleofili ed elettrofili",
+          "page_start": 116
+        },
+        {
+          "number": "5.2",
+          "title": "Le frecce curve illustrano i meccanismi di reazione",
+          "page_start": 121
+        },
+        {
+          "number": "5.3",
+          "title": "Disegniamo il nostro meccanismo con le frecce curve",
+          "page_start": 125
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Addizione nucleofila al gruppo carbonilico",
+      "page_start": 132,
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "Gli orbitali molecolari spiegano la reattività del gruppo carbonilico",
+          "page_start": 132
+        },
+        {
+          "number": "6.2",
+          "title": "Addizione nucleofila al gruppo carbonilico",
+          "page_start": 135
+        },
+        {
+          "number": "6.3",
+          "title": "Molecole con più di un doppio legame C=C",
+          "page_start": 152
+        },
+        {
+          "number": "6.4",
+          "title": "La coniugazione di due legami π",
+          "page_start": 155
+        },
+        {
+          "number": "6.5",
+          "title": "UV e spettro visibile",
+          "page_start": 157
+        },
+        {
+          "number": "6.6",
+          "title": "Il sistema allilico",
+          "page_start": 159
+        },
+        {
+          "number": "6.7",
+          "title": "La delocalizzazione su più di tre atomi è una comune caratteristica strutturale",
+          "page_start": 163
+        },
+        {
+          "number": "6.8",
+          "title": "Aromaticità",
+          "page_start": 165
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Acidità, basicità e pKa",
+      "page_start": 174,
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "I composti organici sono più solubili in acqua come ioni",
+          "page_start": 174
+        },
+        {
+          "number": "7.2",
+          "title": "Acidi, basi e pKa",
+          "page_start": 176
+        },
+        {
+          "number": "7.3",
+          "title": "Acidità",
+          "page_start": 176
+        },
+        {
+          "number": "7.4",
+          "title": "La definizione del pKa",
+          "page_start": 179
+        },
+        {
+          "number": "7.5",
+          "title": "Costruzione di una scala di pKa",
+          "page_start": 182
+        },
+        {
+          "number": "7.6",
+          "title": "Composti azotati come acidi e basi",
+          "page_start": 185
+        },
+        {
+          "number": "7.7",
+          "title": "I sostituenti influenzano il pKa",
+          "page_start": 187
+        },
+        {
+          "number": "7.8",
+          "title": "Atomi di carbonio acidi",
+          "page_start": 187
+        },
+        {
+          "number": "7.9",
+          "title": "Il pKa in azione - lo sviluppo del farmaco cimetidina",
+          "page_start": 189
+        },
+        {
+          "number": "7.10",
+          "title": "Basi e acidi di Lewis",
+          "page_start": 191
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Utilizzo di reagenti organometallici per formare legami C-C",
+      "page_start": 195,
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "Introduzione",
+          "page_start": 195
+        },
+        {
+          "number": "8.2",
+          "title": "I composti organometallici contengono un legame carbonio-metallo",
+          "page_start": 196
+        },
+        {
+          "number": "8.3",
+          "title": "Generare gli organometalli",
+          "page_start": 197
+        },
+        {
+          "number": "8.4",
+          "title": "L'utilizzo di organometalli per preparare molecole organiche",
+          "page_start": 202
+        },
+        {
+          "number": "8.5",
+          "title": "Ossidazione di alcoli",
+          "page_start": 207
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Sostituzioni nucleofile al gruppo carbonilico",
+      "page_start": 212,
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "Il prodotto di addizione nucleofila ad un gruppo carbonilico non è sempre un composto stabile",
+          "page_start": 212
+        },
+        {
+          "number": "9.2",
+          "title": "Acidi carbossilici e derivati",
+          "page_start": 213
+        },
+        {
+          "number": "9.3",
+          "title": "Perché gli intermedi tetraedrici sono instabili?",
+          "page_start": 215
+        },
+        {
+          "number": "9.4",
+          "title": "Non tutti i derivati degli acidi carbossilici sono ugualmente reattivi",
+          "page_start": 220
+        },
+        {
+          "number": "9.5",
+          "title": "I catalizzatori acidi aumentano la reattività del gruppo carbonilico",
+          "page_start": 222
+        },
+        {
+          "number": "9.6",
+          "title": "I cloruri degli acidi possono essere fatti da acidi carbossilici usando SOCl2 o PCl5",
+          "page_start": 229
+        },
+        {
+          "number": "9.7",
+          "title": "Ottenere altri composti per reazioni di sostituzione dei derivati degli acidi",
+          "page_start": 231
+        },
+        {
+          "number": "9.8",
+          "title": "Ottenere chetoni dagli esteri: il problema",
+          "page_start": 231
+        },
+        {
+          "number": "9.9",
+          "title": "Ottenere chetoni dagli esteri: la soluzione",
+          "page_start": 233
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Sostituzioni nucleofile al C=O con perdita dell'ossigeno carbonilico",
+      "page_start": 239,
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "Introduzione",
+          "page_start": 239
+        },
+        {
+          "number": "10.2",
+          "title": "Le aldeidi reagiscono con gli alcoli formando emiacetali",
+          "page_start": 240
+        },
+        {
+          "number": "10.3",
+          "title": "Gli acetali si formano dall'addizione di alcoli ad aldeidi o chetoni in ambiente acido",
+          "page_start": 241
+        },
+        {
+          "number": "10.4",
+          "title": "Le ammine reagiscono con i composti carbonilici",
+          "page_start": 246
+        },
+        {
+          "number": "10.5",
+          "title": "Le immine sono gli analoghi azotati dei composti carbonilici",
+          "page_start": 247
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Equilibri, velocità e meccanismi",
+      "page_start": 259,
+      "sections": [
+        {
+          "number": "11.1",
+          "title": "Quanto completa e veloce è una reazione?",
+          "page_start": 259
+        },
+        {
+          "number": "11.2",
+          "title": "Come favorire all'equilibrio il prodotto desiderato",
+          "page_start": 263
+        },
+        {
+          "number": "11.3",
+          "title": "L'entropia è importante nella determinazione delle costanti di equilibrio",
+          "page_start": 265
+        },
+        {
+          "number": "11.4",
+          "title": "Le costanti di equilibrio variano con la temperatura",
+          "page_start": 267
+        },
+        {
+          "number": "11.5",
+          "title": "Introduzione alla cinetica: come rendere una reazione più veloce ed efficiente",
+          "page_start": 269
+        },
+        {
+          "number": "11.6",
+          "title": "Equazioni di velocità",
+          "page_start": 276
+        },
+        {
+          "number": "11.7",
+          "title": "Catalisi nelle reazioni di sostituzione al gruppo carbonilico",
+          "page_start": 281
+        },
+        {
+          "number": "11.8",
+          "title": "Prodotti cinetici e termodinamici",
+          "page_start": 283
+        },
+        {
+          "number": "11.9",
+          "title": "Riassunto dei meccanismi descritti nei Capitoli 6-12",
+          "page_start": 285
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Risonanza Magnetica Nucleare 1H",
+      "page_start": 288,
+      "sections": [
+        {
+          "number": "12.1",
+          "title": "Differenze tra carbonio e protone NMR",
+          "page_start": 288
+        },
+        {
+          "number": "12.2",
+          "title": "L'integrazione fornisce il numero di idrogeni in ciascun segnale",
+          "page_start": 289
+        },
+        {
+          "number": "12.3",
+          "title": "Regioni di chemical shift dello spettro NMR al protone",
+          "page_start": 291
+        },
+        {
+          "number": "12.4",
+          "title": "Protoni su atomi di carbonio saturi",
+          "page_start": 291
+        },
+        {
+          "number": "12.5",
+          "title": "La regione degli alcheni e del benzene",
+          "page_start": 296
+        },
+        {
+          "number": "12.6",
+          "title": "La regione aldeidica: carbonio insaturo legato all'ossigeno",
+          "page_start": 300
+        },
+        {
+          "number": "12.7",
+          "title": "I protoni sugli eteroatomi hanno chemical shift più variabili dei protoni sul carbonio",
+          "page_start": 301
+        },
+        {
+          "number": "12.8",
+          "title": "Accoppiamento negli spettri NMR al protone",
+          "page_start": 303
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Stereochimica",
+      "page_start": 323,
+      "sections": [
+        {
+          "number": "13.1",
+          "title": "Alcuni composti possono esistere come coppia di immagini speculari",
+          "page_start": 323
+        },
+        {
+          "number": "13.2",
+          "title": "I diastereoisomeri sono stereoisomeri che non sono enantiomeri",
+          "page_start": 332
+        },
+        {
+          "number": "13.3",
+          "title": "Composti chirali senza centri stereogenici",
+          "page_start": 340
+        },
+        {
+          "number": "13.4",
+          "title": "Assi e centri di simmetria",
+          "page_start": 341
+        },
+        {
+          "number": "13.5",
+          "title": "La separazione degli enantiomeri si chiama \"risoluzione\"",
+          "page_start": 343
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Sostituzione nucleofila al carbonio saturo",
+      "page_start": 350,
+      "sections": [
+        {
+          "number": "14.1",
+          "title": "Meccanismo della sostituzione nucleofila",
+          "page_start": 350
+        },
+        {
+          "number": "14.2",
+          "title": "Come si può decidere quale meccanismo (SN2 o SN1) applicare ad un dato composto organico?",
+          "page_start": 354
+        },
+        {
+          "number": "14.3",
+          "title": "Un esame più approfondito della reazione SN1",
+          "page_start": 355
+        },
+        {
+          "number": "14.4",
+          "title": "Un esame più approfondito della reazione SN2",
+          "page_start": 362
+        },
+        {
+          "number": "14.5",
+          "title": "Contrasti tra SN2 e SN1",
+          "page_start": 364
+        },
+        {
+          "number": "14.6",
+          "title": "Il gruppo uscente nelle reazioni di SN1 e SN2",
+          "page_start": 369
+        },
+        {
+          "number": "14.7",
+          "title": "Il nucleofilo nelle reazioni di SN1",
+          "page_start": 374
+        },
+        {
+          "number": "14.8",
+          "title": "Il nucleofilo nelle reazioni di SN2",
+          "page_start": 375
+        },
+        {
+          "number": "14.9",
+          "title": "Nucleofili e gruppi uscenti a confronto",
+          "page_start": 379
+        },
+        {
+          "number": "14.10",
+          "title": "Guardando oltre: reazioni di eliminazione e di riarrangiamento",
+          "page_start": 380
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Analisi conformazionale",
+      "page_start": 384,
+      "sections": [
+        {
+          "number": "15.1",
+          "title": "La rotazione dei legami permette alle catene di atomi di adottare un certo numero di conformazioni",
+          "page_start": 384
+        },
+        {
+          "number": "15.2",
+          "title": "Conformazione e configurazione",
+          "page_start": 385
+        },
+        {
+          "number": "15.3",
+          "title": "Barriere che si oppongono alla rotazione",
+          "page_start": 386
+        },
+        {
+          "number": "15.4",
+          "title": "Le conformazioni dell'etano",
+          "page_start": 387
+        },
+        {
+          "number": "15.5",
+          "title": "Le conformazioni del propano",
+          "page_start": 388
+        },
+        {
+          "number": "15.6",
+          "title": "Le conformazioni del butano",
+          "page_start": 389
+        },
+        {
+          "number": "15.7",
+          "title": "La tensione di anello",
+          "page_start": 390
+        },
+        {
+          "number": "15.8",
+          "title": "Uno sguardo ravvicinato al cicloesano",
+          "page_start": 394
+        },
+        {
+          "number": "15.9",
+          "title": "I cicloesani sostituiti",
+          "page_start": 398
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Reazioni di eliminazione",
+      "page_start": 408,
+      "sections": [
+        {
+          "number": "16.1",
+          "title": "Introduzione alle reazioni di eliminazione",
+          "page_start": 408
+        },
+        {
+          "number": "16.2",
+          "title": "L'eliminazione E1",
+          "page_start": 411
+        },
+        {
+          "number": "16.3",
+          "title": "L'eliminazione E2",
+          "page_start": 414
+        },
+        {
+          "number": "16.4",
+          "title": "Aspetti stereochimici delle eliminazioni",
+          "page_start": 420
+        },
+        {
+          "number": "16.5",
+          "title": "Competizione tra eliminazione e sostituzione",
+          "page_start": 425
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Spettroscopia NMR",
+      "page_start": 431,
+      "sections": [
+        {
+          "number": "17.1",
+          "title": "Cicli piccoli introducono tensione anulare nel ciclo e aumentano il carattere s fuori da esso",
+          "page_start": 437
+        },
+        {
+          "number": "17.2",
+          "title": "Semplici calcoli della frequenza di stiramento del C=O negli spettri IR",
+          "page_start": 438
+        },
+        {
+          "number": "17.3",
+          "title": "Spettri NMR di alchini e cicli di piccole dimensioni",
+          "page_start": 439
+        },
+        {
+          "number": "17.4",
+          "title": "NMR protonico distingue protoni assiali ed equatoriali nei cicloesani",
+          "page_start": 440
+        },
+        {
+          "number": "17.5",
+          "title": "L'interazione tra nuclei differenti può dare costanti di accoppiamento enormi",
+          "page_start": 440
+        },
+        {
+          "number": "17.6",
+          "title": "Identificazione spettroscopica dei prodotti",
+          "page_start": 443
+        },
+        {
+          "number": "17.7",
+          "title": "Tabelle",
+          "page_start": 447
+        },
+        {
+          "number": "17.8",
+          "title": "Il calcolo degli spostamenti nel NMR protonico è più semplice e più utile rispetto a quello del NMR al carbonio",
+          "page_start": 450
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Addizione elettrofila agli alcheni",
+      "page_start": 457,
+      "sections": [
+        {
+          "number": "18.1",
+          "title": "Gli alcheni reagiscono con il bromo",
+          "page_start": 457
+        },
+        {
+          "number": "18.2",
+          "title": "Ossidazione di alcheni a epossidi",
+          "page_start": 459
+        },
+        {
+          "number": "18.3",
+          "title": "L'addizione elettrofila di alcheni asimmetrici è regioselettiva",
+          "page_start": 462
+        },
+        {
+          "number": "18.4",
+          "title": "Addizione elettrofila ai dieni",
+          "page_start": 464
+        },
+        {
+          "number": "18.5",
+          "title": "Gli ioni bromonio asimmetrici si aprono in maniera regioselettiva",
+          "page_start": 465
+        },
+        {
+          "number": "18.6",
+          "title": "L'addizione elettrofila agli alcheni può essere stereospecifica",
+          "page_start": 468
+        },
+        {
+          "number": "18.7",
+          "title": "Addizione di due gruppi ossidrilici: diidrossilazione",
+          "page_start": 470
+        },
+        {
+          "number": "18.8",
+          "title": "Rompere completamente un doppio legame: scissione con il periodato e ozonolisi",
+          "page_start": 471
+        },
+        {
+          "number": "18.9",
+          "title": "Aggiungere un gruppo ossidrilico: come addizionare una molecola d'acqua ad un doppio legame",
+          "page_start": 472
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Preparazione e reattività di enoli ed enolati",
+      "page_start": 478,
+      "sections": [
+        {
+          "number": "19.1",
+          "title": "Accettereste una miscela di composti come una sostanza pura?",
+          "page_start": 478
+        },
+        {
+          "number": "19.2",
+          "title": "Enoli ed enolati",
+          "page_start": 480
+        },
+        {
+          "number": "19.3",
+          "title": "Reattività degli enoli e degli enolati",
+          "page_start": 485
+        },
+        {
+          "number": "19.4",
+          "title": "Enolizzazione catalizzata da acidi e basi",
+          "page_start": 490
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Sostituzione elettrofila aromatica",
+      "page_start": 505,
+      "sections": [
+        {
+          "number": "20.1",
+          "title": "Introduzione alla sostituzione elettrofila aromatica",
+          "page_start": 505
+        },
+        {
+          "number": "20.2",
+          "title": "Sostituzione elettrofila sul fenolo",
+          "page_start": 508
+        },
+        {
+          "number": "20.3",
+          "title": "Il doppietto elettronico dell'azoto attiva ancora più fortemente",
+          "page_start": 511
+        },
+        {
+          "number": "20.4",
+          "title": "Anche gli alchil benzeni reagiscono in posizione orto e para",
+          "page_start": 513
+        },
+        {
+          "number": "20.5",
+          "title": "Sostituenti elettronattrattori originano prodotti meta",
+          "page_start": 516
+        },
+        {
+          "number": "20.6",
+          "title": "Gli alogeni mostrano evidenze degli effetti elettronici attrattore e donatore",
+          "page_start": 518
+        },
+        {
+          "number": "20.7",
+          "title": "Due o più sostituenti possono cooperare o competere",
+          "page_start": 520
+        },
+        {
+          "number": "20.8",
+          "title": "Alcuni svantaggi e vantaggi",
+          "page_start": 521
+        },
+        {
+          "number": "20.9",
+          "title": "Uno sguardo ravvicinato alle reazioni di Friedel-Crafts",
+          "page_start": 521
+        },
+        {
+          "number": "20.10",
+          "title": "Sfruttare la chimica del nitro gruppo",
+          "page_start": 523
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "title": "Addizioni coniugate e sostituzioni nucleofile aromatiche",
+      "page_start": 530,
+      "sections": [
+        {
+          "number": "21.1",
+          "title": "Alcheni coniugati con gruppi carbonilici",
+          "page_start": 530
+        },
+        {
+          "number": "21.2",
+          "title": "Gli alcheni coniugati possono essere elettrofili",
+          "page_start": 531
+        },
+        {
+          "number": "21.3",
+          "title": "Sommario: fattori che controllano l'addizione coniugata",
+          "page_start": 541
+        },
+        {
+          "number": "21.4",
+          "title": "Estendiamo la reazione ad altri alcheni elettron-poveri",
+          "page_start": 542
+        },
+        {
+          "number": "21.5",
+          "title": "Reazioni di sostituzione coniugata",
+          "page_start": 543
+        },
+        {
+          "number": "21.6",
+          "title": "Epossidazione nucleofila",
+          "page_start": 545
+        },
+        {
+          "number": "21.7",
+          "title": "Sostituzione nucleofila aromatica",
+          "page_start": 546
+        },
+        {
+          "number": "21.8",
+          "title": "Il meccanismo di addizione-eliminazione",
+          "page_start": 547
+        },
+        {
+          "number": "21.9",
+          "title": "Il meccanismo SN1 per la sostituzione nucleofila aromatica: sali di diazonio",
+          "page_start": 552
+        },
+        {
+          "number": "21.10",
+          "title": "Il meccanismo via benzino",
+          "page_start": 555
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "title": "Chemoselettività e gruppi protettori",
+      "page_start": 562,
+      "sections": [
+        {
+          "number": "22.1",
+          "title": "Selettività",
+          "page_start": 562
+        },
+        {
+          "number": "22.2",
+          "title": "Agenti riducenti",
+          "page_start": 564
+        },
+        {
+          "number": "22.3",
+          "title": "Riduzione di gruppi carbonilici",
+          "page_start": 564
+        },
+        {
+          "number": "22.4",
+          "title": "Idrogeno come agente di riduzione: l'idrogenazione catalitica",
+          "page_start": 568
+        },
+        {
+          "number": "22.5",
+          "title": "Rimozione di gruppi funzionali",
+          "page_start": 573
+        },
+        {
+          "number": "22.6",
+          "title": "Riduzione a dissoluzione di metalli",
+          "page_start": 575
+        },
+        {
+          "number": "22.7",
+          "title": "Selettività nelle reazioni di ossidazione",
+          "page_start": 578
+        },
+        {
+          "number": "22.8",
+          "title": "Reattività competitiva: scegliere quale gruppo reagisce",
+          "page_start": 580
+        },
+        {
+          "number": "22.9",
+          "title": "Una rassegna dei gruppi protettori",
+          "page_start": 583
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "title": "Regioselettività",
+      "page_start": 597,
+      "sections": [
+        {
+          "number": "23.1",
+          "title": "Introduzione",
+          "page_start": 597
+        },
+        {
+          "number": "23.2",
+          "title": "Regioselettività nelle sostituzioni elettrofile aromatiche",
+          "page_start": 598
+        },
+        {
+          "number": "23.3",
+          "title": "Attacco elettrofilico su alcheni",
+          "page_start": 605
+        },
+        {
+          "number": "23.4",
+          "title": "Regioselettività nelle reazioni radicaliche",
+          "page_start": 606
+        },
+        {
+          "number": "23.5",
+          "title": "Attacco nucleofilico su composti allilici",
+          "page_start": 609
+        },
+        {
+          "number": "23.6",
+          "title": "Attacco elettrofilico su dieni coniugati",
+          "page_start": 614
+        },
+        {
+          "number": "23.7",
+          "title": "Addizioni coniugate",
+          "page_start": 616
+        },
+        {
+          "number": "23.8",
+          "title": "Regioselettività in azione",
+          "page_start": 617
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "title": "Alchilazione di enolati",
+      "page_start": 621,
+      "sections": [
+        {
+          "number": "24.1",
+          "title": "I gruppi carbonilici mostrano diverse reattività",
+          "page_start": 621
+        },
+        {
+          "number": "24.2",
+          "title": "Alcune importanti considerazioni che influiscono su tutte le alchilazioni",
+          "page_start": 621
+        },
+        {
+          "number": "24.3",
+          "title": "Nitrili e nitroalcani possono essere alchilati",
+          "page_start": 622
+        },
+        {
+          "number": "24.4",
+          "title": "Scelta dell'elettrofilo per l'alchilazione",
+          "page_start": 624
+        },
+        {
+          "number": "24.5",
+          "title": "Enolati di litio di composti carbonilici",
+          "page_start": 624
+        },
+        {
+          "number": "24.6",
+          "title": "Alchilazione degli enolati di litio",
+          "page_start": 625
+        },
+        {
+          "number": "24.7",
+          "title": "Equivalenti specifici di enolati per l'alchilazione di aldeidi e chetoni",
+          "page_start": 628
+        },
+        {
+          "number": "24.8",
+          "title": "Alchilazione di composti β-dicarbonilici",
+          "page_start": 632
+        },
+        {
+          "number": "24.9",
+          "title": "L'alchilazione di chetoni pone problemi di regioselettività",
+          "page_start": 635
+        },
+        {
+          "number": "24.10",
+          "title": "Gli enoni forniscono la soluzione a problemi di regioselettività",
+          "page_start": 638
+        },
+        {
+          "number": "24.11",
+          "title": "Accettori di tipo Michael come elettrofili",
+          "page_start": 642
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "title": "Le reazioni degli enolati con i composti carbonilici: la reazione aldolica e la reazione di Claisen",
+      "page_start": 653,
+      "sections": [
+        {
+          "number": "25.1",
+          "title": "Introduzione",
+          "page_start": 653
+        },
+        {
+          "number": "25.2",
+          "title": "La reazione aldolica",
+          "page_start": 654
+        },
+        {
+          "number": "25.3",
+          "title": "Per controllare le reazioni aldoliche si possono usare speciali equivalenti di enoli",
+          "page_start": 663
+        },
+        {
+          "number": "25.4",
+          "title": "Come controllare le reazioni aldoliche di esteri",
+          "page_start": 670
+        },
+        {
+          "number": "25.5",
+          "title": "Come controllare le reazioni aldoliche delle aldeidi",
+          "page_start": 671
+        },
+        {
+          "number": "25.6",
+          "title": "Come controllare le reazioni aldoliche dei chetoni",
+          "page_start": 673
+        },
+        {
+          "number": "25.7",
+          "title": "Reazioni aldoliche intramolecolari",
+          "page_start": 675
+        },
+        {
+          "number": "25.8",
+          "title": "Acilazione al carbonio",
+          "page_start": 679
+        },
+        {
+          "number": "25.9",
+          "title": "Condensazioni di esteri incrociate",
+          "page_start": 682
+        },
+        {
+          "number": "25.10",
+          "title": "Riepilogo delle preparazioni di chetoesteri mediante reazione di Claisen",
+          "page_start": 686
+        },
+        {
+          "number": "25.11",
+          "title": "Controllare l'acilazione con specifici equivalenti enolici",
+          "page_start": 687
+        },
+        {
+          "number": "25.12",
+          "title": "Le condensazioni di Claisen incrociate intramolecolari",
+          "page_start": 691
+        },
+        {
+          "number": "25.13",
+          "title": "La chimica dei carbonili - il prossimo passo?",
+          "page_start": 693
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "title": "Zolfo, silicio e fosforo in chimica organica",
+      "page_start": 697,
+      "sections": [
+        {
+          "number": "26.1",
+          "title": "Elementi utili dei gruppi principali",
+          "page_start": 697
+        },
+        {
+          "number": "26.2",
+          "title": "Lo zolfo: un elemento contraddittorio",
+          "page_start": 697
+        },
+        {
+          "number": "26.3",
+          "title": "Anioni stabilizzati dallo zolfo",
+          "page_start": 701
+        },
+        {
+          "number": "26.4",
+          "title": "I sali di solfonio",
+          "page_start": 705
+        },
+        {
+          "number": "26.5",
+          "title": "Le ilidi di solfonio",
+          "page_start": 706
+        },
+        {
+          "number": "26.6",
+          "title": "Confronto tra silicio e carbonio",
+          "page_start": 709
+        },
+        {
+          "number": "26.7",
+          "title": "I silani allilici sono nucleofili",
+          "page_start": 716
+        },
+        {
+          "number": "26.8",
+          "title": "La sintesi selettiva degli alcheni",
+          "page_start": 718
+        },
+        {
+          "number": "26.9",
+          "title": "Le proprietà degli alcheni dipendono dalla loro geometria",
+          "page_start": 718
+        },
+        {
+          "number": "26.10",
+          "title": "Sfruttare i composti ciclici",
+          "page_start": 719
+        },
+        {
+          "number": "26.11",
+          "title": "L'equilibrio degli alcheni",
+          "page_start": 720
+        },
+        {
+          "number": "26.12",
+          "title": "Gli alcheni E e Z possono essere prodotti per addizione stereoselettiva agli alchini",
+          "page_start": 722
+        },
+        {
+          "number": "26.13",
+          "title": "Gli alcheni E possono essere formati in modo predominante attraverso reazioni di eliminazione stereoselettive",
+          "page_start": 725
+        },
+        {
+          "number": "26.14",
+          "title": "L'olefinazione di Julia è regiospecifica e connettiva",
+          "page_start": 727
+        },
+        {
+          "number": "26.15",
+          "title": "L'eliminazione stereospecifica può dare isomeri puri di alcheni",
+          "page_start": 729
+        },
+        {
+          "number": "26.16",
+          "title": "Forse il modo più importante di fare alcheni: la reazione di Wittig",
+          "page_start": 730
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "title": "Analisi retrosintetica",
+      "page_start": 738,
+      "sections": [
+        {
+          "number": "27.1",
+          "title": "Chimica creativa",
+          "page_start": 738
+        },
+        {
+          "number": "27.2",
+          "title": "Le disconnessioni devono corrispondere a reazioni note e affidabili",
+          "page_start": 739
+        },
+        {
+          "number": "27.3",
+          "title": "I sintoni sono dei reagenti ideali",
+          "page_start": 739
+        },
+        {
+          "number": "27.4",
+          "title": "Sintesi multistadio: evitare i problemi di chemoselettività",
+          "page_start": 742
+        },
+        {
+          "number": "27.5",
+          "title": "Interconversione del gruppo funzionale",
+          "page_start": 743
+        },
+        {
+          "number": "27.6",
+          "title": "Le disconnessioni su due gruppi funzionali sono preferibili rispetto a quelle prossime a un unico gruppo",
+          "page_start": 746
+        },
+        {
+          "number": "27.7",
+          "title": "Le disconnessioni C-C",
+          "page_start": 750
+        },
+        {
+          "number": "27.8",
+          "title": "Materiali di partenza a disposizione",
+          "page_start": 755
+        },
+        {
+          "number": "27.9",
+          "title": "Sintoni donatori e accettori",
+          "page_start": 756
+        },
+        {
+          "number": "27.10",
+          "title": "Disconnessioni C-C di due gruppi",
+          "page_start": 756
+        },
+        {
+          "number": "27.11",
+          "title": "Gruppi funzionali con una relazione 1,5",
+          "page_start": 763
+        },
+        {
+          "number": "27.12",
+          "title": "\"Reattività naturale\" e \"umpolung\"",
+          "page_start": 763
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "title": "Eterocicli aromatici 1: reazioni",
+      "page_start": 769,
+      "sections": [
+        {
+          "number": "28.1",
+          "title": "Introduzione",
+          "page_start": 769
+        },
+        {
+          "number": "28.2",
+          "title": "L'aromaticità persiste quando parti dell'anello del benzene sono sostituite con atomi di azoto",
+          "page_start": 770
+        },
+        {
+          "number": "28.3",
+          "title": "La piridina è una immina aromatica poco reattiva",
+          "page_start": 771
+        },
+        {
+          "number": "28.4",
+          "title": "Gli eterocicli aromatici a sei termini possono contenere ossigeno nell'anello",
+          "page_start": 778
+        },
+        {
+          "number": "28.5",
+          "title": "Gli eterocicli aromatici a cinque termini sono validi substrati per la sostituzione elettrofila",
+          "page_start": 779
+        },
+        {
+          "number": "28.6",
+          "title": "Furano e tiofene sono gli analoghi ossigenato e solforato del pirrolo",
+          "page_start": 781
+        },
+        {
+          "number": "28.7",
+          "title": "Altre reazioni degli eterocicli a cinque termini",
+          "page_start": 784
+        },
+        {
+          "number": "28.8",
+          "title": "Anelli a cinque termini con due o più atomi di azoto",
+          "page_start": 786
+        },
+        {
+          "number": "28.9",
+          "title": "Eterocicli benzo-fusi",
+          "page_start": 791
+        },
+        {
+          "number": "28.10",
+          "title": "Inserimento di più atomi di azoto in un anello a sei termini",
+          "page_start": 794
+        },
+        {
+          "number": "28.11",
+          "title": "Anelli fusi con la piridina: chinoline e isochinoline",
+          "page_start": 795
+        },
+        {
+          "number": "28.12",
+          "title": "Gli eterocicli aromatici possono avere in ciascun anello molti atomi di azoto ma un solo atomo di zolfo o di ossigeno",
+          "page_start": 797
+        },
+        {
+          "number": "28.13",
+          "title": "Esistono migliaia di altri eterocicli",
+          "page_start": 799
+        },
+        {
+          "number": "28.14",
+          "title": "Quali strutture eterocicliche bisogna imparare?",
+          "page_start": 800
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "title": "Eterocicli aromatici 2: sintesi",
+      "page_start": 805,
+      "sections": [
+        {
+          "number": "29.1",
+          "title": "La termodinamica è dalla nostra parte",
+          "page_start": 806
+        },
+        {
+          "number": "29.2",
+          "title": "Disconnettiamo dapprima i legami carbonio-eteroatomo",
+          "page_start": 806
+        },
+        {
+          "number": "29.3",
+          "title": "Pirroli, tiofeni e furani da composti 1,4-dicarbonilici",
+          "page_start": 808
+        },
+        {
+          "number": "29.4",
+          "title": "Come preparare le piridine: sintesi di Hantzsch della piridina",
+          "page_start": 811
+        },
+        {
+          "number": "29.5",
+          "title": "Pirazoli e piridazine da idrazina e composti dicarbonilici",
+          "page_start": 815
+        },
+        {
+          "number": "29.6",
+          "title": "Le pirimidine si possono preparare da composti 1,3-dicarbonilici e ammidine",
+          "page_start": 818
+        },
+        {
+          "number": "29.7",
+          "title": "I nucleofili non simmetrici pongono problemi di selettività",
+          "page_start": 819
+        },
+        {
+          "number": "29.8",
+          "title": "Gli isossazoli si preparano da idrossilammina o mediante cicloaddizione",
+          "page_start": 820
+        },
+        {
+          "number": "29.9",
+          "title": "I tetrazoli e i triazoli si preparano anch'essi mediante reazioni di cicloaddizione",
+          "page_start": 822
+        },
+        {
+          "number": "29.10",
+          "title": "La sintesi di Fischer degli indoli",
+          "page_start": 823
+        },
+        {
+          "number": "29.11",
+          "title": "Chinoline e isochinoline",
+          "page_start": 828
+        },
+        {
+          "number": "29.12",
+          "title": "Più eteroatomi negli anelli fusi significa scelta più ampia nella sintesi",
+          "page_start": 832
+        },
+        {
+          "number": "29.13",
+          "title": "Riassunto: i tre approcci principali per la sintesi degli eterocicli aromatici",
+          "page_start": 833
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "title": "Eterocicli saturi ed effetti stereoelettronici",
+      "page_start": 839,
+      "sections": [
+        {
+          "number": "30.1",
+          "title": "Introduzione",
+          "page_start": 839
+        },
+        {
+          "number": "30.2",
+          "title": "Reazioni degli eterocicli saturi",
+          "page_start": 840
+        },
+        {
+          "number": "30.3",
+          "title": "Conformazione degli eterocicli saturi",
+          "page_start": 846
+        },
+        {
+          "number": "30.4",
+          "title": "Determinare la stereochimica quando le costanti di accoppiamento non sono di aiuto: l'effetto nucleare Overhauser",
+          "page_start": 849
+        },
+        {
+          "number": "30.5",
+          "title": "Sintetizzare gli eterocicli: le reazioni di chiusura di anello",
+          "page_start": 855
+        },
+        {
+          "number": "30.6",
+          "title": "Dimensioni di anello e NMR",
+          "page_start": 864
+        },
+        {
+          "number": "30.7",
+          "title": "Accoppiamento geminale (2J)",
+          "page_start": 867
+        },
+        {
+          "number": "30.8",
+          "title": "Gruppi diastereotopici",
+          "page_start": 870
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "title": "Stereoselettività nelle molecole cicliche",
+      "page_start": 878,
+      "sections": [
+        {
+          "number": "31.1",
+          "title": "Introduzione",
+          "page_start": 878
+        },
+        {
+          "number": "31.2",
+          "title": "Controllo stereochimico negli anelli a sei termini",
+          "page_start": 879
+        },
+        {
+          "number": "31.3",
+          "title": "Reazioni di anelli piccoli",
+          "page_start": 885
+        },
+        {
+          "number": "31.4",
+          "title": "Controllo regiochimico negli epossidi del cicloesene",
+          "page_start": 889
+        },
+        {
+          "number": "31.5",
+          "title": "Stereoselettività nei composti biciclici",
+          "page_start": 892
+        },
+        {
+          "number": "31.6",
+          "title": "Composti biciclici fusi",
+          "page_start": 894
+        },
+        {
+          "number": "31.7",
+          "title": "Composti spirociclici",
+          "page_start": 899
+        },
+        {
+          "number": "31.8",
+          "title": "Reazioni con intermedi ciclici o stati di transizione ciclici",
+          "page_start": 900
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "title": "Diastereoselettività",
+      "page_start": 908,
+      "sections": [
+        {
+          "number": "32.1",
+          "title": "Uno sguardo a quanto fatto",
+          "page_start": 908
+        },
+        {
+          "number": "32.2",
+          "title": "Prochiralit à",
+          "page_start": 912
+        },
+        {
+          "number": "32.3",
+          "title": "Le addizioni ai gruppi carbonilici possono essere diastereoselettive anche senza anelli",
+          "page_start": 914
+        },
+        {
+          "number": "32.4",
+          "title": "Reazioni stereoselettive di alcheni aciclici",
+          "page_start": 921
+        },
+        {
+          "number": "32.5",
+          "title": "Le reazioni aldoliche possono essere stereoselettive",
+          "page_start": 924
+        },
+        {
+          "number": "32.6",
+          "title": "Singoli enantiomeri da reazioni diastereoselettive",
+          "page_start": 927
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "title": "Reazioni pericicliche 1: cicloaddizioni",
+      "page_start": 935,
+      "sections": [
+        {
+          "number": "33.1",
+          "title": "Un nuovo tipo di reazione",
+          "page_start": 935
+        },
+        {
+          "number": "33.2",
+          "title": "Descrizione generale della reazione di Diels-Alder",
+          "page_start": 937
+        },
+        {
+          "number": "33.3",
+          "title": "Il diene",
+          "page_start": 937
+        },
+        {
+          "number": "33.4",
+          "title": "Descrizione delle cicloaddizioni con gli orbitali di frontiera",
+          "page_start": 944
+        },
+        {
+          "number": "33.5",
+          "title": "La regioselettività nelle reazioni di Diels-Alder",
+          "page_start": 947
+        },
+        {
+          "number": "33.6",
+          "title": "La descrizione di Woodward-Hoffmann della reazione di Diels-Alder",
+          "page_start": 950
+        },
+        {
+          "number": "33.7",
+          "title": "L'intrappolamento di intermedi reattivi per mezzo di cicloaddizioni",
+          "page_start": 951
+        },
+        {
+          "number": "33.8",
+          "title": "Altre cicloaddizioni termiche",
+          "page_start": 952
+        },
+        {
+          "number": "33.9",
+          "title": "Cicloaddizioni fotochimiche [2 + 2]",
+          "page_start": 954
+        },
+        {
+          "number": "33.10",
+          "title": "Cicloaddizioni termiche [2 + 2]",
+          "page_start": 956
+        },
+        {
+          "number": "33.11",
+          "title": "Come ottenere anelli a cinque termini: le cicloaddizioni 1,3-dipolari",
+          "page_start": 959
+        },
+        {
+          "number": "33.12",
+          "title": "Due reazioni molto importanti sotto l'aspetto sintetico: le cicloaddizioni degli alcheni con tetrossido di osmio e con ozono",
+          "page_start": 963
+        },
+        {
+          "number": "33.13",
+          "title": "Riassunto delle reazioni di cicloaddizione",
+          "page_start": 965
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "title": "Reazioni pericicliche 2: reazioni sigmatropiche ed elettrocicliche",
+      "page_start": 969,
+      "sections": [
+        {
+          "number": "34.1",
+          "title": "Trasposizioni sigmatropiche",
+          "page_start": 969
+        },
+        {
+          "number": "34.2",
+          "title": "Descrizione orbitalica delle trasposizioni [3,3]-sigmatropiche",
+          "page_start": 972
+        },
+        {
+          "number": "34.3",
+          "title": "La direzione delle trasposizioni [3,3]-sigmatropiche",
+          "page_start": 973
+        },
+        {
+          "number": "34.4",
+          "title": "Trasposizioni [2,3]-sigmatropiche",
+          "page_start": 977
+        },
+        {
+          "number": "34.5",
+          "title": "Shift [1,5]-sigmatropici di idrogeno",
+          "page_start": 979
+        },
+        {
+          "number": "34.6",
+          "title": "Reazioni elettrocicliche",
+          "page_start": 982
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "title": "Reazioni di partecipazione, riarrangiamento e frammentazione",
+      "page_start": 994,
+      "sections": [
+        {
+          "number": "35.1",
+          "title": "I gruppi vicinali possono accelerare le reazioni di sostituzione",
+          "page_start": 994
+        },
+        {
+          "number": "35.2",
+          "title": "I riarrangiamenti si verificano quando un gruppo partecipante migra da un atomo di carbonio ad un altro",
+          "page_start": 1000
+        },
+        {
+          "number": "35.3",
+          "title": "I carbocationi riarrangiano rapidamente",
+          "page_start": 1003
+        },
+        {
+          "number": "35.4",
+          "title": "Il riarrangiamento pinacolico",
+          "page_start": 1008
+        },
+        {
+          "number": "35.5",
+          "title": "Il riarrangiamento dienone-fenolo",
+          "page_start": 1012
+        },
+        {
+          "number": "35.6",
+          "title": "Il riarrangiamento dell'acido benzilico",
+          "page_start": 1013
+        },
+        {
+          "number": "35.7",
+          "title": "Il riarrangiamento di Favorskii",
+          "page_start": 1013
+        },
+        {
+          "number": "35.8",
+          "title": "La migrazione verso l'ossigeno: la reazione di Baeyer-Villiger",
+          "page_start": 1016
+        },
+        {
+          "number": "35.9",
+          "title": "Il riarrangiamento di Beckmann",
+          "page_start": 1021
+        },
+        {
+          "number": "35.10",
+          "title": "La polarizzazione dei legami C-C favorisce la frammentazione",
+          "page_start": 1023
+        },
+        {
+          "number": "35.11",
+          "title": "Le reazioni di frammentazione sono controllate dalla stereochimica",
+          "page_start": 1025
+        },
+        {
+          "number": "35.12",
+          "title": "Espansione d'anello via frammentazione",
+          "page_start": 1026
+        },
+        {
+          "number": "35.13",
+          "title": "Il controllo dei doppi legami usando la frammentazione",
+          "page_start": 1028
+        },
+        {
+          "number": "35.14",
+          "title": "La sintesi del nootkatone: un caso esemplare di frammentazione",
+          "page_start": 1029
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "title": "Reazioni radicaliche",
+      "page_start": 1037,
+      "sections": [
+        {
+          "number": "36.1",
+          "title": "I radicali possiedono elettroni spaiati",
+          "page_start": 1037
+        },
+        {
+          "number": "36.2",
+          "title": "I radicali si formano per omolisi di legami deboli",
+          "page_start": 1038
+        },
+        {
+          "number": "36.3",
+          "title": "La maggior parte dei radicali è estremamente reattiva...",
+          "page_start": 1041
+        },
+        {
+          "number": "36.4",
+          "title": "Come analizzare le strutture dei radicali: spettroscopia di risonanza di spin elettronico",
+          "page_start": 1042
+        },
+        {
+          "number": "36.5",
+          "title": "Stabilità dei radicali",
+          "page_start": 1044
+        },
+        {
+          "number": "36.6",
+          "title": "Come reagiscono i radicali?",
+          "page_start": 1047
+        },
+        {
+          "number": "36.7",
+          "title": "Reazioni radicale-radicale",
+          "page_start": 1047
+        },
+        {
+          "number": "36.8",
+          "title": "Le reazioni radicaliche a catena",
+          "page_start": 1051
+        },
+        {
+          "number": "36.9",
+          "title": "Clorurazione di alcani",
+          "page_start": 1053
+        },
+        {
+          "number": "36.10",
+          "title": "Bromurazione allilica",
+          "page_start": 1056
+        },
+        {
+          "number": "36.11",
+          "title": "Invertire la selettività: sostituzione radicalica di Br con H",
+          "page_start": 1057
+        },
+        {
+          "number": "36.12",
+          "title": "La formazione del legame carbonio-carbonio con i radicali",
+          "page_start": 1059
+        },
+        {
+          "number": "36.13",
+          "title": "L'andamento di reattività dei radicali è abbastanza diverso da quello dei reagenti polari",
+          "page_start": 1064
+        },
+        {
+          "number": "36.14",
+          "title": "Radicali alchilici da borani e ossigeno",
+          "page_start": 1065
+        },
+        {
+          "number": "36.15",
+          "title": "Le reazioni radicaliche intramolecolari sono più efficienti di quelle intermolecolari",
+          "page_start": 1066
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "title": "Sintesi e reazioni dei carbeni",
+      "page_start": 1073,
+      "sections": [
+        {
+          "number": "37.1",
+          "title": "Il diazometano promuove la sintesi di esteri metilici a partire da acidi carbossilici",
+          "page_start": 1073
+        },
+        {
+          "number": "37.2",
+          "title": "La fotolisi del diazometano produce un carbene",
+          "page_start": 1075
+        },
+        {
+          "number": "37.3",
+          "title": "Come sappiamo che i carbeni esistono?",
+          "page_start": 1076
+        },
+        {
+          "number": "37.4",
+          "title": "Strategie per sintetizzare i carbeni",
+          "page_start": 1076
+        },
+        {
+          "number": "37.5",
+          "title": "I carbeni possono essere suddivisi in due categorie",
+          "page_start": 1080
+        },
+        {
+          "number": "37.6",
+          "title": "In che modo reagiscono i carbeni?",
+          "page_start": 1083
+        },
+        {
+          "number": "37.7",
+          "title": "I carbeni reagiscono con gli alcheni per produrre ciclopropani",
+          "page_start": 1083
+        },
+        {
+          "number": "37.8",
+          "title": "Inserzione in un legame C-H",
+          "page_start": 1088
+        },
+        {
+          "number": "37.9",
+          "title": "Reazioni di riarrangiamento",
+          "page_start": 1090
+        },
+        {
+          "number": "37.10",
+          "title": "I nitreni sono analoghi azotati dei carbeni",
+          "page_start": 1092
+        },
+        {
+          "number": "37.11",
+          "title": "Metatesi di alcheni",
+          "page_start": 1093
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "title": "Determinare il meccanismo di reazione",
+      "page_start": 1101,
+      "sections": [
+        {
+          "number": "38.1",
+          "title": "Ci sono meccanismi e meccanismi",
+          "page_start": 1101
+        },
+        {
+          "number": "38.2",
+          "title": "Evidenze sperimentali per i meccanismi di reazione",
+          "page_start": 1105
+        },
+        {
+          "number": "38.3",
+          "title": "Studi cinetici",
+          "page_start": 1110
+        },
+        {
+          "number": "38.4",
+          "title": "Effetti isotopici",
+          "page_start": 1115
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "title": "Reazioni catalizzate da metalli di transizione",
+      "page_start": 1147,
+      "sections": [
+        {
+          "number": "39.1",
+          "title": "Cross-coupling di alcheni con un alogenuro o triflato e un alchene",
+          "page_start": 1154
+        },
+        {
+          "number": "39.2",
+          "title": "Cross-coupling di composti organometallici e alogenuri",
+          "page_start": 1157
+        },
+        {
+          "number": "39.3",
+          "title": "I composti elettrofili allilici sono attivati dal palladio(0)",
+          "page_start": 1163
+        },
+        {
+          "number": "39.4",
+          "title": "L'amminazione di anelli aromatici può essere catalizzata da palladio",
+          "page_start": 1167
+        },
+        {
+          "number": "39.5",
+          "title": "Gli alcheni coordinati al palladio(II) vengono attaccati dai nucleofili",
+          "page_start": 1171
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "title": "Sintesi asimmetrica",
+      "page_start": 1179,
+      "sections": [
+        {
+          "number": "40.1",
+          "title": "La natura è asimmetrica",
+          "page_start": 1179
+        },
+        {
+          "number": "40.2",
+          "title": "La riserva chirale: i centri stereogenici naturali \"pronti all'uso\"",
+          "page_start": 1181
+        },
+        {
+          "number": "40.3",
+          "title": "La risoluzione di una miscela racemica può essere utilizzata per separare gli enantiomeri",
+          "page_start": 1183
+        },
+        {
+          "number": "40.4",
+          "title": "Ausiliari chirali",
+          "page_start": 1188
+        },
+        {
+          "number": "40.5",
+          "title": "Catalisi asimmetrica",
+          "page_start": 1195
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "title": "Determinazione della struttura di prodotti naturali",
+      "page_start": 1213,
+      "sections": [
+        {
+          "number": "41.1",
+          "title": "Prodotti naturali - cosa sono e perché studiarli",
+          "page_start": 1213
+        },
+        {
+          "number": "41.2",
+          "title": "Determinazione strutturale classica",
+          "page_start": 1218
+        },
+        {
+          "number": "41.3",
+          "title": "Determinazione strutturale moderna",
+          "page_start": 1225
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "title": "Chimica dei prodotti naturali",
+      "page_start": 1238,
+      "sections": [
+        {
+          "number": "42.1",
+          "title": "Classi di prodotti naturali",
+          "page_start": 1238
+        },
+        {
+          "number": "42.2",
+          "title": "I terpeni sono i costituenti volatili delle piante",
+          "page_start": 1245
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "title": "La chimica organica ai giorni nostri",
+      "page_start": 1253,
+      "sections": [
+        {
+          "number": "43.1",
+          "title": "I progressi della scienza attraverso l'interazione tra le discipline",
+          "page_start": 1253
+        },
+        {
+          "number": "43.2",
+          "title": "La chimica contro i virus",
+          "page_start": 1254
+        },
+        {
+          "number": "43.3",
+          "title": "Il futuro della chimica organica",
+          "page_start": 1263
+        }
+      ]
+    }
+  ]
+}

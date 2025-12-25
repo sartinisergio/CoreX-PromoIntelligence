@@ -1,0 +1,452 @@
+{
+  "framework": {
+    "name": "Framework Unico Valutazione Analisi Matematica 1 - STEM",
+    "version": "1.0",
+    "description": "Framework integrato per valutare allineamento tra programmi di Analisi Matematica 1 universitaria e manuali di testo, per contesti Fisica/Chimica/Matematica/Ingegneria.",
+    "date": "2025-12-15"
+  },
+  "scale": {
+    "1": "livello minimo/assente",
+    "2": "livello molto basso/sporadico",
+    "3": "livello moderato/base",
+    "4": "livello alto/articolato",
+    "5": "livello massimo/avanzato"
+  },
+  "syllabus_modules": [
+    {
+      "id": 1,
+      "name": "Insiemi numerici e funzioni",
+      "core_contents": [
+        "Numeri reali, complessi, insiemi",
+        "Funzioni iniettive/suriettive, funzioni composte",
+        "Funzioni elementari (polinomiali, razionali, trig, esponenziali)",
+        "Disuguaglianze e valori assoluti"
+      ],
+      "learning_outcomes": [
+        "Comprendere insiemi numerici",
+        "Analizzare funzioni reali",
+        "Manipolare disuguaglianze"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Successioni",
+      "core_contents": [
+        "Definizione, operazioni, monotonia",
+        "Limiti successioni, teorema Cesaro",
+        "Successioni ricorsive",
+        "Serie numeriche convergenza"
+      ],
+      "learning_outcomes": [
+        "Studiare convergenza successioni",
+        "Applicare teorema Cesaro",
+        "Analizzare serie numeriche"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Limiti e continuità",
+      "core_contents": [
+        "Definizione limite, teorema dei due poliziotti",
+        "Continuità funzioni, teoremi Bolzano-Weierstrass",
+        "Operazioni limiti, indeterminate",
+        "Limiti laterali, funzioni continue per tratti"
+      ],
+      "learning_outcomes": [
+        "Calcolare limiti complessi",
+        "Verificare continuità",
+        "Applicare teoremi fondamentali"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Derivate",
+      "core_contents": [
+        "Definizione derivata, interpretazione geometrica",
+        "Derivate funzioni elementari",
+        "Regole derivazione (prodotto, quoziente, catena)",
+        "Derivate superiori, accelerazione"
+      ],
+      "learning_outcomes": [
+        "Calcolare derivate complesse",
+        "Applicare regole derivazione",
+        "Interpretare derivate fisicamente"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Applicazioni derivate",
+      "core_contents": [
+        "Teorema Rolle, Lagrange, valori medi",
+        "Massimi/minimi, convessità, flessioni",
+        "Teorema L'Hôpital",
+        "Studio asintoti obliqui"
+      ],
+      "learning_outcomes": [
+        "Ottimizzare funzioni",
+        "Studiare comportamento asintotico",
+        "Applicare teoremi valori medi"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Integrali indefiniti",
+      "core_contents": [
+        "Antiderivate, tavole integrative",
+        "Integrazione per parti",
+        "Sostituzioni, frazioni parziali",
+        "Integrazioni ridotte"
+      ],
+      "learning_outcomes": [
+        "Integrare funzioni razionali",
+        "Applicare integrazione per parti",
+        "Risoluzione integrali complessi"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Integrali definiti",
+      "core_contents": [
+        "Definizione Riemann, proprietà integrali",
+        "Teorema fondamentale calcolo",
+        "Metodo trapezi, Simpson",
+        "Applicazioni geometriche/aree/volumi"
+      ],
+      "learning_outcomes": [
+        "Calcolare integrali definiti",
+        "Applicare teorema fondamentale",
+        "Stime numeriche integrali"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Equazioni differenziali",
+      "core_contents": [
+        "ED separabili, lineari 1° ordine",
+        "ED omogenee, esatte",
+        "Equazioni lineari 2° ordine costanti",
+        "Problemi valore iniziale"
+      ],
+      "learning_outcomes": [
+        "Risolvere ED 1° ordine",
+        "Analizzare ED 2° ordine",
+        "Problemi valore iniziale"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Serie di Taylor e sviluppi",
+      "core_contents": [
+        "Polinomi Taylor, resto di Lagrange",
+        "Serie numeriche infinite",
+        "Serie potenze, raggio convergenza",
+        "Funzioni elementari come serie"
+      ],
+      "learning_outcomes": [
+        "Approssimare funzioni con Taylor",
+        "Studiare convergenza serie",
+        "Applicare sviluppi locali"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Coordinate polari e parametriche",
+      "core_contents": [
+        "Curve parametriche, derivate",
+        "Coordinate polari, derivate polari",
+        "Aree/lunghezze polari",
+        "Curvatura, raggio curvatura"
+      ],
+      "learning_outcomes": [
+        "Studiare curve parametriche",
+        "Calcolare integrali polari",
+        "Analizzare curvatura"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Equazioni differenziali applicazioni",
+      "core_contents": [
+        "Oscillatori armonici smorzati",
+        "Circuiti RC/RLC",
+        "Crescita/decadimento popolazioni",
+        "Sistemi fisici reali"
+      ],
+      "learning_outcomes": [
+        "Modellizzare oscillatori",
+        "Analizzare circuiti RLC",
+        "Applicazioni fisiche ED"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Problem solving e dimostrazioni",
+      "core_contents": [
+        "Dimostrazioni teoremi fondamentali",
+        "Problemi misti limiti/derivate/integrali",
+        "Errori tipici studenti",
+        "Strategie risoluzione problemi"
+      ],
+      "learning_outcomes": [
+        "Dimostrare teoremi analisi",
+        "Risolvere problemi misti",
+        "Strategie analitiche"
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "id": "copertura_contenuti",
+      "name": "Copertura contenuti",
+      "type": "contenuto",
+      "levels": {
+        "1": "Copertura meno di 6 moduli.",
+        "2": "6-8 moduli superficiali.",
+        "3": "9 moduli con base.",
+        "4": "10-11 moduli approfonditi.",
+        "5": "Tutti 12 moduli completi."
+      }
+    },
+    {
+      "id": "profondita_adeguata",
+      "name": "Profondità adeguata",
+      "type": "contenuto",
+      "levels": {
+        "1": "Livello sbagliato per 1° anno.",
+        "2": "Prevalentemente introduttivo.",
+        "3": "Adeguato per Analisi 1.",
+        "4": "Calibrato perfettamente 1° anno.",
+        "5": "Profondità eccellente."
+      }
+    },
+    {
+      "id": "chiarezza_esposizione",
+      "name": "Chiarezza esposizione",
+      "type": "didattico",
+      "levels": {
+        "1": "Confusa e astratta.",
+        "2": "Abbastanza chiara.",
+        "3": "Buona chiarezza generale.",
+        "4": "Dimostrazioni intuitive.",
+        "5": "Esposizione cristallina."
+      }
+    },
+    {
+      "id": "esercizi_problemi",
+      "name": "Esercizi/problemi",
+      "type": "didattico",
+      "levels": {
+        "1": "Pochi esercizi.",
+        "2": "Esercizi adeguati.",
+        "3": "Buon apparato esercizi.",
+        "4": "Esercizi graduati abbondanti.",
+        "5": "Eccellente per esami."
+      }
+    },
+    {
+      "id": "dimostrazioni_teoremi",
+      "name": "Dimostrazioni teoremi",
+      "type": "contenuto",
+      "levels": {
+        "1": "Teoremi enunciati senza prova.",
+        "2": "Qualche dimostrazione base.",
+        "3": "Principali teoremi dimostrati.",
+        "4": "Dimostrazioni rigorose complete.",
+        "5": "Rigorosità matematica eccellente."
+      }
+    },
+    {
+      "id": "applicazioni_fisiche_chimiche",
+      "name": "Applicazioni fisiche/chimiche",
+      "type": "contenuto",
+      "levels": {
+        "1": "Nessuna applicazione reale.",
+        "2": "Cenni sporadici.",
+        "3": "Qualche esempio applicativo.",
+        "4": "Ricchi modelli fisici/chimici.",
+        "5": "Applicazioni eccellenti contestualizzate."
+      }
+    },
+    {
+      "id": "calcolo_simbolico",
+      "name": "Calcolo simbolico",
+      "type": "contenuto",
+      "levels": {
+        "1": "Calcoli limitati.",
+        "2": "Derivate/integrali base.",
+        "3": "Buon calcolo simbolico.",
+        "4": "Sistematico e completo.",
+        "5": "Calcolo eccellente."
+      }
+    },
+    {
+      "id": "grafici_visualizzazioni",
+      "name": "Grafici e visualizzazioni",
+      "type": "didattico",
+      "levels": {
+        "1": "Grafici poveri.",
+        "2": "Grafici base.",
+        "3": "Buoni grafici standard.",
+        "4": "Studio funzioni chiaro.",
+        "5": "Visualizzazioni eccellenti."
+      }
+    },
+    {
+      "id": "equazioni_differenziali",
+      "name": "Equazioni differenziali",
+      "type": "contenuto",
+      "levels": {
+        "1": "ED assenti.",
+        "2": "ED 1° ordine base.",
+        "3": "ED principali spiegate.",
+        "4": "ED fisiche/chimiche applicate.",
+        "5": "ED complete e rigorose."
+      }
+    },
+    {
+      "id": "serie_taylor",
+      "name": "Serie e Taylor",
+      "type": "contenuto",
+      "levels": {
+        "1": "Serie assenti.",
+        "2": "Taylor base.",
+        "3": "Serie potenze introdotte.",
+        "4": "Approssimazioni utili.",
+        "5": "Sviluppi dettagliati."
+      }
+    },
+    {
+      "id": "errori_studenti",
+      "name": "Errori studenti",
+      "type": "didattico",
+      "levels": {
+        "1": "Nessun supporto.",
+        "2": "Qualche cenno.",
+        "3": "Box strategie base.",
+        "4": "Supporto proattivo.",
+        "5": "Prevenzione eccellente."
+      }
+    },
+    {
+      "id": "collegamenti_discipline",
+      "name": "Collegamenti discipline",
+      "type": "didattico",
+      "levels": {
+        "1": "Matematica isolata.",
+        "2": "Pochi collegamenti.",
+        "3": "Adeguati collegamenti.",
+        "4": "Ricchi Mat/Fis/Chim/Ing.",
+        "5": "Integrazione eccellente."
+      }
+    },
+    {
+      "id": "supporto_digitale",
+      "name": "Supporto digitale",
+      "type": "didattico",
+      "levels": {
+        "1": "Nessun supporto.",
+        "2": "Risorse digitali scarse.",
+        "3": "Supporto sufficiente.",
+        "4": "Ricco apparato digitale.",
+        "5": "Ecosistema eccellente."
+      }
+    },
+    {
+      "id": "appendici_tabelle",
+      "name": "Appendici/tabelle",
+      "type": "didattico",
+      "levels": {
+        "1": "Appendici povere.",
+        "2": "Appendici standard.",
+        "3": "Utili appendici.",
+        "4": "Appendici complete.",
+        "5": "Risorse integrative eccellenti."
+      }
+    }
+  ],
+  "program_profiles": [
+    {
+      "id": "fisica",
+      "name": "Fisica",
+      "priority_modules": [5,8,9,11],
+      "requirements": {
+        "copertura_contenuti": {"required_level": 5, "weight": 0.10},
+        "profondita_adeguata": {"required_level": 5, "weight": 0.11},
+        "chiarezza_esposizione": {"required_level": 4, "weight": 0.09},
+        "esercizi_problemi": {"required_level": 5, "weight": 0.12},
+        "dimostrazioni_teoremi": {"required_level": 4, "weight": 0.13},
+        "applicazioni_fisiche_chimiche": {"required_level": 5, "weight": 0.14},
+        "calcolo_simbolico": {"required_level": 4, "weight": 0.10},
+        "grafici_visualizzazioni": {"required_level": 4, "weight": 0.08},
+        "equazioni_differenziali": {"required_level": 5, "weight": 0.12},
+        "serie_taylor": {"required_level": 4, "weight": 0.11},
+        "errori_studenti": {"required_level": 3, "weight": 0.05},
+        "collegamenti_discipline": {"required_level": 4, "weight": 0.08},
+        "supporto_digitale": {"required_level": 3, "weight": 0.04},
+        "appendici_tabelle": {"required_level": 3, "weight": 0.03}
+      }
+    },
+    {
+      "id": "matematica",
+      "name": "Matematica",
+      "priority_modules": [1,2,3,4,5,6,7,8,9,10,11,12],
+      "requirements": {
+        "copertura_contenuti": {"required_level": 5, "weight": 0.12},
+        "profondita_adeguata": {"required_level": 5, "weight": 0.13},
+        "chiarezza_esposizione": {"required_level": 5, "weight": 0.10},
+        "esercizi_problemi": {"required_level": 5, "weight": 0.11},
+        "dimostrazioni_teoremi": {"required_level": 5, "weight": 0.15},
+        "applicazioni_fisiche_chimiche": {"required_level": 2, "weight": 0.06},
+        "calcolo_simbolico": {"required_level": 5, "weight": 0.12},
+        "grafici_visualizzazioni": {"required_level": 4, "weight": 0.08},
+        "equazioni_differenziali": {"required_level": 4, "weight": 0.08},
+        "serie_taylor": {"required_level": 5, "weight": 0.12},
+        "errori_studenti": {"required_level": 4, "weight": 0.06},
+        "collegamenti_discipline": {"required_level": 3, "weight": 0.08},
+        "supporto_digitale": {"required_level": 3, "weight": 0.04},
+        "appendici_tabelle": {"required_level": 3, "weight": 0.03}
+      }
+    }
+  ],
+  "manual_profiles": [
+    {
+      "id": "manuale_A",
+      "name": "Manuale A - Analisi 1 Completa",
+      "scores": {
+        "copertura_contenuti": 5,
+        "profondita_adeguata": 5,
+        "chiarezza_esposizione": 5,
+        "esercizi_problemi": 5,
+        "dimostrazioni_teoremi": 5,
+        "applicazioni_fisiche_chimiche": 4,
+        "calcolo_simbolico": 5,
+        "grafici_visualizzazioni": 5,
+        "equazioni_differenziali": 5,
+        "serie_taylor": 5,
+        "errori_studenti": 4,
+        "collegamenti_discipline": 4,
+        "supporto_digitale": 4,
+        "appendici_tabelle": 4
+      }
+    }
+  ],
+  "alignment_method": {
+    "description": "Allineamento = media ponderata dei criteri: score_i = max(0, 1 - |required_level_i - offered_score_i| / 4)",
+    "formula": "alignment = Σ(weight_i × score_i) / Σ(weight_i)",
+    "interpretation": {
+      "85-100": "Eccellente - Rigoroso e applicativo - Adozione consigliata",
+      "70-84": "Buono - Solido con qualche lacuna - Raccomandato+integrazioni",
+      "55-69": "Sufficiente - Lacune su dimostrazioni/applicazioni - Con riserva",
+      "<55": "Sconsigliato - Inadeguato per indirizzo - Non adottare"
+    }
+  },
+  "example_match": {
+    "program_id": "fisica",
+    "manual_id": "manuale_A",
+    "overall_alignment": 92.6,
+    "judgment": "Eccellente",
+    "recommendation": "Manuale perfetto per Fisica. Eccellente su ED, applicazioni fisiche e calcolo simbolico.",
+    "strong_criteria": ["applicazioni_fisiche_chimiche", "equazioni_differenziali", "esercizi_problemi"],
+    "weak_criteria": ["errori_studenti"]
+  }
+}

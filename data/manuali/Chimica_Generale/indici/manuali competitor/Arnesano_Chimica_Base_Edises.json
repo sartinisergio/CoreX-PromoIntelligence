@@ -1,0 +1,600 @@
+{
+  "id": "Arnesano_Chimica",
+  "title": "Chimica di base",
+  "author": "Arnesano e al.",
+  "publisher": "Edises",
+  "subject": "chimica generale",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Materia ed energia. Atomo e particelle subatomiche",
+      "page_start": 1,
+      "sections": [
+        {
+          "title": "La chimica come scienza delle trasformazioni",
+          "page_start": 1
+        },
+        {
+          "title": "La classificazione di un campione di materia",
+          "page_start": 2
+        },
+        {
+          "title": "Alla scoperta della struttura atomica",
+          "page_start": 4
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Unità di massa atomica e mole",
+      "page_start": 11,
+      "sections": [
+        {
+          "title": "Le leggi fondamentali della chimica",
+          "page_start": 11
+        },
+        {
+          "title": "La teoria atomica di Dalton",
+          "page_start": 12
+        },
+        {
+          "title": "La misura della massa atomica",
+          "page_start": 13
+        },
+        {
+          "title": "La massa molecolare e la massa formula",
+          "page_start": 15
+        },
+        {
+          "title": "La mole e il numero di Avogadro",
+          "page_start": 16
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Numero di ossidazione e formule chimiche",
+      "page_start": 23,
+      "sections": [
+        {
+          "title": "Il numero di ossidazione",
+          "page_start": 23
+        },
+        {
+          "title": "La composizione percentuale e le formule chimiche",
+          "page_start": 26
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Nomenclatura dei composti inorganici",
+      "page_start": 35,
+      "sections": [
+        {
+          "title": "Introduzione alla nomenclatura chimica inorganica",
+          "page_start": 35
+        },
+        {
+          "title": "La nomenclatura dei composti binari",
+          "page_start": 37
+        },
+        {
+          "title": "La nomenclatura dei composti ternari",
+          "page_start": 40
+        },
+        {
+          "title": "La nomenclatura dei composti quaternari",
+          "page_start": 43
+        },
+        {
+          "title": "Altre generalità sui nomi dei sali",
+          "page_start": 44
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Reazioni chimiche e stechiometria",
+      "page_start": 47,
+      "sections": [
+        {
+          "title": "Le reazioni chimiche e le equazioni chimiche",
+          "page_start": 47
+        },
+        {
+          "title": "Introduzione ai tipi di reazioni chimiche",
+          "page_start": 50
+        },
+        {
+          "title": "Il bilanciamento delle equazioni chimiche",
+          "page_start": 56
+        },
+        {
+          "title": "Il significato quantitativo delle equazioni chimiche: stechiometria",
+          "page_start": 62
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Modelli atomici e configurazioni elettroniche. Sistema periodico e proprietà periodiche",
+      "page_start": 75,
+      "sections": [
+        {
+          "title": "La tavola periodica degli elementi",
+          "page_start": 75
+        },
+        {
+          "title": "I modelli atomici",
+          "page_start": 78
+        },
+        {
+          "title": "Le configurazioni elettroniche",
+          "page_start": 90
+        },
+        {
+          "title": "Il sistema periodico e le proprietà periodiche",
+          "page_start": 94
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Modelli del legame chimico",
+      "page_start": 105,
+      "sections": [
+        {
+          "title": "Le caratteristiche del legame chimico",
+          "page_start": 105
+        },
+        {
+          "title": "Il legame ionico",
+          "page_start": 106
+        },
+        {
+          "title": "Il legame covalente",
+          "page_start": 107
+        },
+        {
+          "title": "La teoria del legame di valenza",
+          "page_start": 108
+        },
+        {
+          "title": "I legami σ e π",
+          "page_start": 108
+        },
+        {
+          "title": "L'elettronegatività di Pauling",
+          "page_start": 110
+        },
+        {
+          "title": "Il dipolo di legame e il dipolo molecolare",
+          "page_start": 112
+        },
+        {
+          "title": "Gli orbitali ibridi",
+          "page_start": 113
+        },
+        {
+          "title": "La teoria dell'orbitale molecolare",
+          "page_start": 121
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Strutture di Lewis, geometrie molecolari e polarità delle molecole",
+      "page_start": 131,
+      "sections": [
+        {
+          "title": "Le formule di struttura",
+          "page_start": 131
+        },
+        {
+          "title": "Le geometrie molecolari",
+          "page_start": 132
+        },
+        {
+          "title": "La determinazione delle strutture di Lewis",
+          "page_start": 136
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Composti di coordinazione",
+      "page_start": 147,
+      "sections": [
+        {
+          "title": "I composti di coordinazione e il numero di coordinazione",
+          "page_start": 147
+        },
+        {
+          "title": "La geometria dei complessi",
+          "page_start": 149
+        },
+        {
+          "title": "La teoria del campo cristallino",
+          "page_start": 150
+        },
+        {
+          "title": "I composti di coordinazione nella biosfera e nelle attività umane",
+          "page_start": 154
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Solidi",
+      "page_start": 159,
+      "sections": [
+        {
+          "title": "Introduzione",
+          "page_start": 159
+        },
+        {
+          "title": "I reticoli cristallini e le celle elementari",
+          "page_start": 159
+        },
+        {
+          "title": "La struttura e le proprietà dei solidi amorfi",
+          "page_start": 174
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Gas",
+      "page_start": 177,
+      "sections": [
+        {
+          "title": "Introduzione",
+          "page_start": 177
+        },
+        {
+          "title": "Le leggi dei gas",
+          "page_start": 178
+        },
+        {
+          "title": "L'equazione di stato dei gas perfetti",
+          "page_start": 182
+        },
+        {
+          "title": "Le miscele gassose",
+          "page_start": 186
+        },
+        {
+          "title": "La teoria cinetica dei gas",
+          "page_start": 187
+        },
+        {
+          "title": "I gas reali",
+          "page_start": 193
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Stati condensati, legame a idrogeno e forze di van der Waals",
+      "page_start": 197,
+      "sections": [
+        {
+          "title": "Introduzione agli stati della materia",
+          "page_start": 197
+        },
+        {
+          "title": "Le forze intermolecolari",
+          "page_start": 197
+        },
+        {
+          "title": "Il legame a idrogeno",
+          "page_start": 200
+        },
+        {
+          "title": "Le dinamiche delle transizioni di fase e le loro implicazioni termodinamiche",
+          "page_start": 202
+        },
+        {
+          "title": "I diagrammi di fase",
+          "page_start": 206
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Soluzioni e proprietà colligative",
+      "page_start": 211,
+      "sections": [
+        {
+          "title": "Introduzione",
+          "page_start": 211
+        },
+        {
+          "title": "I tipi di soluzione e i fenomeni associati",
+          "page_start": 211
+        },
+        {
+          "title": "L'energia, la miscibilità e le interazioni nelle soluzioni",
+          "page_start": 211
+        },
+        {
+          "title": "Le soluzioni elettrolitiche",
+          "page_start": 212
+        },
+        {
+          "title": "La misurazione della concentrazione delle soluzioni",
+          "page_start": 213
+        },
+        {
+          "title": "Alcune proprietà dei colloidi",
+          "page_start": 226
+        },
+        {
+          "title": "Le proprietà colligative delle soluzioni",
+          "page_start": 227
+        },
+        {
+          "title": "Le proprietà colligative di soluzioni non elettrolitiche",
+          "page_start": 228
+        },
+        {
+          "title": "Le proprietà colligative di soluzioni elettrolitiche",
+          "page_start": 234
+        },
+        {
+          "title": "La pressione osmotica",
+          "page_start": 237
+        },
+        {
+          "title": "Le applicazioni pratiche delle proprietà colligative",
+          "page_start": 239
+        },
+        {
+          "title": "Le soluzioni di soluti volatili",
+          "page_start": 242
+        },
+        {
+          "title": "La distillazione frazionata",
+          "page_start": 245
+        },
+        {
+          "title": "La cristallizzazione frazionata",
+          "page_start": 249
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Termodinamica ed equilibrio chimico",
+      "page_start": 253,
+      "sections": [
+        {
+          "title": "I sistemi e gli scambi energetici",
+          "page_start": 253
+        },
+        {
+          "title": "I principi della termodinamica e le sue leggi",
+          "page_start": 254
+        },
+        {
+          "title": "L'equilibrio di fasi",
+          "page_start": 272
+        },
+        {
+          "title": "L'equilibrio chimico",
+          "page_start": 273
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Acidi e basi",
+      "page_start": 289,
+      "sections": [
+        {
+          "title": "Introduzione",
+          "page_start": 289
+        },
+        {
+          "title": "La teoria di Arrhenius",
+          "page_start": 290
+        },
+        {
+          "title": "La teoria di Brønsted-Lowry",
+          "page_start": 291
+        },
+        {
+          "title": "La teoria di Lewis",
+          "page_start": 292
+        },
+        {
+          "title": "L'autoprotolisi dell'acqua",
+          "page_start": 294
+        },
+        {
+          "title": "La scala del pH",
+          "page_start": 298
+        },
+        {
+          "title": "Gli acidi e le basi forti",
+          "page_start": 300
+        },
+        {
+          "title": "Il calcolo del pH",
+          "page_start": 300
+        },
+        {
+          "title": "Gli acidi poliprotici e le basi poliprotiche",
+          "page_start": 305
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Idrolisi e soluzioni tampone",
+      "page_start": 311,
+      "sections": [
+        {
+          "title": "L'idrolisi",
+          "page_start": 311
+        },
+        {
+          "title": "Le soluzioni tampone",
+          "page_start": 323
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Titolazioni acido-base",
+      "page_start": 335,
+      "sections": [
+        {
+          "title": "Principi generali",
+          "page_start": 335
+        },
+        {
+          "title": "Le curve di titolazione",
+          "page_start": 346
+        },
+        {
+          "title": "Gli indicatori",
+          "page_start": 350
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Solubilità e precipitazione",
+      "page_start": 355,
+      "sections": [
+        {
+          "title": "L'equilibrio di solubilità",
+          "page_start": 355
+        },
+        {
+          "title": "La costante del prodotto di solubilità (Kps)",
+          "page_start": 356
+        },
+        {
+          "title": "La solubilità e gli equilibri acido-base",
+          "page_start": 366
+        },
+        {
+          "title": "La solubilità dei solfuri",
+          "page_start": 370
+        },
+        {
+          "title": "La solubilità degli idrossidi",
+          "page_start": 371
+        },
+        {
+          "title": "La solubilità in presenza di agenti complessanti",
+          "page_start": 372
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Reazioni e titolazioni di ossido-riduzione",
+      "page_start": 383,
+      "sections": [
+        {
+          "title": "Le reazioni di ossido-riduzione",
+          "page_start": 383
+        },
+        {
+          "title": "Le titolazioni di ossido-riduzione",
+          "page_start": 384
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Celle elettrochimiche. Equazione di Nernst. Elettrolisi. Conducibilità",
+      "page_start": 395,
+      "sections": [
+        {
+          "title": "Le celle elettrochimiche",
+          "page_start": 395
+        },
+        {
+          "title": "L'equazione di Nernst",
+          "page_start": 406
+        },
+        {
+          "title": "L'elettrolisi",
+          "page_start": 414
+        },
+        {
+          "title": "La conducibilità",
+          "page_start": 424
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "title": "Cinetica chimica",
+      "page_start": 429,
+      "sections": [
+        {
+          "title": "Le tipologie di reazioni elementari",
+          "page_start": 429
+        },
+        {
+          "title": "La cinetica e l'equilibrio chimico",
+          "page_start": 430
+        },
+        {
+          "title": "Il meccanismo di reazione e la velocità di reazione",
+          "page_start": 432
+        },
+        {
+          "title": "Come si determina la legge cinetica",
+          "page_start": 434
+        },
+        {
+          "title": "La cinetica delle reazioni",
+          "page_start": 435
+        },
+        {
+          "title": "L'effetto della temperatura sulle velocità di reazione",
+          "page_start": 439
+        },
+        {
+          "title": "I catalizzatori",
+          "page_start": 443
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "title": "Chimica nucleare",
+      "page_start": 447,
+      "sections": [
+        {
+          "title": "I nuclei stabili e instabili. Il decadimento radioattivo",
+          "page_start": 447
+        },
+        {
+          "title": "L'energia nucleare",
+          "page_start": 453
+        },
+        {
+          "title": "La cinetica del decadimento radioattivo",
+          "page_start": 454
+        },
+        {
+          "title": "Gli effetti della radioattività sui sistemi biologici",
+          "page_start": 458
+        },
+        {
+          "title": "La fissione nucleare",
+          "page_start": 460
+        }
+      ]
+    }
+  ]
+}

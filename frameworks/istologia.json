@@ -1,0 +1,331 @@
+{
+  "framework": {
+    "name": "Framework Unico Valutazione Istologia ed Embriologia Umana - Clinico",
+    "version": "1.0",
+    "description": "Framework integrato per valutare allineamento programmi Istologia/Embriologia e manuali per Medicina/Chirurgia, con enfasi patologica e microscopia.",
+    "date": "2025-12-15"
+  },
+  "scale": {
+    "1": "livello minimo/assente",
+    "2": "livello molto basso/sporadico",
+    "3": "livello moderato/base",
+    "4": "livello alto/articolato",
+    "5": "livello massimo/avanzato"
+  },
+  "syllabus_modules": [
+    {
+      "id": 1,
+      "name": "Metodi e Citologia Fondamentale",
+      "core_contents": [
+        "Tecniche istologiche (fissazione, inclusione)",
+        "Colorazioni classiche/immunoistochimiche",
+        "Microscopia Ottica/Elettronica/Confocale"
+      ],
+      "learning_outcomes": [
+        "Identificazione preparati M.O.",
+        "Microscopia virtuale avanzata"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Istologia Generale I: Epiteli e Dinamiche",
+      "core_contents": [
+        "Istogenesi normale/patologica",
+        "Cellule staminali, Hallmarks of cancer",
+        "Epiteli rivestimento/ghiandolari"
+      ],
+      "learning_outcomes": [
+        "Correlazioni neoplastiche",
+        "Specializzazioni apicali epiteli"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Istologia Generale II: Tessuti Speciali",
+      "core_contents": [
+        "Tessuto adiposo (bianco/bruno/beige/pink)",
+        "Emopoiesi, timo, barriera emato-encefalica",
+        "Cartilagine/osso, neuroglia SNC"
+      ],
+      "learning_outcomes": [
+        "Funzione endocrina adiposo",
+        "Rimodellamento osseo"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Embriologia Umana",
+      "core_contents": [
+        "Gametogenesi, neurulazione, creste neurali",
+        "Sviluppo apparati, malformazioni genetiche",
+        "Annessi embrionali, circolazione fetale"
+      ],
+      "learning_outcomes": [
+        "Correlazione malformazioni-processi",
+        "Morfogenesi organi"
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "id": "copertura_contenuti",
+      "name": "Copertura contenuti",
+      "type": "contenuto",
+      "levels": {
+        "1": "Meno di 2 moduli sui 4.",
+        "2": "2 moduli superficiali.",
+        "3": "3 moduli con base.",
+        "4": "Tutti 4 moduli ben coperti.",
+        "5": "4 moduli completi+eccellenti."
+      }
+    },
+    {
+      "id": "profondita_adeguata",
+      "name": "Profondità adeguata",
+      "type": "contenuto",
+      "levels": {
+        "1": "Superficiale per Medicina.",
+        "2": "Livello base generico.",
+        "3": "Adeguato per Istologia.",
+        "4": "Avanzato patologico.",
+        "5": "Eccellente clinico."
+      }
+    },
+    {
+      "id": "esempi_applicazioni",
+      "name": "Esempi clinici",
+      "type": "didattico",
+      "levels": {
+        "1": "Nessun esempio clinico.",
+        "2": "Qualche cenno patologico.",
+        "3": "Esempi istopatologici adeguati.",
+        "4": "Ricchi collegamenti diagnostici.",
+        "5": "Applicazioni cliniche eccellenti."
+      }
+    },
+    {
+      "id": "pratica_microscopia",
+      "name": "Pratica M.O.",
+      "type": "didattico",
+      "levels": {
+        "1": "Nessuna microscopia.",
+        "2": "Teoria microscopia.",
+        "3": "Qualche immagine base.",
+        "4": "Preparati identificabili.",
+        "5": "Microscopia virtuale completa."
+      }
+    },
+    {
+      "id": "correlazione_patologica",
+      "name": "Correlazione patologica",
+      "type": "contenuto",
+      "levels": {
+        "1": "Nessuna patologia.",
+        "2": "Cenni neoplastici.",
+        "3": "Hallmarks of cancer base.",
+        "4": "Istogenesi patologica.",
+        "5": "Patogenesi completa."
+      }
+    },
+    {
+      "id": "qualita_immagini",
+      "name": "Qualità immagini",
+      "type": "didattico",
+      "levels": {
+        "1": "Immagini povere.",
+        "2": "Immagini standard.",
+        "3": "Buona risoluzione M.O.",
+        "4": "Alta risoluzione M.O./ME.",
+        "5": "Eccellenti preparati identificativi."
+      }
+    },
+    {
+      "id": "embriologia_malformazioni",
+      "name": "Embriologia malformazioni",
+      "type": "contenuto",
+      "levels": {
+        "1": "Embriologia assente.",
+        "2": "Descrizione base.",
+        "3": "Sviluppo organi base.",
+        "4": "Malformazioni correlate.",
+        "5": "Genetica molecolare malformazioni."
+      }
+    },
+    {
+      "id": "chiarezza_espositiva",
+      "name": "Chiarezza espositiva",
+      "type": "didattico",
+      "levels": {
+        "1": "Confusa terminologia.",
+        "2": "Adeguata.",
+        "3": "Buona linguaggio scientifico.",
+        "4": "Chiarissima.",
+        "5": "Linguaggio perfetto."
+      }
+    },
+    {
+      "id": "propedeuticita_sequenza",
+      "name": "Propedeuticità sequenza",
+      "type": "didattico",
+      "levels": {
+        "1": "Caotica.",
+        "2": "Disordinata.",
+        "3": "Logica adeguata.",
+        "4": "Sequenza ottimale.",
+        "5": "Collegamenti eccellenti."
+      }
+    },
+    {
+      "id": "aggiornamento_scientifico",
+      "name": "Aggiornamento scientifico",
+      "type": "didattico",
+      "levels": {
+        "1": "Datato.",
+        "2": "Standard.",
+        "3": "Adeguato.",
+        "4": "Adiposo pink, BMP.",
+        "5": "All'avanguardia."
+      }
+    },
+    {
+      "id": "approccio_isopatologico",
+      "name": "Approccio istopatologico",
+      "type": "didattico",
+      "levels": {
+        "1": "Nessun cenno diagnostico.",
+        "2": "Cenni generici.",
+        "3": "Criteri istologici base.",
+        "4": "Diagnostica istopatologica.",
+        "5": "Immunoistochimica completa."
+      }
+    },
+    {
+      "id": "cellule_staminali",
+      "name": "Cellule staminali",
+      "type": "contenuto",
+      "levels": {
+        "1": "Assenti.",
+        "2": "Definizione base.",
+        "3": "Proprietà staminali.",
+        "4": "Regolazione/applicazioni.",
+        "5": "Rigenerazione completa."
+      }
+    },
+    {
+      "id": "terminologia_scientifica",
+      "name": "Terminologia scientifica",
+      "type": "didattico",
+      "levels": {
+        "1": "Imprecisa.",
+        "2": "Adeguata.",
+        "3": "Buona.",
+        "4": "Rigorosa.",
+        "5": "Perfetta nomenclatura."
+      }
+    },
+    {
+      "id": "collegamenti_interdisciplinari",
+      "name": "Collegamenti interdisciplinari",
+      "type": "didattico",
+      "levels": {
+        "1": "Isolati.",
+        "2": "Pochi nessi.",
+        "3": "Adeguati Anat/Fisiol.",
+        "4": "Ricchi interdisciplinari.",
+        "5": "Integrazione eccellente."
+      }
+    },
+    {
+      "id": "supporto_digitale",
+      "name": "Supporto digitale",
+      "type": "didattico",
+      "levels": {
+        "1": "Nessuno.",
+        "2": "Base.",
+        "3": "Sufficiente.",
+        "4": "Microscopia virtuale.",
+        "5": "Risorse digitali ricche."
+      }
+    },
+    {
+      "id": "appendici_tabelle",
+      "name": "Appendici tabelle",
+      "type": "didattico",
+      "levels": {
+        "1": "Povere.",
+        "2": "Standard.",
+        "3": "Utili.",
+        "4": "Tabelle malformazioni.",
+        "5": "Risorse complete."
+      }
+    }
+  ],
+  "program_profiles": [
+    {
+      "id": "clinico_sanitario",
+      "name": "Medicina/Chirurgia",
+      "priority_modules": [2,4],
+      "requirements": {
+        "copertura_contenuti": {"required_level": 5, "weight": 0.10},
+        "profondita_adeguata": {"required_level": 5, "weight": 0.10},
+        "esempi_applicazioni": {"required_level": 5, "weight": 0.05},
+        "pratica_microscopia": {"required_level": 5, "weight": 0.15},
+        "correlazione_patologica": {"required_level": 5, "weight": 0.15},
+        "qualita_immagini": {"required_level": 5, "weight": 0.08},
+        "embriologia_malformazioni": {"required_level": 5, "weight": 0.08},
+        "chiarezza_espositiva": {"required_level": 4, "weight": 0.03},
+        "propedeuticita_sequenza": {"required_level": 4, "weight": 0.03},
+        "aggiornamento_scientifico": {"required_level": 4, "weight": 0.03},
+        "approccio_isopatologico": {"required_level": 4, "weight": 0.05},
+        "cellule_staminali": {"required_level": 4, "weight": 0.03},
+        "terminologia_scientifica": {"required_level": 4, "weight": 0.03},
+        "collegamenti_interdisciplinari": {"required_level": 4, "weight": 0.05},
+        "supporto_digitale": {"required_level": 3, "weight": 0.02},
+        "appendici_tabelle": {"required_level": 3, "weight": 0.02}
+      }
+    }
+  ],
+  "manual_profiles": [
+    {
+      "id": "manuale_A",
+      "name": "Manuale A - Istologia Clinica Completa",
+      "scores": {
+        "copertura_contenuti": 5,
+        "profondita_adeguata": 5,
+        "esempi_applicazioni": 5,
+        "pratica_microscopia": 5,
+        "correlazione_patologica": 5,
+        "qualita_immagini": 5,
+        "embriologia_malformazioni": 5,
+        "chiarezza_espositiva": 5,
+        "propedeuticita_sequenza": 5,
+        "aggiornamento_scientifico": 5,
+        "approccio_isopatologico": 5,
+        "cellule_staminali": 5,
+        "terminologia_scientifica": 5,
+        "collegamenti_interdisciplinari": 5,
+        "supporto_digitale": 4,
+        "appendici_tabelle": 4
+      }
+    }
+  ],
+  "alignment_method": {
+    "description": "Allineamento = media ponderata: score_i = max(0, 1 - |required-offered|/4)",
+    "formula": "alignment = Σ(weight_i × score_i) / Σ(weight_i)",
+    "interpretation": {
+      "85-100": "Eccellente - Perfettamente allineato - Adozione consigliata",
+      "70-84": "Buono - Solido con piccole debolezze - Raccomandato+integrazioni",
+      "55-69": "Sufficiente - Lacune significative - Con riserva",
+      "<55": "Sconsigliato - Inadeguato - Non adottare"
+    }
+  },
+  "example_match": {
+    "program_id": "clinico_sanitario",
+    "manual_id": "manuale_A",
+    "overall_alignment": 96.8,
+    "judgment": "Eccellente",
+    "recommendation": "Manuale perfetto per Medicina. Eccellente su microscopia, correlazioni patologiche e malformazioni genetiche.",
+    "strong_criteria": ["pratica_microscopia", "correlazione_patologica", "embriologia_malformazioni"],
+    "weak_criteria": []
+  }
+}

@@ -1,0 +1,722 @@
+{
+  "id": "Bertini_materia",
+  "title": "Chimica: materia, tecnologia, ambiente",
+  "author": "Bertini, Luchinat, Mani",
+  "publisher": "CEA",
+  "subject": "chimica generale",
+  "type": "Zanichelli",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Chimica, tecnologia e società",
+      "page_start": 1,
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "Introduzione",
+          "page_start": 1
+        },
+        {
+          "number": "1.2",
+          "title": "Relazione fra proprietà atomiche e tecnologiche dei materiali",
+          "page_start": 4
+        },
+        {
+          "number": "1.3",
+          "title": "Risorse naturali e sviluppo di scienza e tecnologia",
+          "page_start": 6
+        },
+        {
+          "number": "1.4",
+          "title": "L'interazione dell'attività umana con l'ambiente",
+          "page_start": 12
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Il modello atomico della materia",
+      "page_start": 17,
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "La materia",
+          "page_start": 17
+        },
+        {
+          "number": "2.2",
+          "title": "L'atomo",
+          "page_start": 25
+        },
+        {
+          "number": "2.3",
+          "title": "Le grandezze fondamentali e la mole",
+          "page_start": 29
+        },
+        {
+          "number": "2.4",
+          "title": "Energia, temperatura e stati di aggregazione della materia",
+          "page_start": 31
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Il modello elettronico dell'atomo e le proprietà periodiche",
+      "page_start": 35,
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "Il modello dell'elettrone: particella oppure onda elettromagnetica?",
+          "page_start": 35
+        },
+        {
+          "number": "3.2",
+          "title": "Le correlazioni fra le radiazioni elettromagnetiche e l'elettrone",
+          "page_start": 36
+        },
+        {
+          "number": "3.3",
+          "title": "Il modello elettronico dell'atomo di idrogeno",
+          "page_start": 39
+        },
+        {
+          "number": "3.4",
+          "title": "La configurazione elettronica degli atomi polielettronici",
+          "page_start": 44
+        },
+        {
+          "number": "3.5",
+          "title": "Le proprietà periodiche",
+          "page_start": 46
+        },
+        {
+          "number": "3.6",
+          "title": "La classificazione degli elementi in metalli e non metalli",
+          "page_start": 54
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Il legame covalente",
+      "page_start": 63,
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "Il legame chimico",
+          "page_start": 63
+        },
+        {
+          "number": "4.2",
+          "title": "Il legame covalente nelle molecole biatomiche",
+          "page_start": 64
+        },
+        {
+          "number": "4.3",
+          "title": "La geometria e il legame nelle molecole poliatomiche",
+          "page_start": 69
+        },
+        {
+          "number": "4.4",
+          "title": "Regole empiriche per scrivere le formule di struttura",
+          "page_start": 74
+        },
+        {
+          "number": "4.5",
+          "title": "Il modello della risonanza fra formule limite",
+          "page_start": 76
+        },
+        {
+          "number": "4.6",
+          "title": "Energia e distanza di legame",
+          "page_start": 79
+        },
+        {
+          "number": "4.7",
+          "title": "Legami covalenti polari e legami ionici",
+          "page_start": 81
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Il legame ionico",
+      "page_start": 93,
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "Il modello del legame ionico",
+          "page_start": 93
+        },
+        {
+          "number": "5.2",
+          "title": "Gli ioni che costituiscono le sostanze ioniche",
+          "page_start": 96
+        },
+        {
+          "number": "5.3",
+          "title": "La geometria locale dei composti ionici",
+          "page_start": 97
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Il legame nei metalli",
+      "page_start": 101,
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "I metalli: legame e struttura, un modello semplificato",
+          "page_start": 101
+        },
+        {
+          "number": "6.2",
+          "title": "Il modello a bande del legame metallico",
+          "page_start": 102
+        },
+        {
+          "number": "6.3",
+          "title": "Il modello di conduzione elettrica in un solido",
+          "page_start": 104
+        },
+        {
+          "number": "6.4",
+          "title": "Configurazione elettronica e proprietà elettriche",
+          "page_start": 105
+        },
+        {
+          "number": "6.5",
+          "title": "La conduzione termica",
+          "page_start": 107
+        },
+        {
+          "number": "6.6",
+          "title": "L'energia del legame metallico",
+          "page_start": 107
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Le interazioni intermolecolari",
+      "page_start": 111,
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "Le interazioni di van der Waals",
+          "page_start": 111
+        },
+        {
+          "number": "7.2",
+          "title": "Il legame a ponte di idrogeno",
+          "page_start": 116
+        },
+        {
+          "number": "7.3",
+          "title": "Stato di aggregazione di sostanze molecolari ed energia del legame intermolecolare",
+          "page_start": 119
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Il modello e le proprietà dello stato solido",
+      "page_start": 123,
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "Il modello ideale dello stato solido",
+          "page_start": 123
+        },
+        {
+          "number": "8.2",
+          "title": "Le strutture cristalline in alcune serie di sostanze reali",
+          "page_start": 125
+        },
+        {
+          "number": "8.3",
+          "title": "Alcune proprietà dei solidi correlate al legame chimico",
+          "page_start": 131
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "I modelli e le proprietà degli stati gassoso e liquido",
+      "page_start": 141,
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "Un modello dello stato gassoso",
+          "page_start": 141
+        },
+        {
+          "number": "9.2",
+          "title": "I gas reali",
+          "page_start": 145
+        },
+        {
+          "number": "9.3",
+          "title": "Lo stato liquido",
+          "page_start": 147
+        },
+        {
+          "number": "9.4",
+          "title": "Lo stato vetroso o amorfo",
+          "page_start": 151
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Transizioni e diagrammi di stato per sistemi a un componente",
+      "page_start": 159,
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "Introduzione",
+          "page_start": 159
+        },
+        {
+          "number": "10.2",
+          "title": "Le transizioni di stato e i principi della termodinamica",
+          "page_start": 163
+        },
+        {
+          "number": "10.3",
+          "title": "La transizione solido-gas",
+          "page_start": 171
+        },
+        {
+          "number": "10.4",
+          "title": "La transizione solido-liquido",
+          "page_start": 172
+        },
+        {
+          "number": "10.5",
+          "title": "Energetica delle transizioni di stato e forze di coesione",
+          "page_start": 172
+        },
+        {
+          "number": "10.6",
+          "title": "I diagrammi di stato a un componente",
+          "page_start": 174
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "I sistemi a più componenti",
+      "page_start": 185,
+      "sections": [
+        {
+          "number": "11.1",
+          "title": "La composizione delle soluzioni",
+          "page_start": 185
+        },
+        {
+          "number": "11.2",
+          "title": "La dissoluzione di un soluto in un solvente",
+          "page_start": 187
+        },
+        {
+          "number": "11.3",
+          "title": "La solubilità e il principio di Le Chatelier-Braun",
+          "page_start": 187
+        },
+        {
+          "number": "11.4",
+          "title": "Le soluzioni ideali e le proprietà colligative",
+          "page_start": 195
+        },
+        {
+          "number": "11.5",
+          "title": "Proprietà elettriche delle soluzioni",
+          "page_start": 199
+        },
+        {
+          "number": "11.6",
+          "title": "I sistemi dispersi",
+          "page_start": 199
+        },
+        {
+          "number": "11.7",
+          "title": "I diagrammi di stato a due componenti",
+          "page_start": 202
+        },
+        {
+          "number": "11.8",
+          "title": "Le soluzioni solide",
+          "page_start": 206
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Le reazioni chimiche e la stechiometria",
+      "page_start": 215,
+      "sections": [
+        {
+          "number": "12.1",
+          "title": "Il significato quantitativo delle formule",
+          "page_start": 215
+        },
+        {
+          "number": "12.2",
+          "title": "Il numero di ossidazione",
+          "page_start": 216
+        },
+        {
+          "number": "12.3",
+          "title": "Le reazioni chimiche",
+          "page_start": 221
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "L'equilibrio e la termodinamica delle reazioni in fase gassosa",
+      "page_start": 233,
+      "sections": [
+        {
+          "number": "13.1",
+          "title": "L'aspetto sperimentale dell'equilibrio",
+          "page_start": 233
+        },
+        {
+          "number": "13.2",
+          "title": "Gli effetti di perturbazioni esterne sullo stato di equilibrio di una reazione",
+          "page_start": 238
+        },
+        {
+          "number": "13.3",
+          "title": "La termodinamica delle reazioni",
+          "page_start": 240
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Le proprietà cinetiche delle reazioni",
+      "page_start": 261,
+      "sections": [
+        {
+          "number": "14.1",
+          "title": "Gli aspetti termodinamici e cinetici di una reazione",
+          "page_start": 261
+        },
+        {
+          "number": "14.2",
+          "title": "La velocità di reazione",
+          "page_start": 262
+        },
+        {
+          "number": "14.3",
+          "title": "Le leggi cinetiche integrate delle reazioni del primo e del secondo ordine",
+          "page_start": 267
+        },
+        {
+          "number": "14.4",
+          "title": "Il meccanismo delle reazioni e i processi elementari",
+          "page_start": 268
+        },
+        {
+          "number": "14.5",
+          "title": "La teoria delle collisioni",
+          "page_start": 270
+        },
+        {
+          "number": "14.6",
+          "title": "La catalisi",
+          "page_start": 274
+        },
+        {
+          "number": "14.7",
+          "title": "Le reazioni fotochimiche",
+          "page_start": 277
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Gli equilibri acido-base e di solubilità in soluzione acquosa",
+      "page_start": 287,
+      "sections": [
+        {
+          "number": "15.1",
+          "title": "Gli equilibri acido-base",
+          "page_start": 287
+        },
+        {
+          "number": "15.2",
+          "title": "Applicazioni degli equilibri acido-base",
+          "page_start": 294
+        },
+        {
+          "number": "15.3",
+          "title": "Gli acidi e le basi di Lewis",
+          "page_start": 300
+        },
+        {
+          "number": "15.4",
+          "title": "Il prodotto di solubilità",
+          "page_start": 301
+        },
+        {
+          "number": "15.5",
+          "title": "La solubilizzazione dei composti ionici poco solubili",
+          "page_start": 302
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Elettrochimica: reazioni di ossido-riduzione e potenziale elettrico",
+      "page_start": 313,
+      "sections": [
+        {
+          "number": "16.1",
+          "title": "Le reazioni di ossido-riduzione e i sistemi elettrochimici",
+          "page_start": 313
+        },
+        {
+          "number": "16.2",
+          "title": "Le celle voltaiche e le reazioni di ossido-riduzione",
+          "page_start": 314
+        },
+        {
+          "number": "16.3",
+          "title": "I potenziali di elettrodo",
+          "page_start": 317
+        },
+        {
+          "number": "16.4",
+          "title": "L'equilibrio chimico nei sistemi elettrochimici",
+          "page_start": 322
+        },
+        {
+          "number": "16.5",
+          "title": "Celle a concentrazione",
+          "page_start": 324
+        },
+        {
+          "number": "16.6",
+          "title": "Le reazioni elettrochimiche che coinvolgono alcuni metalli",
+          "page_start": 325
+        },
+        {
+          "number": "16.7",
+          "title": "I potenziali standard e alcuni equilibri particolari",
+          "page_start": 328
+        },
+        {
+          "number": "16.8",
+          "title": "Prevedere i prodotti delle reazioni dai potenziali standard",
+          "page_start": 330
+        },
+        {
+          "number": "16.9",
+          "title": "La cinetica nelle reazioni di ossido-riduzione",
+          "page_start": 331
+        },
+        {
+          "number": "16.10",
+          "title": "L'elettrolisi",
+          "page_start": 332
+        },
+        {
+          "number": "16.11",
+          "title": "La relazione fra carica elettrica e quantità di materia",
+          "page_start": 335
+        },
+        {
+          "number": "16.12",
+          "title": "La sovratensione",
+          "page_start": 336
+        },
+        {
+          "number": "16.13",
+          "title": "La conducibilità delle soluzioni di elettroliti",
+          "page_start": 337
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Il modello e le trasformazioni del nucleo",
+      "page_start": 349,
+      "sections": [
+        {
+          "number": "17.1",
+          "title": "Le forze di legame nel nucleo",
+          "page_start": 349
+        },
+        {
+          "number": "17.2",
+          "title": "La distribuzione naturale dei nuclidi stabili",
+          "page_start": 352
+        },
+        {
+          "number": "17.3",
+          "title": "Il decadimento radioattivo",
+          "page_start": 353
+        },
+        {
+          "number": "17.4",
+          "title": "La fissione e la fusione nucleari",
+          "page_start": 361
+        },
+        {
+          "number": "17.5",
+          "title": "Gli elementi transuranici",
+          "page_start": 364
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "title": "La chimica degli elementi",
+      "page_start": 375,
+      "sections": [
+        {
+          "number": "18.1",
+          "title": "Le sostanze elementari",
+          "page_start": 375
+        },
+        {
+          "number": "18.2",
+          "title": "Alcune serie di composti inorganici",
+          "page_start": 384
+        },
+        {
+          "number": "18.3",
+          "title": "Alcuni composti comuni",
+          "page_start": 395
+        },
+        {
+          "number": "18.4",
+          "title": "Acqua, ammoniaca, acidi alogenidrici e composti a essi collegati",
+          "page_start": 405
+        },
+        {
+          "number": "18.5",
+          "title": "Alcune proprietà degli elementi di transizione, lantanoidi, attinoidi e loro composti",
+          "page_start": 407
+        },
+        {
+          "number": "18.6",
+          "title": "Le proprietà magnetiche delle sostanze",
+          "page_start": 413
+        },
+        {
+          "number": "18.7",
+          "title": "Il colore delle sostanze",
+          "page_start": 415
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Chimica organica",
+      "page_start": 421,
+      "sections": [
+        {
+          "number": "19.1",
+          "title": "Introduzione",
+          "page_start": 421
+        },
+        {
+          "number": "19.2",
+          "title": "Gli idrocarburi alifatici",
+          "page_start": 422
+        },
+        {
+          "number": "19.3",
+          "title": "Gli idrocarburi aromatici",
+          "page_start": 431
+        },
+        {
+          "number": "19.4",
+          "title": "Il petrolio",
+          "page_start": 432
+        },
+        {
+          "number": "19.5",
+          "title": "I derivati degli idrocarburi",
+          "page_start": 434
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "title": "La biosfera, le risorse naturali e gli effetti antropici",
+      "page_start": 469,
+      "sections": [
+        {
+          "number": "20.1",
+          "title": "Introduzione",
+          "page_start": 469
+        },
+        {
+          "number": "20.2",
+          "title": "L'atmosfera e l'idrosfera",
+          "page_start": 470
+        },
+        {
+          "number": "20.3",
+          "title": "La litosfera",
+          "page_start": 481
+        },
+        {
+          "number": "20.4",
+          "title": "I cicli della biosfera",
+          "page_start": 486
+        },
+        {
+          "number": "20.5",
+          "title": "Combustibili fossili, produzione di energia e impatto sull'ecosistema",
+          "page_start": 491
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "title": "I materiali per le tecnologie innovative",
+      "page_start": 507,
+      "sections": [
+        {
+          "number": "21.1",
+          "title": "I materiali ceramici",
+          "page_start": 507
+        },
+        {
+          "number": "21.2",
+          "title": "Materiali per l'elettronica",
+          "page_start": 511
+        },
+        {
+          "number": "21.3",
+          "title": "Materiali per l'ottica",
+          "page_start": 517
+        },
+        {
+          "number": "21.4",
+          "title": "Energia dal Sole",
+          "page_start": 522
+        },
+        {
+          "number": "21.5",
+          "title": "Nanotecnologia: nanotubi, grafene e nanoparticelle",
+          "page_start": 524
+        },
+        {
+          "number": "21.6",
+          "title": "Epilogo: il \"mantello invisibile\" e i possibili scenari dei materiali del futuro (o futuribili?)",
+          "page_start": 526
+        }
+      ]
+    }
+  ]
+}

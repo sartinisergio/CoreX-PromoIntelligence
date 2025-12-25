@@ -1,0 +1,473 @@
+{
+  "id": "Munari_fondamenti",
+  "title": "Fondamenti di Chimica",
+  "author": "Munari, Michelin",
+  "publisher": "CEA",
+  "subject": "chimica generale",
+  "type": "Zanichelli",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "La materia e la sua struttura",
+      "page_start": 1,
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "Le particelle fondamentali e la struttura dell'atomo",
+          "page_start": 2
+        },
+        {
+          "number": "1.2",
+          "title": "Il numero atomico, il numero di massa, i nuclidi e gli isotopi",
+          "page_start": 5
+        },
+        {
+          "number": "1.3",
+          "title": "L'unità di massa atomica e i pesi atomici degli elementi",
+          "page_start": 6
+        },
+        {
+          "number": "1.4",
+          "title": "La mole e il Numero di Avogadro",
+          "page_start": 7
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "La radioattività e i processi nucleari",
+      "page_start": 11,
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "Nuclidi stabili e radionuclidi",
+          "page_start": 11
+        },
+        {
+          "number": "2.2",
+          "title": "La radioattività",
+          "page_start": 13
+        },
+        {
+          "number": "2.3",
+          "title": "Il difetto di massa",
+          "page_start": 20
+        },
+        {
+          "number": "2.4",
+          "title": "La fissione e la fusione nucleare",
+          "page_start": 22
+        },
+        {
+          "number": "2.5",
+          "title": "Nuclidi artificiali",
+          "page_start": 26
+        },
+        {
+          "number": "2.6",
+          "title": "Impieghi dei nuclidi radioattivi",
+          "page_start": 26
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Le configurazioni elettroniche degli elementi e le proprietà periodiche",
+      "page_start": 29,
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "Generalità sulle onde elettromagnetiche",
+          "page_start": 30
+        },
+        {
+          "number": "3.2",
+          "title": "Il comportamento corpuscolare delle radiazioni elettromagnetiche: l'effetto fotoelettrico e i fotoni",
+          "page_start": 31
+        },
+        {
+          "number": "3.3",
+          "title": "La critica dei modelli atomici e il principio di indeterminazione",
+          "page_start": 33
+        },
+        {
+          "number": "3.4",
+          "title": "Le onde di De Broglie",
+          "page_start": 35
+        },
+        {
+          "number": "3.5",
+          "title": "La meccanica ondulatoria e l'equazione di Schrödinger",
+          "page_start": 36
+        },
+        {
+          "number": "3.6",
+          "title": "Le configurazioni elettroniche degli atomi",
+          "page_start": 48
+        },
+        {
+          "number": "3.7",
+          "title": "La classificazione periodica degli elementi",
+          "page_start": 53
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Il legame chimico",
+      "page_start": 79,
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "Parametri della struttura molecolare",
+          "page_start": 80
+        },
+        {
+          "number": "4.2",
+          "title": "Classificazione dei legami chimici",
+          "page_start": 81
+        },
+        {
+          "number": "4.3",
+          "title": "Il legame ionico",
+          "page_start": 81
+        },
+        {
+          "number": "4.4",
+          "title": "Il legame covalente",
+          "page_start": 86
+        },
+        {
+          "number": "4.5",
+          "title": "Il legame metallico",
+          "page_start": 126
+        },
+        {
+          "number": "4.6",
+          "title": "Legami deboli",
+          "page_start": 134
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Le reazioni chimiche",
+      "page_start": 139,
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "Elementi e composti",
+          "page_start": 139
+        },
+        {
+          "number": "5.2",
+          "title": "Nomenclatura chimica dei principali composti inorganici",
+          "page_start": 141
+        },
+        {
+          "number": "5.3",
+          "title": "Le reazioni chimiche e la loro rappresentazione",
+          "page_start": 148
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Gli stati di aggregazione della materia",
+      "page_start": 159,
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "Lo stato gassoso",
+          "page_start": 159
+        },
+        {
+          "number": "6.2",
+          "title": "Lo stato liquido",
+          "page_start": 168
+        },
+        {
+          "number": "6.3",
+          "title": "Lo stato solido",
+          "page_start": 177
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Termochimica e principi di termodinamica chimica",
+      "page_start": 193,
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "Il primo principio della termodinamica",
+          "page_start": 193
+        },
+        {
+          "number": "7.2",
+          "title": "Capacità termiche, calori specifici e molari",
+          "page_start": 199
+        },
+        {
+          "number": "7.3",
+          "title": "Termochimica",
+          "page_start": 200
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "La cinetica chimica",
+      "page_start": 221,
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "La velocità di reazione",
+          "page_start": 222
+        },
+        {
+          "number": "8.2",
+          "title": "Le equazioni cinetiche e gli ordini di reazione",
+          "page_start": 223
+        },
+        {
+          "number": "8.3",
+          "title": "Meccanismi di reazione e molecolarità dei processi elementari",
+          "page_start": 229
+        },
+        {
+          "number": "8.4",
+          "title": "L'effetto della temperatura sulla velocità di reazione",
+          "page_start": 232
+        },
+        {
+          "number": "8.5",
+          "title": "Cinetica delle reazioni in soluzione",
+          "page_start": 235
+        },
+        {
+          "number": "8.6",
+          "title": "I catalizzatori",
+          "page_start": 236
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "L'equilibrio chimico",
+      "page_start": 243,
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "L'equilibrio chimico da un punto di vista cinetico",
+          "page_start": 243
+        },
+        {
+          "number": "9.2",
+          "title": "L'approccio termodinamico",
+          "page_start": 245
+        },
+        {
+          "number": "9.3",
+          "title": "Le diverse espressioni della costante di equilibrio",
+          "page_start": 247
+        },
+        {
+          "number": "9.4",
+          "title": "Il calcolo della composizione e del rendimento teorico all'equilibrio per reazioni in fase gas",
+          "page_start": 252
+        },
+        {
+          "number": "9.5",
+          "title": "Fattori che influenzano l'equilibrio chimico",
+          "page_start": 259
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Gli equilibri ionici in soluzione acquosa",
+      "page_start": 275,
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "L'autoprotolisi dell'acqua",
+          "page_start": 275
+        },
+        {
+          "number": "10.2",
+          "title": "Soluzioni acide, basiche, neutre: il concetto di pH",
+          "page_start": 277
+        },
+        {
+          "number": "10.3",
+          "title": "Gli acidi e le basi",
+          "page_start": 279
+        },
+        {
+          "number": "10.4",
+          "title": "Le reazioni di idrolisi",
+          "page_start": 286
+        },
+        {
+          "number": "10.5",
+          "title": "Il calcolo del pH",
+          "page_start": 287
+        },
+        {
+          "number": "10.6",
+          "title": "Le reazioni di neutralizzazione",
+          "page_start": 295
+        },
+        {
+          "number": "10.7",
+          "title": "Le soluzioni tampone",
+          "page_start": 297
+        },
+        {
+          "number": "10.8",
+          "title": "Equilibri di solubilità",
+          "page_start": 298
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Equilibri tra fasi diverse e diagrammi di stato",
+      "page_start": 309,
+      "sections": [
+        {
+          "number": "11.1",
+          "title": "La regola delle fasi",
+          "page_start": 309
+        },
+        {
+          "number": "11.2",
+          "title": "Sistemi a un componente",
+          "page_start": 311
+        },
+        {
+          "number": "11.3",
+          "title": "Sistemi a due componenti",
+          "page_start": 315
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Elettrochimica",
+      "page_start": 337,
+      "sections": [
+        {
+          "number": "12.1",
+          "title": "Le pile",
+          "page_start": 338
+        },
+        {
+          "number": "12.2",
+          "title": "Forza elettromotrice di una pila e potenziale di un semielemento: l'equazione di Nernst",
+          "page_start": 342
+        },
+        {
+          "number": "12.3",
+          "title": "La serie elettrochimica dei potenziali standard",
+          "page_start": 345
+        },
+        {
+          "number": "12.4",
+          "title": "Pile di concentrazione",
+          "page_start": 349
+        },
+        {
+          "number": "12.5",
+          "title": "Fenomeni elettrolitici",
+          "page_start": 351
+        },
+        {
+          "number": "12.6",
+          "title": "Elettrolisi dell'acqua",
+          "page_start": 359
+        },
+        {
+          "number": "12.7",
+          "title": "I processi di corrosione dei metalli",
+          "page_start": 360
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Elementi di chimica organica",
+      "page_start": 379,
+      "sections": [
+        {
+          "number": "13.1",
+          "title": "Gli idrocarburi",
+          "page_start": 379
+        },
+        {
+          "number": "13.2",
+          "title": "Altri gruppi funzionali",
+          "page_start": 394
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Elementi di chimica inorganica",
+      "page_start": 421,
+      "sections": [
+        {
+          "number": "14.1",
+          "title": "L'idrogeno",
+          "page_start": 421
+        },
+        {
+          "number": "14.2",
+          "title": "Gli elementi del gruppo I (1)",
+          "page_start": 426
+        },
+        {
+          "number": "14.3",
+          "title": "Gli elementi del gruppo II (2)",
+          "page_start": 429
+        },
+        {
+          "number": "14.4",
+          "title": "Gli elementi del gruppo III (13)",
+          "page_start": 434
+        },
+        {
+          "number": "14.5",
+          "title": "Gli elementi del gruppo IV (14)",
+          "page_start": 438
+        },
+        {
+          "number": "14.6",
+          "title": "Gli elementi del gruppo V (15)",
+          "page_start": 446
+        },
+        {
+          "number": "14.7",
+          "title": "Gli elementi del gruppo VI (16)",
+          "page_start": 454
+        },
+        {
+          "number": "14.8",
+          "title": "Gli elementi del gruppo VII (17)",
+          "page_start": 463
+        },
+        {
+          "number": "14.9",
+          "title": "Gli elementi del gruppo 0 (18)",
+          "page_start": 468
+        },
+        {
+          "number": "14.10",
+          "title": "Gli elementi di transizione",
+          "page_start": 469
+        }
+      ]
+    }
+  ]
+}

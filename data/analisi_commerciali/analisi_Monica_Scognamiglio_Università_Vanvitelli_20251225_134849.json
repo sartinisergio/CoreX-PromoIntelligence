@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-12-25T13:48:49.745450",
+  "dati_programma": {
+    "docente": "Monica Scognamiglio",
+    "corso": "CHIMICA ORGANICA",
+    "universita": "Università Vanvitelli",
+    "cfu": "8",
+    "materia": "Chimica_Organica"
+  },
+  "manuale_zanichelli": {
+    "autore": "Solomons",
+    "titolo": "Chimica organica"
+  },
+  "concorrente_principale": {
+    "titolo": "CHIMICA ORGANICA ",
+    "autore": "Bruice",
+    "editore": "EdiSES"
+  },
+  "bibliografia_completa": [
+    {
+      "autore": "Bruice",
+      "titolo": "CHIMICA ORGANICA ",
+      "editore": "EdiSES",
+      "ruolo": "principale"
+    }
+  ],
+  "copertura_argomenti": {
+    "percentuale": 0,
+    "argomenti_trovati": [],
+    "argomenti_mancanti": []
+  },
+  "analisi_competitiva": {
+    "zanichelli_presente": false,
+    "situazione": "CONQUISTA",
+    "descrizione": "USA: Bruice, CHIMICA ORGANICA  (EdiSES)",
+    "concorrenti": [
+      {
+        "titolo": "CHIMICA ORGANICA ",
+        "autore": "Bruice",
+        "editore": "EdiSES",
+        "ruolo": "principale"
+      }
+    ],
+    "numero_concorrenti": 1
+  },
+  "raccomandazioni": {
+    "priorita": "ALTA",
+    "lista": [
+      {
+        "tipo": "SOSTITUZIONE",
+        "azione": "Proporre Solomons, Chimica organica in sostituzione di Bruice, CHIMICA ORGANICA ",
+        "dettaglio": "Preparare confronto dettagliato tra Solomons, Chimica organica e Bruice, CHIMICA ORGANICA . Evidenziare punti di forza specifici per il programma."
+      },
+      {
+        "tipo": "COPIA_SAGGIO",
+        "azione": "Inviare copia saggio",
+        "dettaglio": "Inviare Solomons, Chimica organica con lettera di accompagnamento personalizzata."
+      }
+    ]
+  },
+  "punteggio_opportunita": 70,
+  "contenuto_programma": "HOME DIPARTIMENTO RICERCA DIDATTICA TERZA MISSIONE INTERNATIONAL CONTATTI\nMonica SCOGNAMIGLIO\nPRESENTAZIONE\nInsegnamento di CHIMICA ORGANICA\nORGANIZZAZIONE\nCorso di laurea in SCIENZE BIOLOGICHE\nSSD: CHIM/06 PIANO STRATEGICO DEL DIPARTIMENTO\nCFU: 8,00\nASSICURAZIONE DELLA QUALITÀ\nORE PER UNITÀ DIDATTICA: 64,00\nDOCENTI\nPeriodo di Erogazione: Primo Semestre\nItaliano\nUFFICI AMMINISTRATIVI\nLingua di insegnamento\nItaliano BIBLIOTECA\nSEGRETERIA STUDENTI\nContenuti\nStruttura e legami delle molecole organiche: teorie del legame di valenza e dell’orbitale\nmolecolare; ibridazione del carbonio; geometria molecolare; interazioni intermolecolari.\nSTRUTTURE DEL DIPARTIMENTO\nConcetto di gruppo funzionale: classificazione dei composti organici; calcolo del numero di\nORIENTAMENTO\nossidazione del carbonio.\nStereochimica: definizione di chiralità e stereocentri; enantiomeri e diastereoisomeri; descrittori\nJOB PLACEMENT\ndi configurazione R/S e E/Z; risoluzione racemica.\nMeccanismi di reazione: eterolisi ed omolisi; elettrofili e nucleofili; reazioni di addizione, INCLUSIONE, DISABILITÀ, DSA\neliminazione e sostituzione; regioselettività e stereospecificità.\nBANDI DI GARA E AVVISI\nStruttura, proprietà chimico-fisica, nomenclatura e reattività di alcani, cicloalcani, alcheni, alchini,\nbenzene e derivati, alcoli e fenoli; eteri, epossidi, tioli e solfuri, aldeidi e chetoni, acidi carbossilici\nALTRI BANDI\ne derivati, nitrili, ammine, carboidrati, amminoacidi, lipidi, acidi nucleici.\nELEZIONI\nAVVISI\nTesti di riferimento\nP.Y. Bruice CHIMICA ORGANICA III edizione – EdiSES, Napoli, 2017\nM.V. D’Auria, O. Taglialatela Scafati, A. Zampella GUIDA RAGIONATA ALLO SVOLGIMENTO DI\nESERCIZI DI CHIMICA ORGANICA. Con aggiornamento online, LOGHIA, Napoli, 2017\nObiettivi formativi\nL’insegnamento si prefigge di fornire i concetti generali della materia, che sono alla base della\nchimica dei composti organici, necessari per affrontare futuri studi in campo biochimico e\nbiologico.\nAl termine del corso, lo studente "
+}

@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Confronto Classi - Chimica_Organica</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 40px; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1 { color: #1a237e; border-bottom: 3px solid #3949ab; padding-bottom: 10px; }
+        h2 { color: #283593; margin-top: 30px; }
+        h3 { color: #3949ab; }
+        .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 20px 0; }
+        .stat-card { background: linear-gradient(135deg, #e8eaf6, #c5cae9); padding: 20px; border-radius: 8px; text-align: center; }
+        .stat-value { font-size: 2em; font-weight: bold; color: #1a237e; }
+        .stat-label { color: #5c6bc0; margin-top: 5px; }
+        .class-profile { background: #fafafa; border-left: 4px solid #3949ab; padding: 15px; margin: 15px 0; }
+        .profile-header { display: flex; justify-content: space-between; align-items: center; }
+        .coverage-bar { height: 8px; background: #e0e0e0; border-radius: 4px; margin-top: 10px; }
+        .coverage-fill { height: 100%; border-radius: 4px; transition: width 0.3s; }
+        .high { background: #4caf50; }
+        .medium { background: #ff9800; }
+        .low { background: #f44336; }
+        .concept-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+        .concept-tag { padding: 4px 12px; border-radius: 15px; font-size: 0.85em; }
+        .core { background: #c8e6c9; color: #2e7d32; }
+        .distinctive { background: #fff3e0; color: #e65100; }
+        .gap { background: #ffcdd2; color: #c62828; }
+        .module-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .module-table th, .module-table td { padding: 12px; text-align: left; border-bottom: 1px solid #e0e0e0; }
+        .module-table th { background: #3949ab; color: white; }
+        .module-table tr:hover { background: #f5f5f5; }
+        .level-badge { display: inline-block; width: 24px; height: 24px; border-radius: 50%; text-align: center; line-height: 24px; color: white; font-weight: bold; font-size: 0.8em; }
+        .level-5 { background: #2e7d32; }
+        .level-4 { background: #689f38; }
+        .level-3 { background: #fbc02d; color: #333; }
+        .level-2 { background: #f57c00; }
+        .level-1 { background: #d32f2f; }
+        .level-0 { background: #9e9e9e; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🔄 Confronto Framework: Chimica Organica</h1>
+    <p><strong>Classi analizzate:</strong> L-2_Biotecnologie, L-13_Scienze_biologiche</p>
+    
+    <div class="summary">
+        <div class="stat-card">
+            <div class="stat-value">2</div>
+            <div class="stat-label">Classi confrontate</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">12</div>
+            <div class="stat-label">Moduli totali</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">486</div>
+            <div class="stat-label">Concetti unici</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">50</div>
+            <div class="stat-label">Concetti core</div>
+        </div>
+    </div>
+    
+    <h2>📊 Profili per Classe</h2>
+
+    <div class="class-profile">
+        <div class="profile-header">
+            <h3>🎓 L-2_Biotecnologie</h3>
+            <span style="font-size: 1.2em; font-weight: bold;">77% copertura media</span>
+        </div>
+        <div class="coverage-bar">
+            <div class="coverage-fill high" style="width: 77.08333333333333%;"></div>
+        </div>
+    </div>
+
+    <div class="class-profile">
+        <div class="profile-header">
+            <h3>🎓 L-13_Scienze_biologiche</h3>
+            <span style="font-size: 1.2em; font-weight: bold;">81% copertura media</span>
+        </div>
+        <div class="coverage-bar">
+            <div class="coverage-fill high" style="width: 81.25%;"></div>
+        </div>
+    </div>
+
+    <h2>📋 Confronto per Modulo</h2>
+    <table class="module-table">
+        <tr>
+            <th>Modulo</th>
+            <th>L-2_Biotecnologie</th>
+            <th>L-13_Scienze_biologiche</th>
+            <th>Core</th>
+            <th>Note</th>
+        </tr>
+        <tr>
+            <td><strong>Chimica bio-organica</strong></td>
+            <td><span class="level-badge level-5">5</span> 100%</td>
+            <td><span class="level-badge level-5">5</span> 100%</td>
+            <td>11 concetti</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td><strong>Chimica dei polimeri</strong></td>
+            <td><span class="level-badge level-3">3</span> 75%</td>
+            <td><span class="level-badge level-5">5</span> 100%</td>
+            <td>0 concetti</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td><strong>Chimica organometallica</strong></td>
+            <td><span class="level-badge level-3">3</span> 75%</td>
+            <td><span class="level-badge level-3">3</span> 75%</td>
+            <td>2 concetti</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td><strong>Composti aromatici</strong></td>
+            <td><span class="level-badge level-5">5</span> 100%</td>
+            <td><span class="level-badge level-5">5</span> 100%</td>
+            <td>6 concetti</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td><strong>Gruppi funzionali e classificazione</strong></td>
+            <td><span class="level-badge level-5">5</span> 100%</td>
+            <td><span class="level-badge level-5">5</span> 100%</td>
+            <td>14 concetti</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td><strong>Idrocarburi e isomeria</strong></td>
+            <td><span class="level-badge level-3">3</span> 75%</td>
+            <td><span class="level-badge level-3">3</span> 75%</td>
+            <td>5 concetti</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td><strong>Meccanismi di reazione organica</strong></td>
+            <td><span class="level-badge level-5">5</span> 100%</td>
+            <td><span class="level-badge level-5">5</span> 100%</td>
+            <td>3 concetti</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td><strong>Problem solving e laboratorio</strong></td>
+            <td><span class="level-badge level-0">0</span> 0%</td>
+            <td><span class="level-badge level-0">0</span> 0%</td>
+            <td>0 concetti</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td><strong>Reattività e sintesi avanzata</strong></td>
+            <td><span class="level-badge level-3">3</span> 75%</td>
+            <td><span class="level-badge level-3">3</span> 75%</td>
+            <td>3 concetti</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td><strong>Stereochimica</strong></td>
+            <td><span class="level-badge level-5">5</span> 100%</td>
+            <td><span class="level-badge level-5">5</span> 100%</td>
+            <td>3 concetti</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td><strong>Struttura degli atomi e legami</strong></td>
+            <td><span class="level-badge level-3">3</span> 75%</td>
+            <td><span class="level-badge level-3">3</span> 75%</td>
+            <td>1 concetti</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td><strong>Tecniche spettroscopiche</strong></td>
+            <td><span class="level-badge level-2">2</span> 50%</td>
+            <td><span class="level-badge level-3">3</span> 75%</td>
+            <td>2 concetti</td>
+            <td>-</td>
+        </tr>
+
+    </table>
+    
+    <h2>🎯 Core Concepts (trasversali)</h2>
+    <p>Concetti presenti in tutte le classi con frequenza ≥50%:</p>
+    <div class="concept-list">
+        <span class="concept-tag core">acidi carbossilici</span>
+        <span class="concept-tag core">carboidrati</span>
+        <span class="concept-tag core">amminoacidi</span>
+        <span class="concept-tag core">lipidi</span>
+        <span class="concept-tag core">acidi nucleici</span>
+        <span class="concept-tag core">proteine</span>
+        <span class="concept-tag core">ammidi</span>
+        <span class="concept-tag core">monosaccaridi</span>
+        <span class="concept-tag core">disaccaridi</span>
+        <span class="concept-tag core">esteri</span>
+        <span class="concept-tag core">anidridi</span>
+        <span class="concept-tag core">reazioni di sostituzione</span>
+        <span class="concept-tag core">sostituzione nucleofila</span>
+        <span class="concept-tag core">aromatici</span>
+        <span class="concept-tag core">isomeria</span>
+        <span class="concept-tag core">reazioni di sostituzione</span>
+        <span class="concept-tag core">benzene</span>
+        <span class="concept-tag core">sostituzione nucleofila</span>
+        <span class="concept-tag core">aromaticità</span>
+        <span class="concept-tag core">acidi carbossilici</span>
+        <span class="concept-tag core">gruppi funzionali</span>
+        <span class="concept-tag core">eteri</span>
+        <span class="concept-tag core">aldeidi</span>
+        <span class="concept-tag core">chetoni</span>
+        <span class="concept-tag core">amminoacidi</span>
+        <span class="concept-tag core">alcoli</span>
+        <span class="concept-tag core">ammine</span>
+        <span class="concept-tag core">acidi nucleici</span>
+        <span class="concept-tag core">fenoli</span>
+        <span class="concept-tag core">proteine</span>
+        <span class="concept-tag core">ammidi</span>
+        <span class="concept-tag core">esteri</span>
+        <span class="concept-tag core">anidridi</span>
+        <span class="concept-tag core">alcani</span>
+        <span class="concept-tag core">alchini</span>
+        <span class="concept-tag core">enantiomeri</span>
+        <span class="concept-tag core">isomeria</span>
+        <span class="concept-tag core">diastereoisomeri</span>
+        <span class="concept-tag core">eliminazione</span>
+        <span class="concept-tag core">reazioni di sostituzione</span>
+        <span class="concept-tag core">sostituzione nucleofila</span>
+        <span class="concept-tag core">gruppi funzionali</span>
+        <span class="concept-tag core">ammine</span>
+        <span class="concept-tag core">ammidi</span>
+        <span class="concept-tag core">enantiomeri</span>
+        <span class="concept-tag core">isomeria</span>
+        <span class="concept-tag core">chiralità</span>
+        <span class="concept-tag core">ibridazione</span>
+        <span class="concept-tag core">risonanza</span>
+        <span class="concept-tag core">chiralità</span>
+
+    </div>
+    
+    <p style="margin-top: 40px; color: #666; font-size: 0.9em;">
+        Report generato da CoreX - Zanichelli | 23/12/2025 13:01
+    </p>
+</div>
+</body>
+</html>

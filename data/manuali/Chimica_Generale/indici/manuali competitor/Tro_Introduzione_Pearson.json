@@ -1,0 +1,95 @@
+{
+  "id": "Tro_Introduzione",
+  "title": "Introduzione alla Chimica",
+  "author": "Tro",
+  "publisher": "Pearson",
+  "subject": "chimica generale",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Il mondo della chimica",
+      "sections": []
+    },
+    {
+      "number": 2,
+      "title": "Misure e risoluzione dei problemi",
+      "sections": []
+    },
+    {
+      "number": 3,
+      "title": "Materia ed energia",
+      "sections": []
+    },
+    {
+      "number": 4,
+      "title": "Atomi ed elementi",
+      "sections": []
+    },
+    {
+      "number": 5,
+      "title": "Molecole e composti",
+      "sections": []
+    },
+    {
+      "number": 6,
+      "title": "Composizione chimica",
+      "sections": []
+    },
+    {
+      "number": 7,
+      "title": "Reazioni chimiche",
+      "sections": []
+    },
+    {
+      "number": 8,
+      "title": "Quantità nelle reazioni chimiche",
+      "sections": []
+    },
+    {
+      "number": 9,
+      "title": "Elettroni negli atomi e tavola periodica",
+      "sections": []
+    },
+    {
+      "number": 10,
+      "title": "Il legame chimico",
+      "sections": []
+    },
+    {
+      "number": 11,
+      "title": "I gas",
+      "sections": []
+    },
+    {
+      "number": 12,
+      "title": "Liquidi, solidi e forze intermolecolari",
+      "sections": []
+    },
+    {
+      "number": 13,
+      "title": "Le soluzioni",
+      "sections": []
+    },
+    {
+      "number": 14,
+      "title": "Acidi e basi",
+      "sections": []
+    },
+    {
+      "number": 15,
+      "title": "L'equilibrio chimico",
+      "sections": []
+    },
+    {
+      "number": 16,
+      "title": "Ossidazione e riduzione",
+      "sections": []
+    },
+    {
+      "number": 17,
+      "title": "Radioattività e chimica nucleare",
+      "sections": []
+    }
+  ]
+}

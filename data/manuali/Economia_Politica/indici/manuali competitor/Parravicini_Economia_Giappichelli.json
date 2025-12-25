@@ -1,0 +1,652 @@
+{
+  "id": "Parravicini_Economia",
+  "title": "Economia",
+  "author": "Parravicini, Graffi",
+  "publisher": "Giappichelli",
+  "subject": "Economia politica",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Linguaggio e strumenti dell'economia",
+      "page_start": 27,
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "Le leggi economiche",
+          "page_start": 27
+        },
+        {
+          "number": "1.2",
+          "title": "Come rappresentare analiticamente una legge economica",
+          "page_start": 31
+        },
+        {
+          "number": "1.3",
+          "title": "Come rappresentare graficamente una legge economica",
+          "page_start": 33
+        },
+        {
+          "number": "1.4",
+          "title": "Movimenti lungo le curve e spostamenti delle curve",
+          "page_start": 35
+        },
+        {
+          "number": "1.5",
+          "title": "I modelli economici",
+          "page_start": 37
+        },
+        {
+          "number": "1.6",
+          "title": "La verifica empirica come metodo di indagine",
+          "page_start": 39
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Ragionare da economisti",
+      "page_start": 43,
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "L'analisi costi-benefici nelle scelte economiche individuali",
+          "page_start": 43
+        },
+        {
+          "number": "2.2",
+          "title": "Dal prezzo di riserva al costo opportunità",
+          "page_start": 46
+        },
+        {
+          "number": "2.3",
+          "title": "Il significato di scegliere al margine",
+          "page_start": 50
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "La mano invisibile del mercato",
+      "page_start": 55,
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "Gli agenti economici e i metodi di coordinamento dell'attività economica",
+          "page_start": 56
+        },
+        {
+          "number": "3.2",
+          "title": "Il funzionamento del meccanismo di mercato",
+          "page_start": 57
+        },
+        {
+          "number": "3.3",
+          "title": "Un modello di equilibrio di mercato",
+          "page_start": 58
+        },
+        {
+          "number": "3.4",
+          "title": "Equilibrio di mercato e benessere sociale",
+          "page_start": 67
+        },
+        {
+          "number": "3.5",
+          "title": "Una classificazione dei beni e dei servizi",
+          "page_start": 69
+        },
+        {
+          "number": "3.6",
+          "title": "Spostamenti della curva di domanda e variazioni dell'equilibrio di mercato",
+          "page_start": 70
+        },
+        {
+          "number": "3.7",
+          "title": "Spostamenti della curva di offerta e variazioni dell'equilibrio di mercato",
+          "page_start": 72
+        },
+        {
+          "number": "3.8",
+          "title": "Effetti nel mercato di un intervento regolatorio dello Stato",
+          "page_start": 73
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "L'elasticità e le sue applicazioni",
+      "page_start": 81,
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "Un passo indietro",
+          "page_start": 81
+        },
+        {
+          "number": "4.2",
+          "title": "Misurare la sensibilità della domanda rispetto al prezzo",
+          "page_start": 83
+        },
+        {
+          "number": "4.3",
+          "title": "L'elasticità diretta",
+          "page_start": 86
+        },
+        {
+          "number": "4.4",
+          "title": "Un caso particolare: l'elasticità diretta in caso di domanda lineare",
+          "page_start": 88
+        },
+        {
+          "number": "4.5",
+          "title": "Elasticità diretta e ricavo totale dell'impresa",
+          "page_start": 92
+        },
+        {
+          "number": "4.6",
+          "title": "Elasticità della domanda al reddito",
+          "page_start": 97
+        },
+        {
+          "number": "4.7",
+          "title": "Elasticità incrociata",
+          "page_start": 98
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Scelte di consumo tra preferenze e vincoli",
+      "page_start": 101,
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "Il problema della scelta razionale del consumatore: obiettivo e metodo",
+          "page_start": 102
+        },
+        {
+          "number": "5.2",
+          "title": "Le scelte razionali e le ipotesi del modello",
+          "page_start": 102
+        },
+        {
+          "number": "5.3",
+          "title": "La struttura logica del modello",
+          "page_start": 103
+        },
+        {
+          "number": "5.4",
+          "title": "Il vincolo di bilancio del consumatore",
+          "page_start": 105
+        },
+        {
+          "number": "5.5",
+          "title": "Spostamenti del vincolo di bilancio",
+          "page_start": 107
+        },
+        {
+          "number": "5.6",
+          "title": "Le preferenze del consumatore e le curve di indifferenza",
+          "page_start": 109
+        },
+        {
+          "number": "5.7",
+          "title": "Utilità totale e marginale",
+          "page_start": 115
+        },
+        {
+          "number": "5.8",
+          "title": "Il saggio marginale di sostituzione tra due beni",
+          "page_start": 116
+        },
+        {
+          "number": "5.9",
+          "title": "La soluzione del problema di scelta del consumatore: il paniere ottimo",
+          "page_start": 120
+        },
+        {
+          "number": "5.10",
+          "title": "Stabilità dell'equilibrio e analisi di situazioni di non equilibrio",
+          "page_start": 122
+        },
+        {
+          "number": "5.11",
+          "title": "Effetti delle variazioni del prezzo di un bene e del reddito",
+          "page_start": 124
+        },
+        {
+          "number": "5.12",
+          "title": "Effetto sostituzione ed effetto reddito",
+          "page_start": 129
+        },
+        {
+          "number": "5.13",
+          "title": "Dalla domanda individuale alla domanda di mercato",
+          "page_start": 130
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Il problema di scelta razionale dell'impresa: efficienza tecnica ed economica",
+      "page_start": 135,
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "La teoria neoclassica dell'impresa: alcune premesse",
+          "page_start": 136
+        },
+        {
+          "number": "6.2",
+          "title": "Il problema di scelta razionale dell'impresa: come e quanto produrre?",
+          "page_start": 139
+        },
+        {
+          "number": "6.3",
+          "title": "La funzione di produzione",
+          "page_start": 140
+        },
+        {
+          "number": "6.4",
+          "title": "La struttura di produzione di breve periodo: le curve del prodotto totale, marginale e medio",
+          "page_start": 141
+        },
+        {
+          "number": "6.5",
+          "title": "La funzione del costo totale di produzione",
+          "page_start": 148
+        },
+        {
+          "number": "6.6",
+          "title": "La struttura di costo di breve periodo",
+          "page_start": 149
+        },
+        {
+          "number": "6.7",
+          "title": "Costo marginale e medio di produzione di breve periodo",
+          "page_start": 154
+        },
+        {
+          "number": "6.8",
+          "title": "Dualità tra struttura di produzione e di costo nel breve periodo",
+          "page_start": 162
+        },
+        {
+          "number": "6.9",
+          "title": "La struttura di produzione nel lungo periodo: i rendimenti di scala",
+          "page_start": 166
+        },
+        {
+          "number": "6.10",
+          "title": "La struttura di costo nel lungo periodo: costo totale, marginale e medio",
+          "page_start": 168
+        },
+        {
+          "number": "6.11",
+          "title": "Dualità tra struttura di produzione e di costo nel lungo periodo: rendimenti ed economie di scala",
+          "page_start": 172
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "L'impresa nel mercato",
+      "page_start": 179,
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "La regola di scelta di produzione ottima: uguaglianza fra ricavo e costo marginali",
+          "page_start": 180
+        },
+        {
+          "number": "7.2",
+          "title": "Il mercato di concorrenza perfetta",
+          "page_start": 184
+        },
+        {
+          "number": "7.3",
+          "title": "Il mercato di monopolio",
+          "page_start": 201
+        },
+        {
+          "number": "7.4",
+          "title": "I mercati oligopolistici",
+          "page_start": 212
+        },
+        {
+          "number": "7.5",
+          "title": "Il mercato di concorrenza monopolistica",
+          "page_start": 214
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Quando il mercato fallisce",
+      "page_start": 223,
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "I fallimenti del mercato",
+          "page_start": 223
+        },
+        {
+          "number": "8.2",
+          "title": "Le esternalità",
+          "page_start": 224
+        },
+        {
+          "number": "8.3",
+          "title": "Le asimmetrie informative",
+          "page_start": 231
+        },
+        {
+          "number": "8.4",
+          "title": "I beni pubblici",
+          "page_start": 234
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Il circuito del reddito",
+      "page_start": 239,
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "Il sistema dei conti economici nazionali",
+          "page_start": 239
+        },
+        {
+          "number": "9.2",
+          "title": "Il Prodotto Interno Lordo",
+          "page_start": 241
+        },
+        {
+          "number": "9.3",
+          "title": "I tre metodi per misurare il PIL",
+          "page_start": 243
+        },
+        {
+          "number": "9.4",
+          "title": "Quel che sfugge al PIL",
+          "page_start": 246
+        },
+        {
+          "number": "9.5",
+          "title": "PIL nominale e PIL reale",
+          "page_start": 247
+        },
+        {
+          "number": "9.6",
+          "title": "Variazioni congiunturali e tendenziali del PIL reale",
+          "page_start": 248
+        },
+        {
+          "number": "9.7",
+          "title": "Dal PIL al Reddito Nazionale",
+          "page_start": 249
+        },
+        {
+          "number": "9.8",
+          "title": "Le altre identità contabili",
+          "page_start": 250
+        },
+        {
+          "number": "9.9",
+          "title": "Misurare il livello generale dei prezzi di un sistema economico",
+          "page_start": 252
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "La rivoluzione keynesiana",
+      "page_start": 255,
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "Introduzione ai modelli macroeconomici",
+          "page_start": 255
+        },
+        {
+          "number": "10.2",
+          "title": "I modelli macroeconomici di breve periodo: un quadro metodologico generale",
+          "page_start": 258
+        },
+        {
+          "number": "10.3",
+          "title": "Le ipotesi del modello reddito-spesa",
+          "page_start": 260
+        },
+        {
+          "number": "10.4",
+          "title": "Il paradosso della parsimonia",
+          "page_start": 274
+        },
+        {
+          "number": "10.5",
+          "title": "L'intervento dello Stato e la politica fiscale",
+          "page_start": 278
+        },
+        {
+          "number": "10.6",
+          "title": "Gli effetti della politica fiscale: un'analisi prospettica",
+          "page_start": 284
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "L'interazione tra mercato reale e mercato finanziario",
+      "page_start": 293,
+      "sections": [
+        {
+          "number": "11.1",
+          "title": "Oltre la classica dicotomia",
+          "page_start": 293
+        },
+        {
+          "number": "11.2",
+          "title": "Ipotesi e struttura logica del modello IS-LM",
+          "page_start": 296
+        },
+        {
+          "number": "11.3",
+          "title": "Il mercato finanziario: moneta, obbligazioni ed equilibrio",
+          "page_start": 298
+        },
+        {
+          "number": "11.4",
+          "title": "L'equilibrio del mercato monetario-finanziario: la curva LM",
+          "page_start": 312
+        },
+        {
+          "number": "11.5",
+          "title": "Il mercato reale nel modello IS-LM",
+          "page_start": 316
+        },
+        {
+          "number": "11.6",
+          "title": "L'equilibrio del mercato reale: la curva IS",
+          "page_start": 320
+        },
+        {
+          "number": "11.7",
+          "title": "L'equilibrio nel modello IS-LM: politica fiscale e politica monetaria",
+          "page_start": 326
+        },
+        {
+          "number": "11.8",
+          "title": "Effetti della politica fiscale e della politica monetaria",
+          "page_start": 328
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Il SEBC, la BCE e l'offerta di moneta",
+      "page_start": 333,
+      "sections": [
+        {
+          "number": "12.1",
+          "title": "Il Sistema Europeo di Banche Centrali e la Banca Centrale Europea",
+          "page_start": 333
+        },
+        {
+          "number": "12.2",
+          "title": "Un passo in avanti: il ruolo del sistema bancario nella creazione di moneta",
+          "page_start": 338
+        },
+        {
+          "number": "12.3",
+          "title": "Il moltiplicatore monetario",
+          "page_start": 339
+        },
+        {
+          "number": "12.4",
+          "title": "Il controllo dell'offerta nominale di moneta",
+          "page_start": 345
+        },
+        {
+          "number": "12.5",
+          "title": "Gli strumenti convenzionali della BCE e il modello IS-LM",
+          "page_start": 347
+        },
+        {
+          "number": "12.6",
+          "title": "La recente crisi economica mondiale e il modello IS-LM",
+          "page_start": 350
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Quando i prezzi variano: il modello DA-OA",
+      "page_start": 355,
+      "sections": [
+        {
+          "number": "13.1",
+          "title": "Ipotesi e struttura del modello DA-OA",
+          "page_start": 355
+        },
+        {
+          "number": "13.2",
+          "title": "La curva DA e i suoi spostamenti",
+          "page_start": 362
+        },
+        {
+          "number": "13.3",
+          "title": "Il mercato del lavoro e la curva OA",
+          "page_start": 369
+        },
+        {
+          "number": "13.4",
+          "title": "L'equilibrio nel modello DA-OA",
+          "page_start": 380
+        },
+        {
+          "number": "13.5",
+          "title": "Gli effetti della politica fiscale espansiva",
+          "page_start": 384
+        },
+        {
+          "number": "13.6",
+          "title": "Gli effetti della politica monetaria espansiva",
+          "page_start": 386
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Le cause dell'inflazione e la curva di Phillips",
+      "page_start": 391,
+      "sections": [
+        {
+          "number": "14.1",
+          "title": "L'inflazione: cos'è e come si misura?",
+          "page_start": 391
+        },
+        {
+          "number": "14.2",
+          "title": "La curva di Phillips e le cause dell'inflazione nel breve periodo",
+          "page_start": 393
+        },
+        {
+          "number": "14.3",
+          "title": "La curva di Phillips e le cause dell'inflazione nel lungo periodo",
+          "page_start": 401
+        },
+        {
+          "number": "14.4",
+          "title": "I rimedi contro l'inflazione",
+          "page_start": 412
+        },
+        {
+          "number": "14.5",
+          "title": "I costi dell'inflazione",
+          "page_start": 413
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Quando un'economia si apre al resto del mondo",
+      "page_start": 419,
+      "sections": [
+        {
+          "number": "15.1",
+          "title": "Gli scambi finanziari con il resto del mondo",
+          "page_start": 419
+        },
+        {
+          "number": "15.2",
+          "title": "Il tasso di cambio nominale e quello reale",
+          "page_start": 421
+        },
+        {
+          "number": "15.3",
+          "title": "Mercato valutario e bilancia dei pagamenti",
+          "page_start": 425
+        },
+        {
+          "number": "15.4",
+          "title": "Regimi di cambio e meccanismi di aggiustamento",
+          "page_start": 429
+        },
+        {
+          "number": "15.5",
+          "title": "Tassi di cambio fissi e flessibili",
+          "page_start": 435
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Il commercio internazionale",
+      "page_start": 439,
+      "sections": [
+        {
+          "number": "16.1",
+          "title": "Perché scambiare?",
+          "page_start": 439
+        },
+        {
+          "number": "16.2",
+          "title": "Commercio internazionale e globalizzazione",
+          "page_start": 440
+        },
+        {
+          "number": "16.3",
+          "title": "Cause e conseguenze del commercio internazionale",
+          "page_start": 441
+        },
+        {
+          "number": "16.4",
+          "title": "Libero scambio o protezionismo?",
+          "page_start": 453
+        }
+      ]
+    }
+  ]
+}

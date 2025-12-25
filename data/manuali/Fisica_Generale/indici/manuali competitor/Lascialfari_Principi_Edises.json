@@ -1,0 +1,282 @@
+{
+  "id": "Lascialfari_Principi",
+  "title": "Principi di fisica",
+  "author": "Lascialfari, Borsa",
+  "publisher": "Edises",
+  "subject": "Fisica_Generale",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Le grandezze fisiche e la loro misura",
+      "page_start": 1,
+      "sections": [
+        {"number": "1.1", "title": "Le grandezze fisiche", "page_start": null},
+        {"number": "1.2", "title": "Dimensioni di una grandezza", "page_start": null},
+        {"number": "1.3", "title": "Valori approssimati di lunghezza, massa, tempo. Sistemi di unità di misura e conversioni", "page_start": null},
+        {"number": "1.4", "title": "Quantità scalari e quantità vettoriali", "page_start": null},
+        {"number": "1.5", "title": "Operazioni sulle quantità vettoriali", "page_start": null},
+        {"number": "1.6", "title": "Calcoli e cifre significative", "page_start": null}
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Cinematica",
+      "page_start": 19,
+      "sections": [
+        {"number": "2.1", "title": "Introduzione alla meccanica", "page_start": 19},
+        {"number": "2.2", "title": "Posizione, velocità e accelerazione", "page_start": 23},
+        {"number": "2.3", "title": "Moto rettilineo uniforme e uniformemente accelerato", "page_start": 30},
+        {"number": "2.4", "title": "Moto circolare uniforme e non uniforme", "page_start": 33},
+        {"number": "2.5", "title": "Moto armonico", "page_start": 35}
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Dinamica",
+      "page_start": 39,
+      "sections": [
+        {"number": "3.1", "title": "Le forze", "page_start": null},
+        {"number": "3.2", "title": "Le leggi della dinamica", "page_start": null},
+        {"number": "3.3", "title": "La forza di gravità", "page_start": null},
+        {"number": "3.4", "title": "La forza di attrito", "page_start": null},
+        {"number": "3.5", "title": "Massa, peso e densità", "page_start": null},
+        {"number": "3.6", "title": "La forza di attrito viscoso e la sedimentazione", "page_start": null},
+        {"number": "3.7", "title": "La forza centrifuga e la centrifugazione", "page_start": null},
+        {"number": "3.8", "title": "Esempi di moto armonico", "page_start": null},
+        {"number": "3.9", "title": "Cenni di dinamica del corpo rigido", "page_start": null}
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Statica",
+      "page_start": 63,
+      "sections": [
+        {"number": "4.1", "title": "Le forze", "page_start": 63},
+        {"number": "4.2", "title": "Il momento di una forza", "page_start": 64},
+        {"number": "4.3", "title": "Condizioni di equilibrio traslazionale e rotazionale", "page_start": 67},
+        {"number": "4.4", "title": "Composizione di forze parallele: il baricentro", "page_start": 69},
+        {"number": "4.5", "title": "Alcuni esempi di statica del corpo umano", "page_start": 74}
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Lavoro, energia e potenza",
+      "page_start": 79,
+      "sections": [
+        {"number": "5.1", "title": "Forze e campi di forze", "page_start": 79},
+        {"number": "5.2", "title": "Lavoro ed energia", "page_start": 81},
+        {"number": "5.3", "title": "Energia cinetica e teorema dell'energia cinetica", "page_start": 86},
+        {"number": "5.4", "title": "Energia potenziale e forze conservative", "page_start": 87},
+        {"number": "5.5", "title": "Conservazione dell'energia meccanica", "page_start": 89},
+        {"number": "5.6", "title": "Energia potenziale e forze: condizioni di equilibrio di un sistema meccanico", "page_start": 94},
+        {"number": "5.7", "title": "Potenza e rendimento. Lavoro e potenza muscolare", "page_start": 97}
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Statica e dinamica dei fluidi",
+      "page_start": 97,
+      "sections": [
+        {"number": "6.1", "title": "Equilibrio di un fluido", "page_start": 103},
+        {"number": "6.2", "title": "Misura della pressione", "page_start": null},
+        {"number": "6.3", "title": "Tensione superficiale", "page_start": null},
+        {"number": "6.4", "title": "Fenomeni di capillarità", "page_start": null},
+        {"number": "6.5", "title": "Dinamica dei fluidi perfetti", "page_start": null},
+        {"number": "6.6", "title": "Regime laminare e regime turbolento", "page_start": null},
+        {"number": "6.7", "title": "Idrodinamica della circolazione del sangue", "page_start": null},
+        {"number": "6.8", "title": "Lavoro e potenza cardiaca", "page_start": null},
+        {"number": "6.9", "title": "Viscosità del sangue", "page_start": null},
+        {"number": "6.10", "title": "Formula di Laplace ed equilibrio dei vasi sanguigni", "page_start": null}
+      ]
+    },
+    {
+      "number": 7,
+      "title": "I gas e le soluzioni",
+      "page_start": 126,
+      "sections": [
+        {"number": "7.1", "title": "Introduzione", "page_start": 126},
+        {"number": "7.2", "title": "Leggi dei gas perfetti", "page_start": 128},
+        {"number": "7.3", "title": "Leggi dei gas reali", "page_start": 131},
+        {"number": "7.4", "title": "Pressione parziale", "page_start": 134},
+        {"number": "7.5", "title": "Le soluzioni", "page_start": 137},
+        {"number": "7.6", "title": "Diffusione", "page_start": 138},
+        {"number": "7.7", "title": "Osmosi e pressione osmotica", "page_start": 140},
+        {"number": "7.8", "title": "Lavoro osmotico e potenziale chimico in soluzioni diluite", "page_start": 144},
+        {"number": "7.9", "title": "Potenziale elettrochimico ed equilibrio di Donnan-Gibbs", "page_start": 145},
+        {"number": "7.10", "title": "Fenomeni osmotici e diffusione di gas nell'organismo umano", "page_start": 147},
+        {"number": "7.11", "title": "Meccanica della respirazione", "page_start": 149},
+        {"number": "7.12", "title": "Equilibrio meccanico degli alveoli", "page_start": 153}
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Termologia e termodinamica",
+      "page_start": 155,
+      "sections": [
+        {"number": "8.1", "title": "Sistema e stato termodinamico", "page_start": 156},
+        {"number": "8.2", "title": "Trasformazioni termodinamiche", "page_start": 160},
+        {"number": "8.3", "title": "Il lavoro in termodinamica", "page_start": 163},
+        {"number": "8.4", "title": "Calore e temperatura. Principio zero", "page_start": 165},
+        {"number": "8.5", "title": "Energia interna e primo principio della termodinamica", "page_start": 169},
+        {"number": "8.6", "title": "Misura della temperatura", "page_start": 170},
+        {"number": "8.7", "title": "Capacità termica e calori specifici", "page_start": 172},
+        {"number": "8.8", "title": "Trasformazioni di stato e calori latenti", "page_start": 173},
+        {"number": "8.9", "title": "Secondo principio della termodinamica", "page_start": 175},
+        {"number": "8.10", "title": "Cenni sull'entalpia, sull'entropia e sull'energia libera", "page_start": 178}
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Termodinamica nei sistemi biologici",
+      "page_start": 180,
+      "sections": [
+        {"number": "9.1", "title": "Introduzione", "page_start": 182},
+        {"number": "9.2", "title": "Meccanismi di trasmissione del calore", "page_start": 185},
+        {"number": "9.3", "title": "Principi della termodinamica e fisiologia", "page_start": 190},
+        {"number": "9.4", "title": "Metabolismo del corpo umano", "page_start": 195},
+        {"number": "9.5", "title": "Metabolismo basale e dimensioni degli esseri viventi", "page_start": 197},
+        {"number": "9.6", "title": "Termoregolazione degli animali a sangue caldo", "page_start": 197},
+        {"number": "9.7", "title": "Entropia e vita", "page_start": 202}
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Onde meccaniche e acustica",
+      "page_start": 204,
+      "sections": [
+        {"number": "10.1", "title": "Perturbazioni e modello ondulatorio", "page_start": 206},
+        {"number": "10.2", "title": "Legge di propagazione delle onde", "page_start": 209},
+        {"number": "10.3", "title": "Interferenza delle onde", "page_start": 212},
+        {"number": "10.4", "title": "Onde stazionarie", "page_start": 213},
+        {"number": "10.5", "title": "Il suono", "page_start": 217},
+        {"number": "10.6", "title": "I caratteri del suono", "page_start": 220},
+        {"number": "10.7", "title": "Cenni sulla fisiologia dell'udito", "page_start": 225}
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Ottica",
+      "page_start": 227,
+      "sections": [
+        {"number": "11.1", "title": "Natura della luce. Principio di Huygens", "page_start": 230},
+        {"number": "11.2", "title": "Leggi della riflessione e rifrazione", "page_start": 230},
+        {"number": "11.3", "title": "La dispersione della luce e il prisma", "page_start": 232},
+        {"number": "11.4", "title": "Il diottro", "page_start": 236},
+        {"number": "11.5", "title": "Le lenti sottili", "page_start": 237},
+        {"number": "11.6", "title": "L'interferenza della luce", "page_start": 239},
+        {"number": "11.7", "title": "La diffrazione della luce", "page_start": 242},
+        {"number": "11.8", "title": "Funzionamento dell'occhio come sistema ottico centrato", "page_start": 243},
+        {"number": "11.9", "title": "Acuità visiva", "page_start": 246},
+        {"number": "11.10", "title": "Difetti di convergenza e lenti correttive", "page_start": 250},
+        {"number": "11.11", "title": "Visione cromatica", "page_start": 254}
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Strumenti ottici",
+      "page_start": 256,
+      "sections": [
+        {"number": "12.1", "title": "Microscopio semplice e composto e relativo ingrandimento", "page_start": 259},
+        {"number": "12.2", "title": "Il potere risolutivo del microscopio", "page_start": 261},
+        {"number": "12.3", "title": "Microscopio a contrasto di fase e microscopio polarizzatore", "page_start": 263}
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Elettromagnetismo",
+      "page_start": 267,
+      "sections": [
+        {"number": "13.1", "title": "Introduzione", "page_start": 271},
+        {"number": "13.2", "title": "La carica elettrica", "page_start": 273},
+        {"number": "13.3", "title": "La legge di Coulomb. Principio di sovrapposizione", "page_start": 276},
+        {"number": "13.4", "title": "Il campo elettrico. Linee di campo", "page_start": 277},
+        {"number": "13.5", "title": "Flusso di campo elettrico. Teorema di Gauss", "page_start": 277},
+        {"number": "13.6", "title": "Energia potenziale elettrica e potenziale elettrico", "page_start": 279},
+        {"number": "13.7", "title": "Potenziale di dipolo elettrico", "page_start": 282},
+        {"number": "13.8", "title": "Conduttori e isolanti. I condensatori", "page_start": 289},
+        {"number": "13.9", "title": "La corrente elettrica continua", "page_start": 293},
+        {"number": "13.10", "title": "Resistenza elettrica e legge di Ohm", "page_start": 296},
+        {"number": "13.11", "title": "Forza elettromotrice e circuiti in corrente continua", "page_start": 299},
+        {"number": "13.12", "title": "Effetto termico della corrente", "page_start": 309},
+        {"number": "13.13", "title": "Conduttori elettrolitici. Elettrolisi", "page_start": 310},
+        {"number": "13.14", "title": "Elettroforesi", "page_start": 316},
+        {"number": "13.15", "title": "Il campo magnetico", "page_start": 322},
+        {"number": "13.16", "title": "La forza di Lorentz e il moto di una particella carica in un campo magnetico uniforme", "page_start": 326},
+        {"number": "13.17", "title": "Campo magnetico generato da un solenoide", "page_start": 329},
+        {"number": "13.18", "title": "Teorema di Ampere", "page_start": 330},
+        {"number": "13.19", "title": "Induzione elettromagnetica", "page_start": 337},
+        {"number": "13.20", "title": "Coefficiente di autoinduzione. Circuito R-L", "page_start": 343},
+        {"number": "13.21", "title": "Carica e scarica di un condensatore. Circuito R-C", "page_start": 344}
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Materia e radiazione",
+      "page_start": 346,
+      "sections": [
+        {"number": "14.1", "title": "Spettro delle onde elettromagnetiche", "page_start": 348},
+        {"number": "14.2", "title": "Cenni sulla struttura atomica e sulla teoria dei quanti", "page_start": 351},
+        {"number": "14.3", "title": "Assorbimento ed emissione delle onde elettromagnetiche", "page_start": 354},
+        {"number": "14.4", "title": "Raggi ultravioletti", "page_start": 359},
+        {"number": "14.5", "title": "I raggi X e i principi della radiologia", "page_start": 361},
+        {"number": "14.6", "title": "Struttura dei nuclei. Isotopi naturali", "page_start": 364},
+        {"number": "14.7", "title": "Radiazioni α, β e γ. Radioattività", "page_start": 367},
+        {"number": "14.8", "title": "Legge di decadimento radioattivo", "page_start": 368},
+        {"number": "14.9", "title": "Effetto biologico delle radiazioni ionizzanti. Dosimetria", "page_start": 372},
+        {"number": "14.10", "title": "Utilizzo delle radiazioni ionizzanti in medicina", "page_start": 374}
+      ]
+    },
+    {
+      "number": 15,
+      "title": "I potenziali bioelettrici",
+      "page_start": 376,
+      "sections": [
+        {"number": "15.1", "title": "Generalità sui potenziali bioelettrici", "page_start": 378},
+        {"number": "15.2", "title": "Potenziale di riposo della membrana", "page_start": 381},
+        {"number": "15.3", "title": "Condizioni di equilibrio ed equazione di Nernst", "page_start": 383},
+        {"number": "15.4", "title": "Pompa sodio-potassio", "page_start": 385},
+        {"number": "15.5", "title": "Equilibrio di Donnan-Gibbs e potenziale di membrana", "page_start": 387},
+        {"number": "15.6", "title": "Proprietà di cavo dell'assone", "page_start": 390},
+        {"number": "15.7", "title": "Potenziale d'azione: generazione e propagazione", "page_start": 394}
+      ]
+    },
+    {
+      "number": "A",
+      "title": "Richiami di matematica",
+      "page_start": 396,
+      "sections": [
+        {"number": "A.1", "title": "Potenze e logaritmi", "page_start": 397},
+        {"number": "A.2", "title": "Funzioni", "page_start": 403},
+        {"number": "A.3", "title": "Equazioni algebriche e sistemi di equazioni", "page_start": 407},
+        {"number": "A.4", "title": "Trigonometria", "page_start": 409},
+        {"number": "A.5", "title": "Simboli e costanti matematiche", "page_start": 410}
+      ]
+    },
+    {
+      "number": "B",
+      "title": "Cenni di statistica e teoria dell'errore",
+      "page_start": 415,
+      "sections": [
+        {"number": "B.1", "title": "Curva di distribuzione delle frequenze", "page_start": 417},
+        {"number": "B.2", "title": "Valor medio e deviazione standard", "page_start": 419},
+        {"number": "B.3", "title": "Curva di distribuzione normale o di Gauss", "page_start": 420},
+        {"number": "B.4", "title": "Curva di distribuzione degli errori di misura", "page_start": 422},
+        {"number": "B.5", "title": "Probabilità e frequenza", "page_start": 423},
+        {"number": "B.6", "title": "Correlazione semplice", "page_start": 425}
+      ]
+    },
+    {
+      "number": "C",
+      "title": "Costanti fisiche e unità di misura",
+      "page_start": 425,
+      "sections": []
+    },
+    {
+      "number": "D",
+      "title": "Soluzione di alcuni problemi",
+      "page_start": 426,
+      "sections": []
+    }
+  ]
+}

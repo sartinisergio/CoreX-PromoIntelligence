@@ -1,0 +1,586 @@
+{
+  "id": "Scannicchio_Fisica",
+  "title": "Fisica biomedica",
+  "author": "Scannicchio",
+  "publisher": "Edises",
+  "subject": "Fisica_Generale",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Le grandezze fisiche e la loro misura. Cenni di Geometria e di Analisi matematica",
+      "page_start": 1,
+      "sections": [
+        {"number": "1.1", "title": "La fisica applicata alla medicina e alla biologia", "page_start": 2},
+        {"number": "1.2", "title": "Introduzione", "page_start": 2},
+        {"number": "1.3", "title": "Definizione di una grandezza fisica e sue dimensioni", "page_start": 3},
+        {"number": "1.4", "title": "Sistemi di unità di misura e costanti fondamentali", "page_start": 6},
+        {"number": "1.5", "title": "Grandezze scalari e grandezze vettoriali", "page_start": 7},
+        {"number": "1.5a", "title": "Somma e differenza di vettori", "page_start": 8},
+        {"number": "1.5b", "title": "Prodotto scalare e prodotto vettoriale", "page_start": 10},
+        {"number": "1.5c", "title": "Il vettore gradiente", "page_start": 11},
+        {"number": "1.5d", "title": "Flusso di un vettore attraverso una superficie", "page_start": 12},
+        {"number": "1.6", "title": "Cenni di geometria e di analisi matematica", "page_start": 12},
+        {"number": "1.6a", "title": "Angolo solido", "page_start": 13},
+        {"number": "1.6b", "title": "Il concetto di funzione e sua rappresentazione grafica", "page_start": 15},
+        {"number": "1.6c", "title": "La funzione lineare e le sue proprietà", "page_start": 16},
+        {"number": "1.6d", "title": "La funzione esponenziale e le sue proprietà", "page_start": 17},
+        {"number": "1.6e", "title": "Le funzioni trigonometriche", "page_start": 19},
+        {"number": "1.6f", "title": "La derivata: significato, proprietà e conseguenze", "page_start": 22},
+        {"number": "1.6g", "title": "L'integrale: significato e proprietà", "page_start": 25},
+        {"number": "1.6h", "title": "Equazioni differenziali", "page_start": 27},
+        {"number": "1.7", "title": "Cenni di metodologia della misura e di teoria dell'errore", "page_start": 29}
+      ]
+    },
+    {
+      "number": 2,
+      "title": "I fondamenti della Meccanica. Parte I: Le basi della Cinematica e della Dinamica traslatoria",
+      "page_start": 37,
+      "sections": [
+        {"number": "2.1", "title": "Introduzione", "page_start": 38},
+        {"number": "2.2", "title": "Cinematica", "page_start": 38},
+        {"number": "2.2a", "title": "Traiettoria e legge oraria", "page_start": 38},
+        {"number": "2.2b", "title": "Velocità e accelerazione", "page_start": 41},
+        {"number": "2.2c", "title": "Legge oraria di alcuni semplici moti", "page_start": 41},
+        {"number": "2.3", "title": "Le forze e le leggi della dinamica", "page_start": 42},
+        {"number": "2.3a", "title": "Le forze", "page_start": 42},
+        {"number": "2.3b", "title": "I principi della Dinamica traslatoria", "page_start": 44},
+        {"number": "2.4", "title": "Il teorema dell'impulso", "page_start": 44},
+        {"number": "2.5", "title": "Relatività galileiana", "page_start": 45},
+        {"number": "2.6", "title": "I campi di forze: il campo gravitazionale", "page_start": 46},
+        {"number": "2.7", "title": "Massa, peso e densità", "page_start": 47},
+        {"number": "2.8", "title": "Pseudoforze", "page_start": null}
+      ]
+    },
+    {
+      "number": 3,
+      "title": "I fondamenti della Meccanica. Parte II: Applicazioni della Dinamica traslatoria",
+      "page_start": 49,
+      "sections": [
+        {"number": "3.1", "title": "Introduzione", "page_start": 49},
+        {"number": "3.2", "title": "Dalle forze alla legge oraria", "page_start": 49},
+        {"number": "3.2a", "title": "Integrazione dell'equazione di moto", "page_start": 50},
+        {"number": "3.2b", "title": "Moto inerziale in assenza di forze", "page_start": 51},
+        {"number": "3.2c", "title": "Moto in un campo di forze uniforme", "page_start": 52},
+        {"number": "3.2d", "title": "Moto in un campo di forze centrale", "page_start": 52},
+        {"number": "3.2e", "title": "Moto in un campo di forze elastiche (moto armonico)", "page_start": 53},
+        {"number": "3.3", "title": "Lavoro, energia e potenza", "page_start": 54},
+        {"number": "3.3a", "title": "Energia cinetica e teorema dell'energia cinetica", "page_start": 55},
+        {"number": "3.3b", "title": "Campi conservativi, energia potenziale e conservazione dell'energia meccanica", "page_start": 56},
+        {"number": "3.3c", "title": "Potenza e rendimento", "page_start": 57},
+        {"number": "3.3d", "title": "Energia potenziale e forze: condizioni di equilibrio di un sistema meccanico", "page_start": 58},
+        {"number": "3.3e", "title": "Piccole oscillazioni intorno alla posizione di equilibrio stabile", "page_start": 60}
+      ]
+    },
+    {
+      "number": 4,
+      "title": "I fondamenti della Meccanica. Parte III: Elementi di Statica e di Dinamica rotatoria. Corpi deformabili e attrito",
+      "page_start": 63,
+      "sections": [
+        {"number": "4.1", "title": "Introduzione", "page_start": 63},
+        {"number": "4.2", "title": "Equilibrio di un corpo rigido", "page_start": 64},
+        {"number": "4.3", "title": "I vincoli e le leve", "page_start": 67},
+        {"number": "4.4", "title": "Centro di massa e baricentro", "page_start": 69},
+        {"number": "4.5", "title": "Elasticità e legge di Hooke", "page_start": 69},
+        {"number": "4.6", "title": "Le forze di attrito", "page_start": 71}
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Biomeccanica",
+      "page_start": 75,
+      "sections": [
+        {"number": "5.1", "title": "Introduzione", "page_start": 75},
+        {"number": "5.2", "title": "Equilibrio di articolazioni", "page_start": 78},
+        {"number": "5.3", "title": "Le leve del corpo umano", "page_start": 79},
+        {"number": "5.4", "title": "Legge di Hooke applicata a fratture ossee", "page_start": 81},
+        {"number": "5.5", "title": "La frattura di ossa", "page_start": 82},
+        {"number": "5.6", "title": "La percezione del moto rotatorio", "page_start": 83}
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Meccanica dei fluidi",
+      "page_start": 89,
+      "sections": [
+        {"number": "6.1", "title": "Introduzione", "page_start": 89},
+        {"number": "6.2", "title": "Equilibrio nei fluidi", "page_start": 90},
+        {"number": "6.3", "title": "Il moto dei fluidi: portata ed equazione di continuità", "page_start": 93},
+        {"number": "6.4", "title": "Fluidi non viscosi: il teorema di Bernoulli", "page_start": 95},
+        {"number": "6.5", "title": "Fluidi viscosi: moto laminare e moto turbolento", "page_start": 97},
+        {"number": "6.6", "title": "Misura della viscosità. Viscosimetri", "page_start": 101},
+        {"number": "6.7", "title": "Moto non stazionario di fluidi", "page_start": 102},
+        {"number": "6.8", "title": "Forze di coesione e tensione superficiale", "page_start": 102},
+        {"number": "6.9", "title": "Applicazioni della tensione superficiale", "page_start": 105},
+        {"number": "6.9a", "title": "Contatto fluido-fluido", "page_start": 105},
+        {"number": "6.9b", "title": "Flottazione", "page_start": 105},
+        {"number": "6.9c", "title": "Liquidi tensioattivi", "page_start": 107},
+        {"number": "6.9d", "title": "Fenomeni di capillarità", "page_start": 108},
+        {"number": "6.10", "title": "Tensione elastica di una membrana e formula di Laplace", "page_start": 109},
+        {"number": "6.11", "title": "Il contagocce", "page_start": 112}
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Meccanica dei fluidi nei sistemi biologici",
+      "page_start": 115,
+      "sections": [
+        {"number": "7.1", "title": "Introduzione", "page_start": 115},
+        {"number": "7.2", "title": "Il circuito idrodinamico del sangue", "page_start": 115},
+        {"number": "7.2a", "title": "Portata dei vasi e velocità del sangue", "page_start": 117},
+        {"number": "7.2b", "title": "Applicazioni del teorema di Bernoulli", "page_start": 119},
+        {"number": "7.2c", "title": "Misure di flusso", "page_start": 120},
+        {"number": "7.3", "title": "Viscosità del sangue", "page_start": 121},
+        {"number": "7.3a", "title": "Composizione del sangue", "page_start": 121},
+        {"number": "7.3b", "title": "Comportamento viscoso normale", "page_start": 122},
+        {"number": "7.3c", "title": "Anomalie della viscosità del sangue", "page_start": 122},
+        {"number": "7.4", "title": "Resistenza dei vasi e variazione di pressione nel sistema circolatorio", "page_start": 124},
+        {"number": "7.4a", "title": "Resistenza dei vasi", "page_start": 125},
+        {"number": "7.4b", "title": "Resistenza e regimi di moto nel sistema circolatorio", "page_start": 127},
+        {"number": "7.4c", "title": "Effetto della pressione idrostatica", "page_start": 128},
+        {"number": "7.5", "title": "Lavoro e potenza cardiaca", "page_start": 129},
+        {"number": "7.5a", "title": "La pompa cardiaca", "page_start": 129},
+        {"number": "7.5b", "title": "Il ciclo cardiaco", "page_start": 131},
+        {"number": "7.5c", "title": "Calcolo del lavoro e della potenza cardiaca", "page_start": 132},
+        {"number": "7.6", "title": "Misura della pressione del sangue", "page_start": 135}
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Distensibilità e pulsatilità",
+      "page_start": 139,
+      "sections": [
+        {"number": "8.1", "title": "Introduzione", "page_start": 139},
+        {"number": "8.2", "title": "Applicazioni della tensione superficiale ai sistemi biologici", "page_start": 139},
+        {"number": "8.2a", "title": "Effetti della tensione superficiale in Biologia: il plastron e la salita della linfa nei vegetali", "page_start": 139},
+        {"number": "8.2b", "title": "Embolia gassosa", "page_start": 140},
+        {"number": "8.3", "title": "Caratteristiche elastiche delle pareti dei vasi", "page_start": 141},
+        {"number": "8.4", "title": "Raggio di equilibrio dei vasi", "page_start": 142},
+        {"number": "8.5", "title": "Effetti idrodinamici della distensibilità dei vasi", "page_start": 144},
+        {"number": "8.5a", "title": "Considerazioni generali", "page_start": 144},
+        {"number": "8.5b", "title": "Moto pulsatile e impedenza meccanica", "page_start": 147},
+        {"number": "8.6", "title": "Formula di Laplace e funzionalità cardiaca", "page_start": 151},
+        {"number": "8.7", "title": "Formula di Laplace ed equilibrio alveolare", "page_start": 154}
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Trasporto in regime viscoso",
+      "page_start": 161,
+      "sections": [
+        {"number": "9.1", "title": "Introduzione", "page_start": 161},
+        {"number": "9.2", "title": "Sedimentazione", "page_start": 162},
+        {"number": "9.3", "title": "Elettroforesi", "page_start": 163},
+        {"number": "9.4", "title": "Centrifugazione", "page_start": 165},
+        {"number": "9.5", "title": "Centrifughe preparative e centrifughe analitiche", "page_start": 167}
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Termologia e Termodinamica",
+      "page_start": 171,
+      "sections": [
+        {"number": "10.1", "title": "Introduzione", "page_start": 171},
+        {"number": "10.2", "title": "Sistema e stato termodinamici", "page_start": 172},
+        {"number": "10.3", "title": "Temperatura e scale termodinamiche", "page_start": 173},
+        {"number": "10.4", "title": "Energia interna", "page_start": 174},
+        {"number": "10.5", "title": "Calore e calore specifico", "page_start": 174},
+        {"number": "10.6", "title": "Il lavoro in termodinamica", "page_start": 177},
+        {"number": "10.7", "title": "Trasformazioni termodinamiche", "page_start": 177},
+        {"number": "10.8", "title": "La conservazione dell'energia in termodinamica: primo principio della termodinamica", "page_start": 178},
+        {"number": "10.9", "title": "I gas perfetti", "page_start": 180},
+        {"number": "10.10", "title": "Cenni sulla teoria cinetica dei gas ideali", "page_start": 181},
+        {"number": "10.11", "title": "I gas reali", "page_start": 184},
+        {"number": "10.12", "title": "Entalpia", "page_start": 184},
+        {"number": "10.13", "title": "Il secondo principio della termodinamica", "page_start": 186},
+        {"number": "10.14", "title": "Entropia", "page_start": 187},
+        {"number": "10.15", "title": "Significato statistico dell'entropia", "page_start": 189},
+        {"number": "10.16", "title": "I potenziali termodinamici: energia libera", "page_start": 190},
+        {"number": "10.17", "title": "Il potenziale chimico ed equilibri con scambi di particelle", "page_start": 191}
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Termodinamica nei sistemi biologici",
+      "page_start": 203,
+      "sections": [
+        {"number": "11.1", "title": "Introduzione", "page_start": 203},
+        {"number": "11.2", "title": "Meccanismi di trasmissione del calore", "page_start": 205},
+        {"number": "11.2a", "title": "Convezione del calore", "page_start": 205},
+        {"number": "11.2b", "title": "Conduzione del calore", "page_start": 206},
+        {"number": "11.2c", "title": "L'irraggiamento termico", "page_start": 207},
+        {"number": "11.3", "title": "Vasi di Dewar e calorimetria", "page_start": 207},
+        {"number": "11.4", "title": "I principi della termodinamica e la fisiologia", "page_start": 209},
+        {"number": "11.5", "title": "Metabolismo del corpo umano", "page_start": 211},
+        {"number": "11.6", "title": "Metabolismo basale e spirometria", "page_start": 211},
+        {"number": "11.7", "title": "Termoregolazione degli animali a sangue caldo", "page_start": 214},
+        {"number": "11.7a", "title": "Ambiente freddo", "page_start": 215},
+        {"number": "11.7b", "title": "Ambiente caldo", "page_start": 216},
+        {"number": "11.7c", "title": "Ambiente molto secco o molto umido", "page_start": 217},
+        {"number": "11.8", "title": "Potenziali termodinamici e reazioni biochimiche", "page_start": 218}
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Fenomeni ondulatori",
+      "page_start": 221,
+      "sections": [
+        {"number": "12.1", "title": "Introduzione", "page_start": 221},
+        {"number": "12.2", "title": "Le onde", "page_start": 222},
+        {"number": "12.3", "title": "Moto armonico e oscillatore armonico", "page_start": 223},
+        {"number": "12.4", "title": "Oscillazioni smorzate e forzate", "page_start": 224},
+        {"number": "12.5", "title": "Equazione di propagazione di un'onda", "page_start": 225},
+        {"number": "12.6", "title": "Onde piane, onde sferiche e principio di Huygens", "page_start": 227},
+        {"number": "12.7", "title": "Analisi di Fourier", "page_start": 229},
+        {"number": "12.8", "title": "Riflessione, rifrazione e riflessione totale", "page_start": 235},
+        {"number": "12.9", "title": "Interferenza", "page_start": 237},
+        {"number": "12.10", "title": "Onde stazionarie e battimenti", "page_start": 239},
+        {"number": "12.10a", "title": "Onde stazionarie", "page_start": 239},
+        {"number": "12.10b", "title": "Battimenti", "page_start": 241},
+        {"number": "12.11", "title": "Effetto Doppler", "page_start": 242},
+        {"number": "12.12", "title": "Polarizzazione delle onde trasversali", "page_start": 244}
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Fisica delle onde elastiche",
+      "page_start": 247,
+      "sections": [
+        {"number": "13.1", "title": "Introduzione", "page_start": 247},
+        {"number": "13.2", "title": "Il suono", "page_start": 247},
+        {"number": "13.3", "title": "Propagazione delle onde sonore", "page_start": 248},
+        {"number": "13.3a", "title": "Pressione sonora", "page_start": 248},
+        {"number": "13.3b", "title": "Velocità di propagazione dell'onda sonora", "page_start": 249},
+        {"number": "13.3c", "title": "Intensità sonora e direzionalità del suono", "page_start": 251},
+        {"number": "13.4", "title": "Infrasuoni e ultrasuoni", "page_start": 253}
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Le onde elastiche in Biologia e Medicina",
+      "page_start": 257,
+      "sections": [
+        {"number": "14.1", "title": "Introduzione", "page_start": 257},
+        {"number": "14.2", "title": "Livelli di sensazione sonora", "page_start": 257},
+        {"number": "14.3", "title": "La ricezione di onde elastiche nei sistemi biologici", "page_start": 260},
+        {"number": "14.4", "title": "Lo stetoscopio", "page_start": 263},
+        {"number": "14.5", "title": "Impiego degli ultrasuoni in medicina", "page_start": 265},
+        {"number": "14.5a", "title": "Gli ultrasuoni nella terapia medica", "page_start": 266},
+        {"number": "14.5b", "title": "Gli ultrasuoni nella diagnostica medica", "page_start": 266}
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Diffusione e filtrazione",
+      "page_start": 271,
+      "sections": [
+        {"number": "15.1", "title": "Introduzione", "page_start": 271},
+        {"number": "15.2", "title": "Le membrane nei sistemi biologici", "page_start": 272},
+        {"number": "15.3", "title": "Il fenomeno della diffusione", "page_start": 275},
+        {"number": "15.4", "title": "Diffusione libera e attraverso membrane", "page_start": 278},
+        {"number": "15.5", "title": "La filtrazione", "page_start": 282},
+        {"number": "15.6", "title": "Equilibri gas-liquido", "page_start": 285},
+        {"number": "15.7", "title": "Diffusione di gas in sistemi biologici", "page_start": 287},
+        {"number": "15.8", "title": "Esistono in natura alternative all'emoglobina?", "page_start": 290}
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Osmosi e applicazioni ai sistemi biologici",
+      "page_start": 297,
+      "sections": [
+        {"number": "16.1", "title": "Introduzione", "page_start": 297},
+        {"number": "16.2", "title": "Membrane semipermeabili ed equilibri osmotici", "page_start": 297},
+        {"number": "16.3", "title": "Lavoro osmotico e potenziale chimico", "page_start": 300},
+        {"number": "16.4", "title": "Equilibri osmotici nei sistemi biologici", "page_start": 302},
+        {"number": "16.5", "title": "Scambiatore e moltiplicatore osmotico in controflusso", "page_start": 308},
+        {"number": "16.6", "title": "Fluido-dinamica del sistema linfatico", "page_start": 311}
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Fenomeni elettrici",
+      "page_start": 315,
+      "sections": [
+        {"number": "17.1", "title": "Introduzione", "page_start": 315},
+        {"number": "17.2", "title": "Carica elettrica e forza di Coulomb", "page_start": 315},
+        {"number": "17.3", "title": "Il campo elettrico e il potenziale elettrostatico", "page_start": 317},
+        {"number": "17.4", "title": "Il teorema di Gauss e le sue conseguenze", "page_start": 320},
+        {"number": "17.5", "title": "Distribuzioni di cariche elettriche: dipolo elettrico e strato dipolare", "page_start": 321},
+        {"number": "17.6", "title": "La capacità di un conduttore. Il condensatore", "page_start": 324},
+        {"number": "17.7", "title": "La corrente elettrica e le leggi di Ohm", "page_start": 327},
+        {"number": "17.8", "title": "Soluzioni elettrolitiche e dissociazione elettrolitica", "page_start": 330},
+        {"number": "17.9", "title": "La mobilità elettrolitica e l'elettrolisi", "page_start": 332},
+        {"number": "17.10", "title": "Forza elettromotrice e circuiti in corrente continua", "page_start": 333},
+        {"number": "17.11", "title": "Effetto termico della corrente elettrica", "page_start": 336},
+        {"number": "17.12", "title": "Carica e scarica di un condensatore", "page_start": 337}
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Fenomeni elettrici nei sistemi biologici",
+      "page_start": 343,
+      "sections": [
+        {"number": "18.1", "title": "Introduzione", "page_start": 343},
+        {"number": "18.2", "title": "Flussi elettrochimici", "page_start": 344},
+        {"number": "18.3", "title": "Potenziali ed equilibri elettrochimici", "page_start": 345},
+        {"number": "18.4", "title": "Equilibrio di Donnan-Gibbs", "page_start": 346},
+        {"number": "18.5", "title": "La pressione oncotica", "page_start": 347},
+        {"number": "18.6", "title": "La membrana capillare", "page_start": 349},
+        {"number": "18.7", "title": "La membrana cellulare: potenziale di riposo e meccanismi di trasporto passivo", "page_start": 350},
+        {"number": "18.8", "title": "Flussi ionici in assenza di equilibrio e meccanismi di trasporto attivo (pompa sodio-potassio)", "page_start": 353},
+        {"number": "18.9", "title": "Lavoro di membrana", "page_start": 354}
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Fenomeni bioelettrici: il potenziale d'azione, propagazione e conseguenze",
+      "page_start": 357,
+      "sections": [
+        {"number": "19.1", "title": "Introduzione", "page_start": 357},
+        {"number": "19.2", "title": "Le attività bioelettriche nei sistemi biologici", "page_start": 358},
+        {"number": "19.3", "title": "Il potenziale d'azione", "page_start": 359},
+        {"number": "19.4", "title": "Il caso delle membrane non eccitabili", "page_start": 359},
+        {"number": "19.5", "title": "Proprietà di cavo dell'assone", "page_start": 364},
+        {"number": "19.6", "title": "Propagazione del potenziale d'azione", "page_start": 367},
+        {"number": "19.7", "title": "Il caso delle fibre mieliniche", "page_start": 367},
+        {"number": "19.8", "title": "Tracciati ECG, EEG ed EMG", "page_start": 370}
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Elettromagnetismo",
+      "page_start": 377,
+      "sections": [
+        {"number": "20.1", "title": "Introduzione", "page_start": 377},
+        {"number": "20.2", "title": "Il campo magnetico", "page_start": 377},
+        {"number": "20.3", "title": "La forza di Lorentz e il moto di una particella carica in un campo magnetico uniforme", "page_start": 380},
+        {"number": "20.4", "title": "Momenti magnetici e proprietà magnetiche della materia", "page_start": 380},
+        {"number": "20.5", "title": "Teorema della circuitazione e non conservatività del campo magnetico", "page_start": 381},
+        {"number": "20.6", "title": "Flusso di campo magnetico e induzione elettromagnetica", "page_start": 383},
+        {"number": "20.7", "title": "Le equazioni fondamentali dell'elettromagnetismo", "page_start": 384},
+        {"number": "20.8", "title": "Il fenomeno dell'autoinduzione", "page_start": 386},
+        {"number": "20.9", "title": "Circuiti in corrente alternata", "page_start": 385},
+        {"number": "20.10", "title": "Impedenza elettrica e risonanza. Il trasformatore", "page_start": 388},
+        {"number": "20.11", "title": "Potenza dissipata in un circuito in corrente alternata", "page_start": 392},
+        {"number": "20.12", "title": "Le onde elettromagnetiche", "page_start": 394},
+        {"number": "20.13", "title": "Circuiti oscillanti", "page_start": 395},
+        {"number": "20.14", "title": "Emissione e assorbimento delle onde elettromagnetiche", "page_start": 397}
+      ]
+    },
+    {
+      "number": 21,
+      "title": "Ottica fisica e Ottica geometrica",
+      "page_start": 403,
+      "sections": [
+        {"number": "21.1", "title": "Introduzione", "page_start": 403},
+        {"number": "21.2", "title": "Le onde elettromagnetiche visibili: la luce", "page_start": 404},
+        {"number": "21.3", "title": "La diffrazione della luce", "page_start": 406},
+        {"number": "21.4", "title": "Il prisma e la dispersione della luce", "page_start": 409},
+        {"number": "21.5", "title": "La polarizzazione della luce", "page_start": 409},
+        {"number": "21.6", "title": "Il diottro", "page_start": 410},
+        {"number": "21.7", "title": "Le lenti sottili", "page_start": 414},
+        {"number": "21.7a", "title": "Costruzione dell'immagine da una lente sottile", "page_start": 416},
+        {"number": "21.7b", "title": "Ingrandimento lineare", "page_start": 417}
+      ]
+    },
+    {
+      "number": 22,
+      "title": "La strumentazione ottica in Biologia e in Medicina",
+      "page_start": 427,
+      "sections": [
+        {"number": "22.1", "title": "Introduzione", "page_start": 427},
+        {"number": "22.2", "title": "La luce polarizzata e il potere rotatorio", "page_start": 427},
+        {"number": "22.3", "title": "Assorbimento ottico e spettrofotometria", "page_start": 430},
+        {"number": "22.4", "title": "Il microscopio", "page_start": null},
+        {"number": "22.4a", "title": "Il microscopio semplice", "page_start": 426},
+        {"number": "22.4b", "title": "Il microscopio composto", "page_start": 426}
+      ]
+    },
+    {
+      "number": 23,
+      "title": "La funzione visiva",
+      "page_start": 433,
+      "sections": [
+        {"number": "23.1", "title": "Introduzione", "page_start": 433},
+        {"number": "23.2", "title": "L'occhio e il suo potere separatore", "page_start": 433},
+        {"number": "23.2a", "title": "Descrizione anatomica", "page_start": 433},
+        {"number": "23.2b", "title": "L'occhio come sistema ottico", "page_start": 434},
+        {"number": "23.2c", "title": "Acuità visiva", "page_start": 435},
+        {"number": "23.3", "title": "I difetti ottici dell'occhio", "page_start": 438},
+        {"number": "23.4", "title": "Il meccanismo della visione", "page_start": 439}
+      ]
+    },
+    {
+      "number": 24,
+      "title": "Materia e radiazioni",
+      "page_start": 443,
+      "sections": [
+        {"number": "24.1", "title": "Introduzione", "page_start": 443},
+        {"number": "24.2", "title": "Atomi e molecole", "page_start": 443},
+        {"number": "24.3", "title": "La radiazione elettromagnetica", "page_start": 445},
+        {"number": "24.4", "title": "I nuclei e le forze nucleari", "page_start": 446},
+        {"number": "24.5", "title": "La radioattività", "page_start": 449},
+        {"number": "24.6", "title": "La legge del decadimento radioattivo", "page_start": 449},
+        {"number": "24.7", "title": "Assorbimento delle radiazioni nella materia", "page_start": 453}
+      ]
+    },
+    {
+      "number": 25,
+      "title": "Le radiazioni elettromagnetiche in Biologia e in Medicina",
+      "page_start": 463,
+      "sections": [
+        {"number": "25.1", "title": "Introduzione", "page_start": 463},
+        {"number": "25.2", "title": "La radiazione elettromagnetica e l'emissione termica", "page_start": 463},
+        {"number": "25.3", "title": "Campi elettromagnetici a bassa frequenza e a radiofrequenza", "page_start": 464},
+        {"number": "25.4", "title": "Le microonde in medicina", "page_start": 465},
+        {"number": "25.5", "title": "La radiazione infrarossa", "page_start": 466},
+        {"number": "25.6", "title": "La radiazione visibile. Dispositivi laser in medicina", "page_start": 466},
+        {"number": "25.7", "title": "I raggi ultravioletti", "page_start": 467},
+        {"number": "25.7a", "title": "Effetti biologici dei raggi ultravioletti", "page_start": 470},
+        {"number": "25.8", "title": "I raggi X e la loro produzione", "page_start": 471},
+        {"number": "25.8a", "title": "Il tubo a raggi X", "page_start": 471},
+        {"number": "25.8b", "title": "Produzione e spettro dei raggi X", "page_start": 471},
+        {"number": "25.9", "title": "I raggi X in diagnostica medica", "page_start": 476},
+        {"number": "25.9a", "title": "Assorbimento dei raggi X", "page_start": 476},
+        {"number": "25.9b", "title": "L'immagine radiologica", "page_start": 477},
+        {"number": "25.9c", "title": "L'intensificatore d'immagine o amplificatore di brillanza", "page_start": 480},
+        {"number": "25.10", "title": "La radiazione gamma", "page_start": 481}
+      ]
+    },
+    {
+      "number": 26,
+      "title": "Le radiazioni ionizzanti",
+      "page_start": 483,
+      "sections": [
+        {"number": "26.1", "title": "Introduzione: la ionizzazione", "page_start": 483},
+        {"number": "26.2", "title": "Assorbimento della radiazione ionizzante nella materia (corpuscolare, X e gamma)", "page_start": 483},
+        {"number": "26.2a", "title": "Dosimetria", "page_start": 484},
+        {"number": "26.2b", "title": "Assorbimento dei fotoni gamma", "page_start": 487},
+        {"number": "26.2c", "title": "Assorbimento della radiazione corpuscolare", "page_start": 489},
+        {"number": "26.2d", "title": "Confronto fra diverse radiazioni", "page_start": 489},
+        {"number": "26.3", "title": "Effetti biologici delle radiazioni ionizzanti", "page_start": 489},
+        {"number": "26.3a", "title": "Radiobiologia cellulare", "page_start": 491},
+        {"number": "26.3b", "title": "Effetti biologici macroscopici della radiazione ionizzante", "page_start": 493},
+        {"number": "26.3c", "title": "Sterilizzazione mediante radiazioni ionizzanti", "page_start": 497}
+      ]
+    },
+    {
+      "number": 27,
+      "title": "Radiodiagnostica, radioterapia e radioprotezione",
+      "page_start": 499,
+      "sections": [
+        {"number": "27.1", "title": "Introduzione", "page_start": 499},
+        {"number": "27.2", "title": "Radiazioni ionizzanti in radiodiagnostica", "page_start": 499},
+        {"number": "27.2a", "title": "Radiodiagnostica da irraggiamento X", "page_start": 499},
+        {"number": "27.2b", "title": "Radiodiagnostica con l'impiego di radionuclidi", "page_start": 501},
+        {"number": "27.3", "title": "Radiazioni ionizzanti in radioterapia", "page_start": 504},
+        {"number": "27.3a", "title": "Premessa", "page_start": 504},
+        {"number": "27.3b", "title": "Radioterapia convenzionale", "page_start": 506},
+        {"number": "27.3c", "title": "Radioterapia con protoni, neutroni e ioni (adroterapia)", "page_start": 506},
+        {"number": "27.4", "title": "La radiazione ionizzante nell'ambiente", "page_start": 509},
+        {"number": "27.4a", "title": "La radiazione naturale", "page_start": 512},
+        {"number": "27.4b", "title": "La radiazione naturale da attività umana (antropica)", "page_start": 512},
+        {"number": "27.5", "title": "Cenni di radioprotezione", "page_start": 514},
+        {"number": "27.5a", "title": "Pericolosità delle radiazioni ionizzanti", "page_start": 514},
+        {"number": "27.5b", "title": "Principi fondamentali di radioprotezione", "page_start": 515},
+        {"number": "27.5c", "title": "Misure di tutela", "page_start": 516}
+      ]
+    },
+    {
+      "number": 28,
+      "title": "Strumentazione biomedica",
+      "page_start": 521,
+      "sections": [
+        {"number": "28.1", "title": "Introduzione", "page_start": 521},
+        {"number": "28.2", "title": "La sicurezza negli impianti elettrici", "page_start": 521},
+        {"number": "28.2a", "title": "Le correnti elettriche nel corpo umano", "page_start": 521},
+        {"number": "28.2b", "title": "Lo shock elettrico", "page_start": 522},
+        {"number": "28.2c", "title": "Sistemi di protezione", "page_start": 526},
+        {"number": "28.3", "title": "I trasduttori", "page_start": 528},
+        {"number": "28.3a", "title": "Elettrodi e microelettrodi", "page_start": 528},
+        {"number": "28.3b", "title": "Trasduttori di grandezze meccaniche", "page_start": 529},
+        {"number": "28.3c", "title": "Pletismografia a impedenza: bioimpedenza elettrica toracica", "page_start": 534},
+        {"number": "28.3d", "title": "Trasduttori di temperatura", "page_start": 539},
+        {"number": "28.3e", "title": "Trasduttori ottici", "page_start": 540},
+        {"number": "28.3f", "title": "Trasduttori chimici", "page_start": 540},
+        {"number": "28.4", "title": "Il microscopio elettronico", "page_start": 542},
+        {"number": "28.4a", "title": "Le lenti elettrostatiche", "page_start": 543},
+        {"number": "28.4b", "title": "La microscopia elettronica", "page_start": 543},
+        {"number": "28.5", "title": "L'elettrocardiografia", "page_start": 549},
+        {"number": "28.5a", "title": "Il modello dipolare", "page_start": 549},
+        {"number": "28.5b", "title": "Il momento di dipolo elettrico cardiaco", "page_start": 549},
+        {"number": "28.5c", "title": "Le derivazioni elettrocardiografiche", "page_start": 551},
+        {"number": "28.5d", "title": "Aspetti tecnici", "page_start": 556},
+        {"number": "28.6", "title": "Ecografia ed ecocardiografia", "page_start": 559},
+        {"number": "28.6a", "title": "Caratteristiche ed effetti delle vibrazioni ultrasonore", "page_start": 559},
+        {"number": "28.6b", "title": "Caratteristiche tecniche dell'ecografia", "page_start": 560},
+        {"number": "28.6c", "title": "Elaborazione elettronica dei segnali", "page_start": 566},
+        {"number": "28.6d", "title": "Modi di analisi ecografiche ed ecocardiografia dinamica", "page_start": 568},
+        {"number": "28.7", "title": "La frantumazione meccanica di calcoli", "page_start": 570},
+        {"number": "28.7a", "title": "Il litotritore: principi fisici e aspetti tecnici", "page_start": 571},
+        {"number": "28.8", "title": "Il rene artificiale", "page_start": 576},
+        {"number": "28.8a", "title": "Evoluzione temporale della diffusione", "page_start": 576},
+        {"number": "28.8b", "title": "Descrizione del rene artificiale", "page_start": 579},
+        {"number": "28.8c", "title": "Tempi di emodialisi", "page_start": 581},
+        {"number": "28.9", "title": "Immagini tomografiche: TC, SPECT, PET, RM, ECO e OTC", "page_start": 582},
+        {"number": "28.9a", "title": "La ricostruzione di immagini tomografiche", "page_start": 582},
+        {"number": "28.9b", "title": "Tomografia computerizzata (TC)", "page_start": 587},
+        {"number": "28.9c", "title": "Tomografia a emissione di fotone singolo (SPECT)", "page_start": 593},
+        {"number": "28.9d", "title": "Tomografia a emissione di positroni (PET)", "page_start": 596},
+        {"number": "28.9e", "title": "Immagini da risonanza magnetica nucleare (RM)", "page_start": 600},
+        {"number": "28.9f", "title": "Immagini ecotomografiche", "page_start": 608},
+        {"number": "28.9g", "title": "Tomografia ottica coerente (OCT)", "page_start": 609},
+        {"number": "28.10", "title": "Chirurgia robotica", "page_start": 612},
+        {"number": "28.10a", "title": "La Fisica alla base dei sistemi robotici", "page_start": 613},
+        {"number": "28.10b", "title": "Il sistema robotico", "page_start": 614},
+        {"number": "28.10c", "title": "Le applicazioni cliniche", "page_start": 617},
+        {"number": "28.10d", "title": "Limiti e possibili sviluppi del sistema", "page_start": 618},
+        {"number": "28.11", "title": "Macchina cuore-polmone (circolazione extracorporea)", "page_start": 619},
+        {"number": "28.11a", "title": "Cenni storici, generalità e scopo della macchina cuore-polmone", "page_start": 619},
+        {"number": "28.11b", "title": "Cannule per drenaggio venoso e per immissione arteriosa", "page_start": 619},
+        {"number": "28.11c", "title": "Sistema di pompe", "page_start": 620},
+        {"number": "28.11d", "title": "Riserva venosa (reservoir) e ossigenatore", "page_start": 622},
+        {"number": "28.11e", "title": "Scambiatore di calore", "page_start": 624},
+        {"number": "28.11f", "title": "Filtri e dispositivi accessori", "page_start": 624},
+        {"number": "28.11g", "title": "Aspetti medico-clinici", "page_start": 624},
+        {"number": "28.12", "title": "Considerazioni conclusive", "page_start": 625}
+      ]
+    },
+    {
+      "number": "A",
+      "title": "Cenni di teoria della misura e di statistica",
+      "page_start": null,
+      "sections": [
+        {"number": "A.1", "title": "Cenni di metodologia della misura e di teoria dell'errore", "page_start": null},
+        {"number": "A.2", "title": "Curva di distribuzione delle frequenze", "page_start": null},
+        {"number": "A.3", "title": "Descrizione di una distribuzione statistica mediante la media e la varianza", "page_start": null},
+        {"number": "A.4", "title": "Curva di distribuzione normale o di Gauss", "page_start": null},
+        {"number": "A.5", "title": "Analisi grafica di risultati sperimentali", "page_start": null}
+      ]
+    },
+    {
+      "number": "B",
+      "title": "Cenni di informatica",
+      "page_start": null,
+      "sections": [
+        {"number": "B.1", "title": "Introduzione", "page_start": null},
+        {"number": "B.2", "title": "Unità di misura caratteristiche dei mezzi di calcolo", "page_start": null},
+        {"number": "B.3", "title": "La conversione analogico-digitale", "page_start": null},
+        {"number": "B.4", "title": "Reti di calcolo e conclusioni", "page_start": null}
+      ]
+    },
+    {
+      "number": "C",
+      "title": "Dati numerici e tabelle",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": "D",
+      "title": "Risposte ai problemi",
+      "page_start": null,
+      "sections": []
+    }
+  ]
+}

@@ -1,0 +1,2064 @@
+{
+  "id": "angelucci_istologia_umana",
+  "title": "Istologia umana",
+  "author": "Angelucci e al.",
+  "publisher": "Idelson-Gnocchi",
+  "subject": "Istologia",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Le tecniche di studio in istologia",
+      "page_start": 1,
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "Generalità",
+          "page_start": 1
+        },
+        {
+          "number": "1.2",
+          "title": "Microscopi",
+          "page_start": 1,
+          "subsections": [
+            {
+              "number": "1.2.1",
+              "title": "Microscopia ottica",
+              "page_start": 2
+            },
+            {
+              "number": "1.2.2",
+              "title": "Microscopia elettronica",
+              "page_start": 3
+            },
+            {
+              "number": "1.2.3",
+              "title": "Luce di sincrotrone",
+              "page_start": 6
+            }
+          ]
+        },
+        {
+          "number": "1.3",
+          "title": "Allestimento dei campioni",
+          "page_start": 6,
+          "subsections": [
+            {
+              "number": "1.3.1",
+              "title": "Prelievo e fissazione",
+              "page_start": 6
+            },
+            {
+              "number": "1.3.2",
+              "title": "Disidratazione e diafanizzazione",
+              "page_start": 8
+            },
+            {
+              "number": "1.3.3",
+              "title": "Inclusione o congelamento",
+              "page_start": 8
+            },
+            {
+              "number": "1.3.4",
+              "title": "Taglio",
+              "page_start": 8
+            },
+            {
+              "number": "1.3.5",
+              "title": "Criofrattura",
+              "page_start": 8
+            },
+            {
+              "number": "1.3.6",
+              "title": "Striscio",
+              "page_start": 8
+            }
+          ]
+        },
+        {
+          "number": "1.4",
+          "title": "Colorazione dei preparati",
+          "page_start": 9,
+          "subsections": [
+            {
+              "number": "1.4.1",
+              "title": "Colorazioni istologiche",
+              "page_start": 9
+            },
+            {
+              "number": "1.4.2",
+              "title": "Colorazioni elective",
+              "page_start": 10
+            },
+            {
+              "number": "1.4.3",
+              "title": "Colorazioni cito-istochimiche",
+              "page_start": 11
+            },
+            {
+              "number": "1.4.4",
+              "title": "Metacromasia",
+              "page_start": 11
+            },
+            {
+              "number": "1.4.5",
+              "title": "Immunocitochimica e immunoistochimica",
+              "page_start": 12
+            },
+            {
+              "number": "1.4.6",
+              "title": "Tecniche di immunofluorescenza",
+              "page_start": 13
+            },
+            {
+              "number": "1.4.7",
+              "title": "Tecniche immunoenzimatiche",
+              "page_start": 13
+            }
+          ]
+        },
+        {
+          "number": "1.5",
+          "title": "Microdissettore laser",
+          "page_start": 13
+        },
+        {
+          "number": "1.6",
+          "title": "Colture cellulari",
+          "page_start": 13
+        },
+        {
+          "number": "1.7",
+          "title": "Citofluorimetro a flusso",
+          "page_start": 16
+        },
+        {
+          "number": "1.8",
+          "title": "Frazionamento cellulare",
+          "page_start": 18
+        },
+        {
+          "number": "1.9",
+          "title": "Cromatografia",
+          "page_start": 18
+        },
+        {
+          "number": "1.10",
+          "title": "Biologia molecolare",
+          "page_start": 19,
+          "subsections": [
+            {
+              "number": "1.10.1",
+              "title": "Reazione polimerasica a catena (PCR)",
+              "page_start": 20
+            },
+            {
+              "number": "1.10.2",
+              "title": "DNA microarray",
+              "page_start": 20
+            },
+            {
+              "number": "1.10.3",
+              "title": "Elettroforesi",
+              "page_start": 21
+            },
+            {
+              "number": "1.10.4",
+              "title": "Ibridazione in situ su sezioni",
+              "page_start": 22
+            },
+            {
+              "number": "1.10.5",
+              "title": "In situ RT-PCR",
+              "page_start": 23
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Nuove frontiere dell'istologia",
+      "page_start": 25,
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "Introduzione",
+          "page_start": 25
+        },
+        {
+          "number": "2.2",
+          "title": "La teoria della misura applicata all'istologia",
+          "page_start": 25,
+          "subsections": [
+            {
+              "number": "2.2.1",
+              "title": "Strumento che genera il segnale e osservatore che lo interpreta",
+              "page_start": 27
+            },
+            {
+              "number": "2.2.2",
+              "title": "Microscopia obiettiva",
+              "page_start": 27
+            },
+            {
+              "number": "2.2.3",
+              "title": "Microscopia quantitativa o computerizzata",
+              "page_start": 27
+            }
+          ]
+        },
+        {
+          "number": "2.3",
+          "title": "Cenni storici sullo sviluppo del sistema di rilevamento dell'immagine",
+          "page_start": 29
+        },
+        {
+          "number": "2.4",
+          "title": "Microscopia di precisione",
+          "page_start": 34,
+          "subsections": [
+            {
+              "number": "2.4.1",
+              "title": "Marcatura delle cellule mediante il profilo antigenico",
+              "page_start": 34
+            },
+            {
+              "number": "2.4.2",
+              "title": "Marcatura delle cellule mediante il profilo di attivazione genica",
+              "page_start": 38
+            },
+            {
+              "number": "2.4.3",
+              "title": "Microscopia tridimensionale",
+              "page_start": 40
+            }
+          ]
+        },
+        {
+          "number": "2.5",
+          "title": "Microscopia dinamica",
+          "page_start": 40,
+          "subsections": [
+            {
+              "number": "2.5.1",
+              "title": "Microscopia dinamica in vitro",
+              "page_start": 40
+            },
+            {
+              "number": "2.5.2",
+              "title": "Microscopia dinamica in vivo",
+              "page_start": 43
+            },
+            {
+              "number": "2.5.3",
+              "title": "Microscopia funzionale",
+              "page_start": 44
+            }
+          ]
+        },
+        {
+          "number": "2.6",
+          "title": "Microscopia sperimentale",
+          "page_start": 46,
+          "subsections": [
+            {
+              "number": "2.6.1",
+              "title": "Manipolazioni dell'oggetto sperimentale",
+              "page_start": 47
+            },
+            {
+              "number": "2.6.2",
+              "title": "Manipolazioni dell'oggetto osservato",
+              "page_start": 48
+            }
+          ]
+        },
+        {
+          "number": "2.7",
+          "title": "Conclusioni",
+          "page_start": 49
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "La cellula: generalità, la membrana plasmatica, il citoplasma ed il nucleo",
+      "page_start": 51,
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "Inquadramento generale",
+          "page_start": 51,
+          "subsections": [
+            {
+              "number": "3.1.1",
+              "title": "La materia vivente",
+              "page_start": 51
+            },
+            {
+              "number": "3.1.2",
+              "title": "Cellule e tessuti",
+              "page_start": 51
+            },
+            {
+              "number": "3.1.3",
+              "title": "Composizione chimica delle cellule e della matrice extracellulare",
+              "page_start": 52
+            },
+            {
+              "number": "3.1.4",
+              "title": "Cellule procariotiche ed eucariotiche",
+              "page_start": 53
+            }
+          ]
+        },
+        {
+          "number": "3.2",
+          "title": "Membrana cellulare",
+          "page_start": 55,
+          "subsections": [
+            {
+              "number": "3.2.1",
+              "title": "Generalità",
+              "page_start": 55
+            },
+            {
+              "number": "3.2.2",
+              "title": "Aspetti submicroscopici e funzionali",
+              "page_start": 58
+            },
+            {
+              "number": "3.2.3",
+              "title": "Recettori di segnali extracellulari",
+              "page_start": 64
+            }
+          ]
+        },
+        {
+          "number": "3.3",
+          "title": "Il nucleo interfasico",
+          "page_start": 65,
+          "subsections": [
+            {
+              "number": "3.3.1",
+              "title": "Involucro nucleare",
+              "page_start": 65
+            },
+            {
+              "number": "3.3.2",
+              "title": "Cromatina e cromosomi",
+              "page_start": 67
+            },
+            {
+              "number": "3.3.3",
+              "title": "Matrice nucleare e nucleoscheletro",
+              "page_start": 71
+            },
+            {
+              "number": "3.3.4",
+              "title": "Il nucleolo",
+              "page_start": 72
+            }
+          ]
+        },
+        {
+          "number": "3.4",
+          "title": "Ribosomi e la sintesi delle proteine",
+          "page_start": 72,
+          "subsections": [
+            {
+              "number": "3.4.1",
+              "title": "I ribosomi: struttura e funzione",
+              "page_start": 72
+            },
+            {
+              "number": "3.4.2",
+              "title": "Modificazioni post-traduzionali delle proteine",
+              "page_start": 76
+            }
+          ]
+        },
+        {
+          "number": "3.5",
+          "title": "Compartimentazione del citoplasma",
+          "page_start": 77,
+          "subsections": [
+            {
+              "number": "3.5.1",
+              "title": "Reticolo endoplasmatico",
+              "page_start": 78
+            },
+            {
+              "number": "3.5.2",
+              "title": "Apparato di Golgi",
+              "page_start": 81
+            },
+            {
+              "number": "3.5.3",
+              "title": "Endosomi",
+              "page_start": 86
+            },
+            {
+              "number": "3.5.4",
+              "title": "Lisosomi",
+              "page_start": 88
+            },
+            {
+              "number": "3.5.5",
+              "title": "Autofagia",
+              "page_start": 89
+            },
+            {
+              "number": "3.5.6",
+              "title": "Perossisomi",
+              "page_start": 90
+            },
+            {
+              "number": "3.5.7",
+              "title": "Inclusioni citoplasmatiche",
+              "page_start": 91
+            }
+          ]
+        },
+        {
+          "number": "3.6",
+          "title": "I mitocondri",
+          "page_start": 92,
+          "subsections": [
+            {
+              "number": "3.6.1",
+              "title": "Aspetti morfologici e citochimici",
+              "page_start": 92
+            },
+            {
+              "number": "3.6.2",
+              "title": "Origine e dinamicità",
+              "page_start": 94
+            },
+            {
+              "number": "3.6.3",
+              "title": "Aspetti funzionali",
+              "page_start": 96
+            }
+          ]
+        },
+        {
+          "number": "3.7",
+          "title": "Citoscheletro",
+          "page_start": 97,
+          "subsections": [
+            {
+              "number": "3.7.1",
+              "title": "Microfilamenti",
+              "page_start": 98
+            },
+            {
+              "number": "3.7.2",
+              "title": "Microtubuli",
+              "page_start": 102
+            },
+            {
+              "number": "3.7.3",
+              "title": "Filamenti intermedi",
+              "page_start": 105
+            },
+            {
+              "number": "3.7.4",
+              "title": "Attività cellulari che coinvolgono il citoscheletro",
+              "page_start": 109
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Divisione cellulare e modalità di morte cellulare",
+      "page_start": 113,
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "Generalità",
+          "page_start": 113
+        },
+        {
+          "number": "4.2",
+          "title": "Divisione cellulare",
+          "page_start": 114,
+          "subsections": [
+            {
+              "number": "4.2.1",
+              "title": "Cromosomi",
+              "page_start": 114
+            },
+            {
+              "number": "4.2.2",
+              "title": "La mitosi",
+              "page_start": 115
+            },
+            {
+              "number": "4.2.3",
+              "title": "Meiosi",
+              "page_start": 118
+            }
+          ]
+        },
+        {
+          "number": "4.3",
+          "title": "Il ciclo cellulare",
+          "page_start": 120
+        },
+        {
+          "number": "4.4",
+          "title": "Segnali per la regolazione delle attività cellulari",
+          "page_start": 121,
+          "subsections": [
+            {
+              "number": "4.4.1",
+              "title": "Segnali cellulari",
+              "page_start": 121
+            },
+            {
+              "number": "4.4.2",
+              "title": "Meccanismi di trasduzione del segnale",
+              "page_start": 123
+            }
+          ]
+        },
+        {
+          "number": "4.5",
+          "title": "Modalità di morte cellulare",
+          "page_start": 125
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Istogenesi, mantenimento dei tessuti, cellule staminali",
+      "page_start": 131,
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "Meccanismi dell'istogenesi",
+          "page_start": 131,
+          "subsections": [
+            {
+              "number": "5.1.1",
+              "title": "Introduzione",
+              "page_start": 131
+            },
+            {
+              "number": "5.1.2",
+              "title": "Unipotenza, totipotenza, pluripotenza",
+              "page_start": 131
+            },
+            {
+              "number": "5.1.3",
+              "title": "Prime fasi della segmentazione e primi eventi differenziativi. Formazione dei 3 foglietti germinativi",
+              "page_start": 134
+            },
+            {
+              "number": "5.1.4",
+              "title": "Il differenziamento",
+              "page_start": 138
+            },
+            {
+              "number": "5.1.5",
+              "title": "Morfogeni. Ruolo di Shh, di BMP4 e BMP7 nel patterning",
+              "page_start": 143
+            },
+            {
+              "number": "5.1.6",
+              "title": "Ruolo dei geni Hox nel patterning",
+              "page_start": 143
+            }
+          ]
+        },
+        {
+          "number": "5.2",
+          "title": "Mantenimento dei tessuti e cellule staminali",
+          "page_start": 145
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Gli epiteli di rivestimento",
+      "page_start": 153,
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "Tessuti epiteliali",
+          "page_start": 153,
+          "subsections": [
+            {
+              "number": "6.1.1",
+              "title": "Caratteristiche generali",
+              "page_start": 153
+            },
+            {
+              "number": "6.1.2",
+              "title": "Derivazione embriologica",
+              "page_start": 153
+            },
+            {
+              "number": "6.1.3",
+              "title": "Polarità cellulare",
+              "page_start": 154
+            }
+          ]
+        },
+        {
+          "number": "6.2",
+          "title": "Epiteli di rivestimento",
+          "page_start": 154,
+          "subsections": [
+            {
+              "number": "6.2.1",
+              "title": "Caratteristiche dei domini della superficie cellulare",
+              "page_start": 154
+            }
+          ]
+        },
+        {
+          "number": "6.3",
+          "title": "Rinnovamento e riparazione",
+          "page_start": 168
+        },
+        {
+          "number": "6.4",
+          "title": "Classificazione degli epiteli di rivestimento",
+          "page_start": 169,
+          "subsections": [
+            {
+              "number": "6.4.1",
+              "title": "Epitelio pavimentoso semplice",
+              "page_start": 171
+            },
+            {
+              "number": "6.4.2",
+              "title": "Epitelio cubico semplice",
+              "page_start": 172
+            },
+            {
+              "number": "6.4.3",
+              "title": "Epitelio cilindrico semplice",
+              "page_start": 173
+            },
+            {
+              "number": "6.4.4",
+              "title": "Epitelio cilindrico pseudostratificato",
+              "page_start": 175
+            },
+            {
+              "number": "6.4.5",
+              "title": "Epitelio squamoso pluristratificato",
+              "page_start": 176
+            },
+            {
+              "number": "6.4.6",
+              "title": "Epidermide",
+              "page_start": 178
+            },
+            {
+              "number": "6.4.7",
+              "title": "Epitelio cubico o cilindrico pluristratificato",
+              "page_start": 185
+            },
+            {
+              "number": "6.4.8",
+              "title": "Epitelio di transizione",
+              "page_start": 186
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Gli epiteli ghiandolari esocrini",
+      "page_start": 193,
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "Gli epiteli ghiandolari",
+          "page_start": 193
+        },
+        {
+          "number": "7.2",
+          "title": "Epitelio ghiandolare esocrino",
+          "page_start": 193,
+          "subsections": [
+            {
+              "number": "7.2.1",
+              "title": "Caratteristiche generali",
+              "page_start": 193
+            },
+            {
+              "number": "7.2.2",
+              "title": "Classificazione generale",
+              "page_start": 194
+            },
+            {
+              "number": "7.2.3",
+              "title": "Classificazione delle ghiandole esocrine",
+              "page_start": 196
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Gli epiteli ghiandolari endocrini",
+      "page_start": 209,
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "Generalità",
+          "page_start": 209
+        },
+        {
+          "number": "8.2",
+          "title": "Classificazione",
+          "page_start": 211
+        },
+        {
+          "number": "8.3",
+          "title": "Cellule endocrine isolate",
+          "page_start": 211
+        },
+        {
+          "number": "8.4",
+          "title": "Ghiandole endocrine propriamente dette",
+          "page_start": 213,
+          "subsections": [
+            {
+              "number": "8.4.1",
+              "title": "Tiroide",
+              "page_start": 213
+            },
+            {
+              "number": "8.4.2",
+              "title": "Paratiroidi",
+              "page_start": 216
+            },
+            {
+              "number": "8.4.3",
+              "title": "Ipotalamo",
+              "page_start": 217
+            },
+            {
+              "number": "8.4.4",
+              "title": "Ipofisi",
+              "page_start": 217
+            },
+            {
+              "number": "8.4.5",
+              "title": "Pancreas endocrino",
+              "page_start": 220
+            },
+            {
+              "number": "8.4.6",
+              "title": "Ghiandola surrenale",
+              "page_start": 221
+            }
+          ]
+        },
+        {
+          "number": "8.5",
+          "title": "Aspetti di secrezione endocrina in tessuti non epiteliali",
+          "page_start": 225,
+          "subsections": [
+            {
+              "number": "8.5.1",
+              "title": "Cellule endocrine di natura connettivale",
+              "page_start": 225
+            },
+            {
+              "number": "8.5.2",
+              "title": "Cellule endocrine di natura muscolare",
+              "page_start": 226
+            },
+            {
+              "number": "8.5.3",
+              "title": "Cellule endocrine di natura nervosa",
+              "page_start": 226
+            }
+          ]
+        },
+        {
+          "number": "8.6",
+          "title": "Tessuti endocrini negli annessi embrionali",
+          "page_start": 227
+        },
+        {
+          "number": "8.7",
+          "title": "Meccanismi di controllo della secrezione endocrina",
+          "page_start": 227
+        },
+        {
+          "number": "8.8",
+          "title": "Meccanismi di risposta delle cellule bersaglio agli ormoni",
+          "page_start": 228
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Gli epiteli sensoriali e gli epiteli particolarmente differenziati",
+      "page_start": 233,
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "Cellule sensoriali acustiche",
+          "page_start": 233
+        },
+        {
+          "number": "9.2",
+          "title": "Cellule sensoriali dell'organo vestibolare",
+          "page_start": 234
+        },
+        {
+          "number": "9.3",
+          "title": "Cellule sensoriali gustative",
+          "page_start": 236
+        },
+        {
+          "number": "9.4",
+          "title": "Cellule dell'epitelio olfattivo",
+          "page_start": 238
+        },
+        {
+          "number": "9.5",
+          "title": "Cellule dell'epitelio retinico (RPE)",
+          "page_start": 239
+        },
+        {
+          "number": "9.6",
+          "title": "Gli epiteli particolarmente differenziati",
+          "page_start": 240,
+          "subsections": [
+            {
+              "number": "9.6.1",
+              "title": "Peli",
+              "page_start": 240
+            },
+            {
+              "number": "9.6.2",
+              "title": "Unghie",
+              "page_start": 242
+            },
+            {
+              "number": "9.6.3",
+              "title": "Il cristallino",
+              "page_start": 242
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Tessuti connettivi e matrice extracellulare",
+      "page_start": 247,
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "Generalità",
+          "page_start": 247
+        },
+        {
+          "number": "10.2",
+          "title": "Cellule del tessuto connettivo",
+          "page_start": 248,
+          "subsections": [
+            {
+              "number": "10.2.1",
+              "title": "Cellule residenti",
+              "page_start": 248
+            },
+            {
+              "number": "10.2.2",
+              "title": "Cellule mobili",
+              "page_start": 255
+            }
+          ]
+        },
+        {
+          "number": "10.3",
+          "title": "La matrice extracellulare",
+          "page_start": 256,
+          "subsections": [
+            {
+              "number": "10.3.1",
+              "title": "Generalità",
+              "page_start": 256
+            },
+            {
+              "number": "10.3.2",
+              "title": "Le fibre",
+              "page_start": 256
+            },
+            {
+              "number": "10.3.3",
+              "title": "Ricambio dei componenti della ECM",
+              "page_start": 274
+            },
+            {
+              "number": "10.3.4",
+              "title": "I recettori cellulari della ECM",
+              "page_start": 274
+            }
+          ]
+        },
+        {
+          "number": "10.4",
+          "title": "Classificazione del tessuto connettivo propriamente detto",
+          "page_start": 275
+        }
+      ]
+    }
+  ]
+}
+{
+  "chapters": [
+    {
+      "number": 11,
+      "title": "Tessuto adiposo",
+      "page_start": 283,
+      "sections": [
+        {
+          "number": "11.1",
+          "title": "Generalità e funzioni",
+          "page_start": 283
+        },
+        {
+          "number": "11.2",
+          "title": "Tessuto adiposo bianco",
+          "page_start": 287
+        },
+        {
+          "number": "11.3",
+          "title": "Tessuto adiposo bruno",
+          "page_start": 289
+        },
+        {
+          "number": "11.4",
+          "title": "Tessuto adiposo pauciloculare (beige)",
+          "page_start": 290
+        },
+        {
+          "number": "11.5",
+          "title": "Adipogenesi",
+          "page_start": 291
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Il sangue",
+      "page_start": 295,
+      "sections": [
+        {
+          "number": "12.1",
+          "title": "Composizione e funzione",
+          "page_start": 295
+        },
+        {
+          "number": "12.2",
+          "title": "Il plasma",
+          "page_start": 296
+        },
+        {
+          "number": "12.3",
+          "title": "Gli elementi figurati",
+          "page_start": 296,
+          "subsections": [
+            {
+              "number": "12.3.1",
+              "title": "Eritrociti",
+              "page_start": 296
+            },
+            {
+              "number": "12.3.2",
+              "title": "Leucociti",
+              "page_start": 299
+            },
+            {
+              "number": "12.3.3",
+              "title": "Piastrine",
+              "page_start": 306
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Il sistema linfatico",
+      "page_start": 311,
+      "sections": [
+        {
+          "number": "13.1",
+          "title": "Generalità",
+          "page_start": 311
+        },
+        {
+          "number": "13.2",
+          "title": "Cellule del sistema linfatico",
+          "page_start": 312
+        },
+        {
+          "number": "13.3",
+          "title": "Cenni sull'immunità",
+          "page_start": 316
+        },
+        {
+          "number": "13.4",
+          "title": "Gli organi linfoidi",
+          "page_start": 319,
+          "subsections": [
+            {
+              "number": "13.4.1",
+              "title": "Timo",
+              "page_start": 321
+            },
+            {
+              "number": "13.4.2",
+              "title": "Linfonodi",
+              "page_start": 326
+            },
+            {
+              "number": "13.4.3",
+              "title": "Milza",
+              "page_start": 329
+            },
+            {
+              "number": "13.4.4",
+              "title": "Tessuto linfoide diffuso",
+              "page_start": 332
+            }
+          ]
+        },
+        {
+          "number": "13.5",
+          "title": "Sistema linfatico e linfa",
+          "page_start": 333
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Emopoiesi",
+      "page_start": 339,
+      "sections": [
+        {
+          "number": "14.1",
+          "title": "Emopoiesi",
+          "page_start": 339
+        },
+        {
+          "number": "14.2",
+          "title": "La teoria monofiletica",
+          "page_start": 340
+        },
+        {
+          "number": "14.3",
+          "title": "Le linee differenziative",
+          "page_start": 342,
+          "subsections": [
+            {
+              "number": "14.3.1",
+              "title": "Eritropoiesi",
+              "page_start": 342
+            },
+            {
+              "number": "14.3.2",
+              "title": "Regolazione dell'eritropoiesi",
+              "page_start": 343
+            }
+          ]
+        },
+        {
+          "number": "14.4",
+          "title": "Granulocitopoiesi",
+          "page_start": 344,
+          "subsections": [
+            {
+              "number": "14.4.1",
+              "title": "Regolazione della granulocitopoiesi",
+              "page_start": 345
+            }
+          ]
+        },
+        {
+          "number": "14.5",
+          "title": "Monocitopoiesi",
+          "page_start": 345,
+          "subsections": [
+            {
+              "number": "14.5.1",
+              "title": "Regolazione della monocitopoiesi",
+              "page_start": 346
+            }
+          ]
+        },
+        {
+          "number": "14.6",
+          "title": "Piastrinopoiesi",
+          "page_start": 347,
+          "subsections": [
+            {
+              "number": "14.6.1",
+              "title": "Regolazione della piastrinopoiesi",
+              "page_start": 348
+            },
+            {
+              "number": "14.6.2",
+              "title": "Meccanismi della formazione e del rilascio delle piastrine",
+              "page_start": 348
+            }
+          ]
+        },
+        {
+          "number": "14.7",
+          "title": "Linfocitopoiesi",
+          "page_start": 348,
+          "subsections": [
+            {
+              "number": "14.7.1",
+              "title": "Maturazione dei linfociti",
+              "page_start": 349
+            }
+          ]
+        },
+        {
+          "number": "14.8",
+          "title": "Midollo osseo",
+          "page_start": 350,
+          "subsections": [
+            {
+              "number": "14.8.1",
+              "title": "Implicazioni cliniche",
+              "page_start": 351
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Il tessuto cartilagineo",
+      "page_start": 353,
+      "sections": [
+        {
+          "number": "15.1",
+          "title": "Componente cellulare",
+          "page_start": 354
+        },
+        {
+          "number": "15.2",
+          "title": "Matrice cartilaginea",
+          "page_start": 355
+        },
+        {
+          "number": "15.3",
+          "title": "Classificazione delle cartilagini",
+          "page_start": 359,
+          "subsections": [
+            {
+              "number": "15.3.1",
+              "title": "Cartilagine ialina",
+              "page_start": 359
+            },
+            {
+              "number": "15.3.2",
+              "title": "Cartilagine Fibrosa",
+              "page_start": 362
+            },
+            {
+              "number": "15.3.3",
+              "title": "Cartilagine Elastica",
+              "page_start": 365
+            },
+            {
+              "number": "15.3.4",
+              "title": "Tessuto condroide",
+              "page_start": 366
+            },
+            {
+              "number": "15.3.5",
+              "title": "Tessuto cordoide",
+              "page_start": 366
+            }
+          ]
+        },
+        {
+          "number": "15.4",
+          "title": "Condrogenesi e degenerazione della cartilagine",
+          "page_start": 367,
+          "subsections": [
+            {
+              "number": "15.4.1",
+              "title": "Condrogenesi",
+              "page_start": 367
+            },
+            {
+              "number": "15.4.2",
+              "title": "Rimodellamento e riparazione",
+              "page_start": 368
+            },
+            {
+              "number": "15.4.3",
+              "title": "Degenerazione e invecchiamento",
+              "page_start": 368
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Tessuto osseo",
+      "page_start": 373,
+      "sections": [
+        {
+          "number": "16.1",
+          "title": "Generalità e struttura del tessuto osseo",
+          "page_start": 373,
+          "subsections": [
+            {
+              "number": "16.1.1",
+              "title": "Struttura macroscopica delle ossa",
+              "page_start": 374
+            }
+          ]
+        },
+        {
+          "number": "16.2",
+          "title": "Organizzazione tridimensionale del tessuto osseo",
+          "page_start": 375,
+          "subsections": [
+            {
+              "number": "16.2.1",
+              "title": "Tessuto osseo compatto",
+              "page_start": 377
+            },
+            {
+              "number": "16.2.2",
+              "title": "Tessuto osseo spugnoso",
+              "page_start": 381
+            }
+          ]
+        },
+        {
+          "number": "16.3",
+          "title": "Componenti cellulari del tessuto osseo",
+          "page_start": 383
+        },
+        {
+          "number": "16.4",
+          "title": "Matrice ossea",
+          "page_start": 388,
+          "subsections": [
+            {
+              "number": "16.4.1",
+              "title": "Componente organica",
+              "page_start": 388
+            },
+            {
+              "number": "16.4.2",
+              "title": "Componente inorganica dell'osso",
+              "page_start": 390
+            }
+          ]
+        },
+        {
+          "number": "16.5",
+          "title": "Processi di ossificazione o osteogenesi",
+          "page_start": 391,
+          "subsections": [
+            {
+              "number": "16.5.1",
+              "title": "Generalità",
+              "page_start": 391
+            },
+            {
+              "number": "16.5.2",
+              "title": "Ossificazione diretta o intramembranosa",
+              "page_start": 392
+            },
+            {
+              "number": "16.5.3",
+              "title": "Ossificazione indiretta o endocondrale",
+              "page_start": 393
+            },
+            {
+              "number": "16.5.4",
+              "title": "Ossificazione mantellare",
+              "page_start": 401
+            }
+          ]
+        },
+        {
+          "number": "16.6",
+          "title": "Meccanismi di mineralizzazione",
+          "page_start": 402
+        },
+        {
+          "number": "16.7",
+          "title": "Rimodellamento osseo",
+          "page_start": 403,
+          "subsections": [
+            {
+              "number": "16.7.1",
+              "title": "Cicli del rimodellamento osseo",
+              "page_start": 403
+            },
+            {
+              "number": "16.7.2",
+              "title": "Meccanismi molecolari del rimodellamento osseo",
+              "page_start": 404
+            },
+            {
+              "number": "16.7.3",
+              "title": "Marcatori clinici del rimodellamento osseo",
+              "page_start": 407
+            }
+          ]
+        },
+        {
+          "number": "16.8",
+          "title": "Riparazione delle fratture",
+          "page_start": 408
+        },
+        {
+          "number": "16.9",
+          "title": "Istofisiologia dell'osso",
+          "page_start": 408
+        },
+        {
+          "number": "16.10",
+          "title": "Funzioni ormonali dell'osso",
+          "page_start": 413
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Tessuti del dente",
+      "page_start": 417,
+      "sections": [
+        {
+          "number": "17.1",
+          "title": "Struttura dei denti",
+          "page_start": 417
+        },
+        {
+          "number": "17.2",
+          "title": "Cenni sul processo embriologico di formazione dei denti",
+          "page_start": 418
+        },
+        {
+          "number": "17.3",
+          "title": "Lo smalto",
+          "page_start": 418,
+          "subsections": [
+            {
+              "number": "17.3.1",
+              "title": "La amelogenesi",
+              "page_start": 419
+            },
+            {
+              "number": "17.3.2",
+              "title": "Caratteristiche morfologiche dello smalto",
+              "page_start": 420
+            }
+          ]
+        },
+        {
+          "number": "17.4",
+          "title": "Il complesso polpa-dentina",
+          "page_start": 423,
+          "subsections": [
+            {
+              "number": "17.4.1",
+              "title": "La dentina: generalità",
+              "page_start": 423
+            },
+            {
+              "number": "17.4.2",
+              "title": "Gli odontoblasti",
+              "page_start": 424
+            },
+            {
+              "number": "17.4.3",
+              "title": "Il processo di dentinogenesi",
+              "page_start": 424
+            },
+            {
+              "number": "17.4.4",
+              "title": "Caratteristiche morfologiche della dentina",
+              "page_start": 425
+            },
+            {
+              "number": "17.4.5",
+              "title": "La dentina terziaria",
+              "page_start": 426
+            },
+            {
+              "number": "17.4.6",
+              "title": "La polpa dentale",
+              "page_start": 427
+            },
+            {
+              "number": "17.4.7",
+              "title": "Matrice extracellulare della polpa dentaria",
+              "page_start": 427
+            },
+            {
+              "number": "17.4.8",
+              "title": "Innervazione e vascolarizzazione della polpa dentaria",
+              "page_start": 427
+            }
+          ]
+        },
+        {
+          "number": "17.5",
+          "title": "Il parodonto",
+          "page_start": 428,
+          "subsections": [
+            {
+              "number": "17.5.1",
+              "title": "Il cemento",
+              "page_start": 428
+            }
+          ]
+        },
+        {
+          "number": "17.6",
+          "title": "",
+          "page_start": 431,
+          "subsections": [
+            {
+              "number": "17.6.2",
+              "title": "Il legamento parodontale",
+              "page_start": 431
+            },
+            {
+              "number": "17.6.3",
+              "title": "Processo alveolare e osso alveolare",
+              "page_start": 432
+            },
+            {
+              "number": "17.6.4",
+              "title": "Gengiva",
+              "page_start": 433
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Tessuti muscolari",
+      "page_start": 439,
+      "sections": [
+        {
+          "number": "18.1",
+          "title": "Generalità",
+          "page_start": 439
+        },
+        {
+          "number": "18.2",
+          "title": "Tessuto muscolare striato scheletrico",
+          "page_start": 439,
+          "subsections": [
+            {
+              "number": "18.2.1",
+              "title": "Generalità",
+              "page_start": 439
+            },
+            {
+              "number": "18.2.2",
+              "title": "Fibra muscolare scheletrica",
+              "page_start": 440
+            },
+            {
+              "number": "18.2.3",
+              "title": "Meccanismi della contrazione",
+              "page_start": 446
+            },
+            {
+              "number": "18.2.4",
+              "title": "La giunzione neuromuscolare o placca motrice",
+              "page_start": 448
+            },
+            {
+              "number": "18.2.5",
+              "title": "Eterogeneità delle fibre muscolari",
+              "page_start": 449
+            }
+          ]
+        },
+        {
+          "number": "18.3",
+          "title": "Tessuto muscolare striato cardiaco",
+          "page_start": 450,
+          "subsections": [
+            {
+              "number": "18.3.1",
+              "title": "Generalità",
+              "page_start": 450
+            },
+            {
+              "number": "18.3.2",
+              "title": "Cardiomiocita comune: struttura e ultrastruttura",
+              "page_start": 451
+            },
+            {
+              "number": "18.3.3",
+              "title": "Tessuto di conduzione",
+              "page_start": 454
+            },
+            {
+              "number": "18.3.4",
+              "title": "Attività endocrina del miocardio",
+              "page_start": 454
+            }
+          ]
+        },
+        {
+          "number": "18.4",
+          "title": "Tessuto muscolare liscio",
+          "page_start": 454,
+          "subsections": [
+            {
+              "number": "18.4.1",
+              "title": "Generalità",
+              "page_start": 454
+            },
+            {
+              "number": "18.4.2",
+              "title": "Le cellule muscolari lisce",
+              "page_start": 454
+            },
+            {
+              "number": "18.4.3",
+              "title": "Il tessuto muscolare liscio",
+              "page_start": 455
+            },
+            {
+              "number": "18.4.4",
+              "title": "Particolari tipi di cellule muscolari lisce",
+              "page_start": 455
+            },
+            {
+              "number": "18.4.5",
+              "title": "Ultrastruttura della cellula muscolare liscia",
+              "page_start": 455
+            },
+            {
+              "number": "18.4.6",
+              "title": "Meccanismi di contrazione della cellula muscolare liscia",
+              "page_start": 457
+            },
+            {
+              "number": "18.4.7",
+              "title": "Differenti tipi di muscolatura liscia",
+              "page_start": 458
+            }
+          ]
+        },
+        {
+          "number": "18.5",
+          "title": "Rigenerazione del tessuto muscolare",
+          "page_start": 459
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Tessuto nervoso",
+      "page_start": 465,
+      "sections": [
+        {
+          "number": "19.1",
+          "title": "Introduzione",
+          "page_start": 465,
+          "subsections": [
+            {
+              "number": "19.1.1",
+              "title": "Organizzazione anatomica e funzionale del sistema nervoso",
+              "page_start": 465
+            },
+            {
+              "number": "19.1.2",
+              "title": "Il sistema nervoso periferico",
+              "page_start": 466
+            },
+            {
+              "number": "19.1.3",
+              "title": "Il sistema nervoso centrale",
+              "page_start": 467
+            }
+          ]
+        },
+        {
+          "number": "19.2",
+          "title": "Neuroglia",
+          "page_start": 467,
+          "subsections": [
+            {
+              "number": "19.2.1",
+              "title": "Ependima",
+              "page_start": 467
+            },
+            {
+              "number": "19.2.2",
+              "title": "Astrociti fibrosi e protoplasmatici",
+              "page_start": 469
+            },
+            {
+              "number": "19.2.3",
+              "title": "Microglia",
+              "page_start": 471
+            },
+            {
+              "number": "19.2.4",
+              "title": "Oligodendroglia",
+              "page_start": 471
+            },
+            {
+              "number": "19.2.5",
+              "title": "Glia periferica",
+              "page_start": 472
+            }
+          ]
+        },
+        {
+          "number": "19.3",
+          "title": "Il neurone",
+          "page_start": 472,
+          "subsections": [
+            {
+              "number": "19.3.1",
+              "title": "Ciclo vitale del neurone",
+              "page_start": 472
+            },
+            {
+              "number": "19.3.2",
+              "title": "Principali parti del neurone",
+              "page_start": 472
+            },
+            {
+              "number": "19.3.3",
+              "title": "Corpo cellulare",
+              "page_start": 473
+            },
+            {
+              "number": "19.3.4",
+              "title": "I dendriti",
+              "page_start": 475
+            },
+            {
+              "number": "19.3.5",
+              "title": "L'assone",
+              "page_start": 475
+            },
+            {
+              "number": "19.3.6",
+              "title": "Il citoscheletro del neurone",
+              "page_start": 476
+            },
+            {
+              "number": "19.3.7",
+              "title": "Flusso assonico",
+              "page_start": 477
+            }
+          ]
+        },
+        {
+          "number": "19.4",
+          "title": "Le guaine della fibra nervosa",
+          "page_start": 479,
+          "subsections": [
+            {
+              "number": "19.4.1",
+              "title": "La guaina mielinica in microscopia",
+              "page_start": 479
+            },
+            {
+              "number": "19.4.2",
+              "title": "Sviluppo del nervo periferico",
+              "page_start": 479
+            },
+            {
+              "number": "19.4.3",
+              "title": "Formazione della guaina mielinica nel nervo",
+              "page_start": 480
+            },
+            {
+              "number": "19.4.4",
+              "title": "Composizione della guaina mielinica",
+              "page_start": 482
+            },
+            {
+              "number": "19.4.5",
+              "title": "Nodo di Ranvier",
+              "page_start": 482
+            },
+            {
+              "number": "19.4.6",
+              "title": "Fibre mieliniche e amieliniche",
+              "page_start": 483
+            },
+            {
+              "number": "19.4.7",
+              "title": "La mielina nel SNC",
+              "page_start": 484
+            },
+            {
+              "number": "19.4.8",
+              "title": "Sostanza bianca e sostanza grigia",
+              "page_start": 484
+            }
+          ]
+        },
+        {
+          "number": "19.5",
+          "title": "Morfologia neuronale e ruolo funzionale",
+          "page_start": 485,
+          "subsections": [
+            {
+              "number": "19.5.1",
+              "title": "Variazioni nel numero dei processi cellulari",
+              "page_start": 485
+            },
+            {
+              "number": "19.5.2",
+              "title": "Lunghezza dell'assone",
+              "page_start": 486
+            },
+            {
+              "number": "19.5.3",
+              "title": "Morfologia e funzione: due esempi",
+              "page_start": 487
+            }
+          ]
+        },
+        {
+          "number": "19.6",
+          "title": "La sinapsi",
+          "page_start": 487,
+          "subsections": [
+            {
+              "number": "19.6.1",
+              "title": "Sinapsi chimica",
+              "page_start": 487
+            },
+            {
+              "number": "19.6.2",
+              "title": "Terminale presinaptico",
+              "page_start": 488
+            },
+            {
+              "number": "19.6.3",
+              "title": "La fessura sinaptica",
+              "page_start": 490
+            },
+            {
+              "number": "19.6.4",
+              "title": "Il terminale post-sinaptico",
+              "page_start": 490
+            },
+            {
+              "number": "19.6.5",
+              "title": "Tipi di sinapsi",
+              "page_start": 490
+            },
+            {
+              "number": "19.6.6",
+              "title": "Neurotrasmettitori",
+              "page_start": 491
+            },
+            {
+              "number": "19.6.7",
+              "title": "Glia e modulazione della trasmissione sinaptica",
+              "page_start": 492
+            },
+            {
+              "number": "19.6.8",
+              "title": "Sinapsi elettriche",
+              "page_start": 492
+            }
+          ]
+        },
+        {
+          "number": "19.7",
+          "title": "L'impulso nervoso",
+          "page_start": 493,
+          "subsections": [
+            {
+              "number": "19.7.1",
+              "title": "Concentrazioni ioniche e potenziale di riposo",
+              "page_start": 493
+            },
+            {
+              "number": "19.7.2",
+              "title": "Le specifiche proprietà della membrana neuronale",
+              "page_start": 494
+            },
+            {
+              "number": "19.7.3",
+              "title": "Conducibilità: il potenziale d'azione",
+              "page_start": 494
+            },
+            {
+              "number": "19.7.4",
+              "title": "Trasmissione sinaptica",
+              "page_start": 496
+            },
+            {
+              "number": "19.7.5",
+              "title": "Eccitabilità: potenziali post-sinaptici",
+              "page_start": 496
+            },
+            {
+              "number": "19.7.6",
+              "title": "L'innesco del potenziale d'azione",
+              "page_start": 497
+            }
+          ]
+        },
+        {
+          "number": "19.8",
+          "title": "Plasticità sinaptica, neurogenesi, rigenerazione",
+          "page_start": 498,
+          "subsections": [
+            {
+              "number": "19.8.1",
+              "title": "Plasticità sinaptica",
+              "page_start": 498
+            },
+            {
+              "number": "19.8.2",
+              "title": "Neurogenesi nell'adulto",
+              "page_start": 499
+            },
+            {
+              "number": "19.8.3",
+              "title": "Rigenerazione delle fibre nervose",
+              "page_start": 499
+            },
+            {
+              "number": "19.8.4",
+              "title": "La (mancata) rigenerazione degli assoni nel SNC",
+              "page_start": 500
+            }
+          ]
+        },
+        {
+          "number": "19.9",
+          "title": "Barriera emato-encefalica e unità neuro-vascolare",
+          "page_start": 500,
+          "subsections": [
+            {
+              "number": "19.9.1",
+              "title": "La funzione di barriera",
+              "page_start": 501
+            },
+            {
+              "number": "19.9.2",
+              "title": "La BEE come interfaccia dinamica fra SNC e periferia",
+              "page_start": 501
+            },
+            {
+              "number": "19.9.3",
+              "title": "Unità neurovascolare",
+              "page_start": 501
+            }
+          ]
+        },
+        {
+          "number": "19.10",
+          "title": "Sistema nervoso periferico",
+          "page_start": 502,
+          "subsections": [
+            {
+              "number": "19.10.1",
+              "title": "Nervi",
+              "page_start": 502
+            },
+            {
+              "number": "19.10.2",
+              "title": "Gangli nervosi",
+              "page_start": 503
+            },
+            {
+              "number": "19.10.3",
+              "title": "Terminazioni periferiche",
+              "page_start": 504
+            },
+            {
+              "number": "19.10.4",
+              "title": "La placca motrice",
+              "page_start": 505
+            },
+            {
+              "number": "19.10.5",
+              "title": "Terminazioni motrici viscerali",
+              "page_start": 505
+            },
+            {
+              "number": "19.10.6",
+              "title": "Terminazioni del sistema somatosensoriale",
+              "page_start": 507
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Gli epiteti riproduttivi",
+      "page_start": 515,
+      "sections": [
+        {
+          "number": "20.1",
+          "title": "Il follicolo ovarico: aspetti istologici e funzionali",
+          "page_start": 515
+        },
+        {
+          "number": "20.2",
+          "title": "Epitelio seminifero",
+          "page_start": 521,
+          "subsections": [
+            {
+              "number": "20.2.1",
+              "title": "Generalità",
+              "page_start": 521
+            },
+            {
+              "number": "20.2.2",
+              "title": "Popolazioni cellulari dell'epitelio seminifero",
+              "page_start": 522
+            },
+            {
+              "number": "20.2.3",
+              "title": "Le giunzioni speciali dell'epitelio seminifero e la barriera emato-testicolare",
+              "page_start": 529
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "title": "La medicina rigenerativa",
+      "page_start": 537,
+      "sections": [
+        {
+          "number": "21.1",
+          "title": "Rigenerazione del tessuto emopoietico e applicazioni in medicina",
+          "page_start": 537,
+          "subsections": [
+            {
+              "number": "21.1.1",
+              "title": "Caratterizzazione delle cellule staminali ematopoietiche",
+              "page_start": 538
+            },
+            {
+              "number": "21.1.2",
+              "title": "Fonti tissutali di cellule staminali ematopoietiche e metodiche di trapianto",
+              "page_start": 539
+            },
+            {
+              "number": "21.1.3",
+              "title": "Il trapianto di cellule staminali ematopoietiche",
+              "page_start": 539
+            }
+          ]
+        },
+        {
+          "number": "21.2",
+          "title": "Terapia cellulare del fegato",
+          "page_start": 541,
+          "subsections": [
+            {
+              "number": "21.2.1",
+              "title": "Il trapianto di cellule come terapia cellulare: colture bidimensionali",
+              "page_start": 541
+            },
+            {
+              "number": "21.2.2",
+              "title": "Dalle colture 2D ai sistemi tridimensionali: organoidi e sferoidi",
+              "page_start": 544
+            },
+            {
+              "number": "21.2.3",
+              "title": "Fegato Bioartificiale (BAL)",
+              "page_start": 548
+            }
+          ]
+        },
+        {
+          "number": "21.3",
+          "title": "Ingegneria tessutale",
+          "page_start": 549,
+          "subsections": [
+            {
+              "number": "21.3.1",
+              "title": "Strategie di rigenerazione nel tessuto osseo",
+              "page_start": 550
+            },
+            {
+              "number": "21.3.2",
+              "title": "Strategie di rigenerazione nel tessuto cartilagineo",
+              "page_start": 553
+            }
+          ]
+        },
+        {
+          "number": "21.4",
+          "title": "Rigenerazione muscolare",
+          "page_start": 558,
+          "subsections": [
+            {
+              "number": "21.4.1",
+              "title": "Sistema Muscolare Scheletrico e Cellule Staminali",
+              "page_start": 558
+            },
+            {
+              "number": "21.4.2",
+              "title": "Miogenesi scheletrica",
+              "page_start": 558
+            },
+            {
+              "number": "21.4.3",
+              "title": "Cellule Staminali nella Rigenerazione Muscolare Scheletrica",
+              "page_start": 560
+            },
+            {
+              "number": "21.4.4",
+              "title": "Applicazioni Cliniche e Terapie Innovative con Cellule Staminali",
+              "page_start": 561
+            },
+            {
+              "number": "21.4.5",
+              "title": "Modelli Animali e Cellulari per la Ricerca sulle Patologie Muscolari Scheletriche",
+              "page_start": 563
+            },
+            {
+              "number": "21.4.6",
+              "title": "Conclusioni e prospective",
+              "page_start": 565
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,690 @@
+{
+  "id": "DeMartin_Fondamenti",
+  "title": "Fondamenti di chimica",
+  "author": "DeMartin",
+  "publisher": "Edises",
+  "subject": "chimica generale",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Nozioni propedeutiche: grandezze fisiche di largo uso in chimica e loro unità di misura",
+      "page_start": 2,
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "Grandezze fisiche",
+          "page_start": 2
+        },
+        {
+          "number": "1.2",
+          "title": "Unità di misura delle grandezze fisiche fondamentali del sistema SI",
+          "page_start": 3
+        },
+        {
+          "number": "1.3",
+          "title": "Unità di misura di alcune grandezze fisiche derivate",
+          "page_start": 5
+        },
+        {
+          "number": "1.4",
+          "title": "Operazioni con quantità che esprimono grandezze fisiche",
+          "page_start": 7
+        },
+        {
+          "number": "1.5",
+          "title": "Misura di una grandezza e cifre significative",
+          "page_start": 10
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Struttura della materia e reazioni chimiche",
+      "page_start": 16,
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "Chimica e natura atomica della materia",
+          "page_start": 16
+        },
+        {
+          "number": "2.2",
+          "title": "Elementi e composti",
+          "page_start": 19
+        },
+        {
+          "number": "2.3",
+          "title": "Cenni preliminari sulla costituzione degli atomi",
+          "page_start": 20
+        },
+        {
+          "number": "2.4",
+          "title": "Quando gli atomi perdono o acquistano elettroni: gli ioni",
+          "page_start": 30
+        },
+        {
+          "number": "2.5",
+          "title": "Conferme sperimentali sulla natura corpuscolare della materia",
+          "page_start": 31
+        },
+        {
+          "number": "2.6",
+          "title": "Masse o pesi atomici e molecolari",
+          "page_start": 33
+        },
+        {
+          "number": "2.7",
+          "title": "Un po' di ordine tra gli elementi: proprietà periodiche e tavola periodica",
+          "page_start": 35
+        },
+        {
+          "number": "2.8",
+          "title": "Energia di ionizzazione e affinità elettronica come esempi di proprietà periodiche",
+          "page_start": 39
+        },
+        {
+          "number": "2.9",
+          "title": "Composti molecolari e composti ionici",
+          "page_start": 41
+        },
+        {
+          "number": "2.10",
+          "title": "Contare gli atomi pesandoli: la mole",
+          "page_start": 42
+        },
+        {
+          "number": "2.11",
+          "title": "Composizione percentuale in massa delle sostanze",
+          "page_start": 44
+        },
+        {
+          "number": "2.12",
+          "title": "Determinazione della formula chimica da dati sperimentali",
+          "page_start": 45
+        },
+        {
+          "number": "2.13",
+          "title": "Reazioni chimiche ed equazioni chimiche",
+          "page_start": 47
+        },
+        {
+          "number": "2.14",
+          "title": "Reazioni di ossidoriduzione",
+          "page_start": 52
+        },
+        {
+          "number": "2.15",
+          "title": "Bilanciamento delle reazioni di ossidoriduzione con l'uso dei numeri di ossidazione",
+          "page_start": 55
+        },
+        {
+          "number": "2.16",
+          "title": "Bilanciamento delle reazioni di ossidoriduzione con il metodo delle semireazioni",
+          "page_start": 57
+        },
+        {
+          "number": "2.17",
+          "title": "Relazioni tra le masse nelle reazioni chimiche",
+          "page_start": 60
+        },
+        {
+          "number": "2.18",
+          "title": "Resa percentuale di una reazione chimica",
+          "page_start": 64
+        },
+        {
+          "number": "2.19",
+          "title": "Soluzioni e loro composizione",
+          "page_start": 64
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Termodinamica chimica I: scambi di energia",
+      "page_start": 82,
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "Generalità",
+          "page_start": 82
+        },
+        {
+          "number": "3.2",
+          "title": "Sistema, ambiente e universo",
+          "page_start": 82
+        },
+        {
+          "number": "3.3",
+          "title": "Temperatura: una proprietà collettiva",
+          "page_start": 83
+        },
+        {
+          "number": "3.4",
+          "title": "Energia interna",
+          "page_start": 83
+        },
+        {
+          "number": "3.5",
+          "title": "Calore e lavoro: due manifestazioni differenti della variazione di energia (ΔU) e primo principio della termodinamica",
+          "page_start": 89
+        },
+        {
+          "number": "3.6",
+          "title": "Entalpia (H) e variazione di entalpia (ΔH): scambi di calore a pressione costante",
+          "page_start": 99
+        },
+        {
+          "number": "3.7",
+          "title": "Calorimetria: misura di ΔH e ΔU",
+          "page_start": 108
+        },
+        {
+          "number": "3.8",
+          "title": "Stati standard, entalpia di reazione standard (ΔHº) e legge di Hess",
+          "page_start": 115
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Struttura atomica",
+      "page_start": 128,
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "Generalità",
+          "page_start": 128
+        },
+        {
+          "number": "4.2",
+          "title": "Radiazione elettromagnetica e quantizzazione dell'energia",
+          "page_start": 128
+        },
+        {
+          "number": "4.3",
+          "title": "Spettri di emissione e di assorbimento: il modello atomico di Bohr",
+          "page_start": 131
+        },
+        {
+          "number": "4.4",
+          "title": "Dualismo onda-corpuscolo per i corpi materiali: principio di indeterminazione di Heisenberg",
+          "page_start": 137
+        },
+        {
+          "number": "4.5",
+          "title": "Equazione di Schrödinger e funzioni d'onda orbitali",
+          "page_start": 140
+        },
+        {
+          "number": "4.6",
+          "title": "Livelli energetici degli atomi polielettronici",
+          "page_start": 146
+        },
+        {
+          "number": "4.7",
+          "title": "Costruzione (aufbau) della tavola periodica degli elementi",
+          "page_start": 149
+        },
+        {
+          "number": "4.8",
+          "title": "Proprietà periodiche degli elementi e relazioni con la configurazione elettronica",
+          "page_start": 153
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Legame chimico e geometria delle molecole",
+      "page_start": 158,
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "Legame chimico: introduzione",
+          "page_start": 158
+        },
+        {
+          "number": "5.2",
+          "title": "Formule di Lewis e regola dell'ottetto",
+          "page_start": 158
+        },
+        {
+          "number": "5.3",
+          "title": "Legame covalente secondo la teoria del legame di valenza",
+          "page_start": 160
+        },
+        {
+          "number": "5.4",
+          "title": "Legami multipli",
+          "page_start": 161
+        },
+        {
+          "number": "5.5",
+          "title": "Violazioni alla regola dell'ottetto: espansione e limitazione dell'ottetto",
+          "page_start": 162
+        },
+        {
+          "number": "5.6",
+          "title": "Formule di Lewis per molecole o ioni poliatomici e carica formale",
+          "page_start": 163
+        },
+        {
+          "number": "5.7",
+          "title": "Formule di risonanza",
+          "page_start": 166
+        },
+        {
+          "number": "5.8",
+          "title": "Polarità delle molecole",
+          "page_start": 170
+        },
+        {
+          "number": "5.9",
+          "title": "Previsione delle geometrie molecolari: teoria VSEPR",
+          "page_start": 171
+        },
+        {
+          "number": "5.10",
+          "title": "Orbitali ibridi",
+          "page_start": 177
+        },
+        {
+          "number": "5.11",
+          "title": "Teoria degli orbitali molecolari",
+          "page_start": 186
+        },
+        {
+          "number": "5.12",
+          "title": "Legame ionico",
+          "page_start": 193
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Stati di aggregazione della materia",
+      "page_start": 200,
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "Generalità",
+          "page_start": 200
+        },
+        {
+          "number": "6.2",
+          "title": "Interazioni intermolecolari e stati di aggregazione della materia",
+          "page_start": 200
+        },
+        {
+          "number": "6.3",
+          "title": "Tipologie di interazioni intermolecolari",
+          "page_start": 202
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Stati di aggregazione della materia: gas",
+      "page_start": 212,
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "Generalità",
+          "page_start": 212
+        },
+        {
+          "number": "7.2",
+          "title": "Significato molecolare della pressione",
+          "page_start": 213
+        },
+        {
+          "number": "7.3",
+          "title": "Leggi dei gas ideali",
+          "page_start": 217
+        },
+        {
+          "number": "7.4",
+          "title": "Miscele di gas",
+          "page_start": 225
+        },
+        {
+          "number": "7.5",
+          "title": "Cenni sulla teoria cinetica dei gas",
+          "page_start": 226
+        },
+        {
+          "number": "7.6",
+          "title": "Distribuzione di Maxwell delle velocità",
+          "page_start": 230
+        },
+        {
+          "number": "7.7",
+          "title": "Gas reali",
+          "page_start": 232
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Stati di aggregazione della materia: solidi e liquidi",
+      "page_start": 238,
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "Generalità",
+          "page_start": 238
+        },
+        {
+          "number": "8.2",
+          "title": "Proprietà e classificazione dei solidi in base al tipo di legame",
+          "page_start": 238
+        },
+        {
+          "number": "8.3",
+          "title": "Proprietà dei liquidi",
+          "page_start": 246
+        },
+        {
+          "number": "8.4",
+          "title": "Equilibri di stato e diagrammi di stato di sistemi a un componente",
+          "page_start": 250
+        },
+        {
+          "number": "8.5",
+          "title": "Soluzioni e loro formazione",
+          "page_start": 255
+        },
+        {
+          "number": "8.6",
+          "title": "Proprietà colligative",
+          "page_start": 262
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Cinetica chimica",
+      "page_start": 278,
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "Spontaneità e velocità di una reazione",
+          "page_start": 278
+        },
+        {
+          "number": "9.2",
+          "title": "Meccanismo di reazione e costante di velocità",
+          "page_start": 279
+        },
+        {
+          "number": "9.3",
+          "title": "Effetto della temperatura sulla velocità di reazione",
+          "page_start": 280
+        },
+        {
+          "number": "9.4",
+          "title": "Catalisi",
+          "page_start": 282
+        },
+        {
+          "number": "9.5",
+          "title": "Espressione della velocità di reazione",
+          "page_start": 284
+        },
+        {
+          "number": "9.6",
+          "title": "Deduzione dell'equazione o legge cinetica di una reazione",
+          "page_start": 286
+        },
+        {
+          "number": "9.7",
+          "title": "Molecolarità di una reazione",
+          "page_start": 290
+        },
+        {
+          "number": "9.8",
+          "title": "Cinetica del decadimento radioattivo e utilizzo dei radioisotopi per datazioni",
+          "page_start": 291
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Equilibri chimici",
+      "page_start": 296,
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "Concetto di equilibrio chimico dinamico e reazioni reversibili",
+          "page_start": 296
+        },
+        {
+          "number": "10.2",
+          "title": "Costante di equilibrio e legge d'azione di massa",
+          "page_start": 296
+        },
+        {
+          "number": "10.3",
+          "title": "Equilibrio chimico di reazioni omogenee ed eterogenee",
+          "page_start": 298
+        },
+        {
+          "number": "10.4",
+          "title": "Derivazione empirica della costante di equilibrio",
+          "page_start": 300
+        },
+        {
+          "number": "10.5",
+          "title": "Derivazione termodinamica della costante di equilibrio: l'attività",
+          "page_start": 301
+        },
+        {
+          "number": "10.6",
+          "title": "Dipendenza della costante di equilibrio dall'equazione chimica",
+          "page_start": 302
+        },
+        {
+          "number": "10.7",
+          "title": "Previsione della direzione di una reazione: il quoziente di reazione",
+          "page_start": 303
+        },
+        {
+          "number": "10.8",
+          "title": "Composizione di una miscela di reazione all'equilibrio chimico",
+          "page_start": 307
+        },
+        {
+          "number": "10.9",
+          "title": "Fattori che influenzano l'equilibrio chimico: il principio di Le Châtelier",
+          "page_start": 309
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Acidi e basi",
+      "page_start": 318,
+      "sections": [
+        {
+          "number": "11.1",
+          "title": "Definizioni di acidità e basicità: teorie di Arrhenius, Brønsted-Lowry e Lewis",
+          "page_start": 318
+        },
+        {
+          "number": "11.2",
+          "title": "Sviluppo della teoria di Brønsted-Lowry applicata all'equilibrio chimico in soluzioni acquose",
+          "page_start": 320
+        },
+        {
+          "number": "11.3",
+          "title": "Definizione della pKa di un acido e previsione della sua forza",
+          "page_start": 327
+        },
+        {
+          "number": "11.4",
+          "title": "pH e calcolo del pH di soluzioni acquose",
+          "page_start": 332
+        },
+        {
+          "number": "11.5",
+          "title": "Soluzioni tampone",
+          "page_start": 341
+        },
+        {
+          "number": "11.6",
+          "title": "Titolazioni acido-base",
+          "page_start": 345
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Solubilità e prodotto di solubilità",
+      "page_start": 358,
+      "sections": [
+        {
+          "number": "12.1",
+          "title": "Generalità",
+          "page_start": 358
+        },
+        {
+          "number": "12.2",
+          "title": "Effetto dello ione comune",
+          "page_start": 364
+        },
+        {
+          "number": "12.3",
+          "title": "Dipendenza della solubilità di composti poco solubili dall'acidità del mezzo e dalla presenza degli agenti complessanti",
+          "page_start": 366
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Termodinamica chimica II: entropia, spontaneità dei processi chimici ed energia libera",
+      "page_start": 378,
+      "sections": [
+        {
+          "number": "13.1",
+          "title": "Alla ricerca di un criterio generale per definire i processi spontanei: cosa determina il verso della \"freccia del tempo\"?",
+          "page_start": 378
+        },
+        {
+          "number": "13.2",
+          "title": "Calore e lavoro: trasferimenti di energia asimmetrici; il secondo principio della termodinamica come visione macroscopica del disordine nell'universo e della grandezza che ne misura l'aumento nei processi spontanei: l'entropia (S)",
+          "page_start": 382
+        },
+        {
+          "number": "13.3",
+          "title": "Processi reversibili vs processi irreversibili: idealità vs realtà",
+          "page_start": 385
+        },
+        {
+          "number": "13.4",
+          "title": "Visione microscopica del disordine molecolare e della dissipazione dell'energia: l'entropia come misura del numero di microstati di un sistema",
+          "page_start": 389
+        },
+        {
+          "number": "13.5",
+          "title": "Entropia e temperatura: il terzo principio della termodinamica e l'entropia molare standard (S°)",
+          "page_start": 401
+        },
+        {
+          "number": "13.6",
+          "title": "Spontaneità dipendente dalla T: processi spontanei ma ordinanti (∆Ssist < 0) e ruolo fondamentale dell'ambiente",
+          "page_start": 408
+        },
+        {
+          "number": "13.7",
+          "title": "Energia libera di Gibbs (G): il secondo principio della termodinamica basato solo sul sistema",
+          "page_start": 410
+        },
+        {
+          "number": "13.8",
+          "title": "ΔG e lavoro utile: le reazioni chimiche come serbatoio energetico",
+          "page_start": 427
+        },
+        {
+          "number": "13.9",
+          "title": "Accoppiamento di un processo non spontaneo ad un processo spontaneo: energia libera immagazzinata come serbatoio per reazioni con ΔG > 0",
+          "page_start": 429
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Reazioni ossidoriduttive spontanee e non spontanee: celle voltaiche ed elettrolitiche",
+      "page_start": 442,
+      "sections": [
+        {
+          "number": "14.1",
+          "title": "Reazioni ossidoriduttive spontanee e celle voltaiche",
+          "page_start": 442
+        },
+        {
+          "number": "14.2",
+          "title": "Celle voltaiche con elettrodi inerti",
+          "page_start": 447
+        },
+        {
+          "number": "14.3",
+          "title": "Potenziali standard di riduzione",
+          "page_start": 450
+        },
+        {
+          "number": "14.4",
+          "title": "Potenziali di riduzione ed equazione di Nernst",
+          "page_start": 453
+        },
+        {
+          "number": "14.5",
+          "title": "Batterie e accumulatori",
+          "page_start": 460
+        },
+        {
+          "number": "14.6",
+          "title": "Reazioni ossidoriduttive non spontanee e celle elettrolitiche",
+          "page_start": 465
+        },
+        {
+          "number": "14.7",
+          "title": "Alcune applicazioni industriali dell'elettrolisi",
+          "page_start": 472
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Introduzione alla chimica inorganica",
+      "page_start": 478,
+      "sections": [
+        {
+          "number": "15.1",
+          "title": "Generalità",
+          "page_start": 478
+        },
+        {
+          "number": "15.2",
+          "title": "Idrogeno",
+          "page_start": 479
+        },
+        {
+          "number": "15.3",
+          "title": "Elementi del blocco s: gruppi 1 e 2",
+          "page_start": 482
+        },
+        {
+          "number": "15.4",
+          "title": "Elementi del blocco p",
+          "page_start": 487
+        },
+        {
+          "number": "15.5",
+          "title": "Elementi di transizione",
+          "page_start": 507
+        }
+      ]
+    }
+  ]
+}

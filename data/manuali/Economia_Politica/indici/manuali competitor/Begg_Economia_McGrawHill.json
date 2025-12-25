@@ -1,0 +1,1186 @@
+{
+  "id": "Begg_Economia",
+  "title": "Economia",
+  "author": "Begg et al.",
+  "publisher": "McGraw-Hill",
+  "subject": "Economia politica",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "La scienza economica e l'economia",
+      "page_start": 1,
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "La scienza della scelta",
+          "page_start": 2
+        },
+        {
+          "number": "1.2",
+          "title": "Priorità nell'economia contemporanea",
+          "page_start": 3
+        },
+        {
+          "number": "1.3",
+          "title": "La scarsità e gli usi alternativi delle risorse",
+          "page_start": 5
+        },
+        {
+          "number": "1.4",
+          "title": "Il ruolo del mercato",
+          "page_start": 7
+        },
+        {
+          "number": "1.5",
+          "title": "La scienza economica positiva e normativa",
+          "page_start": 10
+        },
+        {
+          "number": "1.6",
+          "title": "La micro e la macroeconomia",
+          "page_start": 11
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Gli strumenti dell'analisi economica",
+      "page_start": 15,
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "I dati",
+          "page_start": 16
+        },
+        {
+          "number": "2.2",
+          "title": "I numeri indice",
+          "page_start": 18
+        },
+        {
+          "number": "2.3",
+          "title": "Le variabili nominali e reali",
+          "page_start": 20
+        },
+        {
+          "number": "2.4",
+          "title": "La misurazione dei cambiamenti delle variabili economiche",
+          "page_start": 21
+        },
+        {
+          "number": "2.5",
+          "title": "Modelli e grafici",
+          "page_start": 21
+        },
+        {
+          "number": "2.6",
+          "title": "L'economia sperimentale",
+          "page_start": 25
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "La domanda, l'offerta e il mercato",
+      "page_start": 27,
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "Il mercato",
+          "page_start": 27
+        },
+        {
+          "number": "3.2",
+          "title": "La domanda, l'offerta e l'equilibrio del mercato",
+          "page_start": 28
+        },
+        {
+          "number": "3.3",
+          "title": "La rappresentazione dell'equilibrio, la spesa totale dei consumatori, il ricavo totale dei produttori e i surplus",
+          "page_start": 30
+        },
+        {
+          "number": "3.4",
+          "title": "Uno sguardo dietro la curva di domanda",
+          "page_start": 32
+        },
+        {
+          "number": "3.5",
+          "title": "Gli spostamenti della curva di domanda",
+          "page_start": 34
+        },
+        {
+          "number": "3.6",
+          "title": "Uno sguardo dietro la curva di offerta",
+          "page_start": 35
+        },
+        {
+          "number": "3.7",
+          "title": "Gli spostamenti della curva di offerta",
+          "page_start": 37
+        },
+        {
+          "number": "3.8",
+          "title": "I mercati liberi e i controlli sui prezzi",
+          "page_start": 38
+        },
+        {
+          "number": "3.9",
+          "title": "Come il mercato risolve il problema di \"che cosa, come e per chi produrre\"",
+          "page_start": 42
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "L'elasticità della domanda e dell'offerta",
+      "page_start": 47,
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "L'elasticità della domanda rispetto al prezzo",
+          "page_start": 48
+        },
+        {
+          "number": "4.2",
+          "title": "L'elasticità della domanda al prezzo, le variazioni del prezzo e le variazioni della spesa totale dei consumatori",
+          "page_start": 53
+        },
+        {
+          "number": "4.3",
+          "title": "Alcuni esempi di applicazione dell'elasticità della domanda al prezzo",
+          "page_start": 55
+        },
+        {
+          "number": "4.4",
+          "title": "L'elasticità della domanda al prezzo nel breve e nel lungo periodo",
+          "page_start": 56
+        },
+        {
+          "number": "4.5",
+          "title": "L'elasticità incrociata della domanda al prezzo",
+          "page_start": 57
+        },
+        {
+          "number": "4.6",
+          "title": "L'elasticità della domanda rispetto al reddito dei consumatori",
+          "page_start": 58
+        },
+        {
+          "number": "4.7",
+          "title": "La domanda e l'inflazione",
+          "page_start": 62
+        },
+        {
+          "number": "4.8",
+          "title": "L'elasticità dell'offerta",
+          "page_start": 62
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "La teoria della scelta del consumatore e della domanda",
+      "page_start": 65,
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "Un modello di scelta del consumatore",
+          "page_start": 65
+        },
+        {
+          "number": "5.2",
+          "title": "La reazione del consumatore a cambiamenti del suo reddito reale",
+          "page_start": 72
+        },
+        {
+          "number": "5.3",
+          "title": "La reazione del consumatore a cambiamenti del prezzo relativo dei beni",
+          "page_start": 74
+        },
+        {
+          "number": "5.4",
+          "title": "Dalle curve di domanda individuali alla curva di domanda di mercato",
+          "page_start": 77
+        },
+        {
+          "number": "5.5",
+          "title": "I trasferimenti di reddito e i trasferimenti di beni e servizi",
+          "page_start": 79
+        },
+        {
+          "number": "5.6",
+          "title": "La scelta intertemporale",
+          "page_start": 81
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Informazione, economia comportamentale e digitale",
+      "page_start": 85,
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "L'imperfezione informativa e le sue soluzioni",
+          "page_start": 85
+        },
+        {
+          "number": "6.2",
+          "title": "Gli atteggiamenti individuali nei confronti del rischio",
+          "page_start": 87
+        },
+        {
+          "number": "6.3",
+          "title": "Il rischio e l'assicurazione",
+          "page_start": 90
+        },
+        {
+          "number": "6.4",
+          "title": "L'economia comportamentale",
+          "page_start": 92
+        },
+        {
+          "number": "6.5",
+          "title": "La teoria del prospetto",
+          "page_start": 93
+        },
+        {
+          "number": "6.6",
+          "title": "I prodotti informativi digitalizzati",
+          "page_start": 95
+        },
+        {
+          "number": "6.7",
+          "title": "La domanda di prodotti informativi",
+          "page_start": 96
+        },
+        {
+          "number": "6.8",
+          "title": "Imprese e mercati dei prodotti informativi",
+          "page_start": 100
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Tecnologia, costi, massimizzazione del profitto",
+      "page_start": 105,
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "La funzione di produzione, il prodotto totale, medio e marginale e la legge dei rendimenti decrescenti",
+          "page_start": 106
+        },
+        {
+          "number": "7.2",
+          "title": "I costi e la scelta della tecnica di produzione",
+          "page_start": 109
+        },
+        {
+          "number": "7.3",
+          "title": "I costi totali, medi e marginali di lungo periodo",
+          "page_start": 110
+        },
+        {
+          "number": "7.4",
+          "title": "Le economie e le diseconomie di scala",
+          "page_start": 113
+        },
+        {
+          "number": "7.5",
+          "title": "Il costo medio e il costo marginale",
+          "page_start": 117
+        },
+        {
+          "number": "7.6",
+          "title": "I costi di breve periodo",
+          "page_start": 118
+        },
+        {
+          "number": "7.7",
+          "title": "La scelta del volume ottimo di produzione dell'impresa: teoria generale e nel lungo periodo",
+          "page_start": 121
+        },
+        {
+          "number": "7.8",
+          "title": "La scelta del volume ottimo di produzione dell'impresa nel lungo periodo",
+          "page_start": 128
+        },
+        {
+          "number": "7.9",
+          "title": "La scelta del volume ottimo di produzione dell'impresa nel breve periodo",
+          "page_start": 128
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "La concorrenza perfetta e il monopolio",
+      "page_start": 133,
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "Il mercato di concorrenza perfetta",
+          "page_start": 136
+        },
+        {
+          "number": "8.2",
+          "title": "La scelta della quantità ottima di produzione e l'offerta da parte di un'impresa perfettamente concorrenziale",
+          "page_start": 137
+        },
+        {
+          "number": "8.3",
+          "title": "Le curve di offerta di un settore perfettamente concorrenziale",
+          "page_start": 141
+        },
+        {
+          "number": "8.4",
+          "title": "Il monopolio perfetto: l'altra struttura-limite di mercato",
+          "page_start": 145
+        },
+        {
+          "number": "8.5",
+          "title": "La scelta del volume di produzione che massimizza il profitto di un monopolista",
+          "page_start": 146
+        },
+        {
+          "number": "8.6",
+          "title": "Un confronto tra il prezzo e la quantità di equilibrio in condizioni di monopolio perfetto e di concorrenza perfetta",
+          "page_start": 149
+        },
+        {
+          "number": "8.7",
+          "title": "L'inesistenza di una curva di offerta del monopolista",
+          "page_start": 156
+        },
+        {
+          "number": "8.8",
+          "title": "La discriminazione del prezzo",
+          "page_start": 156
+        },
+        {
+          "number": "8.9",
+          "title": "Il monopolio e il progresso tecnologico",
+          "page_start": 159
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "La concorrenza imperfetta",
+      "page_start": 163,
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "Perché esistono differenti strutture di mercato?",
+          "page_start": 164
+        },
+        {
+          "number": "9.2",
+          "title": "La concorrenza monopolistica",
+          "page_start": 168
+        },
+        {
+          "number": "9.3",
+          "title": "La differenziazione del prodotto attraverso il damaging quality o peggioramento della qualità",
+          "page_start": 170
+        },
+        {
+          "number": "9.4",
+          "title": "La differenziazione del prodotto attraverso l'investimento in pubblicità",
+          "page_start": 173
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "L'oligopolio",
+      "page_start": 177,
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "L'oligopolio e l'interdipendenza",
+          "page_start": 178
+        },
+        {
+          "number": "10.2",
+          "title": "La teoria dei giochi e le scelte interdipendenti",
+          "page_start": 182
+        },
+        {
+          "number": "10.3",
+          "title": "Le funzioni di reazione delle imprese oligopolistiche",
+          "page_start": 185
+        },
+        {
+          "number": "10.4",
+          "title": "La libertà di entrata in un mercato e la concorrenza potenziale",
+          "page_start": 190
+        },
+        {
+          "number": "10.5",
+          "title": "La prevenzione strategica dell'ingresso in un mercato",
+          "page_start": 192
+        },
+        {
+          "number": "10.6",
+          "title": "Per concludere",
+          "page_start": 194
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Il mercato delle risorse, il mercato del lavoro",
+      "page_start": 195,
+      "sections": [
+        {
+          "number": "11.1",
+          "title": "La domanda di fattori produttivi da parte di un'impresa nel lungo periodo",
+          "page_start": 196
+        },
+        {
+          "number": "11.2",
+          "title": "La domanda di lavoro da parte di un'impresa nel breve periodo",
+          "page_start": 198
+        },
+        {
+          "number": "11.3",
+          "title": "La domanda di lavoro da parte di un settore",
+          "page_start": 202
+        },
+        {
+          "number": "11.4",
+          "title": "L'offerta di lavoro",
+          "page_start": 203
+        },
+        {
+          "number": "11.5",
+          "title": "L'equilibrio del mercato del lavoro relativo a un settore",
+          "page_start": 207
+        },
+        {
+          "number": "11.6",
+          "title": "I guadagni di trasferimento e le rendite economiche",
+          "page_start": 208
+        },
+        {
+          "number": "11.7",
+          "title": "I mercati del lavoro tendono all'equilibrio?",
+          "page_start": 209
+        },
+        {
+          "number": "11.8",
+          "title": "Le differenze di produttività tra i lavoratori",
+          "page_start": 211
+        },
+        {
+          "number": "11.9",
+          "title": "La discriminazione nel mercato del lavoro",
+          "page_start": 215
+        },
+        {
+          "number": "11.10",
+          "title": "I sindacati dei lavoratori e il mercato del lavoro",
+          "page_start": 218
+        },
+        {
+          "number": "11.11",
+          "title": "I mercati del capitale e delle risorse naturali",
+          "page_start": 222
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Introduzione all'economia normativa o del benessere",
+      "page_start": 225,
+      "sections": [
+        {
+          "number": "12.1",
+          "title": "L'equità e l'efficienza",
+          "page_start": 226
+        },
+        {
+          "number": "12.2",
+          "title": "La concorrenza perfetta e l'efficienza paretiana",
+          "page_start": 227
+        },
+        {
+          "number": "12.3",
+          "title": "La teoria dell'equilibrio economico generale e la scatola di Edgeworth",
+          "page_start": 230
+        },
+        {
+          "number": "12.4",
+          "title": "Le distorsioni e il second best",
+          "page_start": 232
+        },
+        {
+          "number": "12.5",
+          "title": "I fallimenti del mercato",
+          "page_start": 237
+        },
+        {
+          "number": "12.6",
+          "title": "Le esternalità",
+          "page_start": 237
+        },
+        {
+          "number": "12.7",
+          "title": "L'economia ambientale",
+          "page_start": 241
+        },
+        {
+          "number": "12.8",
+          "title": "Altri casi di assenza del mercato: tempo e rischio",
+          "page_start": 245
+        },
+        {
+          "number": "12.9",
+          "title": "L'informazione imperfetta, la qualità, la salute e la sicurezza",
+          "page_start": 247
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "La politica della concorrenza",
+      "page_start": 251,
+      "sections": [
+        {
+          "number": "13.1",
+          "title": "La politica industriale",
+          "page_start": 252
+        },
+        {
+          "number": "13.2",
+          "title": "La geografia economica",
+          "page_start": 253
+        },
+        {
+          "number": "13.3",
+          "title": "La politica concorrenziale e le fusioni",
+          "page_start": 257
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "L'economia del settore pubblico",
+      "available_online": true,
+      "sections": []
+    },
+    {
+      "number": 15,
+      "title": "Introduzione alla macroeconomia",
+      "page_start": 265,
+      "sections": [
+        {
+          "number": "15.1",
+          "title": "Gli argomenti principali",
+          "page_start": 266
+        },
+        {
+          "number": "15.2",
+          "title": "Alcuni dati macroeconomici: un giro intorno al mondo",
+          "page_start": 266
+        },
+        {
+          "number": "15.3",
+          "title": "Introduzione",
+          "page_start": 268
+        },
+        {
+          "number": "15.4",
+          "title": "La contabilità nazionale",
+          "page_start": 270
+        },
+        {
+          "number": "15.5",
+          "title": "Che cosa misura il PNL",
+          "page_start": 277
+        },
+        {
+          "number": "15.6",
+          "title": "Si può misurare la felicità?",
+          "page_start": 283
+        },
+        {
+          "number": "15.7",
+          "title": "2020: l'anno della recessione mondiale",
+          "page_start": 285
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Il prodotto nazionale e la spesa aggregata",
+      "page_start": 289,
+      "sections": [
+        {
+          "number": "16.1",
+          "title": "Le componenti della spesa aggregata",
+          "page_start": 291
+        },
+        {
+          "number": "16.2",
+          "title": "La spesa aggregata",
+          "page_start": 296
+        },
+        {
+          "number": "16.3",
+          "title": "Il prodotto di equilibrio",
+          "page_start": 297
+        },
+        {
+          "number": "16.4",
+          "title": "Un altro approccio: il risparmio programmato eguaglia l'investimento programmato",
+          "page_start": 299
+        },
+        {
+          "number": "16.5",
+          "title": "Una riduzione della spesa aggregata",
+          "page_start": 301
+        },
+        {
+          "number": "16.6",
+          "title": "Il moltiplicatore",
+          "page_start": 302
+        },
+        {
+          "number": "16.7",
+          "title": "Il paradosso della parsimonia",
+          "page_start": 304
+        },
+        {
+          "number": "16.8",
+          "title": "Il ruolo della fiducia",
+          "page_start": 305
+        },
+        {
+          "number": "16.9",
+          "title": "Reddito, risparmio e consumi all'epoca del Covid-19",
+          "page_start": 307
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "La politica fiscale e il commercio estero",
+      "page_start": 311,
+      "sections": [
+        {
+          "number": "17.1",
+          "title": "Lo Stato e il flusso circolare del reddito",
+          "page_start": 312
+        },
+        {
+          "number": "17.2",
+          "title": "Lo Stato e la spesa aggregata",
+          "page_start": 312
+        },
+        {
+          "number": "17.3",
+          "title": "Il bilancio dello Stato",
+          "page_start": 316
+        },
+        {
+          "number": "17.4",
+          "title": "Il deficit di bilancio e la politica fiscale",
+          "page_start": 318
+        },
+        {
+          "number": "17.5",
+          "title": "Gli stabilizzatori automatici e la politica fiscale discrezionale",
+          "page_start": 319
+        },
+        {
+          "number": "17.6",
+          "title": "Il deficit e il debito pubblico",
+          "page_start": 320
+        },
+        {
+          "number": "17.7",
+          "title": "Il commercio estero nella determinazione del reddito",
+          "page_start": 326
+        },
+        {
+          "number": "17.8",
+          "title": "La sanità alla prova del Covid-19",
+          "page_start": 330
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "title": "La moneta e la politica monetaria",
+      "page_start": 335,
+      "sections": [
+        {
+          "number": "18.1",
+          "title": "La moneta e le sue funzioni",
+          "page_start": 335
+        },
+        {
+          "number": "18.2",
+          "title": "La domanda di moneta",
+          "page_start": 337
+        },
+        {
+          "number": "18.3",
+          "title": "Le banche moderne e l'offerta di moneta",
+          "page_start": 342
+        },
+        {
+          "number": "18.4",
+          "title": "La base monetaria e il moltiplicatore monetario",
+          "page_start": 346
+        },
+        {
+          "number": "18.5",
+          "title": "Le banche centrali e la regolazione dell'offerta di moneta",
+          "page_start": 348
+        },
+        {
+          "number": "18.6",
+          "title": "L'equilibrio nel mercato monetario",
+          "page_start": 350
+        },
+        {
+          "number": "18.7",
+          "title": "Il controllo della politica monetaria",
+          "page_start": 351
+        },
+        {
+          "number": "18.8",
+          "title": "Il meccanismo di trasmissione della politica monetaria",
+          "page_start": 353
+        },
+        {
+          "number": "18.9",
+          "title": "Le crisi finanziarie",
+          "page_start": 355
+        },
+        {
+          "number": "18.10",
+          "title": "Quantitative easing",
+          "page_start": 359
+        },
+        {
+          "number": "18.11",
+          "title": "La politica monetaria in pandemia: una panoramica",
+          "page_start": 362
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Il mercato monetario e il mercato reale. La politica monetaria e la politica fiscale",
+      "page_start": 365,
+      "sections": [
+        {
+          "number": "19.1",
+          "title": "Il modello IS-LM",
+          "page_start": 366
+        },
+        {
+          "number": "19.2",
+          "title": "La politica fiscale e la politica monetaria: gli spostamenti della funzione IS e della funzione LM",
+          "page_start": 370
+        },
+        {
+          "number": "19.3",
+          "title": "Gli shock della domanda di moneta e la competizione tra banche",
+          "page_start": 371
+        },
+        {
+          "number": "19.4",
+          "title": "Le politiche economiche",
+          "page_start": 373
+        },
+        {
+          "number": "19.5",
+          "title": "Nuove considerazioni sulle politiche della domanda",
+          "page_start": 377
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "title": "L'offerta aggregata, i prezzi e gli shock",
+      "page_start": 385,
+      "sections": [
+        {
+          "number": "20.1",
+          "title": "L'inflazione e la domanda aggregata",
+          "page_start": 386
+        },
+        {
+          "number": "20.2",
+          "title": "L'offerta aggregata",
+          "page_start": 387
+        },
+        {
+          "number": "20.3",
+          "title": "Il tasso d'inflazione di equilibrio",
+          "page_start": 388
+        },
+        {
+          "number": "20.4",
+          "title": "Il mercato del lavoro e i salari",
+          "page_start": 391
+        },
+        {
+          "number": "20.5",
+          "title": "La funzione di offerta aggregata di breve periodo",
+          "page_start": 392
+        },
+        {
+          "number": "20.6",
+          "title": "Il processo di aggiustamento",
+          "page_start": 393
+        },
+        {
+          "number": "20.7",
+          "title": "Gli spostamenti della funzione di offerta aggregata",
+          "page_start": 396
+        },
+        {
+          "number": "20.8",
+          "title": "Le regole della politica monetaria",
+          "page_start": 398
+        },
+        {
+          "number": "20.9",
+          "title": "La regola di Taylor",
+          "page_start": 400
+        },
+        {
+          "number": "20.10",
+          "title": "Shock da Covid-19",
+          "page_start": 401
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "title": "L'inflazione, le aspettative e la credibilità",
+      "page_start": 405,
+      "sections": [
+        {
+          "number": "21.1",
+          "title": "La moneta e l'inflazione",
+          "page_start": 406
+        },
+        {
+          "number": "21.2",
+          "title": "L'inflazione e i tassi d'interesse",
+          "page_start": 408
+        },
+        {
+          "number": "21.3",
+          "title": "L'inflazione, la moneta e il deficit pubblico",
+          "page_start": 410
+        },
+        {
+          "number": "21.4",
+          "title": "L'inflazione, la disoccupazione e il prodotto nazionale",
+          "page_start": 413
+        },
+        {
+          "number": "21.5",
+          "title": "Controllare l'inflazione",
+          "page_start": 421
+        },
+        {
+          "number": "21.6",
+          "title": "Inflazione e deflazione in pandemia",
+          "page_start": 424
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "title": "La disoccupazione",
+      "page_start": 429,
+      "sections": [
+        {
+          "number": "22.1",
+          "title": "Il mercato del lavoro",
+          "page_start": 430
+        },
+        {
+          "number": "22.2",
+          "title": "Il contesto teorico di riferimento",
+          "page_start": 432
+        },
+        {
+          "number": "22.3",
+          "title": "L'Europa esce dalla crisi?",
+          "page_start": 437
+        },
+        {
+          "number": "22.4",
+          "title": "La supply-side economics",
+          "page_start": 439
+        },
+        {
+          "number": "22.5",
+          "title": "La disoccupazione ciclica",
+          "page_start": 442
+        },
+        {
+          "number": "22.6",
+          "title": "Il costo della disoccupazione",
+          "page_start": 443
+        },
+        {
+          "number": "22.7",
+          "title": "Occupazione, disoccupazione e politiche pubbliche in pandemia",
+          "page_start": 446
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "title": "I tassi di cambio e la bilancia dei pagamenti",
+      "available_online": true,
+      "sections": []
+    },
+    {
+      "number": 24,
+      "title": "La macroeconomia dei sistemi economici aperti",
+      "available_online": true,
+      "sections": []
+    },
+    {
+      "number": 25,
+      "title": "La crescita e i cicli economici",
+      "page_start": 453,
+      "sections": [
+        {
+          "number": "25.1",
+          "title": "La crescita economica",
+          "page_start": 455
+        },
+        {
+          "number": "25.2",
+          "title": "Le conoscenze tecniche",
+          "page_start": 456
+        },
+        {
+          "number": "25.3",
+          "title": "La crescita e l'accumulazione",
+          "page_start": 456
+        },
+        {
+          "number": "25.4",
+          "title": "La crescita dovuta al progresso tecnico",
+          "page_start": 459
+        },
+        {
+          "number": "25.5",
+          "title": "La crescita all'interno dell'OCSE",
+          "page_start": 459
+        },
+        {
+          "number": "25.6",
+          "title": "La crescita endogena",
+          "page_start": 463
+        },
+        {
+          "number": "25.7",
+          "title": "Il trend e il ciclo",
+          "page_start": 466
+        },
+        {
+          "number": "25.8",
+          "title": "I cicli economici reali",
+          "page_start": 467
+        },
+        {
+          "number": "25.9",
+          "title": "L'effetto supply-side della crisi economica",
+          "page_start": 470
+        },
+        {
+          "number": "25.10",
+          "title": "Un ciclo economico internazionale?",
+          "page_start": 471
+        },
+        {
+          "number": "25.11",
+          "title": "La crescita zero",
+          "page_start": 472
+        },
+        {
+          "number": "25.12",
+          "title": "Recessione e crescita post pandemia: se sarà, quando e come sarà?",
+          "page_start": 473
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "title": "Macroeconomia: a che punto siamo?",
+      "page_start": 477,
+      "sections": [
+        {
+          "number": "26.1",
+          "title": "Le aree di disaccordo",
+          "page_start": 477
+        },
+        {
+          "number": "26.2",
+          "title": "La macroeconomia neoclassica",
+          "page_start": 480
+        },
+        {
+          "number": "26.3",
+          "title": "I monetaristi moderati",
+          "page_start": 482
+        },
+        {
+          "number": "26.4",
+          "title": "I keynesiani moderati",
+          "page_start": 483
+        },
+        {
+          "number": "26.5",
+          "title": "I keynesiani estremi",
+          "page_start": 485
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "title": "Il commercio internazionale",
+      "page_start": 489,
+      "sections": [
+        {
+          "number": "27.1",
+          "title": "Le dinamiche del commercio internazionale",
+          "page_start": 490
+        },
+        {
+          "number": "27.2",
+          "title": "Il vantaggio comparato",
+          "page_start": 494
+        },
+        {
+          "number": "27.3",
+          "title": "Il commercio intrasettoriale",
+          "page_start": 500
+        },
+        {
+          "number": "27.4",
+          "title": "I presupposti economici alla base dell'imposizione di dazi doganali",
+          "page_start": 501
+        },
+        {
+          "number": "27.5",
+          "title": "Argomentazioni fondate e infondate a favore dei dazi doganali",
+          "page_start": 506
+        },
+        {
+          "number": "27.6",
+          "title": "Altre politiche commerciali",
+          "page_start": 513
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "title": "I regimi del tasso di cambio",
+      "available_online": true,
+      "sections": []
+    },
+    {
+      "number": 29,
+      "title": "L'integrazione europea",
+      "page_start": 523,
+      "sections": [
+        {
+          "number": "29.1",
+          "title": "Il Mercato Unico",
+          "page_start": 523
+        },
+        {
+          "number": "29.2",
+          "title": "I benefici del Mercato Unico",
+          "page_start": 525
+        },
+        {
+          "number": "29.3",
+          "title": "Dal Sistema Monetario Europeo all'Unione Monetaria Europea",
+          "page_start": 526
+        },
+        {
+          "number": "29.4",
+          "title": "L'economia dell'Unione monetaria",
+          "page_start": 528
+        },
+        {
+          "number": "29.5",
+          "title": "L'economia europea a rischio nel mercato globale",
+          "page_start": 534
+        },
+        {
+          "number": "29.6",
+          "title": "Brexit",
+          "page_start": 537
+        },
+        {
+          "number": "29.7",
+          "title": "NGEU: la risposta fiscale europea",
+          "page_start": 541
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "title": "L'economia mondiale tra globalizzazione, sovranità e sovranismo",
+      "page_start": 545,
+      "sections": [
+        {
+          "number": "30.1",
+          "title": "Breve storia della globalizzazione",
+          "page_start": 546
+        },
+        {
+          "number": "30.2",
+          "title": "Benefici e costi della globalizzazione",
+          "page_start": 547
+        },
+        {
+          "number": "30.3",
+          "title": "Dal NAFTA all'USMCA",
+          "page_start": 552
+        },
+        {
+          "number": "30.4",
+          "title": "L'ASEAN",
+          "page_start": 554
+        },
+        {
+          "number": "30.5",
+          "title": "CINA E INDIA",
+          "page_start": 555
+        },
+        {
+          "number": "30.6",
+          "title": "Gli organismi multilaterali",
+          "page_start": 555
+        },
+        {
+          "number": "30.6",
+          "title": "Il virus della disuguaglianza",
+          "page_start": 557
+        }
+      ]
+    }
+  ]
+}

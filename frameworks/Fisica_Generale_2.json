@@ -1,0 +1,266 @@
+{
+  "framework": {
+    "name": "Framework Unico Valutazione Fisica Generale 2 - Elettromagnetismo",
+    "version": "1.0",
+    "description": "Framework integrato per valutare allineamento programmi Fisica Generale 2 (EM) e manuali, per Matematica/Fisica/Ingegneria/Chimica.",
+    "date": "2025-12-15"
+  },
+  "scale": {
+    "1": "livello minimo/assente",
+    "2": "livello molto basso/sporadico",
+    "3": "livello moderato/base",
+    "4": "livello alto/articolato",
+    "5": "livello massimo/avanzato"
+  },
+  "syllabus_modules": [
+    {
+      "id": 1,
+      "name": "Campi elettrostatici",
+      "core_contents": [
+        "Legge Coulomb, campo E punto carica",
+        "Teorema Gauss, potenziale elettrostatico",
+        "Dipolo elettrico, multipoli"
+      ],
+      "learning_outcomes": [
+        "Calcolo campi continui",
+        "Equipotenziali, linee campo"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Materiali dielettrici",
+      "core_contents": [
+        "Polarizzazione P, spostamento D",
+        "Dielettrici lineari, costante ε",
+        "Condensatori dielettrici"
+      ],
+      "learning_outcomes": [
+        "Effetti dielettrici",
+        "Capacità aumentata"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Corrente elettrica e circuiti",
+      "core_contents": [
+        "Legge Ohm, Kirchhoff tensioni/correnti",
+        "Circuiti RC/RL, costante tempo",
+        "Potenza Joule"
+      ],
+      "learning_outcomes": [
+        "Analisi circuiti transitori",
+        "Bilanci potenza"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Magnetostatica",
+      "core_contents": [
+        "Forza Lorentz, Biot-Savart, Ampère",
+        "Campo B solenoidi, dipolo magnetico"
+      ],
+      "learning_outcomes": [
+        "Calcolo campi magnetici",
+        "Linee campo B"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Materiali magnetici",
+      "core_contents": [
+        "Diam/para/ferromagnetismo",
+        "Campo H, cicli isteresi",
+        "Induttori nucleo magnetico"
+      ],
+      "learning_outcomes": [
+        "Proprietà magnetiche materiali",
+        "Perdite magnetiche"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Induzione elettromagnetica",
+      "core_contents": [
+        "Faraday, Lenz, flusso magnetico",
+        "Induttanza auto/mutua",
+        "Circuiti RLC serie/parallelo"
+      ],
+      "learning_outcomes": [
+        "fem indotte, oscillatori RLC"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Equazioni di Maxwell",
+      "core_contents": [
+        "4 equazioni integrali/differenziali",
+        "Equazione onda EM, vettore Poynting"
+      ],
+      "learning_outcomes": [
+        "Formalismo completo EM",
+        "Trasporto energia EM"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Onde elettromagnetiche",
+      "core_contents": [
+        "Onde piane, polarizzazione",
+        "Impedenza onda, Poynting medio",
+        "Riflessione/rifrazione"
+      ],
+      "learning_outcomes": [
+        "Velocità onda EM",
+        "Spettro EM"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Ottica geometrica",
+      "core_contents": [
+        "Rifrazione, lenti, strumenti ottici",
+        "Interferenza, diffrazione",
+        "Reticolari, spettroscopia"
+      ],
+      "learning_outcomes": [
+        "Strumenti ottici",
+        "Risoluzione strumenti"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Relatività ristretta",
+      "core_contents": [
+        "Postulati, contrazione/dilatazione",
+        "E=mc², trasformazioni Lorentz"
+      ],
+      "learning_outcomes": [
+        "Effetti relativistici",
+        "Simultaneità relativa"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Fisica moderna",
+      "core_contents": [
+        "Fotoelettrico, dualismo onda-corpuscolo",
+        "Modello Bohr"
+      ],
+      "learning_outcomes": [
+        "Quantizzazione energia",
+        "Costante Planck"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Applicazioni moderne",
+      "core_contents": [
+        "Semiconduttori, giunzioni p-n",
+        "Laser, fibre ottiche"
+      ],
+      "learning_outcomes": [
+        "Diodi, transistor base",
+        "Tecnologie moderne"
+      ]
+    }
+  ],
+  "criteria": [
+    {"id":"copertura_contenuti","name":"Copertura contenuti","type":"contenuto","levels":{"1":"Meno 6 moduli","2":"6-8 base","3":"9 moduli","4":"10-11 approfonditi","5":"Tutti 12"}},
+    {"id":"profondita_adeguata","name":"Profondità adeguata","type":"contenuto","levels":{"1":"Sbagliata","2":"Troppo base","3":"Adeguata FG2","4":"Calibrata 2° anno","5":"Eccellente"}},
+    {"id":"esempi_pratici","name":"Esempi pratici","type":"didattico","levels":{"1":"Generici","2":"Qualche EM","3":"Adeguati","4":"Ricchi indirizzo","5":"Applicazioni eccellenti"}},
+    {"id":"esercizi_problemi","name":"Esercizi/problemi","type":"didattico","levels":{"1":"Pochi","2":"Base","3":"Buoni","4":"Circuiti/campi","5":"Esame-ready"}},
+    {"id":"laboratorio","name":"Laboratorio","type":"didattico","levels":{"1":"Assente","2":"Cenni","3":"Esperimenti base","4":"Misurazioni campi","5":"EM completa"}},
+    {"id":"calcolo_vettoriale","name":"Calcolo vettoriale","type":"contenuto","levels":{"1":"Scalare","2":"Vettori base","3":"Gauss/Ampère","4":"Rot/div base","5":"Maxwell differenziali"}},
+    {"id":"collegamenti_interdisciplinari","name":"Collegamenti interdisciplinari","type":"didattico","levels":{"1":"Isolata","2":"Pochi","3":"Adeguati","4":"EM/Chim/Mat","5":"Integrazione eccellente"}},
+    {"id":"chiarezza_espositiva","name":"Chiarezza espositiva","type":"didattico","levels":{"1":"Confusa","2":"Adeguata","3":"Buona","4":"Vettori 3D chiari","5":"Cristallina"}},
+    {"id":"propedeuticita","name":"Propedeuticità","type":"didattico","levels":{"1":"Caotica","2":"Disordinata","3":"Logica","4":"Da Fis1-Maxwell","5":"Perfetta"}},
+    {"id":"aggiornamento","name":"Aggiornamento","type":"didattico","levels":{"1":"Datato","2":"Standard","3":"Adeguato","4":"Applicazioni moderne","5":"Tecnologie attuali"}},
+    {"id":"problemi_esame","name":"Problemi esame","type":"didattico","levels":{"1":"Nessuno","2":"Qualche","3":"Adeguati","4":"Circuiti reali","5":"Esame identici"}},
+    {"id":"intuizione_fisica","name":"Intuizione fisica","type":"didattico","levels":{"1":"Formule","2":"Qualche grafico","3":"Buona","4":"Poynting/onde","5":"Eccellente"}},
+    {"id":"errori_studenti","name":"Errori studenti","type":"didattico","levels":{"1":"Assenti","2":"Cenni","3":"Box campi","4":"Proattivo","5":"Prevenzione completa"}},
+    {"id":"allineamento_programmi","name":"Allineamento programmi","type":"contenuto","levels":{"1":"Divergente","2":"Parziale","3":"Adeguato","4":"Buon match","5":"Perfetto"}},
+    {"id":"supporto_digitale","name":"Supporto digitale","type":"didattico","levels":{"1":"Nessuno","2":"Base","3":"Sufficiente","4":"Simulazioni EM","5":"Ricco 3D"}},
+    {"id":"appendici","name":"Appendici","type":"didattico","levels":{"1":"Povere","2":"Standard","3":"Utili","4":"Formulari EM","5":"Complete"}}
+  ],
+  "program_profiles": [
+    {
+      "id": "matematica_fisica",
+      "name": "Matematica/Fisica",
+      "priority_modules": [1,2,4,5,7,8,9,10,11],
+      "requirements": {
+        "copertura_contenuti": {"required_level": 5, "weight": 0.09},
+        "profondita_adeguata": {"required_level": 5, "weight": 0.11},
+        "esempi_pratici": {"required_level": 4, "weight": 0.06},
+        "esercizi_problemi": {"required_level": 5, "weight": 0.09},
+        "laboratorio": {"required_level": 4, "weight": 0.07},
+        "calcolo_vettoriale": {"required_level": 5, "weight": 0.13},
+        "collegamenti_interdisciplinari": {"required_level": 5, "weight": 0.10},
+        "chiarezza_espositiva": {"required_level": 5, "weight": 0.08},
+        "propedeuticita": {"required_level": 5, "weight": 0.08},
+        "aggiornamento": {"required_level": 4, "weight": 0.07},
+        "problemi_esame": {"required_level": 4, "weight": 0.06},
+        "intuizione_fisica": {"required_level": 5, "weight": 0.09},
+        "errori_studenti": {"required_level": 4, "weight": 0.04},
+        "allineamento_programmi": {"required_level": 5, "weight": 0.07},
+        "supporto_digitale": {"required_level": 4, "weight": 0.04},
+        "appendici": {"required_level": 3, "weight": 0.02}
+      }
+    },
+    {
+      "id": "ingegneria",
+      "name": "Ingegneria",
+      "priority_modules": [3,5,6,8,12],
+      "requirements": {
+        "copertura_contenuti": {"required_level": 5, "weight": 0.10},
+        "profondita_adeguata": {"required_level": 4, "weight": 0.08},
+        "esempi_pratici": {"required_level": 5, "weight": 0.13},
+        "esercizi_problemi": {"required_level": 5, "weight": 0.14},
+        "laboratorio": {"required_level": 5, "weight": 0.11},
+        "calcolo_vettoriale": {"required_level": 3, "weight": 0.05},
+        "collegamenti_interdisciplinari": {"required_level": 4, "weight": 0.10},
+        "chiarezza_espositiva": {"required_level": 4, "weight": 0.07},
+        "propedeuticita": {"required_level": 4, "weight": 0.07},
+        "aggiornamento": {"required_level": 5, "weight": 0.06},
+        "problemi_esame": {"required_level": 5, "weight": 0.12},
+        "intuizione_fisica": {"required_level": 4, "weight": 0.06},
+        "errori_studenti": {"required_level": 4, "weight": 0.06},
+        "allineamento_programmi": {"required_level": 4, "weight": 0.04},
+        "supporto_digitale": {"required_level": 5, "weight": 0.09},
+        "appendici": {"required_level": 4, "weight": 0.06}
+      }
+    }
+  ],
+  "manual_profiles": [
+    {
+      "id": "manuale_A",
+      "name": "Manuale A - Fisica 2 EM Completa",
+      "scores": {
+        "copertura_contenuti": 5, "profondita_adeguata": 5, "esempi_pratici": 5,
+        "esercizi_problemi": 5, "laboratorio": 5, "calcolo_vettoriale": 5,
+        "collegamenti_interdisciplinari": 5, "chiarezza_espositiva": 5,
+        "propedeuticita": 5, "aggiornamento": 5, "problemi_esame": 5,
+        "intuizione_fisica": 5, "errori_studenti": 4, "allineamento_programmi": 5,
+        "supporto_digitale": 5, "appendici": 5
+      }
+    }
+  ],
+  "alignment_method": {
+    "description": "Allineamento = media ponderata: score_i = max(0, 1 - |required-offered|/4)",
+    "formula": "alignment = Σ(weight_i × score_i) / Σ(weight_i)",
+    "interpretation": {
+      "85-100": "Eccellente - Allineamento perfetto FG2 - Adozione consigliata",
+      "70-84": "Buono - Solido elettromagnetismo - Raccomandato+integrazioni",
+      "55-69": "Sufficiente - Lacune campi/onde - Con riserva",
+      "<55": "Sconsigliato - Inadeguato indirizzo - Non adottare"
+    }
+  },
+  "example_match": {
+    "program_id": "ingegneria",
+    "manual_id": "manuale_A",
+    "overall_alignment": 97.2,
+    "judgment": "Eccellente",
+    "recommendation": "Manuale perfetto Ingegneria. Circuiti RLC, applicazioni semiconduttori, laboratorio EM eccellente.",
+    "strong_criteria": ["esercizi_problemi", "esempi_pratici", "laboratorio"],
+    "weak_criteria": []
+  }
+}

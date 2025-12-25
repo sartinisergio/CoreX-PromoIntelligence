@@ -1,0 +1,1084 @@
+{
+  "id": "Bersani_Elementi",
+  "title": "Elementi di fisica",
+  "author": "Bersani e al.",
+  "publisher": "Piccin",
+  "subject": "Fisica_Generale",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "RICHIAMI DI MATEMATICA E GRANDEZZE FISICHE",
+      "page_start": null,
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "Richiami di matematica",
+          "page_start": 1
+        },
+        {
+          "number": "1.1.1",
+          "title": "Il concetto di funzione",
+          "page_start": 1
+        },
+        {
+          "number": "1.1.2",
+          "title": "Graﬁco di una retta",
+          "page_start": 2
+        },
+        {
+          "number": "1.1.3",
+          "title": "Grandezze direttamente proporzionali",
+          "page_start": 4
+        },
+        {
+          "number": "1.1.4",
+          "title": "Grandezze inversamente proporzionali",
+          "page_start": 4
+        },
+        {
+          "number": "1.1.5",
+          "title": "Le funzioni trigonometriche",
+          "page_start": 6
+        },
+        {
+          "number": "1.1.6",
+          "title": "Signiﬁcato geometrico delle funzioni sin\u0001, cos\u0001 e tg\u0001",
+          "page_start": 9
+        },
+        {
+          "number": "1.1.7",
+          "title": "Funzioni speciali",
+          "page_start": 9
+        },
+        {
+          "number": "1.1.8",
+          "title": "Deﬁnizione di derivata",
+          "page_start": 11
+        },
+        {
+          "number": "1.1.9",
+          "title": "Deﬁnizione di integrale",
+          "page_start": 12
+        },
+        {
+          "number": "1.2",
+          "title": "Grandezze ﬁsiche",
+          "page_start": 13
+        },
+        {
+          "number": "1.2.1",
+          "title": "Sistema Internazionale: SI",
+          "page_start": 13
+        },
+        {
+          "number": "1.2.2",
+          "title": "Dimensioni - Analisi dimensionale",
+          "page_start": 15
+        },
+        {
+          "number": "1.3",
+          "title": "Grandezze vettoriali",
+          "page_start": 16
+        },
+        {
+          "number": "1.3.1",
+          "title": "Segmenti orientati",
+          "page_start": 16
+        },
+        {
+          "number": "1.3.2",
+          "title": "I vettori",
+          "page_start": 17
+        },
+        {
+          "number": "1.3.3",
+          "title": "Componente di un vettore lungo una retta",
+          "page_start": 18
+        },
+        {
+          "number": "1.3.4",
+          "title": "Componenti di un vettore in un piano cartesiano",
+          "page_start": 18
+        },
+        {
+          "number": "1.3.5",
+          "title": "Componenti di un vettore in uno spazio tridimensionale",
+          "page_start": 19
+        },
+        {
+          "number": "1.3.6",
+          "title": "Operazioni con i vettori",
+          "page_start": 19
+        },
+        {
+          "number": "1.4",
+          "title": "Teoria degli errori",
+          "page_start": 27
+        },
+        {
+          "number": "1.5",
+          "title": "I campi in ﬁsica",
+          "page_start": 32
+        },
+        {
+          "number": "1.5.1",
+          "title": "I campi scalari",
+          "page_start": 32
+        },
+        {
+          "number": "1.5.2",
+          "title": "I campi vettoriali",
+          "page_start": 34
+        },
+        {
+          "number": "1.6",
+          "title": "Uso delle scale logaritmiche",
+          "page_start": 34
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "MECCANICA",
+      "page_start": null,
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "Generalità",
+          "page_start": 61
+        },
+        {
+          "number": "2.1.1",
+          "title": "Relatività del moto",
+          "page_start": 61
+        },
+        {
+          "number": "2.1.2",
+          "title": "Posizione di un corpo",
+          "page_start": 62
+        },
+        {
+          "number": "2.1.3",
+          "title": "Dimensioni e moto dei corpi",
+          "page_start": 63
+        },
+        {
+          "number": "2.2",
+          "title": "Cinematica",
+          "page_start": 64
+        },
+        {
+          "number": "2.2.1",
+          "title": "Generalità",
+          "page_start": 64
+        },
+        {
+          "number": "2.2.2",
+          "title": "Moti fondamentali",
+          "page_start": 66
+        },
+        {
+          "number": "2.2.3",
+          "title": "Moti nello spazio",
+          "page_start": 69
+        },
+        {
+          "number": "2.3",
+          "title": "Dinamica",
+          "page_start": 73
+        },
+        {
+          "number": "2.3.2",
+          "title": "I Principi della Meccanica",
+          "page_start": 79
+        },
+        {
+          "number": "2.3.3",
+          "title": "Forze",
+          "page_start": 81
+        },
+        {
+          "number": "2.3.4",
+          "title": "Ulteriori grandezze caratteristiche",
+          "page_start": 87
+        },
+        {
+          "number": "2.3.5",
+          "title": "I teoremi energetici",
+          "page_start": 94
+        },
+        {
+          "number": "2.4",
+          "title": "Statica",
+          "page_start": 98
+        },
+        {
+          "number": "2.4.1",
+          "title": "Generalità",
+          "page_start": 98
+        },
+        {
+          "number": "2.4.2",
+          "title": "Tipi di equilibrio",
+          "page_start": 99
+        },
+        {
+          "number": "2.4.3",
+          "title": "Equilibri ed energia potenziale gravitazionale",
+          "page_start": 100
+        },
+        {
+          "number": "2.4.4",
+          "title": "Equilibrio dei corpi appoggiati su piano orizzontale",
+          "page_start": 101
+        },
+        {
+          "number": "2.5",
+          "title": "Elasticità",
+          "page_start": 102
+        },
+        {
+          "number": "2.5.1",
+          "title": "Costanti elastiche",
+          "page_start": 103
+        },
+        {
+          "number": "2.6",
+          "title": "Complementi",
+          "page_start": 104
+        },
+        {
+          "number": "2.6.1",
+          "title": "Rototraslazioni",
+          "page_start": 104
+        },
+        {
+          "number": "2.6.2",
+          "title": "Moto pendolare",
+          "page_start": 105
+        },
+        {
+          "number": "2.6.3",
+          "title": "Sistemi di punti materiali",
+          "page_start": 106
+        },
+        {
+          "number": "2.6.4",
+          "title": "Centro di massa",
+          "page_start": 109
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "I FLUIDI",
+      "page_start": null,
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "Caratteristiche generali",
+          "page_start": 127
+        },
+        {
+          "number": "3.1.1",
+          "title": "Massa volumica",
+          "page_start": 127
+        },
+        {
+          "number": "3.1.2",
+          "title": "Pressione",
+          "page_start": 128
+        },
+        {
+          "number": "3.1.3",
+          "title": "Forze di coesione",
+          "page_start": 132
+        },
+        {
+          "number": "3.1.4",
+          "title": "Tensione superﬁciale",
+          "page_start": 132
+        },
+        {
+          "number": "3.1.5",
+          "title": "Capillarità",
+          "page_start": 134
+        },
+        {
+          "number": "3.1.6",
+          "title": "Formula di Laplace",
+          "page_start": 137
+        },
+        {
+          "number": "3.2",
+          "title": "Equilibrio dei ﬂuidi",
+          "page_start": 138
+        },
+        {
+          "number": "3.2.1",
+          "title": "Introduzione",
+          "page_start": 138
+        },
+        {
+          "number": "3.2.2",
+          "title": "Forze esercitate sui corpi immersi: principio di Archimede",
+          "page_start": 139
+        },
+        {
+          "number": "3.2.3",
+          "title": "Legge di Stevino",
+          "page_start": 141
+        },
+        {
+          "number": "3.2.4",
+          "title": "Legge di Pascal",
+          "page_start": 144
+        },
+        {
+          "number": "3.3",
+          "title": "Caratteristiche dei gas",
+          "page_start": 145
+        },
+        {
+          "number": "3.3.1",
+          "title": "Considerazioni generali sui gas",
+          "page_start": 145
+        },
+        {
+          "number": "3.3.2",
+          "title": "Pressione atmosferica",
+          "page_start": 146
+        },
+        {
+          "number": "3.4",
+          "title": "Moto dei liquidi ideali",
+          "page_start": 147
+        },
+        {
+          "number": "3.4.1",
+          "title": "Regime stazionario",
+          "page_start": 147
+        },
+        {
+          "number": "3.4.2",
+          "title": "Portata o ﬂusso di un ﬂuido",
+          "page_start": 148
+        },
+        {
+          "number": "3.4.3",
+          "title": "Teorema di Bernoulli",
+          "page_start": 150
+        },
+        {
+          "number": "3.4.4",
+          "title": "Teorema di Torricelli",
+          "page_start": 152
+        },
+        {
+          "number": "3.4.5",
+          "title": "Tubo di Venturi",
+          "page_start": 153
+        },
+        {
+          "number": "3.5",
+          "title": "Moto dei liquidi reali",
+          "page_start": 154
+        },
+        {
+          "number": "3.5.1",
+          "title": "Liquidi reali",
+          "page_start": 154
+        },
+        {
+          "number": "3.5.2",
+          "title": "Viscosità",
+          "page_start": 156
+        },
+        {
+          "number": "3.5.3",
+          "title": "Legge di Poiseuille",
+          "page_start": 157
+        },
+        {
+          "number": "3.5.4",
+          "title": "Fluidi in moto turbolento",
+          "page_start": 160
+        },
+        {
+          "number": "3.5.5",
+          "title": "Regime turbolento e numero di Reynolds",
+          "page_start": 162
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "TERMODINAMICA",
+      "page_start": null,
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "Temperatura e calore",
+          "page_start": 169
+        },
+        {
+          "number": "4.2",
+          "title": "La dilatazione termica",
+          "page_start": 171
+        },
+        {
+          "number": "4.3",
+          "title": "Termometri e scale Termometriche",
+          "page_start": 172
+        },
+        {
+          "number": "4.4",
+          "title": "Capacità termica e calore speciﬁco",
+          "page_start": 174
+        },
+        {
+          "number": "4.5",
+          "title": "Il trasporto del calore",
+          "page_start": 175
+        },
+        {
+          "number": "4.5.1",
+          "title": "Il trasporto di calore per conduzione",
+          "page_start": 176
+        },
+        {
+          "number": "4.5.2",
+          "title": "Il trasporto di calore per convezione",
+          "page_start": 178
+        },
+        {
+          "number": "4.5.3",
+          "title": "Il trasporto di calore per irraggiamento",
+          "page_start": 179
+        },
+        {
+          "number": "4.6",
+          "title": "Le leggi della calorimetria ed i calorimetri",
+          "page_start": 181
+        },
+        {
+          "number": "4.7",
+          "title": "Nomenclatura termodinamica: sistema, ambiente, stato, trasformazione",
+          "page_start": 183
+        },
+        {
+          "number": "4.8",
+          "title": "Esperienza di Joule",
+          "page_start": 184
+        },
+        {
+          "number": "4.9",
+          "title": "Il 1° principio della termodinamica",
+          "page_start": 185
+        },
+        {
+          "number": "4.10",
+          "title": "Classiﬁcazione delle trasformazioni",
+          "page_start": 187
+        },
+        {
+          "number": "4.11",
+          "title": "Capacità termica e calori speciﬁci dei gas",
+          "page_start": 190
+        },
+        {
+          "number": "4.12",
+          "title": "La funzione di stato entalpia",
+          "page_start": 191
+        },
+        {
+          "number": "4.13",
+          "title": "Cambiamenti di stato",
+          "page_start": 193
+        },
+        {
+          "number": "4.14",
+          "title": "Il rendimento di una macchina termica ed il teorema di Carnot",
+          "page_start": 194
+        },
+        {
+          "number": "4.15",
+          "title": "L'evoluzione spontanea di un sistema",
+          "page_start": 196
+        },
+        {
+          "number": "4.16",
+          "title": "La funzione di stato entropia",
+          "page_start": 197
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "FENOMENI DI NATURA ONDULATORIA",
+      "page_start": null,
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "Onde trasversali, onde longitudinali",
+          "page_start": 217
+        },
+        {
+          "number": "5.2",
+          "title": "Il modello di Huygens",
+          "page_start": 220
+        },
+        {
+          "number": "5.3",
+          "title": "Onde monocromatiche e non, cenni sull'analisi di Fourier",
+          "page_start": 221
+        },
+        {
+          "number": "5.4",
+          "title": "Riﬂessione e rifrazione",
+          "page_start": 223
+        },
+        {
+          "number": "5.5",
+          "title": "Interferenza",
+          "page_start": 226
+        },
+        {
+          "number": "5.6",
+          "title": "Onde stazionarie",
+          "page_start": 228
+        },
+        {
+          "number": "5.7",
+          "title": "Effetto Doppler",
+          "page_start": 230
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "ONDE ACUSTICHE",
+      "page_start": null,
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "Introduzione",
+          "page_start": 233
+        },
+        {
+          "number": "6.2",
+          "title": "Natura e velocità del suono",
+          "page_start": 233
+        },
+        {
+          "number": "6.3",
+          "title": "Onde acustiche in movimento",
+          "page_start": 236
+        },
+        {
+          "number": "6.4",
+          "title": "Intensità delle onde sonore",
+          "page_start": 237
+        },
+        {
+          "number": "6.5",
+          "title": "Produzione di onde sonore. La voce umana",
+          "page_start": 239
+        },
+        {
+          "number": "6.6",
+          "title": "Rivelatore di suoni: l'orecchio umano",
+          "page_start": 241
+        },
+        {
+          "number": "6.7",
+          "title": "La risposta del sistema uditivo",
+          "page_start": 243
+        },
+        {
+          "number": "6.8",
+          "title": "Proprietà soggettive del suono: volume, tono e timbro",
+          "page_start": 245
+        },
+        {
+          "number": "6.9",
+          "title": "Effetto Doppler nelle onde acustiche",
+          "page_start": 246
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "ELETTROSTATICA",
+      "page_start": null,
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "La carica elettrica",
+          "page_start": 247
+        },
+        {
+          "number": "7.2",
+          "title": "Legge di Coulomb",
+          "page_start": 249
+        },
+        {
+          "number": "7.3",
+          "title": "Campo elettrico nel vuoto prodotto da una carica puntiforme",
+          "page_start": 251
+        },
+        {
+          "number": "7.4",
+          "title": "Campo elettrico prodotto da due o più cariche puntiformi",
+          "page_start": 253
+        },
+        {
+          "number": "7.5",
+          "title": "Linee del campo elettrico",
+          "page_start": 255
+        },
+        {
+          "number": "7.6",
+          "title": "Energia potenziale elettrostatica",
+          "page_start": 257
+        },
+        {
+          "number": "7.7",
+          "title": "Potenziale elettrostatico e differenza di potenziale",
+          "page_start": 259
+        },
+        {
+          "number": "7.8",
+          "title": "Analogia tra potenziale gravitazionale e potenziale elettrostatico",
+          "page_start": 261
+        },
+        {
+          "number": "7.9",
+          "title": "Relazione tra potenziale elettrico e campo elettrico",
+          "page_start": 262
+        },
+        {
+          "number": "7.10",
+          "title": "Potenziale elettrico in un campo elettrico uniforme",
+          "page_start": 263
+        },
+        {
+          "number": "7.11",
+          "title": "Energia potenziale di due cariche puntiformi",
+          "page_start": 264
+        },
+        {
+          "number": "7.12",
+          "title": "Potenziale elettrico generato da una carica puntiforme",
+          "page_start": 266
+        },
+        {
+          "number": "7.13",
+          "title": "Superﬁci equipotenziali",
+          "page_start": 267
+        },
+        {
+          "number": "7.14",
+          "title": "Dipolo elettrico",
+          "page_start": 270
+        },
+        {
+          "number": "7.15",
+          "title": "Conduttori e isolanti (o dielettrici)",
+          "page_start": null
+        },
+        {
+          "number": "7.16",
+          "title": "Campo elettrico all'interno di un conduttore metallico",
+          "page_start": 274
+        },
+        {
+          "number": "7.17",
+          "title": "Induzione elettrostatica",
+          "page_start": 276
+        },
+        {
+          "number": "7.18",
+          "title": "Schermo elettrostatico",
+          "page_start": 277
+        },
+        {
+          "number": "7.19",
+          "title": "Capacità elettrica di un conduttore",
+          "page_start": 278
+        },
+        {
+          "number": "7.20",
+          "title": "Condensatori",
+          "page_start": 279
+        },
+        {
+          "number": "7.21",
+          "title": "Energia elettrostatica di un condensatore",
+          "page_start": 281
+        },
+        {
+          "number": "7.22",
+          "title": "Capacità equivalente di condensatori collegati in parallelo e in serie",
+          "page_start": 282
+        },
+        {
+          "number": "7.23",
+          "title": "Dielettrici",
+          "page_start": 285
+        },
+        {
+          "number": "7.24",
+          "title": "Legge di Coulomb in presenza di un dielettrico",
+          "page_start": 287
+        },
+        {
+          "number": "7.25",
+          "title": "Polarizzazione dei dielettrici",
+          "page_start": 288
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "CORRENTE ELETTRICA",
+      "page_start": null,
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "Deﬁnizione di corrente elettrica",
+          "page_start": 295
+        },
+        {
+          "number": "8.2",
+          "title": "Convenzione sul verso della corrente elettrica",
+          "page_start": 296
+        },
+        {
+          "number": "8.3",
+          "title": "Densità di corrente elettrica",
+          "page_start": 297
+        },
+        {
+          "number": "8.4",
+          "title": "Velocità media delle cariche elettriche libere in un conduttore",
+          "page_start": 299
+        },
+        {
+          "number": "8.5",
+          "title": "Legge di Ohm (1826)",
+          "page_start": 302
+        },
+        {
+          "number": "8.6",
+          "title": "Resistività elettrica",
+          "page_start": 304
+        },
+        {
+          "number": "8.7",
+          "title": "Conduttività elettrica",
+          "page_start": 308
+        },
+        {
+          "number": "8.8",
+          "title": "Effetto Joule e potenza elettrica",
+          "page_start": 309
+        },
+        {
+          "number": "8.9",
+          "title": "Corrente alternata",
+          "page_start": 312
+        },
+        {
+          "number": "8.10",
+          "title": "Valori efﬁcaci della tensione alternata e della corrente alternata",
+          "page_start": 314
+        },
+        {
+          "number": "8.11",
+          "title": "Conduzione nei liquidi",
+          "page_start": 315
+        },
+        {
+          "number": "8.12",
+          "title": "Conduzione elettrica nelle soluzioni elettrolitiche",
+          "page_start": 318
+        },
+        {
+          "number": "8.13",
+          "title": "Generatori di tensione e forza elettromotrice",
+          "page_start": 322
+        },
+        {
+          "number": "8.13.1",
+          "title": "Applicazioni: collegamenti di generatori in continua",
+          "page_start": 324
+        },
+        {
+          "number": "8.14",
+          "title": "Corrente in un circuito elettrico",
+          "page_start": 326
+        },
+        {
+          "number": "8.15",
+          "title": "Caduta di tensione su una resistenza elettrica",
+          "page_start": 328
+        },
+        {
+          "number": "8.16",
+          "title": "Collegamento di resistenze elettriche in serie e in parallelo",
+          "page_start": 329
+        },
+        {
+          "number": "8.17",
+          "title": "Leggi di Kirchhoff",
+          "page_start": 333
+        },
+        {
+          "number": "8.18",
+          "title": "Circuiti RC",
+          "page_start": 337
+        },
+        {
+          "number": "8.19",
+          "title": "Rischi connessi con l'elettricità",
+          "page_start": 344
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "CAMPO MAGNETICO E CORRENTI INDOTTE",
+      "page_start": null,
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "Magneti e campo magnetico",
+          "page_start": null
+        },
+        {
+          "number": "9.2",
+          "title": "Corrente elettrica e campo magnetico",
+          "page_start": 362
+        },
+        {
+          "number": "9.3",
+          "title": "Forza su una corrente elettrica in presenza di un campo magnetico (esperienza di Faraday)",
+          "page_start": 364
+        },
+        {
+          "number": "9.4",
+          "title": "Campo magnetico prodotto da un ﬁlo rettilineo percorso da corrente elettrica (Legge di Biot e Savart)",
+          "page_start": 366
+        },
+        {
+          "number": "9.5",
+          "title": "Forze fra due conduttori paralleli percorsi da corrente (esperienza di Ampère)",
+          "page_start": 368
+        },
+        {
+          "number": "9.6",
+          "title": "Campo magnetico di una spira circolare percorsa da corrente",
+          "page_start": 371
+        },
+        {
+          "number": "9.7",
+          "title": "Interazioni campo magnetico - corrente elettrica",
+          "page_start": 374
+        },
+        {
+          "number": "9.7.1",
+          "title": "Momento torcente agente su una spira percorsa da corrente in presenza di un campo magnetico",
+          "page_start": 374
+        },
+        {
+          "number": "9.7.2",
+          "title": "Principio di equivalenza di Ampère",
+          "page_start": 376
+        },
+        {
+          "number": "9.8",
+          "title": "Campo magnetico di un solenoide",
+          "page_start": 378
+        },
+        {
+          "number": "9.9",
+          "title": "Teorema di Ampère",
+          "page_start": 379
+        },
+        {
+          "number": "9.10",
+          "title": "Forza agente su una carica in moto in un campo magnetico (Forza di Lorentz)",
+          "page_start": 385
+        },
+        {
+          "number": "9.11",
+          "title": "Moto di una carica elettrica in un campo magnetico uniforme",
+          "page_start": 386
+        },
+        {
+          "number": "9.12",
+          "title": "Origine del campo magnetico nella materia",
+          "page_start": 389
+        },
+        {
+          "number": "9.13",
+          "title": "Proprietà magnetiche della materia",
+          "page_start": 391
+        },
+        {
+          "number": "9.14",
+          "title": "Permeabilità magnetica dei materiali",
+          "page_start": 397
+        },
+        {
+          "number": "9.15",
+          "title": "Flusso del campo magnetico",
+          "page_start": 399
+        },
+        {
+          "number": "9.16",
+          "title": "Induttanza di un circuito elettrico",
+          "page_start": 402
+        },
+        {
+          "number": "9.17",
+          "title": "Induzione elettromagnetica",
+          "page_start": 404
+        },
+        {
+          "number": "9.18",
+          "title": "Legge di Faraday-Neumann (1831)",
+          "page_start": 407
+        },
+        {
+          "number": "9.19",
+          "title": "Legge di Lenz",
+          "page_start": 412
+        },
+        {
+          "number": "9.20",
+          "title": "Autoinduzione elettromagnetica",
+          "page_start": 414
+        },
+        {
+          "number": "9.21",
+          "title": "Energia del campo magnetico",
+          "page_start": 417
+        },
+        {
+          "number": "9.22",
+          "title": "Densità di energia del campo magnetico",
+          "page_start": 418
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "OTTICA",
+      "page_start": null,
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "Onde elettromagnetiche",
+          "page_start": null
+        },
+        {
+          "number": "10.2",
+          "title": "Cenni di ottica ﬁsica",
+          "page_start": 427
+        },
+        {
+          "number": "10.2.1",
+          "title": "La polarizzazione della luce",
+          "page_start": 427
+        },
+        {
+          "number": "10.2.2",
+          "title": "Luce coerente",
+          "page_start": 430
+        },
+        {
+          "number": "10.2.3",
+          "title": "Diffrazione",
+          "page_start": 430
+        },
+        {
+          "number": "10.2.4",
+          "title": "Dispersione della luce",
+          "page_start": 432
+        },
+        {
+          "number": "10.3",
+          "title": "Ottica geometrica",
+          "page_start": null
+        },
+        {
+          "number": "10.3.1",
+          "title": "Il diottro",
+          "page_start": 433
+        },
+        {
+          "number": "10.3.2",
+          "title": "Lenti sottili",
+          "page_start": 436
+        },
+        {
+          "number": "10.3.3",
+          "title": "Costruzione graﬁca della immagine di una lente sottile",
+          "page_start": 439
+        },
+        {
+          "number": "10.3.4",
+          "title": "Aberrazioni ottiche",
+          "page_start": 442
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "RADIAZIONI",
+      "page_start": null,
+      "sections": [
+        {
+          "number": "11.1",
+          "title": "Introduzione",
+          "page_start": null
+        },
+        {
+          "number": "11.2",
+          "title": "Radiazioni, decadimenti radioattivi e legge dei decadimenti radioattivi",
+          "page_start": 450
+        },
+        {
+          "number": "11.3",
+          "title": "Tempo di dimezzamento biologico",
+          "page_start": 453
+        },
+        {
+          "number": "11.4",
+          "title": "I decadimenti più diffusi e le associate radiazioni",
+          "page_start": 454
+        },
+        {
+          "number": "11.5",
+          "title": "Interazione delle radiazioni con la materia e cenni di dosimetria",
+          "page_start": 457
+        },
+        {
+          "number": "11.6",
+          "title": "Effetti biologici delle radiazioni non ionizzanti",
+          "page_start": 461
+        }
+      ]
+    }
+  ],
+  "id": "Bersani_Elementi_Piccin",
+  "title": "Elementi di Fisica",
+  "author": "Bersani e al.",
+  "publisher": "Piccin",
+  "subject": "Fisica_Generale",
+  "type": "Competitor",
+  "format_detected": "capitolo"
+}

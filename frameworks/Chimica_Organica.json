@@ -1,0 +1,452 @@
+{
+  "framework": {
+    "name": "Framework Unico Valutazione Chimica Organica - Multidisciplinare",
+    "version": "1.0",
+    "description": "Framework integrato per valutare allineamento tra programmi di Chimica Organica universitaria e manuali di testo, per contesti Biologia/Farmacia/Chimica/Ingegneria/Agraria.",
+    "date": "2025-12-15"
+  },
+  "scale": {
+    "1": "livello minimo/assente",
+    "2": "livello molto basso/sporadico",
+    "3": "livello moderato/base",
+    "4": "livello alto/articolato",
+    "5": "livello massimo/avanzato"
+  },
+  "syllabus_modules": [
+    {
+      "id": 1,
+      "name": "Struttura degli atomi e legami",
+      "core_contents": [
+        "Orbitale atomici e ibridazione",
+        "Legami covalenti, sigma/pi",
+        "Polarità molecolare",
+        "Forze intermolecolari"
+      ],
+      "learning_outcomes": [
+        "Chiarire struttura elettronica",
+        "Spiegare legami organici",
+        "Effetti polarità molecola"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Idrocarburi e isomeria",
+      "core_contents": [
+        "Alcani, alceni, alchini",
+        "Isomeria strutturale e spaziale",
+        "Regole nomenclatura IUPAC",
+        "Proprietà fisiche e reattività"
+      ],
+      "learning_outcomes": [
+        "Distinguere idrocarburi",
+        "Applicare nomenclatura",
+        "Riconoscere isomeri"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Gruppi funzionali e classificazione",
+      "core_contents": [
+        "Alcoli, eteri, fenoli",
+        "Aldeidi, chetoni",
+        "Acidi carbossilici e derivati",
+        "Ammine e altri gruppi"
+      ],
+      "learning_outcomes": [
+        "Classificare composti",
+        "Comprendere proprietà funzionali",
+        "Collegare struttura a reattività"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Meccanismi di reazione organica",
+      "core_contents": [
+        "Reazioni di sostituzione nucleofila/elettrofila",
+        "Addizione e eliminazione",
+        "Radicali liberi",
+        "Meccanismi di reazione comuni"
+      ],
+      "learning_outcomes": [
+        "Visualizzare meccanismi",
+        "Prevedere prodotti reazioni",
+        "Comprendere cinetica reazioni"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Stereochimica",
+      "core_contents": [
+        "Isomeria ottica, enantiomeri",
+        "Carbonio chirale, centri stereogenici",
+        "Proiezioni di Fischer e Newman",
+        "Attività ottica e miscugli racemici"
+      ],
+      "learning_outcomes": [
+        "Identificare chiralità",
+        "Rappresentare stereoisomeri",
+        "Struttura-attività stereochimica"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Composti aromatici",
+      "core_contents": [
+        "Struttura benzene e aromaticità",
+        "Reazioni di sostituzione aromatica",
+        "Composti aromatici sostituiti",
+        "Composti eterociclici"
+      ],
+      "learning_outcomes": [
+        "Definire aromaticità",
+        "Analizzare reattività aromatica",
+        "Riconoscere eterocicli"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Chimica dei polimeri",
+      "core_contents": [
+        "Polimerizzazione additiva/condensazione",
+        "Proprietà meccaniche polimeri",
+        "Polimeri naturali/sintetici",
+        "Applicazioni agrochimiche/biotecnologiche"
+      ],
+      "learning_outcomes": [
+        "Sintesi polimeri",
+        "Struttura-proprietà",
+        "Applicazioni tecnologiche"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Chimica bio-organica",
+      "core_contents": [
+        "Strutture aminoacidi, proteine",
+        "Carboidrati e lipidi",
+        "Enzimi e meccanismi catalitici",
+        "Acidi nucleici e replicazione"
+      ],
+      "learning_outcomes": [
+        "Biomolecole",
+        "Reazioni biochimiche",
+        "Struttura-funzione"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Tecniche spettroscopiche",
+      "core_contents": [
+        "Spettroscopia IR",
+        "Spettroscopia NMR",
+        "Mass spectrometry",
+        "Cromatografia"
+      ],
+      "learning_outcomes": [
+        "Interpretare dati spettroscopici",
+        "Identificare strutture molecolari",
+        "Tecniche separazione"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Reattività e sintesi avanzata",
+      "core_contents": [
+        "Sintesi multistep",
+        "Protezione/deprotezione gruppi funzionali",
+        "Sintesi asimmetrica",
+        "Catalisi organica"
+      ],
+      "learning_outcomes": [
+        "Pianificare sintesi",
+        "Controllare stereochimica",
+        "Applicare catalisi"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Chimica organometallica",
+      "core_contents": [
+        "Composti metallo-organici",
+        "Catalisi omogenea",
+        "Reazioni di coupling",
+        "Applicazioni industriali/farmaceutiche"
+      ],
+      "learning_outcomes": [
+        "Legami metallo-organici",
+        "Reazioni catalitiche",
+        "Sintesi farmaceutica"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Problem solving e laboratorio",
+      "core_contents": [
+        "Metodi analitici chimica organica",
+        "Separazioni e purificazioni",
+        "Sicurezza e gestione rifiuti",
+        "Progettazione esperimenti/report"
+      ],
+      "learning_outcomes": [
+        "Esecuzione esperimenti",
+        "Interpretazione risultati",
+        "Gestione sicurezza laboratorio"
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "id": "copertura_moduli",
+      "name": "Copertura moduli",
+      "type": "contenuto",
+      "levels": {
+        "1": "Copertura meno di 6 moduli.",
+        "2": "6-8 moduli superficiali.",
+        "3": "9 moduli con base.",
+        "4": "10-11 moduli approfonditi.",
+        "5": "Tutti 12 moduli completi."
+      }
+    },
+    {
+      "id": "profondita_completezza",
+      "name": "Profondità e completezza",
+      "type": "contenuto",
+      "levels": {
+        "1": "Superficiale per indirizzo.",
+        "2": "Livello introduttivo generico.",
+        "3": "Sufficiente per corso base.",
+        "4": "Approfondito per indirizzo specifico.",
+        "5": "Completezza eccellente."
+      }
+    },
+    {
+      "id": "chiarezza_esposizione",
+      "name": "Chiarezza esposizione",
+      "type": "didattico",
+      "levels": {
+        "1": "Confusa e poco comprensibile.",
+        "2": "Esposizione adeguata ma migliorabile.",
+        "3": "Chiarezza sufficiente.",
+        "4": "Molto chiara con ottime figure.",
+        "5": "Esposizione cristallina."
+      }
+    },
+    {
+      "id": "esempi_applicazioni",
+      "name": "Esempi e applicazioni",
+      "type": "didattico",
+      "levels": {
+        "1": "Scarsi esempi pratici.",
+        "2": "Qualche applicazione generica.",
+        "3": "Esempi medi e regolari.",
+        "4": "Ricchi esempi realistici.",
+        "5": "Applicazioni eccellenti contestualizzate."
+      }
+    },
+    {
+      "id": "esercizi_problemi",
+      "name": "Esercizi e problemi",
+      "type": "didattico",
+      "levels": {
+        "1": "Pochi esercizi di qualità.",
+        "2": "Esercizi adeguati ma limitati.",
+        "3": "Buon apparato esercizi.",
+        "4": "Esercizi abbondanti e graduati.",
+        "5": "Eccellente per esami."
+      }
+    },
+    {
+      "id": "meccanismi_reazione",
+      "name": "Meccanismi di reazione",
+      "type": "contenuto",
+      "levels": {
+        "1": "Meccanismi assenti o vaghi.",
+        "2": "Meccanismi base senza dettaglio.",
+        "3": "Meccanismi principali spiegati.",
+        "4": "Meccanismi completi e dettagliati.",
+        "5": "Visualizzazione eccellente meccanismi."
+      }
+    },
+    {
+      "id": "stereochimica",
+      "name": "Stereochimica",
+      "type": "contenuto",
+      "levels": {
+        "1": "Stereochimica assente.",
+        "2": "Concetti base senza esempi.",
+        "3": "Stereoisomeri spiegati.",
+        "4": "Stereochimica chiara e dettagliata.",
+        "5": "Trattamento eccellente chiralità."
+      }
+    },
+    {
+      "id": "spettroscopia_tecniche",
+      "name": "Spettroscopia e tecniche analitiche",
+      "type": "contenuto",
+      "levels": {
+        "1": "Tecniche analitiche limitate.",
+        "2": "Spettroscopia base.",
+        "3": "IR/NMR introduttivi.",
+        "4": "Spettroscopia applicata ampiamente.",
+        "5": "Tecniche analitiche complete."
+      }
+    },
+    {
+      "id": "chimica_organometallica",
+      "name": "Chimica organometallica",
+      "type": "contenuto",
+      "levels": {
+        "1": "Assente.",
+        "2": "Cenni generici.",
+        "3": "Introduzione base.",
+        "4": "Reazioni principali spiegate.",
+        "5": "Trattamento dettagliato e applicativo."
+      }
+    },
+    {
+      "id": "laboratorio_sicurezza",
+      "name": "Laboratorio e sicurezza",
+      "type": "didattico",
+      "levels": {
+        "1": "Copertura scarsa pratica.",
+        "2": "Sicurezza base.",
+        "3": "Laboratorio introdotto.",
+        "4": "Procedure pratiche complete.",
+        "5": "Sicurezza e pratica eccellenti."
+      }
+    },
+    {
+      "id": "collegamenti_interdisciplinari",
+      "name": "Collegamenti interdisciplinari",
+      "type": "didattico",
+      "levels": {
+        "1": "Nessun collegamento.",
+        "2": "Collegamenti limitati.",
+        "3": "Adeguati collegamenti.",
+        "4": "Ricchi collegamenti interdisciplinari.",
+        "5": "Integrazione eccellente."
+      }
+    },
+    {
+      "id": "aggiornamento_sostenibilita",
+      "name": "Aggiornamento e sostenibilità",
+      "type": "didattico",
+      "levels": {
+        "1": "Contenuti datati.",
+        "2": "Qualche tema attuale.",
+        "3": "Adeguato aggiornamento.",
+        "4": "Temi attuali rilevanti.",
+        "5": "All'avanguardia + green chemistry."
+      }
+    },
+    {
+      "id": "supporto_digitale",
+      "name": "Supporto digitale",
+      "type": "didattico",
+      "levels": {
+        "1": "Nessun supporto digitale.",
+        "2": "Risorse digitali scarse.",
+        "3": "Supporto digitale sufficiente.",
+        "4": "Ricco apparato digitale.",
+        "5": "Ecosistema digitale eccellente."
+      }
+    },
+    {
+      "id": "appendici_formulari",
+      "name": "Appendici e formulari",
+      "type": "didattico",
+      "levels": {
+        "1": "Appendici povere.",
+        "2": "Appendici standard.",
+        "3": "Utili appendici.",
+        "4": "Appendici complete.",
+        "5": "Eccellenti risorse integrative."
+      }
+    }
+  ],
+  "program_profiles": [
+    {
+      "id": "biologia_biotecnologie",
+      "name": "Biologia/Biotecnologie",
+      "priority_modules": [1,2,3,4,5,6,8,9,12],
+      "requirements": {
+        "copertura_moduli": {"required_level": 5, "weight": 0.12},
+        "profondita_completezza": {"required_level": 4, "weight": 0.11},
+        "chiarezza_esposizione": {"required_level": 4, "weight": 0.08},
+        "esempi_applicazioni": {"required_level": 5, "weight": 0.09},
+        "esercizi_problemi": {"required_level": 4, "weight": 0.08},
+        "meccanismi_reazione": {"required_level": 4, "weight": 0.10},
+        "stereochimica": {"required_level": 5, "weight": 0.07},
+        "spettroscopia_tecniche": {"required_level": 4, "weight": 0.06},
+        "chimica_organometallica": {"required_level": 2, "weight": 0.04},
+        "laboratorio_sicurezza": {"required_level": 4, "weight": 0.08},
+        "collegamenti_interdisciplinari": {"required_level": 5, "weight": 0.09},
+        "aggiornamento_sostenibilita": {"required_level": 4, "weight": 0.08},
+        "supporto_digitale": {"required_level": 3, "weight": 0.04},
+        "appendici_formulari": {"required_level": 4, "weight": 0.06}
+      }
+    },
+    {
+      "id": "farmacia",
+      "name": "Farmacia",
+      "priority_modules": [1,2,3,4,5,6,7,8,9,10,11,12],
+      "requirements": {
+        "copertura_moduli": {"required_level": 5, "weight": 0.13},
+        "profondita_completezza": {"required_level": 5, "weight": 0.12},
+        "chiarezza_esposizione": {"required_level": 4, "weight": 0.07},
+        "esempi_applicazioni": {"required_level": 5, "weight": 0.10},
+        "esercizi_problemi": {"required_level": 4, "weight": 0.09},
+        "meccanismi_reazione": {"required_level": 5, "weight": 0.12},
+        "stereochimica": {"required_level": 5, "weight": 0.08},
+        "spettroscopia_tecniche": {"required_level": 5, "weight": 0.07},
+        "chimica_organometallica": {"required_level": 4, "weight": 0.06},
+        "laboratorio_sicurezza": {"required_level": 5, "weight": 0.08},
+        "collegamenti_interdisciplinari": {"required_level": 5, "weight": 0.10},
+        "aggiornamento_sostenibilita": {"required_level": 4, "weight": 0.08},
+        "supporto_digitale": {"required_level": 4, "weight": 0.05},
+        "appendici_formulari": {"required_level": 4, "weight": 0.07}
+      }
+    }
+  ],
+  "manual_profiles": [
+    {
+      "id": "manuale_A",
+      "name": "Manuale A - Organica Completa",
+      "scores": {
+        "copertura_moduli": 5,
+        "profondita_completezza": 5,
+        "chiarezza_esposizione": 5,
+        "esempi_applicazioni": 5,
+        "esercizi_problemi": 5,
+        "meccanismi_reazione": 5,
+        "stereochimica": 5,
+        "spettroscopia_tecniche": 4,
+        "chimica_organometallica": 4,
+        "laboratorio_sicurezza": 5,
+        "collegamenti_interdisciplinari": 5,
+        "aggiornamento_sostenibilita": 4,
+        "supporto_digitale": 4,
+        "appendici_formulari": 5
+      }
+    }
+  ],
+  "alignment_method": {
+    "description": "Allineamento = media ponderata dei criteri: score_i = max(0, 1 - |required_level_i - offered_score_i| / 4)",
+    "formula": "alignment = Σ(weight_i × score_i) / Σ(weight_i)",
+    "interpretation": {
+      "85-100": "Eccellente - Copertura completa e approfondita - Adozione consigliata",
+      "70-84": "Buono - Solido, qualche lacuna trattabile - Raccomandato con integrazioni",
+      "55-69": "Sufficiente - Lacune significative, usabile con riserva - Valutare alternative",
+      "<55": "Sconsigliato - Inadeguato per indirizzo - Non adottare"
+    }
+  },
+  "example_match": {
+    "program_id": "farmacia",
+    "manual_id": "manuale_A",
+    "overall_alignment": 94.8,
+    "judgment": "Eccellente",
+    "recommendation": "Manuale perfetto per Farmacia. Copertura completa meccanismi, stereochimica e applicazioni farmaceutiche. Adozione immediata.",
+    "strong_criteria": ["meccanismi_reazione", "stereochimica", "laboratorio_sicurezza"],
+    "weak_criteria": ["chimica_organometallica"]
+  }
+}

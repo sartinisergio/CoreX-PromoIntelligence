@@ -1,0 +1,664 @@
+{
+  "id": "Rosati_Istologia",
+  "title": "Istologia",
+  "author": "Rosati e al.",
+  "publisher": "Edi-Ermes",
+  "subject": "Istologia",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Composizione chimica del protoplasma",
+      "page_start": 3,
+      "sections": [
+        {
+          "title": "Generalità",
+          "page_start": 3
+        },
+        {
+          "title": "Componenti inorganici",
+          "page_start": 3
+        },
+        {
+          "title": "Componenti organici",
+          "page_start": 6
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Tecniche per lo studio dei campioni biologici",
+      "page_start": 31,
+      "sections": [
+        {
+          "title": "Generalità",
+          "page_start": 31
+        },
+        {
+          "title": "Metodi per l'osservazione a fresco di campioni biologici",
+          "page_start": 31
+        },
+        {
+          "title": "Metodi di studio di campioni biologici dopo fissazione e colorazione",
+          "page_start": 32
+        },
+        {
+          "title": "Colture in vitro",
+          "page_start": 41
+        },
+        {
+          "title": "Principali strumenti di indagine morfologica",
+          "page_start": 44
+        },
+        {
+          "title": "Indagine biochimico-molecolare",
+          "page_start": 52
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Livelli di organizzazione della materia vivente",
+      "page_start": 61,
+      "sections": [
+        {
+          "title": "Generalità",
+          "page_start": 61
+        },
+        {
+          "title": "Eccezioni alla teoria cellulare. Virus, viroidi e prioni",
+          "page_start": 62
+        },
+        {
+          "title": "Cellule",
+          "page_start": 63
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Membrana plasmatica",
+      "page_start": 75,
+      "sections": [
+        {
+          "title": "Generalità",
+          "page_start": 75
+        },
+        {
+          "title": "Struttura",
+          "page_start": 75
+        },
+        {
+          "title": "Composizione chimica",
+          "page_start": 77
+        },
+        {
+          "title": "Glicocalice",
+          "page_start": 82
+        },
+        {
+          "title": "Adesività intercellulare non giunzionale",
+          "page_start": 83
+        },
+        {
+          "title": "Fisiologia della membrana plasmatica",
+          "page_start": 83
+        },
+        {
+          "title": "Specializzazioni della membrana plasmatica. Sistemi di giunzione intercellulare e di adesione al substrato",
+          "page_start": 91
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Citoplasma - Ialoplasma e organuli citoplasmatici",
+      "page_start": 103,
+      "sections": [
+        {
+          "title": "Ialoplasma",
+          "page_start": 103
+        },
+        {
+          "title": "Ribosomi",
+          "page_start": 105
+        },
+        {
+          "title": "Reticolo endoplasmatico",
+          "page_start": 110
+        },
+        {
+          "title": "Complesso o apparato di Golgi",
+          "page_start": 119
+        },
+        {
+          "title": "Sistema membranoso interno e processo di secrezione",
+          "page_start": 126
+        },
+        {
+          "title": "Lisosomi",
+          "page_start": 127
+        },
+        {
+          "title": "Trasporto intracellulare mediato da vescicole",
+          "page_start": 133
+        },
+        {
+          "title": "Microbody o perossisomi",
+          "page_start": 134
+        },
+        {
+          "title": "Inclusioni citoplasmatiche",
+          "page_start": 135
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Citoplasma - Mitocondri e metabolismo energetico",
+      "page_start": 139,
+      "sections": [
+        {
+          "title": "Mitocondri",
+          "page_start": 139
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Citoplasma - Citoscheletro e motilità cellulare",
+      "page_start": 159,
+      "sections": [
+        {
+          "title": "Generalità",
+          "page_start": 159
+        },
+        {
+          "title": "Actina e microfilamenti",
+          "page_start": 161
+        },
+        {
+          "title": "Tubulina e microtubuli",
+          "page_start": 167
+        },
+        {
+          "title": "Filamenti intermedi",
+          "page_start": 180
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Esocitosi ed endocitosi",
+      "page_start": 185,
+      "sections": [
+        {
+          "title": "Generalità",
+          "page_start": 185
+        },
+        {
+          "title": "Esocitosi e gemmazione",
+          "page_start": 186
+        },
+        {
+          "title": "Endocitosi",
+          "page_start": 188
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Nucleo - Morfologia e struttura",
+      "page_start": 197,
+      "sections": [
+        {
+          "title": "Generalità",
+          "page_start": 197
+        },
+        {
+          "title": "Involucro nucleare",
+          "page_start": 199
+        },
+        {
+          "title": "Nucleoscheletro",
+          "page_start": 203
+        },
+        {
+          "title": "Cromatina",
+          "page_start": 204
+        },
+        {
+          "title": "Cromosomi",
+          "page_start": 211
+        },
+        {
+          "title": "RNA nucleari",
+          "page_start": 218
+        },
+        {
+          "title": "Nucleolo",
+          "page_start": 218
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Attività nucleari",
+      "page_start": 221,
+      "sections": [
+        {
+          "title": "Ciclo cellulare",
+          "page_start": 221
+        },
+        {
+          "title": "Trascrizione degli RNA (fase G1)",
+          "page_start": 222
+        },
+        {
+          "title": "Duplicazione del DNA nucleare (fase S)",
+          "page_start": 227
+        },
+        {
+          "title": "Preparazione alla divisione (fase G2)",
+          "page_start": 230
+        },
+        {
+          "title": "Divisione mitotica (fase M)",
+          "page_start": 230
+        },
+        {
+          "title": "Divisione meiotica",
+          "page_start": 235
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Regolazione genica, differenziamento e apoptosi",
+      "page_start": 241,
+      "sections": [
+        {
+          "title": "Regolazione genica nei Procarioti",
+          "page_start": 241
+        },
+        {
+          "title": "Regolazione genica negli Eucarioti",
+          "page_start": 242
+        },
+        {
+          "title": "Sviluppo e differenziamento",
+          "page_start": 244
+        },
+        {
+          "title": "Apoptosi",
+          "page_start": 250
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Tessuto epiteliale",
+      "page_start": 257,
+      "sections": [
+        {
+          "title": "Introduzione",
+          "page_start": 257
+        },
+        {
+          "title": "Epiteli di rivestimento",
+          "page_start": 258
+        },
+        {
+          "title": "Epiteli sensoriali",
+          "page_start": 288
+        },
+        {
+          "title": "Epiteli particolarmente differenziati e derivati epiteliali",
+          "page_start": 293
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Ghiandole",
+      "page_start": 299,
+      "sections": [
+        {
+          "title": "Generalità",
+          "page_start": 299
+        },
+        {
+          "title": "Origine e differenziamento delle ghiandole",
+          "page_start": 301
+        },
+        {
+          "title": "Ghiandole esocrine",
+          "page_start": 301
+        },
+        {
+          "title": "Ghiandole endocrine",
+          "page_start": 319
+        },
+        {
+          "title": "Sistema neuroendocrino diffuso",
+          "page_start": 346
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Tessuti connettivi - Matrice extracellulare e cellule del tessuto connettivo",
+      "page_start": 351,
+      "sections": [
+        {
+          "title": "Introduzione",
+          "page_start": 351
+        },
+        {
+          "title": "Matrice extracellulare del tessuto connettivo",
+          "page_start": 352
+        },
+        {
+          "title": "Cellule del tessuto connettivo",
+          "page_start": 374
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Tessuti connettivi propriamente detti",
+      "page_start": 387,
+      "sections": [
+        {
+          "title": "Mesenchima",
+          "page_start": 387
+        },
+        {
+          "title": "Tessuto mucoso maturo",
+          "page_start": 387
+        },
+        {
+          "title": "Tessuto connettivo fibrillare lasso",
+          "page_start": 388
+        },
+        {
+          "title": "Tessuto connettivo fibrillare denso o compatto",
+          "page_start": 391
+        },
+        {
+          "title": "Tessuti connettivi elastico e reticolare",
+          "page_start": 395
+        },
+        {
+          "title": "Tessuto adiposo",
+          "page_start": 396
+        },
+        {
+          "title": "Sistema reticoloendoteliale o dei fagociti mononucleati",
+          "page_start": 404
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Tessuto cartilagineo",
+      "page_start": 407,
+      "sections": [
+        {
+          "title": "Introduzione",
+          "page_start": 407
+        },
+        {
+          "title": "Cellule cartilaginee",
+          "page_start": 407
+        },
+        {
+          "title": "Matrice cartilaginea",
+          "page_start": 409
+        },
+        {
+          "title": "Cartilagine ialina",
+          "page_start": 411
+        },
+        {
+          "title": "Cartilagine elastica",
+          "page_start": 414
+        },
+        {
+          "title": "Cartilagine fibrosa",
+          "page_start": 416
+        },
+        {
+          "title": "Cartilagine cellulare, tessuto cordoide e tessuto condroide",
+          "page_start": 417
+        },
+        {
+          "title": "Istogenesi, accrescimento e senescenza della cartilagine",
+          "page_start": 418
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Tessuto osseo",
+      "page_start": 421,
+      "sections": [
+        {
+          "title": "Introduzione",
+          "page_start": 421
+        },
+        {
+          "title": "Organizzazione generale",
+          "page_start": 422
+        },
+        {
+          "title": "Struttura e ultrastruttura del tessuto osseo",
+          "page_start": 432
+        },
+        {
+          "title": "Periostio ed endostio",
+          "page_start": 440
+        },
+        {
+          "title": "Cemento",
+          "page_start": 441
+        },
+        {
+          "title": "Dentina",
+          "page_start": 441
+        },
+        {
+          "title": "Ossificazione",
+          "page_start": 444
+        },
+        {
+          "title": "Rimodellamento, omeostasi scheletrica e minerale",
+          "page_start": 452
+        },
+        {
+          "title": "Processo di mineralizzazione",
+          "page_start": 455
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Sangue e linfa",
+      "page_start": 459,
+      "sections": [
+        {
+          "title": "Introduzione",
+          "page_start": 459
+        },
+        {
+          "title": "Plasma sanguigno",
+          "page_start": 460
+        },
+        {
+          "title": "Eritrociti",
+          "page_start": 460
+        },
+        {
+          "title": "Leucociti o globuli bianchi",
+          "page_start": 465
+        },
+        {
+          "title": "Piastrine",
+          "page_start": 476
+        },
+        {
+          "title": "Linfa",
+          "page_start": 478
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Emopoiesi",
+      "page_start": 481,
+      "sections": [
+        {
+          "title": "Introduzione",
+          "page_start": 481
+        },
+        {
+          "title": "Emopoiesi prenatale",
+          "page_start": 482
+        },
+        {
+          "title": "Emopoiesi postnatale",
+          "page_start": 485
+        },
+        {
+          "title": "Eritropoiesi",
+          "page_start": 487
+        },
+        {
+          "title": "Granulocitopoiesi",
+          "page_start": 490
+        },
+        {
+          "title": "Monocitopoiesi",
+          "page_start": 492
+        },
+        {
+          "title": "Linfocitopoiesi",
+          "page_start": 494
+        },
+        {
+          "title": "Megacariociti e origine delle piastrine",
+          "page_start": 494
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Tessuto linfoide e linfocitopoiesi",
+      "page_start": 497,
+      "sections": [
+        {
+          "title": "Introduzione",
+          "page_start": 497
+        },
+        {
+          "title": "Diversità e funzioni dei linfociti",
+          "page_start": 497
+        },
+        {
+          "title": "Morfologia dei linfociti maturi",
+          "page_start": 501
+        },
+        {
+          "title": "Ontogenesi dei linfociti",
+          "page_start": 504
+        },
+        {
+          "title": "Attivazione dei linfociti",
+          "page_start": 510
+        },
+        {
+          "title": "Circolazione dei linfociti e organizzazione del tessuto linfoide",
+          "page_start": 515
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "title": "Tessuto nervoso",
+      "page_start": 521,
+      "sections": [
+        {
+          "title": "Tessuti degli organi nervosi",
+          "page_start": 521
+        },
+        {
+          "title": "Morfogenesi del tessuto nervoso",
+          "page_start": 522
+        },
+        {
+          "title": "Struttura del tessuto nervoso",
+          "page_start": 524
+        },
+        {
+          "title": "Neurone come entità morfologica e citochimica",
+          "page_start": 525
+        },
+        {
+          "title": "Fibre nervose",
+          "page_start": 544
+        },
+        {
+          "title": "Nervi periferici",
+          "page_start": 555
+        },
+        {
+          "title": "Gangli",
+          "page_start": 556
+        },
+        {
+          "title": "Sinapsi",
+          "page_start": 557
+        },
+        {
+          "title": "Terminazioni nervose sensitive",
+          "page_start": 568
+        },
+        {
+          "title": "Tessuto gliale o nevroglia",
+          "page_start": 576
+        },
+        {
+          "title": "Barriera ematoencefalica",
+          "page_start": 586
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "title": "Tessuto muscolare",
+      "page_start": 589,
+      "sections": [
+        {
+          "title": "Introduzione",
+          "page_start": 589
+        },
+        {
+          "title": "Tessuto muscolare striato",
+          "page_start": 590
+        },
+        {
+          "title": "Tessuto muscolare liscio",
+          "page_start": 614
+        },
+        {
+          "title": "Cellule mioepiteliali",
+          "page_start": 621
+        },
+        {
+          "title": "Istogenesi e rigenerazione del tessuto muscolare",
+          "page_start": 621
+        }
+      ]
+    }
+  ]
+}

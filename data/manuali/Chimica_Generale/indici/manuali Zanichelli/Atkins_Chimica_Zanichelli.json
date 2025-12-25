@@ -1,0 +1,579 @@
+{
+  "id": "Atkins_Chimica",
+  "title": "Chimica generale",
+  "author": "Atkins",
+  "publisher": "Zanichelli",
+  "subject": "chimica generale",
+  "type": "Zanichelli",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "LA MATERIA",
+      "page_start": 2,
+      "sections": [
+        {
+          "number": "1.1-1.7",
+          "title": "GLI ELEMENTI",
+          "page_start": 3
+        },
+        {
+          "number": "1.8-1.10",
+          "title": "I COMPOSTI",
+          "page_start": 15
+        },
+        {
+          "number": "1.11-1.12",
+          "title": "LE MISCELE",
+          "page_start": 21
+        },
+        {
+          "number": "1.13-1.16",
+          "title": "LA NOMENCLATURA DEI COMPOSTI",
+          "page_start": 28
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "MISURE E MOLI",
+      "page_start": 39,
+      "sections": [
+        {
+          "number": "2.1-2.7",
+          "title": "MISURE E UNITÀ DI MISURA",
+          "page_start": 39
+        },
+        {
+          "number": "2.8-2.10",
+          "title": "LE QUANTITÀ CHIMICHE",
+          "page_start": 50
+        },
+        {
+          "number": "2.11-2.13",
+          "title": "LA DETERMINAZIONE DELLA FORMULA CHIMICA",
+          "page_start": 58
+        },
+        {
+          "number": "2.14-2.15",
+          "title": "LE SOLUZIONI IN CHIMICA",
+          "page_start": 63
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "LE REAZIONI CHIMICHE: COME SI MODIFICA LA MATERIA",
+      "page_start": 76,
+      "sections": [
+        {
+          "number": "3.1-3.2",
+          "title": "EQUAZIONI CHIMICHE E REAZIONI CHIMICHE",
+          "page_start": 76
+        },
+        {
+          "number": "3.3-3.6",
+          "title": "LE REAZIONI DI PRECIPITAZIONE",
+          "page_start": 80
+        },
+        {
+          "number": "3.7-3.11",
+          "title": "LE REAZIONI DEGLI ACIDI E DELLE BASI",
+          "page_start": 89
+        },
+        {
+          "number": "3.12-3.16",
+          "title": "LE REAZIONI REDOX",
+          "page_start": 99
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "LA STECHIOMETRIA DELLE REAZIONI: LA CONTABILITÀ CHIMICA",
+      "page_start": 117,
+      "sections": [
+        {
+          "number": "4.1-4.3",
+          "title": "A CHE COSA SERVE LA STECHIOMETRIA DELLE REAZIONI",
+          "page_start": 117
+        },
+        {
+          "number": "4.4-4.6",
+          "title": "I LIMITI DELLE REAZIONI",
+          "page_start": 124
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "LE PROPRIETÀ DEI GAS",
+      "page_start": 143,
+      "sections": [
+        {
+          "number": "5.1-5.4",
+          "title": "LA NATURA DEI GAS",
+          "page_start": 143
+        },
+        {
+          "number": "5.5-5.14",
+          "title": "LE LEGGI DEI GAS",
+          "page_start": 148
+        },
+        {
+          "number": "5.15-5.17",
+          "title": "IL MOTO MOLECOLARE",
+          "page_start": 163
+        },
+        {
+          "number": "5.18-5.19",
+          "title": "I GAS REALI",
+          "page_start": 168
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "LA TERMOCHIMICA: IL FUOCO INTERIORE",
+      "page_start": 181,
+      "sections": [
+        {
+          "number": "6.1-6.7",
+          "title": "ENERGIA, CALORE ED ENTALPIA",
+          "page_start": 181
+        },
+        {
+          "number": "6.8-6.10",
+          "title": "L'ENTALPIA DELLA TRASFORMAZIONE CHIMICA",
+          "page_start": 194
+        },
+        {
+          "number": "6.11-6.12",
+          "title": "IL RENDIMENTO TERMICO DELLE REAZIONI",
+          "page_start": 200
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "DENTRO L'ATOMO",
+      "page_start": 218,
+      "sections": [
+        {
+          "number": "7.1-7.4",
+          "title": "L'OSSERVAZIONE DEGLI ATOMI",
+          "page_start": 218
+        },
+        {
+          "number": "7.5-7.8",
+          "title": "I MODELLI DELL'ATOMO",
+          "page_start": 225
+        },
+        {
+          "number": "7.9-7.13",
+          "title": "LA STRUTTURA DEGLI ATOMI MULTIELETRONICI",
+          "page_start": 235
+        },
+        {
+          "number": "7.14-7.20",
+          "title": "IL CARATTERE PERIODICO DELLE PROPRIETÀ ATOMICHE",
+          "page_start": 246
+        },
+        {
+          "number": "7.21-7.23",
+          "title": "LA CHIMICA E LA TAVOLA PERIODICA",
+          "page_start": 254
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "DENTRO I MATERIALI: I LEGAMI CHIMICI",
+      "page_start": 265,
+      "sections": [
+        {
+          "number": "8.1-8.3",
+          "title": "I LEGAMI IONICI",
+          "page_start": 265
+        },
+        {
+          "number": "8.4-8.5",
+          "title": "I LEGAMI COVALENTI",
+          "page_start": 271
+        },
+        {
+          "number": "8.6-8.8",
+          "title": "LA STRUTTURA DELLE SPECIE POLIATOMICHE",
+          "page_start": 273
+        },
+        {
+          "number": "8.9-8.10",
+          "title": "LE ECCEZIONI ALLA REGOLA DELL'OTTETTO",
+          "page_start": 282
+        },
+        {
+          "number": "8.11-8.12",
+          "title": "GLI ACIDI E LE BASI DI LEWIS",
+          "page_start": 289
+        },
+        {
+          "number": "8.13-8.14",
+          "title": "LEGAMI IONICI E LEGAMI COVALENTI",
+          "page_start": 292
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "LE MOLECOLE: LA FORMA, LE DIMENSIONI E LA LUNGHEZZA DEI LEGAMI",
+      "page_start": 301,
+      "sections": [
+        {
+          "number": "9.1-9.5",
+          "title": "LA FORMA DELLE MOLECOLE E DEGLI IONI",
+          "page_start": 301
+        },
+        {
+          "number": "9.6-9.7",
+          "title": "LA DISTRIBUZIONE DELLE CARICHE NELLA MOLECOLA",
+          "page_start": 309
+        },
+        {
+          "number": "9.8-9.11",
+          "title": "LA FORZA E LA LUNGHEZZA DEI LEGAMI",
+          "page_start": 314
+        },
+        {
+          "number": "9.12-9.17",
+          "title": "ORBITALI E LEGAMI",
+          "page_start": 321
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "I MATERIALI LIQUIDI E SOLIDI",
+      "page_start": 338,
+      "sections": [
+        {
+          "number": "10.1-10.3",
+          "title": "LE FORZE INTERMOLECOLARI",
+          "page_start": 338
+        },
+        {
+          "number": "10.4-10.5",
+          "title": "LA STRUTTURA DEI LIQUIDI",
+          "page_start": 345
+        },
+        {
+          "number": "10.6-10.12",
+          "title": "LE STRUTTURE SOLIDE",
+          "page_start": 348
+        },
+        {
+          "number": "10.13-10.17",
+          "title": "I CAMBIAMENTI DI FASE",
+          "page_start": 368
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "I MATERIALI A BASE DI CARBONIO",
+      "page_start": 384,
+      "sections": [
+        {
+          "number": "11.1-11.4",
+          "title": "GLI IDROCARBURI",
+          "page_start": 384
+        },
+        {
+          "number": "11.5-11.10",
+          "title": "I GRUPPI FUNZIONALI",
+          "page_start": 394
+        },
+        {
+          "number": "11.11-11.12",
+          "title": "GLI ISOMERI",
+          "page_start": 400
+        },
+        {
+          "number": "11.13-11.16",
+          "title": "I POLIMERI",
+          "page_start": 405
+        },
+        {
+          "number": "11.17-11.19",
+          "title": "I POLIMERI COMMESTIBILI",
+          "page_start": 417
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "LE PROPRIETÀ DELLE SOLUZIONI",
+      "page_start": 432,
+      "sections": [
+        {
+          "number": "12.1-12.2",
+          "title": "SOLUTI E SOLVENTI",
+          "page_start": 432
+        },
+        {
+          "number": "12.3-12.6",
+          "title": "I FATTORI CHE INFLUISCONO SULLA SOLUBILITÀ",
+          "page_start": 434
+        },
+        {
+          "number": "12.7-12.9",
+          "title": "PERCHÉ MAI LE SOSTANZE SI DISCIOLGONO?",
+          "page_start": 441
+        },
+        {
+          "number": "12.10-12.13",
+          "title": "LE PROPRIETÀ COLLIGATIVE",
+          "page_start": 447
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "L'EQUILIBRIO CHIMICO",
+      "page_start": 466,
+      "sections": [
+        {
+          "number": "13.1-13.4",
+          "title": "EQUILIBRIO E COMPOSIZIONE",
+          "page_start": 466
+        },
+        {
+          "number": "13.5-13.7",
+          "title": "L'APPLICAZIONE DELLE COSTANTI DI EQUILIBRIO",
+          "page_start": 475
+        },
+        {
+          "number": "13.8-13.11",
+          "title": "LA RISPOSTA DELL'EQUILIBRIO AL CAMBIAMENTO DELLE CONDIZIONI",
+          "page_start": 485
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "I PROTONI IN TRANSITO: GLI ACIDI E LE BASI",
+      "page_start": 502,
+      "sections": [
+        {
+          "number": "14.1-14.5",
+          "title": "CHE COSA SONO GLI ACIDI E LE BASI?",
+          "page_start": 502
+        },
+        {
+          "number": "14.6-14.10",
+          "title": "GLI ACIDI E LE BASI DEBOLI",
+          "page_start": 510
+        },
+        {
+          "number": "14.11-14.13",
+          "title": "IL pH DELLE SOLUZIONI DEGLI ACIDI E DELLE BASI DEBOLI",
+          "page_start": 520
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "LE SOLUZIONI SALINE ACQUOSE",
+      "page_start": 536,
+      "sections": [
+        {
+          "number": "15.1-15.4",
+          "title": "GLI IONI COME ACIDI E BASI",
+          "page_start": 536
+        },
+        {
+          "number": "15.5-15.7",
+          "title": "LE TITOLAZIONI",
+          "page_start": 542
+        },
+        {
+          "number": "15.8-15.10",
+          "title": "LE SOLUZIONI TAMPONE",
+          "page_start": 554
+        },
+        {
+          "number": "15.11-15.15",
+          "title": "GLI EQUILIBRI DI SOLUBILITÀ",
+          "page_start": 561
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "L'ENERGIA IN MOVIMENTO: LA TERMODINAMICA",
+      "page_start": 580,
+      "sections": [
+        {
+          "number": "16.1-16.5",
+          "title": "IL PRIMO PRINCIPIO DELLA TERMODINAMICA",
+          "page_start": 580
+        },
+        {
+          "number": "16.6-16.10",
+          "title": "IL VERSO DI SVOLGIMENTO DEI PROCESSI SPONTANEI",
+          "page_start": 587
+        },
+        {
+          "number": "16.11-16.16",
+          "title": "L'ENERGIA LIBERA",
+          "page_start": 595
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "GLI ELETTRONI IN TRANSITO: L'ELETTROCHIMICA",
+      "page_start": 617,
+      "sections": [
+        {
+          "number": "17.1-17.2",
+          "title": "IL TRASFERIMENTO DEGLI ELETTRONI",
+          "page_start": 617
+        },
+        {
+          "number": "17.3-17.12",
+          "title": "LE CELLE GALVANICHE",
+          "page_start": 622
+        },
+        {
+          "number": "17.13-17.16",
+          "title": "L'ELETTROLISI",
+          "page_start": 645
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "title": "CINETICA: LA VELOCITÀ DELLE REAZIONI",
+      "page_start": 661,
+      "sections": [
+        {
+          "number": "18.1-18.7",
+          "title": "CONCENTRAZIONE E VELOCITÀ DI REAZIONE",
+          "page_start": 661
+        },
+        {
+          "number": "18.8-18.13",
+          "title": "IL CONTROLLO DELLA VELOCITÀ DI REAZIONE",
+          "page_start": 677
+        },
+        {
+          "number": "18.14-18.17",
+          "title": "I MECCANISMI DI REAZIONE",
+          "page_start": 688
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "title": "GLI ELEMENTI DEI GRUPPI PRINCIPALI. I. LE PRIME QUATTRO FAMIGLIE",
+      "page_start": 709,
+      "sections": [
+        {
+          "number": "19.1-19.2",
+          "title": "L'IDROGENO",
+          "page_start": 709
+        },
+        {
+          "number": "19.3-19.5",
+          "title": "IL GRUPPO 1: I METALLI ALCALINI",
+          "page_start": 714
+        },
+        {
+          "number": "19.6-19.7",
+          "title": "IL GRUPPO 2: I METALLI ALCALINOTERROSI",
+          "page_start": 720
+        },
+        {
+          "number": "19.8-19.11",
+          "title": "IL GRUPPO 13: LA FAMIGLIA DEL BORO",
+          "page_start": 726
+        },
+        {
+          "number": "19.12-19.17",
+          "title": "IL GRUPPO 14: LA FAMIGLIA DEL CARBONIO",
+          "page_start": 734
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "title": "GLI ELEMENTI DEI GRUPPI PRINCIPALI. II. LE ULTIME QUATTRO FAMIGLIE",
+      "page_start": 753,
+      "sections": [
+        {
+          "number": "20.1-20.4",
+          "title": "IL GRUPPO 15: LA FAMIGLIA DELL'AZOTO",
+          "page_start": 753
+        },
+        {
+          "number": "20.5-20.8",
+          "title": "IL GRUPPO 16: LA FAMIGLIA DELL'OSSIGENO",
+          "page_start": 761
+        },
+        {
+          "number": "20.9-20.10",
+          "title": "IL GRUPPO 17: GLI ALOGENI",
+          "page_start": 770
+        },
+        {
+          "number": "20.11-20.12",
+          "title": "IL GRUPPO 18: I GAS NOBILI",
+          "page_start": 777
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "title": "IL BLOCCO d: I METALLI DI TRANSIZIONE",
+      "page_start": 788,
+      "sections": [
+        {
+          "number": "21.1-21.4",
+          "title": "GLI ELEMENTI DEL BLOCCO d E I LORO COMPOSTI",
+          "page_start": 788
+        },
+        {
+          "number": "21.5-21.6",
+          "title": "I COMPLESSI DEGLI ELEMENTI DEL BLOCCO d",
+          "page_start": 806
+        },
+        {
+          "number": "21.7-21.10",
+          "title": "LA TEORIA DEL CAMPO CRISTALLINO",
+          "page_start": 815
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "title": "LA CHIMICA NUCLEARE",
+      "page_start": 830,
+      "sections": [
+        {
+          "number": "22.1-22.5",
+          "title": "LA STABILITÀ NUCLEARE",
+          "page_start": 830
+        },
+        {
+          "number": "22.6-22.8",
+          "title": "LA RADIOATTIVITÀ",
+          "page_start": 840
+        },
+        {
+          "number": "22.9-22.12",
+          "title": "L'ENERGIA NUCLEARE",
+          "page_start": 851
+        }
+      ]
+    }
+  ]
+}

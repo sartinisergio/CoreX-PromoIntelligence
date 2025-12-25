@@ -1,0 +1,807 @@
+{
+  "id": "Silberberg_Chimica",
+  "title": "Chimica: natura molecolare della materia",
+  "author": "Silberberg, Amateis",
+  "publisher": "McGraw-Hill",
+  "subject": "chimica generale",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Le chiavi per lo studio della chimica",
+      "page_start": 1,
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "Alcune definizioni fondamentali",
+          "page_start": 2
+        },
+        {
+          "number": "1.2",
+          "title": "Arti chimiche e origini della chimica moderna",
+          "page_start": 8
+        },
+        {
+          "number": "1.3",
+          "title": "Il metodo scientifico: costruzione di un modello",
+          "page_start": 11
+        },
+        {
+          "number": "1.4",
+          "title": "Risoluzione dei problemi di chimica",
+          "page_start": 12
+        },
+        {
+          "number": "1.5",
+          "title": "La misurazione nella scienza",
+          "page_start": 16
+        },
+        {
+          "number": "1.6",
+          "title": "Incertezza di misura: cifre significative",
+          "page_start": 23
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "I componenti della materia",
+      "page_start": 31,
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "Elementi, composti e miscele: uno sguardo d'insieme dal punto di vista atomico",
+          "page_start": 32
+        },
+        {
+          "number": "2.2",
+          "title": "Le osservazioni che condussero a una concezione atomica della materia",
+          "page_start": 33
+        },
+        {
+          "number": "2.3",
+          "title": "La teoria atomica di Dalton",
+          "page_start": 37
+        },
+        {
+          "number": "2.4",
+          "title": "Le osservazioni che condussero al modello nucleare dell'atomo",
+          "page_start": 38
+        },
+        {
+          "number": "2.5",
+          "title": "La teoria atomica odierna",
+          "page_start": 42
+        },
+        {
+          "number": "2.6",
+          "title": "Gli elementi: un primo sguardo alla tavola periodica",
+          "page_start": 46
+        },
+        {
+          "number": "2.7",
+          "title": "I composti: introduzione al legame chimico",
+          "page_start": 50
+        },
+        {
+          "number": "2.8",
+          "title": "I composti: formule, nomi e masse",
+          "page_start": 54
+        },
+        {
+          "number": "2.9",
+          "title": "Le miscele: classificazione e separazione",
+          "page_start": 64
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Stechiometria: relazioni quantità-massa-numero nei sistemi chimici",
+      "page_start": 70,
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "La mole",
+          "page_start": 70
+        },
+        {
+          "number": "3.2",
+          "title": "Determinazione della formula di un composto sconosciuto",
+          "page_start": 78
+        },
+        {
+          "number": "3.3",
+          "title": "Scrittura e bilanciamento delle equazioni chimiche",
+          "page_start": 84
+        },
+        {
+          "number": "3.4",
+          "title": "Calcolo delle quantità di reagenti e di prodotti",
+          "page_start": 88
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Le principali classi di reazioni chimiche",
+      "page_start": 99,
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "Il ruolo dell'acqua come solvente",
+          "page_start": 99
+        },
+        {
+          "number": "4.2",
+          "title": "Fondamenti di stechiometria delle reazioni in soluzione",
+          "page_start": 104
+        },
+        {
+          "number": "4.3",
+          "title": "Scrittura delle equazioni per le reazioni ioniche in soluzione acquosa",
+          "page_start": 111
+        },
+        {
+          "number": "4.4",
+          "title": "Reazioni di precipitazione",
+          "page_start": 113
+        },
+        {
+          "number": "4.5",
+          "title": "Reazioni acido-base",
+          "page_start": 115
+        },
+        {
+          "number": "4.6",
+          "title": "Reazioni di ossidoriduzione (reazioni redox)",
+          "page_start": 121
+        },
+        {
+          "number": "4.7",
+          "title": "Sostanze elementari nelle reazioni redox",
+          "page_start": 129
+        },
+        {
+          "number": "4.8",
+          "title": "Reazioni reversibili: un'introduzione all'equilibrio chimico",
+          "page_start": 136
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "I gas e la teoria cinetica dei gas",
+      "page_start": 140,
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "Uno sguardo d'insieme agli stati fisici della materia",
+          "page_start": 140
+        },
+        {
+          "number": "5.2",
+          "title": "Pressione di un gas e sua misurazione",
+          "page_start": 142
+        },
+        {
+          "number": "5.3",
+          "title": "Le leggi dei gas e le loro basi sperimentali",
+          "page_start": 146
+        },
+        {
+          "number": "5.4",
+          "title": "Ulteriori applicazioni dell'equazione di stato dei gas perfetti",
+          "page_start": 155
+        },
+        {
+          "number": "5.5",
+          "title": "La teoria cinetica dei gas: modello del comportamento dei gas",
+          "page_start": 163
+        },
+        {
+          "number": "5.6",
+          "title": "I gas reali: deviazioni dal comportamento dei gas perfetti",
+          "page_start": 175
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Termochimica: flusso di energia e trasformazioni chimiche",
+      "page_start": 180,
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "Forme di energia e loro interconversione",
+          "page_start": 181
+        },
+        {
+          "number": "6.2",
+          "title": "Entalpia: calori di reazione e trasformazioni chimiche",
+          "page_start": 187
+        },
+        {
+          "number": "6.3",
+          "title": "Calorimetria: misura dei calori di reazione in laboratorio",
+          "page_start": 190
+        },
+        {
+          "number": "6.4",
+          "title": "Stechiometria delle equazioni termochimiche",
+          "page_start": 194
+        },
+        {
+          "number": "6.5",
+          "title": "Legge di Hess dell'additività delle variazioni di entalpia",
+          "page_start": 196
+        },
+        {
+          "number": "6.6",
+          "title": "Calori standard di reazione (ΔH°r)",
+          "page_start": 198
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Teoria quantistica e struttura atomica",
+      "page_start": 207,
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "Natura della luce",
+          "page_start": 208
+        },
+        {
+          "number": "7.2",
+          "title": "Spettri atomici",
+          "page_start": 215
+        },
+        {
+          "number": "7.3",
+          "title": "Il dualismo onda-particella di materia ed energia",
+          "page_start": 222
+        },
+        {
+          "number": "7.4",
+          "title": "Il modello quantomeccanico dell'atomo",
+          "page_start": 226
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Configurazione elettronica e periodicità chimica",
+      "page_start": 236,
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "Sviluppo della tavola periodica",
+          "page_start": 237
+        },
+        {
+          "number": "8.2",
+          "title": "Caratteristiche degli atomi polielettronici",
+          "page_start": 238
+        },
+        {
+          "number": "8.3",
+          "title": "Il modello quantomeccanico e la tavola periodica",
+          "page_start": 243
+        },
+        {
+          "number": "8.4",
+          "title": "Tendenze in alcune proprietà atomiche periodiche essenziali",
+          "page_start": 253
+        },
+        {
+          "number": "8.5",
+          "title": "La connessione tra struttura atomica e reattività chimica",
+          "page_start": 261
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Modelli del legame chimico",
+      "page_start": 271,
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "Proprietà atomiche e legami chimici",
+          "page_start": 271
+        },
+        {
+          "number": "9.2",
+          "title": "Il modello del legame ionico",
+          "page_start": 274
+        },
+        {
+          "number": "9.3",
+          "title": "Il modello del legame covalente",
+          "page_start": 281
+        },
+        {
+          "number": "9.4",
+          "title": "Variazioni delle forze di legame: da dove proviene il calore di reazione?",
+          "page_start": 287
+        },
+        {
+          "number": "9.5",
+          "title": "Tra i due estremi: elettronegatività e polarità di legame",
+          "page_start": 291
+        },
+        {
+          "number": "9.6",
+          "title": "Introduzione al legame metallico",
+          "page_start": 298
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Le forme delle molecole",
+      "page_start": 301,
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "Rappresentazione delle molecole e degli ioni con strutture di Lewis",
+          "page_start": 301
+        },
+        {
+          "number": "10.2",
+          "title": "Teoria VSEPR (Valence-Shell Electron-Pair Repulsion, repulsione tra le coppie di elettroni del guscio di valenza) e forma molecolare",
+          "page_start": 313
+        },
+        {
+          "number": "10.3",
+          "title": "Forma molecolare e polarità molecolare",
+          "page_start": 323
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Teorie del legame covalente",
+      "page_start": 330,
+      "sections": [
+        {
+          "number": "11.1",
+          "title": "La teoria del legame di valenza (teoria VB) e l'ibridazione degli orbitali",
+          "page_start": 330
+        },
+        {
+          "number": "11.2",
+          "title": "Il modo di sovrapposizione degli orbitali e i tipi di legami covalenti",
+          "page_start": 338
+        },
+        {
+          "number": "11.3",
+          "title": "Teoria degli orbitali molecolari (teoria MO) e delocalizzazione elettronica",
+          "page_start": 341
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Forze intermolecolari: liquidi, solidi e transizioni di fase",
+      "page_start": 354,
+      "sections": [
+        {
+          "number": "12.1",
+          "title": "Uno sguardo d'insieme agli stati fisici e alle transizioni di fase",
+          "page_start": 355
+        },
+        {
+          "number": "12.2",
+          "title": "Aspetti quantitativi delle transizioni di fase",
+          "page_start": 357
+        },
+        {
+          "number": "12.3",
+          "title": "Tipi di forze intermolecolari",
+          "page_start": 367
+        },
+        {
+          "number": "12.4",
+          "title": "Proprietà dello stato liquido",
+          "page_start": 374
+        },
+        {
+          "number": "12.5",
+          "title": "L'unicità dell'acqua",
+          "page_start": 377
+        },
+        {
+          "number": "12.6",
+          "title": "Lo stato solido: struttura, proprietà e legami",
+          "page_start": 381
+        },
+        {
+          "number": "12.7",
+          "title": "Materiali avanzati",
+          "page_start": 395
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Le proprietà delle miscele: soluzioni e colloidi",
+      "page_start": 412,
+      "sections": [
+        {
+          "number": "13.1",
+          "title": "Tipi di soluzioni: forze intermolecolari e previsione della solubilità",
+          "page_start": 413
+        },
+        {
+          "number": "13.2",
+          "title": "Forze intermolecolari e macromolecole biologiche",
+          "page_start": 418
+        },
+        {
+          "number": "13.3",
+          "title": "Variazioni di energia nel processo di dissoluzione",
+          "page_start": 424
+        },
+        {
+          "number": "13.4",
+          "title": "La solubilità come processo di equilibrio",
+          "page_start": 428
+        },
+        {
+          "number": "13.5",
+          "title": "Espressioni quantitative della concentrazione",
+          "page_start": 432
+        },
+        {
+          "number": "13.6",
+          "title": "Proprietà colligative delle soluzioni",
+          "page_start": 437
+        },
+        {
+          "number": "13.7",
+          "title": "Struttura e proprietà dei colloidi",
+          "page_start": 451
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Andamenti periodici negli elementi dei gruppi principali: legami, strutture, reattività",
+      "page_start": 468,
+      "sections": [
+        {
+          "number": "14.1",
+          "title": "L'idrogeno, l'atomo più semplice",
+          "page_start": 468
+        },
+        {
+          "number": "14.2",
+          "title": "Tendenze attraverso la tavola periodica: gli elementi del Periodo 2",
+          "page_start": 470
+        },
+        {
+          "number": "14.3",
+          "title": "Gruppo 1A(1): i metalli alcalini",
+          "page_start": 475
+        },
+        {
+          "number": "14.4",
+          "title": "Gruppo 2A(2): i metalli alcalino-terrosi",
+          "page_start": 477
+        },
+        {
+          "number": "14.5",
+          "title": "Gruppo 3A(13): la famiglia del boro",
+          "page_start": 479
+        },
+        {
+          "number": "14.6",
+          "title": "Gruppo 4A(14): la famiglia del carbonio",
+          "page_start": 485
+        },
+        {
+          "number": "14.7",
+          "title": "Gruppo 5A(15): la famiglia dell'azoto",
+          "page_start": 494
+        },
+        {
+          "number": "14.8",
+          "title": "Gruppo 6A(16): la famiglia dell'ossigeno",
+          "page_start": 502
+        },
+        {
+          "number": "14.9",
+          "title": "Gruppo 7A(17): gli alogeni",
+          "page_start": 508
+        },
+        {
+          "number": "14.10",
+          "title": "Gruppo 8A(18): i gas nobili",
+          "page_start": 514
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Composti organici e proprietà atomiche del carbonio",
+      "sections": []
+    },
+    {
+      "number": 16,
+      "title": "Cinetica chimica: velocità e meccanismi delle reazioni chimiche",
+      "page_start": 518,
+      "sections": [
+        {
+          "number": "16.1",
+          "title": "I fattori che influenzano la velocità di reazione",
+          "page_start": 519
+        },
+        {
+          "number": "16.2",
+          "title": "Espressione della velocità di reazione",
+          "page_start": 521
+        },
+        {
+          "number": "16.3",
+          "title": "La legge cinetica di reazione e le sue componenti",
+          "page_start": 526
+        },
+        {
+          "number": "16.4",
+          "title": "Leggi cinetiche integrate: la concentrazione varia nel tempo",
+          "page_start": 534
+        },
+        {
+          "number": "16.5",
+          "title": "L'effetto della temperatura sulla velocità di reazione",
+          "page_start": 539
+        },
+        {
+          "number": "16.6",
+          "title": "Spiegazione degli effetti della concentrazione e della temperatura",
+          "page_start": 542
+        },
+        {
+          "number": "16.7",
+          "title": "Meccanismi di reazione: stadi nella reazione complessiva",
+          "page_start": 548
+        },
+        {
+          "number": "16.8",
+          "title": "Catalisi: accelerazione di una reazione chimica",
+          "page_start": 554
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "L'equilibrio: l'entità delle reazioni chimiche",
+      "page_start": 564,
+      "sections": [
+        {
+          "number": "17.1",
+          "title": "Natura dinamica dello stato di equilibrio",
+          "page_start": 565
+        },
+        {
+          "number": "17.2",
+          "title": "Il quoziente di reazione e la costante di equilibrio",
+          "page_start": 567
+        },
+        {
+          "number": "17.3",
+          "title": "Espressione degli equilibri con termini di pressione: relazione tra Kc e Kp",
+          "page_start": 574
+        },
+        {
+          "number": "17.4",
+          "title": "Direzione di una reazione: confronto di Q e K",
+          "page_start": 576
+        },
+        {
+          "number": "17.5",
+          "title": "Come si risolvono i problemi di equilibrio",
+          "page_start": 577
+        },
+        {
+          "number": "17.6",
+          "title": "Condizioni di reazione e stato di equilibrio: principio di Le Châtelier",
+          "page_start": 586
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Equilibri acido-base",
+      "page_start": 598,
+      "sections": [
+        {
+          "number": "18.1",
+          "title": "Acidi e basi in acqua",
+          "page_start": 599
+        },
+        {
+          "number": "18.2",
+          "title": "Trasferimento protonico e definizione di acidi e basi secondo Brønsted-Lowry",
+          "page_start": 604
+        },
+        {
+          "number": "18.3",
+          "title": "Autoionizzazione dell'acqua e scala del pH",
+          "page_start": 609
+        },
+        {
+          "number": "18.4",
+          "title": "Calcolo del pH di soluzioni di acidi e basi forti",
+          "page_start": 614
+        },
+        {
+          "number": "18.5",
+          "title": "Risoluzione di problemi che implicano equilibri coinvolgenti acidi deboli",
+          "page_start": 615
+        },
+        {
+          "number": "18.6",
+          "title": "Le basi deboli e la loro relazione con gli acidi deboli",
+          "page_start": 623
+        },
+        {
+          "number": "18.7",
+          "title": "Proprietà molecolari e forza di un acido",
+          "page_start": 629
+        },
+        {
+          "number": "18.8",
+          "title": "Proprietà acido-base delle soluzioni saline",
+          "page_start": 631
+        },
+        {
+          "number": "18.9",
+          "title": "Generalizzazione del concetto di Brønsted-Lowry: l'effetto di livellamento",
+          "page_start": 635
+        },
+        {
+          "number": "18.10",
+          "title": "Donazione di coppie di elettroni e definizione di acidi e basi secondo Lewis",
+          "page_start": 636
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Equilibri ionici in soluzione acquosa",
+      "page_start": 641,
+      "sections": [
+        {
+          "number": "19.1",
+          "title": "Equilibri dei sistemi tampone acido-base",
+          "page_start": 641
+        },
+        {
+          "number": "19.2",
+          "title": "Curve di titolazione acido-base",
+          "page_start": 651
+        },
+        {
+          "number": "19.3",
+          "title": "Equilibri di composti ionici poco solubili",
+          "page_start": 660
+        },
+        {
+          "number": "19.4",
+          "title": "Equilibri degli ioni complessi",
+          "page_start": 670
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Termodinamica: entropia, energia libera e direzione delle reazioni chimiche",
+      "page_start": 682,
+      "sections": [
+        {
+          "number": "20.1",
+          "title": "Seconda legge della termodinamica: prevedere una trasformazione spontanea",
+          "page_start": 683
+        },
+        {
+          "number": "20.2",
+          "title": "Calcolo della variazione di entropia di una reazione",
+          "page_start": 694
+        },
+        {
+          "number": "20.3",
+          "title": "Entropia, energia libera e lavoro",
+          "page_start": 701
+        },
+        {
+          "number": "20.4",
+          "title": "Energia libera, equilibrio e direzione di una reazione",
+          "page_start": 708
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "title": "Elettrochimica: variazioni chimiche e lavoro elettrico",
+      "page_start": 716,
+      "sections": [
+        {
+          "number": "21.1",
+          "title": "Reazioni redox e celle elettrochimiche",
+          "page_start": 717
+        },
+        {
+          "number": "21.2",
+          "title": "Celle voltaiche: utilizzare reazioni spontanee per produrre energia elettrica",
+          "page_start": 723
+        },
+        {
+          "number": "21.3",
+          "title": "Potenziale di cella: l'output di una cella voltaica",
+          "page_start": 728
+        },
+        {
+          "number": "21.4",
+          "title": "Energia libera e lavoro elettrico",
+          "page_start": 737
+        },
+        {
+          "number": "21.5",
+          "title": "Celle elettrolitiche: utilizzare energia elettrica per far avvenire una reazione non spontanea",
+          "page_start": 745
+        },
+        {
+          "number": "21.6",
+          "title": "Processi elettrochimici nelle batterie",
+          "page_start": 753
+        },
+        {
+          "number": "21.7",
+          "title": "Corrosione: un caso di elettrochimica ambientale",
+          "page_start": 760
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "title": "Gli elementi in natura e nell'industria",
+      "page_start": 764,
+      "sections": [
+        {
+          "number": "22.1",
+          "title": "Gli elementi in natura",
+          "page_start": 765
+        },
+        {
+          "number": "22.2",
+          "title": "I cicli degli elementi nell'ambiente",
+          "page_start": 770
+        },
+        {
+          "number": "22.3",
+          "title": "Metallurgia: estrarre un metallo dal suo minerale",
+          "page_start": 776
+        },
+        {
+          "number": "22.4",
+          "title": "Trivellando la crosta: isolamento e uso di alcuni elementi",
+          "page_start": 782
+        },
+        {
+          "number": "22.5",
+          "title": "L'industria chimica: due casi studio",
+          "page_start": 794
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "title": "Reazioni nucleari e loro applicazioni",
+      "sections": []
+    }
+  ]
+}

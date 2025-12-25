@@ -1,0 +1,255 @@
+
+Visione e Obiettivo del Progetto
+L'obiettivo è integrare CoreX con una sezione che fornisca alla rete dei promotori editoriali degli **insight commerciali strategici e azionabili**. L'applicazione analizza i programmi dei corsi universitari e i manuali adottati per valutare l'allineamento con il catalogo Zanichelli, generando raccomandazioni di vendita personalizzate.
+Il valore aggiunto risiede nella capacità di andare oltre una semplice analisi di contenuti, comprendendo il **contesto pedagogico** e la **filosofia didattica** di ogni singolo docente per fornire argomentazioni di vendita mirate e persuasive.
+
+Il Cuore del Sistema: L'Analisi a Due Livelli
+E’ necesaria un'analisi a due livelli per riflettere l'autonomia didattica del sistema universitario italiano.
+
+**Livello 1: Analisi Contestuale (Il Profilo Pedagogico)**
+ L'AI analizza il programma del corso per estrarre il **profilo del docente**: la sua filosofia didattica, le priorità pedagogiche, il target di studenti e il contesto istituzionale. Questo fornisce il "perché" dietro le scelte di contenuto
+Dimensioni da Analizzare
+1.1 Filosofia Didattica
+**Domande Chiave**:
+- Il docente privilegia teoria o pratica?
+- Quale bilanciamento tra rigore formale e accessibilità?
+- Quanto spazio è dedicato alle applicazioni?
+- C'è enfasi sull'interdisciplinarità?
+
+**Indicatori nel Programma**:
+- Presenza e peso di laboratori/esercitazioni
+- Linguaggio utilizzato (formale/tecnico vs divulgativo)
+- Riferimenti a contesti applicativi
+- Collegamenti con altre discipline
+- Prerequisiti espliciti o impliciti
+
+1.2 Priorità Pedagogiche
+**Domande Chiave**:
+- Il docente preferisce profondità o ampiezza?
+- Quale sequenza didattica (deduttiva vs induttiva)?
+- Quali metodologie didattiche sono privilegiate?
+- Come è strutturata la valutazione?
+
+**Indicatori nel Programma**:
+- Numero di argomenti vs ore disponibili
+- Ordine di presentazione degli argomenti
+- Menzione di metodologie (flipped classroom, seminari, progetti)
+- Modalità di esame (scritto, orale, pratico, in itinere)
+
+1.3 Target di Studenti
+
+**Domande Chiave**:
+- A quale curriculum/corso di laurea è rivolto?
+- Quale anno di corso?
+- Quale background è atteso?
+- Quali obiettivi formativi (magistrale vs lavoro)?
+
+**Indicatori nel Programma**:
+- Titolo del corso e denominazione
+- Prerequisiti espliciti
+- Riferimenti a corsi precedenti o successivi
+- Menzione di sbocchi professionali
+
+**Livello 2: Analisi Tecnica (Il Confronto Contenutistico)**
+ L'AI confronta i contenuti del programma con il **framework ideale o reale**. Tuttavia, questa analisi è **guidata e interpretata alla luce del profilo pedagogico** emerso al Livello 1. Un "gap" può così essere interpretato come una scelta didattica consapevole anziché una mancanza.
+
+**Fase Finale: Sintesi Commerciale (Il "Post-it" per il Promotore)**
+Il sistema combina le due analisi per generare un report che include: un insight sul docente, una valutazione critica del manuale competitor e, soprattutto, **argomentazioni di promozione personalizzate** per il manuale Zanichelli più adatto.
+Nel caso che il promotore non abbia la possibilità di un incontro diretto con il docente il sistema dovrebbe prevedere anche la generazione di una email di contatto con le seguenti caratteristiche:
+1. Architettura del Sistema di Generazione Email
+L'app dovrebbe avere una matrice di templating che combina:
+???????????????????????????????????????????????????????
+?  GAP RILEVATI  × CARATTERISTICHE DOCENTE            ?
+?            ?                                         ?
+?  TEMPLATE EMAIL PERSONALIZZATO                      ?
+???????????????????????????????????????????????????????
+Matrice dei Gap
+Ogni gap che l'app rileva deve mappare a specifici componenti dell'email:
+Gap Type	Identificatore	Componente Email	Tono
+COPERTURA	coverage_gap	"Tema completamente assente"	Urgente, Solutivo
+PROFONDITÀ	depth_gap	"Tema superficiale"	Empatico, Facilitante
+ATTUALITÀ	currency_gap	"Dati/casi obsoleti"	Autorevole, Pratico
+APPROCCIO	pedagogy_gap	"Metodo non allineato"	Intellettuale, Rispettoso
+
+Logica di Prioritizzazione
+Se l'app rileva più gap contemporaneamente, quale email genera?
+Regola di priorità (proposta):
+// Pseudo-codice
+const gapPriority = {
+  'coverage_gap': 1,      // Problema più acuto
+  'currency_gap': 2,      // Secondo più urgente
+  'depth_gap': 3,         // Intermedio
+  'pedagogy_gap': 4       // Più soft
+};
+
+// Se ci sono più gap, scegli il primario
+const primaryGap = gaps.sort((a,b) => 
+  gapPriority[a.type] - gapPriority[b.type]
+)[0];
+
+// Ma menziona gli altri nel corpo
+const secondaryGaps = gaps.slice(1);
+
+2. Struttura Modulare del Template
+Ogni email dovrebbe essere costruita con blocchi componibili che l'AI popola dinamicamente:
+EMAIL = INTESTAZIONE + APERTURA + PROBLEMA + SOLUZIONE + CTA + FIRMA
+
+dove ogni blocco ha varianti in base ai gap
+Modello Completo Parametrizzato
+???? INTESTAZIONE ????
+? Oggetto: [DYNAMIC] ?
+??????????????????????
+  ?
+
+???? APERTURA ????????????????????????????????????????
+? Gentile Prof. {COGNOME},                           ?
+?                                                    ?
+? Sto aggiornando i docenti dell'area di             ?
+? {AREA_DISCIPLINARE} sui nuovi manuali Zanichelli. ?
+? Analizzando il Suo corso di "{TITOLO_CORSO}",     ?
+? ho notato con interesse {ASPETTO_PERSONALIZZATO}. ?
+??????????????????????????????????????????????????????
+  ?
+
+???? PROBLEMA (varia in base al gap type) ????????????
+?                                                    ?
+? IF gap_type == 'depth_gap':                        ?
+?   "So che un tema così rilevante pone una sfida: ?
+?    il manuale di riferimento ({MANUALE_ATTUALE})   ?
+?    copre {ARGOMENTO_GAP} solo parzialmente.        ?
+?    I Suoi studenti quindi devono integrarsi con    ?
+?    letture aggiuntive."                            ?
+?                                                    ?
+? ELSE IF gap_type == 'currency_gap':                ?
+?   "Un tema così attuale richiede che i dati siano ?
+?    sempre aggiornati. Il manuale attuale           ?
+?    ({MANUALE_ATTUALE}, {ANNO_EDIZIONE}) copre     ?
+?    gli aspetti di base, ma le novità normative     ?
+?    dal {DATA_CAMBIO} non sono ancora integrate."   ?
+?                                                    ?
+? ELSE IF gap_type == 'coverage_gap':                ?
+?   "Noto che il Suo programma assegna grande        ?
+?    importanza a {ARGOMENTO_GAP}, ma il manuale     ?
+?    attuale ({MANUALE_ATTUALE}) lo menziona solo    ?
+?    brevemente. Molti studenti faticano qui."       ?
+?                                                    ?
+??????????????????????????????????????????????????????
+  ?
+
+???? SOLUZIONE ???????????????????????????????????????
+?                                                    ?
+? Vorrei sottoporLe in visione                       ?
+? "{TITOLO_MANUALE_ZANICHELLI}"                      ?
+? di {AUTORI_ZANICHELLI} ({ANNO_EDIZIONE}).          ?
+?                                                    ?
+? Specificamente per {ARGOMENTO_GAP}:                ?
+? • {VANTAGGIO_1}                                    ?
+? • {VANTAGGIO_2}                                    ?
+? • {VANTAGGIO_3}                                    ?
+?                                                    ?
+? {FRASE_RASSICURAZIONE}: mantiene {ELEMENTO_CONTINUITÁ}
+? che apprezzerai dal profilo {DIMENSIONE_VALUTAZIONE}.
+?                                                    ?
+??????????????????????????????????????????????????????
+  ?
+
+???? CALL-TO-ACTION ??????????????????????????????????
+?                                                    ?
+? Posso lasciarLe una copia saggio {LUOGO} la        ?
+? {DATA_CONSEGNA}? Potrebbe valutarla senza alcun    ?
+? impegno. {FRASE_INCENTIVO}.                        ?
+?                                                    ?
+??????????????????????????????????????????????????????
+  ?
+
+???? FIRMA ???????????????????????????????????????????
+? {NOME_PROMOTORE}                                   ?
+? Promotore Editoriale - Zanichelli                  ?
+? {TELEFONO} | {EMAIL}                               ?
+
+
+3. Dizionario delle Variabili Dinamiche
+L'app deve estrarre e popolare automaticamente queste variabili dall'analisi:
+const emailVariables = {
+  // DOCENTE
+  'COGNOME': 'Rossi',
+  'AREA_DISCIPLINARE': 'diritto privato',
+  'TITOLO_CORSO': 'Diritto della Concorrenza',
+  'SPECIALIZZAZIONE_DOCENTE': 'diritto commerciale', // da ricerca
+  
+  // GAP ANALYSIS
+  'ARGOMENTO_GAP': 'Antitrust digitale e decisioni AGCM recenti',
+  'LIVELLO_IMPORTANZA': 'ALTA (20% del programma)',
+  'GAP_TYPE': 'depth_gap', // o 'currency_gap', 'coverage_gap', 'pedagogy_gap'
+  
+  // MANUALE ATTUALE
+  'MANUALE_ATTUALE': 'Pardolesi & Mangini',
+  'ANNO_EDIZIONE': '2020',
+  'PAGINE_COPERTE': '~8 pagine (Capitolo 12)',
+  'INSUFFICIENZA_DESCRITTA': 'copre l\'antitrust digitale solo parzialmente',
+  
+  // MANUALE ZANICHELLI
+  'TITOLO_MANUALE_ZANICHELLI': 'Diritto della Concorrenza Internazionale',
+  'AUTORI_ZANICHELLI': 'Zanza & Colangelo',
+  'ANNO_EDIZIONE_ZANICHELLI': '2024',
+  'CAPITOLO_DEDICATO': 'Capitolo 7',
+  'PAGINE_DEDICATE': '45 pagine',
+  
+  // VANTAGGI SPECIFICI
+  'VANTAGGIO_1': 'Capitolo interamente dedicato ad antitrust digitale',
+  'VANTAGGIO_2': 'Case study aggiornati: Meta-Messaggeri, Google Shopping (decisioni 2023-24)',
+  'VANTAGGIO_3': 'Stessa impostazione dogmatica di Pardolesi',
+  
+  // RASSICURAZIONE (varia in base al gap type)
+  'FRASE_RASSICURAZIONE': 'Mantiene lo stesso rigore accademico',
+  'ELEMENTO_CONTINUITÁ': 'l\'approccio dogmatico che già conosci',
+  'DIMENSIONE_VALUTAZIONE': 'metodologico',
+  
+  // CTA
+  'LUOGO': 'sulla Sua scrivania',
+  'DATA_CONSEGNA': 'mercoledì prossimo',
+  'FRASE_INCENTIVO': 'Se lo ritiene risolutivo, potrebbe considerarlo per l\'anno prossimo.',
+  
+  // CONTATTI
+  'NOME_PROMOTORE': 'Marco Bianchi',
+  'TELEFONO': '+39 06 1234567',
+  'EMAIL': 'marco.bianchi@zanichelli.it'
+};
+
+4. Logica di Scelta dell'Oggetto Email (Dinamico)
+L'app deve generare 5-7 varianti di oggetto in base al gap e al docente:
+const subjectLines = {
+  
+  depth_gap: [
+    'Aggiornamenti normali per il corso di {TITOLO_CORSO}',
+    '{ARGOMENTO_GAP}: una risorsa strutturata per i Suoi studenti',
+    'Una lettura consigliata per approfondire {ARGOMENTO_GAP}',
+    'Come insegnare {ARGOMENTO_GAP} senza integrazioni esterne'
+  ],
+  
+  currency_gap: [
+    'Novità normative 2024 per {AREA_DISCIPLINARE}',
+    'Aggiornamenti recenti per il corso di {TITOLO_CORSO}',
+    'Nuova giurisprudenza in {ARGOMENTO_GAP}: per i Suoi studenti',
+    'Da {DATA_CAMBIO_NORMATIVO} tutto è cambiato in {ARGOMENTO_GAP}'
+  ],
+  
+  coverage_gap: [
+    'Una nuova prospettiva su {ARGOMENTO_GAP}',
+    'Quando manca {ARGOMENTO_GAP} nel programma universitario',
+    'Risorsa di approfondimento su {ARGOMENTO_GAP}',
+    'Gli studenti cercano {ARGOMENTO_GAP}: ecco dove trovarlo'
+  ],
+  
+  pedagogy_gap: [
+    'Un approccio innovativo a {ARGOMENTO_GAP}',
+    'Insegnare {ARGOMENTO_GAP} con casi reali e sostenibilità',
+    'Da teoria a pratica: {ARGOMENTO_GAP} in un nuovo manuale',
+    'Come i Suoi colleghi insegnano {ARGOMENTO_GAP} oggi'
+  ]
+};
+
+// Scegli il primo della lista (o randomizza per A/B testing)
+const chosenSubject = subjectLines[gapType][0];
+
+

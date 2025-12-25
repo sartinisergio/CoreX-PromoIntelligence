@@ -1,0 +1,749 @@
+{
+  "id": "Zanello_Conoscere",
+  "title": "Conoscere la Chimica",
+  "author": "Zanello, Gobetto, Zanoni",
+  "publisher": "CEA",
+  "subject": "chimica generale",
+  "type": "Zanichelli",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Materia ed energia",
+      "page_start": 5,
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "La materia",
+          "page_start": 5
+        },
+        {
+          "number": "1.2",
+          "title": "L'energia",
+          "page_start": 15
+        },
+        {
+          "number": "1.3",
+          "title": "La relazione tra materia ed energia",
+          "page_start": 30
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "La composizione dell'atomo",
+      "page_start": 34,
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "Le particelle che compongono l'atomo",
+          "page_start": 34
+        },
+        {
+          "number": "2.2",
+          "title": "Atomi e molecole",
+          "page_start": 35
+        },
+        {
+          "number": "2.3",
+          "title": "La radioattività",
+          "page_start": 46
+        },
+        {
+          "number": "2.4",
+          "title": "Il numero atomico",
+          "page_start": 47
+        },
+        {
+          "number": "2.5",
+          "title": "L'isotopia",
+          "page_start": 49
+        },
+        {
+          "number": "2.6",
+          "title": "Il difetto di massa",
+          "page_start": 49
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "La struttura atomica",
+      "page_start": 57,
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "La struttura dell'atomo secondo Bohr",
+          "page_start": 57
+        },
+        {
+          "number": "3.2",
+          "title": "La struttura atomica secondo la meccanica ondulatoria",
+          "page_start": 63
+        },
+        {
+          "number": "3.3",
+          "title": "Le proprietà periodiche degli elementi",
+          "page_start": 85
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Il legame chimico",
+      "page_start": 96,
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "I parametri sperimentali del legame chimico",
+          "page_start": 96
+        },
+        {
+          "number": "4.2",
+          "title": "Il legame ionico",
+          "page_start": 99
+        },
+        {
+          "number": "4.3",
+          "title": "Il legame covalente",
+          "page_start": 103
+        },
+        {
+          "number": "4.4",
+          "title": "Il simbolismo di Lewis per la rappresentazione degli elettroni di valenza nelle molecole",
+          "page_start": 111
+        },
+        {
+          "number": "4.5",
+          "title": "La geometria delle molecole",
+          "page_start": 116
+        },
+        {
+          "number": "4.6",
+          "title": "Il legame covalente con carattere ionico",
+          "page_start": 139
+        },
+        {
+          "number": "4.7",
+          "title": "I legami multipli",
+          "page_start": 142
+        },
+        {
+          "number": "4.8",
+          "title": "I legami policentrici: la teoria della risonanza",
+          "page_start": 147
+        },
+        {
+          "number": "4.9",
+          "title": "Il magnetismo delle molecole",
+          "page_start": 151
+        },
+        {
+          "number": "4.10",
+          "title": "Il legame metallico",
+          "page_start": 152
+        },
+        {
+          "number": "4.11",
+          "title": "Isolanti e semiconduttori",
+          "page_start": 156
+        },
+        {
+          "number": "4.12",
+          "title": "Altri tipi di legame",
+          "page_start": 156
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Lo stato gassoso",
+      "page_start": 163,
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "Proprietà generali dei gas",
+          "page_start": 163
+        },
+        {
+          "number": "5.2",
+          "title": "La pressione",
+          "page_start": 164
+        },
+        {
+          "number": "5.3",
+          "title": "La legge di Boyle",
+          "page_start": 165
+        },
+        {
+          "number": "5.4",
+          "title": "La legge di Charles",
+          "page_start": 166
+        },
+        {
+          "number": "5.5",
+          "title": "La legge combinata dei gas",
+          "page_start": 169
+        },
+        {
+          "number": "5.6",
+          "title": "L'equazione di stato dei gas ideali",
+          "page_start": 170
+        },
+        {
+          "number": "5.7",
+          "title": "La teoria cinetica dei gas",
+          "page_start": 172
+        },
+        {
+          "number": "5.8",
+          "title": "La diffusione gassosa. La legge di Graham",
+          "page_start": 174
+        },
+        {
+          "number": "5.9",
+          "title": "I miscugli gassosi. La legge di Dalton",
+          "page_start": 177
+        },
+        {
+          "number": "5.10",
+          "title": "I gas reali",
+          "page_start": 180
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Lo stato solido",
+      "page_start": 187,
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "Le fasi condensate della materia",
+          "page_start": 187
+        },
+        {
+          "number": "6.2",
+          "title": "Le proprietà dei solidi",
+          "page_start": 188
+        },
+        {
+          "number": "6.3",
+          "title": "Le dimensioni e la forma dei cristalli",
+          "page_start": 189
+        },
+        {
+          "number": "6.4",
+          "title": "I vari tipi di solidi",
+          "page_start": 189
+        },
+        {
+          "number": "6.5",
+          "title": "I raggi X e la struttura dei cristalli",
+          "page_start": 194
+        },
+        {
+          "number": "6.6",
+          "title": "I reticoli cristallini",
+          "page_start": 200
+        },
+        {
+          "number": "6.7",
+          "title": "Le strutture a massimo impacchettamento",
+          "page_start": 202
+        },
+        {
+          "number": "6.8",
+          "title": "I difetti nelle strutture dei solidi",
+          "page_start": 206
+        },
+        {
+          "number": "6.9",
+          "title": "Il drogaggio dei semiconduttori",
+          "page_start": 209
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Lo stato liquido",
+      "page_start": 215,
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "La teoria microscopica dello stato liquido",
+          "page_start": 215
+        },
+        {
+          "number": "7.2",
+          "title": "Le proprietà dei liquidi",
+          "page_start": 217
+        },
+        {
+          "number": "7.3",
+          "title": "I diagrammi di stato e la regola delle fasi",
+          "page_start": 227
+        },
+        {
+          "number": "7.4",
+          "title": "Le curve di riscaldamento",
+          "page_start": 231
+        },
+        {
+          "number": "7.5",
+          "title": "Calore di vaporizzazione e tensione di vapore di un liquido",
+          "page_start": 233
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Le soluzioni",
+      "page_start": 238,
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "Le unità di concentrazione",
+          "page_start": 238
+        },
+        {
+          "number": "8.2",
+          "title": "La solubilità dei solidi nei liquidi",
+          "page_start": 242
+        },
+        {
+          "number": "8.3",
+          "title": "La solubilità dei gas nei liquidi. La legge di Henry",
+          "page_start": 244
+        },
+        {
+          "number": "8.4",
+          "title": "Le soluzioni ideali. La legge di Raoult",
+          "page_start": 245
+        },
+        {
+          "number": "8.5",
+          "title": "Le soluzioni non ideali",
+          "page_start": 259
+        },
+        {
+          "number": "8.6",
+          "title": "I liquidi parzialmente miscibili",
+          "page_start": 262
+        },
+        {
+          "number": "8.7",
+          "title": "I liquidi completamente immiscibili",
+          "page_start": 264
+        },
+        {
+          "number": "8.8",
+          "title": "I sistemi liquido-solido e le soluzioni solide. Gli equilibri di fase a due componenti",
+          "page_start": 266
+        },
+        {
+          "number": "8.9",
+          "title": "I sistemi costituiti da sale e acqua",
+          "page_start": 278
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "L'equilibrio chimico",
+      "page_start": 282,
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "La costante di equilibrio",
+          "page_start": 282
+        },
+        {
+          "number": "9.2",
+          "title": "Effetti esterni sugli equilibri. Il principio di Le Châtelier",
+          "page_start": 287
+        },
+        {
+          "number": "9.3",
+          "title": "Gli equilibri in condizioni non ideali",
+          "page_start": 293
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Equilibri ionici in soluzione acquosa",
+      "page_start": 301,
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "I sali scarsamente solubili",
+          "page_start": 301
+        },
+        {
+          "number": "10.2",
+          "title": "Gli acidi e le basi",
+          "page_start": 309
+        },
+        {
+          "number": "10.3",
+          "title": "Aspetti quantitativi degli equilibri ionici in soluzione acquosa",
+          "page_start": 315
+        },
+        {
+          "number": "10.4",
+          "title": "Gli indicatori acido-base",
+          "page_start": 343
+        },
+        {
+          "number": "10.5",
+          "title": "Le titolazioni acido-base",
+          "page_start": 346
+        },
+        {
+          "number": "10.6",
+          "title": "Gli ioni complessi",
+          "page_start": 360
+        },
+        {
+          "number": "10.7",
+          "title": "L'anfoterismo",
+          "page_start": 363
+        },
+        {
+          "number": "10.8",
+          "title": "L'analisi qualitativa",
+          "page_start": 364
+        },
+        {
+          "number": "10.9",
+          "title": "Le proprietà colligative degli elettroliti",
+          "page_start": 366
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "L'elettrochimica",
+      "page_start": 371,
+      "sections": [
+        {
+          "number": "11.1",
+          "title": "I conduttori di I e II classe",
+          "page_start": 371
+        },
+        {
+          "number": "11.2",
+          "title": "La conducibilità delle soluzioni elettrolitiche",
+          "page_start": 372
+        },
+        {
+          "number": "11.3",
+          "title": "L'elettrolisi e le sue leggi",
+          "page_start": 375
+        },
+        {
+          "number": "11.4",
+          "title": "Le celle galvaniche (o pile)",
+          "page_start": 380
+        },
+        {
+          "number": "11.5",
+          "title": "Il potenziale standard di semicella",
+          "page_start": 384
+        },
+        {
+          "number": "11.6",
+          "title": "Il potenziale standard di cella",
+          "page_start": 388
+        },
+        {
+          "number": "11.7",
+          "title": "Il potenziale di semicella. L'equazione di Nernst",
+          "page_start": 389
+        },
+        {
+          "number": "11.8",
+          "title": "Il potenziale di cella",
+          "page_start": 391
+        },
+        {
+          "number": "11.9",
+          "title": "La misura sperimentale del potenziale di cella",
+          "page_start": 392
+        },
+        {
+          "number": "11.10",
+          "title": "La determinazione della costante di equilibrio di reazioni redox",
+          "page_start": 393
+        },
+        {
+          "number": "11.11",
+          "title": "Le pile a concentrazione",
+          "page_start": 394
+        },
+        {
+          "number": "11.12",
+          "title": "Ulteriori considerazioni sull'elettrolisi. Il potenziale di decomposizione",
+          "page_start": 397
+        },
+        {
+          "number": "11.13",
+          "title": "Alcuni aspetti pratici dell'elettrochimica",
+          "page_start": 398
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "La termodinamica chimica",
+      "page_start": 414,
+      "sections": [
+        {
+          "number": "12.1",
+          "title": "Il sistema termodinamico",
+          "page_start": 414
+        },
+        {
+          "number": "12.2",
+          "title": "Il lavoro e il calore",
+          "page_start": 415
+        },
+        {
+          "number": "12.3",
+          "title": "Il Primo Principio della termodinamica",
+          "page_start": 417
+        },
+        {
+          "number": "12.4",
+          "title": "La termochimica",
+          "page_start": 420
+        },
+        {
+          "number": "12.5",
+          "title": "I criteri per una trasformazione spontanea",
+          "page_start": 425
+        },
+        {
+          "number": "12.6",
+          "title": "L'Entropia",
+          "page_start": 426
+        },
+        {
+          "number": "12.7",
+          "title": "L'Energia libera",
+          "page_start": 431
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "La cinetica chimica",
+      "page_start": 447,
+      "sections": [
+        {
+          "number": "13.1",
+          "title": "La velocità di reazione",
+          "page_start": 447
+        },
+        {
+          "number": "13.2",
+          "title": "I fattori che influenzano la velocità di reazione",
+          "page_start": 450
+        },
+        {
+          "number": "13.3",
+          "title": "L'interpretazione teorica della velocità delle reazioni",
+          "page_start": 452
+        },
+        {
+          "number": "13.4",
+          "title": "La determinazione dell'ordine di reazione",
+          "page_start": 462
+        },
+        {
+          "number": "13.5",
+          "title": "La datazione di reperti fossili e geologici",
+          "page_start": 466
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Elementi di chimica inorganica",
+      "page_start": 475,
+      "sections": [
+        {
+          "number": "14.1",
+          "title": "L'origine degli elementi chimici",
+          "page_start": 475
+        },
+        {
+          "number": "14.2",
+          "title": "La distribuzione degli elementi chimici sulla Terra",
+          "page_start": 477
+        },
+        {
+          "number": "14.3",
+          "title": "La Tavola periodica degli elementi",
+          "page_start": 478
+        },
+        {
+          "number": "14.4",
+          "title": "Le proprietà elettriche e strutturali degli elementi",
+          "page_start": 479
+        },
+        {
+          "number": "14.5",
+          "title": "Energia di ionizzazione, affinità elettronica, elettronegatività",
+          "page_start": 481
+        },
+        {
+          "number": "14.6",
+          "title": "I numeri di ossidazione",
+          "page_start": 481
+        },
+        {
+          "number": "14.7",
+          "title": "Relazioni dimensionali",
+          "page_start": 484
+        },
+        {
+          "number": "14.8",
+          "title": "Le proprietà chimiche dell'idrogeno e degli idruri",
+          "page_start": 488
+        },
+        {
+          "number": "14.9",
+          "title": "Le proprietà chimiche dei metalli alcalini (Gruppo 1)",
+          "page_start": 491
+        },
+        {
+          "number": "14.10",
+          "title": "Le proprietà chimiche dei metalli alcalino-terrosi (Gruppo 2)",
+          "page_start": 495
+        },
+        {
+          "number": "14.11",
+          "title": "Gli elementi degli orbitali d: i metalli di transizione",
+          "page_start": 498
+        },
+        {
+          "number": "14.12",
+          "title": "Gli elementi tipici degli orbitali p",
+          "page_start": 523
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "La nomenclatura dei composti inorganici e il bilanciamento delle reazioni chimiche",
+      "page_start": 553,
+      "sections": [
+        {
+          "number": "15.1",
+          "title": "La nomenclatura inorganica",
+          "page_start": 553
+        },
+        {
+          "number": "15.2",
+          "title": "Il bilanciamento delle reazioni chimiche",
+          "page_start": 566
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Chimica organica generale",
+      "page_start": 594,
+      "sections": [
+        {
+          "number": "16.1",
+          "title": "La struttura delle molecole organiche",
+          "page_start": 594
+        },
+        {
+          "number": "16.2",
+          "title": "Elementi di stereochimica",
+          "page_start": 600
+        },
+        {
+          "number": "16.3",
+          "title": "L'isomeria",
+          "page_start": 602
+        },
+        {
+          "number": "16.4",
+          "title": "La polarizzazione dei legami",
+          "page_start": 613
+        },
+        {
+          "number": "16.5",
+          "title": "La classificazione delle reazioni organiche",
+          "page_start": 615
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Chimica organica descrittiva",
+      "page_start": 617,
+      "sections": [
+        {
+          "number": "17.1",
+          "title": "Gli idrocarburi",
+          "page_start": 617
+        },
+        {
+          "number": "17.2",
+          "title": "I derivati alogenati",
+          "page_start": 628
+        },
+        {
+          "number": "17.3",
+          "title": "Gli alcoli",
+          "page_start": 628
+        },
+        {
+          "number": "17.4",
+          "title": "I fenoli",
+          "page_start": 631
+        },
+        {
+          "number": "17.5",
+          "title": "Le ammine",
+          "page_start": 632
+        },
+        {
+          "number": "17.6",
+          "title": "Le aldeidi e i chetoni",
+          "page_start": 634
+        },
+        {
+          "number": "17.7",
+          "title": "Gli acidi carbossilici",
+          "page_start": 638
+        },
+        {
+          "number": "17.8",
+          "title": "I derivati degli acidi carbossilici",
+          "page_start": 640
+        },
+        {
+          "number": "17.9",
+          "title": "I derivati dell'acido carbonico",
+          "page_start": 642
+        },
+        {
+          "number": "17.10",
+          "title": "I composti a funzioni multiple e a funzioni miste",
+          "page_start": 643
+        },
+        {
+          "number": "17.11",
+          "title": "I polimeri",
+          "page_start": 650
+        }
+      ]
+    }
+  ]
+}

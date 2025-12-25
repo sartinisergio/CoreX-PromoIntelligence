@@ -1,0 +1,618 @@
+{
+  "id": "Lieberman_Principi",
+  "title": "Principi di Economia",
+  "author": "Lieberman, Hall",
+  "publisher": "Apogeo",
+  "subject": "Economia politica",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Che cos'è l'economia",
+      "page_start": 1,
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "Economia, scarsità e scelta",
+          "page_start": 1
+        },
+        {
+          "number": "1.2",
+          "title": "Il mondo dell'economia",
+          "page_start": 5
+        },
+        {
+          "number": "1.3",
+          "title": "Perché studiare economia?",
+          "page_start": 8
+        },
+        {
+          "number": "1.4",
+          "title": "Il metodo dell'economia",
+          "page_start": 10
+        },
+        {
+          "number": "1.5",
+          "title": "I principi fondamentali dell'economia",
+          "page_start": 15
+        },
+        {
+          "number": "1.6",
+          "title": "Come studiare economia",
+          "page_start": 17
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Scarsità, scelta e sistemi economici",
+      "page_start": 27,
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "Il concetto di costo opportunità",
+          "page_start": 27
+        },
+        {
+          "number": "2.2",
+          "title": "I sistemi economici",
+          "page_start": 43
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "La domanda e l'offerta",
+      "page_start": 63,
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "I mercati",
+          "page_start": 64
+        },
+        {
+          "number": "3.2",
+          "title": "La domanda",
+          "page_start": 69
+        },
+        {
+          "number": "3.3",
+          "title": "L'offerta",
+          "page_start": 79
+        },
+        {
+          "number": "3.4",
+          "title": "L'interazione fra domanda e offerta",
+          "page_start": 89
+        },
+        {
+          "number": "3.5",
+          "title": "Il principio dei mercati e l'equilibrio",
+          "page_start": 98
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Le scelte del consumatore",
+      "page_start": 117,
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "Il vincolo di bilancio",
+          "page_start": 118
+        },
+        {
+          "number": "4.2",
+          "title": "Le preferenze",
+          "page_start": 122
+        },
+        {
+          "number": "4.3",
+          "title": "Le decisioni dei consumatori: l'approccio dell'utilità marginale",
+          "page_start": 125
+        },
+        {
+          "number": "4.4",
+          "title": "Gli effetti di reddito e di sostituzione",
+          "page_start": 135
+        },
+        {
+          "number": "4.5",
+          "title": "I consumatori nei mercati",
+          "page_start": 138
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "La produzione e i costi",
+      "page_start": 159,
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "La natura delle imprese",
+          "page_start": 160
+        },
+        {
+          "number": "5.2",
+          "title": "La produzione",
+          "page_start": 162
+        },
+        {
+          "number": "5.3",
+          "title": "La produzione nel breve periodo",
+          "page_start": 164
+        },
+        {
+          "number": "5.4",
+          "title": "I costi",
+          "page_start": 167
+        },
+        {
+          "number": "5.5",
+          "title": "I costi nel breve periodo",
+          "page_start": 170
+        },
+        {
+          "number": "5.6",
+          "title": "La produzione e i costi nel lungo periodo",
+          "page_start": 179
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Il processo decisionale delle imprese: la massimizzazione del profitto",
+      "page_start": 197,
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "L'obiettivo della massimizzazione del profitto",
+          "page_start": 197
+        },
+        {
+          "number": "6.2",
+          "title": "Il profitto",
+          "page_start": 199
+        },
+        {
+          "number": "6.3",
+          "title": "I vincoli di una impresa",
+          "page_start": 202
+        },
+        {
+          "number": "6.4",
+          "title": "Il livello di produzione che massimizza il profitto",
+          "page_start": 205
+        },
+        {
+          "number": "6.5",
+          "title": "Le perdite",
+          "page_start": 214
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "La concorrenza perfetta",
+      "page_start": 223,
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "Che cos'è la concorrenza perfetta?",
+          "page_start": 224
+        },
+        {
+          "number": "7.2",
+          "title": "L'impresa perfettamente concorrenziale",
+          "page_start": 228
+        },
+        {
+          "number": "7.3",
+          "title": "I mercati concorrenziali nel breve periodo",
+          "page_start": 239
+        },
+        {
+          "number": "7.4",
+          "title": "I mercati concorrenziali nel lungo periodo",
+          "page_start": 243
+        },
+        {
+          "number": "7.5",
+          "title": "Che cosa succede quando cambiano le condizioni?",
+          "page_start": 252
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Il monopolio e la concorrenza imperfetta",
+      "page_start": 265,
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "Il monopolio",
+          "page_start": 266
+        },
+        {
+          "number": "8.2",
+          "title": "La concorrenza monopolistica",
+          "page_start": 286
+        },
+        {
+          "number": "8.3",
+          "title": "L'oligopolio",
+          "page_start": 292
+        },
+        {
+          "number": "8.5",
+          "title": "Le quattro strutture di mercato: un poscritto",
+          "page_start": 310
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Il mercato del lavoro e i salari",
+      "page_start": 323,
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "I mercati del lavoro",
+          "page_start": 324
+        },
+        {
+          "number": "9.2",
+          "title": "I mercati del lavoro concorrenziali e il salario di equilibrio",
+          "page_start": 327
+        },
+        {
+          "number": "9.3",
+          "title": "Perché i salari differiscono?",
+          "page_start": 329
+        },
+        {
+          "number": "9.4",
+          "title": "Contrattazione sindacale e disoccupazione",
+          "page_start": 344
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "L'efficienza economica e il ruolo dello Stato",
+      "page_start": 359,
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "Il significato di efficienza",
+          "page_start": 360
+        },
+        {
+          "number": "10.2",
+          "title": "I miglioramenti paretiani",
+          "page_start": 360
+        },
+        {
+          "number": "10.3",
+          "title": "I mercati e l'efficienza economica",
+          "page_start": 364
+        },
+        {
+          "number": "10.4",
+          "title": "Le infrastrutture istituzionali di una economia di mercato",
+          "page_start": 370
+        },
+        {
+          "number": "10.5",
+          "title": "I fallimenti del mercato",
+          "page_start": 379
+        },
+        {
+          "number": "10.6",
+          "title": "Il monopolio e il potere monopolistico",
+          "page_start": 379
+        },
+        {
+          "number": "10.7",
+          "title": "Le esternalità",
+          "page_start": 386
+        },
+        {
+          "number": "10.8",
+          "title": "I beni pubblici",
+          "page_start": 396
+        },
+        {
+          "number": "10.9",
+          "title": "Considerazioni sull'efficienza e il ruolo dello Stato",
+          "page_start": 403
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Introduzione alla macroeconomia",
+      "page_start": 411,
+      "sections": [
+        {
+          "number": "11.1",
+          "title": "Gli obiettivi della macroeconomia",
+          "page_start": 411
+        },
+        {
+          "number": "11.2",
+          "title": "L'approccio macroeconomico",
+          "page_start": 419
+        },
+        {
+          "number": "11.3",
+          "title": "Le controversie macroeconomiche",
+          "page_start": 421
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Produzione, reddito e occupazione",
+      "page_start": 425,
+      "sections": [
+        {
+          "number": "12.1",
+          "title": "La produzione e il prodotto interno lordo",
+          "page_start": 426
+        },
+        {
+          "number": "12.2",
+          "title": "Occupazione e disoccupazione",
+          "page_start": 446
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Il sistema monetario, i prezzi e l'inflazione",
+      "page_start": 467,
+      "sections": [
+        {
+          "number": "13.1",
+          "title": "Il sistema monetario",
+          "page_start": 467
+        },
+        {
+          "number": "13.2",
+          "title": "La misura del livello dei prezzi e dell'inflazione",
+          "page_start": 470
+        },
+        {
+          "number": "13.3",
+          "title": "I costi dell'inflazione",
+          "page_start": 478
+        },
+        {
+          "number": "13.4",
+          "title": "Il grado di precisione del CPI statunitense",
+          "page_start": 485
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Crescita economica e innalzamento del tenore di vita",
+      "page_start": 497,
+      "sections": [
+        {
+          "number": "14.1",
+          "title": "L'importanza della crescita",
+          "page_start": 498
+        },
+        {
+          "number": "14.2",
+          "title": "I fattori che portano alla crescita dei sistemi economici",
+          "page_start": 500
+        },
+        {
+          "number": "14.3",
+          "title": "La crescita del rapporto occupazione/popolazione (EPR)",
+          "page_start": 504
+        },
+        {
+          "number": "14.4",
+          "title": "La crescita della produttività",
+          "page_start": 510
+        },
+        {
+          "number": "14.5",
+          "title": "Le politiche di crescita economica: un riepilogo",
+          "page_start": 528
+        },
+        {
+          "number": "14.6",
+          "title": "I costi della crescita economica",
+          "page_start": 528
+        },
+        {
+          "number": "14.7",
+          "title": "Applicare la teoria: La crescita economica nei paesi in via di sviluppo",
+          "page_start": 534
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Le fluttuazioni economiche",
+      "page_start": 541,
+      "sections": [
+        {
+          "number": "15.1",
+          "title": "La spesa e le fluttuazioni economiche",
+          "page_start": 543
+        },
+        {
+          "number": "15.2",
+          "title": "La spesa per il consumo",
+          "page_start": 545
+        },
+        {
+          "number": "15.3",
+          "title": "Per ottenere la spesa totale",
+          "page_start": 551
+        },
+        {
+          "number": "15.4",
+          "title": "La spesa totale e il PIL di equilibrio",
+          "page_start": 554
+        },
+        {
+          "number": "15.5",
+          "title": "Che cosa succede quando cambiano le condizioni?",
+          "page_start": 556
+        },
+        {
+          "number": "15.6",
+          "title": "La politica fiscale anticiclica",
+          "page_start": 567
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Il sistema bancario, la banca centrale e la politica monetaria",
+      "page_start": 577,
+      "sections": [
+        {
+          "number": "16.1",
+          "title": "Che cosa si considera moneta?",
+          "page_start": 577
+        },
+        {
+          "number": "16.2",
+          "title": "Il sistema bancario",
+          "page_start": 579
+        },
+        {
+          "number": "16.3",
+          "title": "La Banca Centrale e l'offerta di moneta",
+          "page_start": 581
+        },
+        {
+          "number": "16.4",
+          "title": "Il mercato monetario",
+          "page_start": 589
+        },
+        {
+          "number": "16.5",
+          "title": "Banche centrali a confronto",
+          "page_start": 607
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "La domanda aggregata e l'offerta aggregata",
+      "page_start": 625,
+      "sections": [
+        {
+          "number": "17.1",
+          "title": "La curva di domanda aggregata",
+          "page_start": 625
+        },
+        {
+          "number": "17.2",
+          "title": "La curva di offerta aggregata",
+          "page_start": 631
+        },
+        {
+          "number": "17.3",
+          "title": "L'interazione tra AD e AS: l'equilibrio di breve periodo",
+          "page_start": 640
+        },
+        {
+          "number": "17.4",
+          "title": "Che cosa succede quando cambiano le condizioni?",
+          "page_start": 642
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Il vantaggio comparato e il commercio internazionale",
+      "page_start": 663,
+      "sections": [
+        {
+          "number": "18.1",
+          "title": "La logica del libero scambio",
+          "page_start": 664
+        },
+        {
+          "number": "18.2",
+          "title": "La teoria del vantaggio comparato",
+          "page_start": 665
+        },
+        {
+          "number": "18.3",
+          "title": "Convertire il guadagno potenziale in guadagno effettivo",
+          "page_start": 671
+        },
+        {
+          "number": "18.4",
+          "title": "Le fonti del vantaggio comparato",
+          "page_start": 676
+        },
+        {
+          "number": "18.5",
+          "title": "I motivi degli oppositori del libero scambio",
+          "page_start": 679
+        },
+        {
+          "number": "18.6",
+          "title": "Le restrizioni al libero scambio",
+          "page_start": 685
+        },
+        {
+          "number": "18.7",
+          "title": "Il protezionismo",
+          "page_start": 688
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "title": "La nuova Europa",
+      "page_start": 701,
+      "sections": [
+        {
+          "number": "19.1",
+          "title": "Innanzitutto un po' di storia",
+          "page_start": 702
+        },
+        {
+          "number": "19.2",
+          "title": "Tassi di cambio e regimi di cambio",
+          "page_start": 705
+        },
+        {
+          "number": "19.3",
+          "title": "Dal Sistema Monetario Europeo all'Unione Monetaria Europea",
+          "page_start": 708
+        },
+        {
+          "number": "19.4",
+          "title": "Tasso di cambio fisso e valuta unica",
+          "page_start": 716
+        },
+        {
+          "number": "19.5",
+          "title": "La teoria delle aree valutarie ottimali",
+          "page_start": 717
+        },
+        {
+          "number": "19.6",
+          "title": "Costi e benefici dell'integrazione",
+          "page_start": 722
+        }
+      ]
+    }
+  ]
+}

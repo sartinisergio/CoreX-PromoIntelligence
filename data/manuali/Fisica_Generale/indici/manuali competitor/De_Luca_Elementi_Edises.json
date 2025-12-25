@@ -1,0 +1,1010 @@
+{
+  "id": "De Luca_Elementi",
+  "title": "Elementi di fisica",
+  "author": "De Luca",
+  "publisher": "Edises",
+  "subject": "Fisica_Generale",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Algebra e vettori",
+      "page_start": 1,
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "Equazioni e disequazioni di primo grado",
+          "page_start": 1
+        },
+        {
+          "number": "1.2",
+          "title": "Equazioni e disequazioni di secondo grado",
+          "page_start": 4
+        },
+        {
+          "number": "1.3",
+          "title": "Brevi cenni di calcolo combinatorio",
+          "page_start": 6
+        },
+        {
+          "number": "1.4",
+          "title": "Triangolo di Tartaglia e binomio di Newton",
+          "page_start": 9
+        },
+        {
+          "number": "1.5",
+          "title": "I vettori",
+          "page_start": 11
+        },
+        {
+          "number": "1.5.1",
+          "title": "Operazione con i vettori",
+          "page_start": 12
+        },
+        {
+          "number": "1.5.2",
+          "title": "La regola del parallelogramma",
+          "page_start": 12
+        },
+        {
+          "number": "1.5.3",
+          "title": "Il prodotto scalare",
+          "page_start": 13
+        },
+        {
+          "number": "1.5.4",
+          "title": "Teorema di Carnot sui triangoli",
+          "page_start": 15
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Cenni di geometria analitica Funzioni elementari",
+      "page_start": 17,
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "La geometria analitica",
+          "page_start": 17
+        },
+        {
+          "number": "2.1.1",
+          "title": "La retta",
+          "page_start": 17
+        },
+        {
+          "number": "2.1.2",
+          "title": "Traslazioni",
+          "page_start": 19
+        },
+        {
+          "number": "2.1.3",
+          "title": "La parabola",
+          "page_start": 21
+        },
+        {
+          "number": "2.1.4",
+          "title": "l'ellisse e la circonferenza",
+          "page_start": 23
+        },
+        {
+          "number": "2.2",
+          "title": "Le funzioni",
+          "page_start": 27
+        },
+        {
+          "number": "2.2.2",
+          "title": "Funzione composte",
+          "page_start": 31
+        },
+        {
+          "number": "2.3",
+          "title": "La funzione potenza",
+          "page_start": 31
+        },
+        {
+          "number": "2.4",
+          "title": "Le funzioni seno, coseno e tangente",
+          "page_start": 32
+        },
+        {
+          "number": "2.5",
+          "title": "La funzione esponenziale",
+          "page_start": 35
+        },
+        {
+          "number": "2.6",
+          "title": "La derivata di una funzione",
+          "page_start": 36
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Grandezze fisiche e loro unità di misura",
+      "page_start": 43,
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "La fisica",
+          "page_start": 43
+        },
+        {
+          "number": "3.2",
+          "title": "Il metodo scientifico",
+          "page_start": 44
+        },
+        {
+          "number": "3.3",
+          "title": "Grandezze fisiche e unità di misura",
+          "page_start": 47
+        },
+        {
+          "number": "3.4",
+          "title": "Grandezze fisiche scalari e vettoriali",
+          "page_start": 49
+        },
+        {
+          "number": "3.5",
+          "title": "Cifre significative",
+          "page_start": 50
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Cinematica",
+      "page_start": 53,
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "Il punto materiale",
+          "page_start": 53
+        },
+        {
+          "number": "4.2",
+          "title": "Vettore posizione, vettore spostamento, velocità media",
+          "page_start": 54
+        },
+        {
+          "number": "4.3",
+          "title": "Velocità istantanea",
+          "page_start": 55
+        },
+        {
+          "number": "4.4",
+          "title": "Accelerazione media e accelerazione istantanea",
+          "page_start": 57
+        },
+        {
+          "number": "4.5",
+          "title": "Moti rettilinei",
+          "page_start": 58
+        },
+        {
+          "number": "4.4.1",
+          "title": "Moto rettilineo uniforme",
+          "page_start": 59
+        },
+        {
+          "number": "4.4.2",
+          "title": "Moto rettilineo uniformemente accelerato",
+          "page_start": 60
+        },
+        {
+          "number": "4.6",
+          "title": "Moti in due dimensioni: il moto del proiettile",
+          "page_start": 63
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Dinamica",
+      "page_start": 69,
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "Prima legge di Newton: il principio di inerzia",
+          "page_start": 69
+        },
+        {
+          "number": "5.2",
+          "title": "Seconda legge di Newton",
+          "page_start": 72
+        },
+        {
+          "number": "5.3",
+          "title": "Terza legge di Newton",
+          "page_start": 74
+        },
+        {
+          "number": "5.4",
+          "title": "Alcune applicazioni della seconda legge di Newton",
+          "page_start": 75
+        },
+        {
+          "number": "5.4.1",
+          "title": "Equilibrio statico di un blocco su un tavolo",
+          "page_start": 75
+        },
+        {
+          "number": "5.4.2",
+          "title": "Equilibrio statico di un quadro appeso al muro",
+          "page_start": 76
+        },
+        {
+          "number": "5.4.3",
+          "title": "Il piano inclinato",
+          "page_start": 78
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Le forze",
+      "page_start": 81,
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "L'attrazione gravitazionale",
+          "page_start": 81
+        },
+        {
+          "number": "6.2",
+          "title": "La forza di attrito",
+          "page_start": 83
+        },
+        {
+          "number": "6.3",
+          "title": "Il moto circolare",
+          "page_start": 87
+        },
+        {
+          "number": "6.3.1",
+          "title": "Il vettore posizione",
+          "page_start": 87
+        },
+        {
+          "number": "6.3.2",
+          "title": "La velocità",
+          "page_start": 88
+        },
+        {
+          "number": "6.3.3",
+          "title": "L'accelerazione",
+          "page_start": 89
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Moti periodici",
+      "page_start": 95,
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "Il moto armonico",
+          "page_start": 95
+        },
+        {
+          "number": "7.2",
+          "title": "La legge di Hooke",
+          "page_start": 97
+        },
+        {
+          "number": "7.2.1",
+          "title": "L'oscillatore armonico",
+          "page_start": 98
+        },
+        {
+          "number": "7.3",
+          "title": "Il pendolo semplice",
+          "page_start": 102
+        },
+        {
+          "number": "7.4",
+          "title": "Le leggi di Keplero",
+          "page_start": 107
+        },
+        {
+          "number": "7.4.1",
+          "title": "La prima legge di Keplero",
+          "page_start": 107
+        },
+        {
+          "number": "7.4.2",
+          "title": "La seconda legge di Keplero",
+          "page_start": 108
+        },
+        {
+          "number": "7.4.3",
+          "title": "La terza legge di Keplero",
+          "page_start": 110
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Sistemi di riferimento",
+      "page_start": 113,
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "Moti relativi",
+          "page_start": 113
+        },
+        {
+          "number": "8.2",
+          "title": "Sistemi di riferimento non inerziali",
+          "page_start": 116
+        },
+        {
+          "number": "8.3",
+          "title": "La forza centrifuga",
+          "page_start": 118
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Il lavoro e l'energia",
+      "page_start": 125,
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "Il teorema dell'energia cinetica",
+          "page_start": 125
+        },
+        {
+          "number": "9.2",
+          "title": "Forze conservative",
+          "page_start": 129
+        },
+        {
+          "number": "9.2.1",
+          "title": "La forza peso è conservativa",
+          "page_start": 130
+        },
+        {
+          "number": "9.2.2",
+          "title": "La forza d'attrito non è conservativa",
+          "page_start": 130
+        },
+        {
+          "number": "9.2.3",
+          "title": "La forza elastica è conservativa",
+          "page_start": 131
+        },
+        {
+          "number": "9.3",
+          "title": "L'energia meccanica",
+          "page_start": 133
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Sistemi di punti materiali",
+      "page_start": 139,
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "Il centro di massa",
+          "page_start": 139
+        },
+        {
+          "number": "10.2",
+          "title": "Il teorema del centro di massa",
+          "page_start": 142
+        },
+        {
+          "number": "10.2.1",
+          "title": "La quantità di moto",
+          "page_start": 143
+        },
+        {
+          "number": "10.2.2",
+          "title": "L'equazione della dinamica",
+          "page_start": 143
+        },
+        {
+          "number": "10.2.3",
+          "title": "Conservazione della quantità di moto totale",
+          "page_start": 144
+        },
+        {
+          "number": "10.3",
+          "title": "Corpi rigidi",
+          "page_start": 147
+        },
+        {
+          "number": "10.4",
+          "title": "Momento angolare",
+          "page_start": 148
+        },
+        {
+          "number": "10.4.1",
+          "title": "Momento di una forza",
+          "page_start": 150
+        },
+        {
+          "number": "10.5",
+          "title": "Equazioni cardinali della dinamica",
+          "page_start": 151
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Statica dei fluidi",
+      "page_start": 155,
+      "sections": [
+        {
+          "number": "11.1",
+          "title": "La pressione",
+          "page_start": 155
+        },
+        {
+          "number": "11.1.1",
+          "title": "La densità",
+          "page_start": 156
+        },
+        {
+          "number": "11.1.2",
+          "title": "La legge di Stevino",
+          "page_start": 157
+        },
+        {
+          "number": "11.1.3",
+          "title": "La pressione atmosferica",
+          "page_start": 158
+        },
+        {
+          "number": "11.2",
+          "title": "Il principio di Archimede",
+          "page_start": 159
+        },
+        {
+          "number": "11.3",
+          "title": "Il principio di Pascal",
+          "page_start": 162
+        },
+        {
+          "number": "11.4",
+          "title": "Il diavoletto di Cartesio",
+          "page_start": 163
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Fluidodinamica",
+      "page_start": 167,
+      "sections": [
+        {
+          "number": "12.1",
+          "title": "Fluidi ideali",
+          "page_start": 167
+        },
+        {
+          "number": "12.2",
+          "title": "Equazione di continuità",
+          "page_start": 168
+        },
+        {
+          "number": "12.3",
+          "title": "Il teorema di Bernoulli",
+          "page_start": 170
+        },
+        {
+          "number": "12.4",
+          "title": "L'effetto Venturi",
+          "page_start": 175
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "I gas perfetti",
+      "page_start": 179,
+      "sections": [
+        {
+          "number": "13.1",
+          "title": "Teoria cinetica dei gas",
+          "page_start": 179
+        },
+        {
+          "number": "13.2",
+          "title": "Trasformazioni termodinamiche",
+          "page_start": 183
+        },
+        {
+          "number": "13.2.1",
+          "title": "Isoterme",
+          "page_start": 184
+        },
+        {
+          "number": "13.2.2",
+          "title": "Isocore",
+          "page_start": 185
+        },
+        {
+          "number": "13.2.3",
+          "title": "Isobare",
+          "page_start": 186
+        },
+        {
+          "number": "13.2.4",
+          "title": "Commento finale",
+          "page_start": 187
+        },
+        {
+          "number": "13.3",
+          "title": "Il calore specifico dei gas perfetti",
+          "page_start": 188
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Concetti di termodinamica",
+      "page_start": 191,
+      "sections": [
+        {
+          "number": "14.1",
+          "title": "Il calore specifico di liquidi e solidi",
+          "page_start": 191
+        },
+        {
+          "number": "14.2",
+          "title": "Il lavoro in termodinamica",
+          "page_start": 195
+        },
+        {
+          "number": "14.3",
+          "title": "L'esperimento di Joule",
+          "page_start": 196
+        },
+        {
+          "number": "14.4",
+          "title": "Il primo principio della termodinamica",
+          "page_start": 199
+        },
+        {
+          "number": "14.5",
+          "title": "Calore specifico a pressione costante",
+          "page_start": 200
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Macchine termiche ed entropia",
+      "page_start": 205,
+      "sections": [
+        {
+          "number": "15.1",
+          "title": "Macchine termiche",
+          "page_start": 205
+        },
+        {
+          "number": "15.2",
+          "title": "Il secondo principio della termodinamica",
+          "page_start": 206
+        },
+        {
+          "number": "15.2.1",
+          "title": "Enunciato di Clausius",
+          "page_start": 207
+        },
+        {
+          "number": "15.2.2",
+          "title": "Enunciato di Lord Kelvin",
+          "page_start": 207
+        },
+        {
+          "number": "15.3",
+          "title": "Trasformazioni reversibili e irreversibili207",
+          "page_start": null
+        },
+        {
+          "number": "15.4",
+          "title": "La macchina di Carnot",
+          "page_start": 209
+        },
+        {
+          "number": "15.5",
+          "title": "L'entropia",
+          "page_start": 209
+        },
+        {
+          "number": "15.6",
+          "title": "Ancora sul secondo principio della termodinamica",
+          "page_start": 211
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Acustica",
+      "page_start": 217,
+      "sections": [
+        {
+          "number": "16.1",
+          "title": "Le onde sonore",
+          "page_start": 217
+        },
+        {
+          "number": "16.2",
+          "title": "Interferenza tra due onde viaggianti",
+          "page_start": 220
+        },
+        {
+          "number": "16.3",
+          "title": "Onde stazionarie",
+          "page_start": 221
+        },
+        {
+          "number": "16.3.1",
+          "title": "Cavità con entrambe le estremità aperte",
+          "page_start": 222
+        },
+        {
+          "number": "16.3.2",
+          "title": "Cavità con una estremità aperta",
+          "page_start": 224
+        },
+        {
+          "number": "16.3.3",
+          "title": "Strumenti a corda",
+          "page_start": 226
+        },
+        {
+          "number": "16.4",
+          "title": "Intensità sonora e livello sonoro",
+          "page_start": 227
+        },
+        {
+          "number": "16.4.1",
+          "title": "Il logaritmo",
+          "page_start": 228
+        },
+        {
+          "number": "16.4.2",
+          "title": "La scala in decibel",
+          "page_start": 229
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Ottica geometrica",
+      "page_start": 233,
+      "sections": [
+        {
+          "number": "17.1",
+          "title": "La riflessione",
+          "page_start": 233
+        },
+        {
+          "number": "17.2",
+          "title": "La rifrazione",
+          "page_start": 239
+        },
+        {
+          "number": "17.2.1",
+          "title": "Riflessione interna totale",
+          "page_start": 242
+        },
+        {
+          "number": "17.2.2",
+          "title": "Fibre ottiche",
+          "page_start": 244
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Specchi e diottri",
+      "page_start": 247,
+      "sections": [
+        {
+          "number": "18.1",
+          "title": "Specchi sferici",
+          "page_start": 247
+        },
+        {
+          "number": "18.1.1",
+          "title": "Specchi sferici concavi",
+          "page_start": 248
+        },
+        {
+          "number": "18.1.2",
+          "title": "Specchi sferici convessi",
+          "page_start": 249
+        },
+        {
+          "number": "18.1.3",
+          "title": "Immagini di oggetti estesi",
+          "page_start": 251
+        },
+        {
+          "number": "18.2",
+          "title": "Diottri e lenti",
+          "page_start": 255
+        },
+        {
+          "number": "18.2.1",
+          "title": "Diottri sferici concavi",
+          "page_start": 255
+        },
+        {
+          "number": "18.2.2",
+          "title": "Diottri sferici convessi",
+          "page_start": 257
+        },
+        {
+          "number": "18.2.3",
+          "title": "Lenti spesse e lenti sottili",
+          "page_start": 258
+        },
+        {
+          "number": "18.2.4",
+          "title": "Lenti sottili e difetti visivi",
+          "page_start": 263
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Elettrostatica",
+      "page_start": 265,
+      "sections": [
+        {
+          "number": "19.1",
+          "title": "La forza di Coulomb",
+          "page_start": 266
+        },
+        {
+          "number": "19.2",
+          "title": "Forza elettrica e forza gravitazionale",
+          "page_start": 268
+        },
+        {
+          "number": "19.3",
+          "title": "Il campo elettrico",
+          "page_start": 270
+        },
+        {
+          "number": "19.4",
+          "title": "Il principio di sovrapposizione degli effetti",
+          "page_start": 272
+        },
+        {
+          "number": "19.5",
+          "title": "La legge di Gauss",
+          "page_start": 274
+        },
+        {
+          "number": "19.5.1",
+          "title": "Il campo elettrico e il campo gravitazionale",
+          "page_start": 276
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Il potenziale elettrico",
+      "page_start": 279,
+      "sections": [
+        {
+          "number": "20.1",
+          "title": "L'energia potenziale elettrica",
+          "page_start": 279
+        },
+        {
+          "number": "20.2",
+          "title": "Differenza di potenziale e potenziale elettrico",
+          "page_start": 281
+        },
+        {
+          "number": "20.2.1",
+          "title": "Ancora sul principio di sovrapposizione degli effetti",
+          "page_start": 282
+        },
+        {
+          "number": "20.2.2",
+          "title": "Superfici equipotenziali",
+          "page_start": 284
+        },
+        {
+          "number": "20.3",
+          "title": "I conduttori",
+          "page_start": 287
+        },
+        {
+          "number": "20.3.1",
+          "title": "Il campo elettrico all'interno e all'esterno di un conduttore",
+          "page_start": 288
+        },
+        {
+          "number": "20.3.2",
+          "title": "Il potenziale elettrico di un conduttore sferico",
+          "page_start": 290
+        },
+        {
+          "number": "20.3.3",
+          "title": "Induzione elettrostatica",
+          "page_start": 291
+        },
+        {
+          "number": "20.4",
+          "title": "La capacità",
+          "page_start": 293
+        },
+        {
+          "number": "20.4.1",
+          "title": "Condensatori",
+          "page_start": 294
+        },
+        {
+          "number": "20.4.2",
+          "title": "Condensatori in serie e in parallelo",
+          "page_start": 296
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "title": "Elettrodinamica",
+      "page_start": 301,
+      "sections": [
+        {
+          "number": "21.1",
+          "title": "La corrente elettrica",
+          "page_start": 301
+        },
+        {
+          "number": "21.2",
+          "title": "Semiconduttori e superconduttori",
+          "page_start": 305
+        },
+        {
+          "number": "21.3",
+          "title": "Le leggi circuitali di Kirchhoff",
+          "page_start": 307
+        },
+        {
+          "number": "21.4",
+          "title": "Analisi di un semplice circuito elettrico",
+          "page_start": 312
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "title": "Magnetismo",
+      "page_start": 315,
+      "sections": [
+        {
+          "number": "22.1",
+          "title": "La forza di Lorentz",
+          "page_start": 315
+        },
+        {
+          "number": "22.2",
+          "title": "Sorgenti del campo magnetico",
+          "page_start": 317
+        },
+        {
+          "number": "22.3",
+          "title": "Il dipolo magnetico e la legge di Gauss per il magnetismo",
+          "page_start": 320
+        },
+        {
+          "number": "22.4",
+          "title": "Fili percorsi da corrente in campi magnetici",
+          "page_start": 321
+        },
+        {
+          "number": "22.5",
+          "title": "La legge di Ampère",
+          "page_start": 324
+        },
+        {
+          "number": "22.6",
+          "title": "Interazione tra dipoli magnetici",
+          "page_start": 326
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "title": "Elettromagnetismo",
+      "page_start": 329,
+      "sections": [
+        {
+          "number": "23.1",
+          "title": "Una versione estesa della forza di Lorenz",
+          "page_start": 329
+        },
+        {
+          "number": "23.2",
+          "title": "La legge di Faraday-Neumann-Lenz",
+          "page_start": 331
+        },
+        {
+          "number": "23.3",
+          "title": "Le equazioni di Maxwell nel vuoto",
+          "page_start": 335
+        },
+        {
+          "number": "23.4",
+          "title": "Onde elettromagnetiche",
+          "page_start": 337
+        },
+        {
+          "number": "23.5",
+          "title": "Lo spettro elettromagnetico",
+          "page_start": 339
+        },
+        {
+          "number": "23.6",
+          "title": "Radiometria, fotometria e intensità luminosa",
+          "page_start": 341
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "title": "Luce e colori",
+      "page_start": 345,
+      "sections": [
+        {
+          "number": "24.1",
+          "title": "L'occhio umano e la percezione dei colori",
+          "page_start": 345
+        },
+        {
+          "number": "24.2",
+          "title": "Scomposizione della luce e sintesi additiva",
+          "page_start": 347
+        },
+        {
+          "number": "24.2.1",
+          "title": "La scomposizione della luce bianca",
+          "page_start": 348
+        },
+        {
+          "number": "24.2.2",
+          "title": "La sintesi additiva dei colori",
+          "page_start": 350
+        },
+        {
+          "number": "24.3",
+          "title": "Pigmenti e sintesi sottrattiva",
+          "page_start": 351
+        },
+        {
+          "number": "24.4",
+          "title": "Un'attività in aula",
+          "page_start": 354
+        },
+        {
+          "number": "24.5",
+          "title": "Una nota conclusiva",
+          "page_start": 357
+        }
+      ]
+    }
+  ],
+  "id": "De_Luca_Elementi_Edises",
+  "title": "Elementi di Fisica",
+  "author": "De Luca",
+  "publisher": "Edises",
+  "subject": "Fisica_Generale",
+  "type": "Competitor",
+  "format_detected": "capitolo"
+}

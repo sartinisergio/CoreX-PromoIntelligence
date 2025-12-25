@@ -1,0 +1,452 @@
+{
+  "framework": {
+    "name": "Framework Unico Valutazione Economia Politica - Programmi e Manuali",
+    "version": "1.0",
+    "description": "Framework integrato per valutare allineamento tra programmi di Economia Politica universitaria e manuali di testo, per 8 contesti formativi italiani.",
+    "date": "2025-12-15"
+  },
+  "scale": {
+    "1": "livello minimo/assente",
+    "2": "livello molto basso/sporadico",
+    "3": "livello moderato/base",
+    "4": "livello alto/articolato",
+    "5": "livello massimo/avanzato"
+  },
+  "syllabus_modules": [
+    {
+      "id": 1,
+      "name": "Scuole di pensiero economico",
+      "core_contents": [
+        "Classica (Smith, Ricardo, Say)",
+        "Neoclassica (Marshall, Walras)",
+        "Keynesiana (IS-LM, moltiplicatore)",
+        "Monetarista/Austriaca (Friedman, Hayek)"
+      ],
+      "learning_outcomes": [
+        "Confrontare paradigmi economici",
+        "Identificare assunzioni teoriche",
+        "Applicare a casi storici"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Domanda e offerta microeconomica",
+      "core_contents": [
+        "Elasticità prezzo/reddito",
+        "Equilibrio competitivo",
+        "Fallimenti mercato (beni pubblici, esternalità)",
+        "Regolazione antitrust"
+      ],
+      "learning_outcomes": [
+        "Analisi mercati",
+        "Politiche prezzi",
+        "Interventi pubblici"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Modelli impresa e mercati imperfetti",
+      "core_contents": [
+        "Utilità marginale, scelta ottima",
+        "Costi/profitto impresa",
+        "Monopolio, oligopolio",
+        "Teoria giochi base"
+      ],
+      "learning_outcomes": [
+        "Comportamento razionale",
+        "Strategie impresa",
+        "Equilibri Nash"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Mercati finanziari e moneta",
+      "core_contents": [
+        "Offerta/domanda moneta",
+        "Tassi interesse, investimenti",
+        "Banche centrali, QE",
+        "Inflazione/deflazione"
+      ],
+      "learning_outcomes": [
+        "Funzione moneta",
+        "Politica monetaria",
+        "Stabilità prezzi"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Macroeconomia breve periodo",
+      "core_contents": [
+        "PIL nominale/reale, deflatore",
+        "IS-LM keynesiana",
+        "Curva Phillips breve periodo",
+        "Politiche fiscali anticicliche"
+      ],
+      "learning_outcomes": [
+        "Congiuntura economica",
+        "Domanda aggregata",
+        "Stabilizzatori automatici"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Macroeconomia lungo periodo",
+      "core_contents": [
+        "Curva Phillips lungo periodo (NAIRU)",
+        "Domanda/offerta aggregata",
+        "Inflazione attesa",
+        "Disoccupazione naturale"
+      ],
+      "learning_outcomes": [
+        "Accelerazionismo",
+        "Neutralità moneta",
+        "Output potenziale"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Modelli di crescita economica",
+      "core_contents": [
+        "Solow-Swan base",
+        "Crescita endogena (Romer)",
+        "Contrasto divari Nord-Sud",
+        "Crescita sostenibile"
+      ],
+      "learning_outcomes": [
+        "Convergenza/divergenza",
+        "Capitale umano",
+        "Politiche crescita"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Commercio internazionale",
+      "core_contents": [
+        "Vantaggi comparati Ricardo",
+        "Heckscher-Ohlin",
+        "Termini scambio, bilancia pagamenti",
+        "Protezionismo vs libero scambio"
+      ],
+      "learning_outcomes": [
+        "Teoria commercio",
+        "Globalizzazione",
+        "Politiche commerciali"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Finanza pubblica e debito",
+      "core_contents": [
+        "Bilancio stato, deficit primario",
+        "Regola debito/PIL stabile",
+        "Welfare state, redistribuzione",
+        "Fiscal cliff, austerity"
+      ],
+      "learning_outcomes": [
+        "Sostenibilità debito",
+        "Politiche fiscali",
+        "Equità/efficienza"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Cicli economici e crisi",
+      "core_contents": [
+        "Teoria cicli reali",
+        "Bolle speculative, crisi finanziaria",
+        "Bailout, risoluzioni bancarie",
+        "Austerity vs stimoli"
+      ],
+      "learning_outcomes": [
+        "Crisi 2008",
+        "Lezioni storia economica",
+        "Prevenzione sistemica"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Economia pubblica e regolazione",
+      "core_contents": [
+        "Public choice, teoria agente-principale",
+        "Costo opportunità regolazione",
+        "Federalismo fiscale",
+        "Economia diritto"
+      ],
+      "learning_outcomes": [
+        "Fallimenti governo",
+        "Analisi costi-benefici",
+        "Decentralizzazione"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Economia e società",
+      "core_contents": [
+        "Disuguaglianza Gini, mobilità sociale",
+        "Economia comportamentale",
+        "Economia politica comparata",
+        "Sostenibilità ambientale"
+      ],
+      "learning_outcomes": [
+        "Disuguaglianze strutturali",
+        "Bias cognitivi",
+        "Modelli istituzionali"
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "id": "scuole_pensiero",
+      "name": "Scuole di pensiero",
+      "type": "contenuto",
+      "levels": {
+        "1": "Una sola scuola implicita, senza confronto.",
+        "2": "Due scuole accennate senza analisi comparata.",
+        "3": "Almeno due scuole con confronto basilare.",
+        "4": "Tre scuole con analisi delle differenze.",
+        "5": "Quattro+ scuole con confronto sistematico."
+      }
+    },
+    {
+      "id": "microeconomia",
+      "name": "Microeconomia",
+      "type": "contenuto",
+      "levels": {
+        "1": "Concetti base solo descrittivi.",
+        "2": "Domanda/offerta senza elasticità.",
+        "3": "Dom/offerta+elasticità+fallimenti base.",
+        "4": "Mercati imperfetti+regolazione.",
+        "5": "Teoria completa+applicazioni avanzate."
+      }
+    },
+    {
+      "id": "modelli_impresa",
+      "name": "Modelli impresa",
+      "type": "contenuto",
+      "levels": {
+        "1": "Impresa generica senza analisi.",
+        "2": "Costi base senza strategie.",
+        "3": "Monopolio+concorrenza imperfetta.",
+        "4": "Oligopolio+giochi semplici.",
+        "5": "Teoria giochi+strategie complete."
+      }
+    },
+    {
+      "id": "macro_breve_periodo",
+      "name": "Macro breve periodo",
+      "type": "contenuto",
+      "levels": {
+        "1": "PIL/inflazione descrittivi.",
+        "2": "IS-LM semplificato.",
+        "3": "IS-LM+Phillips base.",
+        "4": "Politiche anticicliche dettagliate.",
+        "5": "Modelli completi+esempi storici."
+      }
+    },
+    {
+      "id": "macro_lungo_periodo",
+      "name": "Macro lungo periodo",
+      "type": "contenuto",
+      "levels": {
+        "1": "Crescita descrittiva.",
+        "2": "DA/OA intuitiva.",
+        "3": "NAIRU+Phillips lungo periodo.",
+        "4": "Inflazione attesa+disoccupazione naturale.",
+        "5": "Modelli rigorosi+implicazioni policy."
+      }
+    },
+    {
+      "id": "modelli_crescita",
+      "name": "Modelli crescita",
+      "type": "contenuto",
+      "levels": {
+        "1": "Crescita solo descritta.",
+        "2": "Solow base qualitativo.",
+        "3": "Solow formalizzato.",
+        "4": "Solow+endogena base.",
+        "5": "Modelli completi+confronti empirici."
+      }
+    },
+    {
+      "id": "finanza_pubblica",
+      "name": "Finanza pubblica",
+      "type": "contenuto",
+      "levels": {
+        "1": "Bilancio stato generico.",
+        "2": "Deficit/PIL senza analisi.",
+        "3": "Regola debito stabile.",
+        "4": "Welfare+redistribuzione.",
+        "5": "Sostenibilità completa+austerity."
+      }
+    },
+    {
+      "id": "commercio_internazionale",
+      "name": "Commercio internazionale",
+      "type": "contenuto",
+      "levels": {
+        "1": "Commercio descrittivo.",
+        "2": "Ricardo qualitativo.",
+        "3": "Ricardo+Heckscher-Ohlin.",
+        "4": "Termini scambio+bilancia.",
+        "5": "Politiche commerciali+globalizzazione."
+      }
+    },
+    {
+      "id": "crisi_economiche",
+      "name": "Crisi economiche",
+      "type": "contenuto",
+      "levels": {
+        "1": "Crisi solo accennate.",
+        "2": "Crisi 2008 descrittiva.",
+        "3": "Cicli reali+bolle.",
+        "4": "Bailout+risoluzioni.",
+        "5": "Analisi completa+lezioni apprese."
+      }
+    },
+    {
+      "id": "economia_pubblica",
+      "name": "Economia pubblica",
+      "type": "contenuto",
+      "levels": {
+        "1": "Ruolo stato generico.",
+        "2": "Public choice accennato.",
+        "3": "Agente-principale base.",
+        "4": "Federalismo fiscale.",
+        "5": "Economia diritto completa."
+      }
+    },
+    {
+      "id": "chiarezza_grafica",
+      "name": "Chiarezza grafica",
+      "type": "didattico",
+      "levels": {
+        "1": "Grafici poveri/assenti.",
+        "2": "Grafici base confusi.",
+        "3": "Grafici chiari standard.",
+        "4": "Grafici eccellenti+didattici.",
+        "5": "Grafici eccezionali+interattivi."
+      }
+    },
+    {
+      "id": "esempi_istituzionali",
+      "name": "Esempi istituzionali",
+      "type": "didattico",
+      "levels": {
+        "1": "Esempi generici.",
+        "2": "Qualche esempio nazionale.",
+        "3": "Esempi UE/Italia bilanciati.",
+        "4": "Esempi ricchi+comparati.",
+        "5": "Esempi eccellenti+storici."
+      }
+    },
+    {
+      "id": "analisi_temporale",
+      "name": "Analisi temporale",
+      "type": "didattico",
+      "levels": {
+        "1": "Nessuna distinzione temporale.",
+        "2": "Distinzione implicita.",
+        "3": "Breve/lungo periodo esplicito.",
+        "4": "Analisi temporale strutturata.",
+        "5": "Transizioni dinamiche complete."
+      }
+    },
+    {
+      "id": "collegamenti_disciplinari",
+      "name": "Collegamenti disciplinari",
+      "type": "didattico",
+      "levels": {
+        "1": "Economia isolata.",
+        "2": "Collegamenti sporadici.",
+        "3": "Collegamenti adeguati.",
+        "4": "Collegamenti ricchi.",
+        "5": "Integrazione disciplinare eccellente."
+      }
+    }
+  ],
+  "program_profiles": [
+    {
+      "id": "giurisprudenza",
+      "name": "Giurisprudenza (L-14, LMG-01)",
+      "priority_modules": [2,3,9,11],
+      "requirements": {
+        "scuole_pensiero": {"required_level": 4, "weight": 0.08},
+        "microeconomia": {"required_level": 4, "weight": 0.12},
+        "modelli_impresa": {"required_level": 3, "weight": 0.10},
+        "macro_breve_periodo": {"required_level": 3, "weight": 0.07},
+        "macro_lungo_periodo": {"required_level": 3, "weight": 0.06},
+        "modelli_crescita": {"required_level": 3, "weight": 0.05},
+        "finanza_pubblica": {"required_level": 4, "weight": 0.12},
+        "commercio_internazionale": {"required_level": 2, "weight": 0.06},
+        "crisi_economiche": {"required_level": 3, "weight": 0.08},
+        "economia_pubblica": {"required_level": 4, "weight": 0.13},
+        "chiarezza_grafica": {"required_level": 3, "weight": 0.08},
+        "esempi_istituzionali": {"required_level": 4, "weight": 0.09},
+        "analisi_temporale": {"required_level": 3, "weight": 0.10},
+        "collegamenti_disciplinari": {"required_level": 4, "weight": 0.08}
+      }
+    },
+    {
+      "id": "scienze_politiche",
+      "name": "Scienze Politiche (L-36)",
+      "priority_modules": [5,6,7,9],
+      "requirements": {
+        "scuole_pensiero": {"required_level": 5, "weight": 0.10},
+        "microeconomia": {"required_level": 3, "weight": 0.08},
+        "modelli_impresa": {"required_level": 2, "weight": 0.07},
+        "macro_breve_periodo": {"required_level": 4, "weight": 0.12},
+        "macro_lungo_periodo": {"required_level": 4, "weight": 0.13},
+        "modelli_crescita": {"required_level": 5, "weight": 0.14},
+        "finanza_pubblica": {"required_level": 4, "weight": 0.12},
+        "commercio_internazionale": {"required_level": 3, "weight": 0.08},
+        "crisi_economiche": {"required_level": 4, "weight": 0.11},
+        "economia_pubblica": {"required_level": 3, "weight": 0.10},
+        "chiarezza_grafica": {"required_level": 3, "weight": 0.08},
+        "esempi_istituzionali": {"required_level": 4, "weight": 0.09},
+        "analisi_temporale": {"required_level": 4, "weight": 0.11},
+        "collegamenti_disciplinari": {"required_level": 4, "weight": 0.08}
+      }
+    }
+  ],
+  "manual_profiles": [
+    {
+      "id": "manuale_A",
+      "name": "Manuale A - Quantitativo",
+      "scores": {
+        "scuole_pensiero": 3,
+        "microeconomia": 5,
+        "modelli_impresa": 5,
+        "macro_breve_periodo": 4,
+        "macro_lungo_periodo": 4,
+        "modelli_crescita": 4,
+        "finanza_pubblica": 3,
+        "commercio_internazionale": 3,
+        "crisi_economiche": 3,
+        "economia_pubblica": 2,
+        "chiarezza_grafica": 5,
+        "esempi_istituzionali": 2,
+        "analisi_temporale": 4,
+        "collegamenti_disciplinari": 2
+      }
+    }
+  ],
+  "alignment_method": {
+    "description": "Allineamento = media ponderata dei criteri: score_i = max(0, 1 - |required_level_i - offered_score_i| / 4)",
+    "formula": "alignment = Σ(weight_i × score_i) / Σ(weight_i)",
+    "interpretation": {
+      "85-100": "Eccellente - Adozione consigliata",
+      "70-84": "Buono - Raccomandato+integrazioni",
+      "55-69": "Sufficiente - Con riserva",
+      "<55": "Sconsigliato - Non adottare"
+    }
+  },
+  "example_match": {
+    "program_id": "giurisprudenza",
+    "manual_id": "manuale_A",
+    "overall_alignment": 72.3,
+    "judgment": "Buono",
+    "recommendation": "Eccellente per microeconomia, necessita integrazioni su economia pubblica e esempi istituzionali",
+    "strong_criteria": ["microeconomia", "modelli_impresa", "chiarezza_grafica"],
+    "weak_criteria": ["economia_pubblica", "esempi_istituzionali", "scuole_pensiero"]
+  }
+}

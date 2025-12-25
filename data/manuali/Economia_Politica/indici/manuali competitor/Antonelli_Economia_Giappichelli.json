@@ -1,0 +1,629 @@
+{
+  "id": "Antonelli_Economia",
+  "title": "Economia",
+  "author": "Antonelli et al.",
+  "publisher": "Giappichelli",
+  "subject": "Economia politica",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Consumatore e domanda di mercato",
+      "page_start": 1,
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "Analisi microeconomica del consumo nel pensiero economico",
+          "page_start": 2
+        },
+        {
+          "number": "1.2",
+          "title": "Agenti economici",
+          "page_start": 3
+        },
+        {
+          "number": "1.3",
+          "title": "Teoria neoclassica del consumo",
+          "page_start": 3
+        },
+        {
+          "number": "1.4",
+          "title": "Insieme dei panieri disponibili",
+          "page_start": 5
+        },
+        {
+          "number": "1.5",
+          "title": "Vincolo di bilancio",
+          "page_start": 6
+        },
+        {
+          "number": "1.6",
+          "title": "Preferenze del consumatore",
+          "page_start": 9
+        },
+        {
+          "number": "1.7",
+          "title": "Curve di indifferenza",
+          "page_start": 11
+        },
+        {
+          "number": "1.8",
+          "title": "Forma delle curve di indifferenza",
+          "page_start": 13
+        },
+        {
+          "number": "1.9",
+          "title": "Scelta del paniere ottimale del consumatore",
+          "page_start": 15
+        },
+        {
+          "number": "1.10",
+          "title": "Variazioni del reddito monetario",
+          "page_start": 18
+        },
+        {
+          "number": "1.11",
+          "title": "Effetto reddito e effetto sostituzione",
+          "page_start": 19
+        },
+        {
+          "number": "1.12",
+          "title": "Costruzione della curva di domanda individuale",
+          "page_start": 23
+        },
+        {
+          "number": "1.13",
+          "title": "Costruzione della curva di domanda di mercato",
+          "page_start": 24
+        },
+        {
+          "number": "1.14",
+          "title": "Funzione di domanda inversa",
+          "page_start": 26
+        },
+        {
+          "number": "1.15",
+          "title": "Interazioni tra i consumatori",
+          "page_start": 26
+        },
+        {
+          "number": "1.16",
+          "title": "Surplus o sovrapppiù del consumatore",
+          "page_start": 28
+        },
+        {
+          "number": "1.17",
+          "title": "Elasticità della domanda",
+          "page_start": 30
+        },
+        {
+          "number": "1.18",
+          "title": "Funzione di utilità del consumatore",
+          "page_start": 38
+        },
+        {
+          "number": "1.19",
+          "title": "Scelta ottimale del consumatore",
+          "page_start": 45
+        },
+        {
+          "number": "1.20",
+          "title": "Curva di Engel",
+          "page_start": 48
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Impresa e teoria della produzione",
+      "page_start": 55,
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "Ipotesi sul comportamento dell'impresa",
+          "page_start": 57
+        },
+        {
+          "number": "2.2",
+          "title": "Tecnologia dell'impresa: funzione di produzione",
+          "page_start": 59
+        },
+        {
+          "number": "2.3",
+          "title": "Struttura dei costi dell'impresa: costi di breve e di lungo periodo",
+          "page_start": 71
+        },
+        {
+          "number": "2.4",
+          "title": "Tecnologia dell'impresa: funzione di produzione e isoquanti",
+          "page_start": 90
+        },
+        {
+          "number": "2.5",
+          "title": "Scelta ottima dell'impresa: un problema a due stadi",
+          "page_start": 99
+        },
+        {
+          "number": "2.6",
+          "title": "Tecnica di produzione economicamente efficiente: minimizzazione dei costi",
+          "page_start": 100
+        },
+        {
+          "number": "2.7",
+          "title": "Contratti incompleti, diritti di proprietà e impresa",
+          "page_start": 106
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Mercati dei beni e dei fattori produttivi in concorrenza perfetta",
+      "page_start": 121,
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "Imprese in concorrenza perfetta: equilibrio di breve periodo e curva di offerta",
+          "page_start": 123
+        },
+        {
+          "number": "3.2",
+          "title": "Curva di offerta di breve periodo dell'industria",
+          "page_start": 133
+        },
+        {
+          "number": "3.3",
+          "title": "Equilibrio dell'impresa e curva di offerta di lungo periodo",
+          "page_start": 135
+        },
+        {
+          "number": "3.4",
+          "title": "Elasticità dell'offerta di mercato",
+          "page_start": 142
+        },
+        {
+          "number": "3.5",
+          "title": "Equilibrio fra domanda e offerta sul mercato dei beni di concorrenza perfetta",
+          "page_start": 144
+        },
+        {
+          "number": "3.6",
+          "title": "Surplus del produttore",
+          "page_start": 146
+        },
+        {
+          "number": "3.7",
+          "title": "Equilibrio economico generale e teoremi dell'economia del benessere",
+          "page_start": 147
+        },
+        {
+          "number": "3.8",
+          "title": "Domanda di lavoro di breve periodo in mercati di concorrenza perfetta",
+          "page_start": 151
+        },
+        {
+          "number": "3.9",
+          "title": "Offerta di lavoro di breve periodo in mercati di concorrenza perfetta",
+          "page_start": 155
+        },
+        {
+          "number": "3.10",
+          "title": "Interazioni tra domanda e offerta ed equilibrio del mercato del lavoro",
+          "page_start": 158
+        },
+        {
+          "number": "3.11",
+          "title": "Disequilibrio sul mercato del lavoro",
+          "page_start": 161
+        },
+        {
+          "number": "3.12",
+          "title": "Mercati del capitale in concorrenza perfetta",
+          "page_start": 163
+        },
+        {
+          "number": "3.13",
+          "title": "Domanda di capitale fisico in concorrenza perfetta",
+          "page_start": 163
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Fallimenti del mercato",
+      "page_start": 167,
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "Inquadramento storico-metodologico",
+          "page_start": 169
+        },
+        {
+          "number": "4.2",
+          "title": "Esternalità",
+          "page_start": 171
+        },
+        {
+          "number": "4.3",
+          "title": "Beni pubblici",
+          "page_start": 184
+        },
+        {
+          "number": "4.4",
+          "title": "Asimmetrie informative",
+          "page_start": 190
+        },
+        {
+          "number": "4.5",
+          "title": "Esternalità e teorema di Coase",
+          "page_start": 196
+        },
+        {
+          "number": "4.6",
+          "title": "Permessi negoziabili e imposta pigouviana",
+          "page_start": 198
+        },
+        {
+          "number": "4.7",
+          "title": "Offerta di beni pubblici",
+          "page_start": 201
+        },
+        {
+          "number": "4.8",
+          "title": "Asimmetrie informative e teoria dell'impresa",
+          "page_start": 204
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Forme di mercato diverse dalla concorrenza perfetta",
+      "page_start": 219,
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "Monopolio, concorrenza monopolistica e oligopolio in prospettiva storica",
+          "page_start": 219
+        },
+        {
+          "number": "5.2",
+          "title": "Potere di mercato",
+          "page_start": 221
+        },
+        {
+          "number": "5.3",
+          "title": "Monopolio",
+          "page_start": 224
+        },
+        {
+          "number": "5.4",
+          "title": "Concorrenza monopolistica",
+          "page_start": 242
+        },
+        {
+          "number": "5.5",
+          "title": "Oligopolio",
+          "page_start": 246
+        },
+        {
+          "number": "5.6",
+          "title": "Relazione tra ricavo totale, medio e marginale in monopolio",
+          "page_start": 254
+        },
+        {
+          "number": "5.7",
+          "title": "Curva di domanda a gomito nel mercato di oligopolio",
+          "page_start": 256
+        },
+        {
+          "number": "5.8",
+          "title": "Teoria dei giochi come strumento di analisi dell'oligopolio",
+          "page_start": 258
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Economia del benessere",
+      "page_start": 271,
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "Analisi di benessere nel pensiero economico",
+          "page_start": 271
+        },
+        {
+          "number": "6.2",
+          "title": "Pareto-efficienza ed equilibrio di mercato",
+          "page_start": 274
+        },
+        {
+          "number": "6.3",
+          "title": "Surplus del consumatore, del produttore e totale",
+          "page_start": 280
+        },
+        {
+          "number": "6.4",
+          "title": "Effetti sul benessere di interventi governativi in un mercato di concorrenza perfetta: analisi di equilibrio parziale",
+          "page_start": 282
+        },
+        {
+          "number": "6.5",
+          "title": "Funzioni di benessere sociale",
+          "page_start": 293
+        },
+        {
+          "number": "6.6",
+          "title": "Funzioni di benessere sociale, teorema dell'impossibilità di Arrow e paradosso di Condorcet",
+          "page_start": 294
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Variabili macroeconomiche, contabilità nazionale e bilancia dei pagamenti",
+      "page_start": 297,
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "Circuito del reddito e nozioni di flusso e stock",
+          "page_start": 298
+        },
+        {
+          "number": "7.2",
+          "title": "Definizione di Prodotto Interno Lordo",
+          "page_start": 302
+        },
+        {
+          "number": "7.3",
+          "title": "Bilancia dei pagamenti e posizione patrimoniale sull'estero",
+          "page_start": 317
+        },
+        {
+          "number": "7.4",
+          "title": "Definizione e misurazione dell'inflazione",
+          "page_start": 324
+        },
+        {
+          "number": "7.5",
+          "title": "Definizione e misurazione di occupazione e disoccupazione",
+          "page_start": 331
+        },
+        {
+          "number": "7.6",
+          "title": "Conti economici nazionali",
+          "page_start": 337
+        },
+        {
+          "number": "7.7",
+          "title": "Indici di volume e di prezzo",
+          "page_start": 342
+        },
+        {
+          "number": "7.8",
+          "title": "Durata della disoccupazione e interazione tra flussi e stock nei mercati del lavoro",
+          "page_start": 347
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Mercato dei beni e determinazione del PIL di equilibrio",
+      "page_start": 351,
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "Ipotesi di base del modello di determinazione del PIL",
+          "page_start": 352
+        },
+        {
+          "number": "8.2",
+          "title": "Relazioni fondamentali del modello",
+          "page_start": 357
+        },
+        {
+          "number": "8.3",
+          "title": "Determinazione del livello del PIL di equilibrio",
+          "page_start": 370
+        },
+        {
+          "number": "8.4",
+          "title": "PIL di equilibrio in economia aperta con regime di tassazione a somma fissa",
+          "page_start": 371
+        },
+        {
+          "number": "8.5",
+          "title": "PIL di equilibrio, risparmi e investimenti",
+          "page_start": 376
+        },
+        {
+          "number": "8.6",
+          "title": "Regimi di tassazione e funzione del consumo",
+          "page_start": 382
+        },
+        {
+          "number": "8.7",
+          "title": "Moltiplicatore dinamico della spesa pubblica e delle altre variabili esogene con tassazione a somma fissa",
+          "page_start": 384
+        },
+        {
+          "number": "8.8",
+          "title": "Moltiplicatore in economia aperta con tassazione proporzionale al reddito",
+          "page_start": 388
+        },
+        {
+          "number": "8.9",
+          "title": "Teorema del bilancio in pareggio in economia chiusa con tassazione a somma fissa",
+          "page_start": 391
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Modello IS-LM",
+      "page_start": 397,
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "Tasso di interesse e mercati di riferimento",
+          "page_start": 399
+        },
+        {
+          "number": "9.2",
+          "title": "Mercato della moneta",
+          "page_start": 401
+        },
+        {
+          "number": "9.3",
+          "title": "Mercato dei beni",
+          "page_start": 409
+        },
+        {
+          "number": "9.4",
+          "title": "Equilibrio nel modello IS-LM",
+          "page_start": 415
+        },
+        {
+          "number": "9.5",
+          "title": "Politiche economiche",
+          "page_start": 417
+        },
+        {
+          "number": "9.6",
+          "title": "Efficacia delle politiche economiche",
+          "page_start": 425
+        },
+        {
+          "number": "9.7",
+          "title": "Progetti di investimento e analisi costi-benefici",
+          "page_start": 431
+        },
+        {
+          "number": "9.8",
+          "title": "Processo di creazione della moneta e sistema bancario",
+          "page_start": 433
+        },
+        {
+          "number": "9.9",
+          "title": "Equilibrio sul mercato dei titoli",
+          "page_start": 438
+        },
+        {
+          "number": "9.10",
+          "title": "Disequilibrio nel modello IS-LM",
+          "page_start": 439
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Modello della domanda aggregata e dell'offerta aggregata (AD-AS)",
+      "page_start": 445,
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "Curva di domanda aggregata",
+          "page_start": 446
+        },
+        {
+          "number": "10.2",
+          "title": "Curva di offerta aggregata",
+          "page_start": 449
+        },
+        {
+          "number": "10.3",
+          "title": "Equilibrio macroeconomico nel breve periodo ed effetti dei cambiamenti di domanda e offerta aggregata",
+          "page_start": 455
+        },
+        {
+          "number": "10.4",
+          "title": "Legge di Okun e curva di Phillips",
+          "page_start": 462
+        },
+        {
+          "number": "10.5",
+          "title": "Offerta aggregata nel modello keynesiano",
+          "page_start": 467
+        },
+        {
+          "number": "10.6",
+          "title": "Equilibrio macroeconomico keynesiano di breve periodo (con disoccupazione involontaria)",
+          "page_start": 470
+        },
+        {
+          "number": "10.7",
+          "title": "Modello di Friedman e aspettative adattive",
+          "page_start": 472
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Salario e occupazione nel modello di concorrenza imperfetta",
+      "page_start": 483,
+      "sections": [
+        {
+          "number": "11.1",
+          "title": "Oltre Keynes: Nuova Macroeconomia Classica e Nuova Macroeconomia Keynesiana",
+          "page_start": 484
+        },
+        {
+          "number": "11.2",
+          "title": "Modello di concorrenza imperfetta",
+          "page_start": 488
+        },
+        {
+          "number": "11.3",
+          "title": "Politiche economiche nel modello di concorrenza imperfetta",
+          "page_start": 497
+        },
+        {
+          "number": "11.4",
+          "title": "Nuova Macroeconomia Classica",
+          "page_start": 502
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Economie aperte",
+      "page_start": 507,
+      "sections": [
+        {
+          "number": "12.1",
+          "title": "Tasso di cambio",
+          "page_start": 507
+        },
+        {
+          "number": "12.2",
+          "title": "Tasso di cambio reale ed esportazioni nette",
+          "page_start": 513
+        },
+        {
+          "number": "12.3",
+          "title": "Determinazione del tasso di cambio",
+          "page_start": 517
+        },
+        {
+          "number": "12.4",
+          "title": "Modello IS-LM in economia aperta",
+          "page_start": 530
+        },
+        {
+          "number": "12.5",
+          "title": "Regimi di cambio e crisi valutarie",
+          "page_start": 533
+        },
+        {
+          "number": "12.8",
+          "title": "Beni non commerciabili, tasso di cambio reale ed effetto Balassa-Samuelson",
+          "page_start": 538
+        },
+        {
+          "number": "12.9",
+          "title": "Determinazione del tasso di cambio assumendo sostituibilità imperfetta tra attività nazionali ed estere",
+          "page_start": 540
+        }
+      ]
+    }
+  ]
+}

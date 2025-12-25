@@ -1,0 +1,561 @@
+{
+  "id": "Brue_essenziale",
+  "title": "L'essenziale di Economia",
+  "author": "Brue Stanley L., McConnell Campbell R., Flynn Sean M.",
+  "publisher": "Zanichelli",
+  "subject": "Economia Politica",
+  "type": "zanichelli",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Limiti, alternative e scelte",
+      "page_start": 1,
+      "sections": [
+        {
+          "title": "Il punto di vista economico",
+          "page_start": 1
+        },
+        {
+          "title": "Teorie, principi e modelli",
+          "page_start": 4
+        },
+        {
+          "title": "Microeconomia e macroeconomia",
+          "page_start": 5
+        },
+        {
+          "title": "Il problema economico dei singoli individui",
+          "page_start": 6
+        },
+        {
+          "title": "Il problema economico della società",
+          "page_start": 9
+        },
+        {
+          "title": "Il modello delle possibilità produttive",
+          "page_start": 10
+        },
+        {
+          "title": "Disoccupazione, crescita e futuro",
+          "page_start": 13
+        },
+        {
+          "title": "Appendice al capitolo 1",
+          "page_start": 20
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Sistema di mercato e flusso circolare",
+      "page_start": 26,
+      "sections": [
+        {
+          "title": "I sistemi economici",
+          "page_start": 26
+        },
+        {
+          "title": "Le caratteristiche del sistema di mercato",
+          "page_start": 28
+        },
+        {
+          "title": "Le quattro domande fondamentali",
+          "page_start": 32
+        },
+        {
+          "title": "Il modello di flusso circolare",
+          "page_start": 36
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Domanda, offerta ed equilibrio di mercato",
+      "page_start": 42,
+      "sections": [
+        {
+          "title": "La domanda",
+          "page_start": 42
+        },
+        {
+          "title": "L'offerta",
+          "page_start": 48
+        },
+        {
+          "title": "L'equilibrio di mercato",
+          "page_start": 51
+        },
+        {
+          "title": "I cambiamenti della domanda, dell'offerta e dell'equilibrio",
+          "page_start": 53
+        },
+        {
+          "title": "I controlli dei prezzi",
+          "page_start": 55
+        },
+        {
+          "title": "Appendice al capitolo 3",
+          "page_start": 62
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "L'elasticità della domanda e dell'offerta",
+      "page_start": 68,
+      "sections": [
+        {
+          "title": "L'elasticità della domanda al prezzo",
+          "page_start": 68
+        },
+        {
+          "title": "L'elasticità dell'offerta al prezzo",
+          "page_start": 78
+        },
+        {
+          "title": "L'elasticità della domanda al reddito",
+          "page_start": 82
+        },
+        {
+          "title": "L'elasticità incrociata della domanda al prezzo",
+          "page_start": 82
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "I fallimenti del mercato: beni pubblici ed esternalità",
+      "page_start": 88,
+      "sections": [
+        {
+          "title": "I fallimenti del mercato nei mercati concorrenziali",
+          "page_start": 88
+        },
+        {
+          "title": "Il funzionamento efficiente dei mercati",
+          "page_start": 89
+        },
+        {
+          "title": "Beni privati e beni pubblici",
+          "page_start": 90
+        },
+        {
+          "title": "Le esternalità",
+          "page_start": 95
+        },
+        {
+          "title": "Il finanziamento del settore pubblico: la tassazione",
+          "page_start": 102
+        },
+        {
+          "title": "Il ruolo dello Stato nell'economia",
+          "page_start": 104
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "L'impresa e i suoi costi",
+      "page_start": 109,
+      "sections": [
+        {
+          "title": "I costi economici",
+          "page_start": 109
+        },
+        {
+          "title": "Le relazioni di produzione di breve periodo",
+          "page_start": 113
+        },
+        {
+          "title": "I costi di produzione di breve periodo",
+          "page_start": 117
+        },
+        {
+          "title": "I costi di produzione di lungo periodo",
+          "page_start": 121
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "La concorrenza perfetta",
+      "page_start": 132,
+      "sections": [
+        {
+          "title": "I quattro modelli del mercato",
+          "page_start": 132
+        },
+        {
+          "title": "La concorrenza perfetta: caratteristiche ed esempi",
+          "page_start": 133
+        },
+        {
+          "title": "La domanda di un venditore perfettamente concorrenziale",
+          "page_start": 134
+        },
+        {
+          "title": "La massimizzazione del profitto nel breve periodo",
+          "page_start": 136
+        },
+        {
+          "title": "Costo marginale e offerta di breve periodo",
+          "page_start": 141
+        },
+        {
+          "title": "La massimizzazione del profitto nel lungo periodo",
+          "page_start": 145
+        },
+        {
+          "title": "Concorrenza perfetta ed efficienza",
+          "page_start": 151
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Il monopolio puro",
+      "page_start": 156,
+      "sections": [
+        {
+          "title": "Il monopolio puro: un'introduzione",
+          "page_start": 156
+        },
+        {
+          "title": "Le barriere all'entrata",
+          "page_start": 157
+        },
+        {
+          "title": "La domanda in regime di monopolio",
+          "page_start": 159
+        },
+        {
+          "title": "Determinare prezzo e quantità",
+          "page_start": 161
+        },
+        {
+          "title": "Gli effetti economici del monopolio",
+          "page_start": 164
+        },
+        {
+          "title": "La discriminazione di prezzo",
+          "page_start": 168
+        },
+        {
+          "title": "Monopolio e politica antitrust",
+          "page_start": 171
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Concorrenza monopolistica e oligopolio",
+      "page_start": 178,
+      "sections": [
+        {
+          "title": "La concorrenza monopolistica",
+          "page_start": 178
+        },
+        {
+          "title": "Prezzo e quantità in concorrenza monopolistica",
+          "page_start": 181
+        },
+        {
+          "title": "Concorrenza monopolistica ed efficienza",
+          "page_start": 183
+        },
+        {
+          "title": "L'oligopolio",
+          "page_start": 185
+        },
+        {
+          "title": "Il comportamento oligopolistico: una panoramica sulla teoria dei giochi",
+          "page_start": 186
+        },
+        {
+          "title": "Il modello della curva di domanda spezzata",
+          "page_start": 189
+        },
+        {
+          "title": "La collusione",
+          "page_start": 191
+        },
+        {
+          "title": "Oligopolio e pubblicità",
+          "page_start": 194
+        },
+        {
+          "title": "Oligopolio ed efficienza",
+          "page_start": 196
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "PIL e crescita economica",
+      "page_start": 201,
+      "sections": [
+        {
+          "title": "Il prodotto interno lordo",
+          "page_start": 201
+        },
+        {
+          "title": "Misurare il PIL",
+          "page_start": 204
+        },
+        {
+          "title": "PIL nominale e PIL reale",
+          "page_start": 207
+        },
+        {
+          "title": "La crescita economica",
+          "page_start": 208
+        },
+        {
+          "title": "Le determinanti della crescita",
+          "page_start": 210
+        },
+        {
+          "title": "L'analisi delle possibilità produttive",
+          "page_start": 212
+        },
+        {
+          "title": "Le cause della crescita",
+          "page_start": 214
+        },
+        {
+          "title": "Le recenti fluttuazioni della crescita media della produttività",
+          "page_start": 218
+        },
+        {
+          "title": "Desiderabilità e sostenibilità della crescita",
+          "page_start": 221
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Ciclo economico, disoccupazione e inflazione",
+      "page_start": 226,
+      "sections": [
+        {
+          "title": "Il ciclo economico",
+          "page_start": 226
+        },
+        {
+          "title": "La disoccupazione",
+          "page_start": 231
+        },
+        {
+          "title": "L'inflazione",
+          "page_start": 234
+        },
+        {
+          "title": "Gli effetti ridistributivi dell'inflazione",
+          "page_start": 237
+        },
+        {
+          "title": "L'inflazione incide sulla produzione?",
+          "page_start": 239
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Domanda aggregata e offerta aggregata",
+      "page_start": 244,
+      "sections": [
+        {
+          "title": "La domanda aggregata",
+          "page_start": 244
+        },
+        {
+          "title": "I cambiamenti della domanda aggregata",
+          "page_start": 245
+        },
+        {
+          "title": "L'offerta aggregata",
+          "page_start": 251
+        },
+        {
+          "title": "I cambiamenti dell'offerta aggregata",
+          "page_start": 255
+        },
+        {
+          "title": "Livello dei prezzi di equilibrio e PIL reale di equilibrio",
+          "page_start": 258
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Politica fiscale, disavanzo e debito",
+      "page_start": 269,
+      "sections": [
+        {
+          "title": "Politica fiscale e modello DA-OA",
+          "page_start": 269
+        },
+        {
+          "title": "La stabilizzazione automatica",
+          "page_start": 272
+        },
+        {
+          "title": "Valutare la politica fiscale",
+          "page_start": 273
+        },
+        {
+          "title": "Problemi, critiche e complicazioni",
+          "page_start": 275
+        },
+        {
+          "title": "Il debito pubblico in Italia",
+          "page_start": 277
+        },
+        {
+          "title": "Preoccupazioni infondate?",
+          "page_start": 279
+        },
+        {
+          "title": "Problemi sostanziali",
+          "page_start": 281
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Moneta, sistema bancario e istituzioni finanziarie",
+      "page_start": 286,
+      "sections": [
+        {
+          "title": "Le funzioni della moneta",
+          "page_start": 286
+        },
+        {
+          "title": "Le componenti dell'offerta di moneta",
+          "page_start": 287
+        },
+        {
+          "title": "Cosa 'garantisce' l'offerta di moneta?",
+          "page_start": 290
+        },
+        {
+          "title": "La banca centrale e il sistema bancario",
+          "page_start": 292
+        },
+        {
+          "title": "La crisi finanziaria del 2007-2008",
+          "page_start": 293
+        },
+        {
+          "title": "I cambiamenti normativi in seguito alla crisi",
+          "page_start": 296
+        },
+        {
+          "title": "Il sistema bancario a riserva frazionaria",
+          "page_start": 296
+        },
+        {
+          "title": "Una singola banca ordinaria",
+          "page_start": 297
+        },
+        {
+          "title": "Il sistema bancario: l'espansione multipla dei depositi",
+          "page_start": 302
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Tassi di interesse e politica monetaria",
+      "page_start": 309,
+      "sections": [
+        {
+          "title": "I tassi di interesse",
+          "page_start": 309
+        },
+        {
+          "title": "La domanda di moneta",
+          "page_start": 309
+        },
+        {
+          "title": "Gli strumenti di politica monetaria",
+          "page_start": 313
+        },
+        {
+          "title": "Politica monetaria, PIL reale e livello dei prezzi",
+          "page_start": 317
+        },
+        {
+          "title": "La politica monetaria in azione",
+          "page_start": 321
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Commercio internazionale e tassi di cambio",
+      "page_start": 327,
+      "sections": [
+        {
+          "title": "Alcuni dati sul commercio internazionale",
+          "page_start": 327
+        },
+        {
+          "title": "La base economica dello scambio",
+          "page_start": 328
+        },
+        {
+          "title": "Il mercato dei cambi",
+          "page_start": 333
+        },
+        {
+          "title": "Politiche pubbliche e commercio internazionale",
+          "page_start": 337
+        },
+        {
+          "title": "Tre argomentazioni a favore del protezionismo",
+          "page_start": 339
+        },
+        {
+          "title": "Le conseguenze del cambiamento della competitività internazionale",
+          "page_start": 341
+        },
+        {
+          "title": "Gli accordi commerciali multilaterali e le aree di libero scambio",
+          "page_start": 342
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Disuguaglianza del reddito e povertà",
+      "page_start": 350,
+      "sections": [
+        {
+          "title": "I dati sulla disuguaglianza del reddito",
+          "page_start": 350
+        },
+        {
+          "title": "Le cause della disuguaglianza del reddito",
+          "page_start": 353
+        },
+        {
+          "title": "La disuguaglianza del reddito nel tempo",
+          "page_start": 356
+        },
+        {
+          "title": "Equità ed efficienza",
+          "page_start": 358
+        },
+        {
+          "title": "L'economia della povertà",
+          "page_start": 361
+        },
+        {
+          "title": "Il sistema di ridistribuzione del reddito in Italia",
+          "page_start": 362
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "framework": {
+    "name": "Framework Unico Valutazione Fisica Generale 1 - Multidisciplinare",
+    "version": "1.0",
+    "description": "Framework integrato per valutare allineamento programmi Fisica Generale 1 universitaria e manuali, per Matematica/Fisica/Ingegneria/Chimica.",
+    "date": "2025-12-15"
+  },
+  "scale": {
+    "1": "livello minimo/assente",
+    "2": "livello molto basso/sporadico",
+    "3": "livello moderato/base",
+    "4": "livello alto/articolato",
+    "5": "livello massimo/avanzato"
+  },
+  "syllabus_modules": [
+    {
+      "id": 1,
+      "name": "Grandezze fisiche e vettori",
+      "core_contents": [
+        "Sistema SI, analisi dimensionale",
+        "Vettori: modulo, somma, prodotto scalare",
+        "Ordini di grandezza, stime"
+      ],
+      "learning_outcomes": [
+        "Analisi dimensionale corretta",
+        "Formalismo vettoriale fluido",
+        "Stime fisiche realistiche"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Cinematica punto materiale",
+      "core_contents": [
+        "Moto rettilineo uniforme/accelerato",
+        "Moto parabolico, circolare",
+        "Vettori posizione/velocità/accelerazione"
+      ],
+      "learning_outcomes": [
+        "Grafici moto 1D/2D/3D",
+        "Traiettorie complesse",
+        "Velocità istantanee"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Dinamica newtoniana",
+      "core_contents": [
+        "Leggi Newton complete",
+        "Forze: attrito, elastica, tensione",
+        "Sistemi vincolati"
+      ],
+      "learning_outcomes": [
+        "Diagrammi corpo libero",
+        "Equazioni moto 2D/3D",
+        "Vincoli ideali"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Lavoro, energia, potenza",
+      "core_contents": [
+        "Teorema lavoro-energia",
+        "Energia potenziale, conservazione",
+        "Rendimento, potenza"
+      ],
+      "learning_outcomes": [
+        "Bilanci energetici",
+        "Forze conservative",
+        "Applicazioni reali"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Quantità moto e urti",
+      "core_contents": [
+        "Conservazione quantità moto",
+        "Urti elastici/anelastici 1D/2D",
+        "Centro di massa"
+      ],
+      "learning_outcomes": [
+        "Calcoli urti complessi",
+        "Sistemi particelle",
+        "Moto centro massa"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Moto rotazionale",
+      "core_contents": [
+        "Momento d'inerzia, rotolamento",
+        "Dinamica rotazionale",
+        "Energia cinetica rotazionale"
+      ],
+      "learning_outcomes": [
+        "Moto composto trasl+rot",
+        "Calcolo momenti inerzia",
+        "Rotolamento senza scivolamento"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Momento angolare",
+      "core_contents": [
+        "Conservazione momento angolare",
+        "Esempi: pattinatore, giroscopio"
+      ],
+      "learning_outcomes": [
+        "Applicazioni conservazione",
+        "Moto precessione"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Gravitazione",
+      "core_contents": [
+        "Legge Newton, orbite kepleriane",
+        "Campo/potenziale gravitazionale",
+        "Satelliti artificiali"
+      ],
+      "learning_outcomes": [
+        "Orbite ellittiche",
+        "Velocità di fuga"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Statica e equilibrio",
+      "core_contents": [
+        "Equilibrio statico",
+        "Leve, travi, centro massa",
+        "Stabilità"
+      ],
+      "learning_outcomes": [
+        "Strutture statiche",
+        "Metodo analitico forze"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Termologia",
+      "core_contents": [
+        "Scale termometriche, dilatazione",
+        "Calore specifico, calore latente",
+        "Trasferimenti calore"
+      ],
+      "learning_outcomes": [
+        "Calcoli termici",
+        "Cambi stato"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Gas ideali e 1° principio",
+      "core_contents": [
+        "Eq. stato gas ideale",
+        "Trasformazioni termodinamiche",
+        "1° principio termodinamica"
+      ],
+      "learning_outcomes": [
+        "Bilanci energetici gas",
+        "Lavoro gas quasi-statico"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "2° principio termodinamica",
+      "core_contents": [
+        "Rendimento Carnot",
+        "Cicli reversibili",
+        "Introduzione entropia"
+      ],
+      "learning_outcomes": [
+        "Direzionalità processi",
+        "Macchine termiche"
+      ]
+    }
+  ],
+  "criteria": [
+    {"id":"copertura_contenuti","name":"Copertura contenuti","type":"contenuto","levels":{"1":"Meno 6 moduli","2":"6-8 superficiali","3":"9 base","4":"10-11 approfonditi","5":"Tutti 12"}},
+    {"id":"profondita_adeguata","name":"Profondità adeguata","type":"contenuto","levels":{"1":"Sbagliata indirizzo","2":"Troppo base","3":"Adeguata Fis1","4":"Calibrata perfettamente","5":"Eccellente"}},
+    {"id":"esempi_pratici","name":"Esempi pratici","type":"didattico","levels":{"1":"Generici","2":"Qualche reale","3":"Adeguati","4":"Ricchi indirizzo","5":"Realistici eccellenti"}},
+    {"id":"esercizi_problemi","name":"Esercizi/problemi","type":"didattico","levels":{"1":"Pochi","2":"Adeguati","3":"Buoni","4":"Graduati abbondanti","5":"Esame-ready"}},
+    {"id":"laboratorio","name":"Laboratorio","type":"didattico","levels":{"1":"Assente","2":"Cenni","3":"Schede base","4":"Analisi dati","5":"Esperimenti completi"}},
+    {"id":"calcolo_vettoriale","name":"Calcolo vettoriale","type":"contenuto","levels":{"1":"Scalare","2":"Vettori base","3":"Prodotto scalare","4":"Formalismo sistematico","5":"Vettoriale eccellente"}},
+    {"id":"collegamenti_interdisciplinari","name":"Collegamenti interdisciplinari","type":"didattico","levels":{"1":"Isolata","2":"Pochi link","3":"Adeguati","4":"Ricchi Mat/Chim/Ing","5":"Integrazione eccellente"}},
+    {"id":"chiarezza_espositiva","name":"Chiarezza espositiva","type":"didattico","levels":{"1":"Confusa","2":"Adeguata","3":"Buona","4":"Intuitiva","5":"Cristallina"}},
+    {"id":"propedeuticita","name":"Propedeuticità","type":"didattico","levels":{"1":"Caotica","2":"Disordinata","3":"Logica","4":"Sequenza impeccabile","5":"Ottimale"}},
+    {"id":"aggiornamento","name":"Aggiornamento","type":"didattico","levels":{"1":"Datato","2":"Standard","3":"Adeguato","4":"Moderno SI","5":"All'avanguardia"}},
+    {"id":"problemi_esame","name":"Problemi esame","type":"didattico","levels":{"1":"Nessuno","2":"Qualche","3":"Adeguati","4":"Molti reali","5":"Esame identici"}},
+    {"id":"intuizione_fisica","name":"Intuizione fisica","type":"didattico","levels":{"1":"Formule","2":"Qualche grafico","3":"Buona","4":"Ricca analogie","5":"Eccellente"}},
+    {"id":"errori_studenti","name":"Errori studenti","type":"didattico","levels":{"1":"Assenti","2":"Cenni","3":"Box base","4":"Proattivo","5":"Prevenzione completa"}},
+    {"id":"allineamento_programmi","name":"Allineamento programmi","type":"contenuto","levels":{"1":"Divergente","2":"Parziale","3":"Adeguato","4":"Buon match","5":"Perfetto"}},
+    {"id":"supporto_digitale","name":"Supporto digitale","type":"didattico","levels":{"1":"Nessuno","2":"Base","3":"Sufficiente","4":"Ricco","5":"Simulazioni eccellenti"}},
+    {"id":"appendici","name":"Appendici","type":"didattico","levels":{"1":"Povere","2":"Standard","3":"Utili","4":"Complete","5":"Eccellenti"}}
+  ],
+  "program_profiles": [
+    {
+      "id": "matematica_fisica",
+      "name": "Matematica/Fisica",
+      "priority_modules": [1,2,3,4,5,6,7,8,11,12],
+      "requirements": {
+        "copertura_contenuti": {"required_level": 5, "weight": 0.08},
+        "profondita_adeguata": {"required_level": 5, "weight": 0.10},
+        "esempi_pratici": {"required_level": 4, "weight": 0.07},
+        "esercizi_problemi": {"required_level": 5, "weight": 0.08},
+        "laboratorio": {"required_level": 3, "weight": 0.06},
+        "calcolo_vettoriale": {"required_level": 5, "weight": 0.12},
+        "collegamenti_interdisciplinari": {"required_level": 4, "weight": 0.09},
+        "chiarezza_espositiva": {"required_level": 5, "weight": 0.07},
+        "propedeuticita": {"required_level": 5, "weight": 0.08},
+        "aggiornamento": {"required_level": 4, "weight": 0.06},
+        "problemi_esame": {"required_level": 4, "weight": 0.05},
+        "intuizione_fisica": {"required_level": 5, "weight": 0.09},
+        "errori_studenti": {"required_level": 4, "weight": 0.04},
+        "allineamento_programmi": {"required_level": 5, "weight": 0.07},
+        "supporto_digitale": {"required_level": 3, "weight": 0.03},
+        "appendici": {"required_level": 3, "weight": 0.03}
+      }
+    },
+    {
+      "id": "ingegneria",
+      "name": "Ingegneria",
+      "priority_modules": [2,3,4,5,6,7,9,10,11,12],
+      "requirements": {
+        "copertura_contenuti": {"required_level": 5, "weight": 0.12},
+        "profondita_adeguata": {"required_level": 4, "weight": 0.08},
+        "esempi_pratici": {"required_level": 5, "weight": 0.12},
+        "esercizi_problemi": {"required_level": 5, "weight": 0.15},
+        "laboratorio": {"required_level": 5, "weight": 0.10},
+        "calcolo_vettoriale": {"required_level": 3, "weight": 0.06},
+        "collegamenti_interdisciplinari": {"required_level": 4, "weight": 0.09},
+        "chiarezza_espositiva": {"required_level": 4, "weight": 0.06},
+        "propedeuticita": {"required_level": 4, "weight": 0.07},
+        "aggiornamento": {"required_level": 4, "weight": 0.05},
+        "problemi_esame": {"required_level": 5, "weight": 0.12},
+        "intuizione_fisica": {"required_level": 4, "weight": 0.06},
+        "errori_studenti": {"required_level": 4, "weight": 0.05},
+        "allineamento_programmi": {"required_level": 4, "weight": 0.04},
+        "supporto_digitale": {"required_level": 5, "weight": 0.08},
+        "appendici": {"required_level": 4, "weight": 0.05}
+      }
+    }
+  ],
+  "manual_profiles": [
+    {
+      "id": "manuale_A",
+      "name": "Manuale A - Fisica 1 Completa",
+      "scores": {
+        "copertura_contenuti": 5, "profondita_adeguata": 5, "esempi_pratici": 5,
+        "esercizi_problemi": 5, "laboratorio": 4, "calcolo_vettoriale": 5,
+        "collegamenti_interdisciplinari": 5, "chiarezza_espositiva": 5,
+        "propedeuticita": 5, "aggiornamento": 5, "problemi_esame": 5,
+        "intuizione_fisica": 5, "errori_studenti": 4, "allineamento_programmi": 5,
+        "supporto_digitale": 4, "appendici": 5
+      }
+    }
+  ],
+  "alignment_method": {
+    "description": "Allineamento = media ponderata: score_i = max(0, 1 - |required-offered|/4)",
+    "formula": "alignment = Σ(weight_i × score_i) / Σ(weight_i)",
+    "interpretation": {
+      "85-100": "Eccellente - Allineamento perfetto - Adozione consigliata",
+      "70-84": "Buono - Solido, piccole debolezze - Raccomandato+integrazioni",
+      "55-69": "Sufficiente - Lacune significative - Con riserva",
+      "<55": "Sconsigliato - Inadeguato - Non adottare"
+    }
+  },
+  "example_match": {
+    "program_id": "ingegneria",
+    "manual_id": "manuale_A",
+    "overall_alignment": 95.8,
+    "judgment": "Eccellente",
+    "recommendation": "Manuale perfetto per Ingegneria. Esercizi abbondanti, laboratorio completo, applicazioni pratiche eccellenti.",
+    "strong_criteria": ["esercizi_problemi", "esempi_pratici", "laboratorio"],
+    "weak_criteria": []
+  }
+}

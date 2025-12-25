@@ -1,0 +1,482 @@
+{
+  "id": "Halliday_Fondamenti",
+  "title": "Fondamenti di Fisica",
+  "author": "Halliday, Resnick, Walker",
+  "publisher": "Zanichelli",
+  "subject": "Fisica_Generale",
+  "type": "Zanichelli",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Misure",
+      "page_start": 1,
+      "sections": [
+        {"number": "1.1", "title": "Misurare le grandezze, lunghezze comprese", "page_start": 1},
+        {"number": "1.2", "title": "Tempo", "page_start": 5},
+        {"number": "1.3", "title": "Massa", "page_start": 6}
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Moto rettilineo",
+      "page_start": 12,
+      "sections": [
+        {"number": "2.1", "title": "Posizione, spostamento e velocità media", "page_start": 12},
+        {"number": "2.2", "title": "Velocità istantanea: vettoriale e scalare", "page_start": 16},
+        {"number": "2.3", "title": "Accelerazione", "page_start": 18},
+        {"number": "2.4", "title": "Accelerazione costante", "page_start": 20},
+        {"number": "2.5", "title": "Accelerazione in caduta libera", "page_start": 24},
+        {"number": "2.6", "title": "Integrazione con il metodo grafico nell'analisi del moto", "page_start": 25}
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Vettori",
+      "page_start": 39,
+      "sections": [
+        {"number": "3.1", "title": "Vettori e loro componenti", "page_start": 39},
+        {"number": "3.2", "title": "Versori: sommare i vettori in componenti", "page_start": 44},
+        {"number": "3.3", "title": "Moltiplicare i vettori", "page_start": 46}
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Moto in due e tre dimensioni",
+      "page_start": 58,
+      "sections": [
+        {"number": "4.1", "title": "Posizione e spostamento", "page_start": 58},
+        {"number": "4.2", "title": "Velocità media e velocità istantanea", "page_start": 60},
+        {"number": "4.3", "title": "Accelerazione media e accelerazione istantanea", "page_start": 62},
+        {"number": "4.4", "title": "Moto di un proiettile", "page_start": 64},
+        {"number": "4.5", "title": "Moto circolare uniforme", "page_start": 69},
+        {"number": "4.6", "title": "Moto relativo in una dimensione", "page_start": 71},
+        {"number": "4.7", "title": "Moto relativo in due dimensioni", "page_start": 73}
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Forza e moto - 1",
+      "page_start": 87,
+      "sections": [
+        {"number": "5.1", "title": "Prima e seconda legge di Newton", "page_start": 87},
+        {"number": "5.2", "title": "Alcune forze particolari", "page_start": 94},
+        {"number": "5.3", "title": "Applicare le leggi di Newton", "page_start": 98}
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Forza e moto - 2",
+      "page_start": 115,
+      "sections": [
+        {"number": "6.1", "title": "Attrito", "page_start": 115},
+        {"number": "6.2", "title": "Resistenza del mezzo e velocità limite", "page_start": 120},
+        {"number": "6.3", "title": "Moto circolare uniforme", "page_start": 122}
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Energia cinetica e lavoro",
+      "page_start": 137,
+      "sections": [
+        {"number": "7.1", "title": "Energia cinetica", "page_start": 137},
+        {"number": "7.2", "title": "Lavoro ed energia cinetica", "page_start": 139},
+        {"number": "7.3", "title": "Lavoro compiuto dalla forza gravitazionale", "page_start": 142},
+        {"number": "7.4", "title": "Lavoro compiuto dalla forza elastica", "page_start": 146},
+        {"number": "7.5", "title": "Lavoro compiuto da una generica forza variabile", "page_start": 149},
+        {"number": "7.6", "title": "Potenza", "page_start": 152}
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Energia potenziale e conservazione dell'energia",
+      "page_start": 163,
+      "sections": [
+        {"number": "8.1", "title": "Energia potenziale", "page_start": 163},
+        {"number": "8.2", "title": "Conservazione dell'energia meccanica", "page_start": 169},
+        {"number": "8.3", "title": "Leggere il grafico dell'energia potenziale", "page_start": 172},
+        {"number": "8.4", "title": "Lavoro compiuto su un sistema da una forza esterna", "page_start": 175},
+        {"number": "8.5", "title": "Conservazione dell'energia", "page_start": 178}
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Centro di massa e quantità di moto",
+      "page_start": 197,
+      "sections": [
+        {"number": "9.1", "title": "Centro di massa", "page_start": 197},
+        {"number": "9.2", "title": "Seconda legge di Newton per un sistema di punti materiali", "page_start": 200},
+        {"number": "9.3", "title": "Quantità di moto o momento lineare", "page_start": 203},
+        {"number": "9.4", "title": "Urto e impulso", "page_start": 205},
+        {"number": "9.5", "title": "Conservazione della quantità di moto", "page_start": 208},
+        {"number": "9.6", "title": "Quantità di moto ed energia cinetica negli urti", "page_start": 211},
+        {"number": "9.7", "title": "Urto elastico in una dimensione", "page_start": 214},
+        {"number": "9.8", "title": "Urto in due dimensioni", "page_start": 217},
+        {"number": "9.9", "title": "Sistema a massa variabile: un razzo", "page_start": 218}
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Rotazione",
+      "page_start": 234,
+      "sections": [
+        {"number": "10.1", "title": "Variabili rotazionali", "page_start": 234},
+        {"number": "10.2", "title": "Rotazione con accelerazione angolare costante", "page_start": 240},
+        {"number": "10.3", "title": "Relazioni tra variabili lineari e angolari", "page_start": 242},
+        {"number": "10.4", "title": "Energia cinetica rotazionale", "page_start": 245},
+        {"number": "10.5", "title": "Calcolare il momento d'inerzia", "page_start": 247},
+        {"number": "10.6", "title": "Momento torcente", "page_start": 250},
+        {"number": "10.7", "title": "Seconda legge di Newton per il moto rotatorio", "page_start": 252},
+        {"number": "10.8", "title": "Lavoro ed energia cinetica rotazionale", "page_start": 254}
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Rotolamento, momento torcente e momento angolare",
+      "page_start": 267,
+      "sections": [
+        {"number": "11.1", "title": "Rotolamento come combinazione di traslazione e rotazione", "page_start": 267},
+        {"number": "11.2", "title": "Forze ed energia cinetica nel rotolamento", "page_start": 269},
+        {"number": "11.3", "title": "Lo yo-yo", "page_start": 272},
+        {"number": "11.4", "title": "Momento torcente rivisitato", "page_start": 273},
+        {"number": "11.5", "title": "Momento angolare", "page_start": 275},
+        {"number": "11.6", "title": "Seconda legge di Newton in forma angolare", "page_start": 277},
+        {"number": "11.7", "title": "Momento angolare di un corpo rigido", "page_start": 279},
+        {"number": "11.8", "title": "Conservazione del momento angolare", "page_start": 282},
+        {"number": "11.9", "title": "Moto di precessione di un giroscopio", "page_start": 286}
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Equilibrio ed elasticità",
+      "page_start": 297,
+      "sections": [
+        {"number": "12.1", "title": "Equilibrio", "page_start": 297},
+        {"number": "12.2", "title": "Alcuni esempi di equilibrio statico", "page_start": 301},
+        {"number": "12.3", "title": "Elasticità", "page_start": 306}
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Gravitazione",
+      "page_start": 323,
+      "sections": [
+        {"number": "13.1", "title": "Newton e la legge della gravitazione universale", "page_start": 323},
+        {"number": "13.2", "title": "Gravitazione e principio di sovrapposizione", "page_start": 326},
+        {"number": "13.3", "title": "Gravitazione in prossimità della superficie terrestre", "page_start": 328},
+        {"number": "13.4", "title": "Gravitazione dentro la Terra", "page_start": 331},
+        {"number": "13.5", "title": "Energia potenziale gravitazionale", "page_start": 332},
+        {"number": "13.6", "title": "Pianeti e satelliti: le leggi di Keplero", "page_start": 336},
+        {"number": "13.7", "title": "Satelliti: orbite ed energia", "page_start": 339},
+        {"number": "13.8", "title": "Einstein e la gravitazione", "page_start": 341}
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Fluidi",
+      "page_start": 353,
+      "sections": [
+        {"number": "14.1", "title": "Fluidi, densità e pressione", "page_start": 353},
+        {"number": "14.2", "title": "Fluidi a riposo", "page_start": 355},
+        {"number": "14.3", "title": "Misurare la pressione", "page_start": 358},
+        {"number": "14.4", "title": "Principio di Pascal", "page_start": 359},
+        {"number": "14.5", "title": "Principio di Archimede", "page_start": 361},
+        {"number": "14.6", "title": "Equazione di continuità", "page_start": 365},
+        {"number": "14.7", "title": "Equazione di Bernoulli", "page_start": 368}
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Oscillazioni",
+      "page_start": 381,
+      "sections": [
+        {"number": "15.1", "title": "Moto armonico semplice", "page_start": 381},
+        {"number": "15.2", "title": "Energia nel moto armonico semplice", "page_start": 388},
+        {"number": "15.3", "title": "Oscillatore armonico semplice angolare", "page_start": 390},
+        {"number": "15.4", "title": "Pendoli e moto circolare", "page_start": 391},
+        {"number": "15.5", "title": "Moto armonico semplice smorzato", "page_start": 395},
+        {"number": "15.6", "title": "Oscillazioni forzate e risonanza", "page_start": 397}
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Onde - 1",
+      "page_start": 409,
+      "sections": [
+        {"number": "16.1", "title": "Onde trasversali", "page_start": 409},
+        {"number": "16.2", "title": "Velocità di un'onda che si propaga lungo una corda", "page_start": 416},
+        {"number": "16.3", "title": "Energia e potenza di un'onda che si propaga lungo una corda", "page_start": 417},
+        {"number": "16.4", "title": "Equazione delle onde", "page_start": 419},
+        {"number": "16.5", "title": "Interferenza tra onde", "page_start": 421},
+        {"number": "16.6", "title": "Fasori", "page_start": 425},
+        {"number": "16.7", "title": "Onde stazionarie e risonanza", "page_start": 427}
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Onde - 2",
+      "page_start": 440,
+      "sections": [
+        {"number": "17.1", "title": "Velocità del suono", "page_start": 440},
+        {"number": "17.2", "title": "Onde sonore che si propagano", "page_start": 443},
+        {"number": "17.3", "title": "Interferenza", "page_start": 445},
+        {"number": "17.4", "title": "Intensità e livello sonoro", "page_start": 448},
+        {"number": "17.5", "title": "Sorgenti di note musicali", "page_start": 450},
+        {"number": "17.6", "title": "Battimenti", "page_start": 454},
+        {"number": "17.7", "title": "Effetto Doppler", "page_start": 455},
+        {"number": "17.8", "title": "Velocità supersoniche e onde d'urto", "page_start": 459}
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Temperatura, calore e primo principio della termodinamica",
+      "page_start": 470,
+      "sections": [
+        {"number": "18.1", "title": "Temperatura", "page_start": 470},
+        {"number": "18.2", "title": "Scale Celsius e Fahrenheit", "page_start": 473},
+        {"number": "18.3", "title": "Dilatazione termica", "page_start": 475},
+        {"number": "18.4", "title": "Assorbimento di calore", "page_start": 477},
+        {"number": "18.5", "title": "Primo principio della termodinamica", "page_start": 483},
+        {"number": "18.6", "title": "Meccanismi di trasmissione del calore", "page_start": 488}
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Teoria cinetica dei gas",
+      "page_start": 503,
+      "sections": [
+        {"number": "19.1", "title": "Numero di Avogadro", "page_start": 503},
+        {"number": "19.2", "title": "Gas perfetti", "page_start": 504},
+        {"number": "19.3", "title": "Pressione, temperatura e velocità quadratica media", "page_start": 507},
+        {"number": "19.4", "title": "Energia cinetica traslazionale", "page_start": 510},
+        {"number": "19.5", "title": "Cammino libero medio", "page_start": 510},
+        {"number": "19.6", "title": "Distribuzione delle velocità molecolari", "page_start": 512},
+        {"number": "19.7", "title": "Calori specifici molari di un gas perfetto", "page_start": 515},
+        {"number": "19.8", "title": "Gradi di libertà e calori specifici molari", "page_start": 519},
+        {"number": "19.9", "title": "Espansione adiabatica di un gas perfetto", "page_start": 522}
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Entropia e secondo principio della termodinamica",
+      "page_start": 533,
+      "sections": [
+        {"number": "20.1", "title": "Entropia", "page_start": 533},
+        {"number": "20.2", "title": "Entropia nel mondo reale: le macchine termiche", "page_start": 539},
+        {"number": "20.3", "title": "Frigoriferi e macchine reali", "page_start": 544},
+        {"number": "20.4", "title": "Una prospettiva statistica sull'entropia", "page_start": 546}
+      ]
+    },
+    {
+      "number": 21,
+      "title": "Legge di Coulomb",
+      "page_start": 557,
+      "sections": [
+        {"number": "21.1", "title": "Legge di Coulomb", "page_start": 557},
+        {"number": "21.2", "title": "La carica è quantizzata", "page_start": 566},
+        {"number": "21.3", "title": "La carica si conserva", "page_start": 568}
+      ]
+    },
+    {
+      "number": 22,
+      "title": "Campi elettrici",
+      "page_start": 578,
+      "sections": [
+        {"number": "22.1", "title": "Campo elettrico", "page_start": 578},
+        {"number": "22.2", "title": "Campo elettrico generato da una carica puntiforme", "page_start": 580},
+        {"number": "22.3", "title": "Campo elettrico generato da un dipolo", "page_start": 582},
+        {"number": "22.4", "title": "Campo elettrico generato da una distribuzione lineare di carica", "page_start": 584},
+        {"number": "22.5", "title": "Campo elettrico generato da un disco carico", "page_start": 589},
+        {"number": "22.6", "title": "Carica puntiforme in un campo elettrico", "page_start": 590},
+        {"number": "22.7", "title": "Dipolo in un campo elettrico", "page_start": 592}
+      ]
+    },
+    {
+      "number": 23,
+      "title": "Legge di Gauss",
+      "page_start": 604,
+      "sections": [
+        {"number": "23.1", "title": "Flusso del campo elettrico", "page_start": 604},
+        {"number": "23.2", "title": "Legge di Gauss", "page_start": 609},
+        {"number": "23.3", "title": "Conduttore carico isolato", "page_start": 612},
+        {"number": "23.4", "title": "Applicare la legge di Gauss: simmetria cilindrica", "page_start": 615},
+        {"number": "23.5", "title": "Applicare la legge di Gauss: simmetria piana", "page_start": 616},
+        {"number": "23.6", "title": "Applicare la legge di Gauss: simmetria sferica", "page_start": 619}
+      ]
+    },
+    {
+      "number": 24,
+      "title": "Potenziale elettrico",
+      "page_start": 629,
+      "sections": [
+        {"number": "24.1", "title": "Potenziale elettrico", "page_start": 629},
+        {"number": "24.2", "title": "Superfici equipotenziali e campo elettrico", "page_start": 633},
+        {"number": "24.3", "title": "Potenziale dovuto a una particella carica", "page_start": 636},
+        {"number": "24.4", "title": "Potenziale dovuto a un dipolo elettrico", "page_start": 639},
+        {"number": "24.5", "title": "Potenziale dovuto a una distribuzione continua di carica", "page_start": 640},
+        {"number": "24.6", "title": "Calcolare il campo dal potenziale", "page_start": 642},
+        {"number": "24.7", "title": "Energia potenziale elettrica di un sistema di particelle cariche", "page_start": 644},
+        {"number": "24.8", "title": "Potenziale di un conduttore carico isolato", "page_start": 646}
+      ]
+    },
+    {
+      "number": 25,
+      "title": "Capacità elettrica",
+      "page_start": 659,
+      "sections": [
+        {"number": "25.1", "title": "Capacità elettrica", "page_start": 659},
+        {"number": "25.2", "title": "Calcolare la capacità elettrica", "page_start": 661},
+        {"number": "25.3", "title": "Condensatori in serie e in parallelo", "page_start": 664},
+        {"number": "25.4", "title": "Energia immagazzinata in un campo elettrico", "page_start": 668},
+        {"number": "25.5", "title": "Condensatore con un dielettrico", "page_start": 671},
+        {"number": "25.6", "title": "Dielettrici e legge di Gauss", "page_start": 673}
+      ]
+    },
+    {
+      "number": 26,
+      "title": "Corrente elettrica e resistenza",
+      "page_start": 683,
+      "sections": [
+        {"number": "26.1", "title": "Corrente elettrica", "page_start": 683},
+        {"number": "26.2", "title": "Densità di corrente", "page_start": 686},
+        {"number": "26.3", "title": "Resistenza e resistività", "page_start": 689},
+        {"number": "26.4", "title": "Legge di Ohm", "page_start": 693},
+        {"number": "26.5", "title": "Potenza, semiconduttori, superconduttori", "page_start": 696}
+      ]
+    },
+    {
+      "number": 27,
+      "title": "Circuiti",
+      "page_start": 706,
+      "sections": [
+        {"number": "27.1", "title": "Circuiti a maglia singola", "page_start": 706},
+        {"number": "27.2", "title": "Circuiti a più maglie", "page_start": 714},
+        {"number": "27.3", "title": "Amperometro e voltmetro", "page_start": 720},
+        {"number": "27.4", "title": "Circuiti RC", "page_start": 720}
+      ]
+    },
+    {
+      "number": 28,
+      "title": "Campo magnetico",
+      "page_start": 736,
+      "sections": [
+        {"number": "28.1", "title": "Campo magnetico e definizione di B", "page_start": 736},
+        {"number": "28.2", "title": "Campi incrociati: la scoperta dell'elettrone", "page_start": 740},
+        {"number": "28.3", "title": "Campi incrociati: l'effetto Hall", "page_start": 742},
+        {"number": "28.4", "title": "Particella carica in moto circolare", "page_start": 745},
+        {"number": "28.5", "title": "Ciclotroni e sincrotroni", "page_start": 749},
+        {"number": "28.6", "title": "Forza magnetica che agisce su un filo percorso da corrente", "page_start": 751},
+        {"number": "28.7", "title": "Momento torcente che agisce su una spira percorsa da corrente", "page_start": 753},
+        {"number": "28.8", "title": "Momento di dipolo magnetico", "page_start": 755}
+      ]
+    },
+    {
+      "number": 29,
+      "title": "Campi magnetici generati da correnti",
+      "page_start": 766,
+      "sections": [
+        {"number": "29.1", "title": "Campi magnetici generati da correnti", "page_start": 766},
+        {"number": "29.2", "title": "Forza tra due correnti parallele", "page_start": 771},
+        {"number": "29.3", "title": "Legge di Ampère", "page_start": 772},
+        {"number": "29.4", "title": "Solenoidi e toroidi", "page_start": 776},
+        {"number": "29.5", "title": "Dipolo magnetico costituito da una bobina percorsa dalla corrente", "page_start": 779}
+      ]
+    },
+    {
+      "number": 30,
+      "title": "Induzione e induttanza",
+      "page_start": 791,
+      "sections": [
+        {"number": "30.1", "title": "Legge di Faraday e legge di Lenz", "page_start": 791},
+        {"number": "30.2", "title": "Induzione e trasferimenti di energia", "page_start": 798},
+        {"number": "30.3", "title": "Campi elettrici indotti", "page_start": 801},
+        {"number": "30.4", "title": "Induttori e induttanze", "page_start": 804},
+        {"number": "30.5", "title": "Autoinduzione", "page_start": 806},
+        {"number": "30.6", "title": "Circuiti RL", "page_start": 807},
+        {"number": "30.7", "title": "Energia immagazzinata in un campo magnetico", "page_start": 810},
+        {"number": "30.8", "title": "Densità di energia in un campo magnetico", "page_start": 812},
+        {"number": "30.9", "title": "Mutua induzione", "page_start": 813}
+      ]
+    },
+    {
+      "number": 31,
+      "title": "Oscillazioni elettromagnetiche e corrente alternata",
+      "page_start": 826,
+      "sections": [
+        {"number": "31.1", "title": "Oscillazioni LC", "page_start": 826},
+        {"number": "31.2", "title": "Oscillazioni smorzate in un circuito RLC", "page_start": 832},
+        {"number": "31.3", "title": "Oscillazioni forzate in tre circuiti semplici", "page_start": 834},
+        {"number": "31.4", "title": "Circuito RLC in serie", "page_start": 841},
+        {"number": "31.5", "title": "Potenza nei circuiti in corrente alternata", "page_start": 847},
+        {"number": "31.6", "title": "Trasformatori", "page_start": 849}
+      ]
+    },
+    {
+      "number": 32,
+      "title": "Equazioni di Maxwell e magnetismo della materia",
+      "page_start": 861,
+      "sections": [
+        {"number": "32.1", "title": "Legge di Gauss per i campi magnetici", "page_start": 861},
+        {"number": "32.2", "title": "Campi magnetici indotti", "page_start": 863},
+        {"number": "32.3", "title": "Corrente di spostamento", "page_start": 865},
+        {"number": "32.4", "title": "Magneti", "page_start": 868},
+        {"number": "32.5", "title": "Magnetismo ed elettroni", "page_start": 870},
+        {"number": "32.6", "title": "Diamagnetismo", "page_start": 874},
+        {"number": "32.7", "title": "Paramagnetismo", "page_start": 876},
+        {"number": "32.8", "title": "Ferromagnetismo", "page_start": 878}
+      ]
+    },
+    {
+      "number": 33,
+      "title": "Onde elettromagnetiche",
+      "page_start": 889,
+      "sections": [
+        {"number": "33.1", "title": "Onde elettromagnetiche", "page_start": 889},
+        {"number": "33.2", "title": "Trasporto di energia e vettore di Poynting", "page_start": 896},
+        {"number": "33.3", "title": "Pressione di radiazione", "page_start": 898},
+        {"number": "33.4", "title": "Polarizzazione", "page_start": 900},
+        {"number": "33.5", "title": "Riflessione e rifrazione", "page_start": 904},
+        {"number": "33.6", "title": "Riflessione interna totale", "page_start": 909},
+        {"number": "33.7", "title": "Polarizzazione per riflessione", "page_start": 911}
+      ]
+    },
+    {
+      "number": 34,
+      "title": "Immagini",
+      "page_start": 923,
+      "sections": [
+        {"number": "34.1", "title": "Immagini e specchi piani", "page_start": 923},
+        {"number": "34.2", "title": "Specchi sferici", "page_start": 927},
+        {"number": "34.3", "title": "Superfici rifrangenti sferiche", "page_start": 932},
+        {"number": "34.4", "title": "Lenti sottili", "page_start": 935},
+        {"number": "34.5", "title": "Strumenti ottici", "page_start": 941},
+        {"number": "34.6", "title": "Tre dimostrazioni", "page_start": 944}
+      ]
+    },
+    {
+      "number": 35,
+      "title": "Interferenza",
+      "page_start": 955,
+      "sections": [
+        {"number": "35.1", "title": "Luce come onda", "page_start": 955},
+        {"number": "35.2", "title": "Esperimento di Young sull'interferenza", "page_start": 960},
+        {"number": "35.3", "title": "Interferenza e intensità da doppia fenditura", "page_start": 964},
+        {"number": "35.4", "title": "Interferenza da pellicole sottili", "page_start": 968},
+        {"number": "35.5", "title": "Interferometro di Michelson", "page_start": 975}
+      ]
+    },
+    {
+      "number": 36,
+      "title": "Diffrazione",
+      "page_start": 987,
+      "sections": [
+        {"number": "36.1", "title": "Diffrazione da singola fenditura", "page_start": 987},
+        {"number": "36.2", "title": "Intensità nella diffrazione da singola fenditura", "page_start": 991},
+        {"number": "36.3", "title": "Diffrazione attraverso un'apertura circolare", "page_start": 996},
+        {"number": "36.4", "title": "Diffrazione da una doppia fenditura", "page_start": 999},
+        {"number": "36.5", "title": "Reticoli di diffrazione", "page_start": 1002},
+        {"number": "36.6", "title": "Reticoli: dispersione e potere di risoluzione", "page_start": 1005},
+        {"number": "36.7", "title": "Diffrazione dei raggi X", "page_start": 1007}
+      ]
+    }
+  ]
+}

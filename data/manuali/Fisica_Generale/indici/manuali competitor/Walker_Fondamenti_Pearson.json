@@ -1,0 +1,208 @@
+{
+  "id": "Walker_Fondamenti",
+  "title": "Fondamenti di fisica",
+  "author": "Walker",
+  "publisher": "Pearson",
+  "subject": "Fisica_Generale",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Introduzione alla Fisica",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 2,
+      "title": "Cinematica unidimensionale",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 3,
+      "title": "I vettori in Fisica",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 4,
+      "title": "Cinematica bidimensionale",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 5,
+      "title": "Le leggi del moto di Newton",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 6,
+      "title": "Applicazioni delle leggi di Newton",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 7,
+      "title": "Lavoro ed energia cinetica",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 8,
+      "title": "Energia potenziale e conservazione dell'energia",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 9,
+      "title": "Quantità di moto e urti",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 10,
+      "title": "Moti rotazionali",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 11,
+      "title": "Dinamica rotazionale ed equilibrio statico",
+      "page_start": null,
+      "sections": [],
+      "note": "ON LINE"
+    },
+    {
+      "number": 12,
+      "title": "La gravitazione",
+      "page_start": null,
+      "sections": [],
+      "note": "ON LINE"
+    },
+    {
+      "number": 13,
+      "title": "Oscillazioni intorno all'equilibrio",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 14,
+      "title": "I fluidi",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 15,
+      "title": "Temperatura e calore",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 16,
+      "title": "Fasi e cambiamenti di fase",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 17,
+      "title": "Le leggi della Termodinamica",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 18,
+      "title": "Onde e suono",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 19,
+      "title": "Ottica geometrica",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 20,
+      "title": "Strumenti ottici",
+      "page_start": null,
+      "sections": [],
+      "note": "ON LINE"
+    },
+    {
+      "number": 21,
+      "title": "Ottica Fisica - Interferenza e diffrazione",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 22,
+      "title": "Relatività",
+      "page_start": null,
+      "sections": [],
+      "note": "ON LINE"
+    },
+    {
+      "number": 23,
+      "title": "Cariche elettriche: forze e campi",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 24,
+      "title": "Il potenziale elettrico e l'energia potenziale elettrica",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 25,
+      "title": "La corrente elettrica e i circuiti in corrente continua",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 26,
+      "title": "Il magnetismo",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 27,
+      "title": "Il flusso del campo magnetico e la legge di Faraday dell'induzione elettromagnetica",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 28,
+      "title": "Circuiti in corrente alternata",
+      "page_start": null,
+      "sections": [],
+      "note": "ON LINE"
+    },
+    {
+      "number": 29,
+      "title": "Le onde elettromagnetiche",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 30,
+      "title": "La fisica dei quanti",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 31,
+      "title": "Fisica atomica",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": 32,
+      "title": "Il nucleo e la radiazione nucleare",
+      "page_start": null,
+      "sections": [],
+      "note": "ON LINE"
+    }
+  ]
+}

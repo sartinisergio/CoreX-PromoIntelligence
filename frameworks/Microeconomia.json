@@ -1,0 +1,272 @@
+{
+  "framework": {
+    "name": "Framework Unico Valutazione Microeconomia - Multidisciplinare",
+    "version": "1.0",
+    "description": "Framework integrato per valutare allineamento programmi Microeconomia e manuali per Economia/Scienze Politiche, con pluralismo teorico.",
+    "date": "2025-12-15"
+  },
+  "scale": {
+    "1": "livello minimo/assente",
+    "2": "livello molto basso/sporadico",
+    "3": "livello moderato/base",
+    "4": "livello alto/articolato",
+    "5": "livello massimo/avanzato"
+  },
+  "syllabus_modules": [
+    {
+      "id": 1,
+      "name": "Introduzione e scuole pensiero",
+      "core_contents": [
+        "Neoclassica (Marshall, Walras)",
+        "Behavioral economics (Kahneman)",
+        "Marginalismo vs costi storici"
+      ],
+      "learning_outcomes": [
+        "Pluralismo teorico",
+        "Razionalità limitata"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Domanda e offerta mercati",
+      "core_contents": [
+        "Elasticità prezzo/reddito/traverso",
+        "Equilibrio competitivo",
+        "Controlli prezzi min/max"
+      ],
+      "learning_outcomes": [
+        "Analisi elasticità",
+        "Effetti politiche prezzi"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Teoria consumatore",
+      "core_contents": [
+        "Vincolo bilancio, curve indifferenza",
+        "Effetti sostituzione/reddito",
+        "SMS, utilità marginale"
+      ],
+      "learning_outcomes": [
+        "Ottimizzazione consumatore",
+        "Decomposizione effetti"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Teoria produttore",
+      "core_contents": [
+        "Isoquante, costi totali/marginali",
+        "Ritorni scala, Cobb-Douglas",
+        "Curva offerta impresa"
+      ],
+      "learning_outcomes": [
+        "Minimizzazione costi",
+        "Economie diseconomie scala"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Mercato concorrenziale",
+      "core_contents": [
+        "Equilibrio breve/lungo periodo",
+        "Efficienza Pareto",
+        "Entrata/uscita imprese"
+      ],
+      "learning_outcomes": [
+        "Efficienza allocativa",
+        "Teoremi benessere"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Monopolio potere mercato",
+      "core_contents": [
+        "Ricavo marginale, perdita secca",
+        "Discriminazione prezzi",
+        "Regolazione monopolio"
+      ],
+      "learning_outcomes": [
+        "Deadweight loss",
+        "Politiche anti-monopolio"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Concorrenza imperfetta",
+      "core_contents": [
+        "Oligopolio Cournot/Bertrand",
+        "Concorrenza monopolistica",
+        "Barriere entrata"
+      ],
+      "learning_outcomes": [
+        "Equilibri oligopolistici",
+        "Collusione cartel"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Teoria giochi",
+      "core_contents": [
+        "Nash, giochi sequenziali",
+        "Dilemma prigioniero",
+        "Giochi ripetuti"
+      ],
+      "learning_outcomes": [
+        "Backward induction",
+        "Folk theorem"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Fallimenti mercato",
+      "core_contents": [
+        "Esternalità Pigou/Coase",
+        "Beni pubblici, asimmetrie informative",
+        "Tragedia commons"
+      ],
+      "learning_outcomes": [
+        "Soluzioni fallimenti",
+        "Azzardo morale"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Mercati fattori",
+      "core_contents": [
+        "Domanda/offerta lavoro",
+        "Salari efficienza, capitale"
+      ],
+      "learning_outcomes": [
+        "Monopsonio lavoro",
+        "Tasso interesse"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Economia pubblica micro",
+      "core_contents": [
+        "Public choice Buchanan",
+        "Agente-principale",
+        "Federalismo fiscale"
+      ],
+      "learning_outcomes": [
+        "Costi-benefici pubblici",
+        "Tiebout model"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Behavioral applicazioni",
+      "core_contents": [
+        "Prospett theory, nudge",
+        "Aste, mercati finanziari"
+      ],
+      "learning_outcomes": [
+        "Bias cognitivi",
+        "Framing effects"
+      ]
+    }
+  ],
+  "criteria": [
+    {"id":"scuole_pensiero","name":"Scuole pensiero","type":"contenuto","levels":{"1":"Solo neoclassica","2":"+cenni behavioral","3":"Base pluralismo","4":"Confronto scuole","5":"Pluralismo completo"}},
+    {"id":"dom_offerta","name":"Dom/offerta","type":"contenuto","levels":{"1":"Base","2":"Elasticità semplici","3":"Controlli prezzi","4":"Dinamiche mercato","5":"Complete+applicazioni"}},
+    {"id":"teoria_consumatore","name":"Teoria consumatore","type":"contenuto","levels":{"1":"Intuitiva","2":"Curve indifferenza","3":"Effetti decomposizione","4":"SMS+utilità","5":"Ottimizzazione rigorosa"}},
+    {"id":"teoria_produttore","name":"Teoria produttore","type":"contenuto","levels":{"1":"Costi base","2":"Isoquante semplici","3":"Costi dinamici","4":"Cobb-Douglas","5":"Ritorni scala complete"}},
+    {"id":"concorrenza_perfetta","name":"Concorrenza perfetta","type":"contenuto","levels":{"1":"Equilibrio base","2":"Breve periodo","3":"Lungo periodo","4":"Efficienza Pareto","5":"Teoremi benessere"}},
+    {"id":"monopolio_imperfetta","name":"Monopolio/imperfetta","type":"contenuto","levels":{"1":"Monopolio base","2":"Perdita secca","3":"Regolazione","4":"Oligopoli base","5":"Cournot/Bertrand"}},
+    {"id":"teoria_giochi","name":"Teoria giochi","type":"contenuto","levels":{"1":"Assente","2":"Dilemma prigioniero","3":"Nash statici","4":"Giochi sequenziali","5":"Ripetuti+folk"}},
+    {"id":"fallimenti_mercato","name":"Fallimenti mercato","type":"contenuto","levels":{"1":"Esternalità base","2":"Beni pubblici","3":"Asimmetrie","4":"Pigou/Coase","5":"Tragedia commons completa"}},
+    {"id":"mercati_fattori","name":"Mercati fattori","type":"contenuto","levels":{"1":"Lavoro base","2":"Salari efficienza","3":"Monopsonio","4":"Capitale base","5":"Lavoro+capitale"}},
+    {"id":"economia_pubblica","name":"Economia pubblica","type":"contenuto","levels":{"1":"Assente","2":"Public choice base","3":"Agente-principale","4":"Costi-benefici","5":"Federalismo Tiebout"}},
+    {"id":"chiarezza_matematica","name":"Chiarezza matematica","type":"didattico","levels":{"1":"Povera","2":"Grafici base","3":"Buona algebra","4":"Ottimizzazione chiara","5":"Rigorosa+eccellente"}},
+    {"id":"esempi_applicazioni","name":"Esempi applicazioni","type":"didattico","levels":{"1":"Teorici","2":"Qualche politica","3":"Adeguati","4":"Ricchi reali","5":"Eccellenti casi"}},
+    {"id":"errori_studenti","name":"Errori studenti","type":"didattico","levels":{"1":"Assenti","2":"Cenni","3":"Box ottimizzazione","4":"Proattivo","5":"Prevenzione completa"}},
+    {"id":"collegamenti_indirizzi","name":"Collegamenti indirizzi","type":"didattico","levels":{"1":"Isolati","2":"Pochi","3":"Adeguati","4":"Ricchi Eco/Pol","5":"Integrazione eccellente"}}
+  ],
+  "program_profiles": [
+    {
+      "id": "economia",
+      "name": "Economia (L-33)",
+      "priority_modules": [3,4,5,6,7,8,10],
+      "requirements": {
+        "scuole_pensiero": {"required_level": 4, "weight": 0.08},
+        "dom_offerta": {"required_level": 5, "weight": 0.12},
+        "teoria_consumatore": {"required_level": 5, "weight": 0.13},
+        "teoria_produttore": {"required_level": 5, "weight": 0.12},
+        "concorrenza_perfetta": {"required_level": 5, "weight": 0.14},
+        "monopolio_imperfetta": {"required_level": 5, "weight": 0.13},
+        "teoria_giochi": {"required_level": 4, "weight": 0.12},
+        "fallimenti_mercato": {"required_level": 4, "weight": 0.10},
+        "mercati_fattori": {"required_level": 4, "weight": 0.09},
+        "economia_pubblica": {"required_level": 3, "weight": 0.08},
+        "chiarezza_matematica": {"required_level": 5, "weight": 0.09},
+        "esempi_applicazioni": {"required_level": 4, "weight": 0.07},
+        "errori_studenti": {"required_level": 4, "weight": 0.05},
+        "collegamenti_indirizzi": {"required_level": 4, "weight": 0.08}
+      }
+    },
+    {
+      "id": "scienze_politiche",
+      "name": "Scienze Politiche (L-36)",
+      "priority_modules": [8,9,10,11,12],
+      "requirements": {
+        "scuole_pensiero": {"required_level": 5, "weight": 0.10},
+        "dom_offerta": {"required_level": 4, "weight": 0.10},
+        "teoria_consumatore": {"required_level": 4, "weight": 0.09},
+        "teoria_produttore": {"required_level": 3, "weight": 0.08},
+        "concorrenza_perfetta": {"required_level": 4, "weight": 0.10},
+        "monopolio_imperfetta": {"required_level": 4, "weight": 0.11},
+        "teoria_giochi": {"required_level": 5, "weight": 0.14},
+        "fallimenti_mercato": {"required_level": 5, "weight": 0.15},
+        "mercati_fattori": {"required_level": 4, "weight": 0.08},
+        "economia_pubblica": {"required_level": 5, "weight": 0.12},
+        "chiarezza_matematica": {"required_level": 4, "weight": 0.08},
+        "esempi_applicazioni": {"required_level": 5, "weight": 0.09},
+        "errori_studenti": {"required_level": 4, "weight": 0.06},
+        "collegamenti_indirizzi": {"required_level": 5, "weight": 0.08}
+      }
+    }
+  ],
+  "manual_profiles": [
+    {
+      "id": "manuale_A",
+      "name": "Manuale A - Microeconomia Completa",
+      "scores": {
+        "scuole_pensiero": 5,
+        "dom_offerta": 5,
+        "teoria_consumatore": 5,
+        "teoria_produttore": 5,
+        "concorrenza_perfetta": 5,
+        "monopolio_imperfetta": 5,
+        "teoria_giochi": 5,
+        "fallimenti_mercato": 5,
+        "mercati_fattori": 5,
+        "economia_pubblica": 5,
+        "chiarezza_matematica": 5,
+        "esempi_applicazioni": 5,
+        "errori_studenti": 4,
+        "collegamenti_indirizzi": 5
+      }
+    }
+  ],
+  "alignment_method": {
+    "description": "Allineamento = media ponderata: score_i = max(0, 1 - |required-offered|/4)",
+    "formula": "alignment = Σ(weight_i × score_i) / Σ(weight_i)",
+    "interpretation": {
+      "85-100": "Eccellente - Rigoroso+applicativo - Adozione consigliata",
+      "70-84": "Buono - Solido, integra behavioral - Raccomandato+integrazioni",
+      "55-69": "Sufficiente - Lacune giochi/fallimenti - Con riserva",
+      "<55": "Sconsigliato - Troppo descrittivo - Non adottare"
+    }
+  },
+  "example_match": {
+    "program_id": "economia",
+    "manual_id": "manuale_A",
+    "overall_alignment": 98.2,
+    "judgment": "Eccellente",
+    "recommendation": "Manuale perfetto per Economia. Rigoroso formalismo, completa teoria giochi e benessere economico.",
+    "strong_criteria": ["concorrenza_perfetta", "teoria_consumatore", "teoria_produttore"],
+    "weak_criteria": []
+  }
+}

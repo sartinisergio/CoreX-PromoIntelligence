@@ -1,0 +1,484 @@
+{
+  "id": "Serway_Principi",
+  "title": "Principi di fisica",
+  "author": "Serway",
+  "publisher": "Edises",
+  "subject": "Fisica_Generale",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 0,
+      "title": "Invito alla fisica",
+      "page_start": 1,
+      "sections": []
+    },
+    {
+      "number": 1,
+      "title": "Introduzione e vettori",
+      "page_start": 4,
+      "sections": [
+        {"number": "1.1", "title": "Campioni di lunghezza, massa e tempo", "page_start": 4},
+        {"number": "1.2", "title": "Analisi dimensionale", "page_start": 7},
+        {"number": "1.3", "title": "Conversione delle unità", "page_start": 8},
+        {"number": "1.4", "title": "Calcoli di ordini di grandezza", "page_start": 9},
+        {"number": "1.5", "title": "Cifre significative", "page_start": 10},
+        {"number": "1.6", "title": "Sistemi di coordinate", "page_start": 12},
+        {"number": "1.7", "title": "Vettori e scalari", "page_start": 13},
+        {"number": "1.8", "title": "Alcune proprietà dei vettori", "page_start": 15},
+        {"number": "1.9", "title": "Componenti di un vettore e versori", "page_start": 17},
+        {"number": "1.10", "title": "Modellistica, rappresentazioni alternative e strategia per la risoluzione dei problemi", "page_start": 22}
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Moto in una dimensione",
+      "page_start": 37,
+      "sections": [
+        {"number": "2.1", "title": "Velocità media", "page_start": 38},
+        {"number": "2.2", "title": "Velocità istantanea", "page_start": 41},
+        {"number": "2.3", "title": "Modello di analisi: particella con velocità costante", "page_start": 45},
+        {"number": "2.4", "title": "Accelerazione", "page_start": 47},
+        {"number": "2.5", "title": "Diagrammi del moto", "page_start": 50},
+        {"number": "2.6", "title": "Modello di analisi: particella con accelerazione costante", "page_start": 51},
+        {"number": "2.7", "title": "Corpi in caduta libera", "page_start": 56},
+        {"number": "2.8", "title": "Collegamento al contesto: accelerazione richiesta dai consumatori", "page_start": 59}
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Moto in due dimensioni",
+      "page_start": 69,
+      "sections": [
+        {"number": "3.1", "title": "Vettori di posizione, velocità e accelerazione", "page_start": 69},
+        {"number": "3.2", "title": "Moto in due dimensioni con accelerazione costante", "page_start": 71},
+        {"number": "3.3", "title": "Moto del proiettile", "page_start": 74},
+        {"number": "3.4", "title": "Modello di analisi: particella in moto circolare uniforme", "page_start": 81},
+        {"number": "3.5", "title": "Accelerazione tangenziale e radiale", "page_start": 83},
+        {"number": "3.6", "title": "Velocità relativa e accelerazione relativa", "page_start": 84},
+        {"number": "3.7", "title": "Collegamento al contesto: accelerazione laterale delle automobili", "page_start": 87}
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Le leggi del moto",
+      "page_start": 97,
+      "sections": [
+        {"number": "4.1", "title": "Il concetto di forza", "page_start": 97},
+        {"number": "4.2", "title": "La prima legge di Newton", "page_start": 99},
+        {"number": "4.3", "title": "Massa", "page_start": 100},
+        {"number": "4.4", "title": "La seconda legge di Newton", "page_start": 101},
+        {"number": "4.5", "title": "La forza gravitazionale e il peso", "page_start": 104},
+        {"number": "4.6", "title": "La terza legge di Newton", "page_start": 105},
+        {"number": "4.7", "title": "Applicazioni delle leggi di Newton", "page_start": 107},
+        {"number": "4.8", "title": "Collegamento al contesto: forze su automobili", "page_start": 115}
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Altre applicazioni delle leggi di Newton",
+      "page_start": 125,
+      "sections": [
+        {"number": "5.1", "title": "Forze di attrito", "page_start": 125},
+        {"number": "5.2", "title": "Estensione del modello per una particella in moto circolare uniforme", "page_start": 130},
+        {"number": "5.3", "title": "Moto circolare non uniforme", "page_start": 136},
+        {"number": "5.4", "title": "Moto in presenza di forze d'attrito dipendenti dalla velocità", "page_start": 138},
+        {"number": "5.5", "title": "Le forze fondamentali della natura", "page_start": 142},
+        {"number": "5.6", "title": "Collegamento al contesto: coefficienti di resistenza delle automobili", "page_start": 144}
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Energia di un sistema",
+      "page_start": 154,
+      "sections": [
+        {"number": "6.1", "title": "Sistemi e ambienti", "page_start": 155},
+        {"number": "6.2", "title": "Lavoro svolto da una forza costante", "page_start": 156},
+        {"number": "6.3", "title": "Prodotto scalare di due vettori", "page_start": 158},
+        {"number": "6.4", "title": "Lavoro svolto da una forza variabile", "page_start": 160},
+        {"number": "6.5", "title": "Energia cinetica e teorema dell'energia cinetica", "page_start": 165},
+        {"number": "6.6", "title": "Energia potenziale di un sistema", "page_start": 168},
+        {"number": "6.7", "title": "Forze conservative e non conservative", "page_start": 173},
+        {"number": "6.8", "title": "Relazione tra forze conservative ed energia potenziale", "page_start": 175},
+        {"number": "6.9", "title": "Energia potenziale per le forze gravitazionale ed elettrica", "page_start": 176},
+        {"number": "6.10", "title": "Diagrammi di energia ed equilibrio di un sistema", "page_start": 179},
+        {"number": "6.11", "title": "Connessione al contesto: energia potenziale nei carburanti", "page_start": 181}
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Conservazione dell'energia",
+      "page_start": 192,
+      "sections": [
+        {"number": "7.1", "title": "Modello di analisi: sistema non isolato (energia)", "page_start": 193},
+        {"number": "7.2", "title": "Modello di analisi: sistema isolato (energia)", "page_start": 195},
+        {"number": "7.3", "title": "Modello di analisi: sistema non isolato nello stato stazionario (energia)", "page_start": 202},
+        {"number": "7.4", "title": "Situazioni con attrito dinamico", "page_start": 203},
+        {"number": "7.5", "title": "Variazioni di energia meccanica dovute a forze non conservative", "page_start": 208},
+        {"number": "7.6", "title": "Potenza", "page_start": 214},
+        {"number": "7.7", "title": "Collegamento al contesto: valutazione della potenza delle automobili", "page_start": 216}
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Quantità di moto ed urti",
+      "page_start": 235,
+      "sections": [
+        {"number": "8.1", "title": "Quantità di moto", "page_start": 235},
+        {"number": "8.2", "title": "Modello di analisi: sistema isolato (quantità di moto)", "page_start": 237},
+        {"number": "8.3", "title": "Modello di analisi: sistema non isolato (quantità di moto)", "page_start": 240},
+        {"number": "8.4", "title": "Urti in una dimensione", "page_start": 243},
+        {"number": "8.5", "title": "Urti in due dimensioni", "page_start": 250},
+        {"number": "8.6", "title": "Il centro di massa", "page_start": 253},
+        {"number": "8.7", "title": "Moto di un sistema di particelle", "page_start": 257},
+        {"number": "8.8", "title": "Collegamento al contesto: propulsione di un razzo", "page_start": 260}
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Relatività",
+      "page_start": 272,
+      "sections": [
+        {"number": "9.1", "title": "Il principio di relatività galileiana", "page_start": 273},
+        {"number": "9.2", "title": "L'esperimento di Michelson-Morley", "page_start": 275},
+        {"number": "9.3", "title": "Il principio di relatività di Einstein", "page_start": 276},
+        {"number": "9.4", "title": "Conseguenze della relatività ristretta", "page_start": 276},
+        {"number": "9.5", "title": "Le trasformazioni di Lorentz", "page_start": 285},
+        {"number": "9.6", "title": "Quantità di moto relativistica delle leggi di Newton", "page_start": 288},
+        {"number": "9.7", "title": "Energia relativistica", "page_start": 290},
+        {"number": "9.8", "title": "Massa ed energia", "page_start": 292},
+        {"number": "9.9", "title": "Relatività generale", "page_start": 293},
+        {"number": "9.10", "title": "Collegamento al contesto: da Marte alle stelle", "page_start": 296}
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Moto rotazionale",
+      "page_start": 305,
+      "sections": [
+        {"number": "10.1", "title": "Posizione, velocità e accelerazione angolare", "page_start": 306},
+        {"number": "10.2", "title": "Modello di analisi: corpo rigido soggetto ad accelerazione angolare costante", "page_start": 308},
+        {"number": "10.3", "title": "Relazioni fra grandezze rotazionali e traslazionali", "page_start": 310},
+        {"number": "10.4", "title": "Energia cinetica rotazionale", "page_start": 311},
+        {"number": "10.5", "title": "Momento di una forza e prodotto vettoriale", "page_start": 316},
+        {"number": "10.6", "title": "Modello di analisi: corpo rigido in equilibrio", "page_start": 320},
+        {"number": "10.7", "title": "Modello di analisi: corpo rigido sottoposto a momento risultante delle forze", "page_start": 323},
+        {"number": "10.8", "title": "Considerazioni energetiche nel moto rotazionale", "page_start": 326},
+        {"number": "10.9", "title": "Modello di analisi: momento angolare nei sistemi non isolati", "page_start": 328},
+        {"number": "10.10", "title": "Modello di analisi: momento angolare nei sistemi isolati", "page_start": 331},
+        {"number": "10.11", "title": "Moto di precessione dei giroscopi", "page_start": 335},
+        {"number": "10.12", "title": "Rotolamento dei corpi rigidi", "page_start": 336},
+        {"number": "10.13", "title": "Collegamento al contesto: ruotare l'astronave", "page_start": 339}
+      ]
+    },
+    {
+      "number": 11,
+      "title": "La gravità, le orbite planetarie e l'atomo di idrogeno",
+      "page_start": 354,
+      "sections": [
+        {"number": "11.1", "title": "Rivisitazione della legge di Newton della gravitazione universale", "page_start": 355},
+        {"number": "11.2", "title": "Modelli strutturali", "page_start": 357},
+        {"number": "11.3", "title": "Le leggi di Keplero", "page_start": 358},
+        {"number": "11.4", "title": "Considerazioni energetiche sul moto dei pianeti e dei satelliti", "page_start": 364},
+        {"number": "11.5", "title": "Spettri atomici e teoria di Bohr dell'atomo di idrogeno", "page_start": 368},
+        {"number": "11.6", "title": "Collegamento al contesto: passare da un'orbita circolare ad una ellittica", "page_start": 374}
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Moto oscillatorio",
+      "page_start": 390,
+      "sections": [
+        {"number": "12.1", "title": "Moto di un corpo collegato a una molla", "page_start": 391},
+        {"number": "12.2", "title": "Modello di analisi: particella in moto armonico semplice", "page_start": 392},
+        {"number": "12.3", "title": "Energia di un oscillatore armonico semplice", "page_start": 397},
+        {"number": "12.4", "title": "Il pendolo semplice", "page_start": 400},
+        {"number": "12.5", "title": "Il pendolo fisico", "page_start": 402},
+        {"number": "12.6", "title": "Oscillazioni smorzate", "page_start": 403},
+        {"number": "12.7", "title": "Oscillazioni forzate", "page_start": 404},
+        {"number": "12.8", "title": "Collegamento al contesto: risonanza nelle strutture", "page_start": 405}
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Onde meccaniche",
+      "page_start": 415,
+      "sections": [
+        {"number": "13.1", "title": "Propagazione di una perturbazione", "page_start": 416},
+        {"number": "13.2", "title": "Modello di analisi: l'onda che si propaga", "page_start": 418},
+        {"number": "13.3", "title": "La velocità delle onde trasversali nelle corde", "page_start": 423},
+        {"number": "13.4", "title": "Riflessione a trasmissione delle onde", "page_start": 426},
+        {"number": "13.5", "title": "Potenza trasmessa dalle onde sinusoidali nelle corde", "page_start": 427},
+        {"number": "13.6", "title": "Onde acustiche", "page_start": 429},
+        {"number": "13.7", "title": "L'effetto Doppler", "page_start": 432},
+        {"number": "13.8", "title": "Collegamento al contesto: le onde sismiche", "page_start": 435}
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Sovrapposizione e onde stazionarie",
+      "page_start": 447,
+      "sections": [
+        {"number": "14.1", "title": "Modello di analisi: interferenza tra onde", "page_start": 448},
+        {"number": "14.2", "title": "Onde stazionarie", "page_start": 451},
+        {"number": "14.3", "title": "Modello di analisi: onde sottoposte a condizioni al contorno", "page_start": 454},
+        {"number": "14.4", "title": "Onde stazionarie nelle colonne d'aria", "page_start": 456},
+        {"number": "14.5", "title": "Battimenti: interferenza temporale", "page_start": 460},
+        {"number": "14.6", "title": "Configurazioni d'onda non sinusoidali", "page_start": 462},
+        {"number": "14.7", "title": "Orecchio e teorie di percezione del tono", "page_start": 464},
+        {"number": "14.8", "title": "Collegamento al contesto: costruzione sui ventri", "page_start": 466}
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Meccanica dei fluidi",
+      "page_start": 482,
+      "sections": [
+        {"number": "15.1", "title": "Pressione", "page_start": 482},
+        {"number": "15.2", "title": "Variazione della pressione con la profondità", "page_start": 484},
+        {"number": "15.3", "title": "Misure di pressione", "page_start": 488},
+        {"number": "15.4", "title": "Forze di galleggiamento e principio di Archimede", "page_start": 488},
+        {"number": "15.5", "title": "Dinamica dei fluidi", "page_start": 493},
+        {"number": "15.6", "title": "Linee di corrente ed equazione di continuità dei fluidi", "page_start": 493},
+        {"number": "15.7", "title": "Teorema di Bernoulli", "page_start": 495},
+        {"number": "15.8", "title": "Altre applicazioni di dinamica dei fluidi", "page_start": 498},
+        {"number": "15.9", "title": "Collegamento al contesto: flusso turbolento del sangue", "page_start": 499}
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Temperatura e teoria cinetica dei gas",
+      "page_start": 515,
+      "sections": [
+        {"number": "16.1", "title": "Temperatura e principio zero della termodinamica", "page_start": 516},
+        {"number": "16.2", "title": "I termometri e le scale di temperatura", "page_start": 517},
+        {"number": "16.3", "title": "Dilatazione termica di solidi e liquidi", "page_start": 520},
+        {"number": "16.4", "title": "Descrizione macroscopica di un gas perfetto", "page_start": 525},
+        {"number": "16.5", "title": "La teoria cinetica dei gas", "page_start": 527},
+        {"number": "16.6", "title": "Distribuzione delle velocità molecolari", "page_start": 533},
+        {"number": "16.7", "title": "Collegamento al contesto: il gradiente verticale di temperatura nell'atmosfera", "page_start": 535}
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Energia nelle trasformazioni termodinamiche: il primo principio della termodinamica",
+      "page_start": 545,
+      "sections": [
+        {"number": "17.1", "title": "Calore ed energia interna", "page_start": 546},
+        {"number": "17.2", "title": "Calore specifico", "page_start": 548},
+        {"number": "17.3", "title": "Calore latente", "page_start": 550},
+        {"number": "17.4", "title": "Lavoro nelle trasformazioni termodinamiche", "page_start": 554},
+        {"number": "17.5", "title": "Il primo principio della termodinamica", "page_start": 557},
+        {"number": "17.6", "title": "Alcune applicazioni del primo principio della termodinamica", "page_start": 559},
+        {"number": "17.7", "title": "Calori specifici molari dei gas perfetti", "page_start": 562},
+        {"number": "17.8", "title": "Trasformazioni adiabatiche per un gas perfetto", "page_start": 564},
+        {"number": "17.9", "title": "Calori specifici molari ed equipartizione dell'energia", "page_start": 566},
+        {"number": "17.10", "title": "Meccanismi di trasferimento di energia nei processi termici", "page_start": 568},
+        {"number": "17.11", "title": "Collegamento al contesto: bilancio energetico per la Terra", "page_start": 573}
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Macchine termiche, entropia e secondo principio della termodinamica",
+      "page_start": 586,
+      "sections": [
+        {"number": "18.1", "title": "Macchine termiche e secondo principio della termodinamica", "page_start": 587},
+        {"number": "18.2", "title": "Trasformazioni reversibili e irreversibili", "page_start": 589},
+        {"number": "18.3", "title": "La macchina di Carnot", "page_start": 589},
+        {"number": "18.4", "title": "Pompe di calore e frigoriferi", "page_start": 592},
+        {"number": "18.5", "title": "Un enunciato alternativo del secondo principio", "page_start": 593},
+        {"number": "18.6", "title": "Entropia", "page_start": 594},
+        {"number": "18.7", "title": "Entropia e secondo principio della termodinamica", "page_start": 597},
+        {"number": "18.8", "title": "Variazioni di entropia nelle trasformazioni irreversibili", "page_start": 599},
+        {"number": "18.9", "title": "Collegamento al contesto: l'atmosfera come macchina termica", "page_start": 602}
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Forze elettriche e campi elettrici",
+      "page_start": 619,
+      "sections": [
+        {"number": "19.1", "title": "Cenni storici", "page_start": 620},
+        {"number": "19.2", "title": "Proprietà delle cariche elettriche", "page_start": 620},
+        {"number": "19.3", "title": "Isolanti e conduttori", "page_start": 622},
+        {"number": "19.4", "title": "La legge di Coulomb", "page_start": 624},
+        {"number": "19.5", "title": "Campi elettrici", "page_start": 627},
+        {"number": "19.6", "title": "Linee di campo elettrico", "page_start": 633},
+        {"number": "19.7", "title": "Moto di particelle cariche in un campo elettrico uniforme", "page_start": 634},
+        {"number": "19.8", "title": "Flusso elettrico", "page_start": 636},
+        {"number": "19.9", "title": "Il teorema di Gauss", "page_start": 639},
+        {"number": "19.10", "title": "Applicazioni del teorema di Gauss a distribuzioni simmetriche di cariche", "page_start": 641},
+        {"number": "19.11", "title": "Conduttori in equilibrio elettrostatico", "page_start": 644},
+        {"number": "19.12", "title": "Collegamento al contesto: il campo elettrico atmosferico", "page_start": 645}
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Potenziale elettrico e capacità",
+      "page_start": 656,
+      "sections": [
+        {"number": "20.1", "title": "Potenziale elettrico e differenza di potenziale", "page_start": 657},
+        {"number": "20.2", "title": "Differenza di potenziale in un campo elettrico uniforme", "page_start": 658},
+        {"number": "20.3", "title": "Potenziale elettrico ed energia potenziale elettrica di cariche puntiformi", "page_start": 661},
+        {"number": "20.4", "title": "Ricavare il valore del campo elettrico dal potenziale elettrico", "page_start": 664},
+        {"number": "20.5", "title": "Potenziale elettrico dovuto a distribuzioni continue di carica", "page_start": 666},
+        {"number": "20.6", "title": "Potenziale elettrico di un conduttore carico", "page_start": 669},
+        {"number": "20.7", "title": "La capacità", "page_start": 671},
+        {"number": "20.8", "title": "Collegamento di condensatori", "page_start": 674},
+        {"number": "20.9", "title": "Energia immagazzinata in un condensatore carico", "page_start": 678},
+        {"number": "20.10", "title": "Condensatori con dielettrici", "page_start": 681},
+        {"number": "20.11", "title": "Collegamento al contesto: l'atmosfera come condensatore", "page_start": 685}
+      ]
+    },
+    {
+      "number": 21,
+      "title": "Corrente e circuiti a corrente continua",
+      "page_start": 697,
+      "sections": [
+        {"number": "21.1", "title": "La corrente elettrica", "page_start": 698},
+        {"number": "21.2", "title": "Resistenza e legge di Ohm", "page_start": 701},
+        {"number": "21.3", "title": "Superconduttori", "page_start": 706},
+        {"number": "21.4", "title": "Un modello per la conduzione elettrica", "page_start": 707},
+        {"number": "21.5", "title": "Energia e potenza nei circuiti elettrici", "page_start": 710},
+        {"number": "21.6", "title": "Sorgenti di f.e.m.", "page_start": 713},
+        {"number": "21.7", "title": "Resistori in serie e in parallelo", "page_start": 715},
+        {"number": "21.8", "title": "Leggi di Kirchhoff", "page_start": 721},
+        {"number": "21.9", "title": "Circuiti RC", "page_start": 724},
+        {"number": "21.10", "title": "Collegamento al contesto: l'atmosfera come conduttore", "page_start": 729}
+      ]
+    },
+    {
+      "number": 22,
+      "title": "Forze e campi magnetici",
+      "page_start": 743,
+      "sections": [
+        {"number": "22.1", "title": "Introduzione storica", "page_start": 744},
+        {"number": "22.2", "title": "Il campo magnetico", "page_start": 745},
+        {"number": "22.3", "title": "Moto di una particella carica in un campo magnetico uniforme", "page_start": 748},
+        {"number": "22.4", "title": "Applicazioni del moto di particelle cariche in un campo magnetico", "page_start": 751},
+        {"number": "22.5", "title": "Forza magnetica su un conduttore percorso da corrente", "page_start": 754},
+        {"number": "22.6", "title": "Momento delle forze agente su una spira in un campo magnetico uniforme", "page_start": 756},
+        {"number": "22.7", "title": "La legge di Biot-Savart", "page_start": 758},
+        {"number": "22.8", "title": "Forza magnetica fra due conduttori paralleli", "page_start": 761},
+        {"number": "22.9", "title": "Teorema di Ampère", "page_start": 762},
+        {"number": "22.10", "title": "Il campo magnetico di un solenoide", "page_start": 766},
+        {"number": "22.11", "title": "Magnetismo nella materia", "page_start": 767},
+        {"number": "22.12", "title": "Collegamento al contesto: Navigazione magnetica a distanza per operazioni di ablazione cardiaca con catetere", "page_start": 769}
+      ]
+    },
+    {
+      "number": 23,
+      "title": "Legge di Faraday e induttanza",
+      "page_start": 781,
+      "sections": [
+        {"number": "23.1", "title": "Legge di Faraday dell'induzione", "page_start": 781},
+        {"number": "23.2", "title": "Forza elettromotrice dinamica", "page_start": 786},
+        {"number": "23.3", "title": "Legge di Lenz", "page_start": 791},
+        {"number": "23.4", "title": "Forze elettromotrici indotte e campi elettrici", "page_start": 794},
+        {"number": "23.5", "title": "Autoinduzione", "page_start": 796},
+        {"number": "23.6", "title": "Circuiti RL", "page_start": 798},
+        {"number": "23.7", "title": "Energia immagazzinata in un campo magnetico", "page_start": 801},
+        {"number": "23.8", "title": "Collegamento al contesto: l'uso della stimolazione magnetica transcranica nella depressione", "page_start": 804}
+      ]
+    },
+    {
+      "number": 24,
+      "title": "Onde elettromagnetiche",
+      "page_start": 822,
+      "sections": [
+        {"number": "24.1", "title": "Corrente di spostamento e teorema di Ampère generalizzato", "page_start": 823},
+        {"number": "24.2", "title": "Le equazioni di Maxwell e le scoperte di Hertz", "page_start": 824},
+        {"number": "24.3", "title": "Le onde elettromagnetiche", "page_start": 826},
+        {"number": "24.4", "title": "Energia trasportata dalle onde elettromagnetiche", "page_start": 830},
+        {"number": "24.5", "title": "Quantità di moto e pressione di radiazione", "page_start": 833},
+        {"number": "24.6", "title": "Lo spettro delle onde elettromagnetiche", "page_start": 836},
+        {"number": "24.7", "title": "Polarizzazione della luce", "page_start": 837},
+        {"number": "24.8", "title": "Collegamento al contesto: le particolari proprietà della luce laser", "page_start": 839}
+      ]
+    },
+    {
+      "number": 25,
+      "title": "Riflessione e rifrazione della luce",
+      "page_start": 852,
+      "sections": [
+        {"number": "25.1", "title": "La natura della luce", "page_start": 852},
+        {"number": "25.2", "title": "Il modello di raggio luminoso in ottica geometrica", "page_start": 853},
+        {"number": "25.3", "title": "Modello di analisi: riflessione di un'onda", "page_start": 854},
+        {"number": "25.4", "title": "Modello di analisi: rifrazione di un'onda", "page_start": 857},
+        {"number": "25.5", "title": "Dispersione e prismi", "page_start": 862},
+        {"number": "25.6", "title": "Il principio di Huygens", "page_start": 863},
+        {"number": "25.7", "title": "Riflessione interna totale", "page_start": 865},
+        {"number": "25.8", "title": "Collegamento al contesto: le fibre ottiche", "page_start": 867}
+      ]
+    },
+    {
+      "number": 26,
+      "title": "Formazione dell'immagine da specchi e lenti",
+      "page_start": 879,
+      "sections": [
+        {"number": "26.1", "title": "Immagini formate da specchi piani", "page_start": 879},
+        {"number": "26.2", "title": "Immagini formate da specchi sferici", "page_start": 882},
+        {"number": "26.3", "title": "Immagini formate per rifrazione", "page_start": 888},
+        {"number": "26.4", "title": "Lenti sottili", "page_start": 891},
+        {"number": "26.5", "title": "L'occhio", "page_start": 898},
+        {"number": "26.6", "title": "Collegamento al contesto: alcune applicazioni mediche", "page_start": 900}
+      ]
+    },
+    {
+      "number": 27,
+      "title": "Ottica ondulatoria",
+      "page_start": 910,
+      "sections": [
+        {"number": "27.1", "title": "Condizioni per l'interferenza", "page_start": 911},
+        {"number": "27.2", "title": "L'esperimento della doppia fenditura di Young", "page_start": 911},
+        {"number": "27.3", "title": "Modello di analisi: l'interferenza delle onde", "page_start": 913},
+        {"number": "27.4", "title": "Cambiamento di fase dovuto alla riflessione", "page_start": 916},
+        {"number": "27.5", "title": "Interferenza nelle lamine sottili", "page_start": 916},
+        {"number": "27.6", "title": "Figure di diffrazione", "page_start": 919},
+        {"number": "27.7", "title": "Risoluzione della singola fenditura e di aperture circolari", "page_start": 922},
+        {"number": "27.8", "title": "Il reticolo di diffrazione", "page_start": 925},
+        {"number": "27.9", "title": "Diffrazione di raggi X da cristalli", "page_start": 927},
+        {"number": "27.10", "title": "Collegamento al contesto: olografia", "page_start": 928}
+      ]
+    },
+    {
+      "number": "A",
+      "title": "Appendice A - Tabelle",
+      "page_start": null,
+      "sections": [
+        {"number": "A.1", "title": "Fattori di conversione", "page_start": null},
+        {"number": "A.2", "title": "Simboli, dimensioni e unità delle grandezze fisiche", "page_start": null},
+        {"number": "A.3", "title": "Informazioni chimiche e nucleari di alcuni isotopi", "page_start": null}
+      ]
+    },
+    {
+      "number": "B",
+      "title": "Appendice B - Richiami di analisi matematica",
+      "page_start": null,
+      "sections": [
+        {"number": "B.1", "title": "Notazione scientifica", "page_start": null},
+        {"number": "B.2", "title": "Algebra", "page_start": null},
+        {"number": "B.3", "title": "Geometria", "page_start": null},
+        {"number": "B.4", "title": "Trigonometria", "page_start": null},
+        {"number": "B.5", "title": "Sviluppo in serie", "page_start": null},
+        {"number": "B.6", "title": "Calcolo differenziale", "page_start": null},
+        {"number": "B.7", "title": "Calcolo integrale", "page_start": null},
+        {"number": "B.8", "title": "Propagazione degli errori", "page_start": null}
+      ]
+    },
+    {
+      "number": "C",
+      "title": "Appendice C - Tavola periodica degli elementi",
+      "page_start": null,
+      "sections": []
+    },
+    {
+      "number": "D",
+      "title": "Appendice D - Unità SI",
+      "page_start": null,
+      "sections": [
+        {"number": "D.1", "title": "Unità SI fondamentali", "page_start": null},
+        {"number": "D.2", "title": "Unità SI derivate", "page_start": null}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,314 @@
+{
+  "id": "Bertola_Istituzioni",
+  "title": "Istituzioni di Economia",
+  "author": "Bertola, Lo Prete",
+  "publisher": "Il Mulino",
+  "subject": "Economia politica",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Che cosa studiamo, e come",
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "Economia, problemi e soluzioni"
+        },
+        {
+          "number": "1.2",
+          "title": "Un modo di ragionare"
+        },
+        {
+          "number": "1.3",
+          "title": "Principi e metodi dell'analisi economica"
+        },
+        {
+          "number": "1.4",
+          "title": "Politica economica"
+        },
+        {
+          "number": "1.5",
+          "title": "Livelli di analisi"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Che cos'è un mercato",
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "Mercato"
+        },
+        {
+          "number": "2.2",
+          "title": "Domanda"
+        },
+        {
+          "number": "2.3",
+          "title": "Offerta"
+        },
+        {
+          "number": "2.4",
+          "title": "Equilibrio"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Vincoli e scelte",
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "Che cosa sta dietro la curva di domanda?"
+        },
+        {
+          "number": "3.2",
+          "title": "Insieme delle alternative possibili"
+        },
+        {
+          "number": "3.3",
+          "title": "Preferenze"
+        },
+        {
+          "number": "3.4",
+          "title": "La scelta del consumatore"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Individui e mercato",
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "Quantità domandata e variazioni di reddito"
+        },
+        {
+          "number": "4.2",
+          "title": "Quantità domandata e variazioni di prezzo"
+        },
+        {
+          "number": "4.3",
+          "title": "Effetto di reddito ed effetto di sostituzione"
+        },
+        {
+          "number": "4.4",
+          "title": "Surplus del consumatore"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Come si produce",
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "Breve e lungo periodo"
+        },
+        {
+          "number": "5.2",
+          "title": "Produzione"
+        },
+        {
+          "number": "5.3",
+          "title": "Vincoli tecnologici"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Impresa e mercati",
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "Produzione e costi"
+        },
+        {
+          "number": "6.2",
+          "title": "Funzioni di costo"
+        },
+        {
+          "number": "6.3",
+          "title": "Quanto e se produrre"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Concorrenza perfetta",
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "Determinanti di domanda e offerta"
+        },
+        {
+          "number": "7.2",
+          "title": "Equilibrio in concorrenza perfetta"
+        },
+        {
+          "number": "7.3",
+          "title": "Benessere sociale"
+        },
+        {
+          "number": "7.4",
+          "title": "Come reagisce il mercato"
+        },
+        {
+          "number": "7.5",
+          "title": "Elasticità"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Concorrenza imperfetta",
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "Potere di mercato"
+        },
+        {
+          "number": "8.2",
+          "title": "Forme di mercato"
+        },
+        {
+          "number": "8.3",
+          "title": "Benessere"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Rischio, incertezza e informazione",
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "Rischio e incertezza"
+        },
+        {
+          "number": "9.2",
+          "title": "Informazione e mercati"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Mercato e intervento pubblico",
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "Regole e imposte"
+        },
+        {
+          "number": "10.2",
+          "title": "Intervento pubblico e funzionamento del mercato"
+        },
+        {
+          "number": "10.3",
+          "title": "Anche lo Stato ha problemi"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Mercati dei fattori e finanza",
+      "sections": [
+        {
+          "number": "11.1",
+          "title": "Beni e servizi, lavoro, capitale"
+        },
+        {
+          "number": "11.2",
+          "title": "Mercato del lavoro"
+        },
+        {
+          "number": "11.3",
+          "title": "Possibilità produttive"
+        },
+        {
+          "number": "11.4",
+          "title": "Tempo e risparmio"
+        },
+        {
+          "number": "11.5",
+          "title": "Speculazione e finanza"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Mercati nel sistema economico",
+      "sections": [
+        {
+          "number": "12.1",
+          "title": "Interazioni tra mercati"
+        },
+        {
+          "number": "12.2",
+          "title": "Contabilità nazionale"
+        },
+        {
+          "number": "12.3",
+          "title": "Prezzi e produzione aggregati"
+        },
+        {
+          "number": "12.4",
+          "title": "Andamenti macroeconomici"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Flussi di spesa e mercato monetario",
+      "sections": [
+        {
+          "number": "13.1",
+          "title": "Che cosa determina la spesa?"
+        },
+        {
+          "number": "13.2",
+          "title": "Equilibrio macroeconomico nel mercato dei beni e servizi"
+        },
+        {
+          "number": "13.3",
+          "title": "La moneta"
+        },
+        {
+          "number": "13.4",
+          "title": "Le banche"
+        },
+        {
+          "number": "13.5",
+          "title": "Equilibrio del mercato monetario e del mercato dei beni e servizi"
+        },
+        {
+          "number": "13.6",
+          "title": "Politiche per la stabilizzazione"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Cicli, crisi, crescita",
+      "sections": [
+        {
+          "number": "14.1",
+          "title": "Prezzi e produzione aggregata"
+        },
+        {
+          "number": "14.2",
+          "title": "Politiche macroeconomiche"
+        },
+        {
+          "number": "14.3",
+          "title": "Crisi finanziaria e politica monetaria non convenzionale"
+        },
+        {
+          "number": "14.4",
+          "title": "Crescita economica"
+        }
+      ]
+    }
+  ]
+}

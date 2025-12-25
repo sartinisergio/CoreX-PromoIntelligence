@@ -1,0 +1,137 @@
+{
+  "id": "klein_fondamenti_chimica_organica",
+  "title": "Fondamenti di chimica organica",
+  "author": "Klein",
+  "publisher": "Pearson",
+  "subject": "Chimica Organica",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Nozioni di base di chimica generale",
+      "page_start": null
+    },
+    {
+      "number": 2,
+      "title": "La rappresentazione delle molecole organiche",
+      "page_start": null
+    },
+    {
+      "number": 3,
+      "title": "Acidi e basi",
+      "page_start": null
+    },
+    {
+      "number": 4,
+      "title": "Alcani e cicloalcani",
+      "page_start": null
+    },
+    {
+      "number": 5,
+      "title": "Stereoisomeria",
+      "page_start": null
+    },
+    {
+      "number": 6,
+      "title": "La reattività e i meccanismi di reazione",
+      "page_start": null
+    },
+    {
+      "number": 7,
+      "title": "Le reazioni di sostituzione nucleofila",
+      "page_start": null
+    },
+    {
+      "number": 8,
+      "title": "Gli alcheni: struttura e preparazione mediante le reazioni di eliminazione",
+      "page_start": null
+    },
+    {
+      "number": 9,
+      "title": "Reazioni di addizione agli alcheni",
+      "page_start": null
+    },
+    {
+      "number": 10,
+      "title": "Gli alchini",
+      "page_start": null
+    },
+    {
+      "number": 11,
+      "title": "Le reazioni radicaliche",
+      "page_start": null,
+      "note": "Capitolo disponibile solo online"
+    },
+    {
+      "number": 12,
+      "title": "Alcol e fenoli",
+      "page_start": null
+    },
+    {
+      "number": 13,
+      "title": "Eteri ed epossidi; tioli e solfuri",
+      "page_start": null,
+      "note": "Capitolo disponibile solo online"
+    },
+    {
+      "number": 14,
+      "title": "I sistemi coniugati e le reazioni pericicliche",
+      "page_start": null,
+      "note": "Capitolo disponibile solo online"
+    },
+    {
+      "number": 15,
+      "title": "I composti aromatici",
+      "page_start": null
+    },
+    {
+      "number": 16,
+      "title": "La reazione di sostituzione aromatica",
+      "page_start": null
+    },
+    {
+      "number": 17,
+      "title": "Le aldeidi e i chetoni",
+      "page_start": null
+    },
+    {
+      "number": 18,
+      "title": "Gli acidi carbossilici e i loro derivati",
+      "page_start": null
+    },
+    {
+      "number": 19,
+      "title": "La reattività del carbonio alfa: gli enoli e gli enolati",
+      "page_start": null
+    },
+    {
+      "number": 20,
+      "title": "Le ammine",
+      "page_start": null
+    },
+    {
+      "number": 21,
+      "title": "I carboidrati e gli acidi nucleici",
+      "page_start": null,
+      "note": "Capitolo disponibile solo online"
+    },
+    {
+      "number": 22,
+      "title": "Amminoacidi, peptidi e proteine",
+      "page_start": null,
+      "note": "Capitolo disponibile solo online"
+    },
+    {
+      "number": 23,
+      "title": "I lipidi",
+      "page_start": null,
+      "note": "Capitolo disponibile solo online"
+    },
+    {
+      "number": 24,
+      "title": "Synthetic Polymers",
+      "page_start": null,
+      "note": "Capitolo supplementare"
+    }
+  ]
+}

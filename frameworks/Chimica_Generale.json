@@ -1,0 +1,464 @@
+{
+  "framework": {
+    "name": "Framework Unico Valutazione Chimica Generale - Multidisciplinare",
+    "version": "1.0",
+    "description": "Framework integrato per valutare allineamento tra programmi di Chimica Generale universitaria e manuali di testo, per contesti Biologia/Chimica/Fisica/Scienze Naturali.",
+    "date": "2025-12-15"
+  },
+  "scale": {
+    "1": "livello minimo/assente",
+    "2": "livello molto basso/sporadico",
+    "3": "livello moderato/base",
+    "4": "livello alto/articolato",
+    "5": "livello massimo/avanzato"
+  },
+  "syllabus_modules": [
+    {
+      "id": 1,
+      "name": "Struttura atomica e tavola periodica",
+      "core_contents": [
+        "Particelle subatomiche, isotopi, numero Avogadro",
+        "Modello Bohr, spettri atomici",
+        "Numeri quantici, orbitali s/p/d/f",
+        "Configurazioni elettroniche, eccezioni",
+        "Raggio atomico, IE, elettronegatività"
+      ],
+      "learning_outcomes": [
+        "Predire configurazioni elettroniche",
+        "Tendenze periodicità",
+        "Spiegare proprietà elementi"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Legame chimico e geometria molecolare",
+      "core_contents": [
+        "Teoria Lewis, regola ottetto/18 elettroni",
+        "VSEPR (lineare, planare, tetraedrica)",
+        "Ibridazione sp/sp2/sp3",
+        "Polarità legami/molecole, momento dipolare",
+        "Legami metallici, energia reticolare"
+      ],
+      "learning_outcomes": [
+        "Predire geometria/polarità",
+        "Disegnare strutture Lewis",
+        "Spiegare risonanza"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Stechiometria e reazioni chimiche",
+      "core_contents": [
+        "Mole, massa molare, composizione %",
+        "Bilanciamento equazioni, yield teorico/esperim.",
+        "Reazioni: precipitazione, acido-base, redox",
+        "Stechiometria soluzioni, diluizioni",
+        "Numeri ossidazione, bilanciamento redox"
+      ],
+      "learning_outcomes": [
+        "Calcoli massa/moli",
+        "Bilanciamento redox",
+        "Yield reazioni"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Termodinamica e termochimica",
+      "core_contents": [
+        "Energia interna, entalpia, 1° principio",
+        "Calorimetria, capacità termica",
+        "Legge Hess, entalpie formazione",
+        "Entropia, 2° principio, energia libera Gibbs",
+        "Cicli Born-Haber, spontaneità"
+      ],
+      "learning_outcomes": [
+        "Calcoli ΔH/ΔS/ΔG",
+        "Predire spontaneità",
+        "Bilanci energetici"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Stati materia e soluzioni",
+      "core_contents": [
+        "Leggi gas ideali, miscele, pressioni parziali",
+        "Teoria cinetica gas, gas reali",
+        "Cambi stato, diagrammi fase",
+        "Soluzioni: molalità, molarità, % massa",
+        "Proprietà colligative (ebullio, crioscopia, osmosi)"
+      ],
+      "learning_outcomes": [
+        "Calcoli PV=nRT",
+        "Pressioni parziali",
+        "Osmotic pressure"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Cinetica chimica",
+      "core_contents": [
+        "Velocità reazione, ordine, cinetica integrata",
+        "Equazione Arrhenius, energia attivazione",
+        "Meccanismi elementari, stato attivato",
+        "Catalisi omogenea/eterogenea",
+        "Cinetica enzimatica (Michaelis-Menten)"
+      ],
+      "learning_outcomes": [
+        "Grafici cinetici",
+        "Calcolo Ea",
+        "Meccanismi proposti"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Equilibri chimici",
+      "core_contents": [
+        "Costante Kc/Kp, principio Le Chatelier",
+        "Calcoli equilibri gassosi/eterogenei",
+        "Fattori spostamento equilibrio",
+        "Equilibri multipli, approssimazioni",
+        "Q vs K"
+      ],
+      "learning_outcomes": [
+        "Calcoli concentrazioni equilibrio",
+        "Predire spostamenti",
+        "Equilibri complessi"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Equilibri acido-base",
+      "core_contents": [
+        "Arrhenius, Brønsted-Lowry, Lewis",
+        "pKa, pH calcoli acidi deboli",
+        "Idrolisi sali, indicatori",
+        "Curve titolazione, tamponi",
+        "Calcoli capacità tampone"
+      ],
+      "learning_outcomes": [
+        "pH soluzioni miste",
+        "Curve titolazione",
+        "Buffer design"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Elettrochimica",
+      "core_contents": [
+        "Celle galvaniche/voltaiche, potenziale standard",
+        "Equazione Nernst",
+        "Celle elettrolitiche, leggi Faraday",
+        "Corrosione, batterie (Pb, NiCd, Li-ion)",
+        "Elettrodi riferimento"
+      ],
+      "learning_outcomes": [
+        "Calcoli E°/E",
+        "Quantità elettrolisi",
+        "Batterie funzionamento"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Chimica elementi principali",
+      "core_contents": [
+        "Gruppi 1-2 (alcalini/terrosi)",
+        "Gruppo 13-16 (boro, carbonio, azoto, ossigeno)",
+        "Alogeni (17), gas nobili (18)",
+        "Ossidi acidi/basei/anfoteri",
+        "Nomenclatura IUPAC composti"
+      ],
+      "learning_outcomes": [
+        "Proprietà/reazioni gruppi",
+        "Classificazione ossidi",
+        "Composti tipici"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Tecniche analitiche e laboratorio",
+      "core_contents": [
+        "Titolo soluzioni, standardizzazione",
+        "Gravimetria, volumetriche",
+        "Spettroscopia UV-Vis base",
+        "Cromatografia cartacea/TLC",
+        "Analisi qualitativa cationi/anionici"
+      ],
+      "learning_outcomes": [
+        "Procedure analitiche",
+        "Identificazione ioni",
+        "Precisione analisi"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Sicurezza, sostenibilità e applicazioni",
+      "core_contents": [
+        "MSDS, DPI, norme sicurezza",
+        "Gestione rifiuti chimici",
+        "Green chemistry principi",
+        "Chimica industriale (Haber-Bosch, Claus)",
+        "Chimica atmosferica (ozono, acidi pioggia)"
+      ],
+      "learning_outcomes": [
+        "Protocolli sicurezza",
+        "Processi sostenibili",
+        "Impatti ambientali"
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "id": "copertura_moduli",
+      "name": "Copertura moduli dettagliata",
+      "type": "contenuto",
+      "levels": {
+        "1": "Meno di 6 moduli sui 12 richiesti.",
+        "2": "6-8 moduli con trattazione superficiale.",
+        "3": "9 moduli con copertura base.",
+        "4": "10-11 moduli con buona profondità.",
+        "5": "Tutti i 12 moduli completi."
+      }
+    },
+    {
+      "id": "struttura_atomica",
+      "name": "Struttura atomica/orbitale",
+      "type": "contenuto",
+      "levels": {
+        "1": "Solo modello atomico base.",
+        "2": "Numeri quantici accennati.",
+        "3": "Configurazioni elettroniche base.",
+        "4": "Orbitali s/p/d con esempi.",
+        "5": "Numeri quantici completi+eccezioni."
+      }
+    },
+    {
+      "id": "stechiometria",
+      "name": "Stechiometria/calcoli",
+      "type": "contenuto",
+      "levels": {
+        "1": "Solo concetti base senza esempi.",
+        "2": "Qualche calcolo stechiometrico.",
+        "3": "Bilanciamento+redox base.",
+        "4": "Esempi abbondanti redox/yield.",
+        "5": "Calcoli completi+applicazioni."
+      }
+    },
+    {
+      "id": "termodinamica",
+      "name": "Termodinamica",
+      "type": "contenuto",
+      "levels": {
+        "1": "Solo entalpia base.",
+        "2": "ΔH senza cicli Hess.",
+        "3": "ΔH/ΔS intuitivi.",
+        "4": "ΔG+spontaneità+Born-Haber.",
+        "5": "Termodinamica rigorosa completa."
+      }
+    },
+    {
+      "id": "cinetica",
+      "name": "Cinetica",
+      "type": "contenuto",
+      "levels": {
+        "1": "Solo velocità reazioni.",
+        "2": "Arrhenius qualitativo.",
+        "3": "Velocità+ordine base.",
+        "4": "Meccanismi+cinetiche integrate.",
+        "5": "Arrhenius+meccanismi enzimatici."
+      }
+    },
+    {
+      "id": "equilibri_acidobase",
+      "name": "Equilibri acido-base",
+      "type": "contenuto",
+      "levels": {
+        "1": "Solo definizioni acidi/basi.",
+        "2": "pH acidi forti.",
+        "3": "pKa+deboli base.",
+        "4": "Tamponi+titolazioni.",
+        "5": "Curve complete+capacità tampone."
+      }
+    },
+    {
+      "id": "gas_soluzioni",
+      "name": "Gas/soluzioni",
+      "type": "contenuto",
+      "levels": {
+        "1": "Solo gas ideali base.",
+        "2": "Leggi gas senza colligative.",
+        "3": "Gas ideali+colligative base.",
+        "4": "Gas reali+proprietà colligative.",
+        "5": "Calcoli completi colligative."
+      }
+    },
+    {
+      "id": "elettrochimica",
+      "name": "Elettrochimica",
+      "type": "contenuto",
+      "levels": {
+        "1": "Solo batterie generiche.",
+        "2": "Potenziali standard base.",
+        "3": "Nernst semplificata.",
+        "4": "Faraday+elettrolisi.",
+        "5": "Nernst completa+batterie moderne."
+      }
+    },
+    {
+      "id": "chimica_gruppi",
+      "name": "Chimica gruppi",
+      "type": "contenuto",
+      "levels": {
+        "1": "Solo proprietà generali.",
+        "2": "Qualche reazione gruppo.",
+        "3": "Proprietà+reazioni tipiche.",
+        "4": "Reazioni dettagliate gruppi.",
+        "5": "Chimica descrittiva completa."
+      }
+    },
+    {
+      "id": "laboratorio",
+      "name": "Laboratorio/analitiche",
+      "type": "didattico",
+      "levels": {
+        "1": "Nessuna pratica laboratorio.",
+        "2": "Teoria analitica generica.",
+        "3": "Qualche procedura base.",
+        "4": "Procedure complete volumetriche.",
+        "5": "Tecniche analitiche dettagliate."
+      }
+    },
+    {
+      "id": "chiarezza_grafici",
+      "name": "Chiarezza/grafici",
+      "type": "didattico",
+      "levels": {
+        "1": "Figure povere.",
+        "2": "Strutture base.",
+        "3": "Figure buone standard.",
+        "4": "Strutture orbitali chiare.",
+        "5": "Grafici eccellenti+interattivi."
+      }
+    },
+    {
+      "id": "applicazioni_reali",
+      "name": "Applicazioni reali",
+      "type": "didattico",
+      "levels": {
+        "1": "Solo teoria astratta.",
+        "2": "Qualche cenno industriale.",
+        "3": "Applicazioni regolari.",
+        "4": "Esempi industriali ricchi.",
+        "5": "Applicazioni contestualizzate."
+      }
+    },
+    {
+      "id": "errori_studenti",
+      "name": "Errori studenti",
+      "type": "didattico",
+      "levels": {
+        "1": "Nessun supporto errori.",
+        "2": "Qualche cenno calcoli.",
+        "3": "Box errori comuni.",
+        "4": "Supporto proattivo calcoli.",
+        "5": "Prevenzione eccellente errori."
+      }
+    },
+    {
+      "id": "sicurezza_green",
+      "name": "Sicurezza/green chem",
+      "type": "didattico",
+      "levels": {
+        "1": "Nessuna menzione sicurezza.",
+        "2": "Cenni norme base.",
+        "3": "Sicurezza adeguata.",
+        "4": "Green chemistry introdotta.",
+        "5": "Sicurezza+sostenibilità complete."
+      }
+    }
+  ],
+  "program_profiles": [
+    {
+      "id": "biologia_biotecnologie",
+      "name": "Biologia/Biotecnologie",
+      "priority_modules": [6,8,12],
+      "requirements": {
+        "copertura_moduli": {"required_level": 5, "weight": 0.10},
+        "struttura_atomica": {"required_level": 4, "weight": 0.09},
+        "stechiometria": {"required_level": 5, "weight": 0.12},
+        "termodinamica": {"required_level": 4, "weight": 0.10},
+        "cinetica": {"required_level": 5, "weight": 0.13},
+        "equilibri_acidobase": {"required_level": 5, "weight": 0.13},
+        "gas_soluzioni": {"required_level": 4, "weight": 0.09},
+        "elettrochimica": {"required_level": 3, "weight": 0.08},
+        "chimica_gruppi": {"required_level": 3, "weight": 0.07},
+        "laboratorio": {"required_level": 4, "weight": 0.10},
+        "chiarezza_grafici": {"required_level": 4, "weight": 0.08},
+        "applicazioni_reali": {"required_level": 4, "weight": 0.09},
+        "errori_studenti": {"required_level": 3, "weight": 0.05},
+        "sicurezza_green": {"required_level": 4, "weight": 0.07}
+      }
+    },
+    {
+      "id": "chimica",
+      "name": "Chimica",
+      "priority_modules": [1,2,4,6,7,8,9],
+      "requirements": {
+        "copertura_moduli": {"required_level": 5, "weight": 0.13},
+        "struttura_atomica": {"required_level": 5, "weight": 0.12},
+        "stechiometria": {"required_level": 5, "weight": 0.12},
+        "termodinamica": {"required_level": 5, "weight": 0.14},
+        "cinetica": {"required_level": 5, "weight": 0.13},
+        "equilibri_acidobase": {"required_level": 5, "weight": 0.13},
+        "gas_soluzioni": {"required_level": 4, "weight": 0.10},
+        "elettrochimica": {"required_level": 5, "weight": 0.12},
+        "chimica_gruppi": {"required_level": 5, "weight": 0.12},
+        "laboratorio": {"required_level": 4, "weight": 0.10},
+        "chiarezza_grafici": {"required_level": 4, "weight": 0.09},
+        "applicazioni_reali": {"required_level": 3, "weight": 0.08},
+        "errori_studenti": {"required_level": 4, "weight": 0.06},
+        "sicurezza_green": {"required_level": 3, "weight": 0.06}
+      }
+    }
+  ],
+  "manual_profiles": [
+    {
+      "id": "manuale_A",
+      "name": "Manuale A - Completo Chimica",
+      "scores": {
+        "copertura_moduli": 5,
+        "struttura_atomica": 5,
+        "stechiometria": 5,
+        "termodinamica": 5,
+        "cinetica": 5,
+        "equilibri_acidobase": 5,
+        "gas_soluzioni": 4,
+        "elettrochimica": 5,
+        "chimica_gruppi": 5,
+        "laboratorio": 4,
+        "chiarezza_grafici": 5,
+        "applicazioni_reali": 4,
+        "errori_studenti": 4,
+        "sicurezza_green": 4
+      }
+    }
+  ],
+  "alignment_method": {
+    "description": "Allineamento = media ponderata dei criteri: score_i = max(0, 1 - |required_level_i - offered_score_i| / 4)",
+    "formula": "alignment = Σ(weight_i × score_i) / Σ(weight_i)",
+    "interpretation": {
+      "85-100": "Eccellente - Copertura esaustiva+applicativa - Adozione consigliata",
+      "70-84": "Buono - Solido con integrazioni lab - Raccomandato+integrazioni",
+      "55-69": "Sufficiente - Lacune calcoli/avanzate - Con riserva",
+      "<55": "Sconsigliato - Incompleto/superficiale - Non adottare"
+    }
+  },
+  "example_match": {
+    "program_id": "chimica",
+    "manual_id": "manuale_A",
+    "overall_alignment": 95.2,
+    "judgment": "Eccellente",
+    "recommendation": "Manuale completo e perfettamente allineato per corsi di Chimica. Adozione immediata.",
+    "strong_criteria": ["termodinamica", "elettrochimica", "struttura_atomica"],
+    "weak_criteria": []
+  }
+}

@@ -1,0 +1,709 @@
+{
+  "id": "Speranza_Chimica",
+  "title": "Chimica",
+  "author": "Speranza e al.",
+  "publisher": "Edi-Ermes",
+  "subject": "chimica generale",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Chimica fra scienza e vita",
+      "page_start": 1,
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "La Chimica come valore",
+          "page_start": 1
+        },
+        {
+          "number": "1.2",
+          "title": "La Chimica come scienza",
+          "page_start": 8
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Proprietà della materia e misure",
+      "page_start": 11,
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "Materia",
+          "page_start": 11
+        },
+        {
+          "number": "2.2",
+          "title": "Sistemi chimici: definizioni e proprietà",
+          "page_start": 22
+        },
+        {
+          "number": "2.3",
+          "title": "Trasformazioni fisiche e chimiche",
+          "page_start": 25
+        },
+        {
+          "number": "2.4",
+          "title": "Notazione esponenziale dei numeri",
+          "page_start": 28
+        },
+        {
+          "number": "2.5",
+          "title": "Misure ed errori",
+          "page_start": 30
+        },
+        {
+          "number": "2.6",
+          "title": "Richiami di algebra",
+          "page_start": 49
+        },
+        {
+          "number": "2.7",
+          "title": "Leggi fisiche fondamentali",
+          "page_start": 57
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Leggi fondamentali della chimica e teoria atomica",
+      "page_start": 63,
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "Leggi fondamentali della chimica",
+          "page_start": 63
+        },
+        {
+          "number": "3.2",
+          "title": "Struttura fisica dell'atomo",
+          "page_start": 69
+        },
+        {
+          "number": "3.3",
+          "title": "Nuclidi e isotopi",
+          "page_start": 83
+        },
+        {
+          "number": "3.4",
+          "title": "Tavola periodica degli elementi",
+          "page_start": 91
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Formule ed equazioni chimiche",
+      "page_start": 103,
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "Formule chimiche",
+          "page_start": 104
+        },
+        {
+          "number": "4.2",
+          "title": "Nomenclatura dei principali composti inorganici",
+          "page_start": 107
+        },
+        {
+          "number": "4.3",
+          "title": "Scrittura e bilanciamento delle reazioni chimiche",
+          "page_start": 120
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Struttura atomica",
+      "page_start": 139,
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "Radiazione elettromagnetica",
+          "page_start": 139
+        },
+        {
+          "number": "5.2",
+          "title": "Nascita della meccanica quantistica",
+          "page_start": 145
+        },
+        {
+          "number": "5.3",
+          "title": "Meccanica quantistica ed equazione di Schrödinger",
+          "page_start": 166
+        },
+        {
+          "number": "5.4",
+          "title": "Atomi monoelettronici",
+          "page_start": 172
+        },
+        {
+          "number": "5.5",
+          "title": "Atomi polielettronici",
+          "page_start": 190
+        },
+        {
+          "number": "5.6",
+          "title": "Tavola periodica e configurazione elettronica",
+          "page_start": 209
+        },
+        {
+          "number": "5.7",
+          "title": "Proprietà periodiche degli atomi",
+          "page_start": 212
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Legame chimico",
+      "page_start": 229,
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "Legame covalente",
+          "page_start": 233
+        },
+        {
+          "number": "6.2",
+          "title": "Legame ionico",
+          "page_start": 283
+        },
+        {
+          "number": "6.3",
+          "title": "Legame metallico",
+          "page_start": 288
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Stato aeriforme",
+      "page_start": 297,
+      "sections": [
+        {
+          "number": "7.1",
+          "title": "Proprietà dei gas",
+          "page_start": 299
+        },
+        {
+          "number": "7.2",
+          "title": "Gas ideali",
+          "page_start": 301
+        },
+        {
+          "number": "7.3",
+          "title": "Leggi dei gas",
+          "page_start": 302
+        },
+        {
+          "number": "7.4",
+          "title": "Equazione di stato dei gas ideali",
+          "page_start": 311
+        },
+        {
+          "number": "7.5",
+          "title": "Calcoli con le leggi dei gas",
+          "page_start": 314
+        },
+        {
+          "number": "7.6",
+          "title": "Miscele gassose: pressioni parziali e legge di Dalton",
+          "page_start": 316
+        },
+        {
+          "number": "7.7",
+          "title": "Teoria cinetica dei gas",
+          "page_start": 319
+        },
+        {
+          "number": "7.8",
+          "title": "Gas reali",
+          "page_start": 329
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Termodinamica chimica",
+      "page_start": 341,
+      "sections": [
+        {
+          "number": "8.1",
+          "title": "Sistemi, stati, processi",
+          "page_start": 342
+        },
+        {
+          "number": "8.2",
+          "title": "Primo principio della termodinamica",
+          "page_start": 346
+        },
+        {
+          "number": "8.3",
+          "title": "Capacità termica, calore specifico e calore molare",
+          "page_start": 349
+        },
+        {
+          "number": "8.4",
+          "title": "Lavoro e calore in processi reversibili e irreversibili",
+          "page_start": 351
+        },
+        {
+          "number": "8.5",
+          "title": "Entalpia ed energia interna",
+          "page_start": 352
+        },
+        {
+          "number": "8.6",
+          "title": "Termochimica",
+          "page_start": 354
+        },
+        {
+          "number": "8.7",
+          "title": "Processi isotermi e processi adiabatici",
+          "page_start": 359
+        },
+        {
+          "number": "8.8",
+          "title": "Dal primo al secondo principio della termodinamica",
+          "page_start": 361
+        },
+        {
+          "number": "8.9",
+          "title": "Secondo principio della termodinamica",
+          "page_start": 371
+        },
+        {
+          "number": "8.10",
+          "title": "Primo e secondo principio della termodinamica: una visione unitaria",
+          "page_start": 377
+        },
+        {
+          "number": "8.11",
+          "title": "Variazioni dell'entropia con la temperatura: il terzo principio della termodinamica e le transizioni di fase",
+          "page_start": 377
+        },
+        {
+          "number": "8.12",
+          "title": "Energia libera",
+          "page_start": 378
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Stati condensati della materia: liquidi e solidi",
+      "page_start": 391,
+      "sections": [
+        {
+          "number": "9.1",
+          "title": "Interazioni intermolecolari",
+          "page_start": 392
+        },
+        {
+          "number": "9.2",
+          "title": "Stati di aggregazione",
+          "page_start": 397
+        },
+        {
+          "number": "9.3",
+          "title": "Equilibrio tra le fasi",
+          "page_start": 397
+        },
+        {
+          "number": "9.4",
+          "title": "Transizioni di fase",
+          "page_start": 401
+        },
+        {
+          "number": "9.5",
+          "title": "Diagrammi di fase",
+          "page_start": 409
+        },
+        {
+          "number": "9.6",
+          "title": "Proprietà fisiche dei liquidi",
+          "page_start": 412
+        },
+        {
+          "number": "9.7",
+          "title": "Solidi e loro proprietà generali",
+          "page_start": 417
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Soluzioni",
+      "page_start": 431,
+      "sections": [
+        {
+          "number": "10.1",
+          "title": "Processo di formazione delle soluzioni",
+          "page_start": 432
+        },
+        {
+          "number": "10.2",
+          "title": "Entalpia, entropia ed energia libera di dissoluzione delle sostanze",
+          "page_start": 434
+        },
+        {
+          "number": "10.3",
+          "title": "Effetto della temperatura e della pressione sulla solubilità",
+          "page_start": 441
+        },
+        {
+          "number": "10.4",
+          "title": "Proprietà colligative",
+          "page_start": 442
+        },
+        {
+          "number": "10.5",
+          "title": "Soluzioni ideali e non ideali",
+          "page_start": 451
+        },
+        {
+          "number": "10.6",
+          "title": "Legge di ripartizione",
+          "page_start": 459
+        },
+        {
+          "number": "10.7",
+          "title": "Regola delle fasi",
+          "page_start": 459
+        },
+        {
+          "number": "10.8",
+          "title": "Attività e forza ionica",
+          "page_start": 463
+        },
+        {
+          "number": "10.9",
+          "title": "Conducibilità delle soluzioni",
+          "page_start": 465
+        },
+        {
+          "number": "10.10",
+          "title": "Colloidi",
+          "page_start": 469
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Equilibrio chimico",
+      "page_start": 473,
+      "sections": [
+        {
+          "number": "11.1",
+          "title": "Velocità e reversibilità delle reazioni chimiche",
+          "page_start": 473
+        },
+        {
+          "number": "11.2",
+          "title": "Composizione di equilibrio e costante di equilibrio",
+          "page_start": 475
+        },
+        {
+          "number": "11.3",
+          "title": "Quoziente di reazione",
+          "page_start": 479
+        },
+        {
+          "number": "11.4",
+          "title": "Energia libera e costante di equilibrio",
+          "page_start": 481
+        },
+        {
+          "number": "11.5",
+          "title": "Costante di equilibrio in funzione di altri parametri",
+          "page_start": 485
+        },
+        {
+          "number": "11.6",
+          "title": "Equilibri in sistemi eterogenei",
+          "page_start": 487
+        },
+        {
+          "number": "11.7",
+          "title": "Alterazioni delle condizioni di equilibrio",
+          "page_start": 488
+        },
+        {
+          "number": "11.8",
+          "title": "Calcoli sugli equilibri",
+          "page_start": 490
+        },
+        {
+          "number": "11.9",
+          "title": "Variazione della costante di equilibrio con la temperatura",
+          "page_start": 495
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Elettroliti in soluzione acquosa: acidi, basi e solubilità dei sali",
+      "page_start": 503,
+      "sections": [
+        {
+          "number": "12.1",
+          "title": "Prodotto ionico dell'acqua",
+          "page_start": 504
+        },
+        {
+          "number": "12.2",
+          "title": "pH e pOH",
+          "page_start": 506
+        },
+        {
+          "number": "12.3",
+          "title": "Definizioni di acido e base",
+          "page_start": 506
+        },
+        {
+          "number": "12.4",
+          "title": "Forza di acidi e basi in acqua",
+          "page_start": 510
+        },
+        {
+          "number": "12.5",
+          "title": "Soluzioni acquose di acidi, basi e sali",
+          "page_start": 514
+        },
+        {
+          "number": "12.6",
+          "title": "Soluzioni tampone",
+          "page_start": 546
+        },
+        {
+          "number": "12.7",
+          "title": "Titolazioni",
+          "page_start": 558
+        },
+        {
+          "number": "12.8",
+          "title": "Soluzioni acquose di elettroliti poco solubili: solubilità e prodotto di solubilità",
+          "page_start": 578
+        },
+        {
+          "number": "12.9",
+          "title": "Effetto del pH su altri equilibri",
+          "page_start": 587
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Elettrochimica",
+      "page_start": 599,
+      "sections": [
+        {
+          "number": "13.1",
+          "title": "Celle galvaniche",
+          "page_start": 600
+        },
+        {
+          "number": "13.2",
+          "title": "Elettrodi e reazioni elettrodiche",
+          "page_start": 602
+        },
+        {
+          "number": "13.3",
+          "title": "Potenziali standard delle semicelle",
+          "page_start": 603
+        },
+        {
+          "number": "13.4",
+          "title": "Termodinamica delle celle galvaniche",
+          "page_start": 607
+        },
+        {
+          "number": "13.5",
+          "title": "Equazione di Nernst",
+          "page_start": 614
+        },
+        {
+          "number": "13.6",
+          "title": "Applicazioni analitiche dell'equazione di Nernst",
+          "page_start": 619
+        },
+        {
+          "number": "13.7",
+          "title": "Batterie e celle a combustibile",
+          "page_start": 623
+        },
+        {
+          "number": "13.8",
+          "title": "Corrosione elettrochimica",
+          "page_start": 627
+        },
+        {
+          "number": "13.9",
+          "title": "Celle elettrolitiche",
+          "page_start": 628
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Cinetica chimica",
+      "page_start": 639,
+      "sections": [
+        {
+          "number": "14.1",
+          "title": "Velocità di reazione",
+          "page_start": 640
+        },
+        {
+          "number": "14.2",
+          "title": "Equazione cinetica e ordine cinetico",
+          "page_start": 642
+        },
+        {
+          "number": "14.3",
+          "title": "Molecolarità della reazione",
+          "page_start": 649
+        },
+        {
+          "number": "14.4",
+          "title": "Reazioni complesse",
+          "page_start": 650
+        },
+        {
+          "number": "14.5",
+          "title": "Metodi approssimati impiegati in cinetica",
+          "page_start": 657
+        },
+        {
+          "number": "14.6",
+          "title": "Effetto della temperatura sulla costante di velocità",
+          "page_start": 658
+        },
+        {
+          "number": "14.7",
+          "title": "Catalisi",
+          "page_start": 665
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Elementi dei gruppi principali",
+      "page_start": 677,
+      "sections": [
+        {
+          "number": "15.1",
+          "title": "Modalità di formazione di legame",
+          "page_start": 678
+        },
+        {
+          "number": "15.2",
+          "title": "Idrogeno",
+          "page_start": 681
+        },
+        {
+          "number": "15.3",
+          "title": "Elementi del gruppo 1: metalli alcalini",
+          "page_start": 685
+        },
+        {
+          "number": "15.4",
+          "title": "Elementi del gruppo 2: metalli alcalino-terrosi",
+          "page_start": 689
+        },
+        {
+          "number": "15.5",
+          "title": "Elementi del gruppo 13",
+          "page_start": 692
+        },
+        {
+          "number": "15.6",
+          "title": "Elementi del gruppo 14",
+          "page_start": 698
+        },
+        {
+          "number": "15.7",
+          "title": "Elementi del gruppo 15",
+          "page_start": 705
+        },
+        {
+          "number": "15.8",
+          "title": "Elementi del gruppo 16",
+          "page_start": 715
+        },
+        {
+          "number": "15.9",
+          "title": "Elementi del gruppo 17: alogeni",
+          "page_start": 722
+        },
+        {
+          "number": "15.10",
+          "title": "Elementi del gruppo 18: gas nobili",
+          "page_start": 731
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Elementi di transizione",
+      "page_start": 735,
+      "sections": [
+        {
+          "number": "16.1",
+          "title": "Elementi di transizione e proprietà periodiche",
+          "page_start": 737
+        },
+        {
+          "number": "16.2",
+          "title": "Composti di coordinazione degli elementi di transizione",
+          "page_start": 744
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Chimica nucleare e radiofarmaci",
+      "page_start": 767,
+      "sections": [
+        {
+          "number": "17.1",
+          "title": "Nucleo atomico",
+          "page_start": 769
+        },
+        {
+          "number": "17.2",
+          "title": "Radioattività e radiazioni nucleari",
+          "page_start": 772
+        },
+        {
+          "number": "17.3",
+          "title": "Leggi del decadimento nucleare",
+          "page_start": 775
+        },
+        {
+          "number": "17.4",
+          "title": "Radioattività artificiale",
+          "page_start": 782
+        },
+        {
+          "number": "17.5",
+          "title": "Interazione delle radiazioni con la materia",
+          "page_start": 786
+        },
+        {
+          "number": "17.6",
+          "title": "Effetti biologici delle radiazioni",
+          "page_start": 791
+        },
+        {
+          "number": "17.7",
+          "title": "Applicazioni della radioattività",
+          "page_start": 794
+        }
+      ]
+    }
+  ]
+}

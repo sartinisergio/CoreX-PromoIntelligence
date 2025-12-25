@@ -1,0 +1,805 @@
+{
+  "id": "Pawlina_Istologia",
+  "title": "Istologia",
+  "author": "Pawlina e Ross",
+  "publisher": "Zanichelli",
+  "subject": "Istologia",
+  "type": "Zanichelli",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Metodi",
+      "page_start": 1,
+      "sections": [
+        {
+          "title": "Generalità sui metodi usati in istologia",
+          "page_start": 1
+        },
+        {
+          "title": "Preparazione dei tessuti",
+          "page_start": 2
+        },
+        {
+          "title": "Istochimica e citochimica",
+          "page_start": 4
+        },
+        {
+          "title": "Microscopia",
+          "page_start": 13
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Citoplasma",
+      "page_start": 30,
+      "sections": [
+        {
+          "title": "Generalità sulla cellula e sul citoplasma",
+          "page_start": 30
+        },
+        {
+          "title": "Organelli membranosi",
+          "page_start": 33
+        },
+        {
+          "title": "Organelli non membranosi",
+          "page_start": 64
+        },
+        {
+          "title": "Inclusioni",
+          "page_start": 80
+        },
+        {
+          "title": "Matrice citoplasmatica",
+          "page_start": 82
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Nucleo",
+      "page_start": 85,
+      "sections": [
+        {
+          "title": "Generalità sul nucleo",
+          "page_start": 85
+        },
+        {
+          "title": "Componenti del nucleo",
+          "page_start": 85
+        },
+        {
+          "title": "Rinnovamento cellulare",
+          "page_start": 95
+        },
+        {
+          "title": "Ciclo cellulare",
+          "page_start": 96
+        },
+        {
+          "title": "Morte cellulare",
+          "page_start": 102
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Tessuti: concetto e classificazione",
+      "page_start": 110,
+      "sections": [
+        {
+          "title": "Generalità sui tessuti",
+          "page_start": 110
+        },
+        {
+          "title": "Tessuto epiteliale",
+          "page_start": 111
+        },
+        {
+          "title": "Tessuto connettivo",
+          "page_start": 112
+        },
+        {
+          "title": "Tessuto muscolare",
+          "page_start": 112
+        },
+        {
+          "title": "Tessuto nervoso",
+          "page_start": 113
+        },
+        {
+          "title": "Istogenesi dei tessuti",
+          "page_start": 114
+        },
+        {
+          "title": "Come identificare i tessuti",
+          "page_start": 116
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Tessuto epiteliale",
+      "page_start": 120,
+      "sections": [
+        {
+          "title": "Generalità sulla struttura e sulle funzioni del tessuto epiteliale",
+          "page_start": 120
+        },
+        {
+          "title": "Classificazione degli epiteli",
+          "page_start": 121
+        },
+        {
+          "title": "Polarità cellulare",
+          "page_start": 122
+        },
+        {
+          "title": "Dominio apicale e sue modificazioni",
+          "page_start": 124
+        },
+        {
+          "title": "Dominio laterale e sue specializzazioni nell'adesione tra cellula e cellula",
+          "page_start": 136
+        },
+        {
+          "title": "Dominio basale e sue specializzazioni nell'adesione cellula-matrice extracellulare",
+          "page_start": 152
+        },
+        {
+          "title": "Ghiandole",
+          "page_start": 162
+        },
+        {
+          "title": "Rinnovamento delle cellule epiteliali",
+          "page_start": 166
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Tessuto connettivo",
+      "page_start": 176,
+      "sections": [
+        {
+          "title": "Generalità sul tessuto connettivo",
+          "page_start": 176
+        },
+        {
+          "title": "Tessuto connettivo embrionale",
+          "page_start": 176
+        },
+        {
+          "title": "Tessuto connettivo propriamente detto",
+          "page_start": 178
+        },
+        {
+          "title": "Fibre del tessuto connettivo",
+          "page_start": 179
+        },
+        {
+          "title": "Matrice extracellulare",
+          "page_start": 191
+        },
+        {
+          "title": "Cellule del tessuto connettivo",
+          "page_start": 196
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Tessuto cartilagineo",
+      "page_start": 216,
+      "sections": [
+        {
+          "title": "Generalità sul tessuto cartilagineo",
+          "page_start": 216
+        },
+        {
+          "title": "Cartilagine ialina",
+          "page_start": 216
+        },
+        {
+          "title": "Cartilagine elastica",
+          "page_start": 222
+        },
+        {
+          "title": "Cartilagine fibrosa o fibrocartilagine",
+          "page_start": 223
+        },
+        {
+          "title": "Condroistogenesi e accrescimento della cartilagine",
+          "page_start": 224
+        },
+        {
+          "title": "Processi riparativi della cartilagine ialina",
+          "page_start": 225
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Tessuto osseo",
+      "page_start": 238,
+      "sections": [
+        {
+          "title": "Generalità sul tessuto osseo",
+          "page_start": 238
+        },
+        {
+          "title": "Struttura generale delle ossa",
+          "page_start": 239
+        },
+        {
+          "title": "Tipi di tessuto osseo",
+          "page_start": 241
+        },
+        {
+          "title": "Cellule del tessuto osseo",
+          "page_start": 245
+        },
+        {
+          "title": "Formazione dell'osso",
+          "page_start": 254
+        },
+        {
+          "title": "Mineralizzazione biologica e vescicole della matrice",
+          "page_start": 262
+        },
+        {
+          "title": "L'osso come target di ormoni endocrini e come organo endocrino",
+          "page_start": 265
+        },
+        {
+          "title": "Biologia dei processi riparativi dell'osso",
+          "page_start": 267
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Tessuto adiposo",
+      "page_start": 282,
+      "sections": [
+        {
+          "title": "Generalità sul tessuto adiposo",
+          "page_start": 282
+        },
+        {
+          "title": "Tessuto adiposo bianco",
+          "page_start": 282
+        },
+        {
+          "title": "Tessuto adiposo bruno",
+          "page_start": 289
+        },
+        {
+          "title": "Transdifferenziamento del tessuto adiposo",
+          "page_start": 294
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Sangue",
+      "page_start": 298,
+      "sections": [
+        {
+          "title": "Generalità sul sangue",
+          "page_start": 298
+        },
+        {
+          "title": "Plasma",
+          "page_start": 299
+        },
+        {
+          "title": "Eritrociti",
+          "page_start": 301
+        },
+        {
+          "title": "Leucociti",
+          "page_start": 304
+        },
+        {
+          "title": "Piastrine",
+          "page_start": 318
+        },
+        {
+          "title": "Conta completa degli elementi corpuscolati del sangue",
+          "page_start": 320
+        },
+        {
+          "title": "Formazione delle cellule del sangue (emopoiesi)",
+          "page_start": 321
+        },
+        {
+          "title": "Midollo osseo",
+          "page_start": 331
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Tessuto muscolare",
+      "page_start": 344,
+      "sections": [
+        {
+          "title": "Generalità sui muscoli e classificazione",
+          "page_start": 344
+        },
+        {
+          "title": "Muscolo scheletrico",
+          "page_start": 345
+        },
+        {
+          "title": "Muscolo cardiaco",
+          "page_start": 363
+        },
+        {
+          "title": "Muscolo liscio",
+          "page_start": 368
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Tessuto nervoso",
+      "page_start": 390,
+      "sections": [
+        {
+          "title": "Generalità sul sistema nervoso",
+          "page_start": 390
+        },
+        {
+          "title": "Composizione del tessuto nervoso",
+          "page_start": 391
+        },
+        {
+          "title": "Neurone",
+          "page_start": 391
+        },
+        {
+          "title": "Cellule di sostegno del sistema nervoso: la neuroglia",
+          "page_start": 405
+        },
+        {
+          "title": "Origine delle cellule del tessuto nervoso",
+          "page_start": 416
+        },
+        {
+          "title": "Organizzazione del sistema nervoso periferico",
+          "page_start": 417
+        },
+        {
+          "title": "Organizzazione del sistema nervoso autonomo",
+          "page_start": 420
+        },
+        {
+          "title": "Organizzazione del sistema nervoso centrale",
+          "page_start": 423
+        },
+        {
+          "title": "Risposta dei neuroni al danno",
+          "page_start": 428
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Sistema cardiovascolare",
+      "page_start": 444,
+      "sections": [
+        {
+          "title": "Generalità sul sistema cardiovascolare",
+          "page_start": 444
+        },
+        {
+          "title": "Cuore",
+          "page_start": 445
+        },
+        {
+          "title": "Caratteristiche generali di arterie e vene",
+          "page_start": 452
+        },
+        {
+          "title": "Arterie",
+          "page_start": 459
+        },
+        {
+          "title": "Capillari",
+          "page_start": 465
+        },
+        {
+          "title": "Anastomosi arterovenose",
+          "page_start": 468
+        },
+        {
+          "title": "Vene",
+          "page_start": 468
+        },
+        {
+          "title": "Vasi sanguigni atipici",
+          "page_start": 471
+        },
+        {
+          "title": "Vasi linfatici",
+          "page_start": 473
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Sistemi immunitario e linfatico",
+      "page_start": 486,
+      "sections": [
+        {
+          "title": "Generalità sui sistemi immunitario e linfatico",
+          "page_start": 486
+        },
+        {
+          "title": "Cellule del sistema immunitario",
+          "page_start": 488
+        },
+        {
+          "title": "Tessuti e organi linfatici",
+          "page_start": 500
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Sistema tegumentario",
+      "page_start": 538,
+      "sections": [
+        {
+          "title": "Generalità sul sistema tegumentario",
+          "page_start": 538
+        },
+        {
+          "title": "Strati della cute",
+          "page_start": 539
+        },
+        {
+          "title": "Cellule dell'epidermide",
+          "page_start": 542
+        },
+        {
+          "title": "Strutture della cute",
+          "page_start": 553
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Sistema digerente I: cavità orale e organi annessi",
+      "page_start": 580,
+      "sections": [
+        {
+          "title": "Generalità sul sistema digerente",
+          "page_start": 580
+        },
+        {
+          "title": "Cavità orale",
+          "page_start": 581
+        },
+        {
+          "title": "Lingua",
+          "page_start": 583
+        },
+        {
+          "title": "Denti e tessuti di sostegno",
+          "page_start": 588
+        },
+        {
+          "title": "Ghiandole salivari",
+          "page_start": 601
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Sistema digerente II: esofago e tratto gastrointestinale",
+      "page_start": 624,
+      "sections": [
+        {
+          "title": "Generalità sull'esofago e sul tratto gastrointestinale",
+          "page_start": 624
+        },
+        {
+          "title": "Esofago",
+          "page_start": 628
+        },
+        {
+          "title": "Stomaco",
+          "page_start": 630
+        },
+        {
+          "title": "Intestino tenue",
+          "page_start": 641
+        },
+        {
+          "title": "Intestino crasso",
+          "page_start": 653
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Sistema digerente III: fegato, cistifellea e pancreas",
+      "page_start": 684,
+      "sections": [
+        {
+          "title": "Fegato",
+          "page_start": 684
+        },
+        {
+          "title": "Cistifellea",
+          "page_start": 700
+        },
+        {
+          "title": "Pancreas",
+          "page_start": 703
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Sistema respiratorio",
+      "page_start": 722,
+      "sections": [
+        {
+          "title": "Generalità sul sistema respiratorio",
+          "page_start": 722
+        },
+        {
+          "title": "Cavità nasali",
+          "page_start": 723
+        },
+        {
+          "title": "Faringe",
+          "page_start": 729
+        },
+        {
+          "title": "Laringe",
+          "page_start": 729
+        },
+        {
+          "title": "Trachea",
+          "page_start": 729
+        },
+        {
+          "title": "Bronchi",
+          "page_start": 736
+        },
+        {
+          "title": "Bronchioli",
+          "page_start": 737
+        },
+        {
+          "title": "Alveoli",
+          "page_start": 739
+        },
+        {
+          "title": "Circolazione sanguigna nel polmone",
+          "page_start": 746
+        },
+        {
+          "title": "Vasi linfatici",
+          "page_start": 746
+        },
+        {
+          "title": "Nervi",
+          "page_start": 749
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Apparato urinario",
+      "page_start": 762,
+      "sections": [
+        {
+          "title": "Generalità sull'apparato urinario",
+          "page_start": 762
+        },
+        {
+          "title": "Struttura generale del rene",
+          "page_start": 763
+        },
+        {
+          "title": "Funzioni del tubulo renale",
+          "page_start": 777
+        },
+        {
+          "title": "Cellule interstiziali",
+          "page_start": 784
+        },
+        {
+          "title": "Istofisiologia del rene",
+          "page_start": 785
+        },
+        {
+          "title": "Vascolarizzazione",
+          "page_start": 787
+        },
+        {
+          "title": "Vasi linfatici",
+          "page_start": 789
+        },
+        {
+          "title": "Innervazione",
+          "page_start": 789
+        },
+        {
+          "title": "Uretere, vescica urinaria e uretra",
+          "page_start": 789
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "title": "Sistema endocrino",
+      "page_start": 808,
+      "sections": [
+        {
+          "title": "Generalità sul sistema endocrino",
+          "page_start": 808
+        },
+        {
+          "title": "Ghiandola pituitaria (ipofisi)",
+          "page_start": 812
+        },
+        {
+          "title": "Ipotalamo",
+          "page_start": 821
+        },
+        {
+          "title": "Ghiandola pineale",
+          "page_start": 821
+        },
+        {
+          "title": "Ghiandola tiroide",
+          "page_start": 823
+        },
+        {
+          "title": "Ghiandole paratiroidi",
+          "page_start": 831
+        },
+        {
+          "title": "Ghiandole surrenali",
+          "page_start": 832
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "title": "Apparato genitale maschile",
+      "page_start": 856,
+      "sections": [
+        {
+          "title": "Generalità sull'apparato genitale maschile",
+          "page_start": 856
+        },
+        {
+          "title": "Testicolo",
+          "page_start": 856
+        },
+        {
+          "title": "Spermatogenesi",
+          "page_start": 863
+        },
+        {
+          "title": "Tubuli seminiferi",
+          "page_start": 869
+        },
+        {
+          "title": "Dotti intratesticolari",
+          "page_start": 874
+        },
+        {
+          "title": "Dotti extratesticolari",
+          "page_start": 874
+        },
+        {
+          "title": "Ghiandole sessuali accessorie",
+          "page_start": 880
+        },
+        {
+          "title": "Prostata",
+          "page_start": 881
+        },
+        {
+          "title": "Seme",
+          "page_start": 885
+        },
+        {
+          "title": "Pene",
+          "page_start": 885
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "title": "Apparato genitale femminile",
+      "page_start": 902,
+      "sections": [
+        {
+          "title": "Generalità sull'apparato genitale femminile",
+          "page_start": 902
+        },
+        {
+          "title": "Ovaio",
+          "page_start": 903
+        },
+        {
+          "title": "Tube uterine",
+          "page_start": 919
+        },
+        {
+          "title": "Utero",
+          "page_start": 920
+        },
+        {
+          "title": "Placenta",
+          "page_start": 929
+        },
+        {
+          "title": "Vagina",
+          "page_start": 934
+        },
+        {
+          "title": "Genitali esterni",
+          "page_start": 935
+        },
+        {
+          "title": "Ghiandole mammarie",
+          "page_start": 937
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "title": "Occhio",
+      "page_start": 972,
+      "sections": [
+        {
+          "title": "Generalità sull'occhio",
+          "page_start": 972
+        },
+        {
+          "title": "Struttura generale dell'occhio",
+          "page_start": 972
+        },
+        {
+          "title": "Struttura microscopica dell'occhio",
+          "page_start": 976
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "title": "Orecchio",
+      "page_start": 1010,
+      "sections": [
+        {
+          "title": "Generalità sull'orecchio",
+          "page_start": 1010
+        },
+        {
+          "title": "Orecchio esterno",
+          "page_start": 1010
+        },
+        {
+          "title": "Orecchio medio",
+          "page_start": 1012
+        },
+        {
+          "title": "Orecchio interno",
+          "page_start": 1014
+        }
+      ]
+    }
+  ]
+}

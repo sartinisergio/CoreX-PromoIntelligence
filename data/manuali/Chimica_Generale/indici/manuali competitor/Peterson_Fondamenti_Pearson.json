@@ -1,0 +1,110 @@
+{
+  "id": "Peterson_Fondamenti",
+  "title": "Fondamenti di Chimica",
+  "author": "Peterson, McMurry",
+  "publisher": "Pearson",
+  "subject": "chimica generale",
+  "type": "competitor",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "La materia e le misure",
+      "sections": []
+    },
+    {
+      "number": 2,
+      "title": "Gli atomi e la tavola periodica",
+      "sections": []
+    },
+    {
+      "number": 3,
+      "title": "I composti ionici",
+      "sections": []
+    },
+    {
+      "number": 4,
+      "title": "I composti molecolari",
+      "sections": []
+    },
+    {
+      "number": 5,
+      "title": "Classificazione e bilanciamento delle reazioni chimiche",
+      "sections": []
+    },
+    {
+      "number": 6,
+      "title": "Reazioni chimiche: moli e relazioni di massa",
+      "sections": []
+    },
+    {
+      "number": 7,
+      "title": "Reazioni chimiche: energia, velocità ed equilibrio",
+      "sections": []
+    },
+    {
+      "number": 8,
+      "title": "Gas, liquidi e solidi",
+      "sections": []
+    },
+    {
+      "number": 9,
+      "title": "Le soluzioni",
+      "sections": []
+    },
+    {
+      "number": 10,
+      "title": "Acidi e basi",
+      "sections": []
+    },
+    {
+      "number": 11,
+      "title": "Chimica nucleare",
+      "sections": []
+    },
+    {
+      "number": 12,
+      "title": "Introduzione alla chimica organica",
+      "sections": []
+    },
+    {
+      "number": 13,
+      "title": "Alcani",
+      "sections": []
+    },
+    {
+      "number": 14,
+      "title": "Alcheni, alchini e composti aromatici",
+      "sections": []
+    },
+    {
+      "number": 15,
+      "title": "Alcuni composti con ossigeno, zolfo o alogeni",
+      "sections": []
+    },
+    {
+      "number": 16,
+      "title": "Aldeidi e chetoni",
+      "sections": []
+    },
+    {
+      "number": 17,
+      "title": "Ammine e altri composti azotati",
+      "sections": []
+    },
+    {
+      "number": 18,
+      "title": "Acidi carbossilici e loro derivati",
+      "sections": []
+    },
+    {
+      "number": 19,
+      "title": "Amminoacidi e proteine",
+      "sections": []
+    },
+    {
+      "number": 20,
+      "title": "Carboidrati",
+      "sections": []
+    }
+  ]
+}

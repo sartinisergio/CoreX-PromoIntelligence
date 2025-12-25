@@ -1,0 +1,117 @@
+{
+  "framework": {
+    "name": "Framework Unico Valutazione Analisi Matematica 2 - Multivariabile",
+    "version": "1.0",
+    "description": "Framework integrato per valutare allineamento tra programmi di Analisi Matematica 2 e manuali, per Fisica/Chimica/Matematica/Ingegneria.",
+    "date": "2025-12-15"
+  },
+  "scale": {
+    "1": "livello minimo/assente", "2": "livello molto basso", "3": "livello moderato", "4": "livello alto", "5": "livello massimo"
+  },
+  "syllabus_modules": [
+    {"id":1,"name":"Funzioni di più variabili","core_contents":["Funzioni R^n→R, domini","Curve parametrizzate","Superfici implicite","Grafici livellati"],"learning_outcomes":["Analisi multivariabile","Parametrizzazione curve"]},
+    {"id":2,"name":"Limiti e derivate parziali","core_contents":["Limiti multivariabili","Derivate parziali/direzionali","Gradiente, piano tangente","Matrice jacobiana"],"learning_outcomes":["Calcolo gradiente","Derivate totali"]},
+    {"id":3,"name":"Massimi/minimi vincolati","core_contents":["Estremi liberi","Lagrange moltiplicatori","Ottimizzazione vincolata"],"learning_outcomes":["Problemi vincolati","Condizioni KKT"]},
+    {"id":4,"name":"Integrali doppi","core_contents":["Integrale doppio","Coordinate polari/cilindriche","Teorema Green"],"learning_outcomes":["Integrali iterati","Green fisico"]},
+    {"id":5,"name":"Integrali di linea","core_contents":["Integrali scalari vettoriali","Campi conservativi","Potenziale"],"learning_outcomes":["Teorema Stokes linea","Conservatività"]},
+    {"id":6,"name":"Integrali di superficie","core_contents":["Superfici parametriche","Integrali vettoriali","Teorema divergenza"],"learning_outcomes":["Flusso attraverso superfici","Divergenza fisica"]},
+    {"id":7,"name":"Equazioni alle derivate parziali","core_contents":["EDP ellittiche/paraboliche","Separazione variabili","Laplace/calore/onda"],"learning_outcomes":["Soluzioni EDP base","Condizioni al contorno"]},
+    {"id":8,"name":"Serie di Fourier","core_contents":["Serie trigonometrica","Convergenza Fourier","Applicazioni EDP"],"learning_outcomes":["Calcolo coefficienti","Analisi segnali"]},
+    {"id":9,"name":"Trasformata di Fourier","core_contents":["Trasformata/inversa Fourier","Convoluzione","Applicazioni"],"learning_outcomes":["Trasformate derivate","Analisi frequenze"]},
+    {"id":10,"name":"Distribuzioni e delta Dirac","core_contents":["Funzioni test","Delta Dirac","Distribuzioni fondamentali"],"learning_outcomes":["Rigorosità funzionale","Spazi funzionali"]},
+    {"id":11,"name":"Equazioni differenziali lineari","core_contents":["Sistemi ED lineari","Autovalori","Serie soluzioni"],"learning_outcomes":["ED coefficienti variabili","Singolarità"]},
+    {"id":12,"name":"Applicazioni fisiche/numeriche","core_contents":["Fluidodinamica","Metodi numerici","Monte Carlo"],"learning_outcomes":["Modelli fisici","Algoritmi numerici"]}
+  ],
+  "criteria": [
+    {"id":"copertura_contenuti","name":"Copertura contenuti","type":"contenuto","levels":{"1":"Meno di 6 moduli","2":"6-8 superficiali","3":"9 base","4":"10-11 approfonditi","5":"Tutti 12 completi"}},
+    {"id":"profondita_adeguata","name":"Profondità adeguata","type":"contenuto","levels":{"1":"Sbagliata per 2° anno","2":"Troppo introduttiva","3":"Adeguata Analisi 2","4":"Calibrata 2° anno","5":"Eccellente"}},
+    {"id":"calcolo_vettoriale","name":"Calcolo vettoriale","type":"contenuto","levels":{"1":"Integrali linea scarsi","2":"Base senza teoremi","3":"Integrali+Green base","4":"Stokes/Divergenza","5":"Teoremi integrali sistematici"}},
+    {"id":"edp_separazione","name":"EDP separazione variabili","type":"contenuto","levels":{"1":"EDP assenti","2":"Solo teoria","3":"Laplace/calore base","4":"EDP fisiche applicate","5":"Soluzioni complete EDP"}},
+    {"id":"teoremi_integrali","name":"Teoremi integrali","type":"contenuto","levels":{"1":"Teoremi assenti","2":"Enunciati","3":"Green/Stokes base","4":"Dimostrazioni","5":"Rigorosità completa"}},
+    {"id":"fourier_trasformate","name":"Fourier e trasformate","type":"contenuto","levels":{"1":"Fourier assente","2":"Serie base","3":"Fourier+EDP","4":"Trasformata base","5":"Applicazioni segnali completa"}},
+    {"id":"distribuzioni_dirac","name":"Distribuzioni Dirac","type":"contenuto","levels":{"1":"Assenti","2":"Cenni delta","3":"Distribuzioni base","4":"Delta+derivate","5":"Rigorosità funzionale"}},
+    {"id":"applicazioni_fisiche","name":"Applicazioni fisiche","type":"contenuto","levels":{"1":"Teorico puro","2":"Cenni fisici","3":"Qualche modello","4":"Ricchi fisici/chimici","5":"Eccellenti applicazioni"}},
+    {"id":"metodi_numerici","name":"Metodi numerici","type":"didattico","levels":{"1":"Assenti","2":"Teoria","3":"Trapezi/Simpson","4":"Monte Carlo base","5":"Algoritmi pratici"}},
+    {"id":"grafici_3d","name":"Grafici 3D/visualizzazioni","type":"didattico","levels":{"1":"Poveri","2":"Grafici base","3":"Buoni 3D","4":"Campi vettoriali","5":"Superfici eccellenti"}},
+    {"id":"dimostrazioni_teoremi","name":"Dimostrazioni teoremi","type":"contenuto","levels":{"1":"Scarso rigore","2":"Qualche prova","3":"Principali teoremi","4":"Rigorose intuitive","5":"Complete eccellenti"}},
+    {"id":"errori_studenti","name":"Errori studenti","type":"didattico","levels":{"1":"Nessun supporto","2":"Cenni","3":"Box multivariabile","4":"Proattivo","5":"Prevenzione eccellente"}},
+    {"id":"collegamenti_discipline","name":"Collegamenti discipline","type":"didattico","levels":{"1":"Isolata","2":"Pochi","3":"Adeguati","4":"Ricchi Fis/Chim/Ing","5":"Integrazione eccellente"}},
+    {"id":"supporto_digitale","name":"Supporto digitale","type":"didattico","levels":{"1":"Nessuno","2":"Base","3":"Sufficiente","4":"Ricco 3D","5":"Simulazioni eccellenti"}}
+  ],
+  "program_profiles": [
+    {
+      "id": "fisica",
+      "name": "Fisica",
+      "priority_modules": [4,5,6,7,8,9,12],
+      "requirements": {
+        "copertura_contenuti": {"required_level": 5, "weight": 0.10},
+        "profondita_adeguata": {"required_level": 5, "weight": 0.12},
+        "calcolo_vettoriale": {"required_level": 5, "weight": 0.14},
+        "edp_separazione": {"required_level": 5, "weight": 0.15},
+        "teoremi_integrali": {"required_level": 5, "weight": 0.13},
+        "fourier_trasformate": {"required_level": 5, "weight": 0.12},
+        "distribuzioni_dirac": {"required_level": 3, "weight": 0.08},
+        "applicazioni_fisiche": {"required_level": 5, "weight": 0.13},
+        "metodi_numerici": {"required_level": 4, "weight": 0.09},
+        "grafici_3d": {"required_level": 4, "weight": 0.08},
+        "dimostrazioni_teoremi": {"required_level": 4, "weight": 0.10},
+        "errori_studenti": {"required_level": 3, "weight": 0.05},
+        "collegamenti_discipline": {"required_level": 4, "weight": 0.08},
+        "supporto_digitale": {"required_level": 4, "weight": 0.05}
+      }
+    },
+    {
+      "id": "matematica",
+      "name": "Matematica",
+      "priority_modules": [1,2,3,4,5,6,7,8,9,10,11,12],
+      "requirements": {
+        "copertura_contenuti": {"required_level": 5, "weight": 0.12},
+        "profondita_adeguata": {"required_level": 5, "weight": 0.14},
+        "calcolo_vettoriale": {"required_level": 4, "weight": 0.10},
+        "edp_separazione": {"required_level": 4, "weight": 0.12},
+        "teoremi_integrali": {"required_level": 5, "weight": 0.13},
+        "fourier_trasformate": {"required_level": 4, "weight": 0.11},
+        "distribuzioni_dirac": {"required_level": 5, "weight": 0.15},
+        "applicazioni_fisiche": {"required_level": 2, "weight": 0.07},
+        "metodi_numerici": {"required_level": 3, "weight": 0.08},
+        "grafici_3d": {"required_level": 4, "weight": 0.08},
+        "dimostrazioni_teoremi": {"required_level": 5, "weight": 0.12},
+        "errori_studenti": {"required_level": 4, "weight": 0.05},
+        "collegamenti_discipline": {"required_level": 3, "weight": 0.08},
+        "supporto_digitale": {"required_level": 3, "weight": 0.05}
+      }
+    }
+  ],
+  "manual_profiles": [
+    {
+      "id": "manuale_A",
+      "name": "Manuale A - Analisi 2 Completa",
+      "scores": {
+        "copertura_contenuti": 5, "profondita_adeguata": 5, "calcolo_vettoriale": 5,
+        "edp_separazione": 5, "teoremi_integrali": 5, "fourier_trasformate": 4,
+        "distribuzioni_dirac": 5, "applicazioni_fisiche": 4, "metodi_numerici": 4,
+        "grafici_3d": 5, "dimostrazioni_teoremi": 5, "errori_studenti": 4,
+        "collegamenti_discipline": 4, "supporto_digitale": 4
+      }
+    }
+  ],
+  "alignment_method": {
+    "description": "Allineamento = media ponderata: score_i = max(0, 1 - |required-offered|/4)",
+    "formula": "alignment = Σ(weight_i × score_i) / Σ(weight_i)",
+    "interpretation": {
+      "85-100": "Eccellente - Rigoroso multivariabile/applicativo - Adozione consigliata",
+      "70-84": "Buono - Solido integrali/EDP - Raccomandato+integrazioni",
+      "55-69": "Sufficiente - Lacune teoremi/Fourier - Con riserva",
+      "<55": "Sconsigliato - Inadeguato per indirizzo - Non adottare"
+    }
+  },
+  "example_match": {
+    "program_id": "fisica",
+    "manual_id": "manuale_A",
+    "overall_alignment": 94.2,
+    "judgment": "Eccellente",
+    "recommendation": "Perfetto per Fisica. Eccellente su teoremi integrali, EDP e calcolo vettoriale.",
+    "strong_criteria": ["teoremi_integrali", "edp_separazione", "calcolo_vettoriale"],
+    "weak_criteria": ["fourier_trasformate"]
+  }
+}

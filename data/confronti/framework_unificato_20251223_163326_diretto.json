@@ -1,0 +1,5924 @@
+{
+  "framework": {
+    "name": "Chimica_Organica - Framework Multiclasse",
+    "type": "unified_multiclass",
+    "classes_analyzed": [
+      "L-2_Biotecnologie",
+      "L-13_Scienze_biologiche"
+    ],
+    "generation_date": "2025-12-23T16:33:26.715143",
+    "stats": {
+      "total_modules": 13,
+      "total_concepts": 504,
+      "core_concepts": 63,
+      "class_specific": {}
+    }
+  },
+  "syllabus_modules": [
+    {
+      "name": "Chimica bio-organica",
+      "class_data": {
+        "L-2_Biotecnologie": {
+          "relevance_level": 4,
+          "coverage_percentage": 82.1,
+          "status": "fondamentale",
+          "distinctive_concepts": [],
+          "gap_concepts": []
+        },
+        "L-13_Scienze_biologiche": {
+          "relevance_level": 3,
+          "coverage_percentage": 65.3,
+          "status": "importante",
+          "distinctive_concepts": [],
+          "gap_concepts": []
+        }
+      },
+      "concepts": {
+        "core": [
+          {
+            "name": "acidi carbossilici",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 93.3,
+              "L-13_Scienze_biologiche": 94.9
+            },
+            "variance": 0.59
+          },
+          {
+            "name": "carboidrati",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 86.7,
+              "L-13_Scienze_biologiche": 79.5
+            },
+            "variance": 12.89
+          },
+          {
+            "name": "amminoacidi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 83.3,
+              "L-13_Scienze_biologiche": 82.1
+            },
+            "variance": 0.41
+          },
+          {
+            "name": "lipidi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 80.0,
+              "L-13_Scienze_biologiche": 69.2
+            },
+            "variance": 28.99
+          },
+          {
+            "name": "acidi nucleici",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 66.7,
+              "L-13_Scienze_biologiche": 51.3
+            },
+            "variance": 59.17
+          },
+          {
+            "name": "proteine",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 60.0,
+              "L-13_Scienze_biologiche": 64.1
+            },
+            "variance": 4.21
+          },
+          {
+            "name": "ammidi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 60.0,
+              "L-13_Scienze_biologiche": 61.5
+            },
+            "variance": 0.59
+          },
+          {
+            "name": "monosaccaridi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 56.7,
+              "L-13_Scienze_biologiche": 53.8
+            },
+            "variance": 1.99
+          },
+          {
+            "name": "disaccaridi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 56.7,
+              "L-13_Scienze_biologiche": 59.0
+            },
+            "variance": 1.33
+          },
+          {
+            "name": "esteri",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 56.7,
+              "L-13_Scienze_biologiche": 66.7
+            },
+            "variance": 25.0
+          },
+          {
+            "name": "anidridi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 50.0,
+              "L-13_Scienze_biologiche": 56.4
+            },
+            "variance": 10.27
+          }
+        ],
+        "common": [
+          {
+            "name": "nucleotidi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 53.3,
+              "L-13_Scienze_biologiche": 48.7
+            },
+            "variance": 5.33
+          },
+          {
+            "name": "legame chimico",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 46.7,
+              "L-13_Scienze_biologiche": 59.0
+            },
+            "variance": 37.87
+          },
+          {
+            "name": "nucleosidi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 46.7,
+              "L-13_Scienze_biologiche": 43.6
+            },
+            "variance": 2.37
+          },
+          {
+            "name": "gruppo carbonilico",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 46.7,
+              "L-13_Scienze_biologiche": 23.1
+            },
+            "variance": 139.12
+          },
+          {
+            "name": "fosfolipidi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 43.3,
+              "L-13_Scienze_biologiche": 35.9
+            },
+            "variance": 13.82
+          },
+          {
+            "name": "polisaccaridi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 43.3,
+              "L-13_Scienze_biologiche": 56.4
+            },
+            "variance": 42.75
+          },
+          {
+            "name": "legame peptidico",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 36.7,
+              "L-13_Scienze_biologiche": 46.2
+            },
+            "variance": 22.5
+          },
+          {
+            "name": "alogenuri acilici",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 33.3,
+              "L-13_Scienze_biologiche": 38.5
+            },
+            "variance": 6.57
+          },
+          {
+            "name": "dna",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 30.0,
+              "L-13_Scienze_biologiche": 28.2
+            },
+            "variance": 0.81
+          },
+          {
+            "name": "reazione di sostituzione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 26.7,
+              "L-13_Scienze_biologiche": 10.3
+            },
+            "variance": 67.32
+          },
+          {
+            "name": "legame covalente",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 23.3,
+              "L-13_Scienze_biologiche": 25.6
+            },
+            "variance": 1.33
+          },
+          {
+            "name": "legame e",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 20.0,
+              "L-13_Scienze_biologiche": 7.7
+            },
+            "variance": 37.87
+          },
+          {
+            "name": "glucosio",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 16.7,
+              "L-13_Scienze_biologiche": 23.1
+            },
+            "variance": 10.27
+          },
+          {
+            "name": "rna",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 16.7,
+              "L-13_Scienze_biologiche": 23.1
+            },
+            "variance": 10.27
+          },
+          {
+            "name": "legame carbonio",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 13.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 16.83
+          },
+          {
+            "name": "legame ammidico",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 13.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 16.83
+          },
+          {
+            "name": "gruppo carbossilico",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 13.3,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 28.99
+          },
+          {
+            "name": "legame di",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 10.0,
+              "L-13_Scienze_biologiche": 20.5
+            },
+            "variance": 27.63
+          },
+          {
+            "name": "legame glicosidico",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 10.0,
+              "L-13_Scienze_biologiche": 15.4
+            },
+            "variance": 7.25
+          },
+          {
+            "name": "reazione di eliminazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 10.0,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 5.93
+          },
+          {
+            "name": "gruppo funzionale",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 10.0,
+              "L-13_Scienze_biologiche": 23.1
+            },
+            "variance": 42.75
+          },
+          {
+            "name": "legame c",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 6.7,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 4.21
+          },
+          {
+            "name": "legame fosfodiestereo",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 6.7,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 4.21
+          },
+          {
+            "name": "reazione di condensazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 6.7,
+              "L-13_Scienze_biologiche": 15.4
+            },
+            "variance": 19.0
+          },
+          {
+            "name": "gruppo studenti",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 6.7,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.59
+          },
+          {
+            "name": "legame ionico",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 7.7
+            },
+            "variance": 4.75
+          },
+          {
+            "name": "reazione di michael",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          },
+          {
+            "name": "reazione di ossidazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          },
+          {
+            "name": "reazione di trasformazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 0.15
+          },
+          {
+            "name": "reazione di esterificazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          },
+          {
+            "name": "gruppo uscente",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 10.3
+            },
+            "variance": 11.98
+          },
+          {
+            "name": "reazioni di alogenuri",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 7.7
+            },
+            "variance": 4.75
+          },
+          {
+            "name": "reazioni di acidi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          },
+          {
+            "name": "gruppo e",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          }
+        ],
+        "specific": {
+          "L-2_Biotecnologie": [
+            {
+              "name": "reazione di addizione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 16.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame degli",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 10.0
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di wittig",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 10.0
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di formazione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 10.0
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame ad",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame s",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame etereo",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di diels-alder",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di reimer-tieman",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di cannizzaro",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di hell-volhard-zelinski",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di schiemann",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di epimerizzazione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di idrolisi",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di idrogenazione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo diazonio",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo amminico",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame a",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di alogenazione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di diels- alder",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di riduzione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di claisen",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di kolbe",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di beta-eliminazione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di chichibabin",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo su",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "condensazione di acidi",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo ed",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo verrà",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo protettore",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo guanidinico",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo ossidrilico",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo si",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            }
+          ],
+          "L-13_Scienze_biologiche": [
+            {
+              "name": "legame idrogeno",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 10.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame semplice",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 7.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo c",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 7.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame fosfodiestere",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di idroborazione",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo co",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame dativo",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame metallico",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame oh",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame sigma",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di williamson",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di kiliani-fisher",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di molecole",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di saponificazione",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo oh",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo α",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo di",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Chimica dei polimeri",
+      "class_data": {
+        "L-2_Biotecnologie": {
+          "relevance_level": 4,
+          "coverage_percentage": 86.7,
+          "status": "fondamentale",
+          "distinctive_concepts": [],
+          "gap_concepts": []
+        },
+        "L-13_Scienze_biologiche": {
+          "relevance_level": 3,
+          "coverage_percentage": 60.0,
+          "status": "importante",
+          "distinctive_concepts": [],
+          "gap_concepts": []
+        }
+      },
+      "concepts": {
+        "core": [],
+        "common": [
+          {
+            "name": "condensazione aldolica",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 46.7,
+              "L-13_Scienze_biologiche": 59.0
+            },
+            "variance": 37.87
+          },
+          {
+            "name": "condensazione di Claisen",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 36.7,
+              "L-13_Scienze_biologiche": 56.4
+            },
+            "variance": 97.45
+          },
+          {
+            "name": "reazioni di condensazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 23.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 82.86
+          },
+          {
+            "name": "punto isoelettrico",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 23.3,
+              "L-13_Scienze_biologiche": 53.8
+            },
+            "variance": 232.76
+          },
+          {
+            "name": "reazione di condensazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 6.7,
+              "L-13_Scienze_biologiche": 15.4
+            },
+            "variance": 19.0
+          },
+          {
+            "name": "condensazione del",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 6.7,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 4.21
+          },
+          {
+            "name": "reazioni di sintesi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          }
+        ],
+        "specific": {
+          "L-2_Biotecnologie": [
+            {
+              "name": "condensazione di knoevenagel",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "condensazione dei",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "condensazione degli",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "condensazione con",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "condensazione di acidi",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "condensazione di dieckmann",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            }
+          ],
+          "L-13_Scienze_biologiche": [
+            {
+              "name": "reazioni di polimerizzazione",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 7.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "condensazione alcolica",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Chimica organometallica",
+      "class_data": {
+        "L-2_Biotecnologie": {
+          "relevance_level": 3,
+          "coverage_percentage": 67.9,
+          "status": "importante",
+          "distinctive_concepts": [],
+          "gap_concepts": []
+        },
+        "L-13_Scienze_biologiche": {
+          "relevance_level": 3,
+          "coverage_percentage": 75.5,
+          "status": "importante",
+          "distinctive_concepts": [],
+          "gap_concepts": []
+        }
+      },
+      "concepts": {
+        "core": [
+          {
+            "name": "reazioni di sostituzione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 66.7,
+              "L-13_Scienze_biologiche": 69.2
+            },
+            "variance": 1.64
+          },
+          {
+            "name": "sostituzione nucleofila",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 63.3,
+              "L-13_Scienze_biologiche": 69.2
+            },
+            "variance": 8.69
+          }
+        ],
+        "common": [
+          {
+            "name": "reazioni di addizione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 46.7,
+              "L-13_Scienze_biologiche": 51.3
+            },
+            "variance": 5.33
+          },
+          {
+            "name": "addizione elettrofila",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 43.3,
+              "L-13_Scienze_biologiche": 64.1
+            },
+            "variance": 107.84
+          },
+          {
+            "name": "addizione nucleofila",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 40.0,
+              "L-13_Scienze_biologiche": 56.4
+            },
+            "variance": 67.32
+          },
+          {
+            "name": "grignard",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 33.3,
+              "L-13_Scienze_biologiche": 20.5
+            },
+            "variance": 41.09
+          },
+          {
+            "name": "reazioni di eliminazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 33.3,
+              "L-13_Scienze_biologiche": 30.8
+            },
+            "variance": 1.64
+          },
+          {
+            "name": "reazione di sostituzione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 26.7,
+              "L-13_Scienze_biologiche": 10.3
+            },
+            "variance": 67.32
+          },
+          {
+            "name": "reazioni di ossidazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 26.7,
+              "L-13_Scienze_biologiche": 33.3
+            },
+            "variance": 11.11
+          },
+          {
+            "name": "reazioni di condensazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 23.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 82.86
+          },
+          {
+            "name": "legame carbonio",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 13.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 16.83
+          },
+          {
+            "name": "reazioni di riduzione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 6.7,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.59
+          },
+          {
+            "name": "reazioni di alfa-sostituzione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 6.7,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 4.21
+          },
+          {
+            "name": "reazioni di ossidoriduzione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 6.7,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.59
+          },
+          {
+            "name": "reazioni di sintesi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          },
+          {
+            "name": "reazioni di alcoli",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 10.3
+            },
+            "variance": 11.98
+          },
+          {
+            "name": "reazioni di alogenuri",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 7.7
+            },
+            "variance": 4.75
+          },
+          {
+            "name": "reazioni di acidi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          },
+          {
+            "name": "reazioni di sostituzioni",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 0.15
+          },
+          {
+            "name": "reazioni di disidratazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 0.15
+          },
+          {
+            "name": "reazioni di apertura",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 0.15
+          },
+          {
+            "name": "reazioni di alogenazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          },
+          {
+            "name": "reazioni di formazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          }
+        ],
+        "specific": {
+          "L-2_Biotecnologie": [
+            {
+              "name": "reazioni di sandmeyer",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 10.0
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di diazocopulazione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di protezione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di tioli",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di ammine",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di importanza",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di nucleo",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di trasposizione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di allungamento",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di funzionalizzazione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di copulazione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di addizione-eliminazione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di friedel-crafts",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            }
+          ],
+          "L-13_Scienze_biologiche": [
+            {
+              "name": "reazioni di aldeidi",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 12.8
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di polimerizzazione",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 7.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di beta-eliminazione",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 7.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di claisen",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di preparazione",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di ossidazioni",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di saponificazione",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di maggior",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di idrolisi",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di ossido",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di sn",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di ossido-riduzione",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di enoli",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di molecole",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di ossidazione - dieni",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di disidratazione - aldeidi",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di markovnikov",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Composti aromatici",
+      "class_data": {
+        "L-2_Biotecnologie": {
+          "relevance_level": 3,
+          "coverage_percentage": 68.3,
+          "status": "importante",
+          "distinctive_concepts": [],
+          "gap_concepts": []
+        },
+        "L-13_Scienze_biologiche": {
+          "relevance_level": 3,
+          "coverage_percentage": 78.3,
+          "status": "importante",
+          "distinctive_concepts": [],
+          "gap_concepts": []
+        }
+      },
+      "concepts": {
+        "core": [
+          {
+            "name": "aromatici",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 100.0,
+              "L-13_Scienze_biologiche": 87.2
+            },
+            "variance": 41.09
+          },
+          {
+            "name": "isomeria",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 70.0,
+              "L-13_Scienze_biologiche": 84.6
+            },
+            "variance": 53.4
+          },
+          {
+            "name": "reazioni di sostituzione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 66.7,
+              "L-13_Scienze_biologiche": 69.2
+            },
+            "variance": 1.64
+          },
+          {
+            "name": "benzene",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 63.3,
+              "L-13_Scienze_biologiche": 79.5
+            },
+            "variance": 65.24
+          },
+          {
+            "name": "sostituzione nucleofila",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 63.3,
+              "L-13_Scienze_biologiche": 69.2
+            },
+            "variance": 8.69
+          },
+          {
+            "name": "aromaticità",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 56.7,
+              "L-13_Scienze_biologiche": 64.1
+            },
+            "variance": 13.82
+          }
+        ],
+        "common": [
+          {
+            "name": "reazioni di addizione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 46.7,
+              "L-13_Scienze_biologiche": 51.3
+            },
+            "variance": 5.33
+          },
+          {
+            "name": "addizione elettrofila",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 43.3,
+              "L-13_Scienze_biologiche": 64.1
+            },
+            "variance": 107.84
+          },
+          {
+            "name": "addizione nucleofila",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 40.0,
+              "L-13_Scienze_biologiche": 56.4
+            },
+            "variance": 67.32
+          },
+          {
+            "name": "grignard",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 33.3,
+              "L-13_Scienze_biologiche": 20.5
+            },
+            "variance": 41.09
+          },
+          {
+            "name": "reazioni di eliminazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 33.3,
+              "L-13_Scienze_biologiche": 30.8
+            },
+            "variance": 1.64
+          },
+          {
+            "name": "reazione di sostituzione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 26.7,
+              "L-13_Scienze_biologiche": 10.3
+            },
+            "variance": 67.32
+          },
+          {
+            "name": "reazioni di ossidazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 26.7,
+              "L-13_Scienze_biologiche": 33.3
+            },
+            "variance": 11.11
+          },
+          {
+            "name": "reazioni di condensazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 23.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 82.86
+          },
+          {
+            "name": "sear",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 16.7,
+              "L-13_Scienze_biologiche": 7.7
+            },
+            "variance": 20.13
+          },
+          {
+            "name": "legame carbonio",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 13.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 16.83
+          },
+          {
+            "name": "reazioni di riduzione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 6.7,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.59
+          },
+          {
+            "name": "reazioni di alfa-sostituzione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 6.7,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 4.21
+          },
+          {
+            "name": "reazioni di ossidoriduzione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 6.7,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.59
+          },
+          {
+            "name": "reazioni di sintesi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          },
+          {
+            "name": "reazioni di alcoli",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 10.3
+            },
+            "variance": 11.98
+          },
+          {
+            "name": "reazioni di alogenuri",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 7.7
+            },
+            "variance": 4.75
+          },
+          {
+            "name": "reazioni di acidi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          },
+          {
+            "name": "reazioni di sostituzioni",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 0.15
+          },
+          {
+            "name": "reazioni di disidratazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 0.15
+          },
+          {
+            "name": "reazioni di apertura",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 0.15
+          },
+          {
+            "name": "reazioni di alogenazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          },
+          {
+            "name": "reazioni di formazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          }
+        ],
+        "specific": {
+          "L-2_Biotecnologie": [
+            {
+              "name": "reazioni di sandmeyer",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 10.0
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di diazocopulazione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di protezione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di tioli",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di ammine",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di importanza",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di nucleo",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di trasposizione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di allungamento",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di funzionalizzazione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di copulazione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di addizione-eliminazione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di friedel-crafts",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            }
+          ],
+          "L-13_Scienze_biologiche": [
+            {
+              "name": "reazioni di aldeidi",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 12.8
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di polimerizzazione",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 7.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di beta-eliminazione",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 7.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di claisen",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di preparazione",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di ossidazioni",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di saponificazione",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di maggior",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di idrolisi",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "aromaticita",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di ossido",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di sn",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di ossido-riduzione",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di enoli",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di molecole",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di ossidazione - dieni",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di disidratazione - aldeidi",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di markovnikov",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame metallico",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Gruppi funzionali e classificazione",
+      "class_data": {
+        "L-2_Biotecnologie": {
+          "relevance_level": 3,
+          "coverage_percentage": 79.1,
+          "status": "importante",
+          "distinctive_concepts": [],
+          "gap_concepts": []
+        },
+        "L-13_Scienze_biologiche": {
+          "relevance_level": 3,
+          "coverage_percentage": 71.4,
+          "status": "importante",
+          "distinctive_concepts": [],
+          "gap_concepts": []
+        }
+      },
+      "concepts": {
+        "core": [
+          {
+            "name": "acidi carbossilici",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 93.3,
+              "L-13_Scienze_biologiche": 94.9
+            },
+            "variance": 0.59
+          },
+          {
+            "name": "gruppi funzionali",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 86.7,
+              "L-13_Scienze_biologiche": 79.5
+            },
+            "variance": 12.89
+          },
+          {
+            "name": "eteri",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 83.3,
+              "L-13_Scienze_biologiche": 89.7
+            },
+            "variance": 10.27
+          },
+          {
+            "name": "aldeidi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 83.3,
+              "L-13_Scienze_biologiche": 94.9
+            },
+            "variance": 33.28
+          },
+          {
+            "name": "chetoni",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 83.3,
+              "L-13_Scienze_biologiche": 94.9
+            },
+            "variance": 33.28
+          },
+          {
+            "name": "amminoacidi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 83.3,
+              "L-13_Scienze_biologiche": 82.1
+            },
+            "variance": 0.41
+          },
+          {
+            "name": "alcoli",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 80.0,
+              "L-13_Scienze_biologiche": 92.3
+            },
+            "variance": 37.87
+          },
+          {
+            "name": "ammine",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 80.0,
+              "L-13_Scienze_biologiche": 94.9
+            },
+            "variance": 55.29
+          },
+          {
+            "name": "acidi nucleici",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 66.7,
+              "L-13_Scienze_biologiche": 51.3
+            },
+            "variance": 59.17
+          },
+          {
+            "name": "fenoli",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 63.3,
+              "L-13_Scienze_biologiche": 56.4
+            },
+            "variance": 11.98
+          },
+          {
+            "name": "proteine",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 60.0,
+              "L-13_Scienze_biologiche": 64.1
+            },
+            "variance": 4.21
+          },
+          {
+            "name": "ammidi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 60.0,
+              "L-13_Scienze_biologiche": 61.5
+            },
+            "variance": 0.59
+          },
+          {
+            "name": "esteri",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 56.7,
+              "L-13_Scienze_biologiche": 66.7
+            },
+            "variance": 25.0
+          },
+          {
+            "name": "anidridi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 50.0,
+              "L-13_Scienze_biologiche": 56.4
+            },
+            "variance": 10.27
+          }
+        ],
+        "common": [
+          {
+            "name": "nucleotidi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 53.3,
+              "L-13_Scienze_biologiche": 48.7
+            },
+            "variance": 5.33
+          },
+          {
+            "name": "gruppo carbonilico",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 46.7,
+              "L-13_Scienze_biologiche": 23.1
+            },
+            "variance": 139.12
+          },
+          {
+            "name": "nucleosidi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 46.7,
+              "L-13_Scienze_biologiche": 43.6
+            },
+            "variance": 2.37
+          },
+          {
+            "name": "legame chimico",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 46.7,
+              "L-13_Scienze_biologiche": 59.0
+            },
+            "variance": 37.87
+          },
+          {
+            "name": "legame peptidico",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 36.7,
+              "L-13_Scienze_biologiche": 46.2
+            },
+            "variance": 22.5
+          },
+          {
+            "name": "alogenuri acilici",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 33.3,
+              "L-13_Scienze_biologiche": 38.5
+            },
+            "variance": 6.57
+          },
+          {
+            "name": "nitrili",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 26.7,
+              "L-13_Scienze_biologiche": 35.9
+            },
+            "variance": 21.3
+          },
+          {
+            "name": "esterificazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 23.3,
+              "L-13_Scienze_biologiche": 48.7
+            },
+            "variance": 161.09
+          },
+          {
+            "name": "legame covalente",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 23.3,
+              "L-13_Scienze_biologiche": 25.6
+            },
+            "variance": 1.33
+          },
+          {
+            "name": "legame e",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 20.0,
+              "L-13_Scienze_biologiche": 7.7
+            },
+            "variance": 37.87
+          },
+          {
+            "name": "gruppi uscenti",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 20.0,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 76.0
+          },
+          {
+            "name": "alcol",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 13.3,
+              "L-13_Scienze_biologiche": 7.7
+            },
+            "variance": 7.96
+          },
+          {
+            "name": "gruppo carbossilico",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 13.3,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 28.99
+          },
+          {
+            "name": "legame carbonio",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 13.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 16.83
+          },
+          {
+            "name": "legame ammidico",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 13.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 16.83
+          },
+          {
+            "name": "gruppo funzionale",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 10.0,
+              "L-13_Scienze_biologiche": 23.1
+            },
+            "variance": 42.75
+          },
+          {
+            "name": "legame di",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 10.0,
+              "L-13_Scienze_biologiche": 20.5
+            },
+            "variance": 27.63
+          },
+          {
+            "name": "legame glicosidico",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 10.0,
+              "L-13_Scienze_biologiche": 15.4
+            },
+            "variance": 7.25
+          },
+          {
+            "name": "gruppi attivanti",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 10.0,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 13.82
+          },
+          {
+            "name": "gruppi carbonilici",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 10.0,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 13.82
+          },
+          {
+            "name": "gruppo studenti",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 6.7,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.59
+          },
+          {
+            "name": "legame c",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 6.7,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 4.21
+          },
+          {
+            "name": "legame fosfodiestereo",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 6.7,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 4.21
+          },
+          {
+            "name": "gruppo uscente",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 10.3
+            },
+            "variance": 11.98
+          },
+          {
+            "name": "reazioni di alcoli",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 10.3
+            },
+            "variance": 11.98
+          },
+          {
+            "name": "gruppo e",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          },
+          {
+            "name": "reazioni di alogenuri",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 7.7
+            },
+            "variance": 4.75
+          },
+          {
+            "name": "reazioni di acidi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          },
+          {
+            "name": "legame ionico",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 7.7
+            },
+            "variance": 4.75
+          },
+          {
+            "name": "reazione di esterificazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          },
+          {
+            "name": "gruppi di",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 0.15
+          },
+          {
+            "name": "gruppi protettori",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 12.8
+            },
+            "variance": 22.5
+          }
+        ],
+        "specific": {
+          "L-2_Biotecnologie": [
+            {
+              "name": "legame degli",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 10.0
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo diazonio",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo amminico",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame ad",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame s",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame etereo",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di protezione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi amminoacidici",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi nelle",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi entranti",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo su",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo ed",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo verrà",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo protettore",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo guanidinico",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo ossidrilico",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo si",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "condensazione di acidi",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame a",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di ammine",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi nitro",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi amminici",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi protettivi",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi prostetici",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi allile",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi reattivi",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            }
+          ],
+          "L-13_Scienze_biologiche": [
+            {
+              "name": "gruppi alchilici",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 20.5
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di aldeidi",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 12.8
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame idrogeno",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 10.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo c",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 7.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame semplice",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 7.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo co",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame fosfodiestere",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi sanguigni",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi allo",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi c",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo oh",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo α",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo di",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di disidratazione - aldeidi",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame dativo",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame metallico",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame oh",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame sigma",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi al",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Idrocarburi e isomeria",
+      "class_data": {
+        "L-2_Biotecnologie": {
+          "relevance_level": 5,
+          "coverage_percentage": 100.0,
+          "status": "fondamentale",
+          "distinctive_concepts": [],
+          "gap_concepts": []
+        },
+        "L-13_Scienze_biologiche": {
+          "relevance_level": 5,
+          "coverage_percentage": 100.0,
+          "status": "fondamentale",
+          "distinctive_concepts": [],
+          "gap_concepts": []
+        }
+      },
+      "concepts": {
+        "core": [
+          {
+            "name": "alcani",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 93.3,
+              "L-13_Scienze_biologiche": 94.9
+            },
+            "variance": 0.59
+          },
+          {
+            "name": "alchini",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 86.7,
+              "L-13_Scienze_biologiche": 92.3
+            },
+            "variance": 7.96
+          },
+          {
+            "name": "enantiomeri",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 70.0,
+              "L-13_Scienze_biologiche": 76.9
+            },
+            "variance": 11.98
+          },
+          {
+            "name": "isomeria",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 70.0,
+              "L-13_Scienze_biologiche": 84.6
+            },
+            "variance": 53.4
+          },
+          {
+            "name": "diastereoisomeri",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 53.3,
+              "L-13_Scienze_biologiche": 64.1
+            },
+            "variance": 28.99
+          }
+        ],
+        "common": [
+          {
+            "name": "stereoisomeri",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 33.3,
+              "L-13_Scienze_biologiche": 43.6
+            },
+            "variance": 26.3
+          },
+          {
+            "name": "punto isoelettrico",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 23.3,
+              "L-13_Scienze_biologiche": 53.8
+            },
+            "variance": 232.76
+          }
+        ],
+        "specific": {}
+      }
+    },
+    {
+      "name": "Meccanismi di reazione organica",
+      "class_data": {
+        "L-2_Biotecnologie": {
+          "relevance_level": 3,
+          "coverage_percentage": 73.2,
+          "status": "importante",
+          "distinctive_concepts": [],
+          "gap_concepts": []
+        },
+        "L-13_Scienze_biologiche": {
+          "relevance_level": 3,
+          "coverage_percentage": 62.2,
+          "status": "importante",
+          "distinctive_concepts": [],
+          "gap_concepts": []
+        }
+      },
+      "concepts": {
+        "core": [
+          {
+            "name": "eliminazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 80.0,
+              "L-13_Scienze_biologiche": 87.2
+            },
+            "variance": 12.89
+          },
+          {
+            "name": "reazioni di sostituzione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 66.7,
+              "L-13_Scienze_biologiche": 69.2
+            },
+            "variance": 1.64
+          },
+          {
+            "name": "sostituzione nucleofila",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 63.3,
+              "L-13_Scienze_biologiche": 69.2
+            },
+            "variance": 8.69
+          }
+        ],
+        "common": [
+          {
+            "name": "reazioni di addizione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 46.7,
+              "L-13_Scienze_biologiche": 51.3
+            },
+            "variance": 5.33
+          },
+          {
+            "name": "addizione elettrofila",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 43.3,
+              "L-13_Scienze_biologiche": 64.1
+            },
+            "variance": 107.84
+          },
+          {
+            "name": "addizione nucleofila",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 40.0,
+              "L-13_Scienze_biologiche": 56.4
+            },
+            "variance": 67.32
+          },
+          {
+            "name": "grignard",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 33.3,
+              "L-13_Scienze_biologiche": 20.5
+            },
+            "variance": 41.09
+          },
+          {
+            "name": "reazioni di eliminazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 33.3,
+              "L-13_Scienze_biologiche": 30.8
+            },
+            "variance": 1.64
+          },
+          {
+            "name": "reazione di sostituzione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 26.7,
+              "L-13_Scienze_biologiche": 10.3
+            },
+            "variance": 67.32
+          },
+          {
+            "name": "reazioni di ossidazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 26.7,
+              "L-13_Scienze_biologiche": 33.3
+            },
+            "variance": 11.11
+          },
+          {
+            "name": "reazioni di condensazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 23.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 82.86
+          },
+          {
+            "name": "reazione di eliminazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 10.0,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 5.93
+          },
+          {
+            "name": "reazioni di riduzione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 6.7,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.59
+          },
+          {
+            "name": "reazioni di alfa-sostituzione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 6.7,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 4.21
+          },
+          {
+            "name": "reazioni di ossidoriduzione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 6.7,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.59
+          },
+          {
+            "name": "reazione di condensazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 6.7,
+              "L-13_Scienze_biologiche": 15.4
+            },
+            "variance": 19.0
+          },
+          {
+            "name": "reazioni di sintesi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          },
+          {
+            "name": "reazioni di alcoli",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 10.3
+            },
+            "variance": 11.98
+          },
+          {
+            "name": "reazioni di alogenuri",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 7.7
+            },
+            "variance": 4.75
+          },
+          {
+            "name": "reazioni di acidi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          },
+          {
+            "name": "reazioni di sostituzioni",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 0.15
+          },
+          {
+            "name": "reazioni di disidratazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 0.15
+          },
+          {
+            "name": "reazioni di apertura",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 0.15
+          },
+          {
+            "name": "reazioni di alogenazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          },
+          {
+            "name": "reazioni di formazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          },
+          {
+            "name": "reazione di michael",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          },
+          {
+            "name": "reazione di ossidazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          },
+          {
+            "name": "reazione di trasformazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 0.15
+          },
+          {
+            "name": "reazione di esterificazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          }
+        ],
+        "specific": {
+          "L-2_Biotecnologie": [
+            {
+              "name": "reazione di addizione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 16.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di sandmeyer",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 10.0
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di wittig",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 10.0
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di formazione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 10.0
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di diazocopulazione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di protezione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di diels-alder",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di reimer-tieman",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di cannizzaro",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di hell-volhard-zelinski",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di schiemann",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di epimerizzazione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di idrolisi",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di idrogenazione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di tioli",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di ammine",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di importanza",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di nucleo",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di trasposizione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di allungamento",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di funzionalizzazione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di copulazione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di addizione-eliminazione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di friedel-crafts",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di beta-eliminazione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di alogenazione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di diels- alder",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di riduzione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di claisen",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di kolbe",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di chichibabin",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            }
+          ],
+          "L-13_Scienze_biologiche": [
+            {
+              "name": "reazioni di aldeidi",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 12.8
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di polimerizzazione",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 7.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di beta-eliminazione",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 7.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di claisen",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di preparazione",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di ossidazioni",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di saponificazione",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di maggior",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di idrolisi",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di idroborazione",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di ossido",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di sn",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di ossido-riduzione",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di enoli",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di molecole",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di ossidazione - dieni",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di disidratazione - aldeidi",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di markovnikov",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di williamson",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di kiliani-fisher",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di molecole",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazione di saponificazione",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Problem solving e laboratorio",
+      "class_data": {
+        "L-2_Biotecnologie": {
+          "relevance_level": 0,
+          "coverage_percentage": 0,
+          "status": "assente",
+          "distinctive_concepts": [],
+          "gap_concepts": []
+        },
+        "L-13_Scienze_biologiche": {
+          "relevance_level": 0,
+          "coverage_percentage": 0,
+          "status": "assente",
+          "distinctive_concepts": [],
+          "gap_concepts": []
+        }
+      },
+      "concepts": {
+        "core": [],
+        "common": [],
+        "specific": {}
+      }
+    },
+    {
+      "name": "Reattività e sintesi avanzata",
+      "class_data": {
+        "L-2_Biotecnologie": {
+          "relevance_level": 3,
+          "coverage_percentage": 78.3,
+          "status": "importante",
+          "distinctive_concepts": [],
+          "gap_concepts": []
+        },
+        "L-13_Scienze_biologiche": {
+          "relevance_level": 2,
+          "coverage_percentage": 56.5,
+          "status": "presente",
+          "distinctive_concepts": [],
+          "gap_concepts": []
+        }
+      },
+      "concepts": {
+        "core": [
+          {
+            "name": "gruppi funzionali",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 86.7,
+              "L-13_Scienze_biologiche": 79.5
+            },
+            "variance": 12.89
+          },
+          {
+            "name": "ammine",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 80.0,
+              "L-13_Scienze_biologiche": 94.9
+            },
+            "variance": 55.29
+          },
+          {
+            "name": "ammidi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 60.0,
+              "L-13_Scienze_biologiche": 61.5
+            },
+            "variance": 0.59
+          }
+        ],
+        "common": [
+          {
+            "name": "gruppo carbonilico",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 46.7,
+              "L-13_Scienze_biologiche": 23.1
+            },
+            "variance": 139.12
+          },
+          {
+            "name": "nitrili",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 26.7,
+              "L-13_Scienze_biologiche": 35.9
+            },
+            "variance": 21.3
+          },
+          {
+            "name": "gruppi uscenti",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 20.0,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 76.0
+          },
+          {
+            "name": "gruppo carbossilico",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 13.3,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 28.99
+          },
+          {
+            "name": "gruppi attivanti",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 10.0,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 13.82
+          },
+          {
+            "name": "gruppi carbonilici",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 10.0,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 13.82
+          },
+          {
+            "name": "gruppo funzionale",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 10.0,
+              "L-13_Scienze_biologiche": 23.1
+            },
+            "variance": 42.75
+          },
+          {
+            "name": "gruppo studenti",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 6.7,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.59
+          },
+          {
+            "name": "reazioni di sintesi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          },
+          {
+            "name": "gruppo uscente",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 10.3
+            },
+            "variance": 11.98
+          },
+          {
+            "name": "gruppi di",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 0.15
+          },
+          {
+            "name": "gruppi protettori",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 12.8
+            },
+            "variance": 22.5
+          },
+          {
+            "name": "gruppo e",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 0.81
+          }
+        ],
+        "specific": {
+          "L-2_Biotecnologie": [
+            {
+              "name": "reazioni di protezione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo diazonio",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi amminoacidici",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo amminico",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi nelle",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi entranti",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di ammine",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi nitro",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi amminici",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo su",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi protettivi",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo ed",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo verrà",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi prostetici",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo protettore",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo guanidinico",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo ossidrilico",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo si",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi allile",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi reattivi",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            }
+          ],
+          "L-13_Scienze_biologiche": [
+            {
+              "name": "gruppi alchilici",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 20.5
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo c",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 7.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi sanguigni",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi allo",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi c",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo co",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo oh",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo α",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppi al",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "gruppo di",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Stereochimica",
+      "class_data": {
+        "L-2_Biotecnologie": {
+          "relevance_level": 5,
+          "coverage_percentage": 100.0,
+          "status": "fondamentale",
+          "distinctive_concepts": [],
+          "gap_concepts": []
+        },
+        "L-13_Scienze_biologiche": {
+          "relevance_level": 5,
+          "coverage_percentage": 100.0,
+          "status": "fondamentale",
+          "distinctive_concepts": [],
+          "gap_concepts": []
+        }
+      },
+      "concepts": {
+        "core": [
+          {
+            "name": "enantiomeri",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 70.0,
+              "L-13_Scienze_biologiche": 76.9
+            },
+            "variance": 11.98
+          },
+          {
+            "name": "isomeria",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 70.0,
+              "L-13_Scienze_biologiche": 84.6
+            },
+            "variance": 53.4
+          },
+          {
+            "name": "chiralità",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 53.3,
+              "L-13_Scienze_biologiche": 71.8
+            },
+            "variance": 85.21
+          }
+        ],
+        "common": [
+          {
+            "name": "fischer",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 46.7,
+              "L-13_Scienze_biologiche": 59.0
+            },
+            "variance": 37.87
+          },
+          {
+            "name": "proiezioni di fischer",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 40.0,
+              "L-13_Scienze_biologiche": 30.8
+            },
+            "variance": 21.3
+          },
+          {
+            "name": "punto isoelettrico",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 23.3,
+              "L-13_Scienze_biologiche": 53.8
+            },
+            "variance": 232.76
+          },
+          {
+            "name": "legame carbonio",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 13.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 16.83
+          },
+          {
+            "name": "racemizzazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 15.4
+            },
+            "variance": 36.31
+          }
+        ],
+        "specific": {}
+      }
+    },
+    {
+      "name": "Struttura degli atomi e legami",
+      "class_data": {
+        "L-2_Biotecnologie": {
+          "relevance_level": 3,
+          "coverage_percentage": 72.0,
+          "status": "importante",
+          "distinctive_concepts": [],
+          "gap_concepts": []
+        },
+        "L-13_Scienze_biologiche": {
+          "relevance_level": 3,
+          "coverage_percentage": 76.0,
+          "status": "importante",
+          "distinctive_concepts": [],
+          "gap_concepts": []
+        }
+      },
+      "concepts": {
+        "core": [
+          {
+            "name": "ibridazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 50.0,
+              "L-13_Scienze_biologiche": 51.3
+            },
+            "variance": 0.41
+          }
+        ],
+        "common": [
+          {
+            "name": "legame chimico",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 46.7,
+              "L-13_Scienze_biologiche": 59.0
+            },
+            "variance": 37.87
+          },
+          {
+            "name": "legame peptidico",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 36.7,
+              "L-13_Scienze_biologiche": 46.2
+            },
+            "variance": 22.5
+          },
+          {
+            "name": "legame covalente",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 23.3,
+              "L-13_Scienze_biologiche": 25.6
+            },
+            "variance": 1.33
+          },
+          {
+            "name": "legame e",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 20.0,
+              "L-13_Scienze_biologiche": 7.7
+            },
+            "variance": 37.87
+          },
+          {
+            "name": "legame carbonio",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 13.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 16.83
+          },
+          {
+            "name": "legame ammidico",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 13.3,
+              "L-13_Scienze_biologiche": 5.1
+            },
+            "variance": 16.83
+          },
+          {
+            "name": "legame di",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 10.0,
+              "L-13_Scienze_biologiche": 20.5
+            },
+            "variance": 27.63
+          },
+          {
+            "name": "legame glicosidico",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 10.0,
+              "L-13_Scienze_biologiche": 15.4
+            },
+            "variance": 7.25
+          },
+          {
+            "name": "legame c",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 6.7,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 4.21
+          },
+          {
+            "name": "legame fosfodiestereo",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 6.7,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 4.21
+          },
+          {
+            "name": "legame ionico",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 3.3,
+              "L-13_Scienze_biologiche": 7.7
+            },
+            "variance": 4.75
+          }
+        ],
+        "specific": {
+          "L-2_Biotecnologie": [
+            {
+              "name": "legame degli",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 10.0
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame ad",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame s",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame etereo",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 6.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "reazioni di trasposizione",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame a",
+              "classes_present": [
+                "L-2_Biotecnologie"
+              ],
+              "frequencies": {
+                "L-2_Biotecnologie": 3.3
+              },
+              "variance": 0
+            }
+          ],
+          "L-13_Scienze_biologiche": [
+            {
+              "name": "legame idrogeno",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 10.3
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame semplice",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 7.7
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame fosfodiestere",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 5.1
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame dativo",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame metallico",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame oh",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            },
+            {
+              "name": "legame sigma",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Tecniche spettroscopiche",
+      "class_data": {
+        "L-2_Biotecnologie": {
+          "relevance_level": 3,
+          "coverage_percentage": 75.0,
+          "status": "importante",
+          "distinctive_concepts": [],
+          "gap_concepts": []
+        },
+        "L-13_Scienze_biologiche": {
+          "relevance_level": 5,
+          "coverage_percentage": 100.0,
+          "status": "fondamentale",
+          "distinctive_concepts": [],
+          "gap_concepts": []
+        }
+      },
+      "concepts": {
+        "core": [
+          {
+            "name": "risonanza",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 73.3,
+              "L-13_Scienze_biologiche": 79.5
+            },
+            "variance": 9.47
+          },
+          {
+            "name": "chiralità",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 53.3,
+              "L-13_Scienze_biologiche": 71.8
+            },
+            "variance": 85.21
+          }
+        ],
+        "common": [
+          {
+            "name": "chiralita",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 6.7,
+              "L-13_Scienze_biologiche": 2.6
+            },
+            "variance": 4.21
+          }
+        ],
+        "specific": {
+          "L-13_Scienze_biologiche": [
+            {
+              "name": "reazione di williamson",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 2.6
+              },
+              "variance": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "📌 Argomenti oltre framework ideale",
+      "class_data": {
+        "L-2_Biotecnologie": {
+          "relevance_level": 4,
+          "coverage_percentage": 94.4,
+          "status": "fondamentale",
+          "distinctive_concepts": [],
+          "gap_concepts": [
+            "saponificazione"
+          ]
+        },
+        "L-13_Scienze_biologiche": {
+          "relevance_level": 4,
+          "coverage_percentage": 94.4,
+          "status": "fondamentale",
+          "distinctive_concepts": [],
+          "gap_concepts": [
+            "peptidi"
+          ]
+        }
+      },
+      "concepts": {
+        "core": [
+          {
+            "name": "alcheni",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 96.7,
+              "L-13_Scienze_biologiche": 97.4
+            },
+            "variance": 0.15
+          },
+          {
+            "name": "stereochimica",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 96.7,
+              "L-13_Scienze_biologiche": 92.3
+            },
+            "variance": 4.75
+          },
+          {
+            "name": "acidità",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 83.3,
+              "L-13_Scienze_biologiche": 82.1
+            },
+            "variance": 0.41
+          },
+          {
+            "name": "cicloalcani",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 80.0,
+              "L-13_Scienze_biologiche": 84.6
+            },
+            "variance": 5.33
+          },
+          {
+            "name": "SN1",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 70.0,
+              "L-13_Scienze_biologiche": 56.4
+            },
+            "variance": 46.17
+          },
+          {
+            "name": "SN2",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 70.0,
+              "L-13_Scienze_biologiche": 56.4
+            },
+            "variance": 46.17
+          },
+          {
+            "name": "ossidazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 70.0,
+              "L-13_Scienze_biologiche": 82.1
+            },
+            "variance": 36.31
+          },
+          {
+            "name": "basicità",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 66.7,
+              "L-13_Scienze_biologiche": 71.8
+            },
+            "variance": 6.57
+          },
+          {
+            "name": "tautomeria",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 66.7,
+              "L-13_Scienze_biologiche": 59.0
+            },
+            "variance": 14.79
+          },
+          {
+            "name": "riduzione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 60.0,
+              "L-13_Scienze_biologiche": 74.4
+            },
+            "variance": 51.55
+          },
+          {
+            "name": "peptidi",
+            "classes_present": [
+              "L-2_Biotecnologie"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 56.7
+            },
+            "variance": 0
+          },
+          {
+            "name": "mutarotazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 53.3,
+              "L-13_Scienze_biologiche": 56.4
+            },
+            "variance": 2.37
+          },
+          {
+            "name": "tioli",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 50.0,
+              "L-13_Scienze_biologiche": 56.4
+            },
+            "variance": 10.27
+          }
+        ],
+        "common": [
+          {
+            "name": "epossidi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 46.7,
+              "L-13_Scienze_biologiche": 56.4
+            },
+            "variance": 23.73
+          },
+          {
+            "name": "configurazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 46.7,
+              "L-13_Scienze_biologiche": 56.4
+            },
+            "variance": 23.73
+          },
+          {
+            "name": "idrolisi",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 46.7,
+              "L-13_Scienze_biologiche": 56.4
+            },
+            "variance": 23.73
+          },
+          {
+            "name": "idrogenazione",
+            "classes_present": [
+              "L-2_Biotecnologie",
+              "L-13_Scienze_biologiche"
+            ],
+            "frequencies": {
+              "L-2_Biotecnologie": 43.3,
+              "L-13_Scienze_biologiche": 46.2
+            },
+            "variance": 1.99
+          }
+        ],
+        "specific": {
+          "L-13_Scienze_biologiche": [
+            {
+              "name": "saponificazione",
+              "classes_present": [
+                "L-13_Scienze_biologiche"
+              ],
+              "frequencies": {
+                "L-13_Scienze_biologiche": 41.0
+              },
+              "variance": 0
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

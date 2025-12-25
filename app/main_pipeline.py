@@ -1,163 +1,207 @@
 """
-main_pipeline.py
-Pipeline completa end-to-end
+CoreX - Main Pipeline
+Orchestrazione completa dell'analisi programmi
 """
 
 import json
 from pathlib import Path
+from typing import Dict, List, Optional, Tuple
 from datetime import datetime
-from typing import Optional
 
-from .config import OUTPUT_DIR
-from .pdf_extractor import PDFExtractor
-from .concept_extractor import ConceptExtractor
-from .clusterer import HierarchicalClusterer
-from .coverage_analyzer import CoverageAnalyzer
-from .framework_comparator import FrameworkComparator
+from app.pdf_extractor import PDFExtractor
+from app.concept_extractor import ConceptExtractor
+from app.clusterer import HierarchicalClusterer
+from app.coverage_analyzer import CoverageAnalyzer
+from app.framework_adapter import FrameworkAdapter
 
 
 class FrameworkGenerationPipeline:
-    def __init__(self, pdf_dir, existing_framework_path=None, output_dir=None, use_llm=True):
-        self.pdf_dir = Path(pdf_dir)
-        self.output_dir = Path(output_dir) if output_dir else OUTPUT_DIR
-        self.use_llm = use_llm
-        
+    """Pipeline completa per generazione framework da programmi"""
+    
+    def __init__(self):
         self.pdf_extractor = PDFExtractor()
         self.concept_extractor = ConceptExtractor()
         self.clusterer = HierarchicalClusterer()
-        
-        self.comparator = None
-        if existing_framework_path and Path(existing_framework_path).exists():
-            self.comparator = FrameworkComparator(Path(existing_framework_path))
-        
-        self.syllabus_texts = {}
-        self.syllabus_metadata = {}
-        self.concept_collection = None
-        self.framework = None
-        self.coverages = None
-        self.coverage_matrix = None
-        self.comparison = None
-        
-        self.output_dir.mkdir(parents=True, exist_ok=True)
+        self.framework_adapter = FrameworkAdapter()
     
-    def run(self, framework_name="Framework Empirico L-13", n_clusters=None):
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    def extract_from_folder(self, folder_path: Path) -> Tuple[Dict[str, str], Dict[str, Dict]]:
+        """Estrae testo da tutti i PDF in una cartella"""
+        syllabus_texts = {}
+        syllabus_metadata = {}
         
-        print("\n" + "="*60)
-        print("COREX - PIPELINE GENERAZIONE FRAMEWORK")
-        print("="*60 + "\n")
+        pdf_files = list(folder_path.glob("*.pdf"))
         
-        # FASE 1: Estrazione PDF
-        print("[1/5] Estrazione testo da PDF...")
-        extracted = self.pdf_extractor.extract_batch(self.pdf_dir)
-        
-        for es in extracted:
-            if es.success:
-                self.syllabus_texts[es.id] = es.text
-                self.syllabus_metadata[es.id] = {
-                    "university": es.university,
-                    "professor": es.professor
+        for pdf_path in pdf_files:
+            result = self.pdf_extractor.extract(pdf_path)
+            if result.success:
+                syllabus_texts[result.id] = result.text
+                syllabus_metadata[result.id] = {
+                    "university": result.university,
+                    "professor": result.professor,
+                    "source_path": str(pdf_path)
                 }
         
-        print(f"      Estratti: {len(self.syllabus_texts)} syllabus\n")
-        
-        # FASE 2: Estrazione concetti
-        print("[2/5] Estrazione concetti...")
-        self.concept_collection = self.concept_extractor.process_multiple_syllabus(
-            self.syllabus_texts, framework_name
-        )
-        print(f"      Concetti: {self.concept_collection.total_unique_concepts}")
-        print(f"      CORE: {self.concept_collection.n_core}, COMUNE: {self.concept_collection.n_comune}\n")
-        
-        # FASE 3: Clustering
-        print("[3/5] Clustering e generazione framework...")
-        self.framework = self.clusterer.generate_framework(
-            self.concept_collection, framework_name, n_clusters, self.use_llm
-        )
-        
-        # FASE 4: Copertura
-        print("\n[4/5] Analisi copertura...")
-        analyzer = CoverageAnalyzer(self.framework)
-        self.coverages, self.coverage_matrix = analyzer.analyze_collection(
-            self.concept_collection, self.syllabus_metadata
-        )
-        print(f"      Analizzati {len(self.coverages)} syllabus\n")
-        
-        # FASE 5: Confronto
-        if self.comparator:
-            print("[5/5] Confronto con framework esistente...")
-            self.comparison = self.comparator.compare(self.framework)
-            print(f"      Similarità: {self.comparison.overall_similarity:.1%}\n")
-        else:
-            print("[5/5] Confronto: skipped (nessun framework esistente)\n")
-        
-        # Export
-        results = self._export(timestamp)
-        
-        print("="*60)
-        print("COMPLETATO")
-        print("="*60)
-        
-        return results
+        return syllabus_texts, syllabus_metadata
     
-    def _export(self, timestamp: str) -> dict:
-        files = []
+    def extract_from_files(self, pdf_paths: List[Path]) -> Tuple[Dict[str, str], Dict[str, Dict]]:
+        """Estrae testo da una lista di PDF"""
+        syllabus_texts = {}
+        syllabus_metadata = {}
         
-        # Framework
-        fw_file = self.output_dir / f"framework_{timestamp}.json"
-        fw_data = {
+        for pdf_path in pdf_paths:
+            result = self.pdf_extractor.extract(pdf_path)
+            if result.success:
+                syllabus_texts[result.id] = result.text
+                syllabus_metadata[result.id] = {
+                    "university": result.university,
+                    "professor": result.professor,
+                    "classe": pdf_path.parent.name,
+                    "source_path": str(pdf_path)
+                }
+        
+        return syllabus_texts, syllabus_metadata
+    
+    def run_analysis(
+        self,
+        syllabus_texts: Dict[str, str],
+        syllabus_metadata: Dict[str, Dict],
+        project_name: str,
+        n_clusters: Optional[int] = None,
+        use_llm: bool = True
+    ) -> Tuple:
+        """Esegue l'analisi completa"""
+        
+        # Step 1: Estrazione concetti
+        concept_collection = self.concept_extractor.process_multiple_syllabus(
+            syllabus_texts, 
+            project_name
+        )
+        
+        # Step 2: Clustering e generazione framework
+        framework = self.clusterer.generate_framework(
+            concept_collection,
+            project_name,
+            n_clusters,
+            use_llm
+        )
+        
+        # Step 3: Analisi copertura
+        analyzer = CoverageAnalyzer(framework)
+        coverages, coverage_matrix = analyzer.analyze_collection(
+            concept_collection,
+            syllabus_metadata
+        )
+        
+        return concept_collection, framework, coverages, coverage_matrix
+    
+    def generate_zanichelli_output(
+        self,
+        materia: str,
+        concept_collection,
+        coverages: List,
+        syllabus_metadata: Dict[str, Dict],
+        classi_analizzate: List[str]
+    ) -> Dict:
+        """Genera output nel formato Zanichelli"""
+        
+        # Prepara lista concetti aggregati
+        concepts = [
+            {
+                "name": c.canonical_name,
+                "frequency": c.frequency_percentage,
+                "n_syllabus": c.frequency_absolute
+            }
+            for c in concept_collection.concepts
+        ]
+        
+        # Prepara dati syllabus CON i concetti specifici di ciascuno
+        syllabus_data = []
+        for cov in coverages:
+            meta = syllabus_metadata.get(cov.syllabus_id, {})
+            
+            # Recupera i concetti specifici di questo syllabus
+            syllabus_concepts = []
+            for concept in concept_collection.concepts:
+                # CORRETTO: usa source_syllabus_ids invece di syllabus_ids
+                if cov.syllabus_id in concept.source_syllabus_ids:
+                    syllabus_concepts.append(concept.canonical_name.lower())
+            
+            syllabus_data.append({
+                "id": cov.syllabus_id,
+                "university": cov.university,
+                "professor": cov.professor,
+                "classe": meta.get("classe", "N/D"),
+                "coverage": cov.overall_coverage,
+                "concepts": syllabus_concepts,
+                "n_concepts": len(syllabus_concepts)
+            })
+        
+        return self.framework_adapter.generate_zanichelli_output(
+            materia=materia,
+            concepts=concepts,
+            syllabus_data=syllabus_data,
+            classi_analizzate=classi_analizzate
+        )
+    
+    def run_full_pipeline(
+        self,
+        pdf_paths: List[Path],
+        materia: str,
+        project_name: str,
+        classi_analizzate: List[str],
+        n_clusters: Optional[int] = None,
+        use_llm: bool = True,
+        existing_framework_path: Optional[Path] = None
+    ) -> Dict:
+        """
+        Pipeline completa: da PDF a output Zanichelli
+        """
+        
+        # Estrazione testi
+        syllabus_texts, syllabus_metadata = self.extract_from_files(pdf_paths)
+        
+        if not syllabus_texts:
+            raise ValueError("Nessun testo estratto dai PDF")
+        
+        # Analisi
+        concept_collection, framework, coverages, coverage_matrix = self.run_analysis(
+            syllabus_texts,
+            syllabus_metadata,
+            project_name,
+            n_clusters,
+            use_llm
+        )
+        
+        # Output Zanichelli
+        zanichelli_output = self.generate_zanichelli_output(
+            materia=materia,
+            concept_collection=concept_collection,
+            coverages=coverages,
+            syllabus_metadata=syllabus_metadata,
+            classi_analizzate=classi_analizzate
+        )
+        
+        # Confronto con framework esistente (se fornito)
+        comparison = None
+        if existing_framework_path and existing_framework_path.exists():
+            from app.framework_comparator import FrameworkComparator
+            comparator = FrameworkComparator(existing_framework_path)
+            comparison = comparator.compare(framework)
+        
+        return {
+            "concept_collection": concept_collection,
+            "framework": framework,
+            "coverages": coverages,
+            "coverage_matrix": coverage_matrix,
+            "zanichelli_output": zanichelli_output,
+            "comparison": comparison,
             "metadata": {
-                "name": self.framework.name,
-                "n_syllabus": self.framework.n_syllabus_analyzed,
-                "generation_date": self.framework.generation_date.isoformat()
-            },
-            "statistics": {
-                "total_concepts": self.framework.total_concepts,
-                "n_modules": self.framework.n_modules
-            },
-            "modules": [
-                {
-                    "order": m.order,
-                    "name": m.name,
-                    "n_concepts": m.n_concepts,
-                    "weight": round(m.suggested_weight, 4),
-                    "concepts": [
-                        {"name": c.canonical_name, "frequency": c.frequency_percentage}
-                        for c in sorted(m.concepts, key=lambda x: -x.frequency_percentage)[:20]
-                    ]
-                }
-                for m in sorted(self.framework.modules, key=lambda x: x.order)
-            ]
+                "materia": materia,
+                "project_name": project_name,
+                "classi_analizzate": classi_analizzate,
+                "n_syllabus": len(syllabus_texts),
+                "n_concepts": concept_collection.total_unique_concepts,
+                "n_modules": framework.n_modules,
+                "generation_date": datetime.now().isoformat()
+            }
         }
-        with open(fw_file, "w", encoding="utf-8") as f:
-            json.dump(fw_data, f, ensure_ascii=False, indent=2)
-        files.append(fw_file.name)
-        
-        # Coverage
-        cov_file = self.output_dir / f"coverage_{timestamp}.json"
-        cov_data = {
-            "matrix": self.coverage_matrix.to_dict(),
-            "syllabus": [
-                {"id": c.syllabus_id, "university": c.university, 
-                 "coverage": c.overall_coverage}
-                for c in sorted(self.coverages, key=lambda x: -x.overall_coverage)
-            ]
-        }
-        with open(cov_file, "w", encoding="utf-8") as f:
-            json.dump(cov_data, f, ensure_ascii=False, indent=2)
-        files.append(cov_file.name)
-        
-        # Comparison
-        if self.comparison:
-            comp_file = self.output_dir / f"comparison_{timestamp}.json"
-            with open(comp_file, "w", encoding="utf-8") as f:
-                json.dump(self.comparison.to_dict(), f, ensure_ascii=False, indent=2)
-            files.append(comp_file.name)
-        
-        return {"timestamp": timestamp, "output_dir": str(self.output_dir), "files": files}
-
-
-def run_pipeline(pdf_dir, existing_framework=None, output_dir=None, 
-                framework_name="Framework Empirico L-13", use_llm=True, n_clusters=None):
-    pipeline = FrameworkGenerationPipeline(pdf_dir, existing_framework, output_dir, use_llm)
-    return pipeline.run(framework_name, n_clusters)
