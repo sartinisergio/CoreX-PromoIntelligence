@@ -1479,241 +1479,268 @@ with tab6:
         st.code(traceback.format_exc())
         
 # === TAB 7: PROFILO DOCENTE (Report Commerciale) ===
+# === TAB 7: PROFILO DOCENTE ===
 with tab7:
     st.header("🎓 Profilo Docente - Report Commerciale")
-    st.markdown("Genera un report commerciale completo per il promotore a partire da un singolo programma d'esame.")
+    st.markdown("""
+    Genera un report commerciale personalizzato per il promotore, analizzando:
+    - Il programma del docente
+    - I manuali attualmente adottati
+    - Il miglior manuale Zanichelli da proporre
+    """)
     
-    # Selezione materia
-    materie = get_materie()
+    # Verifica materie disponibili
+    materie_doc = get_materie()
     
-    if not materie:
+    if not materie_doc:
         st.warning("⚠️ Nessuna materia disponibile. Crea prima una materia nella tab Gestione.")
     else:
-        col1, col2 = st.columns(2)
+        # === SEZIONE 1: SELEZIONE PROGRAMMA ===
+        st.subheader("📄 1. Seleziona il Programma")
         
+        col1, col2 = st.columns(2)
         with col1:
-            materia_sel = st.selectbox(
-                "📚 Seleziona Materia",
-                materie,
-                key="profilo_materia"
+            selected_materia_doc = st.selectbox(
+                "Materia",
+                materie_doc,
+                key="promo_materia"
             )
         
         with col2:
-            classi = get_classi_laurea(materia_sel) if materia_sel else []
-            if classi:
-                classe_sel = st.selectbox(
-                    "🎓 Classe di Laurea",
-                    classi,
-                    key="profilo_classe"
+            classi_doc = get_classi_laurea(selected_materia_doc) if selected_materia_doc else []
+            if classi_doc:
+                selected_classe_doc = st.selectbox(
+                    "Classe di Laurea",
+                    classi_doc,
+                    key="promo_classe"
                 )
             else:
-                classe_sel = None
-                st.info("Nessuna classe disponibile")
+                st.warning("Nessuna classe disponibile")
+                selected_classe_doc = None
         
-        # Lista PDF disponibili
-        if materia_sel and classe_sel:
-            pdfs = get_pdf_in_folder(materia_sel, classe_sel)
-            
-            if not pdfs:
-                st.warning(f"Nessun PDF in {materia_sel}/{classe_sel}")
-            else:
-                st.markdown("---")
-                st.subheader("📄 Seleziona Programma da Analizzare")
-                
-                # Dropdown per selezionare PDF
-                pdf_names = [p.name for p in pdfs]
-                pdf_sel_idx = st.selectbox(
-                    "Programma d'esame",
-                    range(len(pdf_names)),
-                    format_func=lambda x: pdf_names[x],
-                    key="profilo_pdf"
+        # Selezione PDF
+        selected_pdf_doc = None
+        if selected_materia_doc and selected_classe_doc:
+            pdfs_disponibili = get_pdf_in_folder(selected_materia_doc, selected_classe_doc)
+            if pdfs_disponibili:
+                pdf_names = [p.name for p in pdfs_disponibili]
+                selected_pdf_name = st.selectbox(
+                    "Programma (PDF)",
+                    pdf_names,
+                    key="promo_pdf"
                 )
-                
-                pdf_selezionato = pdfs[pdf_sel_idx]
-                
-                # Mostra info file
-                st.caption(f"📁 {pdf_selezionato}")
-                
-                # Opzioni avanzate
-                with st.expander("⚙️ Opzioni Avanzate"):
-                    use_framework_reale = st.checkbox(
-                        "Usa Framework Reale (dall'archivio)",
-                        value=True,
-                        help="Confronta anche con il framework generato dalle analisi precedenti"
-                    )
-                    
-                    use_llm_profilo = st.checkbox(
-                        "Usa LLM per profilo docente",
-                        value=bool(api_key),
-                        help="Analisi più approfondita del profilo pedagogico (richiede API Key)"
-                    )
-                
-                st.markdown("---")
-                
-                # Pulsante genera report
-                if st.button("🚀 Genera Report Commerciale", type="primary", use_container_width=True):
-                    
-                    with st.spinner("Analisi in corso... (può richiedere 30-60 secondi)"):
-                        try:
-                            # Import dell'orchestratore
-                            from app.promo_orchestrator import PromoOrchestrator
-                            from app.commercial_report_generator import CommercialReportGenerator
-                            
-                            # Progress bar
-                            progress = st.progress(0, text="Inizializzazione...")
-                            
-                            # Inizializza orchestratore
-                            orchestrator = PromoOrchestrator()
-                            progress.progress(10, text="Estrazione testo dal PDF...")
-                            
-                            # Esegui analisi completa
-                            analisi = orchestrator.analizza_programma_docente(
-                                pdf_path=pdf_selezionato,
-                                materia=materia_sel,
-                                classe_laurea=classe_sel,
-                                use_framework_reale=use_framework_reale
-                            )
-                            
-                            progress.progress(70, text="Generazione report HTML...")
-                            
-                            # Genera report HTML
-                            generator = CommercialReportGenerator()
-                            report_html = generator.genera_report_html(analisi)
-                            
-                            progress.progress(90, text="Salvataggio...")
-                            
-                            # Salva il report
-                            docente_nome = analisi.get('dati_programma', {}).get('docente', 'Docente').replace(' ', '_')
-                            timestamp = datetime.now().strftime("%Y%m%d")
-                            report_filename = f"report_{docente_nome}_{timestamp}.html"
-                            report_path = Path(report_filename)
-                            
-                            with open(report_path, 'w', encoding='utf-8') as f:
-                                f.write(report_html)
-                            
-                            progress.progress(100, text="✅ Completato!")
-                            
-                            st.success(f"✅ Report generato: {report_filename}")
-                            
-                            # Mostra metriche principali
-                            st.markdown("---")
-                            st.subheader("📊 Risultati Analisi")
-                            
-                            col1, col2, col3, col4 = st.columns(4)
-                            
-                            with col1:
-                                st.metric(
-                                    "Docente",
-                                    analisi.get('dati_programma', {}).get('docente', 'N/D')[:20]
-                                )
-                            
-                            with col2:
-                                manuale = analisi.get('manuale_zanichelli', {})
-                                st.metric(
-                                    "Match Score",
-                                    f"{manuale.get('match_score', 0)}%"
-                                )
-                            
-                            with col3:
-                                copertura = analisi.get('copertura_argomenti', {}).get('percentuale', 0)
-                                st.metric(
-                                    "Copertura",
-                                    f"{copertura}%"
-                                )
-                            
-                            with col4:
-                                punteggio = analisi.get('punteggio_opportunita', 50)
-                                st.metric(
-                                    "Opportunità",
-                                    f"{punteggio}%"
-                                )
-                            
-                            # Info manuale consigliato
-                            st.markdown("---")
-                            manuale = analisi.get('manuale_zanichelli', {})
-                            st.info(f"📚 **Manuale Consigliato:** {manuale.get('autore', 'N/D')}, *{manuale.get('titolo', 'N/D')}* (Match: {manuale.get('match_score', 0)}%)")
-                            
-                            # Competitor
-                            concorrente = analisi.get('concorrente_principale', {})
-                            if concorrente:
-                                st.warning(f"⚔️ **Competitor:** {concorrente.get('autore', 'N/D')}, *{concorrente.get('titolo', 'N/D')}* ({concorrente.get('editore', 'N/D')})")
-                            
-                            # Gap principali
-                            gaps = analisi.get('gap_analysis', [])
-                            if gaps:
-                                st.markdown("**🔍 Gap Identificati:**")
-                                for gap in gaps[:3]:
-                                    st.write(f"• {gap.get('titolo', 'N/D')} - {gap.get('descrizione', '')[:80]}")
-                            
-                            # Download e preview
-                            st.markdown("---")
-                            col1, col2 = st.columns(2)
-                            
-                            with col1:
-                                st.download_button(
-                                    "📥 Scarica Report HTML",
-                                    report_html,
-                                    report_filename,
-                                    "text/html",
-                                    use_container_width=True
-                                )
-                            
-                            with col2:
-                                # Salva anche JSON per debug/archivio
-                                analisi_json = json.dumps(analisi, indent=2, ensure_ascii=False, default=str)
-                                st.download_button(
-                                    "📥 Scarica Dati JSON",
-                                    analisi_json,
-                                    report_filename.replace('.html', '.json'),
-                                    "application/json",
-                                    use_container_width=True
-                                )
-                            
-                            # Preview report
-                            st.markdown("---")
-                            st.subheader("👁️ Anteprima Report")
-                            st.components.v1.html(report_html, height=800, scrolling=True)
-                            
-                        except ImportError as e:
-                            st.error(f"❌ Modulo mancante: {e}")
-                            st.info("Assicurati che il file `app/promo_orchestrator.py` sia presente.")
-                            
-                        except Exception as e:
-                            st.error(f"❌ Errore durante l'analisi: {str(e)}")
-                            import traceback
-                            with st.expander("🔍 Dettagli errore"):
-                                st.code(traceback.format_exc())
+                selected_pdf_doc = pdfs_disponibili[pdf_names.index(selected_pdf_name)]
+            else:
+                st.warning("Nessun PDF disponibile in questa cartella")
         
-        # Sezione report salvati
         st.markdown("---")
-        st.subheader("📁 Report Generati")
         
-        # Cerca report esistenti
-        report_files = list(Path(".").glob("report_*.html"))
+        # === SEZIONE 2: MANUALI ADOTTATI ===
+        st.subheader("📚 2. Indica i Manuali Attualmente Adottati")
+        st.caption("Seleziona i manuali che il docente usa attualmente (Zanichelli E/O Competitor)")
         
-        if not report_files:
-            st.info("Nessun report generato. Usa il pulsante sopra per crearne uno.")
+        # Carica manuali disponibili per la materia
+        manuali_disponibili = []
+        manuali_dir = get_manuali_dir() / selected_materia_doc / "indici"
+        
+        # Manuali Zanichelli
+        zanichelli_dir = manuali_dir / "Manuali_Zanichelli"
+        if zanichelli_dir.exists():
+            for json_file in zanichelli_dir.glob("*.json"):
+                try:
+                    with open(json_file, 'r', encoding='utf-8-sig') as f:
+                        content = f.read()
+                        if content.startswith('\ufeff'):
+                            content = content[1:]
+                        data = json.loads(content)
+                        manuali_disponibili.append({
+                            'titolo': data.get('title', json_file.stem),
+                            'autore': data.get('author', 'N/D'),
+                            'editore': 'Zanichelli',
+                            'path': str(json_file),
+                            'label': f"🟦 {data.get('title', json_file.stem)} - {data.get('author', 'N/D')} (Zanichelli)"
+                        })
+                except:
+                    pass
+        
+        # Manuali Competitor
+        competitor_dir = manuali_dir / "Manuali_Competitor"
+        if competitor_dir.exists():
+            for json_file in competitor_dir.glob("*.json"):
+                try:
+                    with open(json_file, 'r', encoding='utf-8-sig') as f:
+                        content = f.read()
+                        if content.startswith('\ufeff'):
+                            content = content[1:]
+                        data = json.loads(content)
+                        editore = data.get('publisher', 'Altro')
+                        manuali_disponibili.append({
+                            'titolo': data.get('title', json_file.stem),
+                            'autore': data.get('author', 'N/D'),
+                            'editore': editore,
+                            'path': str(json_file),
+                            'label': f"🟧 {data.get('title', json_file.stem)} - {data.get('author', 'N/D')} ({editore})"
+                        })
+                except:
+                    pass
+        
+        # Selezione manuali
+        manuali_selezionati = []
+        
+        if manuali_disponibili:
+            labels = [m['label'] for m in manuali_disponibili]
+            selected_labels = st.multiselect(
+                "Seleziona i manuali adottati dal docente",
+                labels,
+                key="promo_manuali_adottati"
+            )
+            
+            for label in selected_labels:
+                for m in manuali_disponibili:
+                    if m['label'] == label:
+                        manuali_selezionati.append({
+                            'titolo': m['titolo'],
+                            'autore': m['autore'],
+                            'editore': m['editore']
+                        })
         else:
-            for rf in sorted(report_files, reverse=True)[:10]:
-                col1, col2, col3 = st.columns([3, 1, 1])
+            st.info(f"Nessun manuale caricato per {selected_materia_doc}. Puoi inserirli manualmente.")
+        
+        # Inserimento manuale
+        with st.expander("➕ Aggiungi manuale manualmente"):
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                man_titolo = st.text_input("Titolo", key="man_titolo")
+            with col2:
+                man_autore = st.text_input("Autore", key="man_autore")
+            with col3:
+                man_editore = st.text_input("Editore", key="man_editore")
+            
+            if st.button("➕ Aggiungi"):
+                if man_titolo and man_editore:
+                    manuali_selezionati.append({
+                        'titolo': man_titolo,
+                        'autore': man_autore or 'N/D',
+                        'editore': man_editore
+                    })
+                    st.success(f"✅ Aggiunto: {man_titolo}")
+        
+        # Mostra manuali selezionati
+        if manuali_selezionati:
+            st.markdown("**Manuali selezionati:**")
+            for m in manuali_selezionati:
+                icon = "🟦" if "zanichelli" in m['editore'].lower() else "🟧"
+                st.write(f"{icon} {m['titolo']} - {m['autore']} ({m['editore']})")
+        
+        st.markdown("---")
+        
+        # === SEZIONE 3: GENERA REPORT ===
+        st.subheader("🚀 3. Genera Report Commerciale")
+        
+        # Verifica prerequisiti
+        can_generate = selected_pdf_doc is not None and len(manuali_selezionati) > 0
+        
+        if not selected_pdf_doc:
+            st.warning("⚠️ Seleziona un programma PDF")
+        if not manuali_selezionati:
+            st.warning("⚠️ Indica almeno un manuale adottato")
+        
+        if can_generate:
+            st.success("✅ Pronto per generare il report")
+            
+            if st.button("🚀 GENERA REPORT COMMERCIALE", type="primary", use_container_width=True):
                 
-                with col1:
-                    st.write(f"📄 {rf.name}")
-                
-                with col2:
-                    with open(rf, 'r', encoding='utf-8') as f:
-                        st.download_button(
-                            "📥",
-                            f.read(),
-                            rf.name,
-                            "text/html",
-                            key=f"dl_{rf.name}"
+                with st.spinner("Analisi in corso..."):
+                    try:
+                        from app.promo_orchestrator import PromoOrchestrator
+                        from app.commercial_report_generator import CommercialReportGenerator
+                        
+                        # Progress
+                        progress = st.progress(0, text="Inizializzazione...")
+                        
+                        # Inizializza orchestrator
+                        orchestrator = PromoOrchestrator()
+                        progress.progress(20, text="[1/7] Estrazione testo...")
+                        
+                        # Esegui analisi con il NUOVO metodo
+                        progress.progress(40, text="[2/7] Analisi in corso...")
+                        
+                        analisi = orchestrator.analizza_programma_docente_con_competitor(
+                            pdf_path=selected_pdf_doc,
+                            materia=selected_materia_doc,
+                            classe_laurea=selected_classe_doc,
+                            manuali_adottati=manuali_selezionati
                         )
-                
-                with col3:
-                    if st.button("🗑️", key=f"del_{rf.name}"):
-                        rf.unlink()
-                        st.rerun()
+                        
+                        progress.progress(70, text="[6/7] Generazione report...")
+                        
+                        # Genera HTML
+                        generator = CommercialReportGenerator()
+                        html_report = generator.genera_report_html(analisi)
+                        
+                        progress.progress(90, text="Salvataggio...")
+                        
+                        # Salva report
+                        output_dir = get_analisi_dir()
+                        pdf_stem = selected_pdf_doc.stem
+                        output_path = output_dir / f"report_{pdf_stem}.html"
+                        json_path = output_dir / f"analisi_{pdf_stem}.json"
+                        
+                        with open(output_path, 'w', encoding='utf-8') as f:
+                            f.write(html_report)
+                        
+                        with open(json_path, 'w', encoding='utf-8') as f:
+                            json.dump(analisi, f, indent=2, ensure_ascii=False, default=str)
+                        
+                        progress.progress(100, text="✅ Completato!")
+                        
+                        st.success("✅ Report generato con successo!")
+                        
+                        # Riepilogo
+                        st.markdown("---")
+                        st.subheader("📊 Riepilogo")
+                        
+                        col1, col2, col3 = st.columns(3)
+                        col1.metric("Punteggio Opportunità", f"{analisi.get('punteggio_opportunita', 0)}/100")
+                        col2.metric("Copertura Ideale", f"{analisi.get('copertura_ideale', {}).get('percentuale', 0)}%")
+                        col3.metric("Gap Identificati", len(analisi.get('gap_analysis', [])))
+                        
+                        # Manuale consigliato
+                        manuale = analisi.get('manuale_zanichelli', {})
+                        st.info(f"📚 **Manuale Zanichelli consigliato:** {manuale.get('titolo', 'N/D')} di {manuale.get('autore', 'N/D')}")
+                        
+                        # Download
+                        st.markdown("---")
+                        col1, col2 = st.columns(2)
+                        
+                        with col1:
+                            st.download_button(
+                                "📥 Scarica Report HTML",
+                                html_report,
+                                f"report_{pdf_stem}.html",
+                                "text/html",
+                                use_container_width=True
+                            )
+                        
+                        with col2:
+                            st.download_button(
+                                "📥 Scarica Dati JSON",
+                                json.dumps(analisi, indent=2, ensure_ascii=False, default=str),
+                                f"analisi_{pdf_stem}.json",
+                                "application/json",
+                                use_container_width=True
+                            )
+                        
+                        # Anteprima
+                        st.markdown("---")
+                        st.subheader("👁️ Anteprima Report")
+                        st.components.v1.html(html_report, height=700, scrolling=True)
+                        
+                    except Exception as e:
+                        st.error(f"❌ Errore: {str(e)}")
+                        import traceback
+                        with st.expander("Dettagli errore"):
+                            st.code(traceback.format_exc())
 
 # Footer
 st.markdown("---")
