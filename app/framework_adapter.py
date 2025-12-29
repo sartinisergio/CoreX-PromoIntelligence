@@ -33,8 +33,7 @@ class FrameworkAdapter:
             "macroeconomia": "macroeconomia.json",
             "microeconomia": "microeconomia.json",
             "matematica_bioscienze": "matematica_bioscienze.json",
-            "istologia": "istologia_embriologia.json",
-            "istologia_embriologia": "istologia_embriologia.json",
+            "istologia": "istologia.json",
         }
         
         # Espansione semantica: sinonimi e varianti per migliorare il matching

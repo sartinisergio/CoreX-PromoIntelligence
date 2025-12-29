@@ -1,25 +1,41 @@
 """
 concept_extractor.py
-Estrazione concetti da testi syllabus (versione senza spaCy)
+Estrazione concetti da testi syllabus con LLM (versione universale multi-materia)
 """
 
 import re
+import json
 import hashlib
+import os
 from collections import defaultdict
-from typing import Optional
+from typing import Optional, List, Dict, Tuple
+import openai
 
 from .config import MIN_CONCEPT_LENGTH, THRESHOLD_CORE, THRESHOLD_COMUNE
-from .chemistry_vocab import ChemistryVocabulary
 from .models.concept import RawConcept, Concept, ConceptCollection, EntityType
 
 
 class ConceptExtractor:
-    """Estrattore di concetti basato su pattern matching."""
+    """Estrattore di concetti universale basato su LLM."""
     
-    def __init__(self, vocabulary: Optional[ChemistryVocabulary] = None):
-        self.vocab = vocabulary or ChemistryVocabulary()
+    def __init__(self, use_llm: bool = True, materia: str = ""):
         self._id_counter = 0
-        print("Usando estrazione basata su pattern matching")
+        self.use_llm = use_llm
+        self.materia = materia
+        self.client = None
+        
+        # Inizializza client OpenAI se richiesto
+        if use_llm:
+            api_key = os.environ.get("OPENAI_API_KEY", "")
+            if api_key:
+                self.client = openai.OpenAI(api_key=api_key)
+                print(f"[OK] ConceptExtractor con LLM inizializzato per: {materia or 'materia generica'}")
+            else:
+                print("[WARN] API Key OpenAI non trovata - uso fallback pattern matching")
+                self.use_llm = False
+        
+        if not self.use_llm:
+            print("[INFO] Usando estrazione basata su pattern matching (modalità fallback)")
     
     def _generate_id(self, text: str) -> str:
         self._id_counter += 1
@@ -27,19 +43,23 @@ class ConceptExtractor:
         return f"concept_{self._id_counter:05d}_{hash_part}"
     
     def preprocess_text(self, text: str) -> str:
+        """Pulisce il testo"""
         text = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", "", text)
         text = re.sub(r"\s+", " ", text)
         return text.strip()
     
     def extract_program_section(self, text: str) -> str:
+        """Estrae la sezione programma/contenuti dal testo"""
         patterns = [
-            r"(?:PROGRAMMA|CONTENUTI|SYLLABUS)[:\s]*\n",
-            r"(?:Contenuti|Programma)[:\s]*\n",
+            r"(?:PROGRAMMA|CONTENUTI|SYLLABUS|CONTENUTI\s+SPECIFICI)[:\s]*\n",
+            r"(?:Contenuti|Programma|Argomenti)[:\s]*\n",
         ]
         end_patterns = [
-            r"\n(?:MATERIALE|TESTI|BIBLIOGRAFIA)",
-            r"\n(?:MODALITÀ|METODI)",
+            r"\n(?:MATERIALE|TESTI|BIBLIOGRAFIA|TEXTBOOK)",
+            r"\n(?:MODALITÀ|METODI|METHODS)",
             r"\n(?:RISULTATI\s+DI\s+APPRENDIMENTO)",
+            r"\n(?:PREREQUISITI|PREREQUISITES)",
+            r"\n(?:English)\s*\n",  # Inizio sezione inglese
         ]
         
         start_pos = 0
@@ -57,108 +77,203 @@ class ConceptExtractor:
                 end_pos = start_pos + match.start()
                 break
         
-        return text[start_pos:end_pos].strip()
+        section = text[start_pos:end_pos].strip()
+        
+        # Se la sezione è troppo corta, usa tutto il testo
+        if len(section) < 200:
+            return text[:5000]  # Limita a 5000 caratteri
+        
+        return section[:5000]  # Limita a 5000 caratteri per l'LLM
     
-    def extract_raw_concepts(self, text: str, syllabus_id: str) -> list[RawConcept]:
-        raw_concepts = []
+    # =========================================================
+    # ESTRAZIONE CON LLM - CUORE DEL SISTEMA
+    # =========================================================
+    
+    def extract_concepts_with_llm(self, text: str, syllabus_id: str) -> List[RawConcept]:
+        """Estrae concetti usando LLM - funziona per qualsiasi materia"""
         
-        # 1. Pattern matching per entità chimiche note
-        entities = self.vocab.extract_entities(text)
-        for match_text, entity_type, start, end in entities:
-            ctx_start = max(0, text.rfind(".", 0, start) + 1)
-            ctx_end = text.find(".", end)
-            if ctx_end == -1:
-                ctx_end = min(len(text), end + 100)
+        if not self.client:
+            return self._extract_concepts_fallback(text, syllabus_id)
+        
+        # Determina la materia dal contesto se non specificata
+        materia_context = self.materia if self.materia else "questa disciplina accademica"
+        
+        prompt = f"""Analizza questo programma universitario di {materia_context} ed estrai TUTTI i concetti chiave, gli argomenti e i temi trattati.
+
+TESTO DEL PROGRAMMA:
+{text}
+
+ISTRUZIONI:
+1. Estrai ogni concetto, argomento o tema specifico menzionato
+2. Includi sia concetti generali che specifici
+3. Normalizza i nomi (es. "tessuto epiteliale" non "tessuti epiteliali")
+4. Escludi parole generiche come "introduzione", "cenni", "approfondimenti"
+5. Ogni concetto deve essere una stringa di 2-5 parole massimo
+
+Rispondi SOLO con un array JSON di stringhe, esempio:
+["concetto 1", "concetto 2", "concetto 3"]
+
+CONCETTI ESTRATTI:"""
+
+        try:
+            response = self.client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[
+                    {
+                        "role": "system",
+                        "content": "Sei un esperto accademico. Estrai concetti chiave da programmi universitari. Rispondi SOLO con JSON valido."
+                    },
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=0.3,
+                max_tokens=2000
+            )
             
-            etype = EntityType.GENERIC
-            if entity_type in [e.value for e in EntityType]:
-                etype = EntityType(entity_type)
+            response_text = response.choices[0].message.content.strip()
             
-            raw_concepts.append(RawConcept(
-                text=match_text,
-                source_syllabus_id=syllabus_id,
-                position_in_text=start,
-                context=text[ctx_start:ctx_end].strip(),
-                entity_type=etype,
-                confidence=0.9
-            ))
-        
-        # 2. Estrazione basata su keywords chimiche
-        chemistry_keywords = [
-            r'\b(alcani|alcheni|alchini|cicloalcani|aromatici|benzene)\b',
-            r'\b(alcoli|fenoli|eteri|epossidi|tioli|solfuri)\b',
-            r'\b(aldeidi|chetoni|acidi\s+carbossilici)\b',
-            r'\b(esteri|ammidi|anidridi|alogenuri\s+acilici)\b',
-            r'\b(ammine|nitrili)\b',
-            r'\b(stereochimica|chiralit[aà]|enantiomeri|diastereoisomeri)\b',
-            r'\b(configurazione|proiezioni?\s+di\s+Fischer)\b',
-            r'\b(isomeria|stereoisomeri|racemo|racemizzazione)\b',
-            r'\b(SN1|SN2|E1|E2|SEAr)\b',
-            r'\b(sostituzione\s+nucleofila|eliminazione)\b',
-            r'\b(addizione\s+elettrofila|addizione\s+nucleofila)\b',
-            r'\b(ossidazione|riduzione|idrogenazione)\b',
-            r'\b(esterificazione|saponificazione|idrolisi)\b',
-            r'\b(carboidrati|monosaccaridi|disaccaridi|polisaccaridi)\b',
-            r'\b(amminoacidi|proteine|peptidi|legame\s+peptidico)\b',
-            r'\b(lipidi|trigliceridi|fosfolipidi|steroidi)\b',
-            r'\b(nucleotidi|nucleosidi|acidi\s+nucleici|DNA|RNA)\b',
-            r'\b(glucosio|fruttosio|saccarosio|maltosio|lattosio)\b',
-            r'\b(gruppo\s+funzionale|gruppo\s+carbonilico|gruppo\s+carbossilico)\b',
-            r'\b(legame\s+\w+|ibridazione|risonanza|aromaticit[aà])\b',
-            r'\b(acidit[aà]|basicit[aà]|pKa|pH|punto\s+isoelettrico)\b',
-            r'\b(nucleofilo|elettrofilo|carbocatione|carbanione)\b',
-            r'\b(tautomeria|equilibrio\s+cheto-enolico)\b',
-            r'\b(Markovnikov|Zaitsev|Fischer|Friedel|Crafts|Grignard)\b',
-            r'\b(condensazione\s+aldolica|condensazione\s+di\s+Claisen)\b',
-            r'\b(mutarotazione|anomeri|legame\s+glicosidico)\b',
-        ]
-        
-        for pattern in chemistry_keywords:
-            for match in re.finditer(pattern, text, re.IGNORECASE):
-                match_text = match.group()
-                start = match.start()
-                
-                already_found = any(
-                    abs(rc.position_in_text - start) < 5 
-                    for rc in raw_concepts
-                )
-                if already_found:
+            # Pulisci la risposta
+            if response_text.startswith("```"):
+                response_text = response_text.split("```")[1]
+                if response_text.startswith("json"):
+                    response_text = response_text[4:]
+            if response_text.endswith("```"):
+                response_text = response_text[:-3]
+            response_text = response_text.strip()
+            
+            # Parse JSON
+            concepts_list = json.loads(response_text)
+            
+            if not isinstance(concepts_list, list):
+                print(f"[WARN] Risposta LLM non è una lista per {syllabus_id}")
+                return self._extract_concepts_fallback(text, syllabus_id)
+            
+            # Converti in RawConcept
+            raw_concepts = []
+            for i, concept_text in enumerate(concepts_list):
+                if not isinstance(concept_text, str):
+                    continue
+                concept_text = concept_text.strip()
+                if len(concept_text) < 3:
                     continue
                 
-                ctx_start = max(0, text.rfind(".", 0, start) + 1)
-                ctx_end = text.find(".", start + len(match_text))
-                if ctx_end == -1:
-                    ctx_end = min(len(text), start + 150)
+                raw_concepts.append(RawConcept(
+                    text=concept_text,
+                    source_syllabus_id=syllabus_id,
+                    position_in_text=i,
+                    context="",
+                    entity_type=EntityType.GENERIC,
+                    confidence=0.9
+                ))
+            
+            return raw_concepts
+            
+        except json.JSONDecodeError as e:
+            print(f"[WARN] JSON non valido per {syllabus_id}: {e}")
+            return self._extract_concepts_fallback(text, syllabus_id)
+        except Exception as e:
+            print(f"[ERR] Errore LLM per {syllabus_id}: {e}")
+            return self._extract_concepts_fallback(text, syllabus_id)
+    
+    # =========================================================
+    # FALLBACK - Pattern Matching Generico
+    # =========================================================
+    
+    def _extract_concepts_fallback(self, text: str, syllabus_id: str) -> List[RawConcept]:
+        """Fallback: estrazione basata su pattern matching generico"""
+        raw_concepts = []
+        
+        # Pattern generici per qualsiasi materia accademica
+        # Cerca frasi dopo ":", dopo elenchi puntati, titoli in maiuscolo, ecc.
+        
+        patterns = [
+            # Elementi dopo due punti o punto e virgola
+            r'[:\-]\s*([A-Z][a-zàèéìòù]+(?:\s+[a-zàèéìòù]+){0,4})',
+            # Elementi in elenchi (dopo trattino o pallino)
+            r'(?:^|\n)\s*[\-•]\s*([A-Z][a-zàèéìòù]+(?:\s+[a-zàèéìòù]+){0,4})',
+            # Frasi che iniziano con maiuscola dopo punto
+            r'\.\s+([A-Z][a-zàèéìòù]+(?:\s+[a-zàèéìòù]+){1,4})',
+            # Titoli in MAIUSCOLO
+            r'\n([A-Z]{2,}(?:\s+[A-Z]{2,}){0,3})\s*\n',
+            # Pattern "Il/La/I/Le/Gli + sostantivo"
+            r'\b((?:Il|La|I|Le|Gli|Lo)\s+[a-zàèéìòù]+(?:\s+[a-zàèéìòù]+){0,3})\b',
+        ]
+        
+        seen = set()
+        
+        for pattern in patterns:
+            for match in re.finditer(pattern, text, re.MULTILINE):
+                concept_text = match.group(1).strip()
+                
+                # Normalizza
+                concept_text = re.sub(r'\s+', ' ', concept_text)
+                concept_lower = concept_text.lower()
+                
+                # Filtri
+                if len(concept_text) < 4:
+                    continue
+                if len(concept_text) > 60:
+                    continue
+                if concept_lower in seen:
+                    continue
+                
+                # Escludi parole troppo generiche
+                stopwords = {
+                    'introduzione', 'cenni', 'approfondimenti', 'elementi', 'aspetti',
+                    'concetti', 'nozioni', 'fondamenti', 'principi', 'basi',
+                    'corso', 'esame', 'lezione', 'studio', 'analisi', 'metodi',
+                    'obiettivi', 'prerequisiti', 'bibliografia', 'testi', 'materiale'
+                }
+                if concept_lower in stopwords:
+                    continue
+                
+                seen.add(concept_lower)
                 
                 raw_concepts.append(RawConcept(
-                    text=match_text,
+                    text=concept_text,
                     source_syllabus_id=syllabus_id,
-                    position_in_text=start,
-                    context=text[ctx_start:ctx_end].strip(),
+                    position_in_text=match.start(),
+                    context="",
                     entity_type=EntityType.GENERIC,
-                    confidence=0.8
+                    confidence=0.6
                 ))
         
         return raw_concepts
     
-    def normalize_concepts(self, raw_concepts: list[RawConcept]) -> dict[str, list[RawConcept]]:
+    # =========================================================
+    # NORMALIZZAZIONE E AGGREGAZIONE
+    # =========================================================
+    
+    def normalize_concept(self, text: str) -> str:
+        """Normalizza un concetto"""
+        # Lowercase
+        text = text.lower().strip()
+        # Rimuovi articoli iniziali
+        text = re.sub(r'^(il|lo|la|i|gli|le|un|uno|una)\s+', '', text)
+        # Rimuovi punteggiatura finale
+        text = re.sub(r'[.,;:!?]+$', '', text)
+        # Normalizza spazi
+        text = re.sub(r'\s+', ' ', text)
+        return text.strip()
+    
+    def normalize_concepts(self, raw_concepts: List[RawConcept]) -> Dict[str, List[RawConcept]]:
+        """Raggruppa concetti simili"""
         grouped = defaultdict(list)
         
         for raw in raw_concepts:
-            canonical = self.vocab.normalize(raw.text)
+            canonical = self.normalize_concept(raw.text)
             if len(canonical) < MIN_CONCEPT_LENGTH:
-                continue
-            if self.vocab.is_stopword(canonical):
                 continue
             grouped[canonical].append(raw)
         
         return dict(grouped)
     
     def build_concept_collection(
-        self, grouped: dict[str, list[RawConcept]], 
+        self, 
+        grouped: Dict[str, List[RawConcept]], 
         total_syllabus: int,
-        name: str = "Chimica Organica L-13"
+        name: str = "Analisi"
     ) -> ConceptCollection:
+        """Costruisce la collection di concetti"""
         collection = ConceptCollection(
             id=self._generate_id(name),
             name=name,
@@ -169,13 +284,16 @@ class ConceptExtractor:
             entity_types = [r.entity_type for r in raw_list]
             most_common = max(set(entity_types), key=entity_types.count)
             
-            variants = list(set(r.text for r in raw_list if r.text.lower() != canonical_name.lower()))
+            variants = list(set(
+                r.text for r in raw_list 
+                if r.text.lower() != canonical_name.lower()
+            ))
             source_ids = list(set(r.source_syllabus_id for r in raw_list))
             
             concept = Concept(
                 id=self._generate_id(canonical_name),
                 canonical_name=canonical_name,
-                variants=variants,
+                variants=variants[:5],  # Limita varianti
                 source_syllabus_ids=source_ids,
                 frequency_absolute=len(source_ids),
                 entity_type=most_common
@@ -188,35 +306,66 @@ class ConceptExtractor:
         
         return collection
     
-    def extract_from_syllabus(self, text: str, syllabus_id: str, extract_program_only: bool = True) -> list[RawConcept]:
+    # =========================================================
+    # METODI PUBBLICI PRINCIPALI
+    # =========================================================
+    
+    def extract_from_syllabus(
+        self, 
+        text: str, 
+        syllabus_id: str, 
+        extract_program_only: bool = True
+    ) -> List[RawConcept]:
+        """Estrae concetti da un singolo syllabus"""
         cleaned = self.preprocess_text(text)
         
         if extract_program_only:
             program = self.extract_program_section(cleaned)
-            if len(program) < 100:
-                program = cleaned
         else:
-            program = cleaned
+            program = cleaned[:5000]  # Limita per LLM
         
-        return self.extract_raw_concepts(program, syllabus_id)
+        if self.use_llm and self.client:
+            return self.extract_concepts_with_llm(program, syllabus_id)
+        else:
+            return self._extract_concepts_fallback(program, syllabus_id)
     
-    def process_multiple_syllabus(self, syllabus_texts: dict[str, str], name: str = "Chimica Organica L-13") -> ConceptCollection:
+    def process_multiple_syllabus(
+        self, 
+        syllabus_texts: Dict[str, str], 
+        name: str = "Analisi"
+    ) -> ConceptCollection:
+        """Processa multipli syllabus e genera collection"""
         all_raw = []
+        total = len(syllabus_texts)
         
-        print(f"Elaborazione {len(syllabus_texts)} syllabus...")
+        print(f"Elaborazione {total} syllabus...")
+        if self.use_llm and self.client:
+            print(f"[LLM] Estrazione concetti per: {self.materia or name}")
+        
         for i, (sid, text) in enumerate(syllabus_texts.items(), 1):
             raw = self.extract_from_syllabus(text, sid)
             all_raw.extend(raw)
-            if i % 10 == 0:
-                print(f"  Elaborati {i}/{len(syllabus_texts)} syllabus...")
+            
+            if i % 5 == 0 or i == total:
+                print(f"  Elaborati {i}/{total} syllabus... ({len(all_raw)} concetti grezzi)")
         
-        print(f"Concetti grezzi estratti: {len(all_raw)}")
+        print(f"Concetti grezzi totali estratti: {len(all_raw)}")
         grouped = self.normalize_concepts(all_raw)
-        print(f"Concetti unici: {len(grouped)}")
+        print(f"Concetti unici dopo normalizzazione: {len(grouped)}")
         
-        return self.build_concept_collection(grouped, len(syllabus_texts), name)
+        return self.build_concept_collection(grouped, total, name)
 
 
-def extract_concepts_from_texts(texts: dict[str, str], name: str = "Chimica Organica L-13") -> ConceptCollection:
-    extractor = ConceptExtractor()
+# =========================================================
+# FUNZIONE DI UTILITÀ
+# =========================================================
+
+def extract_concepts_from_texts(
+    texts: Dict[str, str], 
+    name: str = "Analisi",
+    materia: str = "",
+    use_llm: bool = True
+) -> ConceptCollection:
+    """Funzione wrapper per estrazione concetti"""
+    extractor = ConceptExtractor(use_llm=use_llm, materia=materia)
     return extractor.process_multiple_syllabus(texts, name)

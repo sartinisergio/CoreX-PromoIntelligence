@@ -18,9 +18,11 @@ from app.framework_adapter import FrameworkAdapter
 class FrameworkGenerationPipeline:
     """Pipeline completa per generazione framework da programmi"""
     
-    def __init__(self):
+    def __init__(self, materia: str = "", use_llm: bool = True):
+        self.materia = materia
+        self.use_llm = use_llm
         self.pdf_extractor = PDFExtractor()
-        self.concept_extractor = ConceptExtractor()
+        self.concept_extractor = ConceptExtractor(use_llm=use_llm, materia=materia)
         self.clusterer = HierarchicalClusterer()
         self.framework_adapter = FrameworkAdapter()
     
@@ -70,6 +72,11 @@ class FrameworkGenerationPipeline:
         use_llm: bool = True
     ) -> Tuple:
         """Esegue l'analisi completa"""
+        
+        # Aggiorna l'estrattore se use_llm è cambiato
+        if use_llm != self.use_llm:
+            self.use_llm = use_llm
+            self.concept_extractor = ConceptExtractor(use_llm=use_llm, materia=self.materia)
         
         # Step 1: Estrazione concetti
         concept_collection = self.concept_extractor.process_multiple_syllabus(
@@ -122,7 +129,6 @@ class FrameworkGenerationPipeline:
             # Recupera i concetti specifici di questo syllabus
             syllabus_concepts = []
             for concept in concept_collection.concepts:
-                # CORRETTO: usa source_syllabus_ids invece di syllabus_ids
                 if cov.syllabus_id in concept.source_syllabus_ids:
                     syllabus_concepts.append(concept.canonical_name.lower())
             
@@ -156,6 +162,11 @@ class FrameworkGenerationPipeline:
         """
         Pipeline completa: da PDF a output Zanichelli
         """
+        
+        # Aggiorna materia nell'estrattore
+        if materia != self.materia:
+            self.materia = materia
+            self.concept_extractor = ConceptExtractor(use_llm=use_llm, materia=materia)
         
         # Estrazione testi
         syllabus_texts, syllabus_metadata = self.extract_from_files(pdf_paths)
