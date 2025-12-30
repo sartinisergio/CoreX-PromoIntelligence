@@ -1,0 +1,1391 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisi Multiclasse - Chimica_Generale</title>
+    
+        <style>
+            * { box-sizing: border-box; }
+            body { 
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+                margin: 0; 
+                padding: 20px 40px; 
+                background: #f5f7fa; 
+                color: #333;
+                line-height: 1.6;
+            }
+            .container { 
+                max-width: 1400px; 
+                margin: 0 auto; 
+                background: white; 
+                padding: 30px 40px; 
+                border-radius: 12px; 
+                box-shadow: 0 4px 6px rgba(0,0,0,0.07); 
+            }
+            h1 { 
+                color: #1a237e; 
+                border-bottom: 3px solid #3949ab; 
+                padding-bottom: 15px; 
+                margin-bottom: 10px;
+                font-size: 1.8em;
+            }
+            h2 { 
+                color: #283593; 
+                margin-top: 35px; 
+                margin-bottom: 15px;
+                font-size: 1.3em;
+                border-left: 4px solid #3949ab;
+                padding-left: 15px;
+            }
+            h3 {
+                color: #3949ab;
+                margin-top: 20px;
+                font-size: 1.1em;
+            }
+            .subtitle {
+                color: #666;
+                font-size: 1.05em;
+                margin-bottom: 25px;
+            }
+            
+            /* Summary Cards */
+            .summary-grid { 
+                display: grid; 
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); 
+                gap: 15px; 
+                margin: 20px 0; 
+            }
+            .stat-card { 
+                background: linear-gradient(135deg, #e8eaf6, #c5cae9); 
+                padding: 18px; 
+                border-radius: 10px; 
+                text-align: center;
+            }
+            .stat-value { 
+                font-size: 2em; 
+                font-weight: bold; 
+                color: #1a237e; 
+            }
+            .stat-label { 
+                color: #5c6bc0; 
+                margin-top: 5px; 
+                font-size: 0.85em;
+            }
+            .stat-card.success { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); }
+            .stat-card.success .stat-value { color: #2e7d32; }
+            .stat-card.warning { background: linear-gradient(135deg, #fff3e0, #ffe0b2); }
+            .stat-card.warning .stat-value { color: #e65100; }
+            .stat-card.danger { background: linear-gradient(135deg, #ffebee, #ffcdd2); }
+            .stat-card.danger .stat-value { color: #c62828; }
+            .stat-card.info { background: linear-gradient(135deg, #e3f2fd, #bbdefb); }
+            .stat-card.info .stat-value { color: #1565c0; }
+            
+            /* Module Table */
+            .module-table { 
+                width: 100%; 
+                border-collapse: collapse; 
+                margin: 20px 0; 
+                font-size: 0.9em;
+            }
+            .module-table th { 
+                background: #3949ab; 
+                color: white; 
+                padding: 12px 8px; 
+                text-align: center;
+                font-weight: 600;
+                position: sticky;
+                top: 0;
+            }
+            .module-table th:first-child {
+                text-align: left;
+                min-width: 200px;
+            }
+            .module-table td { 
+                padding: 10px 8px; 
+                border-bottom: 1px solid #e0e0e0;
+                text-align: center;
+            }
+            .module-table td:first-child {
+                text-align: left;
+                font-weight: 500;
+            }
+            .module-table tr:hover { 
+                background: #f5f5f5; 
+            }
+            .module-table tr.core-row {
+                background: #e8f5e9;
+            }
+            .module-table tr.gap-row {
+                background: #fff3e0;
+            }
+            
+            /* Coverage cells */
+            .cov-cell {
+                font-weight: bold;
+                padding: 4px 8px;
+                border-radius: 4px;
+            }
+            .cov-high { background: #c8e6c9; color: #2e7d32; }
+            .cov-medium { background: #fff3e0; color: #e65100; }
+            .cov-low { background: #ffcdd2; color: #c62828; }
+            
+            /* Tags */
+            .tag {
+                display: inline-block;
+                padding: 2px 8px;
+                border-radius: 10px;
+                font-size: 0.75em;
+                font-weight: 600;
+                margin: 2px;
+            }
+            .tag-core { background: #c8e6c9; color: #2e7d32; }
+            .tag-distinctive { background: #fff3e0; color: #e65100; }
+            .tag-gap { background: #ffcdd2; color: #c62828; }
+            
+            /* Section boxes */
+            .section-box {
+                border-radius: 10px;
+                padding: 20px;
+                margin: 20px 0;
+            }
+            .section-core {
+                background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+                border: 2px solid #4caf50;
+            }
+            .section-distinctive {
+                background: linear-gradient(135deg, #fff3e0, #fff8e1);
+                border: 2px solid #ff9800;
+            }
+            .section-gap {
+                background: linear-gradient(135deg, #ffebee, #fce4ec);
+                border: 2px solid #f44336;
+            }
+            
+            /* Module cards */
+            .module-card {
+                background: white;
+                border-radius: 8px;
+                padding: 15px;
+                margin: 10px 0;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .module-card h4 {
+                margin: 0 0 10px 0;
+                color: #1a237e;
+            }
+            .module-stats {
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
+                margin: 10px 0;
+            }
+            .module-stat {
+                background: #f5f5f5;
+                padding: 5px 12px;
+                border-radius: 15px;
+                font-size: 0.85em;
+            }
+            
+            /* Class coverage bar */
+            .class-cov-row {
+                display: flex;
+                align-items: center;
+                margin: 5px 0;
+            }
+            .class-name {
+                width: 180px;
+                font-size: 0.85em;
+            }
+            .cov-bar-container {
+                flex: 1;
+                height: 20px;
+                background: #e0e0e0;
+                border-radius: 10px;
+                overflow: hidden;
+                margin: 0 10px;
+            }
+            .cov-bar {
+                height: 100%;
+                border-radius: 10px;
+                transition: width 0.3s;
+            }
+            .cov-bar.high { background: linear-gradient(90deg, #66bb6a, #43a047); }
+            .cov-bar.medium { background: linear-gradient(90deg, #ffb74d, #ff9800); }
+            .cov-bar.low { background: linear-gradient(90deg, #ef5350, #e53935); }
+            .cov-value {
+                width: 50px;
+                text-align: right;
+                font-weight: bold;
+                font-size: 0.9em;
+            }
+            
+            /* Concept list */
+            .concept-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px;
+                margin-top: 10px;
+            }
+            .concept-tag {
+                background: #e3f2fd;
+                color: #1565c0;
+                padding: 3px 10px;
+                border-radius: 12px;
+                font-size: 0.8em;
+            }
+            
+            /* Footer */
+            .report-footer {
+                margin-top: 40px;
+                padding-top: 20px;
+                border-top: 1px solid #e0e0e0;
+                color: #888;
+                font-size: 0.85em;
+                text-align: center;
+            }
+            
+            /* Responsive */
+            @media (max-width: 1000px) {
+                body { padding: 10px; }
+                .container { padding: 15px; }
+                .module-table { font-size: 0.8em; }
+                .class-name { width: 120px; }
+            }
+        </style>
+        
+</head>
+<body>
+<div class="container">
+    <h1>🔬 Analisi Multiclasse: Chimica Generale</h1>
+    <p class="subtitle">
+        <strong>Framework di riferimento:</strong> Framework Unico Valutazione Chimica Generale - Multidisciplinare<br>
+        <strong>Classi analizzate:</strong> L-13_Biologia, L-25_Scienze_e_tecnologie_agrarie, L-26_Scienze_e_tecnologie_alimentari, L-27_Scienze_chimiche, L-2_Biotecnologie, L-32_Scienze_naturali_amb, L-34_Geologia, L-7-8-9_Ingegneria, LM-13_Farmacia<br>
+        <strong>Soglie:</strong> Core ≥60% | Gap &lt;40%<br>
+        <strong>Data:</strong> 30/12/2025 11:32
+    </p>
+    
+    <!-- STATISTICHE GENERALI -->
+    <div class="summary-grid">
+        <div class="stat-card info">
+            <div class="stat-value">9</div>
+            <div class="stat-label">Classi Analizzate</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">12</div>
+            <div class="stat-label">Moduli Framework</div>
+        </div>
+        <div class="stat-card success">
+            <div class="stat-value">8</div>
+            <div class="stat-label">Moduli CORE</div>
+        </div>
+        <div class="stat-card warning">
+            <div class="stat-value">1</div>
+            <div class="stat-label">Moduli Distintivi</div>
+        </div>
+        <div class="stat-card danger">
+            <div class="stat-value">0</div>
+            <div class="stat-label">Gap Totali</div>
+        </div>
+        <div class="stat-card success">
+            <div class="stat-value">79%</div>
+            <div class="stat-label">Copertura Media</div>
+        </div>
+    </div>
+    
+    <!-- ================================================ -->
+    <!-- TABELLA PRINCIPALE: MODULI x CLASSI -->
+    <!-- ================================================ -->
+    <h2>📊 Matrice Copertura: Moduli × Classi</h2>
+    <p>Ogni cella mostra la copertura del modulo del framework ideale per quella classe di laurea.</p>
+    
+    <table class="module-table">
+        <thead>
+            <tr>
+                <th>Modulo Framework Ideale</th>
+                <th title="L-13_Biologia">L-13 Biologia</th>
+                <th title="L-25_Scienze_e_tecnologie_agrarie">L-25 Scienze...</th>
+                <th title="L-26_Scienze_e_tecnologie_alimentari">L-26 Scienze...</th>
+                <th title="L-27_Scienze_chimiche">L-27 Scienze...</th>
+                <th title="L-2_Biotecnologie">L-2 Biotecno...</th>
+                <th title="L-32_Scienze_naturali_amb">L-32 Scienze...</th>
+                <th title="L-34_Geologia">L-34 Geologia</th>
+                <th title="L-7-8-9_Ingegneria">L-7-8-9 Inge...</th>
+                <th title="LM-13_Farmacia">LM-13 Farmacia</th>
+                <th>Media</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="core-row">
+                <td><strong>1.</strong> Struttura atomica e tavola periodica</td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><strong>89%</strong></td>
+                <td><span class="tag tag-core">CORE</span></td>
+            </tr>
+            <tr class="core-row">
+                <td><strong>2.</strong> Legame chimico e geometria molecolare</td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><strong>93%</strong></td>
+                <td><span class="tag tag-core">CORE</span></td>
+            </tr>
+            <tr class="core-row">
+                <td><strong>3.</strong> Stechiometria e reazioni chimiche</td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><strong>100%</strong></td>
+                <td><span class="tag tag-core">CORE</span></td>
+            </tr>
+            <tr class="core-row">
+                <td><strong>4.</strong> Termodinamica e termochimica</td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">60%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">60%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><strong>82%</strong></td>
+                <td><span class="tag tag-core">CORE</span></td>
+            </tr>
+            <tr class="core-row">
+                <td><strong>5.</strong> Stati materia e soluzioni</td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><strong>100%</strong></td>
+                <td><span class="tag tag-core">CORE</span></td>
+            </tr>
+            <tr class="">
+                <td><strong>6.</strong> Cinetica chimica</td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-medium">40%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">60%</span></td>
+                <td><span class="cov-cell cov-high">60%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><strong>82%</strong></td>
+                <td></td>
+            </tr>
+            <tr class="core-row">
+                <td><strong>7.</strong> Equilibri chimici</td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><strong>80%</strong></td>
+                <td><span class="tag tag-core">CORE</span></td>
+            </tr>
+            <tr class="core-row">
+                <td><strong>8.</strong> Equilibri acido-base</td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">60%</span></td>
+                <td><span class="cov-cell cov-high">100%</span></td>
+                <td><strong>89%</strong></td>
+                <td><span class="tag tag-core">CORE</span></td>
+            </tr>
+            <tr class="">
+                <td><strong>9.</strong> Elettrochimica</td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">60%</span></td>
+                <td><span class="cov-cell cov-medium">40%</span></td>
+                <td><span class="cov-cell cov-high">60%</span></td>
+                <td><span class="cov-cell cov-high">60%</span></td>
+                <td><span class="cov-cell cov-high">60%</span></td>
+                <td><span class="cov-cell cov-medium">40%</span></td>
+                <td><span class="cov-cell cov-high">60%</span></td>
+                <td><span class="cov-cell cov-high">60%</span></td>
+                <td><strong>58%</strong></td>
+                <td></td>
+            </tr>
+            <tr class="">
+                <td><strong>10.</strong> Chimica elementi principali</td>
+                <td><span class="cov-cell cov-high">60%</span></td>
+                <td><span class="cov-cell cov-medium">40%</span></td>
+                <td><span class="cov-cell cov-medium">40%</span></td>
+                <td><span class="cov-cell cov-medium">40%</span></td>
+                <td><span class="cov-cell cov-medium">40%</span></td>
+                <td><span class="cov-cell cov-high">60%</span></td>
+                <td><span class="cov-cell cov-medium">40%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">60%</span></td>
+                <td><strong>51%</strong></td>
+                <td><span class="tag tag-distinctive">DISTINTIVO</span></td>
+            </tr>
+            <tr class="">
+                <td><strong>11.</strong> Tecniche analitiche e laboratorio</td>
+                <td><span class="cov-cell cov-high">60%</span></td>
+                <td><span class="cov-cell cov-high">60%</span></td>
+                <td><span class="cov-cell cov-medium">40%</span></td>
+                <td><span class="cov-cell cov-medium">40%</span></td>
+                <td><span class="cov-cell cov-high">60%</span></td>
+                <td><span class="cov-cell cov-medium">40%</span></td>
+                <td><span class="cov-cell cov-high">60%</span></td>
+                <td><span class="cov-cell cov-medium">40%</span></td>
+                <td><span class="cov-cell cov-high">60%</span></td>
+                <td><strong>51%</strong></td>
+                <td></td>
+            </tr>
+            <tr class="core-row">
+                <td><strong>12.</strong> Sicurezza, sostenibilità e applicazioni</td>
+                <td><span class="cov-cell cov-high">60%</span></td>
+                <td><span class="cov-cell cov-high">60%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">60%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><span class="cov-cell cov-high">80%</span></td>
+                <td><strong>73%</strong></td>
+                <td><span class="tag tag-core">CORE</span></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!-- ================================================ -->
+    <!-- MODULI CORE -->
+    <!-- ================================================ -->
+    <div class="section-box section-core">
+        <h2>✅ MODULI CORE (8 moduli)</h2>
+        <p>Moduli coperti bene (≥60%) in <strong>TUTTE</strong> le classi. 
+        Questi rappresentano il nucleo comune imprescindibile per qualsiasi manuale di Chimica Generale.</p>
+
+        <div class="module-card">
+            <h4>📗 3. Stechiometria e reazioni chimiche</h4>
+            <div class="module-stats">
+                <span class="module-stat">Media: <strong>100%</strong></span>
+                <span class="module-stat">Min: 100%</span>
+                <span class="module-stat">Max: 100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-13 Biologia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-25 Scienze e tecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-26 Scienze e tecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-27 Scienze chimiche</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-2 Biotecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-32 Scienze naturali amb</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-34 Geologia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-7-8-9 Ingegneria</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">LM-13 Farmacia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+        </div>
+
+        <div class="module-card">
+            <h4>📗 5. Stati materia e soluzioni</h4>
+            <div class="module-stats">
+                <span class="module-stat">Media: <strong>100%</strong></span>
+                <span class="module-stat">Min: 100%</span>
+                <span class="module-stat">Max: 100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-13 Biologia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-25 Scienze e tecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-26 Scienze e tecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-27 Scienze chimiche</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-2 Biotecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-32 Scienze naturali amb</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-34 Geologia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-7-8-9 Ingegneria</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">LM-13 Farmacia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+        </div>
+
+        <div class="module-card">
+            <h4>📗 2. Legame chimico e geometria molecolare</h4>
+            <div class="module-stats">
+                <span class="module-stat">Media: <strong>93%</strong></span>
+                <span class="module-stat">Min: 80%</span>
+                <span class="module-stat">Max: 100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-13 Biologia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-25 Scienze e tecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-26 Scienze e tecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-27 Scienze chimiche</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-2 Biotecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-32 Scienze naturali amb</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-34 Geologia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-7-8-9 Ingegneria</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">LM-13 Farmacia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+        </div>
+
+        <div class="module-card">
+            <h4>📗 1. Struttura atomica e tavola periodica</h4>
+            <div class="module-stats">
+                <span class="module-stat">Media: <strong>89%</strong></span>
+                <span class="module-stat">Min: 80%</span>
+                <span class="module-stat">Max: 100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-13 Biologia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-25 Scienze e tecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-26 Scienze e tecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-27 Scienze chimiche</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-2 Biotecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-32 Scienze naturali amb</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-34 Geologia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-7-8-9 Ingegneria</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">LM-13 Farmacia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+        </div>
+
+        <div class="module-card">
+            <h4>📗 8. Equilibri acido-base</h4>
+            <div class="module-stats">
+                <span class="module-stat">Media: <strong>89%</strong></span>
+                <span class="module-stat">Min: 60%</span>
+                <span class="module-stat">Max: 100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-13 Biologia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-25 Scienze e tecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-26 Scienze e tecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-27 Scienze chimiche</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-2 Biotecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-32 Scienze naturali amb</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-34 Geologia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-7-8-9 Ingegneria</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 60.0%;"></div>
+                </div>
+                <span class="cov-value">60%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">LM-13 Farmacia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+        </div>
+
+        <div class="module-card">
+            <h4>📗 4. Termodinamica e termochimica</h4>
+            <div class="module-stats">
+                <span class="module-stat">Media: <strong>82%</strong></span>
+                <span class="module-stat">Min: 60%</span>
+                <span class="module-stat">Max: 100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-13 Biologia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-25 Scienze e tecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 60.0%;"></div>
+                </div>
+                <span class="cov-value">60%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-26 Scienze e tecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-27 Scienze chimiche</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-2 Biotecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-32 Scienze naturali amb</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-34 Geologia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-7-8-9 Ingegneria</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 60.0%;"></div>
+                </div>
+                <span class="cov-value">60%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">LM-13 Farmacia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 100.0%;"></div>
+                </div>
+                <span class="cov-value">100%</span>
+            </div>
+        </div>
+
+        <div class="module-card">
+            <h4>📗 7. Equilibri chimici</h4>
+            <div class="module-stats">
+                <span class="module-stat">Media: <strong>80%</strong></span>
+                <span class="module-stat">Min: 80%</span>
+                <span class="module-stat">Max: 80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-13 Biologia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-25 Scienze e tecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-26 Scienze e tecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-27 Scienze chimiche</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-2 Biotecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-32 Scienze naturali amb</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-34 Geologia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-7-8-9 Ingegneria</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">LM-13 Farmacia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+        </div>
+
+        <div class="module-card">
+            <h4>📗 12. Sicurezza, sostenibilità e applicazioni</h4>
+            <div class="module-stats">
+                <span class="module-stat">Media: <strong>73%</strong></span>
+                <span class="module-stat">Min: 60%</span>
+                <span class="module-stat">Max: 80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-13 Biologia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 60.0%;"></div>
+                </div>
+                <span class="cov-value">60%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-25 Scienze e tecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 60.0%;"></div>
+                </div>
+                <span class="cov-value">60%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-26 Scienze e tecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-27 Scienze chimiche</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-2 Biotecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-32 Scienze naturali amb</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 60.0%;"></div>
+                </div>
+                <span class="cov-value">60%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-34 Geologia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-7-8-9 Ingegneria</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">LM-13 Farmacia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ================================================ -->
+    <!-- MODULI DISTINTIVI -->
+    <!-- ================================================ -->
+    <div class="section-box section-distinctive">
+        <h2>⭐ MODULI DISTINTIVI (1 moduli)</h2>
+        <p>Moduli con copertura significativamente più alta in alcune classi rispetto ad altre. 
+        Utili per personalizzare la promozione per classe specifica.</p>
+
+        <div class="module-card">
+            <h4>📙 10. Chimica elementi principali</h4>
+            <div class="module-stats">
+                <span class="module-stat">Media: 51%</span>
+                <span class="module-stat">Range: 40% - 80%</span>
+                <span class="module-stat">Distintivo per: <strong>L-7-8-9_Ingegneria</strong></span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-13 Biologia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 60.0%;"></div>
+                </div>
+                <span class="cov-value">60%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-25 Scienze e tecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar medium" style="width: 40.0%;"></div>
+                </div>
+                <span class="cov-value">40%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-26 Scienze e tecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar medium" style="width: 40.0%;"></div>
+                </div>
+                <span class="cov-value">40%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-27 Scienze chimiche</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar medium" style="width: 40.0%;"></div>
+                </div>
+                <span class="cov-value">40%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-2 Biotecnologie</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar medium" style="width: 40.0%;"></div>
+                </div>
+                <span class="cov-value">40%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-32 Scienze naturali amb</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 60.0%;"></div>
+                </div>
+                <span class="cov-value">60%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-34 Geologia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar medium" style="width: 40.0%;"></div>
+                </div>
+                <span class="cov-value">40%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">L-7-8-9 Ingegneria ⭐</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 80.0%;"></div>
+                </div>
+                <span class="cov-value">80%</span>
+            </div>
+
+            <div class="class-cov-row">
+                <span class="class-name">LM-13 Farmacia</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar high" style="width: 60.0%;"></div>
+                </div>
+                <span class="cov-value">60%</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ================================================ -->
+    <!-- GAP PER CLASSE -->
+    <!-- ================================================ -->
+    <div class="section-box section-gap">
+        <h2>⚠️ GAP PER CLASSE</h2>
+        <p>Moduli con copertura insufficiente (&lt;40%) per ciascuna classe. 
+        Questi rappresentano aree di miglioramento o differenziazione curriculare.</p>
+
+        <p>✅ <strong>Nessun gap significativo rilevato in nessuna classe!</strong></p>
+    </div>
+    
+    <!-- ================================================ -->
+    <!-- COPERTURA COMPLESSIVA PER CLASSE -->
+    <!-- ================================================ -->
+    <h2>📈 Copertura Complessiva Framework per Classe</h2>
+    <p>Quanto ogni classe copre complessivamente il framework ideale.</p>
+    
+    <div class="module-card">
+
+        <div class="class-cov-row" style="margin: 12px 0;">
+            <span class="class-name" style="width: 220px;">
+                <strong>LM-13 Farmacia</strong><br>
+                <small style="color: #666;">8 syllabus, 365 concetti</small>
+            </span>
+            <div class="cov-bar-container" style="height: 25px;">
+                <div class="cov-bar high" style="width: 86.7%;"></div>
+            </div>
+            <span class="cov-value" style="width: 60px; font-size: 1.1em;">87%</span>
+        </div>
+
+        <div class="class-cov-row" style="margin: 12px 0;">
+            <span class="class-name" style="width: 220px;">
+                <strong>L-13 Biologia</strong><br>
+                <small style="color: #666;">4 syllabus, 227 concetti</small>
+            </span>
+            <div class="cov-bar-container" style="height: 25px;">
+                <div class="cov-bar high" style="width: 85.0%;"></div>
+            </div>
+            <span class="cov-value" style="width: 60px; font-size: 1.1em;">85%</span>
+        </div>
+
+        <div class="class-cov-row" style="margin: 12px 0;">
+            <span class="class-name" style="width: 220px;">
+                <strong>L-2 Biotecnologie</strong><br>
+                <small style="color: #666;">3 syllabus, 153 concetti</small>
+            </span>
+            <div class="cov-bar-container" style="height: 25px;">
+                <div class="cov-bar high" style="width: 83.3%;"></div>
+            </div>
+            <span class="cov-value" style="width: 60px; font-size: 1.1em;">83%</span>
+        </div>
+
+        <div class="class-cov-row" style="margin: 12px 0;">
+            <span class="class-name" style="width: 220px;">
+                <strong>L-27 Scienze chimiche</strong><br>
+                <small style="color: #666;">4 syllabus, 215 concetti</small>
+            </span>
+            <div class="cov-bar-container" style="height: 25px;">
+                <div class="cov-bar high" style="width: 80.0%;"></div>
+            </div>
+            <span class="cov-value" style="width: 60px; font-size: 1.1em;">80%</span>
+        </div>
+
+        <div class="class-cov-row" style="margin: 12px 0;">
+            <span class="class-name" style="width: 220px;">
+                <strong>L-32 Scienze naturali amb</strong><br>
+                <small style="color: #666;">4 syllabus, 243 concetti</small>
+            </span>
+            <div class="cov-bar-container" style="height: 25px;">
+                <div class="cov-bar high" style="width: 76.7%;"></div>
+            </div>
+            <span class="cov-value" style="width: 60px; font-size: 1.1em;">77%</span>
+        </div>
+
+        <div class="class-cov-row" style="margin: 12px 0;">
+            <span class="class-name" style="width: 220px;">
+                <strong>L-34 Geologia</strong><br>
+                <small style="color: #666;">2 syllabus, 162 concetti</small>
+            </span>
+            <div class="cov-bar-container" style="height: 25px;">
+                <div class="cov-bar high" style="width: 76.7%;"></div>
+            </div>
+            <span class="cov-value" style="width: 60px; font-size: 1.1em;">77%</span>
+        </div>
+
+        <div class="class-cov-row" style="margin: 12px 0;">
+            <span class="class-name" style="width: 220px;">
+                <strong>L-7-8-9 Ingegneria</strong><br>
+                <small style="color: #666;">4 syllabus, 153 concetti</small>
+            </span>
+            <div class="cov-bar-container" style="height: 25px;">
+                <div class="cov-bar high" style="width: 76.7%;"></div>
+            </div>
+            <span class="cov-value" style="width: 60px; font-size: 1.1em;">77%</span>
+        </div>
+
+        <div class="class-cov-row" style="margin: 12px 0;">
+            <span class="class-name" style="width: 220px;">
+                <strong>L-26 Scienze e tecnologie alimentari</strong><br>
+                <small style="color: #666;">2 syllabus, 120 concetti</small>
+            </span>
+            <div class="cov-bar-container" style="height: 25px;">
+                <div class="cov-bar high" style="width: 75.0%;"></div>
+            </div>
+            <span class="cov-value" style="width: 60px; font-size: 1.1em;">75%</span>
+        </div>
+
+        <div class="class-cov-row" style="margin: 12px 0;">
+            <span class="class-name" style="width: 220px;">
+                <strong>L-25 Scienze e tecnologie agrarie</strong><br>
+                <small style="color: #666;">2 syllabus, 129 concetti</small>
+            </span>
+            <div class="cov-bar-container" style="height: 25px;">
+                <div class="cov-bar high" style="width: 71.7%;"></div>
+            </div>
+            <span class="cov-value" style="width: 60px; font-size: 1.1em;">72%</span>
+        </div>
+    </div>
+    
+    <!-- ================================================ -->
+    <!-- IMPLICAZIONI STRATEGICHE -->
+    <!-- ================================================ -->
+    <h2>💡 Implicazioni Strategiche</h2>
+    
+    <div class="module-card">
+        <h4>Per il Catalogo Zanichelli</h4>
+        <ul>
+
+            <li><strong>Moduli CORE (8):</strong> Questi argomenti sono trattati in tutte le classi e DEVONO essere eccellenti nel manuale: Struttura atomica e tavola periodica, Legame chimico e geometria molecolare, Stechiometria e reazioni chimiche, Termodinamica e termochimica, Stati materia e soluzioni...</li>
+
+            <li><strong>Moduli DISTINTIVI (1):</strong> Personalizza la promozione enfatizzando questi moduli per le classi specifiche dove sono più rilevanti.</li>
+
+        </ul>
+        
+        <h4>Per la Promozione</h4>
+        <ul>
+            <li><strong>LM-13_Farmacia:</strong> Buona copertura (87%). </li>
+            <li><strong>L-13_Biologia:</strong> Buona copertura (85%). </li>
+            <li><strong>L-2_Biotecnologie:</strong> Buona copertura (83%). </li>
+            <li><strong>L-27_Scienze_chimiche:</strong> Buona copertura (80%). </li>
+            <li><strong>L-32_Scienze_naturali_amb:</strong> Buona copertura (77%). </li>
+
+        </ul>
+    </div>
+    
+    <div class="report-footer">
+        Report generato da <strong>CoreX Multiclasse v2.0</strong> — Zanichelli<br>
+        Framework di riferimento: Framework Unico Valutazione Chimica Generale - Multidisciplinare<br>
+        9 classi analizzate | 12 moduli | 30/12/2025 11:32:40
+    </div>
+</div>
+</body>
+</html>

@@ -999,3 +999,723 @@ class ReportGenerator:
             return "basso"
         else:
             return "minimo"
+
+
+# =============================================================================
+# MULTICLASS REPORT GENERATOR v2.0
+# Report basato su Framework Ideale con analisi per modulo
+# =============================================================================
+
+class MulticlassReportGenerator:
+    """Genera report HTML per analisi multiclasse su framework ideale"""
+    
+    def __init__(
+        self, 
+        reference_framework: Optional[Dict] = None,
+        core_threshold: float = 60.0,
+        gap_threshold: float = 40.0
+    ):
+        self.reference_framework = reference_framework
+        self.core_threshold = core_threshold
+        self.gap_threshold = gap_threshold
+    
+    def _get_css_styles(self) -> str:
+        """CSS per report multiclasse"""
+        return """
+        <style>
+            * { box-sizing: border-box; }
+            body { 
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+                margin: 0; 
+                padding: 20px 40px; 
+                background: #f5f7fa; 
+                color: #333;
+                line-height: 1.6;
+            }
+            .container { 
+                max-width: 1400px; 
+                margin: 0 auto; 
+                background: white; 
+                padding: 30px 40px; 
+                border-radius: 12px; 
+                box-shadow: 0 4px 6px rgba(0,0,0,0.07); 
+            }
+            h1 { 
+                color: #1a237e; 
+                border-bottom: 3px solid #3949ab; 
+                padding-bottom: 15px; 
+                margin-bottom: 10px;
+                font-size: 1.8em;
+            }
+            h2 { 
+                color: #283593; 
+                margin-top: 35px; 
+                margin-bottom: 15px;
+                font-size: 1.3em;
+                border-left: 4px solid #3949ab;
+                padding-left: 15px;
+            }
+            h3 {
+                color: #3949ab;
+                margin-top: 20px;
+                font-size: 1.1em;
+            }
+            .subtitle {
+                color: #666;
+                font-size: 1.05em;
+                margin-bottom: 25px;
+            }
+            
+            /* Summary Cards */
+            .summary-grid { 
+                display: grid; 
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); 
+                gap: 15px; 
+                margin: 20px 0; 
+            }
+            .stat-card { 
+                background: linear-gradient(135deg, #e8eaf6, #c5cae9); 
+                padding: 18px; 
+                border-radius: 10px; 
+                text-align: center;
+            }
+            .stat-value { 
+                font-size: 2em; 
+                font-weight: bold; 
+                color: #1a237e; 
+            }
+            .stat-label { 
+                color: #5c6bc0; 
+                margin-top: 5px; 
+                font-size: 0.85em;
+            }
+            .stat-card.success { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); }
+            .stat-card.success .stat-value { color: #2e7d32; }
+            .stat-card.warning { background: linear-gradient(135deg, #fff3e0, #ffe0b2); }
+            .stat-card.warning .stat-value { color: #e65100; }
+            .stat-card.danger { background: linear-gradient(135deg, #ffebee, #ffcdd2); }
+            .stat-card.danger .stat-value { color: #c62828; }
+            .stat-card.info { background: linear-gradient(135deg, #e3f2fd, #bbdefb); }
+            .stat-card.info .stat-value { color: #1565c0; }
+            
+            /* Module Table */
+            .module-table { 
+                width: 100%; 
+                border-collapse: collapse; 
+                margin: 20px 0; 
+                font-size: 0.9em;
+            }
+            .module-table th { 
+                background: #3949ab; 
+                color: white; 
+                padding: 12px 8px; 
+                text-align: center;
+                font-weight: 600;
+                position: sticky;
+                top: 0;
+            }
+            .module-table th:first-child {
+                text-align: left;
+                min-width: 200px;
+            }
+            .module-table td { 
+                padding: 10px 8px; 
+                border-bottom: 1px solid #e0e0e0;
+                text-align: center;
+            }
+            .module-table td:first-child {
+                text-align: left;
+                font-weight: 500;
+            }
+            .module-table tr:hover { 
+                background: #f5f5f5; 
+            }
+            .module-table tr.core-row {
+                background: #e8f5e9;
+            }
+            .module-table tr.gap-row {
+                background: #fff3e0;
+            }
+            
+            /* Coverage cells */
+            .cov-cell {
+                font-weight: bold;
+                padding: 4px 8px;
+                border-radius: 4px;
+            }
+            .cov-high { background: #c8e6c9; color: #2e7d32; }
+            .cov-medium { background: #fff3e0; color: #e65100; }
+            .cov-low { background: #ffcdd2; color: #c62828; }
+            
+            /* Tags */
+            .tag {
+                display: inline-block;
+                padding: 2px 8px;
+                border-radius: 10px;
+                font-size: 0.75em;
+                font-weight: 600;
+                margin: 2px;
+            }
+            .tag-core { background: #c8e6c9; color: #2e7d32; }
+            .tag-distinctive { background: #fff3e0; color: #e65100; }
+            .tag-gap { background: #ffcdd2; color: #c62828; }
+            
+            /* Section boxes */
+            .section-box {
+                border-radius: 10px;
+                padding: 20px;
+                margin: 20px 0;
+            }
+            .section-core {
+                background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+                border: 2px solid #4caf50;
+            }
+            .section-distinctive {
+                background: linear-gradient(135deg, #fff3e0, #fff8e1);
+                border: 2px solid #ff9800;
+            }
+            .section-gap {
+                background: linear-gradient(135deg, #ffebee, #fce4ec);
+                border: 2px solid #f44336;
+            }
+            
+            /* Module cards */
+            .module-card {
+                background: white;
+                border-radius: 8px;
+                padding: 15px;
+                margin: 10px 0;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .module-card h4 {
+                margin: 0 0 10px 0;
+                color: #1a237e;
+            }
+            .module-stats {
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
+                margin: 10px 0;
+            }
+            .module-stat {
+                background: #f5f5f5;
+                padding: 5px 12px;
+                border-radius: 15px;
+                font-size: 0.85em;
+            }
+            
+            /* Class coverage bar */
+            .class-cov-row {
+                display: flex;
+                align-items: center;
+                margin: 5px 0;
+            }
+            .class-name {
+                width: 180px;
+                font-size: 0.85em;
+            }
+            .cov-bar-container {
+                flex: 1;
+                height: 20px;
+                background: #e0e0e0;
+                border-radius: 10px;
+                overflow: hidden;
+                margin: 0 10px;
+            }
+            .cov-bar {
+                height: 100%;
+                border-radius: 10px;
+                transition: width 0.3s;
+            }
+            .cov-bar.high { background: linear-gradient(90deg, #66bb6a, #43a047); }
+            .cov-bar.medium { background: linear-gradient(90deg, #ffb74d, #ff9800); }
+            .cov-bar.low { background: linear-gradient(90deg, #ef5350, #e53935); }
+            .cov-value {
+                width: 50px;
+                text-align: right;
+                font-weight: bold;
+                font-size: 0.9em;
+            }
+            
+            /* Concept list */
+            .concept-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px;
+                margin-top: 10px;
+            }
+            .concept-tag {
+                background: #e3f2fd;
+                color: #1565c0;
+                padding: 3px 10px;
+                border-radius: 12px;
+                font-size: 0.8em;
+            }
+            
+            /* Footer */
+            .report-footer {
+                margin-top: 40px;
+                padding-top: 20px;
+                border-top: 1px solid #e0e0e0;
+                color: #888;
+                font-size: 0.85em;
+                text-align: center;
+            }
+            
+            /* Responsive */
+            @media (max-width: 1000px) {
+                body { padding: 10px; }
+                .container { padding: 15px; }
+                .module-table { font-size: 0.8em; }
+                .class-name { width: 120px; }
+            }
+        </style>
+        """
+    
+    def _get_coverage_class(self, coverage: float) -> str:
+        """Ritorna la classe CSS per un valore di copertura"""
+        if coverage >= self.core_threshold:
+            return "high"
+        elif coverage >= self.gap_threshold:
+            return "medium"
+        else:
+            return "low"
+    
+    def _get_coverage_cell(self, coverage: float) -> str:
+        """Genera HTML per una cella di copertura"""
+        css_class = self._get_coverage_class(coverage)
+        return f'<span class="cov-cell cov-{css_class}">{coverage:.0f}%</span>'
+    
+    def generate_multiclass_report(
+        self,
+        result,  # MulticlassResult
+        materia: str,
+        classes: List[str]
+    ) -> str:
+        """Genera report HTML completo per analisi multiclasse su framework ideale"""
+        
+        # Statistiche generali
+        n_classes = len(classes)
+        n_modules = result.n_modules_total
+        n_core = result.n_modules_core
+        n_distinctive = result.n_modules_distinctive
+        
+        # Conta gap totali
+        total_gaps = sum(len(gaps) for gaps in result.gap_modules.values())
+        
+        # Copertura media globale
+        avg_coverage_global = sum(result.overall_coverage_by_class.values()) / n_classes if n_classes > 0 else 0
+        
+        html = f"""
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisi Multiclasse - {materia}</title>
+    {self._get_css_styles()}
+</head>
+<body>
+<div class="container">
+    <h1>🔬 Analisi Multiclasse: {materia.replace('_', ' ')}</h1>
+    <p class="subtitle">
+        <strong>Framework di riferimento:</strong> {result.framework_name}<br>
+        <strong>Classi analizzate:</strong> {', '.join(classes)}<br>
+        <strong>Soglie:</strong> Core ≥{self.core_threshold:.0f}% | Gap &lt;{self.gap_threshold:.0f}%<br>
+        <strong>Data:</strong> {datetime.now().strftime('%d/%m/%Y %H:%M')}
+    </p>
+    
+    <!-- STATISTICHE GENERALI -->
+    <div class="summary-grid">
+        <div class="stat-card info">
+            <div class="stat-value">{n_classes}</div>
+            <div class="stat-label">Classi Analizzate</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">{n_modules}</div>
+            <div class="stat-label">Moduli Framework</div>
+        </div>
+        <div class="stat-card success">
+            <div class="stat-value">{n_core}</div>
+            <div class="stat-label">Moduli CORE</div>
+        </div>
+        <div class="stat-card warning">
+            <div class="stat-value">{n_distinctive}</div>
+            <div class="stat-label">Moduli Distintivi</div>
+        </div>
+        <div class="stat-card danger">
+            <div class="stat-value">{total_gaps}</div>
+            <div class="stat-label">Gap Totali</div>
+        </div>
+        <div class="stat-card {'success' if avg_coverage_global >= 60 else 'warning' if avg_coverage_global >= 40 else 'danger'}">
+            <div class="stat-value">{avg_coverage_global:.0f}%</div>
+            <div class="stat-label">Copertura Media</div>
+        </div>
+    </div>
+    
+    <!-- ================================================ -->
+    <!-- TABELLA PRINCIPALE: MODULI x CLASSI -->
+    <!-- ================================================ -->
+    <h2>📊 Matrice Copertura: Moduli × Classi</h2>
+    <p>Ogni cella mostra la copertura del modulo del framework ideale per quella classe di laurea.</p>
+    
+    <table class="module-table">
+        <thead>
+            <tr>
+                <th>Modulo Framework Ideale</th>
+"""
+        
+        # Header classi
+        for classe in classes:
+            # Abbrevia nome classe se troppo lungo
+            short_name = classe.replace("_", " ")
+            if len(short_name) > 15:
+                short_name = short_name[:12] + "..."
+            html += f'                <th title="{classe}">{short_name}</th>\n'
+        
+        html += """                <th>Media</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+"""
+        
+        # Righe moduli
+        for mod_id in sorted(result.module_analyses.keys()):
+            mod = result.module_analyses[mod_id]
+            
+            # Determina classe riga
+            row_class = ""
+            if mod.is_core:
+                row_class = "core-row"
+            elif len(mod.gap_for) > 0:
+                row_class = "gap-row"
+            
+            html += f'            <tr class="{row_class}">\n'
+            html += f'                <td><strong>{mod.module_id}.</strong> {mod.module_name}</td>\n'
+            
+            # Copertura per classe
+            for classe in classes:
+                cov = mod.coverage_by_class.get(classe, 0)
+                html += f'                <td>{self._get_coverage_cell(cov)}</td>\n'
+            
+            # Media
+            html += f'                <td><strong>{mod.avg_coverage:.0f}%</strong></td>\n'
+            
+            # Status tags
+            html += '                <td>'
+            if mod.is_core:
+                html += '<span class="tag tag-core">CORE</span>'
+            if mod.is_distinctive:
+                html += '<span class="tag tag-distinctive">DISTINTIVO</span>'
+            if mod.gap_for:
+                html += f'<span class="tag tag-gap">GAP ({len(mod.gap_for)})</span>'
+            html += '</td>\n'
+            
+            html += '            </tr>\n'
+        
+        html += """        </tbody>
+    </table>
+    
+    <!-- ================================================ -->
+    <!-- MODULI CORE -->
+    <!-- ================================================ -->
+    <div class="section-box section-core">
+        <h2>✅ MODULI CORE ({n_core} moduli)</h2>
+        <p>Moduli coperti bene (≥{threshold}%) in <strong>TUTTE</strong> le classi. 
+        Questi rappresentano il nucleo comune imprescindibile per qualsiasi manuale di {materia_display}.</p>
+""".format(
+            n_core=n_core,
+            threshold=int(self.core_threshold),
+            materia_display=materia.replace('_', ' ')
+        )
+        
+        if result.core_modules:
+            for mod in sorted(result.core_modules, key=lambda x: x.avg_coverage, reverse=True):
+                html += f"""
+        <div class="module-card">
+            <h4>📗 {mod.module_id}. {mod.module_name}</h4>
+            <div class="module-stats">
+                <span class="module-stat">Media: <strong>{mod.avg_coverage:.0f}%</strong></span>
+                <span class="module-stat">Min: {mod.min_coverage:.0f}%</span>
+                <span class="module-stat">Max: {mod.max_coverage:.0f}%</span>
+            </div>
+"""
+                # Barre copertura per classe
+                for classe in classes:
+                    cov = mod.coverage_by_class.get(classe, 0)
+                    bar_class = self._get_coverage_class(cov)
+                    html += f"""
+            <div class="class-cov-row">
+                <span class="class-name">{classe.replace('_', ' ')[:25]}</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar {bar_class}" style="width: {min(cov, 100)}%;"></div>
+                </div>
+                <span class="cov-value">{cov:.0f}%</span>
+            </div>
+"""
+                html += '        </div>\n'
+        else:
+            html += """
+        <p><em>Nessun modulo raggiunge la soglia core in tutte le classi. 
+        Considera di abbassare la soglia o analizzare classi più omogenee.</em></p>
+"""
+        
+        html += """    </div>
+    
+    <!-- ================================================ -->
+    <!-- MODULI DISTINTIVI -->
+    <!-- ================================================ -->
+    <div class="section-box section-distinctive">
+        <h2>⭐ MODULI DISTINTIVI ({n_distinctive} moduli)</h2>
+        <p>Moduli con copertura significativamente più alta in alcune classi rispetto ad altre. 
+        Utili per personalizzare la promozione per classe specifica.</p>
+""".format(n_distinctive=n_distinctive)
+        
+        if result.distinctive_modules:
+            for mod in sorted(result.distinctive_modules, key=lambda x: x.coverage_variance, reverse=True):
+                html += f"""
+        <div class="module-card">
+            <h4>📙 {mod.module_id}. {mod.module_name}</h4>
+            <div class="module-stats">
+                <span class="module-stat">Media: {mod.avg_coverage:.0f}%</span>
+                <span class="module-stat">Range: {mod.min_coverage:.0f}% - {mod.max_coverage:.0f}%</span>
+                <span class="module-stat">Distintivo per: <strong>{', '.join(mod.distinctive_for)}</strong></span>
+            </div>
+"""
+                for classe in classes:
+                    cov = mod.coverage_by_class.get(classe, 0)
+                    bar_class = self._get_coverage_class(cov)
+                    is_distinctive = classe in mod.distinctive_for
+                    label = " ⭐" if is_distinctive else ""
+                    html += f"""
+            <div class="class-cov-row">
+                <span class="class-name">{classe.replace('_', ' ')[:25]}{label}</span>
+                <div class="cov-bar-container">
+                    <div class="cov-bar {bar_class}" style="width: {min(cov, 100)}%;"></div>
+                </div>
+                <span class="cov-value">{cov:.0f}%</span>
+            </div>
+"""
+                html += '        </div>\n'
+        else:
+            html += """
+        <p><em>Nessun modulo mostra differenze significative tra classi.</em></p>
+"""
+        
+        html += """    </div>
+    
+    <!-- ================================================ -->
+    <!-- GAP PER CLASSE -->
+    <!-- ================================================ -->
+    <div class="section-box section-gap">
+        <h2>⚠️ GAP PER CLASSE</h2>
+        <p>Moduli con copertura insufficiente (&lt;{threshold}%) per ciascuna classe. 
+        Questi rappresentano aree di miglioramento o differenziazione curriculare.</p>
+""".format(threshold=int(self.gap_threshold))
+        
+        if result.gap_modules:
+            for classe in classes:
+                gaps = result.gap_modules.get(classe, [])
+                if gaps:
+                    html += f"""
+        <div class="module-card">
+            <h4>🎓 {classe.replace('_', ' ')} — {len(gaps)} gap</h4>
+            <div class="concept-list">
+"""
+                    for mod in sorted(gaps, key=lambda x: x.coverage_by_class.get(classe, 0)):
+                        cov = mod.coverage_by_class.get(classe, 0)
+                        html += f'                <span class="concept-tag" style="background:#ffcdd2;color:#c62828;">{mod.module_name} ({cov:.0f}%)</span>\n'
+                    
+                    html += """            </div>
+        </div>
+"""
+            
+            # Classi senza gap
+            classes_no_gap = [c for c in classes if c not in result.gap_modules or not result.gap_modules[c]]
+            if classes_no_gap:
+                html += f"""
+        <p>✅ <strong>Classi senza gap significativi:</strong> {', '.join(classes_no_gap)}</p>
+"""
+        else:
+            html += """
+        <p>✅ <strong>Nessun gap significativo rilevato in nessuna classe!</strong></p>
+"""
+        
+        html += """    </div>
+    
+    <!-- ================================================ -->
+    <!-- COPERTURA COMPLESSIVA PER CLASSE -->
+    <!-- ================================================ -->
+    <h2>📈 Copertura Complessiva Framework per Classe</h2>
+    <p>Quanto ogni classe copre complessivamente il framework ideale.</p>
+    
+    <div class="module-card">
+"""
+        
+        # Ordina classi per copertura decrescente
+        sorted_classes = sorted(classes, key=lambda c: result.overall_coverage_by_class.get(c, 0), reverse=True)
+        
+        for classe in sorted_classes:
+            cov = result.overall_coverage_by_class.get(classe, 0)
+            bar_class = self._get_coverage_class(cov)
+            class_result = result.class_results.get(classe)
+            n_syl = class_result.n_syllabus if class_result else 0
+            n_concepts = class_result.total_concepts_extracted if class_result else 0
+            
+            html += f"""
+        <div class="class-cov-row" style="margin: 12px 0;">
+            <span class="class-name" style="width: 220px;">
+                <strong>{classe.replace('_', ' ')}</strong><br>
+                <small style="color: #666;">{n_syl} syllabus, {n_concepts} concetti</small>
+            </span>
+            <div class="cov-bar-container" style="height: 25px;">
+                <div class="cov-bar {bar_class}" style="width: {min(cov, 100)}%;"></div>
+            </div>
+            <span class="cov-value" style="width: 60px; font-size: 1.1em;">{cov:.0f}%</span>
+        </div>
+"""
+        
+        html += """    </div>
+    
+    <!-- ================================================ -->
+    <!-- IMPLICAZIONI STRATEGICHE -->
+    <!-- ================================================ -->
+    <h2>💡 Implicazioni Strategiche</h2>
+    
+    <div class="module-card">
+        <h4>Per il Catalogo Zanichelli</h4>
+        <ul>
+"""
+        
+        if result.core_modules:
+            core_names = [m.module_name for m in result.core_modules[:5]]
+            html += f"""
+            <li><strong>Moduli CORE ({n_core}):</strong> Questi argomenti sono trattati in tutte le classi e DEVONO essere eccellenti nel manuale: {', '.join(core_names)}{'...' if len(result.core_modules) > 5 else ''}</li>
+"""
+        
+        if result.distinctive_modules:
+            html += f"""
+            <li><strong>Moduli DISTINTIVI ({n_distinctive}):</strong> Personalizza la promozione enfatizzando questi moduli per le classi specifiche dove sono più rilevanti.</li>
+"""
+        
+        if total_gaps > 0:
+            html += f"""
+            <li><strong>GAP ({total_gaps} totali):</strong> Alcuni moduli sono poco coperti in certe classi. Valuta se il manuale può colmare questi gap o se sono differenze curriculari intenzionali.</li>
+"""
+        
+        html += """
+        </ul>
+        
+        <h4>Per la Promozione</h4>
+        <ul>
+"""
+        
+        # Suggerimenti per classe
+        for classe in sorted_classes[:5]:  # Top 5 classi
+            cov = result.overall_coverage_by_class.get(classe, 0)
+            gaps = result.gap_modules.get(classe, [])
+            distinctive_here = [m for m in result.distinctive_modules if classe in m.distinctive_for]
+            
+            html += f'            <li><strong>{classe}:</strong> '
+            
+            if cov >= 60:
+                html += f'Buona copertura ({cov:.0f}%). '
+            else:
+                html += f'Copertura da migliorare ({cov:.0f}%). '
+            
+            if distinctive_here:
+                html += f'Enfatizza: {", ".join([m.module_name for m in distinctive_here[:2]])}. '
+            
+            if gaps:
+                html += f'Gap in: {", ".join([m.module_name for m in gaps[:2]])}.'
+            
+            html += '</li>\n'
+        
+        html += f"""
+        </ul>
+    </div>
+    
+    <div class="report-footer">
+        Report generato da <strong>CoreX Multiclasse v2.0</strong> — Zanichelli<br>
+        Framework di riferimento: {result.framework_name}<br>
+        {n_classes} classi analizzate | {n_modules} moduli | {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}
+    </div>
+</div>
+</body>
+</html>
+"""
+        
+        return html
+    
+    def generate_unified_framework(self, result) -> Dict:
+        """Genera framework JSON unificato multiclasse"""
+        
+        modules_data = []
+        for mod_id in sorted(result.module_analyses.keys()):
+            mod = result.module_analyses[mod_id]
+            
+            modules_data.append({
+                "id": mod.module_id,
+                "name": mod.module_name,
+                "core_contents": mod.core_contents,
+                "coverage_by_class": {k: round(v, 1) for k, v in mod.coverage_by_class.items()},
+                "avg_coverage": round(mod.avg_coverage, 1),
+                "min_coverage": round(mod.min_coverage, 1),
+                "max_coverage": round(mod.max_coverage, 1),
+                "is_core": mod.is_core,
+                "is_distinctive": mod.is_distinctive,
+                "distinctive_for": mod.distinctive_for,
+                "gap_for": mod.gap_for,
+                "concepts_by_class": {
+                    classe: [c.get("name", c) if isinstance(c, dict) else c for c in concepts[:10]]
+                    for classe, concepts in mod.concepts_by_class.items()
+                }
+            })
+        
+        return {
+            "framework": {
+                "name": f"{result.materia} - Analisi Multiclasse su Framework Ideale",
+                "type": "multiclass_on_ideal_framework",
+                "reference_framework": result.framework_name,
+                "classes_analyzed": result.classes,
+                "generation_date": datetime.now().isoformat(),
+                "thresholds": {
+                    "core": self.core_threshold,
+                    "gap": self.gap_threshold
+                }
+            },
+            "summary": {
+                "n_classes": len(result.classes),
+                "n_modules_total": result.n_modules_total,
+                "n_modules_core": result.n_modules_core,
+                "n_modules_distinctive": result.n_modules_distinctive,
+                "overall_coverage_by_class": {k: round(v, 1) for k, v in result.overall_coverage_by_class.items()}
+            },
+            "core_modules": [
+                {"id": m.module_id, "name": m.module_name, "avg_coverage": round(m.avg_coverage, 1)}
+                for m in result.core_modules
+            ],
+            "distinctive_modules": [
+                {
+                    "id": m.module_id, 
+                    "name": m.module_name, 
+                    "distinctive_for": m.distinctive_for,
+                    "coverage_range": f"{m.min_coverage:.0f}%-{m.max_coverage:.0f}%"
+                }
+                for m in result.distinctive_modules
+            ],
+            "gap_by_class": {
+                classe: [{"id": m.module_id, "name": m.module_name, "coverage": round(m.coverage_by_class.get(classe, 0), 1)} for m in gaps]
+                for classe, gaps in result.gap_modules.items()
+            },
+            "class_details": {
+                classe: {
+                    "n_syllabus": res.n_syllabus,
+                    "n_concepts_extracted": res.total_concepts_extracted,
+                    "overall_coverage": round(res.overall_coverage, 1)
+                }
+                for classe, res in result.class_results.items()
+            },
+            "modules": modules_data
+        }

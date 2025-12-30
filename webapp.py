@@ -431,134 +431,385 @@ with tab2:
         st.warning("⚠️ Seleziona prima i programmi nella tab 'Programmi'")
     else:
         materia = st.session_state.selected_materia
-        classe = st.session_state.selected_classe
-        pdfs = st.session_state.selected_pdfs
+        pdfs = st.session_state.selected_pdfs  # Dict: {classe: [pdf_list]}
+        classi_disponibili = list(pdfs.keys())
         total_pdfs = sum(len(p) for p in pdfs.values())
-        classi_analizzate = list(pdfs.keys())
         
         # Riepilogo
         col1, col2, col3 = st.columns(3)
         col1.metric("Materia", materia.replace("_", " "))
-        col2.metric("Classi", len(classi_analizzate))
-        col3.metric("PDF", total_pdfs)
-        
-        # Nome analisi
-        default_name = f"{materia}_{classi_analizzate[0]}" if len(classi_analizzate) == 1 else f"{materia}_Multiclasse"
-        analysis_name = st.text_input("Nome analisi", value=default_name)
-        
-        # Verifica se c'è già un'analisi
-        current = get_current_analysis()
-        if current:
-            st.warning(f"⚠️ Esiste già un'analisi: **{current.get('name', 'N/D')}**")
-            
-            col1, col2, col3 = st.columns(3)
-            with col1:
-                if st.button("📦 Archivia e procedi", type="primary", use_container_width=True):
-                    archive_current_analysis()
-                    st.success("✅ Archiviata")
-                    st.rerun()
-            with col2:
-                if st.button("🔄 Sovrascrivi", use_container_width=True):
-                    clear_current_analysis()
-                    st.success("✅ Pronto per nuova analisi")
-                    st.rerun()
-            with col3:
-                if st.button("❌ Annulla", use_container_width=True):
-                    st.stop()
+        col2.metric("Classi disponibili", len(classi_disponibili))
+        col3.metric("PDF totali", total_pdfs)
         
         st.markdown("---")
         
-        # Avvia
-        if st.button("🚀 Avvia Elaborazione", type="primary", use_container_width=True):
+        # === SELEZIONE MODALITÀ ANALISI ===
+        st.subheader("⚙️ Modalità Analisi")
+        
+        analysis_mode = st.radio(
+            "Seleziona la modalità:",
+            [
+                "🎯 Singola Classe (standard)",
+                "🔄 Multiclasse Simultanea (nucleo comune + specificità)"
+            ],
+            key="analysis_mode",
+            help="""
+            **Singola Classe**: Analizza una classe alla volta (workflow attuale).
+            **Multiclasse**: Analizza più classi insieme, genera framework con nucleo comune + specificità per classe.
+            """
+        )
+        
+        is_multiclass = "Multiclasse" in analysis_mode
+        
+        st.markdown("---")
+        
+        # =============================================
+        # MODALITÀ MULTICLASSE
+        # =============================================
+        if is_multiclass:
+            st.subheader("🔄 Analisi Multiclasse Simultanea")
             
-            # Pulisci directory
-            clear_current_analysis()
-            analisi_dir = get_analisi_dir()
+            if len(classi_disponibili) < 2:
+                st.error("⚠️ Per l'analisi multiclasse servono almeno 2 classi. Carica PDF in più classi dalla tab 'Programmi'.")
+            else:
+                st.info("💡 Seleziona le classi da analizzare insieme. Verrà generato un framework unificato con nucleo comune e specificità per classe.")
+                
+                # Selezione classi con checkbox
+                st.markdown("**Seleziona le classi da includere nell'analisi:**")
+                
+                selected_classes = []
+                n_cols = min(len(classi_disponibili), 4)
+                cols = st.columns(n_cols)
+                
+                for i, classe in enumerate(classi_disponibili):
+                    col_idx = i % n_cols
+                    with cols[col_idx]:
+                        n_pdf = len(pdfs.get(classe, []))
+                        if st.checkbox(f"{classe} ({n_pdf} PDF)", value=True, key=f"sel_class_{classe}"):
+                            selected_classes.append(classe)
+                
+                st.markdown("---")
+                
+                if len(selected_classes) < 2:
+                    st.warning("⚠️ Seleziona almeno 2 classi per l'analisi multiclasse")
+                else:
+                    st.success(f"✅ {len(selected_classes)} classi selezionate: {', '.join(selected_classes)}")
+                    
+                    # Parametri analisi multiclasse
+                    st.markdown("**Parametri soglie:**")
+                    col_a, col_b = st.columns(2)
+                    
+                    with col_a:
+                        core_threshold = st.slider(
+                            "Soglia nucleo comune (%)",
+                            min_value=30,
+                            max_value=80,
+                            value=50,
+                            help="Un concetto è 'core' se presente in tutte le classi con questa frequenza minima"
+                        )
+                    
+                    with col_b:
+                        distinctive_threshold = st.slider(
+                            "Soglia concetto distintivo (%)",
+                            min_value=40,
+                            max_value=90,
+                            value=60,
+                            help="Un concetto è 'distintivo' se presente in una sola classe con questa frequenza"
+                        )
+                    
+                    # Nome analisi
+                    default_name = f"{materia}_Multiclasse_{'_'.join(selected_classes[:3])}"
+                    if len(selected_classes) > 3:
+                        default_name += f"_+{len(selected_classes)-3}"
+                    analysis_name = st.text_input("Nome analisi", value=default_name, key="multiclass_name")
+                    
+                    # Verifica analisi esistente
+                    current = get_current_analysis()
+                    if current:
+                        st.warning(f"⚠️ Esiste già un'analisi: **{current.get('name', 'N/D')}**")
+                        
+                        col1, col2, col3 = st.columns(3)
+                        with col1:
+                            if st.button("📦 Archivia e procedi", type="primary", use_container_width=True, key="arch_multi"):
+                                archive_current_analysis()
+                                st.success("✅ Archiviata")
+                                st.rerun()
+                        with col2:
+                            if st.button("🔄 Sovrascrivi", use_container_width=True, key="overwrite_multi"):
+                                clear_current_analysis()
+                                st.success("✅ Pronto per nuova analisi")
+                                st.rerun()
+                        with col3:
+                            if st.button("❌ Annulla", use_container_width=True, key="cancel_multi"):
+                                st.stop()
+                    
+                    st.markdown("---")
+                    
+                    # === ESECUZIONE MULTICLASSE ===
+                    if st.button("🚀 Avvia Analisi Multiclasse", type="primary", use_container_width=True):
+                        
+                        clear_current_analysis()
+                        analisi_dir = get_analisi_dir()
+                        
+                        with st.spinner("Elaborazione multiclasse in corso..."):
+                            try:
+                                from app.multiclass_pipeline import MulticlassFrameworkPipeline
+                                from app.report_generator import MulticlassReportGenerator
+                                from app.framework_adapter import FrameworkAdapter
+                                
+                                # Inizializza pipeline multiclasse
+                                pipeline = MulticlassFrameworkPipeline(
+                                    materia=materia,
+                                    use_llm=True,
+                                    core_threshold=core_threshold,
+                                    gap_threshold=40.0,
+                                    distinctive_delta=25.0
+                                 )   
+
+                                progress = st.progress(0, text="Inizializzazione...")
+                                
+                                # Raccogli PDF per classe
+                                pdf_by_class = {}
+                                for classe in selected_classes:
+                                    pdf_by_class[classe] = pdfs.get(classe, [])
+                                
+                                # Step 1: Estrazione per classe
+                                progress.progress(10, text="Estrazione testi per classe...")
+                                class_data = pipeline.extract_by_class(pdf_by_class)
+                                
+                                # Step 2: Analisi per classe
+                                progress.progress(30, text="Analisi concetti per classe...")
+                                class_analyses = pipeline.analyze_by_class(
+                                    class_data, 
+                                    analysis_name, 
+                                    n_clusters
+                                )
+                                
+                                # Step 3: Confronto e nucleo comune
+                                progress.progress(50, text="Identificazione nucleo comune e specificità...")
+                                multiclass_result = pipeline.generate_multiclass_framework(
+                                    class_analyses,
+                                    selected_classes
+                                )
+                                
+                                # Step 4: Report multiclasse
+                                progress.progress(70, text="Generazione report multiclasse...")
+                                
+                                adapter = FrameworkAdapter()
+                                reference_fw = adapter.load_framework(materia)
+                                
+                                report_gen = MulticlassReportGenerator(
+                                    reference_framework=reference_fw,
+                                    core_threshold=core_threshold,
+                                    gap_threshold=40.0
+                                 )
+
+                                report_gen = MulticlassReportGenerator(reference_framework=reference_fw)                                
+                                report_html = report_gen.generate_multiclass_report(
+                                    multiclass_result, 
+                                    materia, 
+                                    selected_classes
+                                )
+                                
+                                unified_framework = report_gen.generate_unified_framework(
+                                    multiclass_result
+                                )
+                                
+                                # Step 5: Salvataggio
+                                progress.progress(90, text="Salvataggio...")
+                                
+                                with open(analisi_dir / "report_multiclasse.html", "w", encoding="utf-8") as f:
+                                    f.write(report_html)
+                                
+                                with open(analisi_dir / "framework_multiclasse.json", "w", encoding="utf-8") as f:
+                                    json.dump(unified_framework, f, indent=2, ensure_ascii=False)
+                                
+                                # Metadati
+                                meta = {
+                                    "name": analysis_name,
+                                    "materia": materia,
+                                    "classi": selected_classes,
+                                    "type": "multiclass",
+                                    "created": datetime.now().isoformat(),
+                                    "n_syllabus_total": sum(len(pdf_by_class[c]) for c in selected_classes),
+                                    "n_syllabus_per_class": {c: len(pdf_by_class[c]) for c in selected_classes},
+                                    "core_modules": len(multiclass_result.core_modules),
+                                    "distinctive_modules": len(multiclass_result.distinctive_modules),
+                                    "gap_modules": len(multiclass_result.gap_modules),
+                                    "total_modules": multiclass_result.n_modules_total,
+                                    "coverage_by_class": multiclass_result.overall_coverage_by_class,
+                                    "core_threshold": core_threshold,
+                                    "gap_threshold": 40.0
+                                }
+                                with open(analisi_dir / "analisi.json", "w", encoding="utf-8") as f:
+                                    json.dump(meta, f, indent=2, ensure_ascii=False)
+                                
+                                progress.progress(100, text="✅ Completato!")
+                                
+                                st.success("✅ Analisi Multiclasse completata!")
+                                
+                                # Mostra statistiche rapide
+                                st.markdown("---")
+                                st.subheader("📊 Risultati Rapidi")
+                                
+                                col1, col2, col3, col4 = st.columns(4)
+                                col1.metric("Classi analizzate", len(selected_classes))
+                                col2.metric("Moduli Core", len(multiclass_result.core_modules))
+                                col3.metric("Moduli Distintivi", len(multiclass_result.distinctive_modules))
+                                col4.metric("Moduli Gap", len(multiclass_result.gap_modules))
+                                
+                                # Dettaglio per classe
+                                st.markdown("**Copertura per classe:**")
+                                for classe in selected_classes:
+                                    cov = multiclass_result.overall_coverage_by_class.get(classe, 0)
+                                    st.write(f"• **{classe}**: {cov:.1f}% copertura framework ideale")
+                                
+                                st.info("👉 Vai alla tab **Risultati** per visualizzare il report completo")
+                                
+                            except Exception as e:
+                                st.error(f"❌ Errore: {str(e)}")
+                                import traceback
+                                st.code(traceback.format_exc())
+
+        # =============================================
+        # MODALITÀ SINGOLA CLASSE (workflow esistente)
+        # =============================================
+        else:
+            st.subheader("🎯 Analisi Singola Classe")
             
-            # Raccogli PDF
-            all_pdf_paths = []
-            for classe_name, pdf_list in pdfs.items():
-                all_pdf_paths.extend(pdf_list)
+            # Selezione classe singola
+            if len(classi_disponibili) == 1:
+                selected_classe = classi_disponibili[0]
+                st.info(f"Classe selezionata: **{selected_classe}**")
+            else:
+                selected_classe = st.selectbox(
+                    "Seleziona la classe da analizzare:",
+                    classi_disponibili,
+                    key="single_class_select"
+                )
             
-            with st.spinner("Elaborazione in corso..."):
-                try:
-                    from app.main_pipeline import FrameworkGenerationPipeline
-                    from app.report_generator import ReportGenerator
-                    from app.framework_adapter import FrameworkAdapter
-                    
-                    pipeline = FrameworkGenerationPipeline(materia=materia, use_llm=use_llm and bool(api_key))
-                    progress = st.progress(0, text="Inizializzazione...")
-                    
-                    # Step 1: Estrazione
-                    progress.progress(10, text="Estrazione testo dai PDF...")
-                    syllabus_texts, syllabus_metadata = pipeline.extract_from_files(all_pdf_paths)
-                    
-                    if not syllabus_texts:
-                        st.error("❌ Nessun testo estratto")
+            classi_analizzate = [selected_classe]
+            selected_pdfs_single = {selected_classe: pdfs.get(selected_classe, [])}
+            total_pdfs_single = len(selected_pdfs_single[selected_classe])
+            
+            st.write(f"**{total_pdfs_single} PDF** nella classe {selected_classe}")
+            
+            # Nome analisi
+            default_name = f"{materia}_{selected_classe}"
+            analysis_name = st.text_input("Nome analisi", value=default_name, key="single_name")
+            
+            # Verifica se c'è già un'analisi
+            current = get_current_analysis()
+            if current:
+                st.warning(f"⚠️ Esiste già un'analisi: **{current.get('name', 'N/D')}**")
+                
+                col1, col2, col3 = st.columns(3)
+                with col1:
+                    if st.button("📦 Archivia e procedi", type="primary", use_container_width=True, key="arch_single"):
+                        archive_current_analysis()
+                        st.success("✅ Archiviata")
+                        st.rerun()
+                with col2:
+                    if st.button("🔄 Sovrascrivi", use_container_width=True, key="overwrite_single"):
+                        clear_current_analysis()
+                        st.success("✅ Pronto per nuova analisi")
+                        st.rerun()
+                with col3:
+                    if st.button("❌ Annulla", use_container_width=True, key="cancel_single"):
                         st.stop()
-                    
-                    # Step 2: Analisi
-                    progress.progress(30, text="Analisi concetti...")
-                    concept_collection, framework, coverages, coverage_matrix = pipeline.run_analysis(
-                        syllabus_texts, syllabus_metadata, analysis_name, n_clusters, use_llm and bool(api_key)
-                    )
-                    
-                    # Step 3: Output Zanichelli
-                    progress.progress(50, text="Generazione output...")
-                    zanichelli_output = pipeline.generate_zanichelli_output(
-                        materia, concept_collection, coverages, syllabus_metadata, classi_analizzate
-                    )
-                    
-                    # Step 4: Report
-                    progress.progress(70, text="Generazione report...")
-                    
-                    adapter = FrameworkAdapter()
-                    reference_fw = adapter.load_framework(materia)
-                    
-                    report_gen = ReportGenerator(reference_framework=reference_fw)
-                    report_gen.set_analysis_data(zanichelli_output)
-                    
-                    report_html = report_gen.generate_analysis_report(materia, classi_analizzate)
-                    changelog_html = report_gen.generate_changelog(materia, classi_analizzate)
-                    updated_framework = report_gen.generate_updated_framework(materia, classi_analizzate)
-                    
-                    # Step 5: Salvataggio
-                    progress.progress(90, text="Salvataggio...")
-                    
-                    # Salva i 3 file principali
-                    with open(analisi_dir / "report_analisi.html", "w", encoding="utf-8") as f:
-                        f.write(report_html)
-                    
-                    with open(analisi_dir / "changelog_framework.html", "w", encoding="utf-8") as f:
-                        f.write(changelog_html)
-                    
-                    with open(analisi_dir / "framework_aggiornato.json", "w", encoding="utf-8") as f:
-                        json.dump(updated_framework, f, indent=2, ensure_ascii=False)
-                    
-                    # Metadati
-                    meta = {
-                        "name": analysis_name,
-                        "materia": materia,
-                        "classi": classi_analizzate,
-                        "created": datetime.now().isoformat(),
-                        "n_syllabus": len(syllabus_texts),
-                        "n_concepts": concept_collection.total_unique_concepts,
-                        "n_modules": framework.n_modules,
-                        "coverage": zanichelli_output.get("overall_assessment", {}).get("coverage_percentage", 0),
-                        "judgment": zanichelli_output.get("overall_assessment", {}).get("judgment", "N/D")
-                    }
-                    with open(analisi_dir / "analisi.json", "w", encoding="utf-8") as f:
-                        json.dump(meta, f, indent=2, ensure_ascii=False)
-                    
-                    progress.progress(100, text="✅ Completato!")
-                    
-                    st.success("✅ Analisi completata!")
-                    st.info("👉 Vai alla tab **Risultati** per visualizzare i report")
-                    
-                except Exception as e:
-                    st.error(f"❌ Errore: {str(e)}")
-                    import traceback
-                    st.code(traceback.format_exc())
+            
+            st.markdown("---")
+            
+            # Avvia analisi singola classe
+            if st.button("🚀 Avvia Elaborazione", type="primary", use_container_width=True):
+                
+                # Pulisci directory
+                clear_current_analysis()
+                analisi_dir = get_analisi_dir()
+                
+                # Raccogli PDF
+                all_pdf_paths = selected_pdfs_single[selected_classe]
+                
+                with st.spinner("Elaborazione in corso..."):
+                    try:
+                        from app.main_pipeline import FrameworkGenerationPipeline
+                        from app.report_generator import ReportGenerator
+                        from app.framework_adapter import FrameworkAdapter
+                        
+                        pipeline = FrameworkGenerationPipeline(materia=materia, use_llm=use_llm and bool(api_key))
+                        progress = st.progress(0, text="Inizializzazione...")
+                        
+                        # Step 1: Estrazione
+                        progress.progress(10, text="Estrazione testo dai PDF...")
+                        syllabus_texts, syllabus_metadata = pipeline.extract_from_files(all_pdf_paths)
+                        
+                        if not syllabus_texts:
+                            st.error("❌ Nessun testo estratto")
+                            st.stop()
+                        
+                        # Step 2: Analisi
+                        progress.progress(30, text="Analisi concetti...")
+                        concept_collection, framework, coverages, coverage_matrix = pipeline.run_analysis(
+                            syllabus_texts, syllabus_metadata, analysis_name, n_clusters, use_llm and bool(api_key)
+                        )
+                        
+                        # Step 3: Output Zanichelli
+                        progress.progress(50, text="Generazione output...")
+                        zanichelli_output = pipeline.generate_zanichelli_output(
+                            materia, concept_collection, coverages, syllabus_metadata, classi_analizzate
+                        )
+                        
+                        # Step 4: Report
+                        progress.progress(70, text="Generazione report...")
+                        
+                        adapter = FrameworkAdapter()
+                        reference_fw = adapter.load_framework(materia)
+                        
+                        report_gen = ReportGenerator(reference_framework=reference_fw)
+                        report_gen.set_analysis_data(zanichelli_output)
+                        
+                        report_html = report_gen.generate_analysis_report(materia, classi_analizzate)
+                        changelog_html = report_gen.generate_changelog(materia, classi_analizzate)
+                        updated_framework = report_gen.generate_updated_framework(materia, classi_analizzate)
+                        
+                        # Step 5: Salvataggio
+                        progress.progress(90, text="Salvataggio...")
+                        
+                        # Salva i 3 file principali
+                        with open(analisi_dir / "report_analisi.html", "w", encoding="utf-8") as f:
+                            f.write(report_html)
+                        
+                        with open(analisi_dir / "changelog_framework.html", "w", encoding="utf-8") as f:
+                            f.write(changelog_html)
+                        
+                        with open(analisi_dir / "framework_aggiornato.json", "w", encoding="utf-8") as f:
+                            json.dump(updated_framework, f, indent=2, ensure_ascii=False)
+                        
+                        # Metadati
+                        meta = {
+                            "name": analysis_name,
+                            "materia": materia,
+                            "classi": classi_analizzate,
+                            "type": "single",
+                            "created": datetime.now().isoformat(),
+                            "n_syllabus": len(syllabus_texts),
+                            "n_concepts": concept_collection.total_unique_concepts,
+                            "n_modules": framework.n_modules,
+                            "coverage": zanichelli_output.get("overall_assessment", {}).get("coverage_percentage", 0),
+                            "judgment": zanichelli_output.get("overall_assessment", {}).get("judgment", "N/D")
+                        }
+                        with open(analisi_dir / "analisi.json", "w", encoding="utf-8") as f:
+                            json.dump(meta, f, indent=2, ensure_ascii=False)
+                        
+                        progress.progress(100, text="✅ Completato!")
+                        
+                        st.success("✅ Analisi completata!")
+                        st.info("👉 Vai alla tab **Risultati** per visualizzare i report")
+                        
+                    except Exception as e:
+                        st.error(f"❌ Errore: {str(e)}")
+                        import traceback
+                        st.code(traceback.format_exc())
 
 # === TAB 3: RISULTATI ===
 with tab3:
@@ -569,105 +820,203 @@ with tab3:
     if not current:
         st.info("Nessuna analisi disponibile. Vai alla tab 'Analisi' per elaborare i programmi.")
     else:
+        # Determina il tipo di analisi
+        analysis_type = current.get("type", "single")
+        is_multiclass = analysis_type == "multiclass"
+        
         # Info analisi
         st.subheader(f"📋 {current.get('name', 'Analisi')}")
         
-        col1, col2, col3, col4 = st.columns(4)
-        col1.metric("Materia", current.get("materia", "N/D").replace("_", " "))
-        col2.metric("Syllabus", current.get("n_syllabus", 0))
-        col3.metric("Concetti", current.get("n_concepts", 0))
-        col4.metric("Copertura", f"{current.get('coverage', 0):.0f}%", current.get("judgment", ""))
-        
-        st.caption(f"Generata il {current.get('created', 'N/D')[:10]} | Classi: {', '.join(current.get('classi', []))}")
-        
-        st.markdown("---")
-        
-        # File
-        analisi_dir = get_analisi_dir()
-        report_file = analisi_dir / "report_analisi.html"
-        changelog_file = analisi_dir / "changelog_framework.html"
-        framework_file = analisi_dir / "framework_aggiornato.json"
-        
-        # Download buttons
-        st.subheader("📥 Download")
-        
-        col1, col2, col3 = st.columns(3)
-        
-        with col1:
+        if is_multiclass:
+            # === VISUALIZZAZIONE MULTICLASSE ===
+            col1, col2, col3, col4 = st.columns(4)
+            col1.metric("Materia", current.get("materia", "N/D").replace("_", " "))
+            col2.metric("Classi", len(current.get("classi", [])))
+            col3.metric("Concetti Core", current.get("core_concepts", 0))
+            col4.metric("Concetti Totali", current.get("total_concepts", 0))
+            
+            # Seconda riga di metriche
+            col5, col6, col7, col8 = st.columns(4)
+            col5.metric("Syllabus Totali", current.get("n_syllabus_total", 0))
+            col6.metric("Concetti Condivisi", current.get("shared_concepts", 0))
+            col7.metric("Concetti Distintivi", current.get("distinctive_total", 0))
+            col8.metric("Soglia Core", f"{current.get('core_threshold', 50)}%")
+            
+            st.caption(f"Generata il {current.get('created', 'N/D')[:10]} | Classi: {', '.join(current.get('classi', []))}")
+            
+            # Dettaglio copertura per classe
+            with st.expander("📊 Dettaglio per classe", expanded=False):
+                coverage_by_class = current.get("coverage_by_class", {})
+                n_syllabus_per_class = current.get("n_syllabus_per_class", {})
+                
+                for classe in current.get("classi", []):
+                    cov = coverage_by_class.get(classe, 0)
+                    n_syl = n_syllabus_per_class.get(classe, 0)
+                    st.write(f"• **{classe}**: {cov:.0f}% copertura, {n_syl} syllabus")
+            
+            st.markdown("---")
+            
+            # File multiclasse
+            analisi_dir = get_analisi_dir()
+            report_file = analisi_dir / "report_multiclasse.html"
+            framework_file = analisi_dir / "framework_multiclasse.json"
+            
+            # Download buttons
+            st.subheader("📥 Download")
+            
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                if report_file.exists():
+                    with open(report_file, "r", encoding="utf-8") as f:
+                        st.download_button(
+                            "📄 Report Multiclasse HTML",
+                            f.read(),
+                            f"report_multiclasse_{current.get('name', 'analisi')}.html",
+                            "text/html",
+                            use_container_width=True
+                        )
+                else:
+                    st.warning("Report HTML non trovato")
+            
+            with col2:
+                if framework_file.exists():
+                    with open(framework_file, "r", encoding="utf-8") as f:
+                        st.download_button(
+                            "📋 Framework Multiclasse JSON",
+                            f.read(),
+                            f"framework_multiclasse_{current.get('name', 'analisi')}.json",
+                            "application/json",
+                            use_container_width=True
+                        )
+                else:
+                    st.warning("Framework JSON non trovato")
+            
+            st.markdown("---")
+            
+            # Visualizzazione Report
+            st.subheader("👁️ Anteprima Report")
+            
             if report_file.exists():
                 with open(report_file, "r", encoding="utf-8") as f:
-                    st.download_button(
-                        "📄 Report Analisi",
-                        f.read(),
-                        f"report_{current.get('name', 'analisi')}.html",
-                        "text/html",
-                        use_container_width=True
-                    )
-        
-        with col2:
-            if changelog_file.exists():
-                with open(changelog_file, "r", encoding="utf-8") as f:
-                    st.download_button(
-                        "🔄 Changelog",
-                        f.read(),
-                        f"changelog_{current.get('name', 'analisi')}.html",
-                        "text/html",
-                        use_container_width=True
-                    )
-        
-        with col3:
-            if framework_file.exists():
-                with open(framework_file, "r", encoding="utf-8") as f:
-                    st.download_button(
-                        "📋 Framework JSON",
-                        f.read(),
-                        f"framework_{current.get('name', 'analisi')}.json",
-                        "application/json",
-                        use_container_width=True
-                    )
-        
-        st.markdown("---")
-        
-        # Visualizzazione
-        view_tab1, view_tab2, view_tab3 = st.tabs(["📄 Report", "🔄 Changelog", "📋 Framework"])
-        
-        with view_tab1:
-            if report_file.exists():
-                with open(report_file, "r", encoding="utf-8") as f:
-                    st.components.v1.html(f.read(), height=700, scrolling=True)
+                    st.components.v1.html(f.read(), height=800, scrolling=True)
             else:
-                st.warning("File non trovato")
+                st.warning("File report non trovato")
+            
+            # Visualizzazione Framework JSON
+            with st.expander("📋 Visualizza Framework JSON", expanded=False):
+                if framework_file.exists():
+                    with open(framework_file, "r", encoding="utf-8") as f:
+                        fw = json.load(f)
+                    
+                    st.json(fw)
+                else:
+                    st.warning("File framework non trovato")
         
-        with view_tab2:
-            if changelog_file.exists():
-                with open(changelog_file, "r", encoding="utf-8") as f:
-                    st.components.v1.html(f.read(), height=700, scrolling=True)
-            else:
-                st.warning("File non trovato")
-        
-        with view_tab3:
-            if framework_file.exists():
-                with open(framework_file, "r", encoding="utf-8") as f:
-                    fw = json.load(f)
-                
-                st.write(f"**{fw.get('framework', {}).get('name', 'N/D')}**")
-                st.write(f"Classi: {', '.join(fw.get('framework', {}).get('classes_analyzed', []))}")
-                
-                st.markdown("---")
-                
-                for mod in fw.get("syllabus_modules", []):
-                    class_data = mod.get("class_data", {})
-                    if class_data:
-                        first_class = list(class_data.keys())[0]
-                        level = class_data[first_class].get("relevance_level", 0)
-                        status = class_data[first_class].get("status", "").replace("_", " ")
-                        
-                        icons = {5: "🟢", 4: "🟢", 3: "🟡", 2: "🟠", 1: "🔴", 0: "⚪"}
-                        icon = icons.get(level, "⚪")
-                        
-                        st.write(f"{icon} **{mod.get('name')}** — Livello {level}/5 ({status})")
-            else:
-                st.warning("File non trovato")
+        else:
+            # === VISUALIZZAZIONE SINGOLA CLASSE (codice esistente) ===
+            col1, col2, col3, col4 = st.columns(4)
+            col1.metric("Materia", current.get("materia", "N/D").replace("_", " "))
+            col2.metric("Syllabus", current.get("n_syllabus", 0))
+            col3.metric("Concetti", current.get("n_concepts", 0))
+            col4.metric("Copertura", f"{current.get('coverage', 0):.0f}%", current.get("judgment", ""))
+            
+            st.caption(f"Generata il {current.get('created', 'N/D')[:10]} | Classi: {', '.join(current.get('classi', []))}")
+            
+            st.markdown("---")
+            
+            # File singola classe
+            analisi_dir = get_analisi_dir()
+            report_file = analisi_dir / "report_analisi.html"
+            changelog_file = analisi_dir / "changelog_framework.html"
+            framework_file = analisi_dir / "framework_aggiornato.json"
+            
+            # Download buttons
+            st.subheader("📥 Download")
+            
+            col1, col2, col3 = st.columns(3)
+            
+            with col1:
+                if report_file.exists():
+                    with open(report_file, "r", encoding="utf-8") as f:
+                        st.download_button(
+                            "📄 Report Analisi",
+                            f.read(),
+                            f"report_{current.get('name', 'analisi')}.html",
+                            "text/html",
+                            use_container_width=True
+                        )
+                else:
+                    st.warning("Report non trovato")
+            
+            with col2:
+                if changelog_file.exists():
+                    with open(changelog_file, "r", encoding="utf-8") as f:
+                        st.download_button(
+                            "🔄 Changelog",
+                            f.read(),
+                            f"changelog_{current.get('name', 'analisi')}.html",
+                            "text/html",
+                            use_container_width=True
+                        )
+                else:
+                    st.warning("Changelog non trovato")
+            
+            with col3:
+                if framework_file.exists():
+                    with open(framework_file, "r", encoding="utf-8") as f:
+                        st.download_button(
+                            "📋 Framework JSON",
+                            f.read(),
+                            f"framework_{current.get('name', 'analisi')}.json",
+                            "application/json",
+                            use_container_width=True
+                        )
+                else:
+                    st.warning("Framework non trovato")
+            
+            st.markdown("---")
+            
+            # Visualizzazione
+            view_tab1, view_tab2, view_tab3 = st.tabs(["📄 Report", "🔄 Changelog", "📋 Framework"])
+            
+            with view_tab1:
+                if report_file.exists():
+                    with open(report_file, "r", encoding="utf-8") as f:
+                        st.components.v1.html(f.read(), height=700, scrolling=True)
+                else:
+                    st.warning("File non trovato")
+            
+            with view_tab2:
+                if changelog_file.exists():
+                    with open(changelog_file, "r", encoding="utf-8") as f:
+                        st.components.v1.html(f.read(), height=700, scrolling=True)
+                else:
+                    st.warning("File non trovato")
+            
+            with view_tab3:
+                if framework_file.exists():
+                    with open(framework_file, "r", encoding="utf-8") as f:
+                        fw = json.load(f)
+                    
+                    st.write(f"**{fw.get('framework', {}).get('name', 'N/D')}**")
+                    st.write(f"Classi: {', '.join(fw.get('framework', {}).get('classes_analyzed', []))}")
+                    
+                    st.markdown("---")
+                    
+                    for mod in fw.get("syllabus_modules", []):
+                        class_data = mod.get("class_data", {})
+                        if class_data:
+                            first_class = list(class_data.keys())[0]
+                            level = class_data[first_class].get("relevance_level", 0)
+                            status = class_data[first_class].get("status", "").replace("_", " ")
+                            
+                            icons = {5: "🟢", 4: "🟢", 3: "🟡", 2: "🟠", 1: "🔴", 0: "⚪"}
+                            icon = icons.get(level, "⚪")
+                            
+                            st.write(f"{icon} **{mod.get('name')}** — Livello {level}/5 ({status})")
+                else:
+                    st.warning("File non trovato")
 
 # === TAB 4: CONFRONTA CLASSI ===
 with tab4:
