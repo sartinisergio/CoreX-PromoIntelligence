@@ -214,14 +214,57 @@ def get_saved_comparisons():
 
 st.sidebar.title("⚙️ Configurazione")
 
-# API Key
-st.sidebar.subheader("🔑 OpenAI API Key")
+# Import provider registry
+from app.llm_provider import ProviderRegistry, test_provider, get_provider_comparison
+
 settings = load_settings()
 
+# Provider Selection
+st.sidebar.subheader("🤖 Provider LLM")
+
+provider_names = ProviderRegistry.get_provider_names()
+saved_provider_id = settings.get("current_provider", "openai")
+saved_provider_info = ProviderRegistry.get_provider_info(saved_provider_id)
+saved_provider_name = saved_provider_info.get("name", "OpenAI") if saved_provider_info else "OpenAI"
+
 try:
-    saved_api_key = st.secrets.get("OPENAI_API_KEY", "") or settings.get("api_key", "")
+    default_provider_index = provider_names.index(saved_provider_name)
+except ValueError:
+    default_provider_index = 0
+
+selected_provider_name = st.sidebar.selectbox(
+    "Provider",
+    provider_names,
+    index=default_provider_index
+)
+
+selected_provider_id = ProviderRegistry.id_from_name(selected_provider_name)
+provider_info = ProviderRegistry.get_provider_info(selected_provider_id)
+
+# Model Selection
+available_models = provider_info.get("models", [])
+default_model = provider_info.get("default_model", "")
+saved_model = settings.get("current_model", default_model)
+
+try:
+    default_model_index = available_models.index(saved_model) if saved_model in available_models else 0
+except (ValueError, IndexError):
+    default_model_index = 0
+
+selected_model = st.sidebar.selectbox(
+    "Modello",
+    available_models,
+    index=default_model_index
+)
+
+# API Key
+st.sidebar.subheader(f"🔑 {provider_info.get('key_label', 'API Key')}")
+
+key_env_var = provider_info.get("key_env_var", "OPENAI_API_KEY")
+try:
+    saved_api_key = st.secrets.get(key_env_var, "") or settings.get(f"api_key_{selected_provider_id}", "")
 except:
-    saved_api_key = settings.get("api_key", "")
+    saved_api_key = settings.get(f"api_key_{selected_provider_id}", "")
 
 api_key = st.sidebar.text_input(
     "API Key",
@@ -230,11 +273,25 @@ api_key = st.sidebar.text_input(
 )
 
 if api_key:
-    os.environ["OPENAI_API_KEY"] = api_key
-    if api_key != settings.get("api_key"):
-        settings["api_key"] = api_key
-        save_settings(settings)
-    st.sidebar.success("✓ API Key configurata")
+    os.environ[key_env_var] = api_key
+    os.environ["OPENAI_API_KEY"] = api_key  # retrocompatibilità
+    settings[f"api_key_{selected_provider_id}"] = api_key
+    settings["current_provider"] = selected_provider_id
+    settings["current_model"] = selected_model
+    save_settings(settings)
+    st.sidebar.success(f"✓ {selected_provider_name} configurato")
+
+st.sidebar.caption(f"📖 [Ottieni API Key]({provider_info.get('docs_url', '')})")
+
+if api_key and st.sidebar.button("🧪 Testa Connessione"):
+    with st.spinner("Testing..."):
+        result = test_provider(selected_provider_id, api_key, selected_model)
+        if result["success"]:
+            st.sidebar.success(result["message"])
+        else:
+            st.sidebar.error(result["message"])
+
+st.sidebar.markdown("---")
 
 # Opzioni analisi
 st.sidebar.subheader("🎛️ Opzioni")
@@ -246,6 +303,11 @@ if n_clusters == 0:
 # Info framework
 frameworks = get_available_frameworks()
 st.sidebar.caption(f"📚 {len(frameworks)} framework disponibili")
+st.sidebar.caption(f"🤖 {selected_provider_name} ({selected_model})")
+
+with st.sidebar.expander("📊 Confronto Provider"):
+    st.markdown(get_provider_comparison())
+
 
 # === MAIN ===
 
