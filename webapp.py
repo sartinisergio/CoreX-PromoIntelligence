@@ -495,26 +495,39 @@ with tab2:
                 else:
                     st.success(f"✅ {len(selected_classes)} classi selezionate: {', '.join(selected_classes)}")
                     
-                    # Parametri analisi multiclasse
+                    # Parametri soglie
                     st.markdown("**Parametri soglie:**")
-                    col_a, col_b = st.columns(2)
-                    
-                    with col_a:
+                        
+                    col_p1, col_p2, col_p3 = st.columns(3)
+                        
+                    with col_p1:
                         core_threshold = st.slider(
-                            "Soglia nucleo comune (%)",
-                            min_value=30,
+                            "Soglia moduli CORE (%)",
+                            min_value=50,
                             max_value=80,
-                            value=50,
-                            help="Un concetto è 'core' se presente in tutte le classi con questa frequenza minima"
-                        )
-                    
-                    with col_b:
-                        distinctive_threshold = st.slider(
-                            "Soglia concetto distintivo (%)",
-                            min_value=40,
-                            max_value=90,
                             value=60,
-                            help="Un concetto è 'distintivo' se presente in una sola classe con questa frequenza"
+                            step=5,
+                            help="Un modulo è CORE se ha copertura ≥ questa soglia in TUTTE le classi"
+                        )
+                        
+                    with col_p2:
+                        gap_threshold = st.slider(
+                            "Soglia GAP (%)",
+                            min_value=20,
+                            max_value=50,
+                            value=40,
+                            step=5,
+                            help="Un modulo è GAP per una classe se ha copertura < questa soglia"
+                        )
+                        
+                    with col_p3:
+                        distinctive_delta = st.slider(
+                            "Delta distintivo (punti)",
+                            min_value=15,
+                            max_value=40,
+                            value=25,
+                            step=5,
+                            help="Un modulo è DISTINTIVO se la differenza tra max e min copertura tra classi è ≥ questo valore"
                         )
                     
                     # Nome analisi
@@ -562,8 +575,8 @@ with tab2:
                                     materia=materia,
                                     use_llm=True,
                                     core_threshold=core_threshold,
-                                    gap_threshold=40.0,
-                                    distinctive_delta=25.0
+                                    gap_threshold=gap_threshold,
+                                    distinctive_delta=distinctive_delta
                                  )   
 
                                 progress = st.progress(0, text="Inizializzazione...")
@@ -601,7 +614,7 @@ with tab2:
                                 report_gen = MulticlassReportGenerator(
                                     reference_framework=reference_fw,
                                     core_threshold=core_threshold,
-                                    gap_threshold=40.0
+                                    gap_threshold=gap_threshold
                                  )
 
                                 report_gen = MulticlassReportGenerator(reference_framework=reference_fw)                                
