@@ -1583,8 +1583,14 @@ with tab6:
                                         st.error("❌ Errore caricamento manuale")
                                     else:
                                         # Esegui analisi
-                                        analysis = analyzer.analyze_manual_vs_ideal(manual, ideal_fw)
-                                        
+                                        # Ottieni provider e model correnti dalle settings
+                                        current_provider = settings.get("current_provider", "openai")
+                                        current_model = settings.get("current_model", "gpt-4o-mini")
+
+                                        current_provider = settings.get("current_provider", "openai")
+                                        current_model = settings.get("current_model", "gpt-4o-mini")
+                                        analysis = analyzer.analyze_manual_vs_ideal(manual, ideal_fw, current_provider, current_model)
+
                                         # Mostra risultati
                                         st.markdown("---")
                                         st.subheader("📊 Risultati Analisi")

@@ -3,8 +3,8 @@
   "title": "Fisica per le scienze della vita",
   "author": "Alessandrini",
   "publisher": "Zanichelli",
-  "subject": "Fisica_Generale",
-  "type": "Zanichelli"
+  "subject": "fisica_generale",
+  "type": "Zanichelli",
   "chapters": [
     {
       "number": 1,

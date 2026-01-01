@@ -3,7 +3,7 @@
   "title": "Istologia umana",
   "author": "Angelucci e al.",
   "publisher": "Idelson-Gnocchi",
-  "subject": "Istologia",
+  "subject": "istologia",
   "type": "competitor",
   "chapters": [
     {
@@ -919,11 +919,7 @@
           "page_start": 275
         }
       ]
-    }
-  ]
-}
-{
-  "chapters": [
+    },
     {
       "number": 11,
       "title": "Tessuto adiposo",
