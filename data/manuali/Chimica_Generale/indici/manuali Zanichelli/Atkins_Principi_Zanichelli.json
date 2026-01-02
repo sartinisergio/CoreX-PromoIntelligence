@@ -1,457 +1,986 @@
 {
-  "id": "Atkins_Principi",
+  "id": "Atkins_Principi_Chimica",
   "title": "Principi di Chimica",
   "author": "Atkins",
   "publisher": "Zanichelli",
+  "edition": "5a edizione italiana",
   "subject": "chimica generale",
-  "type": "Zanichelli",
+  "type": "zanichelli",
+  "structure_note": "Organizzato in FOCUS > CAPITOLI > PARAGRAFI",
   "chapters": [
     {
       "number": 0,
       "title": "FONDAMENTI - Introduzione e orientamento",
-      "page_start": 1,
+      "type": "focus",
       "sections": [
         {
-          "title": "A - Materia ed energia",
-          "page_start": 5
+          "number": "A",
+          "title": "Materia ed energia",
+          "subsections": [
+            {"number": "A.1", "title": "Simboli e unità"},
+            {"number": "A.2", "title": "Accuratezza e precisione"},
+            {"number": "A.3", "title": "La forza"},
+            {"number": "A.4", "title": "L'energia"}
+          ]
         },
         {
-          "title": "B - Elementi e atomi",
-          "page_start": 16
+          "number": "B",
+          "title": "Elementi e atomi",
+          "subsections": [
+            {"number": "B.1", "title": "Gli atomi"},
+            {"number": "B.2", "title": "Il modello nucleare"},
+            {"number": "B.3", "title": "Gli isotopi"},
+            {"number": "B.4", "title": "L'organizzazione degli elementi"}
+          ]
         },
         {
-          "title": "C - I composti",
-          "page_start": 24
+          "number": "C",
+          "title": "I composti",
+          "subsections": [
+            {"number": "C.1", "title": "Gli elementi si combinano"},
+            {"number": "C.2", "title": "Le molecole e i composti molecolari"},
+            {"number": "C.3", "title": "Gli ioni"},
+            {"number": "C.4", "title": "I composti ionici"}
+          ]
         },
         {
-          "title": "D - La nomenclatura dei composti",
-          "page_start": 31
+          "number": "D",
+          "title": "La nomenclatura dei composti",
+          "subsections": [
+            {"number": "D.1", "title": "La denominazione dei cationi"},
+            {"number": "D.2", "title": "La denominazione degli anioni"},
+            {"number": "D.3", "title": "La denominazione dei composti ionici"},
+            {"number": "D.4", "title": "La denominazione dei composti molecolari inorganici"},
+            {"number": "D.5", "title": "La nomenclatura di alcuni composti organici comuni"}
+          ]
         },
         {
-          "title": "E - Mole e massa molare",
-          "page_start": 40
+          "number": "E",
+          "title": "Mole e massa molare",
+          "subsections": [
+            {"number": "E.1", "title": "La mole"},
+            {"number": "E.2", "title": "La massa molare"}
+          ]
         },
         {
-          "title": "F - La determinazione della formula chimica",
-          "page_start": 48
+          "number": "F",
+          "title": "La determinazione della formula chimica",
+          "subsections": [
+            {"number": "F.1", "title": "La composizione percentuale in massa"},
+            {"number": "F.2", "title": "La determinazione della formula empirica"},
+            {"number": "F.3", "title": "La determinazione della formula molecolare"}
+          ]
         },
         {
-          "title": "G - Miscugli e soluzioni",
-          "page_start": 54
+          "number": "G",
+          "title": "Miscugli e soluzioni",
+          "subsections": [
+            {"number": "G.1", "title": "La classificazione dei miscugli"},
+            {"number": "G.2", "title": "Le tecniche di separazione"},
+            {"number": "G.3", "title": "La concentrazione"},
+            {"number": "G.4", "title": "La diluizione"}
+          ]
         },
         {
-          "title": "H - Le equazioni chimiche",
-          "page_start": 64
+          "number": "H",
+          "title": "Le equazioni chimiche",
+          "subsections": [
+            {"number": "H.1", "title": "La rappresentazione delle reazioni chimiche"},
+            {"number": "H.2", "title": "Il bilanciamento delle equazioni chimiche"}
+          ]
         },
         {
-          "title": "I - Le reazioni di precipitazione",
-          "page_start": 70
+          "number": "I",
+          "title": "Le reazioni di precipitazione",
+          "subsections": [
+            {"number": "I.1", "title": "Gli elettroliti"},
+            {"number": "I.2", "title": "I precipitati"},
+            {"number": "I.3", "title": "Equazioni ioniche ed equazioni ioniche nette"},
+            {"number": "I.4", "title": "Mettiamo all'opera la precipitazione"}
+          ]
         },
         {
-          "title": "J - Acidi e basi",
-          "page_start": 78
+          "number": "J",
+          "title": "Acidi e basi",
+          "subsections": [
+            {"number": "J.1", "title": "Gli acidi e le basi in soluzione acquosa"},
+            {"number": "J.2", "title": "Acidi e basi forti e deboli"},
+            {"number": "J.3", "title": "La neutralizzazione"}
+          ]
         },
         {
-          "title": "K - Le reazioni redox",
-          "page_start": 85
+          "number": "K",
+          "title": "Le reazioni redox",
+          "subsections": [
+            {"number": "K.1", "title": "L'ossidazione e la riduzione"},
+            {"number": "K.2", "title": "I numeri di ossidazione"},
+            {"number": "K.3", "title": "Agenti ossidanti e riducenti"},
+            {"number": "K.4", "title": "Il bilanciamento delle equazioni redox semplici"}
+          ]
         },
         {
-          "title": "L - La stechiometria delle reazioni",
-          "page_start": 93
+          "number": "L",
+          "title": "La stechiometria delle reazioni",
+          "subsections": [
+            {"number": "L.1", "title": "La previsione da mole a mole"},
+            {"number": "L.2", "title": "La previsione da massa a massa"},
+            {"number": "L.3", "title": "L'analisi volumetrica"}
+          ]
         },
         {
-          "title": "M - I reagenti limitanti",
-          "page_start": 104
+          "number": "M",
+          "title": "I reagenti limitanti",
+          "subsections": [
+            {"number": "M.1", "title": "La resa delle reazioni"},
+            {"number": "M.2", "title": "I limiti di una reazione"},
+            {"number": "M.3", "title": "L'analisi per combustione"}
+          ]
         }
       ]
     },
     {
       "number": 1,
       "title": "FOCUS 1 - Gli atomi",
-      "page_start": 1,
+      "type": "focus",
       "sections": [
         {
-          "title": "CAPITOLO 1A - L'osservazione degli atomi",
-          "page_start": 2
+          "number": "1A",
+          "title": "L'osservazione degli atomi",
+          "subsections": [
+            {"number": "1A.1", "title": "Il modello nucleare dell'atomo"},
+            {"number": "1A.2", "title": "La radiazione elettromagnetica"},
+            {"number": "1A.3", "title": "Gli spettri atomici"}
+          ]
         },
         {
-          "title": "CAPITOLO 1B - La teoria quantistica",
-          "page_start": 12
+          "number": "1B",
+          "title": "La teoria quantistica",
+          "subsections": [
+            {"number": "1B.1", "title": "Radiazione, quanti e fotoni"},
+            {"number": "1B.2", "title": "Il dualismo onda-particella"},
+            {"number": "1B.3", "title": "Il principio di indeterminazione"}
+          ]
         },
         {
-          "title": "CAPITOLO 1C - Funzioni d'onda e livelli energetici",
-          "page_start": 24
+          "number": "1C",
+          "title": "Funzioni d'onda e livelli energetici",
+          "subsections": [
+            {"number": "1C.1", "title": "La funzione d'onda e la sua interpretazione"},
+            {"number": "1C.2", "title": "La quantizzazione dell'energia"}
+          ]
         },
         {
-          "title": "CAPITOLO 1D - L'atomo di idrogeno",
-          "page_start": 32
+          "number": "1D",
+          "title": "L'atomo di idrogeno",
+          "subsections": [
+            {"number": "1D.1", "title": "I livelli energetici"},
+            {"number": "1D.2", "title": "Gli orbitali atomici"},
+            {"number": "1D.3", "title": "Numeri quantici, gusci e sottogusci"},
+            {"number": "1D.4", "title": "La forma degli orbitali"},
+            {"number": "1D.5", "title": "Lo spin elettronico"},
+            {"number": "1D.6", "title": "La struttura elettronica dell'idrogeno: un riepilogo"}
+          ]
         },
         {
-          "title": "CAPITOLO 1E - Gli atomi multielettronici",
-          "page_start": 45
+          "number": "1E",
+          "title": "Gli atomi multielettronici",
+          "subsections": [
+            {"number": "1E.1", "title": "L'energia degli orbitali"},
+            {"number": "1E.2", "title": "Il principio di Aufbau"}
+          ]
         },
         {
-          "title": "CAPITOLO 1F - La periodicità",
-          "page_start": 55
+          "number": "1F",
+          "title": "La periodicità",
+          "subsections": [
+            {"number": "1F.1", "title": "Il raggio atomico"},
+            {"number": "1F.2", "title": "Il raggio ionico"},
+            {"number": "1F.3", "title": "L'energia di ionizzazione"},
+            {"number": "1F.4", "title": "L'affinità elettronica"},
+            {"number": "1F.5", "title": "L'elettronegatività"},
+            {"number": "1F.6", "title": "Le proprietà generali degli elementi"}
+          ]
         }
       ]
     },
     {
       "number": 2,
       "title": "FOCUS 2 - I legami tra gli atomi",
-      "page_start": 73,
+      "type": "focus",
       "sections": [
         {
-          "title": "CAPITOLO 2A - I legami ionici",
-          "page_start": 74
+          "number": "2A",
+          "title": "I legami ionici",
+          "subsections": [
+            {"number": "2A.1", "title": "Gli ioni formati dagli elementi"},
+            {"number": "2A.2", "title": "I simboli di Lewis"},
+            {"number": "2A.3", "title": "Aspetti energetici della formazione dei legami ionici"},
+            {"number": "2A.4", "title": "Le interazioni tra ioni"}
+          ]
         },
         {
-          "title": "CAPITOLO 2B - I legami covalenti",
-          "page_start": 84
+          "number": "2B",
+          "title": "I legami covalenti",
+          "subsections": [
+            {"number": "2B.1", "title": "Le strutture di Lewis"},
+            {"number": "2B.2", "title": "La risonanza"},
+            {"number": "2B.3", "title": "La carica formale"}
+          ]
         },
         {
-          "title": "CAPITOLO 2C - Le eccezioni alla regola dell'ottetto",
-          "page_start": 96
+          "number": "2C",
+          "title": "Le eccezioni alla regola dell'ottetto",
+          "subsections": [
+            {"number": "2C.1", "title": "Radicali e biradicali"},
+            {"number": "2C.2", "title": "I gusci di valenza espansi"},
+            {"number": "2C.3", "title": "Ottetti incompleti"}
+          ]
         },
         {
-          "title": "CAPITOLO 2D - Le proprietà dei legami",
-          "page_start": 104
+          "number": "2D",
+          "title": "Le proprietà dei legami",
+          "subsections": [
+            {"number": "2D.1", "title": "Correggiamo il modello covalente: l'elettronegatività"},
+            {"number": "2D.2", "title": "Correggiamo il modello ionico: la polarizzabilità"},
+            {"number": "2D.3", "title": "La forza dei legami"},
+            {"number": "2D.4", "title": "La lunghezza dei legami"}
+          ]
         },
         {
-          "title": "CAPITOLO 2E - Il modello VSEPR",
-          "page_start": 113
+          "number": "2E",
+          "title": "Il modello VSEPR",
+          "subsections": [
+            {"number": "2E.1", "title": "Il modello VSEPR elementare"},
+            {"number": "2E.2", "title": "Molecole che presentano coppie solitarie sull'atomo centrale"},
+            {"number": "2E.3", "title": "Le molecole polari"}
+          ]
         },
         {
-          "title": "CAPITOLO 2F - La teoria del legame di valenza",
-          "page_start": 127
+          "number": "2F",
+          "title": "La teoria del legame di valenza",
+          "subsections": [
+            {"number": "2F.1", "title": "I legami sigma e pi greco"},
+            {"number": "2F.2", "title": "La promozione elettronica e l'ibridizzazione degli orbitali"},
+            {"number": "2F.3", "title": "La teoria del legame di valenza e i composti ipervalenti"},
+            {"number": "2F.4", "title": "Le caratteristiche dei legami multipli"}
+          ]
         },
         {
-          "title": "CAPITOLO 2G - La teoria degli orbitali molecolari",
-          "page_start": 140
+          "number": "2G",
+          "title": "La teoria degli orbitali molecolari",
+          "subsections": [
+            {"number": "2G.1", "title": "Gli orbitali molecolari"},
+            {"number": "2G.2", "title": "La configurazione elettronica delle molecole biatomiche"},
+            {"number": "2G.3", "title": "Il legame nelle molecole biatomiche eteronucleari"},
+            {"number": "2G.4", "title": "Gli orbitali nelle molecole poliatomiche"},
+            {"number": "2G.5", "title": "Un confronto tra i modelli di legame"}
+          ]
         }
       ]
     },
     {
       "number": 3,
       "title": "FOCUS 3 - Gli stati della materia",
-      "page_start": 163,
+      "type": "focus",
       "sections": [
         {
-          "title": "CAPITOLO 3A - La natura dei gas",
-          "page_start": 165
+          "number": "3A",
+          "title": "La natura dei gas",
+          "subsections": [
+            {"number": "3A.1", "title": "I gas e la pressione"},
+            {"number": "3A.2", "title": "Le unità di misura alternative della pressione"},
+            {"number": "3A.3", "title": "Le osservazioni sperimentali"},
+            {"number": "3A.4", "title": "I miscugli gassosi"}
+          ]
         },
         {
-          "title": "CAPITOLO 3B - Le leggi dei gas in azione",
-          "page_start": 181
+          "number": "3B",
+          "title": "Le leggi dei gas in azione",
+          "subsections": [
+            {"number": "3B.1", "title": "La legge combinata dei gas"},
+            {"number": "3B.2", "title": "Il volume molare e la densità dei gas"},
+            {"number": "3B.3", "title": "La stechiometria delle reazioni tra gas"}
+          ]
         },
         {
-          "title": "CAPITOLO 3C - Il moto molecolare nei gas",
-          "page_start": 190
+          "number": "3C",
+          "title": "Il moto molecolare nei gas",
+          "subsections": [
+            {"number": "3C.1", "title": "Il modello cinetico dei gas"},
+            {"number": "3C.2", "title": "La distribuzione di Maxwell delle velocità"},
+            {"number": "3C.3", "title": "Diffusione ed effusione"}
+          ]
         },
         {
-          "title": "CAPITOLO 3D - Le forze intermolecolari",
-          "page_start": 200
+          "number": "3D",
+          "title": "Le forze intermolecolari",
+          "subsections": [
+            {"number": "3D.1", "title": "Le origini delle forze intermolecolari"},
+            {"number": "3D.2", "title": "Le forze ione-dipolo"},
+            {"number": "3D.3", "title": "Le forze dipolo-dipolo"},
+            {"number": "3D.4", "title": "Le forze di London"},
+            {"number": "3D.5", "title": "Il legame idrogeno"},
+            {"number": "3D.6", "title": "Le repulsioni"}
+          ]
         },
         {
-          "title": "CAPITOLO 3E - I gas reali",
-          "page_start": 212
+          "number": "3E",
+          "title": "I gas reali",
+          "subsections": [
+            {"number": "3E.1", "title": "Le deviazioni dal comportamento ideale"},
+            {"number": "3E.2", "title": "Le equazioni di stato dei gas reali"},
+            {"number": "3E.3", "title": "La liquefazione dei gas"}
+          ]
         },
         {
-          "title": "CAPITOLO 3F - I liquidi",
-          "page_start": 218
+          "number": "3F",
+          "title": "I liquidi",
+          "subsections": [
+            {"number": "3F.1", "title": "L'ordine nei liquidi"},
+            {"number": "3F.2", "title": "Viscosità e tensione superficiale"},
+            {"number": "3F.3", "title": "I cristalli liquidi"},
+            {"number": "3F.4", "title": "I liquidi ionici"}
+          ]
         },
         {
-          "title": "CAPITOLO 3G - I solidi",
-          "page_start": 224
+          "number": "3G",
+          "title": "I solidi",
+          "subsections": [
+            {"number": "3G.1", "title": "La classificazione dei solidi"},
+            {"number": "3G.2", "title": "I solidi molecolari"},
+            {"number": "3G.3", "title": "I solidi reticolari"},
+            {"number": "3G.4", "title": "I solidi metallici"},
+            {"number": "3G.5", "title": "I sistemi cristallini e le celle elementari"},
+            {"number": "3G.6", "title": "I solidi ionici"}
+          ]
         }
       ]
     },
     {
       "number": 4,
       "title": "FOCUS 4 - La termodinamica",
-      "page_start": 249,
+      "type": "focus",
       "sections": [
         {
-          "title": "CAPITOLO 4A - L'energia interna",
-          "page_start": 251
+          "number": "4A",
+          "title": "L'energia interna",
+          "subsections": [
+            {"number": "4A.1", "title": "I sistemi e l'ambiente"},
+            {"number": "4A.2", "title": "Il lavoro, l'energia e il moto delle molecole"},
+            {"number": "4A.3", "title": "Il calore"},
+            {"number": "4A.4", "title": "La prima legge"},
+            {"number": "4A.5", "title": "Le funzioni di stato"}
+          ]
         },
         {
-          "title": "CAPITOLO 4B - Lavoro e calore",
-          "page_start": 260
+          "number": "4B",
+          "title": "Lavoro e calore",
+          "subsections": [
+            {"number": "4B.1", "title": "Il lavoro di espansione"},
+            {"number": "4B.2", "title": "La misura del calore"},
+            {"number": "4B.3", "title": "La misura delle variazioni di energia interna"}
+          ]
         },
         {
-          "title": "CAPITOLO 4C - L'entalpia",
-          "page_start": 275
+          "number": "4C",
+          "title": "L'entalpia",
+          "subsections": [
+            {"number": "4C.1", "title": "Il trasferimento del calore a pressione costante"},
+            {"number": "4C.2", "title": "La capacità termica a volume o a pressione costante"},
+            {"number": "4C.3", "title": "L'origine molecolare della capacità termica dei gas"},
+            {"number": "4C.4", "title": "L'entalpia dei cambiamenti fisici"},
+            {"number": "4C.5", "title": "Le curve di riscaldamento"}
+          ]
         },
         {
-          "title": "CAPITOLO 4D - La termochimica",
-          "page_start": 286
+          "number": "4D",
+          "title": "La termochimica",
+          "subsections": [
+            {"number": "4D.1", "title": "L'entalpia di reazione"},
+            {"number": "4D.2", "title": "La relazione tra ΔH e ΔU"},
+            {"number": "4D.3", "title": "L'entalpia standard di reazione"},
+            {"number": "4D.4", "title": "La combinazione delle entalpie di reazione: la legge di Hess"},
+            {"number": "4D.5", "title": "L'entalpia standard di formazione"},
+            {"number": "4D.6", "title": "La variazione dell'entalpia di reazione con la temperatura"}
+          ]
         },
         {
-          "title": "CAPITOLO 4E - I diversi contributi all'entalpia",
-          "page_start": 305
+          "number": "4E",
+          "title": "I diversi contributi all'entalpia",
+          "subsections": [
+            {"number": "4E.1", "title": "La formazione degli ioni"},
+            {"number": "4E.2", "title": "Il ciclo di Born-Haber"},
+            {"number": "4E.3", "title": "L'entalpia di legame"}
+          ]
         },
         {
-          "title": "CAPITOLO 4F - L'entropia",
-          "page_start": 312
+          "number": "4F",
+          "title": "L'entropia",
+          "subsections": [
+            {"number": "4F.1", "title": "Le trasformazioni spontanee"},
+            {"number": "4F.2", "title": "Entropia e disordine"},
+            {"number": "4F.3", "title": "Entropia e volume"},
+            {"number": "4F.4", "title": "Entropia e temperatura"},
+            {"number": "4F.5", "title": "Entropia e stato fisico"}
+          ]
         },
         {
-          "title": "CAPITOLO 4G - L'interpretazione molecolare dell'entropia",
-          "page_start": 325
+          "number": "4G",
+          "title": "L'interpretazione molecolare dell'entropia",
+          "subsections": [
+            {"number": "4G.1", "title": "La formula di Boltzmann"},
+            {"number": "4G.2", "title": "L'equivalenza tra entropia statistica ed entropia termodinamica"}
+          ]
         },
         {
-          "title": "CAPITOLO 4H - Le entropie assolute",
-          "page_start": 332
+          "number": "4H",
+          "title": "Le entropie assolute",
+          "subsections": [
+            {"number": "4H.1", "title": "L'entropia standard molare"},
+            {"number": "4H.2", "title": "L'entropia standard di reazione"}
+          ]
         },
         {
-          "title": "CAPITOLO 4I - I cambiamenti di entropia globali",
-          "page_start": 339
+          "number": "4I",
+          "title": "I cambiamenti di entropia globali",
+          "subsections": [
+            {"number": "4I.1", "title": "L'ambiente"},
+            {"number": "4I.2", "title": "La variazione complessiva dell'entropia"},
+            {"number": "4I.3", "title": "L'equilibrio"}
+          ]
         },
         {
-          "title": "CAPITOLO 4J - L'energia libera di Gibbs",
-          "page_start": 348
+          "number": "4J",
+          "title": "L'energia libera di Gibbs",
+          "subsections": [
+            {"number": "4J.1", "title": "Concentriamoci sul sistema"},
+            {"number": "4J.2", "title": "L'energia libera di Gibbs di reazione"},
+            {"number": "4J.3", "title": "L'energia libera di Gibbs e il lavoro non espansivo"},
+            {"number": "4J.4", "title": "L'effetto della temperatura"},
+            {"number": "4J.5", "title": "La dipendenza dalla pressione dell'energia libera di Gibbs"}
+          ]
         }
       ]
     },
     {
       "number": 5,
       "title": "FOCUS 5 - L'equilibrio",
-      "page_start": 369,
+      "type": "focus",
       "sections": [
         {
-          "title": "CAPITOLO 5A - La pressione di vapore",
-          "page_start": 370
+          "number": "5A",
+          "title": "La pressione di vapore",
+          "subsections": [
+            {"number": "5A.1", "title": "L'origine della pressione di vapore"},
+            {"number": "5A.2", "title": "Volatilità e forze intermolecolari"},
+            {"number": "5A.3", "title": "La variazione della pressione di vapore con la temperatura"},
+            {"number": "5A.4", "title": "L'ebollizione"}
+          ]
         },
         {
-          "title": "CAPITOLO 5B - Gli equilibri di fase nei sistemi a un solo componente",
-          "page_start": 378
+          "number": "5B",
+          "title": "Gli equilibri di fase nei sistemi a un solo componente",
+          "subsections": [
+            {"number": "5B.1", "title": "Le transizioni di fase"},
+            {"number": "5B.2", "title": "I diagrammi di stato a un solo componente"},
+            {"number": "5B.3", "title": "Le proprietà critiche"}
+          ]
         },
         {
-          "title": "CAPITOLO 5C - Gli equilibri di fase nei sistemi a due componenti",
-          "page_start": 387
+          "number": "5C",
+          "title": "Gli equilibri di fase nei sistemi a due componenti",
+          "subsections": [
+            {"number": "5C.1", "title": "La pressione di vapore dei miscugli"},
+            {"number": "5C.2", "title": "I miscugli liquidi binari"},
+            {"number": "5C.3", "title": "La distillazione"},
+            {"number": "5C.4", "title": "Gli azeotropi"}
+          ]
         },
         {
-          "title": "CAPITOLO 5D - La solubilità",
-          "page_start": 397
+          "number": "5D",
+          "title": "La solubilità",
+          "subsections": [
+            {"number": "5D.1", "title": "I limiti della solubilità"},
+            {"number": "5D.2", "title": "La regola del simile scioglie simile"},
+            {"number": "5D.3", "title": "Pressione e solubilità dei gas"},
+            {"number": "5D.4", "title": "La temperatura e la solubilità"},
+            {"number": "5D.5", "title": "L'entalpia di dissoluzione"},
+            {"number": "5D.6", "title": "La termodinamica della dissoluzione"},
+            {"number": "5D.7", "title": "I colloidi"}
+          ]
         },
         {
-          "title": "CAPITOLO 5E - Le proprietà colligative",
-          "page_start": 409
+          "number": "5E",
+          "title": "Le proprietà colligative",
+          "subsections": [
+            {"number": "5E.1", "title": "La molalità"},
+            {"number": "5E.2", "title": "Innalzamento ebullioscopico e abbassamento crioscopico"},
+            {"number": "5E.3", "title": "L'osmosi"}
+          ]
         },
         {
-          "title": "CAPITOLO 5F - L'equilibrio chimico",
-          "page_start": 423
+          "number": "5F",
+          "title": "L'equilibrio chimico",
+          "subsections": [
+            {"number": "5F.1", "title": "La reversibilità delle reazioni"},
+            {"number": "5F.2", "title": "L'equilibrio e la legge dell'azione di massa"},
+            {"number": "5F.3", "title": "L'origine delle costanti di equilibrio"},
+            {"number": "5F.4", "title": "La descrizione termodinamica dell'equilibrio"}
+          ]
         },
         {
-          "title": "CAPITOLO 5G - Forme alternative della costante di equilibrio",
-          "page_start": 436
+          "number": "5G",
+          "title": "Forme alternative della costante di equilibrio",
+          "subsections": [
+            {"number": "5G.1", "title": "Multipli dell'equazione chimica"},
+            {"number": "5G.2", "title": "Equazioni composite"},
+            {"number": "5G.3", "title": "La concentrazione molare dei gas"}
+          ]
         },
         {
-          "title": "CAPITOLO 5H - Calcoli relativi agli equilibri",
-          "page_start": 441
+          "number": "5H",
+          "title": "Calcoli relativi agli equilibri",
+          "subsections": [
+            {"number": "5H.1", "title": "Il grado di avanzamento della reazione"},
+            {"number": "5H.2", "title": "Il verso di svolgimento della reazione"},
+            {"number": "5H.3", "title": "Calcoli con le costanti di equilibrio"}
+          ]
         },
         {
-          "title": "CAPITOLO 5I - La risposta dei sistemi all'equilibrio alla variazione delle condizioni",
-          "page_start": 452
+          "number": "5I",
+          "title": "La risposta dei sistemi all'equilibrio alla variazione delle condizioni",
+          "subsections": [
+            {"number": "5I.1", "title": "L'aggiunta e la sottrazione di reagenti"},
+            {"number": "5I.2", "title": "La compressione della miscela di reazione"},
+            {"number": "5I.3", "title": "La temperatura e l'equilibrio"}
+          ]
         }
       ]
     },
     {
       "number": 6,
       "title": "FOCUS 6 - Le reazioni",
-      "page_start": 471,
+      "type": "focus",
       "sections": [
         {
-          "title": "CAPITOLO 6A - La natura degli acidi e delle basi",
-          "page_start": 473
+          "number": "6A",
+          "title": "La natura degli acidi e delle basi",
+          "subsections": [
+            {"number": "6A.1", "title": "Gli acidi e le basi di Brønsted-Lowry"},
+            {"number": "6A.2", "title": "Gli acidi e le basi di Lewis"},
+            {"number": "6A.3", "title": "Ossidi acidi, basici e anfoteri"}
+          ]
         },
         {
-          "title": "CAPITOLO 6B - Autoprotolisi e pH",
-          "page_start": 482
+          "number": "6B",
+          "title": "Autoprotolisi e pH",
+          "subsections": [
+            {"number": "6B.1", "title": "Lo scambio di protoni tra molecole di acqua"},
+            {"number": "6B.2", "title": "La definizione e l'interpretazione del pH"},
+            {"number": "6B.3", "title": "Il pOH delle soluzioni"}
+          ]
         },
         {
-          "title": "CAPITOLO 6C - Gli acidi e le basi deboli",
-          "page_start": 490
+          "number": "6C",
+          "title": "Gli acidi e le basi deboli",
+          "subsections": [
+            {"number": "6C.1", "title": "Le costanti di acidità e di basicità"},
+            {"number": "6C.2", "title": "L'altalena coniugata"},
+            {"number": "6C.3", "title": "La struttura molecolare e la forza acida"},
+            {"number": "6C.4", "title": "La forza degli ossiacidi e degli acidi carbossilici"}
+          ]
         },
         {
-          "title": "CAPITOLO 6D - Il pH delle soluzioni acquose",
-          "page_start": 502
+          "number": "6D",
+          "title": "Il pH delle soluzioni acquose",
+          "subsections": [
+            {"number": "6D.1", "title": "Le soluzioni di acidi deboli"},
+            {"number": "6D.2", "title": "Le soluzioni di basi deboli"},
+            {"number": "6D.3", "title": "Il pH di soluzioni saline"}
+          ]
         },
         {
-          "title": "CAPITOLO 6E - Gli acidi e le basi poliprotici",
-          "page_start": 513
+          "number": "6E",
+          "title": "Gli acidi e le basi poliprotici",
+          "subsections": [
+            {"number": "6E.1", "title": "Il pH di una soluzione di acido poliprotico"},
+            {"number": "6E.2", "title": "Le soluzioni di sali degli acidi poliprotici"},
+            {"number": "6E.3", "title": "La concentrazione delle specie solute"},
+            {"number": "6E.4", "title": "La composizione e il pH"}
+          ]
         },
         {
-          "title": "CAPITOLO 6F - Il pH delle soluzioni molto diluite",
-          "page_start": 525
+          "number": "6F",
+          "title": "Il pH delle soluzioni molto diluite",
+          "subsections": [
+            {"number": "6F.1", "title": "Le soluzioni molto diluite di acidi e di basi forti"},
+            {"number": "6F.2", "title": "Le soluzioni molto diluite di acidi deboli"}
+          ]
         },
         {
-          "title": "CAPITOLO 6G - I tamponi",
-          "page_start": 531
+          "number": "6G",
+          "title": "I tamponi",
+          "subsections": [
+            {"number": "6G.1", "title": "L'azione tampone"},
+            {"number": "6G.2", "title": "La costruzione di un tampone"},
+            {"number": "6G.3", "title": "La capacità tamponante"}
+          ]
         },
         {
-          "title": "CAPITOLO 6H - Le titolazioni acido-base",
-          "page_start": 544
+          "number": "6H",
+          "title": "Le titolazioni acido-base",
+          "subsections": [
+            {"number": "6H.1", "title": "Le titolazioni acido forte-base forte"},
+            {"number": "6H.2", "title": "Le titolazioni acido forte-base debole e acido debole-base forte"},
+            {"number": "6H.3", "title": "Gli indicatori acido-base"},
+            {"number": "6H.4", "title": "Le titolazioni degli acidi poliprotici"}
+          ]
         },
         {
-          "title": "CAPITOLO 6I - Gli equilibri di solubilità",
-          "page_start": 560
+          "number": "6I",
+          "title": "Gli equilibri di solubilità",
+          "subsections": [
+            {"number": "6I.1", "title": "Il prodotto di solubilità"},
+            {"number": "6I.2", "title": "L'effetto dello ione in comune"},
+            {"number": "6I.3", "title": "La formazione di ioni complessi"}
+          ]
         },
         {
-          "title": "CAPITOLO 6J - La precipitazione",
-          "page_start": 569
+          "number": "6J",
+          "title": "La precipitazione",
+          "subsections": [
+            {"number": "6J.1", "title": "Prevedere la precipitazione"},
+            {"number": "6J.2", "title": "La precipitazione selettiva"},
+            {"number": "6J.3", "title": "La dissoluzione dei precipitati"},
+            {"number": "6J.4", "title": "L'analisi qualitativa"}
+          ]
         },
         {
-          "title": "CAPITOLO 6K - La rappresentazione delle reazioni redox",
-          "page_start": 577
+          "number": "6K",
+          "title": "La rappresentazione delle reazioni redox",
+          "subsections": [
+            {"number": "6K.1", "title": "Le semireazioni"},
+            {"number": "6K.2", "title": "Il bilanciamento delle equazioni redox"}
+          ]
         },
         {
-          "title": "CAPITOLO 6L - Le celle galvaniche",
-          "page_start": 585
+          "number": "6L",
+          "title": "Le celle galvaniche",
+          "subsections": [
+            {"number": "6L.1", "title": "La struttura delle celle galvaniche"},
+            {"number": "6L.2", "title": "Il potenziale di cella e l'energia libera di reazione"},
+            {"number": "6L.3", "title": "La notazione delle celle"}
+          ]
         },
         {
-          "title": "CAPITOLO 6M - I potenziali standard",
-          "page_start": 596
+          "number": "6M",
+          "title": "I potenziali standard",
+          "subsections": [
+            {"number": "6M.1", "title": "La definizione di potenziale standard"},
+            {"number": "6M.2", "title": "La serie elettrochimica"}
+          ]
         },
         {
-          "title": "CAPITOLO 6N - Le applicazioni dei potenziali di elettrodo",
-          "page_start": 606
+          "number": "6N",
+          "title": "Le applicazioni dei potenziali di elettrodo",
+          "subsections": [
+            {"number": "6N.1", "title": "I potenziali standard e le costanti di equilibrio"},
+            {"number": "6N.2", "title": "L'equazione di Nernst"},
+            {"number": "6N.3", "title": "Gli elettrodi ione-selettivi"},
+            {"number": "6N.4", "title": "La corrosione"},
+            {"number": "6N.5", "title": "Le celle di impiego pratico"}
+          ]
         },
         {
-          "title": "CAPITOLO 6O - L'elettrolisi",
-          "page_start": 621
+          "number": "6O",
+          "title": "L'elettrolisi",
+          "subsections": [
+            {"number": "6O.1", "title": "Le celle elettrolitiche"},
+            {"number": "6O.2", "title": "I prodotti dell'elettrolisi"},
+            {"number": "6O.3", "title": "Le applicazioni dell'elettrolisi"}
+          ]
         }
       ]
     },
     {
       "number": 7,
       "title": "FOCUS 7 - La cinetica",
-      "page_start": 635,
+      "type": "focus",
       "sections": [
         {
-          "title": "CAPITOLO 7A - La velocità di reazione",
-          "page_start": 636
+          "number": "7A",
+          "title": "La velocità di reazione",
+          "subsections": [
+            {"number": "7A.1", "title": "La concentrazione e la velocità di reazione"},
+            {"number": "7A.2", "title": "La velocità istantanea di reazione"},
+            {"number": "7A.3", "title": "Le leggi cinetiche e l'ordine di reazione"}
+          ]
         },
         {
-          "title": "CAPITOLO 7B - Le leggi cinetiche integrate",
-          "page_start": 650
+          "number": "7B",
+          "title": "Le leggi cinetiche integrate",
+          "subsections": [
+            {"number": "7B.1", "title": "Le leggi cinetiche integrate del primo ordine"},
+            {"number": "7B.2", "title": "Il tempo di dimezzamento delle reazioni del primo ordine"},
+            {"number": "7B.3", "title": "Le leggi cinetiche integrate del secondo ordine"}
+          ]
         },
         {
-          "title": "CAPITOLO 7C - I meccanismi di reazione",
-          "page_start": 661
+          "number": "7C",
+          "title": "I meccanismi di reazione",
+          "subsections": [
+            {"number": "7C.1", "title": "Le reazioni elementari"},
+            {"number": "7C.2", "title": "Le leggi cinetiche delle reazioni elementari"},
+            {"number": "7C.3", "title": "Combinare le leggi cinetiche elementari"},
+            {"number": "7C.4", "title": "Velocità ed equilibrio"},
+            {"number": "7C.5", "title": "Le reazioni a catena"}
+          ]
         },
         {
-          "title": "CAPITOLO 7D - I modelli di reazione",
-          "page_start": 675
+          "number": "7D",
+          "title": "I modelli di reazione",
+          "subsections": [
+            {"number": "7D.1", "title": "L'effetto della temperatura"},
+            {"number": "7D.2", "title": "La teoria degli urti"},
+            {"number": "7D.3", "title": "La teoria dello stato di transizione"}
+          ]
         },
         {
-          "title": "CAPITOLO 7E - La catalisi",
-          "page_start": 686
+          "number": "7E",
+          "title": "La catalisi",
+          "subsections": [
+            {"number": "7E.1", "title": "Come funzionano i catalizzatori"},
+            {"number": "7E.2", "title": "I catalizzatori industriali"},
+            {"number": "7E.3", "title": "I catalizzatori viventi: gli enzimi"}
+          ]
         }
       ]
     },
     {
       "number": 8,
       "title": "FOCUS 8 - I materiali",
-      "page_start": 699,
+      "type": "focus",
       "sections": [
         {
-          "title": "CAPITOLO 8A - Le proprietà periodiche",
-          "page_start": 700
+          "number": "8A",
+          "title": "Le proprietà periodiche",
+          "subsections": [
+            {"number": "8A.1", "title": "L'andamento delle proprietà atomiche"},
+            {"number": "8A.2", "title": "L'andamento del tipo di legame"},
+            {"number": "8A.3", "title": "L'andamento delle proprietà chimiche"},
+            {"number": "8A.4", "title": "L'andamento delle proprietà elettriche dei solidi"}
+          ]
         },
         {
-          "title": "CAPITOLO 8B - L'idrogeno",
-          "page_start": 713
+          "number": "8B",
+          "title": "L'idrogeno",
+          "subsections": [
+            {"number": "8B.1", "title": "L'elemento"},
+            {"number": "8B.2", "title": "I composti dell'idrogeno"}
+          ]
         },
         {
-          "title": "CAPITOLO 8C - Il gruppo 1: i metalli alcalini",
-          "page_start": 718
+          "number": "8C",
+          "title": "Il gruppo 1: i metalli alcalini",
+          "subsections": [
+            {"number": "8C.1", "title": "Gli elementi del gruppo 1"},
+            {"number": "8C.2", "title": "I composti di litio, sodio e potassio"}
+          ]
         },
         {
-          "title": "CAPITOLO 8D - Il gruppo 2: i metalli alcalino-terrosi",
-          "page_start": 723
+          "number": "8D",
+          "title": "Il gruppo 2: i metalli alcalino-terrosi",
+          "subsections": [
+            {"number": "8D.1", "title": "Gli elementi del gruppo 2"},
+            {"number": "8D.2", "title": "I composti di berillio, magnesio e calcio"},
+            {"number": "8D.3", "title": "Applicazioni: calcare, cemento e calcestruzzo"}
+          ]
         },
         {
-          "title": "CAPITOLO 8E - Il gruppo 13: la famiglia del boro",
-          "page_start": 730
+          "number": "8E",
+          "title": "Il gruppo 13: la famiglia del boro",
+          "subsections": [
+            {"number": "8E.1", "title": "Gli elementi del gruppo 13"},
+            {"number": "8E.2", "title": "Ossidi, alogenuri e nitruri del gruppo 13"},
+            {"number": "8E.3", "title": "Borani, boroidruri e boruri"},
+            {"number": "8E.4", "title": "Applicazioni: materiali strutturali, vetro e semiconduttori"}
+          ]
         },
         {
-          "title": "CAPITOLO 8F - Il gruppo 14: la famiglia del carbonio",
-          "page_start": 738
+          "number": "8F",
+          "title": "Il gruppo 14: la famiglia del carbonio",
+          "subsections": [
+            {"number": "8F.1", "title": "Gli elementi del gruppo 14"},
+            {"number": "8F.2", "title": "Ossidi del carbonio e del silicio"},
+            {"number": "8F.3", "title": "I silicati"},
+            {"number": "8F.4", "title": "Altri importanti composti del gruppo 14"},
+            {"number": "8F.5", "title": "Applicazioni: i nanomateriali"}
+          ]
         },
         {
-          "title": "CAPITOLO 8G - Il gruppo 15: la famiglia dell'azoto",
-          "page_start": 749
+          "number": "8G",
+          "title": "Il gruppo 15: la famiglia dell'azoto",
+          "subsections": [
+            {"number": "8G.1", "title": "Gli elementi del gruppo 15"},
+            {"number": "8G.2", "title": "Composti con l'idrogeno e gli alogeni"},
+            {"number": "8G.3", "title": "Ossidi e ossiacidi dell'azoto"},
+            {"number": "8G.4", "title": "Ossidi e ossiacidi del fosforo"},
+            {"number": "8G.5", "title": "Applicazioni: i materiali luminescenti"}
+          ]
         },
         {
-          "title": "CAPITOLO 8H - Il gruppo 16: la famiglia dell'ossigeno",
-          "page_start": 759
+          "number": "8H",
+          "title": "Il gruppo 16: la famiglia dell'ossigeno",
+          "subsections": [
+            {"number": "8H.1", "title": "Gli elementi del gruppo 16"},
+            {"number": "8H.2", "title": "I composti con l'idrogeno"},
+            {"number": "8H.3", "title": "Ossidi e ossiacidi dello zolfo"},
+            {"number": "8H.4", "title": "Applicazioni: ceramiche e vetri"}
+          ]
         },
         {
-          "title": "CAPITOLO 8I - Il gruppo 17: gli alogeni",
-          "page_start": 771
+          "number": "8I",
+          "title": "Il gruppo 17: gli alogeni",
+          "subsections": [
+            {"number": "8I.1", "title": "Gli elementi del gruppo 17"},
+            {"number": "8I.2", "title": "I composti degli alogeni e le loro applicazioni"}
+          ]
         },
         {
-          "title": "CAPITOLO 8J - Il gruppo 18: i gas nobili",
-          "page_start": 778
+          "number": "8J",
+          "title": "Il gruppo 18: i gas nobili",
+          "subsections": [
+            {"number": "8J.1", "title": "Gli elementi del gruppo 18"},
+            {"number": "8J.2", "title": "I composti dei gas nobili e le loro applicazioni"}
+          ]
         },
         {
-          "title": "CAPITOLO 8K - Alcuni elementi del blocco d in rassegna",
-          "page_start": 782
+          "number": "8K",
+          "title": "Alcuni elementi del blocco d in rassegna",
+          "subsections": [
+            {"number": "8K.1", "title": "Dallo scandio al nichel"},
+            {"number": "8K.2", "title": "I gruppi 11 e 12"},
+            {"number": "8K.3", "title": "Applicazioni: le leghe e i materiali magnetici"}
+          ]
         },
         {
-          "title": "CAPITOLO 8L - I composti di coordinazione",
-          "page_start": 796
+          "number": "8L",
+          "title": "I composti di coordinazione",
+          "subsections": [
+            {"number": "8L.1", "title": "I complessi di coordinazione"},
+            {"number": "8L.2", "title": "La forma dei complessi"},
+            {"number": "8L.3", "title": "Gli isomeri"}
+          ]
         },
         {
-          "title": "CAPITOLO 8M - La struttura elettronica dei complessi dei metalli del blocco d",
-          "page_start": 809
+          "number": "8M",
+          "title": "La struttura elettronica dei complessi dei metalli del blocco d",
+          "subsections": [
+            {"number": "8M.1", "title": "La teoria del campo cristallino"},
+            {"number": "8M.2", "title": "La serie spettrochimica"},
+            {"number": "8M.3", "title": "Il colore dei complessi"},
+            {"number": "8M.4", "title": "Le proprietà magnetiche dei complessi"},
+            {"number": "8M.5", "title": "La teoria del campo dei ligandi"},
+            {"number": "8M.6", "title": "Applicazioni: le celle solari sensibilizzate ai coloranti"}
+          ]
         }
       ]
     },
     {
       "number": 9,
       "title": "FOCUS 9 - La chimica nucleare",
-      "page_start": 829,
+      "type": "focus",
       "sections": [
         {
-          "title": "CAPITOLO 9A - Il decadimento radioattivo",
-          "page_start": 830
+          "number": "9A",
+          "title": "Il decadimento radioattivo",
+          "subsections": [
+            {"number": "9A.1", "title": "Le prove del decadimento radioattivo spontaneo"},
+            {"number": "9A.2", "title": "Le reazioni nucleari"},
+            {"number": "9A.3", "title": "L'andamento della stabilità nucleare"},
+            {"number": "9A.4", "title": "La previsione del tipo di decadimento nucleare"},
+            {"number": "9A.5", "title": "La nucleosintesi"}
+          ]
         },
         {
-          "title": "CAPITOLO 9B - La radioattività",
-          "page_start": 842
+          "number": "9B",
+          "title": "La radioattività",
+          "subsections": [
+            {"number": "9B.1", "title": "Gli effetti biologici della radiazione"},
+            {"number": "9B.2", "title": "La misura della velocità del decadimento nucleare"},
+            {"number": "9B.3", "title": "Gli impieghi dei radioisotopi"}
+          ]
         },
         {
-          "title": "CAPITOLO 9C - L'energia nucleare",
-          "page_start": 851
+          "number": "9C",
+          "title": "L'energia nucleare",
+          "subsections": [
+            {"number": "9C.1", "title": "Le trasformazioni massa-energia"},
+            {"number": "9C.2", "title": "La produzione dell'energia nucleare"},
+            {"number": "9C.3", "title": "La chimica dell'energia nucleare"}
+          ]
         }
       ]
     },
     {
       "number": 10,
       "title": "FOCUS 10 - La chimica organica",
-      "page_start": 863,
+      "type": "focus",
       "sections": [
         {
-          "title": "CAPITOLO 10A - Le strutture degli idrocarburi alifatici",
-          "page_start": 864
+          "number": "10A",
+          "title": "Le strutture degli idrocarburi alifatici",
+          "subsections": [
+            {"number": "10A.1", "title": "I tipi di idrocarburi alifatici"},
+            {"number": "10A.2", "title": "Gli isomeri"},
+            {"number": "10A.3", "title": "Le proprietà fisiche degli alcani e degli alcheni"}
+          ]
         },
         {
-          "title": "CAPITOLO 10B - Le reazioni degli idrocarburi alifatici",
-          "page_start": 876
+          "number": "10B",
+          "title": "Le reazioni degli idrocarburi alifatici",
+          "subsections": [
+            {"number": "10B.1", "title": "Le reazioni di sostituzione degli alcani"},
+            {"number": "10B.2", "title": "Sintesi degli alcheni e degli alchini"},
+            {"number": "10B.3", "title": "L'addizione elettrofila"},
+            {"number": "10B.4", "title": "Le applicazioni degli idrocarburi alifatici: il petrolio"}
+          ]
         },
         {
-          "title": "CAPITOLO 10C - Gli idrocarburi aromatici",
-          "page_start": 882
+          "number": "10C",
+          "title": "Gli idrocarburi aromatici",
+          "subsections": [
+            {"number": "10C.1", "title": "La nomenclatura dei composti aromatici"},
+            {"number": "10C.2", "title": "La sostituzione elettrofila"},
+            {"number": "10C.3", "title": "Le applicazioni degli idrocarburi aromatici: il carbone"}
+          ]
         },
         {
-          "title": "CAPITOLO 10D - I gruppi funzionali comuni",
-          "page_start": 889
+          "number": "10D",
+          "title": "I gruppi funzionali comuni",
+          "subsections": [
+            {"number": "10D.1", "title": "Gli aloalcani"},
+            {"number": "10D.2", "title": "Gli alcoli"},
+            {"number": "10D.3", "title": "Gli eteri"},
+            {"number": "10D.4", "title": "I fenoli"},
+            {"number": "10D.5", "title": "Le aldeidi e i chetoni"},
+            {"number": "10D.6", "title": "Gli acidi carbossilici"},
+            {"number": "10D.7", "title": "Gli esteri"},
+            {"number": "10D.8", "title": "Le ammine, gli amminoacidi e le ammidi"}
+          ]
         },
         {
-          "title": "CAPITOLO 10E - Polimeri e macromolecole biologiche",
-          "page_start": 900
+          "number": "10E",
+          "title": "Polimeri e macromolecole biologiche",
+          "subsections": [
+            {"number": "10E.1", "title": "La polimerizzazione per addizione"},
+            {"number": "10E.2", "title": "La polimerizzazione per condensazione"},
+            {"number": "10E.3", "title": "I copolimeri e i materiali compositi"},
+            {"number": "10E.4", "title": "Le proprietà fisiche dei polimeri"},
+            {"number": "10E.5", "title": "Le proteine"},
+            {"number": "10E.6", "title": "I carboidrati"},
+            {"number": "10E.7", "title": "Gli acidi nucleici"}
+          ]
         }
       ]
     }

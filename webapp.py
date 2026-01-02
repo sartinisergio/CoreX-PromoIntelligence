@@ -631,7 +631,7 @@ with tab2:
                                 from app.multiclass_pipeline import MulticlassFrameworkPipeline
                                 from app.report_generator import MulticlassReportGenerator
                                 from app.framework_adapter import FrameworkAdapter
-                                
+                            
                                 # Inizializza pipeline multiclasse
                                 pipeline = MulticlassFrameworkPipeline(
                                     materia=materia,

@@ -106,28 +106,44 @@ class ManualAnalyzer:
             return None
     
     def extract_manual_topics(self, manual: Dict) -> List[Dict]:
-        """Estrae tutti gli argomenti (capitoli + sezioni) da un manuale."""
+        """Estrae tutti gli argomenti (capitoli + sezioni + subsections) da un manuale."""
         topics = []
         
         for chapter in manual.get("chapters", []):
+            # Livello 1: Chapter/Focus
             topics.append({
                 "text": chapter.get("title", ""),
                 "type": "chapter",
                 "chapter_num": chapter.get("number", 0),
                 "section_num": None,
+                "subsection_num": None,
                 "page_start": chapter.get("page_start", None)
             })
             
             for section in chapter.get("sections", []):
+                # Livello 2: Section/Capitolo
                 topics.append({
                     "text": section.get("title", ""),
                     "type": "section",
                     "chapter_num": chapter.get("number", 0),
                     "section_num": section.get("number", ""),
+                    "subsection_num": None,
                     "page_start": section.get("page_start", None)
                 })
+                
+                # Livello 3: Subsection/Paragrafo (NUOVO)
+                for subsection in section.get("subsections", []):
+                    topics.append({
+                        "text": subsection.get("title", ""),
+                        "type": "subsection",
+                        "chapter_num": chapter.get("number", 0),
+                        "section_num": section.get("number", ""),
+                        "subsection_num": subsection.get("number", ""),
+                        "page_start": subsection.get("page_start", None)
+                    })
         
         return topics
+
     
     # =========================================================
     # MATCHING SEMANTICO CON LLM (UNIVERSALE)
