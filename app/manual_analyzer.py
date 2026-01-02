@@ -666,70 +666,181 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
     ) -> Dict:
         """
         Confronta un manuale con il framework REALE (generato da analisi programmi).
+        Supporta sia framework singola-classe che multiclasse.
         """
         manual_topics = self.extract_manual_topics(manual)
-        modules = real_framework.get("syllabus_modules", [])
+        
+        # SUPPORTO MULTICLASSE: cerca moduli in "modules" o "syllabus_modules"
+        modules = real_framework.get("modules", real_framework.get("syllabus_modules", []))
+        
+        # Info framework
+        framework_info = real_framework.get("framework", {})
+        classes_analyzed = framework_info.get("classes_analyzed", [])
+        is_multiclass = len(classes_analyzed) > 1 or real_framework.get("summary", {}).get("n_classes", 1) > 1
         
         modules_analysis = []
+        subject = manual.get("subject", framework_info.get("materia", "materia"))
         
-        for module in modules:
-            module_name = module.get("name", "")
-            real_concepts = module.get("matched_concepts", [])
-            module_coverage_real = module.get("coverage_percentage", 0)
+        # Prova matching con LLM se disponibile
+        llm_result = None
+        if self.use_llm and modules:
+            llm_result = self._match_manual_to_framework_llm(
+                manual, manual_topics, modules, subject, provider_id, model
+            )
+        
+        method_used = "fallback"
+        
+        if llm_result and "modules_coverage" in llm_result:
+            # === USA RISULTATI LLM ===
+            method_used = "llm"
             
-            matched_concepts = []
-            for concept in real_concepts[:20]:
-                concept_name = concept.get("name", "")
-                concept_freq = concept.get("frequency", 0)
+            for mod_cov in llm_result["modules_coverage"]:
+                module_id = mod_cov.get("module_id", 0)
+                module_name = mod_cov.get("module_name", "")
+                coverage_pct = mod_cov.get("coverage_percent", 0)
                 
-                best_match = None
-                best_score = 0
+                # Trova modulo originale per dati aggiuntivi
+                original_module = next((m for m in modules if m.get("id") == module_id), {})
                 
-                for topic in manual_topics:
-                    is_match, score = self._text_matches_content_fallback(topic["text"], concept_name)
-                    if is_match and score > best_score:
-                        best_score = score
-                        best_match = topic
+                # Info multiclasse
+                avg_coverage_real = original_module.get("avg_coverage", 0)
+                coverage_by_class = original_module.get("coverage_by_class", {})
+                is_core = original_module.get("is_core", False)
                 
-                matched_concepts.append({
-                    "concept": concept_name,
-                    "frequency_in_programs": round(concept_freq, 1),
-                    "found_in_manual": best_match["text"] if best_match else None,
-                    "chapter": best_match["chapter_num"] if best_match else None,
-                    "match_score": round(best_score, 2)
+                content_matches = []
+                for matched in mod_cov.get("matched_contents", []):
+                    content_matches.append({
+                        "content": matched.get("content", ""),
+                        "matched_by": matched.get("matched_by", ""),
+                        "chapter": matched.get("chapter_num", 0),
+                        "score": 1.0
+                    })
+                
+                for missing in mod_cov.get("missing_contents", []):
+                    content_matches.append({
+                        "content": missing,
+                        "matched_by": None,
+                        "score": 0
+                    })
+                
+                covered = len([c for c in content_matches if c.get("matched_by")])
+                total = len(content_matches) if content_matches else len(original_module.get("core_contents", []))
+                
+                modules_analysis.append({
+                    "module_id": module_id,
+                    "module_name": module_name,
+                    "manual_coverage": round(coverage_pct, 1),
+                    "real_avg_coverage": round(avg_coverage_real, 1),
+                    "coverage_by_class": coverage_by_class,
+                    "is_core": is_core,
+                    "contents_covered": covered,
+                    "contents_total": total,
+                    "content_matches": content_matches,
+                    "status": self._coverage_to_status(coverage_pct)
                 })
-            
-            covered = sum(1 for mc in matched_concepts if mc["found_in_manual"])
-            coverage_pct = (covered / len(matched_concepts) * 100) if matched_concepts else 0
-            
-            weighted_coverage = 0
-            total_weight = 0
-            for mc in matched_concepts:
-                weight = mc["frequency_in_programs"]
-                total_weight += weight
-                if mc["found_in_manual"]:
-                    weighted_coverage += weight
-            
-            weighted_pct = (weighted_coverage / total_weight * 100) if total_weight > 0 else 0
-            
-            modules_analysis.append({
-                "module_id": module.get("id", 0),
-                "module_name": module_name,
-                "real_coverage_in_programs": round(module_coverage_real, 1),
-                "manual_coverage": round(coverage_pct, 1),
-                "weighted_coverage": round(weighted_pct, 1),
-                "concepts_matched": covered,
-                "concepts_total": len(matched_concepts),
-                "matched_concepts": matched_concepts,
-                "status": module.get("status", "N/D")
-            })
         
-        total_concepts = sum(m["concepts_total"] for m in modules_analysis)
-        total_matched = sum(m["concepts_matched"] for m in modules_analysis)
-        overall_coverage = (total_matched / total_concepts * 100) if total_concepts > 0 else 0
+        else:
+            # === FALLBACK: MATCHING BASATO SU CORE_CONTENTS E CONCEPTS_BY_CLASS ===
+            method_used = "fallback"
+            
+            for module in modules:
+                module_id = module.get("id", 0)
+                module_name = module.get("name", "")
+                core_contents = module.get("core_contents", [])
+                concepts_by_class = module.get("concepts_by_class", {})
+                avg_coverage_real = module.get("avg_coverage", 0)
+                coverage_by_class = module.get("coverage_by_class", {})
+                is_core = module.get("is_core", False)
+                
+                # Raccogli tutti i concetti reali da tutte le classi
+                all_real_concepts = set()
+                for classe, concepts in concepts_by_class.items():
+                    for c in concepts:
+                        all_real_concepts.add(c.lower() if isinstance(c, str) else str(c).lower())
+                
+                content_matches = []
+                matched_count = 0
+                
+                # Match sui core_contents (come per framework ideale)
+                for content in core_contents:
+                    best_match = None
+                    best_score = 0
+                    
+                    for topic in manual_topics:
+                        is_match, score = self._text_matches_content_fallback(topic["text"], content)
+                        if is_match and score > best_score:
+                            best_score = score
+                            best_match = topic
+                    
+                    if best_match:
+                        content_matches.append({
+                            "content": content,
+                            "matched_by": best_match["text"],
+                            "chapter": best_match["chapter_num"],
+                            "score": round(best_score, 2)
+                        })
+                        matched_count += 1
+                    else:
+                        content_matches.append({
+                            "content": content,
+                            "matched_by": None,
+                            "score": 0
+                        })
+                
+                # Match aggiuntivo sui concetti estratti (concepts_by_class)
+                concepts_matched = 0
+                for concept in list(all_real_concepts)[:15]:  # Top 15 concetti
+                    for topic in manual_topics:
+                        is_match, _ = self._text_matches_content_fallback(topic["text"], concept)
+                        if is_match:
+                            concepts_matched += 1
+                            break
+                
+                # Calcola coverage combinata
+                core_coverage = (matched_count / len(core_contents) * 100) if core_contents else 0
+                concept_coverage = (concepts_matched / min(len(all_real_concepts), 15) * 100) if all_real_concepts else 0
+                
+                # Media pesata: 60% core_contents, 40% concepts reali
+                combined_coverage = (core_coverage * 0.6 + concept_coverage * 0.4) if all_real_concepts else core_coverage
+                
+                modules_analysis.append({
+                    "module_id": module_id,
+                    "module_name": module_name,
+                    "manual_coverage": round(combined_coverage, 1),
+                    "core_coverage": round(core_coverage, 1),
+                    "concept_coverage": round(concept_coverage, 1),
+                    "real_avg_coverage": round(avg_coverage_real, 1),
+                    "coverage_by_class": coverage_by_class,
+                    "is_core": is_core,
+                    "contents_covered": matched_count,
+                    "contents_total": len(core_contents),
+                    "concepts_matched": concepts_matched,
+                    "concepts_checked": min(len(all_real_concepts), 15),
+                    "content_matches": content_matches,
+                    "status": self._coverage_to_status(combined_coverage)
+                })
         
-        all_weighted_cov = [m["weighted_coverage"] for m in modules_analysis if m["concepts_total"] > 0]
-        overall_weighted = sum(all_weighted_cov) / len(all_weighted_cov) if all_weighted_cov else 0
+        # Calcola coperture complessive
+        if modules_analysis:
+            overall_coverage = sum(m["manual_coverage"] for m in modules_analysis) / len(modules_analysis)
+            
+            # Core modules coverage (solo moduli CORE)
+            core_modules = [m for m in modules_analysis if m.get("is_core", False)]
+            core_coverage = sum(m["manual_coverage"] for m in core_modules) / len(core_modules) if core_modules else overall_coverage
+        else:
+            overall_coverage = 0
+            core_coverage = 0
+        
+        # Gap analysis
+        missing_contents = []
+        for m in modules_analysis:
+            for cm in m.get("content_matches", []):
+                if not cm.get("matched_by"):
+                    missing_contents.append({
+                        "content": cm["content"],
+                        "module": m["module_name"],
+                        "is_core_module": m.get("is_core", False)
+                    })
         
         return {
             "manual_info": {
@@ -741,18 +852,25 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
                 "n_sections": sum(len(ch.get("sections", [])) for ch in manual.get("chapters", []))
             },
             "real_framework_info": {
-                "name": real_framework.get("framework", {}).get("name", "N/D"),
-                "materia": real_framework.get("framework", {}).get("materia", "N/D"),
-                "classes_analyzed": real_framework.get("framework", {}).get("classes_analyzed", []),
-                "n_syllabus": real_framework.get("overall_statistics", {}).get("n_syllabus_analyzed", 0)
+                "name": framework_info.get("name", "N/D"),
+                "type": "multiclass" if is_multiclass else "single",
+                "classes_analyzed": classes_analyzed,
+                "n_modules": len(modules),
+                "n_core_modules": len([m for m in modules if m.get("is_core", False)])
             },
             "overall_coverage": round(overall_coverage, 1),
-            "overall_weighted_coverage": round(overall_weighted, 1),
-            "judgment": self._coverage_to_judgment(overall_weighted),
-            "recommendation": self._get_recommendation(overall_weighted, "real"),
+            "core_modules_coverage": round(core_coverage, 1),
+            "judgment": self._coverage_to_judgment(overall_coverage),
+            "recommendation": self._get_recommendation(overall_coverage, "real"),
             "modules_analysis": modules_analysis,
+            "gaps": {
+                "missing_in_manual": missing_contents,
+                "priority_gaps": [g for g in missing_contents if g.get("is_core_module", False)]
+            },
+            "method": method_used,
             "analysis_date": datetime.now().isoformat()
         }
+
     # =========================================================
     # CONFRONTO TRA MANUALI
     # =========================================================

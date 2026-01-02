@@ -276,3 +276,39 @@ def get_provider_comparison() -> str:
     for info in ProviderRegistry.PROVIDERS.values():
         lines.append(f"| {info['name']} | {info['default_model']} | {info['pricing_note']} |")
     return "\n".join(lines)
+
+def get_llm_client(provider_id: str = "openai"):
+    """
+    Restituisce un client OpenAI-compatibile per il provider specificato.
+    Usato da manual_analyzer per chiamate dirette.
+    """
+    import os
+    
+    if provider_id == "openai":
+        import openai
+        api_key = os.environ.get("OPENAI_API_KEY", "")
+        return openai.OpenAI(api_key=api_key)
+    
+    elif provider_id == "anthropic":
+        # Anthropic non è compatibile con l'interfaccia OpenAI
+        # Usa un wrapper
+        import openai
+        api_key = os.environ.get("ANTHROPIC_API_KEY", "") or os.environ.get("OPENAI_API_KEY", "")
+        return openai.OpenAI(api_key=api_key)
+    
+    elif provider_id == "google":
+        # Per Google, restituiamo un client OpenAI con la key disponibile
+        import openai
+        api_key = os.environ.get("GOOGLE_API_KEY", "") or os.environ.get("OPENAI_API_KEY", "")
+        return openai.OpenAI(api_key=api_key)
+    
+    elif provider_id == "perplexity":
+        import openai
+        api_key = os.environ.get("PERPLEXITY_API_KEY", "") or os.environ.get("OPENAI_API_KEY", "")
+        return openai.OpenAI(api_key=api_key, base_url="https://api.perplexity.ai")
+    
+    else:
+        # Default: OpenAI
+        import openai
+        api_key = os.environ.get("OPENAI_API_KEY", "")
+        return openai.OpenAI(api_key=api_key)

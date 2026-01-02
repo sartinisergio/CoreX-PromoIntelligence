@@ -1713,7 +1713,7 @@ with tab6:
                                         
                                         col1, col2, col3 = st.columns(3)
                                         col1.metric("Copertura Base", f"{analysis['overall_coverage']:.1f}%")
-                                        col2.metric("Copertura Pesata", f"{analysis['overall_weighted_coverage']:.1f}%")
+                                        col2.metric("Copertura Pesata", f"{analysis.get('core_modules_coverage', analysis.get('overall_coverage', 0)):.1f}%")
                                         col3.metric("Giudizio", analysis['judgment'])
                                         
                                         st.info(f"💡 {analysis.get('recommendation', '')}")
@@ -1723,8 +1723,8 @@ with tab6:
                                         st.markdown("**Copertura per Modulo (pesata per frequenza nei programmi):**")
                                         
                                         for mod in analysis['modules_analysis']:
-                                            cov = mod['weighted_coverage']
-                                            real_cov = mod['real_coverage_in_programs']
+                                            cov = mod.get('manual_coverage', mod.get('weighted_coverage', 0))
+                                            real_cov = mod.get('real_avg_coverage', mod.get('real_coverage_in_programs', 0))
                                             status = "🟢" if cov >= 70 else ("🟡" if cov >= 40 else "🔴")
                                             
                                             st.write(f"{status} **{mod['module_name']}** — Manuale: {cov:.0f}% | Nei programmi: {real_cov:.0f}%")
@@ -1732,7 +1732,28 @@ with tab6:
                                         # Download
                                         st.markdown("---")
                                         report_html = analyzer.generate_single_analysis_report_html(analysis, "real")
-                                        
+                                        # === SALVATAGGIO IN ARCHIVIO ===
+                                        archivio_manuali_dir = Path("archivio/analisi_manuali")
+                                        archivio_manuali_dir.mkdir(parents=True, exist_ok=True)
+
+                                        # Nome cartella con timestamp
+                                        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                                        manual_id = analysis.get("manual_info", {}).get("id", "manuale")
+                                        framework_type_label = "ideale" if framework_type == "ideal" else "reale"
+                                        folder_name = f"{manual_id}_vs_{framework_type_label}_{timestamp}"
+
+                                        save_dir = archivio_manuali_dir / folder_name
+                                        save_dir.mkdir(exist_ok=True)
+
+                                        # Salva report HTML
+                                        with open(save_dir / "report_analisi.html", "w", encoding="utf-8") as f:
+                                            f.write(report_html)
+
+                                        # Salva metadati JSON
+                                        with open(save_dir / "analisi.json", "w", encoding="utf-8") as f:
+                                            json.dump(analysis, f, indent=2, ensure_ascii=False, default=str)
+
+                                        st.success(f"✅ Analisi salvata in: archivio/analisi_manuali/{folder_name}/")
                                         st.download_button(
                                             "📥 Scarica Report HTML",
                                             report_html,
