@@ -1,5 +1,5 @@
 @echo off
-cd /d "C:\cd desktop\CoreX-PromoIntelligence"
+cd /d "%USERPROFILE%\Desktop\CoreX-PromoIntelligence"
 
 echo Controllo modifiche in corso...
 
