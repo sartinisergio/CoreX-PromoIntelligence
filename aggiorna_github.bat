@@ -13,13 +13,7 @@ if %errorlevel%==0 (
     for /f "tokens=1-2 delims=: " %%a in ('time /t') do set ora=%%a.%%b
     
     git commit -m "Aggiornamento %data% %ora%"
-    git push origin main
-    
-    if %errorlevel%==0 (
-        echo Push completato con successo!
-    ) else (
-        echo Errore durante il push.
-    )
+    git push origin main && echo Push completato con successo! || echo Errore durante il push.
 )
 
 pause
