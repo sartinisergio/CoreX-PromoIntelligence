@@ -3,12 +3,12 @@
     "manual_name": "Principi di Chimica",
     "manual_type": "zanichelli",
     "materia": "Chimica_Generale",
-    "saved_at": "2026-01-02T12:02:29.715048",
+    "saved_at": "2026-01-02T19:07:18.051783",
     "analysis_version": "2.0"
   },
   "analysis": {
     "manual_info": {
-      "id": "Atkins_Principi",
+      "id": "Atkins_Principi_Chimica",
       "title": "Principi di Chimica",
       "author": "Atkins",
       "publisher": "Zanichelli",
@@ -20,7 +20,7 @@
       "n_modules": 12,
       "total_contents": 60
     },
-    "overall_coverage": 69.2,
+    "overall_coverage": 71.7,
     "judgment": "Buono",
     "recommendation": "Il manuale copre la maggior parte dei contenuti con alcune lacune. Adozione con integrazioni.",
     "modules_analysis": [
@@ -28,42 +28,35 @@
         "module_id": 1,
         "module_name": "Struttura atomica e tavola periodica",
         "coverage_percentage": 80,
-        "contents_covered": 5,
+        "contents_covered": 4,
         "contents_total": 5,
         "content_matches": [
           {
             "content": "Particelle subatomiche, isotopi, numero Avogadro",
-            "matched_by": "CAPITOLO 1B - La teoria quantistica",
+            "matched_by": "L'osservazione degli atomi",
             "chapter": 1,
             "score": 1.0
           },
           {
             "content": "Modello Bohr, spettri atomici",
-            "matched_by": "CAPITOLO 1D - L'atomo di idrogeno",
-            "chapter": 1,
-            "score": 1.0
-          },
-          {
-            "content": "Numeri quantici, orbitali s/p/d/f",
-            "matched_by": "CAPITOLO 1C - Funzioni d'onda e livelli energetici",
+            "matched_by": "La teoria quantistica",
             "chapter": 1,
             "score": 1.0
           },
           {
             "content": "Configurazioni elettroniche, eccezioni",
-            "matched_by": "CAPITOLO 1E - Gli atomi multielettronici",
+            "matched_by": "Gli atomi multielettronici",
             "chapter": 1,
             "score": 1.0
           },
           {
             "content": "Raggio atomico, IE, elettronegatività",
-            "matched_by": "CAPITOLO 8A - Le proprietà periodiche",
-            "chapter": 8,
+            "matched_by": "La periodicità",
+            "chapter": 1,
             "score": 1.0
           }
         ],
         "chapters_involved": [
-          8,
           1
         ],
         "status": "completo"
@@ -71,39 +64,38 @@
       {
         "module_id": 2,
         "module_name": "Legame chimico e geometria molecolare",
-        "coverage_percentage": 85,
-        "contents_covered": 5,
+        "coverage_percentage": 90,
+        "contents_covered": 4,
         "contents_total": 5,
         "content_matches": [
           {
             "content": "Teoria Lewis, regola ottetto/18 elettroni",
-            "matched_by": "CAPITOLO 2A - I legami ionici",
+            "matched_by": "I legami covalenti",
             "chapter": 2,
             "score": 1.0
           },
           {
             "content": "VSEPR (lineare, planare, tetraedrica)",
-            "matched_by": "CAPITOLO 2E - Il modello VSEPR",
+            "matched_by": "Il modello VSEPR",
             "chapter": 2,
             "score": 1.0
           },
           {
             "content": "Ibridazione sp/sp2/sp3",
-            "matched_by": "CAPITOLO 2F - La teoria del legame di valenza",
+            "matched_by": "La teoria del legame di valenza",
             "chapter": 2,
             "score": 1.0
           },
           {
             "content": "Polarità legami/molecole, momento dipolare",
-            "matched_by": "CAPITOLO 2D - Le proprietà dei legami",
+            "matched_by": "Le proprietà dei legami",
             "chapter": 2,
             "score": 1.0
           },
           {
             "content": "Legami metallici, energia reticolare",
-            "matched_by": "CAPITOLO 2A - I legami ionici",
-            "chapter": 2,
-            "score": 1.0
+            "matched_by": null,
+            "score": 0
           }
         ],
         "chapters_involved": [
@@ -114,37 +106,37 @@
       {
         "module_id": 3,
         "module_name": "Stechiometria e reazioni chimiche",
-        "coverage_percentage": 90,
+        "coverage_percentage": 85,
         "contents_covered": 5,
         "contents_total": 5,
         "content_matches": [
           {
             "content": "Mole, massa molare, composizione %",
-            "matched_by": "E - Mole e massa molare",
+            "matched_by": "Mole e massa molare",
             "chapter": 0,
             "score": 1.0
           },
           {
             "content": "Bilanciamento equazioni, yield teorico/esperim.",
-            "matched_by": "H - Le equazioni chimiche",
+            "matched_by": "Le equazioni chimiche",
             "chapter": 0,
             "score": 1.0
           },
           {
             "content": "Reazioni: precipitazione, acido-base, redox",
-            "matched_by": "I - Le reazioni di precipitazione",
+            "matched_by": "Le reazioni di precipitazione",
             "chapter": 0,
             "score": 1.0
           },
           {
             "content": "Stechiometria soluzioni, diluizioni",
-            "matched_by": "L - La stechiometria delle reazioni",
+            "matched_by": "La stechiometria delle reazioni",
             "chapter": 0,
             "score": 1.0
           },
           {
             "content": "Numeri ossidazione, bilanciamento redox",
-            "matched_by": "K - Le reazioni redox",
+            "matched_by": "Le reazioni redox",
             "chapter": 0,
             "score": 1.0
           }
@@ -155,39 +147,37 @@
       {
         "module_id": 4,
         "module_name": "Termodinamica e termochimica",
-        "coverage_percentage": 85,
-        "contents_covered": 5,
+        "coverage_percentage": 90,
+        "contents_covered": 3,
         "contents_total": 5,
         "content_matches": [
           {
             "content": "Energia interna, entalpia, 1° principio",
-            "matched_by": "CAPITOLO 4A - L'energia interna",
+            "matched_by": "L'energia interna",
             "chapter": 4,
             "score": 1.0
           },
           {
             "content": "Calorimetria, capacità termica",
-            "matched_by": "CAPITOLO 4B - Lavoro e calore",
-            "chapter": 4,
-            "score": 1.0
-          },
-          {
-            "content": "Legge Hess, entalpie formazione",
-            "matched_by": "CAPITOLO 4D - La termochimica",
+            "matched_by": "Lavoro e calore",
             "chapter": 4,
             "score": 1.0
           },
           {
             "content": "Entropia, 2° principio, energia libera Gibbs",
-            "matched_by": "CAPITOLO 4F - L'entropia",
+            "matched_by": "L'entropia",
             "chapter": 4,
             "score": 1.0
           },
           {
+            "content": "Legge Hess, entalpie formazione",
+            "matched_by": null,
+            "score": 0
+          },
+          {
             "content": "Cicli Born-Haber, spontaneità",
-            "matched_by": "CAPITOLO 4J - L'energia libera di Gibbs",
-            "chapter": 4,
-            "score": 1.0
+            "matched_by": null,
+            "score": 0
           }
         ],
         "chapters_involved": [
@@ -198,37 +188,37 @@
       {
         "module_id": 5,
         "module_name": "Stati materia e soluzioni",
-        "coverage_percentage": 80,
+        "coverage_percentage": 85,
         "contents_covered": 5,
         "contents_total": 5,
         "content_matches": [
           {
             "content": "Leggi gas ideali, miscele, pressioni parziali",
-            "matched_by": "CAPITOLO 3A - La natura dei gas",
+            "matched_by": "La natura dei gas",
             "chapter": 3,
             "score": 1.0
           },
           {
             "content": "Teoria cinetica gas, gas reali",
-            "matched_by": "CAPITOLO 3B - Le leggi dei gas in azione",
+            "matched_by": "Il moto molecolare nei gas",
             "chapter": 3,
             "score": 1.0
           },
           {
             "content": "Cambi stato, diagrammi fase",
-            "matched_by": "CAPITOLO 3D - Le forze intermolecolari",
-            "chapter": 3,
+            "matched_by": "Gli equilibri di fase nei sistemi a un solo componente",
+            "chapter": 5,
             "score": 1.0
           },
           {
             "content": "Soluzioni: molalità, molarità, % massa",
-            "matched_by": "G - Miscugli e soluzioni",
+            "matched_by": "Miscugli e soluzioni",
             "chapter": 0,
             "score": 1.0
           },
           {
             "content": "Proprietà colligative (ebullio, crioscopia, osmosi)",
-            "matched_by": "CAPITOLO 5E - Le proprietà colligative",
+            "matched_by": "Le proprietà colligative",
             "chapter": 5,
             "score": 1.0
           }
@@ -242,39 +232,32 @@
       {
         "module_id": 6,
         "module_name": "Cinetica chimica",
-        "coverage_percentage": 75,
-        "contents_covered": 5,
+        "coverage_percentage": 80,
+        "contents_covered": 3,
         "contents_total": 5,
         "content_matches": [
           {
             "content": "Velocità reazione, ordine, cinetica integrata",
-            "matched_by": "CAPITOLO 7A - La velocità di reazione",
-            "chapter": 7,
-            "score": 1.0
-          },
-          {
-            "content": "Equazione Arrhenius, energia attivazione",
-            "matched_by": "CAPITOLO 7B - Le leggi cinetiche integrate",
+            "matched_by": "La velocità di reazione",
             "chapter": 7,
             "score": 1.0
           },
           {
             "content": "Meccanismi elementari, stato attivato",
-            "matched_by": "CAPITOLO 7C - I meccanismi di reazione",
+            "matched_by": "I meccanismi di reazione",
             "chapter": 7,
             "score": 1.0
           },
           {
             "content": "Catalisi omogenea/eterogenea",
-            "matched_by": "CAPITOLO 7E - La catalisi",
+            "matched_by": "La catalisi",
             "chapter": 7,
             "score": 1.0
           },
           {
-            "content": "Cinetica enzimatica (Michaelis-Menten)",
-            "matched_by": "N/A",
-            "chapter": null,
-            "score": 1.0
+            "content": "Equazione Arrhenius, energia attivazione",
+            "matched_by": null,
+            "score": 0
           },
           {
             "content": "Cinetica enzimatica (Michaelis-Menten)",
@@ -285,44 +268,42 @@
         "chapters_involved": [
           7
         ],
-        "status": "buono"
+        "status": "completo"
       },
       {
         "module_id": 7,
         "module_name": "Equilibri chimici",
-        "coverage_percentage": 80,
-        "contents_covered": 5,
+        "coverage_percentage": 85,
+        "contents_covered": 3,
         "contents_total": 5,
         "content_matches": [
           {
             "content": "Costante Kc/Kp, principio Le Chatelier",
-            "matched_by": "CAPITOLO 5F - L'equilibrio chimico",
+            "matched_by": "L'equilibrio chimico",
             "chapter": 5,
             "score": 1.0
           },
           {
             "content": "Calcoli equilibri gassosi/eterogenei",
-            "matched_by": "CAPITOLO 5H - Calcoli relativi agli equilibri",
+            "matched_by": "Calcoli relativi agli equilibri",
             "chapter": 5,
             "score": 1.0
           },
           {
             "content": "Fattori spostamento equilibrio",
-            "matched_by": "CAPITOLO 5I - La risposta dei sistemi all'equilibrio alla variazione delle condizioni",
+            "matched_by": "La risposta dei sistemi all'equilibrio alla variazione delle condizioni",
             "chapter": 5,
             "score": 1.0
           },
           {
             "content": "Equilibri multipli, approssimazioni",
-            "matched_by": "CAPITOLO 5G - Forme alternative della costante di equilibrio",
-            "chapter": 5,
-            "score": 1.0
+            "matched_by": null,
+            "score": 0
           },
           {
             "content": "Q vs K",
-            "matched_by": "CAPITOLO 5F - L'equilibrio chimico",
-            "chapter": 5,
-            "score": 1.0
+            "matched_by": null,
+            "score": 0
           }
         ],
         "chapters_involved": [
@@ -333,39 +314,37 @@
       {
         "module_id": 8,
         "module_name": "Equilibri acido-base",
-        "coverage_percentage": 85,
-        "contents_covered": 5,
+        "coverage_percentage": 90,
+        "contents_covered": 3,
         "contents_total": 5,
         "content_matches": [
           {
             "content": "Arrhenius, Brønsted-Lowry, Lewis",
-            "matched_by": "CAPITOLO 6A - La natura degli acidi e delle basi",
+            "matched_by": "La natura degli acidi e delle basi",
             "chapter": 6,
             "score": 1.0
           },
           {
             "content": "pKa, pH calcoli acidi deboli",
-            "matched_by": "CAPITOLO 6D - Il pH delle soluzioni acquose",
-            "chapter": 6,
-            "score": 1.0
-          },
-          {
-            "content": "Idrolisi sali, indicatori",
-            "matched_by": "CAPITOLO 6E - Gli acidi e le basi poliprotici",
+            "matched_by": "Il pH delle soluzioni acquose",
             "chapter": 6,
             "score": 1.0
           },
           {
             "content": "Curve titolazione, tamponi",
-            "matched_by": "CAPITOLO 6G - I tamponi",
+            "matched_by": "Le titolazioni acido-base",
             "chapter": 6,
             "score": 1.0
           },
           {
+            "content": "Idrolisi sali, indicatori",
+            "matched_by": null,
+            "score": 0
+          },
+          {
             "content": "Calcoli capacità tampone",
-            "matched_by": "CAPITOLO 6H - Le titolazioni acido-base",
-            "chapter": 6,
-            "score": 1.0
+            "matched_by": null,
+            "score": 0
           }
         ],
         "chapters_involved": [
@@ -376,38 +355,26 @@
       {
         "module_id": 9,
         "module_name": "Elettrochimica",
-        "coverage_percentage": 80,
-        "contents_covered": 5,
+        "coverage_percentage": 85,
+        "contents_covered": 3,
         "contents_total": 5,
         "content_matches": [
           {
             "content": "Celle galvaniche/voltaiche, potenziale standard",
-            "matched_by": "CAPITOLO 6L - Le celle galvaniche",
+            "matched_by": "Le celle galvaniche",
             "chapter": 6,
             "score": 1.0
           },
           {
             "content": "Equazione Nernst",
-            "matched_by": "CAPITOLO 6M - I potenziali standard",
+            "matched_by": "I potenziali standard",
             "chapter": 6,
             "score": 1.0
           },
           {
             "content": "Celle elettrolitiche, leggi Faraday",
-            "matched_by": "CAPITOLO 6O - L'elettrolisi",
+            "matched_by": "L'elettrolisi",
             "chapter": 6,
-            "score": 1.0
-          },
-          {
-            "content": "Corrosione, batterie (Pb, NiCd, Li-ion)",
-            "matched_by": "N/A",
-            "chapter": null,
-            "score": 1.0
-          },
-          {
-            "content": "Elettrodi riferimento",
-            "matched_by": "N/A",
-            "chapter": null,
             "score": 1.0
           },
           {
@@ -430,38 +397,37 @@
         "module_id": 10,
         "module_name": "Chimica elementi principali",
         "coverage_percentage": 90,
-        "contents_covered": 5,
+        "contents_covered": 4,
         "contents_total": 5,
         "content_matches": [
           {
             "content": "Gruppi 1-2 (alcalini/terrosi)",
-            "matched_by": "CAPITOLO 8C - Il gruppo 1: i metalli alcalini",
+            "matched_by": "Il gruppo 1: i metalli alcalini",
             "chapter": 8,
             "score": 1.0
           },
           {
             "content": "Gruppo 13-16 (boro, carbonio, azoto, ossigeno)",
-            "matched_by": "CAPITOLO 8E - Il gruppo 13: la famiglia del boro",
+            "matched_by": "Il gruppo 13: la famiglia del boro",
             "chapter": 8,
             "score": 1.0
           },
           {
             "content": "Alogeni (17), gas nobili (18)",
-            "matched_by": "CAPITOLO 8I - Il gruppo 17: gli alogeni",
-            "chapter": 8,
-            "score": 1.0
-          },
-          {
-            "content": "Ossidi acidi/basei/anfoteri",
-            "matched_by": "CAPITOLO 8L - I composti di coordinazione",
+            "matched_by": "Il gruppo 17: gli alogeni",
             "chapter": 8,
             "score": 1.0
           },
           {
             "content": "Nomenclatura IUPAC composti",
-            "matched_by": "D - La nomenclatura dei composti",
+            "matched_by": "La nomenclatura dei composti",
             "chapter": 0,
             "score": 1.0
+          },
+          {
+            "content": "Ossidi acidi/basei/anfoteri",
+            "matched_by": null,
+            "score": 0
           }
         ],
         "chapters_involved": [
@@ -555,8 +521,40 @@
     "gaps": {
       "missing_in_manual": [
         {
+          "content": "Legami metallici, energia reticolare",
+          "module": "Legame chimico e geometria molecolare"
+        },
+        {
+          "content": "Legge Hess, entalpie formazione",
+          "module": "Termodinamica e termochimica"
+        },
+        {
+          "content": "Cicli Born-Haber, spontaneità",
+          "module": "Termodinamica e termochimica"
+        },
+        {
+          "content": "Equazione Arrhenius, energia attivazione",
+          "module": "Cinetica chimica"
+        },
+        {
           "content": "Cinetica enzimatica (Michaelis-Menten)",
           "module": "Cinetica chimica"
+        },
+        {
+          "content": "Equilibri multipli, approssimazioni",
+          "module": "Equilibri chimici"
+        },
+        {
+          "content": "Q vs K",
+          "module": "Equilibri chimici"
+        },
+        {
+          "content": "Idrolisi sali, indicatori",
+          "module": "Equilibri acido-base"
+        },
+        {
+          "content": "Calcoli capacità tampone",
+          "module": "Equilibri acido-base"
         },
         {
           "content": "Corrosione, batterie (Pb, NiCd, Li-ion)",
@@ -565,6 +563,10 @@
         {
           "content": "Elettrodi riferimento",
           "module": "Elettrochimica"
+        },
+        {
+          "content": "Ossidi acidi/basei/anfoteri",
+          "module": "Chimica elementi principali"
         },
         {
           "content": "Titolo soluzioni, standardizzazione",
@@ -619,6 +621,6 @@
       ]
     },
     "method": "llm",
-    "analysis_date": "2026-01-02T12:02:29.712329"
+    "analysis_date": "2026-01-02T19:07:18.048722"
   }
 }
