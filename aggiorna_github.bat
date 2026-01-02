@@ -9,10 +9,7 @@ git diff --cached --quiet
 if %errorlevel%==0 (
     echo Nessuna modifica da caricare.
 ) else (
-    for /f "tokens=1-3 delims=/" %%a in ('date /t') do set data=%%a-%%b-%%c
-    for /f "tokens=1-2 delims=: " %%a in ('time /t') do set ora=%%a.%%b
-    
-    git commit -m "Aggiornamento %data% %ora%"
+    git commit -m "Aggiornamento %date% %time:~0,5%"
     git push origin main && echo Push completato con successo! || echo Errore durante il push.
 )
 
