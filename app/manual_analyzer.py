@@ -995,7 +995,123 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
             "overall_coverage": 0,
             "judgment": "Analisi strutturale"
         }
-    
+    # =========================================================
+    # SALVATAGGIO E RECUPERO ANALISI
+    # =========================================================
+
+    def save_analysis(
+        self, 
+        analysis: Dict, 
+        materia: str, 
+        manual_name: str,
+        manual_type: str = "zanichelli"
+    ) -> Path:
+        """
+        Salva l'analisi in archivio/analisi_manuali/{materia}/
+        
+        Args:
+            analysis: Risultato dell'analisi (da analyze_manual_vs_ideal o analyze_manual_vs_real)
+            materia: Nome della materia
+            manual_name: Nome del manuale
+            manual_type: "zanichelli" o "competitor"
+        
+        Returns:
+            Path del file salvato
+        """
+        # Crea directory se non esiste
+        save_dir = Path("archivio/analisi_manuali") / materia.replace(" ", "_")
+        save_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Nome file con timestamp
+        timestamp = datetime.now().strftime("%Y-%m-%d_%H%M%S")
+        safe_name = manual_name.replace(" ", "_").replace("/", "-")[:50]
+        filename = f"{safe_name}_{manual_type}_{timestamp}.json"
+        
+        filepath = save_dir / filename
+        
+        # Aggiungi metadati
+        analysis_with_meta = {
+            "metadata": {
+                "manual_name": manual_name,
+                "manual_type": manual_type,
+                "materia": materia,
+                "saved_at": datetime.now().isoformat(),
+                "analysis_version": "2.0"
+            },
+            "analysis": analysis
+        }
+        
+        with open(filepath, "w", encoding="utf-8") as f:
+            json.dump(analysis_with_meta, f, indent=2, ensure_ascii=False)
+        
+        return filepath
+
+
+    def get_saved_analyses(self, materia: str = None) -> List[Dict]:
+        """
+        Restituisce le analisi salvate, opzionalmente filtrate per materia.
+        
+        Args:
+            materia: Se specificata, filtra per questa materia
+        
+        Returns:
+            Lista di dict con info sulle analisi salvate
+        """
+        base_dir = Path("archivio/analisi_manuali")
+        if not base_dir.exists():
+            return []
+        
+        analyses = []
+        
+        if materia:
+            materia_dir = base_dir / materia.replace(" ", "_")
+            dirs_to_search = [materia_dir] if materia_dir.exists() else []
+        else:
+            dirs_to_search = [d for d in base_dir.iterdir() if d.is_dir()]
+        
+        for materia_dir in dirs_to_search:
+            for json_file in materia_dir.glob("*.json"):
+                try:
+                    with open(json_file, "r", encoding="utf-8") as f:
+                        data = json.load(f)
+                    
+                    meta = data.get("metadata", {})
+                    analysis = data.get("analysis", {})
+                    
+                    analyses.append({
+                        "path": json_file,
+                        "filename": json_file.name,
+                        "materia": meta.get("materia", materia_dir.name),
+                        "manual_name": meta.get("manual_name", json_file.stem),
+                        "manual_type": meta.get("manual_type", "unknown"),
+                        "saved_at": meta.get("saved_at", ""),
+                        "coverage": analysis.get("overall_coverage", 0),
+                        "judgment": analysis.get("judgment", "N/D")
+                    })
+                except Exception as e:
+                    print(f"Errore lettura {json_file}: {e}")
+        
+        analyses.sort(key=lambda x: x.get("saved_at", ""), reverse=True)
+        return analyses
+
+
+    def load_saved_analysis(self, path: Path) -> Optional[Dict]:
+        """
+        Carica un'analisi salvata.
+        
+        Args:
+            path: Path del file JSON
+        
+        Returns:
+            Dict con metadata e analysis, o None se errore
+        """
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"Errore caricamento {path}: {e}")
+            return None
+        
     # =========================================================
     # GENERAZIONE REPORT HTML
     # =========================================================

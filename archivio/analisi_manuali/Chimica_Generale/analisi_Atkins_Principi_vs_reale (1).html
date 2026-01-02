@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Analisi Manuale - Principi di Chimica</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; padding: 20px 40px; 
+            background: #f5f7fa; color: #333; line-height: 1.6;
+        }
+        .container { 
+            max-width: 1200px; margin: 0 auto; 
+            background: white; padding: 30px 40px; 
+            border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.07); 
+        }
+        h1 { color: #1a237e; border-bottom: 3px solid #3949ab; padding-bottom: 15px; }
+        h2 { color: #283593; margin-top: 35px; border-left: 4px solid #3949ab; padding-left: 15px; }
+        .subtitle { color: #666; margin-bottom: 25px; }
+        .method-badge { background: #e3f2fd; color: #1565c0; padding: 4px 12px; border-radius: 12px; font-size: 0.85em; }
+        
+        .summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin: 25px 0; }
+        .summary-card { 
+            background: #f8f9ff; padding: 20px; border-radius: 10px; text-align: center;
+            border-top: 4px solid #3949ab;
+        }
+        .summary-card .value { font-size: 2.5em; font-weight: bold; color: #1a237e; }
+        .summary-card .label { color: #666; font-size: 0.9em; }
+        
+        .modules-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .modules-table th { background: #3949ab; color: white; padding: 12px; text-align: left; }
+        .modules-table td { padding: 12px; border-bottom: 1px solid #e0e0e0; }
+        
+        .coverage-bar { width: 100%; height: 20px; background: #e0e0e0; border-radius: 10px; overflow: hidden; }
+        .coverage-fill { height: 100%; border-radius: 10px; }
+        .fill-high { background: linear-gradient(90deg, #4caf50, #8bc34a); }
+        .fill-medium { background: linear-gradient(90deg, #ff9800, #ffc107); }
+        .fill-low { background: linear-gradient(90deg, #f44336, #ff5722); }
+        
+        .judgment-badge { display: inline-block; padding: 8px 20px; border-radius: 20px; font-size: 1.1em; font-weight: 600; }
+        .judgment-eccellente { background: #c8e6c9; color: #2e7d32; }
+        .judgment-buono { background: #dcedc8; color: #558b2f; }
+        .judgment-sufficiente { background: #fff3e0; color: #e65100; }
+        .judgment-insufficiente { background: #ffcdd2; color: #c62828; }
+        
+        .gaps-section { background: #fff8e1; padding: 20px; border-radius: 10px; margin-top: 20px; }
+        .gaps-section h3 { color: #e65100; margin-top: 0; }
+        .gaps-section ul { margin: 10px 0; padding-left: 25px; }
+        .gaps-section li { margin: 8px 0; }
+        
+        .recommendation { background: #e8f5e9; padding: 15px 20px; border-radius: 10px; margin-top: 20px; border-left: 4px solid #4caf50; }
+        
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e0e0e0; color: #888; font-size: 0.85em; text-align: center; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>📖 Analisi Manuale</h1>
+    <p class="subtitle">
+        <strong>Principi di Chimica</strong> — Atkins (Zanichelli)<br>
+        Confronto vs Framework REAL 
+        <span class="method-badge">Metodo: LLM</span>
+    </p>
+    
+    <div class="summary-grid">
+        <div class="summary-card">
+            <div class="value" style="color: #4caf50;">71.7%</div>
+            <div class="label">Copertura Complessiva</div>
+        </div>
+        <div class="summary-card">
+            <div class="value">11</div>
+            <div class="label">Capitoli</div>
+        </div>
+        <div class="summary-card">
+            <div class="value">93</div>
+            <div class="label">Sezioni</div>
+        </div>
+        <div class="summary-card">
+            <span class="judgment-badge judgment-buono">Buono</span>
+            <div class="label" style="margin-top:10px;">Giudizio</div>
+        </div>
+    </div>
+    
+    <div class="recommendation">
+        <strong>📋 Raccomandazione:</strong> Il manuale copre la maggior parte dei contenuti con alcune lacune. Adozione con integrazioni.
+    </div>
+    
+    <h2>📊 Copertura per Modulo</h2>
+    <table class="modules-table">
+        <thead>
+            <tr>
+                <th>Modulo</th>
+                <th style="width:300px;">Copertura</th>
+                <th style="width:80px;">%</th>
+                <th style="width:120px;">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td>🟢 <strong>Struttura atomica e tavola periodica</strong></td>
+                <td>
+                    <div class="coverage-bar" style="height:15px;">
+                        <div class="coverage-fill fill-high" style="width:80%;"></div>
+                    </div>
+                </td>
+                <td style="text-align:center; font-weight:bold;">80.0%</td>
+                <td>completo</td>
+            </tr>
+            <tr>
+                <td>🟢 <strong>Legame chimico e geometria molecolare</strong></td>
+                <td>
+                    <div class="coverage-bar" style="height:15px;">
+                        <div class="coverage-fill fill-high" style="width:90%;"></div>
+                    </div>
+                </td>
+                <td style="text-align:center; font-weight:bold;">90.0%</td>
+                <td>completo</td>
+            </tr>
+            <tr>
+                <td>🟢 <strong>Stechiometria e reazioni chimiche</strong></td>
+                <td>
+                    <div class="coverage-bar" style="height:15px;">
+                        <div class="coverage-fill fill-high" style="width:85%;"></div>
+                    </div>
+                </td>
+                <td style="text-align:center; font-weight:bold;">85.0%</td>
+                <td>completo</td>
+            </tr>
+            <tr>
+                <td>🟢 <strong>Termodinamica e termochimica</strong></td>
+                <td>
+                    <div class="coverage-bar" style="height:15px;">
+                        <div class="coverage-fill fill-high" style="width:90%;"></div>
+                    </div>
+                </td>
+                <td style="text-align:center; font-weight:bold;">90.0%</td>
+                <td>completo</td>
+            </tr>
+            <tr>
+                <td>🟢 <strong>Stati materia e soluzioni</strong></td>
+                <td>
+                    <div class="coverage-bar" style="height:15px;">
+                        <div class="coverage-fill fill-high" style="width:85%;"></div>
+                    </div>
+                </td>
+                <td style="text-align:center; font-weight:bold;">85.0%</td>
+                <td>completo</td>
+            </tr>
+            <tr>
+                <td>🟢 <strong>Cinetica chimica</strong></td>
+                <td>
+                    <div class="coverage-bar" style="height:15px;">
+                        <div class="coverage-fill fill-high" style="width:80%;"></div>
+                    </div>
+                </td>
+                <td style="text-align:center; font-weight:bold;">80.0%</td>
+                <td>completo</td>
+            </tr>
+            <tr>
+                <td>🟢 <strong>Equilibri chimici</strong></td>
+                <td>
+                    <div class="coverage-bar" style="height:15px;">
+                        <div class="coverage-fill fill-high" style="width:85%;"></div>
+                    </div>
+                </td>
+                <td style="text-align:center; font-weight:bold;">85.0%</td>
+                <td>completo</td>
+            </tr>
+            <tr>
+                <td>🟢 <strong>Equilibri acido-base</strong></td>
+                <td>
+                    <div class="coverage-bar" style="height:15px;">
+                        <div class="coverage-fill fill-high" style="width:90%;"></div>
+                    </div>
+                </td>
+                <td style="text-align:center; font-weight:bold;">90.0%</td>
+                <td>completo</td>
+            </tr>
+            <tr>
+                <td>🟢 <strong>Elettrochimica</strong></td>
+                <td>
+                    <div class="coverage-bar" style="height:15px;">
+                        <div class="coverage-fill fill-high" style="width:85%;"></div>
+                    </div>
+                </td>
+                <td style="text-align:center; font-weight:bold;">85.0%</td>
+                <td>completo</td>
+            </tr>
+            <tr>
+                <td>🟢 <strong>Chimica elementi principali</strong></td>
+                <td>
+                    <div class="coverage-bar" style="height:15px;">
+                        <div class="coverage-fill fill-high" style="width:90%;"></div>
+                    </div>
+                </td>
+                <td style="text-align:center; font-weight:bold;">90.0%</td>
+                <td>completo</td>
+            </tr>
+            <tr>
+                <td>🔴 <strong>Tecniche analitiche e laboratorio</strong></td>
+                <td>
+                    <div class="coverage-bar" style="height:15px;">
+                        <div class="coverage-fill fill-low" style="width:0%;"></div>
+                    </div>
+                </td>
+                <td style="text-align:center; font-weight:bold;">0.0%</td>
+                <td>carente</td>
+            </tr>
+            <tr>
+                <td>🔴 <strong>Sicurezza, sostenibilità e applicazioni</strong></td>
+                <td>
+                    <div class="coverage-bar" style="height:15px;">
+                        <div class="coverage-fill fill-low" style="width:0%;"></div>
+                    </div>
+                </td>
+                <td style="text-align:center; font-weight:bold;">0.0%</td>
+                <td>carente</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="gaps-section">
+        <h3>⚠️ Gap Rilevati</h3>
+        <ul><li><strong>Tecniche analitiche e laboratorio</strong>: Titolo soluzioni, standardizzazione</li><li><strong>Tecniche analitiche e laboratorio</strong>: Gravimetria, volumetriche</li><li><strong>Tecniche analitiche e laboratorio</strong>: Spettroscopia UV-Vis base</li><li><strong>Tecniche analitiche e laboratorio</strong>: Cromatografia cartacea/TLC</li><li><strong>Tecniche analitiche e laboratorio</strong>: Analisi qualitativa cationi/anionici</li><li><strong>Sicurezza, sostenibilità e applicazioni</strong>: MSDS, DPI, norme sicurezza</li><li><strong>Sicurezza, sostenibilità e applicazioni</strong>: Gestione rifiuti chimici</li><li><strong>Sicurezza, sostenibilità e applicazioni</strong>: Green chemistry principi</li><li><strong>Sicurezza, sostenibilità e applicazioni</strong>: Chimica industriale (Haber-Bosch, Claus)</li><li><strong>Sicurezza, sostenibilità e applicazioni</strong>: Chimica atmosferica (ozono, acidi pioggia)</li></ul>
+    </div>
+    
+    <div class="footer">
+        Report generato da <strong>CoreX - Manual Analyzer v2.0</strong> | Zanichelli<br>
+        02/01/2026 12:04:51
+    </div>
+</div>
+</body>
+</html>
