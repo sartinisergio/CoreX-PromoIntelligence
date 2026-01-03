@@ -148,7 +148,6 @@ class ManualAnalyzer:
     # =========================================================
     # MATCHING SEMANTICO CON LLM (UNIVERSALE)
     # =========================================================
-    
     def _match_manual_to_framework_llm(
         self, 
         manual: Dict,
@@ -168,13 +167,21 @@ class ManualAnalyzer:
             print("LLM provider non disponibile")
             return None
         
-        # Prepara i titoli del manuale
+        # Prepara i titoli del manuale CON SUBSECTIONS (3 livelli)
         manual_structure = []
         for chapter in manual.get("chapters", []):
+            sections_list = []
+            for section in chapter.get("sections", []):
+                section_info = {
+                    "title": section.get("title", ""),
+                    "subsections": [sub.get("title", "") for sub in section.get("subsections", [])]
+                }
+                sections_list.append(section_info)
+            
             chapter_info = {
                 "chapter_num": chapter.get("number", 0),
                 "chapter_title": chapter.get("title", ""),
-                "sections": [s.get("title", "") for s in chapter.get("sections", [])]
+                "sections": sections_list
             }
             manual_structure.append(chapter_info)
         
@@ -187,11 +194,11 @@ class ManualAnalyzer:
                 "core_contents": mod.get("core_contents", [])
             })
         
-        # Prompt universale
+        # Prompt universale per 3 livelli
         prompt = f"""Sei un esperto di didattica universitaria. 
 Devi analizzare quanto un manuale universitario di "{subject.replace('_', ' ').title()}" copre i contenuti di un framework didattico.
 
-STRUTTURA DEL MANUALE:
+STRUTTURA DEL MANUALE (3 livelli: Capitoli > Sezioni > Sottosezioni):
 {json.dumps(manual_structure, indent=2, ensure_ascii=False)}
 
 MODULI DEL FRAMEWORK DA VALUTARE:
@@ -199,14 +206,16 @@ MODULI DEL FRAMEWORK DA VALUTARE:
 
 ISTRUZIONI:
 Per OGNI modulo del framework, determina:
-1. Quali capitoli/sezioni del manuale coprono i core_contents di quel modulo
+1. Quali capitoli/sezioni/sottosezioni del manuale coprono i core_contents di quel modulo
 2. La percentuale di copertura (0-100%)
 
 REGOLE DI MATCHING:
-- Sii GENEROSO: se un capitolo tratta l'argomento anche con terminologia diversa, consideralo coperto
+- Analizza TUTTI I LIVELLI: capitoli, sezioni E sottosezioni
+- Le sottosezioni contengono spesso i dettagli specifici degli argomenti
+- Sii GENEROSO: se un contenuto è trattato anche con terminologia diversa, consideralo coperto
 - Considera sinonimi e varianti terminologiche
-- Un capitolo può coprire più moduli
-- Una sezione specifica è preferibile a un capitolo generico
+- Un capitolo/sezione/sottosezione può coprire più moduli
+- Una sottosezione specifica è preferibile a un capitolo generico
 
 Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
 {{
@@ -218,7 +227,7 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
             "matched_contents": [
                 {{
                     "content": "contenuto del framework coperto",
-                    "matched_by": "titolo capitolo o sezione che lo copre",
+                    "matched_by": "titolo capitolo/sezione/sottosezione che lo copre",
                     "chapter_num": 1
                 }}
             ],
@@ -267,7 +276,7 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
         except Exception as e:
             print(f"Errore LLM matching: {e}")
             return None
-    
+
     # =========================================================
     # MATCHING FALLBACK (senza LLM)
     # =========================================================
