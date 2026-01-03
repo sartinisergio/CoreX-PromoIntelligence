@@ -110,7 +110,6 @@ class ManualAnalyzer:
         topics = []
         
         for chapter in manual.get("chapters", []):
-            # Livello 1: Chapter/Focus
             topics.append({
                 "text": chapter.get("title", ""),
                 "type": "chapter",
@@ -121,7 +120,6 @@ class ManualAnalyzer:
             })
             
             for section in chapter.get("sections", []):
-                # Livello 2: Section/Capitolo
                 topics.append({
                     "text": section.get("title", ""),
                     "type": "section",
@@ -131,7 +129,6 @@ class ManualAnalyzer:
                     "page_start": section.get("page_start", None)
                 })
                 
-                # Livello 3: Subsection/Paragrafo (NUOVO)
                 for subsection in section.get("subsections", []):
                     topics.append({
                         "text": subsection.get("title", ""),
@@ -144,9 +141,8 @@ class ManualAnalyzer:
         
         return topics
 
-    
     # =========================================================
-    # MATCHING SEMANTICO CON LLM (UNIVERSALE)
+    # MATCHING SEMANTICO CON LLM - PROMPT 1: ANALISI TECNICA
     # =========================================================
     def _match_manual_to_framework_llm(
         self, 
@@ -158,8 +154,7 @@ class ManualAnalyzer:
         model: str = "gpt-4o-mini"
     ) -> Optional[Dict]:
         """
-        Usa LLM per matching semantico tra titoli manuale e moduli framework.
-        Funziona per QUALSIASI materia.
+        PROMPT 1: Analisi tecnica - matching e percentuali.
         """
         try:
             from app.llm_provider import get_llm_client
@@ -167,7 +162,7 @@ class ManualAnalyzer:
             print("LLM provider non disponibile")
             return None
         
-        # Prepara i titoli del manuale CON SUBSECTIONS (3 livelli)
+        # Prepara struttura manuale
         manual_structure = []
         for chapter in manual.get("chapters", []):
             sections_list = []
@@ -185,7 +180,7 @@ class ManualAnalyzer:
             }
             manual_structure.append(chapter_info)
         
-        # Prepara i moduli del framework
+        # Prepara moduli framework
         framework_modules = []
         for mod in modules:
             framework_modules.append({
@@ -194,8 +189,8 @@ class ManualAnalyzer:
                 "core_contents": mod.get("core_contents", [])
             })
         
-        # Prompt universale per 3 livelli CON DESCRIZIONE NARRATIVA
-        prompt = f"""Sei un esperto di didattica universitaria e consulente editoriale. 
+        # PROMPT TECNICO (senza richiesta di narrative)
+        prompt = f"""Sei un esperto di didattica universitaria. 
 Devi analizzare quanto un manuale universitario di "{subject.replace('_', ' ').title()}" copre i contenuti di un framework didattico.
 
 STRUTTURA DEL MANUALE (3 livelli: Capitoli > Sezioni > Sottosezioni):
@@ -208,10 +203,6 @@ ISTRUZIONI:
 Per OGNI modulo del framework, determina:
 1. Quali capitoli/sezioni/sottosezioni del manuale coprono i core_contents di quel modulo
 2. La percentuale di copertura (0-100%)
-3. Una DESCRIZIONE NARRATIVA di 2-3 frasi che spieghi chiaramente:
-   - Quali argomenti specifici il manuale tratta e in quali capitoli/sezioni si trovano
-   - Cosa eventualmente manca e se è una lacuna rilevante o marginale
-   - Il tono deve essere utile per un promotore editoriale che deve capire rapidamente il valore del manuale
 
 REGOLE DI MATCHING:
 - Analizza TUTTI I LIVELLI: capitoli, sezioni E sottosezioni
@@ -219,13 +210,6 @@ REGOLE DI MATCHING:
 - Sii GENEROSO: se un contenuto è trattato anche con terminologia diversa, consideralo coperto
 - Considera sinonimi e varianti terminologiche
 - Un capitolo/sezione/sottosezione può coprire più moduli
-- Una sottosezione specifica è preferibile a un capitolo generico
-
-STILE DELLA DESCRIZIONE:
-- Evita frasi generiche come "buona copertura" o "trattazione adeguata"
-- Cita specificamente i capitoli/sezioni rilevanti (es. "Il Capitolo 3 tratta...")
-- Se manca qualcosa, indica se è grave o trascurabile (es. "Manca solo X, argomento richiesto raramente nei programmi")
-- Sii concreto e informativo
 
 Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
 {{
@@ -241,15 +225,13 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
                     "chapter_num": 1
                 }}
             ],
-            "missing_contents": ["contenuti non coperti dal manuale"],
-            "description": "Il manuale dedica il Capitolo X a questo tema, trattando in dettaglio A, B e C nella sezione Y. Manca solo Z, un argomento specialistico richiesto principalmente nei corsi di laurea magistrale."
+            "missing_contents": ["contenuti non coperti dal manuale"]
         }}
     ],
     "overall_assessment": {{
         "total_coverage": 75,
         "strengths": ["punti di forza del manuale"],
-        "gaps": ["lacune principali"],
-        "summary": "Sintesi complessiva di 2-3 frasi sul posizionamento del manuale rispetto al framework."
+        "gaps": ["lacune principali"]
     }}
 }}"""
         
@@ -289,6 +271,107 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
             print(f"Errore LLM matching: {e}")
             return None
 
+    # =========================================================
+    # PROMPT 2: GENERAZIONE NARRATIVE (NUOVO)
+    # =========================================================
+    def _generate_narrative_descriptions(
+        self,
+        analysis_result: Dict,
+        manual: Dict,
+        subject: str,
+        provider_id: str = "openai",
+        model: str = "gpt-4o-mini"
+    ) -> Dict:
+        """
+        PROMPT 2: Genera descrizioni narrative per ogni modulo
+        partendo dai risultati dell'analisi tecnica.
+        """
+        try:
+            from app.llm_provider import get_llm_client
+        except ImportError:
+            return analysis_result
+        
+        # Prepara sintesi per il prompt
+        modules_summary = []
+        for mod in analysis_result.get("modules_analysis", []):
+            modules_summary.append({
+                "id": mod.get("module_id"),
+                "name": mod.get("module_name"),
+                "coverage": mod.get("coverage_percentage", 0),
+                "matched": [cm.get("matched_by") for cm in mod.get("content_matches", []) if cm.get("matched_by")],
+                "missing": [cm.get("content") for cm in mod.get("content_matches", []) if not cm.get("matched_by")]
+            })
+        
+        manual_title = manual.get("title", "N/D")
+        overall_coverage = analysis_result.get("overall_coverage", 0)
+        
+        prompt = f"""Sei un consulente editoriale esperto di manuali universitari di {subject.replace('_', ' ').title()}.
+
+MANUALE ANALIZZATO: {manual_title}
+COPERTURA COMPLESSIVA: {overall_coverage}%
+
+RISULTATI ANALISI TECNICA PER MODULO:
+{json.dumps(modules_summary, indent=2, ensure_ascii=False)}
+
+COMPITO:
+Genera una descrizione UTILE per un promotore editoriale per OGNI modulo.
+Ogni descrizione deve essere 1-2 frasi che spiegano:
+- Dove nel manuale viene trattato l'argomento (cita i capitoli/sezioni specifici presenti in "matched")
+- Cosa manca e se è una lacuna grave o marginale per i corsi universitari tipici
+
+Genera anche un SUMMARY complessivo di 2-3 frasi sul posizionamento del manuale.
+
+STILE:
+- Sii concreto: cita numeri di capitolo e nomi di sezioni
+- Sii utile: indica se le lacune sono gravi o trascurabili
+- Evita frasi generiche come "buona copertura"
+
+Rispondi SOLO con JSON valido (senza markdown):
+{{
+    "module_descriptions": [
+        {{"module_id": 1, "description": "Il Capitolo 2 tratta X e Y in modo completo. Manca Z, argomento raramente richiesto nei corsi base."}},
+        ...
+    ],
+    "summary": "Sintesi del posizionamento complessivo del manuale..."
+}}"""
+
+        try:
+            client = get_llm_client(provider_id)
+            response = client.chat.completions.create(
+                model=model,
+                messages=[
+                    {"role": "system", "content": "Rispondi SOLO con JSON valido, senza markdown."},
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=0.3,
+                max_tokens=2500
+            )
+            
+            response_text = response.choices[0].message.content.strip()
+            if "```" in response_text:
+                for part in response_text.split("```"):
+                    if part.strip().startswith("json"):
+                        response_text = part.strip()[4:].strip()
+                        break
+                    elif part.strip().startswith("{"):
+                        response_text = part.strip()
+                        break
+            
+            narrative = json.loads(response_text)
+            
+            # Arricchisci i moduli con le descrizioni
+            desc_map = {d["module_id"]: d["description"] for d in narrative.get("module_descriptions", [])}
+            for mod in analysis_result.get("modules_analysis", []):
+                mod["description"] = desc_map.get(mod.get("module_id"), "")
+            
+            analysis_result["summary"] = narrative.get("summary", "")
+            analysis_result["narrative_generated"] = True
+            
+        except Exception as e:
+            print(f"Errore generazione narrative: {e}")
+            analysis_result["narrative_generated"] = False
+        
+        return analysis_result
     # =========================================================
     # MATCHING FALLBACK (senza LLM)
     # =========================================================
@@ -333,6 +416,7 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
                 return True, 0.5
         
         return False, 0.0
+
     # =========================================================
     # HELPER METHODS
     # =========================================================
@@ -457,7 +541,8 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
                     "contents_total": len(core_contents),
                     "content_matches": content_matches,
                     "chapters_involved": list(set(chapters_involved)),
-                    "status": self._coverage_to_status(coverage_pct)
+                    "status": self._coverage_to_status(coverage_pct),
+                    "description": ""  # Sarà popolato dal secondo prompt
                 })
         
         else:
@@ -515,7 +600,8 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
                     "contents_total": len(core_contents),
                     "content_matches": content_matches,
                     "chapters_involved": chapters_involved,
-                    "status": self._coverage_to_status(coverage_pct)
+                    "status": self._coverage_to_status(coverage_pct),
+                    "description": ""
                 })
         
         # Calcola copertura complessiva
@@ -549,7 +635,8 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
                         "title": topic["text"]
                     })
         
-        return {
+        # Costruisci risultato
+        result = {
             "manual_info": {
                 "id": manual.get("id", "N/D"),
                 "title": manual.get("title", "N/D"),
@@ -573,9 +660,18 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
                 "extra_in_manual": uncovered_chapters
             },
             "method": method_used,
+            "summary": "",  # Sarà popolato dal secondo prompt
+            "narrative_generated": False,
             "analysis_date": datetime.now().isoformat()
         }
-    
+        
+        # === SECONDO PROMPT: GENERA NARRATIVE ===
+        if self.use_llm and method_used == "llm":
+            result = self._generate_narrative_descriptions(
+                result, manual, subject, provider_id, model
+            )
+        
+        return result
     # =========================================================
     # FRAMEWORK REALE - CON SUPPORTO MULTICLASSE
     # =========================================================
@@ -583,7 +679,6 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
     def get_available_real_frameworks(self, subject: str = None) -> List[Dict]:
         """
         Restituisce le analisi archiviate che contengono framework reali.
-        Supporta sia framework_aggiornato.json che framework_multiclasse.json
         """
         analyses = []
         
@@ -591,7 +686,6 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
         if archivio_dir.exists():
             for d in sorted(archivio_dir.iterdir(), reverse=True):
                 if d.is_dir():
-                    # Cerca entrambi i tipi di framework
                     fw_file = d / "framework_aggiornato.json"
                     if not fw_file.exists():
                         fw_file = d / "framework_multiclasse.json"
@@ -603,7 +697,6 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
                             with open(meta_file, "r", encoding="utf-8") as f:
                                 meta = json.load(f)
                             
-                            # Normalizza per confronto case-insensitive
                             meta_materia = meta.get("materia", "").lower().replace(" ", "_")
                             subject_normalized = subject.lower().replace(" ", "_") if subject else ""
                             
@@ -702,15 +795,12 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
         model: str = "gpt-4o-mini"
     ) -> Dict:
         """
-        Confronta un manuale con il framework REALE (generato da analisi programmi).
-        Supporta sia framework singola-classe che multiclasse.
+        Confronta un manuale con il framework REALE.
         """
         manual_topics = self.extract_manual_topics(manual)
         
-        # SUPPORTO MULTICLASSE: cerca moduli in "modules" o "syllabus_modules"
         modules = real_framework.get("modules", real_framework.get("syllabus_modules", []))
         
-        # Info framework
         framework_info = real_framework.get("framework", {})
         classes_analyzed = framework_info.get("classes_analyzed", [])
         is_multiclass = len(classes_analyzed) > 1 or real_framework.get("summary", {}).get("n_classes", 1) > 1
@@ -718,7 +808,6 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
         modules_analysis = []
         subject = manual.get("subject", framework_info.get("materia", "materia"))
         
-        # Prova matching con LLM se disponibile
         llm_result = None
         if self.use_llm and modules:
             llm_result = self._match_manual_to_framework_llm(
@@ -728,7 +817,6 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
         method_used = "fallback"
         
         if llm_result and "modules_coverage" in llm_result:
-            # === USA RISULTATI LLM ===
             method_used = "llm"
             
             for mod_cov in llm_result["modules_coverage"]:
@@ -736,10 +824,8 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
                 module_name = mod_cov.get("module_name", "")
                 coverage_pct = mod_cov.get("coverage_percent", 0)
                 
-                # Trova modulo originale per dati aggiuntivi
                 original_module = next((m for m in modules if m.get("id") == module_id), {})
                 
-                # Info multiclasse
                 avg_coverage_real = original_module.get("avg_coverage", 0)
                 coverage_by_class = original_module.get("coverage_by_class", {})
                 is_core = original_module.get("is_core", False)
@@ -773,11 +859,11 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
                     "contents_covered": covered,
                     "contents_total": total,
                     "content_matches": content_matches,
-                    "status": self._coverage_to_status(coverage_pct)
+                    "status": self._coverage_to_status(coverage_pct),
+                    "description": ""
                 })
         
         else:
-            # === FALLBACK: MATCHING BASATO SU CORE_CONTENTS E CONCEPTS_BY_CLASS ===
             method_used = "fallback"
             
             for module in modules:
@@ -789,7 +875,6 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
                 coverage_by_class = module.get("coverage_by_class", {})
                 is_core = module.get("is_core", False)
                 
-                # Raccogli tutti i concetti reali da tutte le classi
                 all_real_concepts = set()
                 for classe, concepts in concepts_by_class.items():
                     for c in concepts:
@@ -798,7 +883,6 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
                 content_matches = []
                 matched_count = 0
                 
-                # Match sui core_contents (come per framework ideale)
                 for content in core_contents:
                     best_match = None
                     best_score = 0
@@ -824,20 +908,17 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
                             "score": 0
                         })
                 
-                # Match aggiuntivo sui concetti estratti (concepts_by_class)
                 concepts_matched = 0
-                for concept in list(all_real_concepts)[:15]:  # Top 15 concetti
+                for concept in list(all_real_concepts)[:15]:
                     for topic in manual_topics:
                         is_match, _ = self._text_matches_content_fallback(topic["text"], concept)
                         if is_match:
                             concepts_matched += 1
                             break
                 
-                # Calcola coverage combinata
                 core_coverage = (matched_count / len(core_contents) * 100) if core_contents else 0
                 concept_coverage = (concepts_matched / min(len(all_real_concepts), 15) * 100) if all_real_concepts else 0
                 
-                # Media pesata: 60% core_contents, 40% concepts reali
                 combined_coverage = (core_coverage * 0.6 + concept_coverage * 0.4) if all_real_concepts else core_coverage
                 
                 modules_analysis.append({
@@ -854,21 +935,19 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
                     "concepts_matched": concepts_matched,
                     "concepts_checked": min(len(all_real_concepts), 15),
                     "content_matches": content_matches,
-                    "status": self._coverage_to_status(combined_coverage)
+                    "status": self._coverage_to_status(combined_coverage),
+                    "description": ""
                 })
         
-        # Calcola coperture complessive
         if modules_analysis:
             overall_coverage = sum(m["manual_coverage"] for m in modules_analysis) / len(modules_analysis)
             
-            # Core modules coverage (solo moduli CORE)
             core_modules = [m for m in modules_analysis if m.get("is_core", False)]
             core_coverage = sum(m["manual_coverage"] for m in core_modules) / len(core_modules) if core_modules else overall_coverage
         else:
             overall_coverage = 0
             core_coverage = 0
         
-        # Gap analysis
         missing_contents = []
         for m in modules_analysis:
             for cm in m.get("content_matches", []):
@@ -879,7 +958,7 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
                         "is_core_module": m.get("is_core", False)
                     })
         
-        return {
+        result = {
             "manual_info": {
                 "id": manual.get("id", "N/D"),
                 "title": manual.get("title", "N/D"),
@@ -905,8 +984,18 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
                 "priority_gaps": [g for g in missing_contents if g.get("is_core_module", False)]
             },
             "method": method_used,
+            "summary": "",
+            "narrative_generated": False,
             "analysis_date": datetime.now().isoformat()
         }
+        
+        # === SECONDO PROMPT: GENERA NARRATIVE ===
+        if self.use_llm and method_used == "llm":
+            result = self._generate_narrative_descriptions(
+                result, manual, subject, provider_id, model
+            )
+        
+        return result
 
     # =========================================================
     # CONFRONTO TRA MANUALI
@@ -1032,6 +1121,7 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
             "overall_coverage": 0,
             "judgment": "Analisi strutturale"
         }
+
     # =========================================================
     # SALVATAGGIO E RECUPERO ANALISI
     # =========================================================
@@ -1043,30 +1133,16 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
         manual_name: str,
         manual_type: str = "zanichelli"
     ) -> Path:
-        """
-        Salva l'analisi in archivio/analisi_manuali/{materia}/
-        
-        Args:
-            analysis: Risultato dell'analisi (da analyze_manual_vs_ideal o analyze_manual_vs_real)
-            materia: Nome della materia
-            manual_name: Nome del manuale
-            manual_type: "zanichelli" o "competitor"
-        
-        Returns:
-            Path del file salvato
-        """
-        # Crea directory se non esiste
+        """Salva l'analisi in archivio/analisi_manuali/{materia}/"""
         save_dir = Path("archivio/analisi_manuali") / materia.replace(" ", "_")
         save_dir.mkdir(parents=True, exist_ok=True)
         
-        # Nome file con timestamp
         timestamp = datetime.now().strftime("%Y-%m-%d_%H%M%S")
         safe_name = manual_name.replace(" ", "_").replace("/", "-")[:50]
         filename = f"{safe_name}_{manual_type}_{timestamp}.json"
         
         filepath = save_dir / filename
         
-        # Aggiungi metadati
         analysis_with_meta = {
             "metadata": {
                 "manual_name": manual_name,
@@ -1083,17 +1159,8 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
         
         return filepath
 
-
     def get_saved_analyses(self, materia: str = None) -> List[Dict]:
-        """
-        Restituisce le analisi salvate, opzionalmente filtrate per materia.
-        
-        Args:
-            materia: Se specificata, filtra per questa materia
-        
-        Returns:
-            Lista di dict con info sulle analisi salvate
-        """
+        """Restituisce le analisi salvate, opzionalmente filtrate per materia."""
         base_dir = Path("archivio/analisi_manuali")
         if not base_dir.exists():
             return []
@@ -1126,95 +1193,90 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
                         "judgment": analysis.get("judgment", "N/D")
                     })
                 except Exception as e:
-                    print(f"Errore lettura {json_file}: {e}")
-        
-        analyses.sort(key=lambda x: x.get("saved_at", ""), reverse=True)
-        return analyses
 
-
-    def load_saved_analysis(self, path: Path) -> Optional[Dict]:
-        """
-        Carica un'analisi salvata.
-        
-        Args:
-            path: Path del file JSON
-        
-        Returns:
-            Dict con metadata e analysis, o None se errore
-        """
-        try:
-            with open(path, "r", encoding="utf-8") as f:
-                return json.load(f)
-        except Exception as e:
-            print(f"Errore caricamento {path}: {e}")
-            return None
-        
-    # =========================================================
+ # =========================================================
     # GENERAZIONE REPORT HTML
     # =========================================================
     
     def generate_single_analysis_report_html(self, analysis: Dict, framework_type: str = "ideal") -> str:
-        """Genera report HTML per analisi singolo manuale"""
+        """Genera report HTML per singola analisi manuale vs framework."""
         
         manual_info = analysis.get("manual_info", {})
-        modules = analysis.get("modules_analysis", [])
-        overall = analysis.get("overall_coverage", 0)
-        judgment = analysis.get("judgment", "N/D")
+        framework_info = analysis.get("framework_info", analysis.get("real_framework_info", {}))
+        modules_analysis = analysis.get("modules_analysis", [])
         gaps = analysis.get("gaps", {})
-        method = analysis.get("method", "N/D")
-        overall_assessment = analysis.get("overall_assessment", {})
         
-        overall_color = "#4caf50" if overall >= 70 else ("#ff9800" if overall >= 50 else "#f44336")
+        coverage = analysis.get("overall_coverage", 0)
+        if coverage >= 70:
+            coverage_color = "#4caf50"
+        elif coverage >= 50:
+            coverage_color = "#ff9800"
+        else:
+            coverage_color = "#f44336"
+        
+        judgment = analysis.get("judgment", "N/D")
         judgment_class = self._judgment_to_class(judgment)
         
-        # Sintesi generale (se presente)
+        modules_html = ""
+        for mod in modules_analysis:
+            mod_coverage = mod.get("coverage_percentage", mod.get("manual_coverage", 0))
+            
+            if mod_coverage >= 70:
+                mod_color = "#4caf50"
+                fill_class = "fill-high"
+                icon = "🟢"
+            elif mod_coverage >= 40:
+                mod_color = "#ff9800"
+                fill_class = "fill-medium"
+                icon = "🟡"
+            else:
+                mod_color = "#f44336"
+                fill_class = "fill-low"
+                icon = "🔴"
+            
+            description = mod.get("description", "")
+            if not description:
+                description = f"Copertura {mod.get('status', 'N/D')}"
+            
+            modules_html += f"""
+            <div class="module-card" style="border-left: 4px solid {mod_color};">
+                <div class="module-header">
+                    <span class="module-title">{icon} {mod.get('module_name', 'N/D')}</span>
+                    <span class="module-coverage" style="color: {mod_color};">{mod_coverage:.0f}%</span>
+                </div>
+                <div class="coverage-bar">
+                    <div class="coverage-fill {fill_class}" style="width:{mod_coverage}%;"></div>
+                </div>
+                <div class="module-description">
+                    <em>{description}</em>
+                </div>
+            </div>"""
+        
+        gaps_html = ""
+        missing = gaps.get("missing_in_manual", [])[:15]
+        if missing:
+            gaps_items = "".join([
+                f"<li><strong>{g.get('module', 'N/D')}</strong>: {g.get('content', 'N/D')}</li>"
+                for g in missing
+            ])
+            remaining = len(gaps.get("missing_in_manual", [])) - 15
+            if remaining > 0:
+                gaps_items += f"<li><em>... e altri {remaining} contenuti</em></li>"
+            
+            gaps_html = f"""
+    <div class="gaps-section">
+        <h3>⚠️ Gap Rilevati</h3>
+        <ul>{gaps_items}</ul>
+    </div>"""
+        
+        summary = analysis.get("summary", "")
         summary_html = ""
-        summary = overall_assessment.get("summary", "")
         if summary:
             summary_html = f"""
     <div class="summary-narrative">
         <h3>📝 Sintesi</h3>
         <p>{summary}</p>
     </div>"""
-        
-        # Genera sezioni moduli con descrizione narrativa
-        modules_html = ""
-        for mod in modules:
-            cov = mod.get("coverage_percentage", mod.get("manual_coverage", 0))
-            status = mod.get("status", "N/D")
-            description = mod.get("description", "")
-            fill_class = "fill-high" if cov >= 70 else ("fill-medium" if cov >= 50 else "fill-low")
-            status_icon = "🟢" if cov >= 70 else ("🟡" if cov >= 50 else "🔴")
-            border_color = "#4caf50" if cov >= 70 else ("#ff9800" if cov >= 50 else "#f44336")
-            
-            modules_html += f"""
-            <div class="module-card" style="border-left: 4px solid {border_color};">
-                <div class="module-header">
-                    <span class="module-title">{status_icon} {mod.get('module_name', 'N/D')}</span>
-                    <span class="module-coverage" style="color: {border_color};">{cov:.0f}%</span>
-                </div>
-                <div class="coverage-bar">
-                    <div class="coverage-fill {fill_class}" style="width:{cov}%;"></div>
-                </div>
-                <div class="module-description">
-                    {description if description else f"<em>Copertura {status}</em>"}
-                </div>
-            </div>"""
-        
-        # Genera lista gap
-        gaps_html = ""
-        missing = gaps.get("missing_in_manual", [])
-        if missing:
-            gaps_html = "<ul>"
-            for gap in missing[:15]:
-                gaps_html += f"<li><strong>{gap.get('module', 'N/D')}</strong>: {gap.get('content', 'N/D')}</li>"
-            if len(missing) > 15:
-                gaps_html += f"<li><em>... e altri {len(missing) - 15} contenuti</em></li>"
-            gaps_html += "</ul>"
-        else:
-            gaps_html = "<p>✅ Nessun gap significativo rilevato.</p>"
-        
-        framework_label = "IDEALE" if framework_type == "ideal" else "REALE"
         
         html = f"""<!DOCTYPE html>
 <html lang="it">
@@ -1223,67 +1285,40 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
     <title>Analisi Manuale - {manual_info.get('title', 'N/D')}</title>
     <style>
         * {{ box-sizing: border-box; }}
-        body {{ 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            margin: 0; padding: 20px 40px; 
-            background: #f5f7fa; color: #333; line-height: 1.6;
-        }}
-        .container {{ 
-            max-width: 1200px; margin: 0 auto; 
-            background: white; padding: 30px 40px; 
-            border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.07); 
-        }}
+        body {{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 20px 40px; background: #f5f7fa; color: #333; line-height: 1.6; }}
+        .container {{ max-width: 1200px; margin: 0 auto; background: white; padding: 30px 40px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.07); }}
         h1 {{ color: #1a237e; border-bottom: 3px solid #3949ab; padding-bottom: 15px; }}
         h2 {{ color: #283593; margin-top: 35px; border-left: 4px solid #3949ab; padding-left: 15px; }}
         h3 {{ color: #3949ab; }}
         .subtitle {{ color: #666; margin-bottom: 25px; }}
         .method-badge {{ background: #e3f2fd; color: #1565c0; padding: 4px 12px; border-radius: 12px; font-size: 0.85em; }}
-        
         .summary-grid {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin: 25px 0; }}
-        .summary-card {{ 
-            background: #f8f9ff; padding: 20px; border-radius: 10px; text-align: center;
-            border-top: 4px solid #3949ab;
-        }}
+        .summary-card {{ background: #f8f9ff; padding: 20px; border-radius: 10px; text-align: center; border-top: 4px solid #3949ab; }}
         .summary-card .value {{ font-size: 2.5em; font-weight: bold; color: #1a237e; }}
         .summary-card .label {{ color: #666; font-size: 0.9em; }}
-        
-        .summary-narrative {{
-            background: #e8eaf6; padding: 20px; border-radius: 10px; margin: 25px 0;
-        }}
+        .summary-narrative {{ background: #e8eaf6; padding: 20px; border-radius: 10px; margin: 25px 0; }}
+        .summary-narrative h3 {{ margin-top: 0; }}
         .summary-narrative p {{ margin: 10px 0 0 0; font-size: 1.05em; }}
-        
-        .module-card {{
-            background: #fafafa; padding: 20px; border-radius: 10px; margin: 15px 0;
-        }}
-        .module-header {{
-            display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;
-        }}
+        .module-card {{ background: #fafafa; padding: 20px; border-radius: 10px; margin: 15px 0; }}
+        .module-header {{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }}
         .module-title {{ font-size: 1.1em; font-weight: 600; }}
         .module-coverage {{ font-size: 1.4em; font-weight: bold; }}
-        .module-description {{
-            margin-top: 15px; padding-top: 15px; border-top: 1px solid #e0e0e0;
-            color: #444; font-size: 0.95em;
-        }}
-        
+        .module-description {{ margin-top: 15px; padding-top: 15px; border-top: 1px solid #e0e0e0; color: #444; font-size: 0.95em; }}
         .coverage-bar {{ width: 100%; height: 12px; background: #e0e0e0; border-radius: 6px; overflow: hidden; }}
         .coverage-fill {{ height: 100%; border-radius: 6px; }}
         .fill-high {{ background: linear-gradient(90deg, #4caf50, #8bc34a); }}
         .fill-medium {{ background: linear-gradient(90deg, #ff9800, #ffc107); }}
         .fill-low {{ background: linear-gradient(90deg, #f44336, #ff5722); }}
-        
         .judgment-badge {{ display: inline-block; padding: 8px 20px; border-radius: 20px; font-size: 1.1em; font-weight: 600; }}
         .judgment-eccellente {{ background: #c8e6c9; color: #2e7d32; }}
         .judgment-buono {{ background: #dcedc8; color: #558b2f; }}
         .judgment-sufficiente {{ background: #fff3e0; color: #e65100; }}
         .judgment-insufficiente {{ background: #ffcdd2; color: #c62828; }}
-        
         .gaps-section {{ background: #fff8e1; padding: 20px; border-radius: 10px; margin-top: 20px; }}
         .gaps-section h3 {{ color: #e65100; margin-top: 0; }}
         .gaps-section ul {{ margin: 10px 0; padding-left: 25px; }}
         .gaps-section li {{ margin: 8px 0; }}
-        
         .recommendation {{ background: #e8f5e9; padding: 15px 20px; border-radius: 10px; margin-top: 20px; border-left: 4px solid #4caf50; }}
-        
         .footer {{ margin-top: 40px; padding-top: 20px; border-top: 1px solid #e0e0e0; color: #888; font-size: 0.85em; text-align: center; }}
     </style>
 </head>
@@ -1292,13 +1327,13 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
     <h1>📖 Analisi Manuale</h1>
     <p class="subtitle">
         <strong>{manual_info.get('title', 'N/D')}</strong> — {manual_info.get('author', 'N/D')} ({manual_info.get('publisher', 'N/D')})<br>
-        Confronto vs Framework {framework_label} 
-        <span class="method-badge">Metodo: {method.upper()}</span>
+        Confronto vs Framework {'IDEALE' if framework_type == 'ideal' else 'REALE'} 
+        <span class="method-badge">Metodo: {analysis.get('method', 'N/D').upper()}</span>
     </p>
     
     <div class="summary-grid">
         <div class="summary-card">
-            <div class="value" style="color: {overall_color};">{overall:.1f}%</div>
+            <div class="value" style="color: {coverage_color};">{coverage:.1f}%</div>
             <div class="label">Copertura Complessiva</div>
         </div>
         <div class="summary-card">
@@ -1323,180 +1358,14 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
     
     <h2>📊 Analisi per Modulo</h2>
     {modules_html}
-    
-    <div class="gaps-section">
-        <h3>⚠️ Gap Rilevati</h3>
-        {gaps_html}
-    </div>
+    {gaps_html}
     
     <div class="footer">
         Report generato da <strong>CoreX - Manual Analyzer v2.0</strong> | Zanichelli<br>
-        {datetime.now().strftime("%d/%m/%Y %H:%M:%S")}
-    </div>
-</div>
-</body>
-</html>"""
-        return html
-     
-        """Genera report HTML per confronto manuali"""
-        
-        ranking = comparison_result.get("ranking", [])
-        modules_comparison = comparison_result.get("modules_comparison", [])
-        framework_name = comparison_result.get("framework_name", "N/D")
-        framework_type = comparison_result.get("framework_type", "none")
-        
-        # Genera righe ranking
-        ranking_html = ""
-        for i, manual in enumerate(ranking):
-            rank = i + 1
-            rank_class = f"rank-{rank}" if rank <= 3 else "rank-other"
-            row_class = "winner" if rank == 1 else ""
-            coverage = manual.get("weighted_coverage") or manual.get("coverage") or 0
-            fill_class = "fill-high" if coverage >= 70 else ("fill-medium" if coverage >= 50 else "fill-low")
-            judgment = manual.get("judgment", "N/D")
-            judgment_class = self._judgment_to_class(judgment)
-            
-            ranking_html += f"""
-            <tr class="{row_class}">
-                <td><span class="rank-badge {rank_class}">{rank}</span></td>
-                <td><strong>{manual['manual_title']}</strong></td>
-                <td>{manual['author']}</td>
-                <td>{manual['publisher']}</td>
-                <td style="text-align:center;">{manual['n_chapters']}</td>
-                <td>
-                    <div class="coverage-bar">
-                        <div class="coverage-fill {fill_class}" style="width:{coverage}%;"></div>
-                    </div>
-                    <div style="text-align:center; font-weight:bold; margin-top:3px;">{coverage:.1f}%</div>
-                </td>
-                <td><span class="judgment-badge {judgment_class}">{judgment}</span></td>
-            </tr>"""
-        
-        # Genera cards moduli
-        modules_html = ""
-        for module in modules_comparison:
-            module_bars = ""
-            for ms in module.get("manual_scores", [])[:5]:
-                cov = ms['coverage']
-                fill_class = "fill-high" if cov >= 70 else ("fill-medium" if cov >= 50 else "fill-low")
-                module_bars += f"""
-                <div class="manual-bar">
-                    <span class="name" title="{ms['manual']}">{ms['manual'][:20]}</span>
-                    <div class="bar">
-                        <div class="coverage-bar" style="height:10px;">
-                            <div class="coverage-fill {fill_class}" style="width:{cov}%;"></div>
-                        </div>
-                    </div>
-                    <span class="value">{cov:.0f}%</span>
-                </div>"""
-            
-            modules_html += f"""
-            <div class="module-card">
-                <h4>{module['module_name']}</h4>
-                <div style="font-size:0.85em; color:#666; margin-bottom:10px;">
-                    Media: {module['avg_coverage']:.1f}% | Migliore: {module.get('best_manual', 'N/D')}
-                </div>
-                {module_bars}
-            </div>"""
-        
-        html = f"""<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <title>Confronto Manuali - CoreX</title>
-    <style>
-        * {{ box-sizing: border-box; }}
-        body {{ 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            margin: 0; padding: 20px 40px; 
-            background: #f5f7fa; color: #333; line-height: 1.6;
-        }}
-        .container {{ 
-            max-width: 1400px; margin: 0 auto; 
-            background: white; padding: 30px 40px; 
-            border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.07); 
-        }}
-        h1 {{ color: #1a237e; border-bottom: 3px solid #3949ab; padding-bottom: 15px; }}
-        h2 {{ color: #283593; margin-top: 35px; border-left: 4px solid #3949ab; padding-left: 15px; }}
-        .subtitle {{ color: #666; margin-bottom: 25px; }}
-        
-        .ranking-table {{ width: 100%; border-collapse: collapse; margin: 20px 0; }}
-        .ranking-table th {{ background: #3949ab; color: white; padding: 12px; text-align: left; }}
-        .ranking-table td {{ padding: 12px; border-bottom: 1px solid #e0e0e0; }}
-        .ranking-table tr:hover {{ background: #f8f9ff; }}
-        .ranking-table tr.winner {{ background: #e8f5e9; }}
-        
-        .rank-badge {{ 
-            display: inline-flex; align-items: center; justify-content: center;
-            width: 30px; height: 30px; border-radius: 50%; font-weight: bold;
-        }}
-        .rank-1 {{ background: gold; color: #333; }}
-        .rank-2 {{ background: silver; color: #333; }}
-        .rank-3 {{ background: #cd7f32; color: white; }}
-        .rank-other {{ background: #e0e0e0; color: #666; }}
-        
-        .coverage-bar {{ width: 100%; height: 20px; background: #e0e0e0; border-radius: 10px; overflow: hidden; }}
-        .coverage-fill {{ height: 100%; border-radius: 10px; }}
-        .fill-high {{ background: linear-gradient(90deg, #4caf50, #8bc34a); }}
-        .fill-medium {{ background: linear-gradient(90deg, #ff9800, #ffc107); }}
-        .fill-low {{ background: linear-gradient(90deg, #f44336, #ff5722); }}
-        
-        .judgment-badge {{ display: inline-block; padding: 4px 12px; border-radius: 15px; font-size: 0.85em; font-weight: 500; }}
-        .judgment-eccellente {{ background: #c8e6c9; color: #2e7d32; }}
-        .judgment-buono {{ background: #dcedc8; color: #558b2f; }}
-        .judgment-sufficiente {{ background: #fff3e0; color: #e65100; }}
-        .judgment-insufficiente {{ background: #ffcdd2; color: #c62828; }}
-        
-        .module-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 15px; }}
-        .module-card {{ background: #f8f9ff; border-radius: 10px; padding: 15px; border-left: 4px solid #3949ab; }}
-        .module-card h4 {{ margin: 0 0 10px 0; color: #1a237e; }}
-        
-        .manual-bar {{ display: flex; align-items: center; margin: 5px 0; font-size: 0.9em; }}
-        .manual-bar .name {{ width: 150px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }}
-        .manual-bar .bar {{ flex: 1; margin: 0 10px; }}
-        .manual-bar .value {{ width: 50px; text-align: right; font-weight: bold; }}
-        
-        .footer {{ margin-top: 40px; padding-top: 20px; border-top: 1px solid #e0e0e0; color: #888; font-size: 0.85em; text-align: center; }}
-    </style>
-</head>
-<body>
-<div class="container">
-    <h1>📚 Confronto Manuali</h1>
-    <p class="subtitle">
-        <strong>{len(ranking)} manuali confrontati</strong> | 
-        Framework: {framework_name} ({framework_type.upper()}) |
-        Data: {datetime.now().strftime("%d/%m/%Y %H:%M")}
-    </p>
-    
-    <h2>🏆 Ranking Manuali</h2>
-    <table class="ranking-table">
-        <thead>
-            <tr>
-                <th style="width:60px;">Rank</th>
-                <th>Manuale</th>
-                <th>Autore</th>
-                <th>Editore</th>
-                <th style="width:80px;">Cap.</th>
-                <th style="width:200px;">Copertura</th>
-                <th style="width:120px;">Giudizio</th>
-            </tr>
-        </thead>
-        <tbody>
-            {ranking_html}
-        </tbody>
-    </table>
-    
-    <h2>📊 Confronto per Modulo</h2>
-    <div class="module-grid">
-        {modules_html}
-    </div>
-    
-    <div class="footer">
-        Report generato da <strong>CoreX - Manual Analyzer v2.0</strong> | Zanichelli<br>
-        {datetime.now().strftime("%d/%m/%Y %H:%M:%S")}
+        {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}
     </div>
 </div>
 </body>
 </html>"""
         
-        return html
+    return html
