@@ -3,7 +3,7 @@
     "manual_name": "Principi di Chimica",
     "manual_type": "zanichelli",
     "materia": "Chimica_Generale",
-    "saved_at": "2026-01-02T19:10:48.229732",
+    "saved_at": "2026-01-03T11:40:43.356411",
     "analysis_version": "2.0"
   },
   "analysis": {
@@ -32,15 +32,15 @@
       "n_modules": 12,
       "n_core_modules": 8
     },
-    "overall_coverage": 71.7,
-    "core_modules_coverage": 75.6,
+    "overall_coverage": 72.1,
+    "core_modules_coverage": 76.9,
     "judgment": "Buono",
     "recommendation": "Il manuale copre la maggior parte dei contenuti con alcune lacune. Adozione con integrazioni.",
     "modules_analysis": [
       {
         "module_id": 1,
         "module_name": "Struttura atomica e tavola periodica",
-        "manual_coverage": 80,
+        "manual_coverage": 90,
         "real_avg_coverage": 88.9,
         "coverage_by_class": {
           "L-13_Biologia": 100.0,
@@ -54,18 +54,24 @@
           "LM-13_Farmacia": 100.0
         },
         "is_core": true,
-        "contents_covered": 4,
-        "contents_total": 4,
+        "contents_covered": 5,
+        "contents_total": 5,
         "content_matches": [
           {
             "content": "Particelle subatomiche, isotopi, numero Avogadro",
+            "matched_by": "Elementi e atomi",
+            "chapter": 0,
+            "score": 1.0
+          },
+          {
+            "content": "Modello Bohr, spettri atomici",
             "matched_by": "L'osservazione degli atomi",
             "chapter": 1,
             "score": 1.0
           },
           {
-            "content": "Modello Bohr, spettri atomici",
-            "matched_by": "La teoria quantistica",
+            "content": "Numeri quantici, orbitali s/p/d/f",
+            "matched_by": "Funzioni d'onda e livelli energetici",
             "chapter": 1,
             "score": 1.0
           },
@@ -87,7 +93,7 @@
       {
         "module_id": 2,
         "module_name": "Legame chimico e geometria molecolare",
-        "manual_coverage": 90,
+        "manual_coverage": 85,
         "real_avg_coverage": 93.3,
         "coverage_by_class": {
           "L-13_Biologia": 100.0,
@@ -101,7 +107,7 @@
           "LM-13_Farmacia": 100.0
         },
         "is_core": true,
-        "contents_covered": 4,
+        "contents_covered": 5,
         "contents_total": 5,
         "content_matches": [
           {
@@ -130,8 +136,9 @@
           },
           {
             "content": "Legami metallici, energia reticolare",
-            "matched_by": null,
-            "score": 0
+            "matched_by": "I solidi metallici",
+            "chapter": 3,
+            "score": 1.0
           }
         ],
         "status": "completo"
@@ -139,7 +146,7 @@
       {
         "module_id": 3,
         "module_name": "Stechiometria e reazioni chimiche",
-        "manual_coverage": 85,
+        "manual_coverage": 90,
         "real_avg_coverage": 100.0,
         "coverage_by_class": {
           "L-13_Biologia": 100.0,
@@ -192,7 +199,7 @@
       {
         "module_id": 4,
         "module_name": "Termodinamica e termochimica",
-        "manual_coverage": 90,
+        "manual_coverage": 85,
         "real_avg_coverage": 82.2,
         "coverage_by_class": {
           "L-13_Biologia": 80.0,
@@ -206,7 +213,7 @@
           "LM-13_Farmacia": 100.0
         },
         "is_core": true,
-        "contents_covered": 3,
+        "contents_covered": 5,
         "contents_total": 5,
         "content_matches": [
           {
@@ -217,7 +224,13 @@
           },
           {
             "content": "Calorimetria, capacità termica",
-            "matched_by": "Lavoro e calore",
+            "matched_by": "L'entalpia",
+            "chapter": 4,
+            "score": 1.0
+          },
+          {
+            "content": "Legge Hess, entalpie formazione",
+            "matched_by": "La termochimica",
             "chapter": 4,
             "score": 1.0
           },
@@ -228,14 +241,10 @@
             "score": 1.0
           },
           {
-            "content": "Legge Hess, entalpie formazione",
-            "matched_by": null,
-            "score": 0
-          },
-          {
             "content": "Cicli Born-Haber, spontaneità",
-            "matched_by": null,
-            "score": 0
+            "matched_by": "I diversi contributi all'entalpia",
+            "chapter": 4,
+            "score": 1.0
           }
         ],
         "status": "completo"
@@ -243,7 +252,7 @@
       {
         "module_id": 5,
         "module_name": "Stati materia e soluzioni",
-        "manual_coverage": 85,
+        "manual_coverage": 90,
         "real_avg_coverage": 100.0,
         "coverage_by_class": {
           "L-13_Biologia": 100.0,
@@ -310,12 +319,18 @@
           "LM-13_Farmacia": 100.0
         },
         "is_core": false,
-        "contents_covered": 3,
-        "contents_total": 5,
+        "contents_covered": 5,
+        "contents_total": 6,
         "content_matches": [
           {
             "content": "Velocità reazione, ordine, cinetica integrata",
             "matched_by": "La velocità di reazione",
+            "chapter": 7,
+            "score": 1.0
+          },
+          {
+            "content": "Equazione Arrhenius, energia attivazione",
+            "matched_by": "I modelli di reazione",
             "chapter": 7,
             "score": 1.0
           },
@@ -332,9 +347,10 @@
             "score": 1.0
           },
           {
-            "content": "Equazione Arrhenius, energia attivazione",
-            "matched_by": null,
-            "score": 0
+            "content": "Cinetica enzimatica (Michaelis-Menten)",
+            "matched_by": "Non coperto",
+            "chapter": null,
+            "score": 1.0
           },
           {
             "content": "Cinetica enzimatica (Michaelis-Menten)",
@@ -361,8 +377,8 @@
           "LM-13_Farmacia": 80.0
         },
         "is_core": true,
-        "contents_covered": 3,
-        "contents_total": 5,
+        "contents_covered": 5,
+        "contents_total": 7,
         "content_matches": [
           {
             "content": "Costante Kc/Kp, principio Le Chatelier",
@@ -380,6 +396,18 @@
             "content": "Fattori spostamento equilibrio",
             "matched_by": "La risposta dei sistemi all'equilibrio alla variazione delle condizioni",
             "chapter": 5,
+            "score": 1.0
+          },
+          {
+            "content": "Equilibri multipli, approssimazioni",
+            "matched_by": "Non coperto",
+            "chapter": null,
+            "score": 1.0
+          },
+          {
+            "content": "Q vs K",
+            "matched_by": "Non coperto",
+            "chapter": null,
             "score": 1.0
           },
           {
@@ -412,8 +440,8 @@
           "LM-13_Farmacia": 100.0
         },
         "is_core": true,
-        "contents_covered": 3,
-        "contents_total": 5,
+        "contents_covered": 5,
+        "contents_total": 6,
         "content_matches": [
           {
             "content": "Arrhenius, Brønsted-Lowry, Lewis",
@@ -428,18 +456,25 @@
             "score": 1.0
           },
           {
+            "content": "Idrolisi sali, indicatori",
+            "matched_by": "Non coperto",
+            "chapter": null,
+            "score": 1.0
+          },
+          {
             "content": "Curve titolazione, tamponi",
             "matched_by": "Le titolazioni acido-base",
             "chapter": 6,
             "score": 1.0
           },
           {
-            "content": "Idrolisi sali, indicatori",
-            "matched_by": null,
-            "score": 0
+            "content": "Calcoli capacità tampone",
+            "matched_by": "I tamponi",
+            "chapter": 6,
+            "score": 1.0
           },
           {
-            "content": "Calcoli capacità tampone",
+            "content": "Idrolisi sali, indicatori",
             "matched_by": null,
             "score": 0
           }
@@ -449,7 +484,7 @@
       {
         "module_id": 9,
         "module_name": "Elettrochimica",
-        "manual_coverage": 85,
+        "manual_coverage": 80,
         "real_avg_coverage": 57.8,
         "coverage_by_class": {
           "L-13_Biologia": 80.0,
@@ -463,8 +498,8 @@
           "LM-13_Farmacia": 60.0
         },
         "is_core": false,
-        "contents_covered": 3,
-        "contents_total": 5,
+        "contents_covered": 5,
+        "contents_total": 7,
         "content_matches": [
           {
             "content": "Celle galvaniche/voltaiche, potenziale standard",
@@ -474,14 +509,26 @@
           },
           {
             "content": "Equazione Nernst",
-            "matched_by": "I potenziali standard",
+            "matched_by": "L'equazione di Nernst",
             "chapter": 6,
             "score": 1.0
           },
           {
             "content": "Celle elettrolitiche, leggi Faraday",
-            "matched_by": "L'elettrolisi",
+            "matched_by": "Le celle elettrolitiche",
             "chapter": 6,
+            "score": 1.0
+          },
+          {
+            "content": "Corrosione, batterie (Pb, NiCd, Li-ion)",
+            "matched_by": "Non coperto",
+            "chapter": null,
+            "score": 1.0
+          },
+          {
+            "content": "Elettrodi riferimento",
+            "matched_by": "Non coperto",
+            "chapter": null,
             "score": 1.0
           },
           {
@@ -514,8 +561,8 @@
           "LM-13_Farmacia": 60.0
         },
         "is_core": false,
-        "contents_covered": 4,
-        "contents_total": 5,
+        "contents_covered": 5,
+        "contents_total": 6,
         "content_matches": [
           {
             "content": "Gruppi 1-2 (alcalini/terrosi)",
@@ -533,6 +580,12 @@
             "content": "Alogeni (17), gas nobili (18)",
             "matched_by": "Il gruppo 17: gli alogeni",
             "chapter": 8,
+            "score": 1.0
+          },
+          {
+            "content": "Ossidi acidi/basei/anfoteri",
+            "matched_by": "Non coperto",
+            "chapter": null,
             "score": 1.0
           },
           {
@@ -649,26 +702,6 @@
     "gaps": {
       "missing_in_manual": [
         {
-          "content": "Legami metallici, energia reticolare",
-          "module": "Legame chimico e geometria molecolare",
-          "is_core_module": true
-        },
-        {
-          "content": "Legge Hess, entalpie formazione",
-          "module": "Termodinamica e termochimica",
-          "is_core_module": true
-        },
-        {
-          "content": "Cicli Born-Haber, spontaneità",
-          "module": "Termodinamica e termochimica",
-          "is_core_module": true
-        },
-        {
-          "content": "Equazione Arrhenius, energia attivazione",
-          "module": "Cinetica chimica",
-          "is_core_module": false
-        },
-        {
           "content": "Cinetica enzimatica (Michaelis-Menten)",
           "module": "Cinetica chimica",
           "is_core_module": false
@@ -685,11 +718,6 @@
         },
         {
           "content": "Idrolisi sali, indicatori",
-          "module": "Equilibri acido-base",
-          "is_core_module": true
-        },
-        {
-          "content": "Calcoli capacità tampone",
           "module": "Equilibri acido-base",
           "is_core_module": true
         },
@@ -761,21 +789,6 @@
       ],
       "priority_gaps": [
         {
-          "content": "Legami metallici, energia reticolare",
-          "module": "Legame chimico e geometria molecolare",
-          "is_core_module": true
-        },
-        {
-          "content": "Legge Hess, entalpie formazione",
-          "module": "Termodinamica e termochimica",
-          "is_core_module": true
-        },
-        {
-          "content": "Cicli Born-Haber, spontaneità",
-          "module": "Termodinamica e termochimica",
-          "is_core_module": true
-        },
-        {
           "content": "Equilibri multipli, approssimazioni",
           "module": "Equilibri chimici",
           "is_core_module": true
@@ -787,11 +800,6 @@
         },
         {
           "content": "Idrolisi sali, indicatori",
-          "module": "Equilibri acido-base",
-          "is_core_module": true
-        },
-        {
-          "content": "Calcoli capacità tampone",
           "module": "Equilibri acido-base",
           "is_core_module": true
         },
@@ -823,6 +831,6 @@
       ]
     },
     "method": "llm",
-    "analysis_date": "2026-01-02T19:10:48.228636"
+    "analysis_date": "2026-01-03T11:40:43.355279"
   }
 }

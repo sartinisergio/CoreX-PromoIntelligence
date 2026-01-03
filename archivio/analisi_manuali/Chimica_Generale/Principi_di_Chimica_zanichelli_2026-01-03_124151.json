@@ -1,0 +1,732 @@
+{
+  "metadata": {
+    "manual_name": "Principi di Chimica",
+    "manual_type": "zanichelli",
+    "materia": "Chimica_Generale",
+    "saved_at": "2026-01-03T12:41:51.638857",
+    "analysis_version": "2.0"
+  },
+  "analysis": {
+    "manual_info": {
+      "id": "Atkins_Principi_Chimica",
+      "title": "Principi di Chimica",
+      "author": "Atkins",
+      "publisher": "Zanichelli",
+      "n_chapters": 11,
+      "n_sections": 93
+    },
+    "framework_info": {
+      "name": "Framework Unico Valutazione Chimica Generale - Multidisciplinare",
+      "n_modules": 12,
+      "total_contents": 60
+    },
+    "overall_coverage": 88.3,
+    "judgment": "Eccellente",
+    "recommendation": "Il manuale copre ampiamente i contenuti richiesti. Adozione consigliata.",
+    "modules_analysis": [
+      {
+        "module_id": 1,
+        "module_name": "Struttura atomica e tavola periodica",
+        "coverage_percentage": 100.0,
+        "contents_covered": 5,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Particelle subatomiche, isotopi, numero Avogadro",
+            "matched_by": "Gli isotopi",
+            "type": "subsection",
+            "chapter": 0,
+            "section": "B",
+            "score": 0.5
+          },
+          {
+            "content": "Modello Bohr, spettri atomici",
+            "matched_by": "Il modello nucleare",
+            "type": "subsection",
+            "chapter": 0,
+            "section": "B",
+            "score": 0.5
+          },
+          {
+            "content": "Numeri quantici, orbitali s/p/d/f",
+            "matched_by": "Numeri quantici, gusci e sottogusci",
+            "type": "subsection",
+            "chapter": 1,
+            "section": "1D",
+            "score": 0.67
+          },
+          {
+            "content": "Configurazioni elettroniche, eccezioni",
+            "matched_by": "Le eccezioni alla regola dell'ottetto",
+            "type": "section",
+            "chapter": 2,
+            "section": "2C",
+            "score": 0.33
+          },
+          {
+            "content": "Raggio atomico, IE, elettronegatività",
+            "matched_by": "Il raggio atomico",
+            "type": "subsection",
+            "chapter": 1,
+            "section": "1F",
+            "score": 0.67
+          }
+        ],
+        "chapters_involved": [
+          0,
+          1,
+          2
+        ],
+        "status": "completo"
+      },
+      {
+        "module_id": 2,
+        "module_name": "Legame chimico e geometria molecolare",
+        "coverage_percentage": 80.0,
+        "contents_covered": 4,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Teoria Lewis, regola ottetto/18 elettroni",
+            "matched_by": "La teoria quantistica",
+            "type": "section",
+            "chapter": 1,
+            "section": "1B",
+            "score": 0.5
+          },
+          {
+            "content": "VSEPR (lineare, planare, tetraedrica)",
+            "matched_by": "Il modello VSEPR",
+            "type": "section",
+            "chapter": 2,
+            "section": "2E",
+            "score": 0.5
+          },
+          {
+            "content": "Ibridazione sp/sp2/sp3",
+            "matched_by": null,
+            "score": 0
+          },
+          {
+            "content": "Polarità legami/molecole, momento dipolare",
+            "matched_by": "Le molecole e i composti molecolari",
+            "type": "subsection",
+            "chapter": 0,
+            "section": "C",
+            "score": 0.5
+          },
+          {
+            "content": "Legami metallici, energia reticolare",
+            "matched_by": "Materia ed energia",
+            "type": "section",
+            "chapter": 0,
+            "section": "A",
+            "score": 0.5
+          }
+        ],
+        "chapters_involved": [
+          0,
+          1,
+          2
+        ],
+        "status": "completo"
+      },
+      {
+        "module_id": 3,
+        "module_name": "Stechiometria e reazioni chimiche",
+        "coverage_percentage": 100.0,
+        "contents_covered": 5,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Mole, massa molare, composizione %",
+            "matched_by": "Mole e massa molare",
+            "type": "section",
+            "chapter": 0,
+            "section": "E",
+            "score": 0.75
+          },
+          {
+            "content": "Bilanciamento equazioni, yield teorico/esperim.",
+            "matched_by": "Le equazioni chimiche",
+            "type": "section",
+            "chapter": 0,
+            "section": "H",
+            "score": 0.5
+          },
+          {
+            "content": "Reazioni: precipitazione, acido-base, redox",
+            "matched_by": "La rappresentazione delle reazioni chimiche",
+            "type": "subsection",
+            "chapter": 0,
+            "section": "H",
+            "score": 0.5
+          },
+          {
+            "content": "Stechiometria soluzioni, diluizioni",
+            "matched_by": "Miscugli e soluzioni",
+            "type": "section",
+            "chapter": 0,
+            "section": "G",
+            "score": 0.33
+          },
+          {
+            "content": "Numeri ossidazione, bilanciamento redox",
+            "matched_by": "Il bilanciamento delle equazioni chimiche",
+            "type": "subsection",
+            "chapter": 0,
+            "section": "H",
+            "score": 0.5
+          }
+        ],
+        "chapters_involved": [
+          0
+        ],
+        "status": "completo"
+      },
+      {
+        "module_id": 4,
+        "module_name": "Termodinamica e termochimica",
+        "coverage_percentage": 100.0,
+        "contents_covered": 5,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Energia interna, entalpia, 1° principio",
+            "matched_by": "Materia ed energia",
+            "type": "section",
+            "chapter": 0,
+            "section": "A",
+            "score": 0.5
+          },
+          {
+            "content": "Calorimetria, capacità termica",
+            "matched_by": "La capacità termica a volume o a pressione costante",
+            "type": "subsection",
+            "chapter": 4,
+            "section": "4C",
+            "score": 0.67
+          },
+          {
+            "content": "Legge Hess, entalpie formazione",
+            "matched_by": "La combinazione delle entalpie di reazione: la legge di Hess",
+            "type": "subsection",
+            "chapter": 4,
+            "section": "4D",
+            "score": 0.75
+          },
+          {
+            "content": "Entropia, 2° principio, energia libera Gibbs",
+            "matched_by": "L'energia libera di Gibbs",
+            "type": "section",
+            "chapter": 4,
+            "section": "4J",
+            "score": 0.6
+          },
+          {
+            "content": "Cicli Born-Haber, spontaneità",
+            "matched_by": "Il ciclo di Born-Haber",
+            "type": "subsection",
+            "chapter": 4,
+            "section": "4E",
+            "score": 0.33
+          }
+        ],
+        "chapters_involved": [
+          0,
+          4
+        ],
+        "status": "completo"
+      },
+      {
+        "module_id": 5,
+        "module_name": "Stati materia e soluzioni",
+        "coverage_percentage": 100.0,
+        "contents_covered": 5,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Leggi gas ideali, miscele, pressioni parziali",
+            "matched_by": "Le leggi dei gas in azione",
+            "type": "section",
+            "chapter": 3,
+            "section": "3B",
+            "score": 0.5
+          },
+          {
+            "content": "Teoria cinetica gas, gas reali",
+            "matched_by": "La teoria quantistica",
+            "type": "section",
+            "chapter": 1,
+            "section": "1B",
+            "score": 0.33
+          },
+          {
+            "content": "Cambi stato, diagrammi fase",
+            "matched_by": "Le equazioni di stato dei gas reali",
+            "type": "subsection",
+            "chapter": 3,
+            "section": "3E",
+            "score": 0.5
+          },
+          {
+            "content": "Soluzioni: molalità, molarità, % massa",
+            "matched_by": "Mole e massa molare",
+            "type": "section",
+            "chapter": 0,
+            "section": "E",
+            "score": 0.5
+          },
+          {
+            "content": "Proprietà colligative (ebullio, crioscopia, osmosi)",
+            "matched_by": "Le proprietà generali degli elementi",
+            "type": "subsection",
+            "chapter": 1,
+            "section": "1F",
+            "score": 0.5
+          }
+        ],
+        "chapters_involved": [
+          0,
+          1,
+          3
+        ],
+        "status": "completo"
+      },
+      {
+        "module_id": 6,
+        "module_name": "Cinetica chimica",
+        "coverage_percentage": 100.0,
+        "contents_covered": 5,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Velocità reazione, ordine, cinetica integrata",
+            "matched_by": "I limiti di una reazione",
+            "type": "subsection",
+            "chapter": 0,
+            "section": "M",
+            "score": 0.5
+          },
+          {
+            "content": "Equazione Arrhenius, energia attivazione",
+            "matched_by": "Materia ed energia",
+            "type": "section",
+            "chapter": 0,
+            "section": "A",
+            "score": 0.5
+          },
+          {
+            "content": "Meccanismi elementari, stato attivato",
+            "matched_by": "Le equazioni di stato dei gas reali",
+            "type": "subsection",
+            "chapter": 3,
+            "section": "3E",
+            "score": 0.5
+          },
+          {
+            "content": "Catalisi omogenea/eterogenea",
+            "matched_by": "La catalisi",
+            "type": "section",
+            "chapter": 7,
+            "section": "7E",
+            "score": 0.33
+          },
+          {
+            "content": "Cinetica enzimatica (Michaelis-Menten)",
+            "matched_by": "FOCUS 7 - La cinetica",
+            "type": "chapter",
+            "chapter": 7,
+            "section": null,
+            "score": 0.33
+          }
+        ],
+        "chapters_involved": [
+          0,
+          3,
+          7
+        ],
+        "status": "completo"
+      },
+      {
+        "module_id": 7,
+        "module_name": "Equilibri chimici",
+        "coverage_percentage": 80.0,
+        "contents_covered": 4,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Costante Kc/Kp, principio Le Chatelier",
+            "matched_by": "Il principio di indeterminazione",
+            "type": "subsection",
+            "chapter": 1,
+            "section": "1B",
+            "score": 0.33
+          },
+          {
+            "content": "Calcoli equilibri gassosi/eterogenei",
+            "matched_by": "I miscugli gassosi",
+            "type": "subsection",
+            "chapter": 3,
+            "section": "3A",
+            "score": 0.5
+          },
+          {
+            "content": "Fattori spostamento equilibrio",
+            "matched_by": "L'equilibrio",
+            "type": "subsection",
+            "chapter": 4,
+            "section": "4I",
+            "score": 0.33
+          },
+          {
+            "content": "Equilibri multipli, approssimazioni",
+            "matched_by": "L'equilibrio",
+            "type": "subsection",
+            "chapter": 4,
+            "section": "4I",
+            "score": 0.5
+          },
+          {
+            "content": "Q vs K",
+            "matched_by": null,
+            "score": 0
+          }
+        ],
+        "chapters_involved": [
+          1,
+          3,
+          4
+        ],
+        "status": "completo"
+      },
+      {
+        "module_id": 8,
+        "module_name": "Equilibri acido-base",
+        "coverage_percentage": 100.0,
+        "contents_covered": 5,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Arrhenius, Brønsted-Lowry, Lewis",
+            "matched_by": "I simboli di Lewis",
+            "type": "subsection",
+            "chapter": 2,
+            "section": "2A",
+            "score": 0.33
+          },
+          {
+            "content": "pKa, pH calcoli acidi deboli",
+            "matched_by": "Acidi e basi forti e deboli",
+            "type": "subsection",
+            "chapter": 0,
+            "section": "J",
+            "score": 0.67
+          },
+          {
+            "content": "Idrolisi sali, indicatori",
+            "matched_by": "Le soluzioni di sali degli acidi poliprotici",
+            "type": "subsection",
+            "chapter": 6,
+            "section": "6E",
+            "score": 0.33
+          },
+          {
+            "content": "Curve titolazione, tamponi",
+            "matched_by": "Le curve di riscaldamento",
+            "type": "subsection",
+            "chapter": 4,
+            "section": "4C",
+            "score": 0.33
+          },
+          {
+            "content": "Calcoli capacità tampone",
+            "matched_by": "La capacità termica a volume o a pressione costante",
+            "type": "subsection",
+            "chapter": 4,
+            "section": "4C",
+            "score": 0.33
+          }
+        ],
+        "chapters_involved": [
+          0,
+          2,
+          4,
+          6
+        ],
+        "status": "completo"
+      },
+      {
+        "module_id": 9,
+        "module_name": "Elettrochimica",
+        "coverage_percentage": 100.0,
+        "contents_covered": 5,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Celle galvaniche/voltaiche, potenziale standard",
+            "matched_by": "I sistemi cristallini e le celle elementari",
+            "type": "subsection",
+            "chapter": 3,
+            "section": "3G",
+            "score": 0.5
+          },
+          {
+            "content": "Equazione Nernst",
+            "matched_by": "L'equazione di Nernst",
+            "type": "subsection",
+            "chapter": 6,
+            "section": "6N",
+            "score": 1.0
+          },
+          {
+            "content": "Celle elettrolitiche, leggi Faraday",
+            "matched_by": "Le leggi dei gas in azione",
+            "type": "section",
+            "chapter": 3,
+            "section": "3B",
+            "score": 0.5
+          },
+          {
+            "content": "Corrosione, batterie (Pb, NiCd, Li-ion)",
+            "matched_by": "La corrosione",
+            "type": "subsection",
+            "chapter": 6,
+            "section": "6N",
+            "score": 0.5
+          },
+          {
+            "content": "Elettrodi riferimento",
+            "matched_by": "Gli elettrodi ione-selettivi",
+            "type": "subsection",
+            "chapter": 6,
+            "section": "6N",
+            "score": 0.5
+          }
+        ],
+        "chapters_involved": [
+          3,
+          6
+        ],
+        "status": "completo"
+      },
+      {
+        "module_id": 10,
+        "module_name": "Chimica elementi principali",
+        "coverage_percentage": 100.0,
+        "contents_covered": 5,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Gruppi 1-2 (alcalini/terrosi)",
+            "matched_by": "Il gruppo 2: i metalli alcalino-terrosi",
+            "type": "section",
+            "chapter": 8,
+            "section": "8D",
+            "score": 0.5
+          },
+          {
+            "content": "Gruppo 13-16 (boro, carbonio, azoto, ossigeno)",
+            "matched_by": "Il gruppo 1: i metalli alcalini",
+            "type": "section",
+            "chapter": 8,
+            "section": "8C",
+            "score": 0.5
+          },
+          {
+            "content": "Alogeni (17), gas nobili (18)",
+            "matched_by": "Composti con l'idrogeno e gli alogeni",
+            "type": "subsection",
+            "chapter": 8,
+            "section": "8G",
+            "score": 0.5
+          },
+          {
+            "content": "Ossidi acidi/basei/anfoteri",
+            "matched_by": "Ossidi acidi, basici e anfoteri",
+            "type": "subsection",
+            "chapter": 6,
+            "section": "6A",
+            "score": 0.75
+          },
+          {
+            "content": "Nomenclatura IUPAC composti",
+            "matched_by": "La nomenclatura dei composti",
+            "type": "section",
+            "chapter": 0,
+            "section": "D",
+            "score": 0.67
+          }
+        ],
+        "chapters_involved": [
+          8,
+          0,
+          6
+        ],
+        "status": "completo"
+      },
+      {
+        "module_id": 11,
+        "module_name": "Tecniche analitiche e laboratorio",
+        "coverage_percentage": 40.0,
+        "contents_covered": 2,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Titolo soluzioni, standardizzazione",
+            "matched_by": "Miscugli e soluzioni",
+            "type": "section",
+            "chapter": 0,
+            "section": "G",
+            "score": 0.33
+          },
+          {
+            "content": "Gravimetria, volumetriche",
+            "matched_by": null,
+            "score": 0
+          },
+          {
+            "content": "Spettroscopia UV-Vis base",
+            "matched_by": null,
+            "score": 0
+          },
+          {
+            "content": "Cromatografia cartacea/TLC",
+            "matched_by": null,
+            "score": 0
+          },
+          {
+            "content": "Analisi qualitativa cationi/anionici",
+            "matched_by": "La denominazione dei cationi",
+            "type": "subsection",
+            "chapter": 0,
+            "section": "D",
+            "score": 0.5
+          }
+        ],
+        "chapters_involved": [
+          0
+        ],
+        "status": "parziale"
+      },
+      {
+        "module_id": 12,
+        "module_name": "Sicurezza, sostenibilità e applicazioni",
+        "coverage_percentage": 60.0,
+        "contents_covered": 3,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "MSDS, DPI, norme sicurezza",
+            "matched_by": null,
+            "score": 0
+          },
+          {
+            "content": "Gestione rifiuti chimici",
+            "matched_by": null,
+            "score": 0
+          },
+          {
+            "content": "Green chemistry principi",
+            "matched_by": "Il principio di indeterminazione",
+            "type": "subsection",
+            "chapter": 1,
+            "section": "1B",
+            "score": 0.5
+          },
+          {
+            "content": "Chimica industriale (Haber-Bosch, Claus)",
+            "matched_by": "La determinazione della formula chimica",
+            "type": "section",
+            "chapter": 0,
+            "section": "F",
+            "score": 0.5
+          },
+          {
+            "content": "Chimica atmosferica (ozono, acidi pioggia)",
+            "matched_by": "La determinazione della formula chimica",
+            "type": "section",
+            "chapter": 0,
+            "section": "F",
+            "score": 0.5
+          }
+        ],
+        "chapters_involved": [
+          0,
+          1
+        ],
+        "status": "buono"
+      }
+    ],
+    "uncovered_chapters": [
+      {
+        "chapter_num": 5,
+        "title": "FOCUS 5 - L'equilibrio"
+      },
+      {
+        "chapter_num": 6,
+        "title": "FOCUS 6 - Le reazioni"
+      },
+      {
+        "chapter_num": 9,
+        "title": "FOCUS 9 - La chimica nucleare"
+      },
+      {
+        "chapter_num": 10,
+        "title": "FOCUS 10 - La chimica organica"
+      }
+    ],
+    "gaps": {
+      "missing_in_manual": [
+        {
+          "content": "Ibridazione sp/sp2/sp3",
+          "module": "Legame chimico e geometria molecolare"
+        },
+        {
+          "content": "Q vs K",
+          "module": "Equilibri chimici"
+        },
+        {
+          "content": "Gravimetria, volumetriche",
+          "module": "Tecniche analitiche e laboratorio"
+        },
+        {
+          "content": "Spettroscopia UV-Vis base",
+          "module": "Tecniche analitiche e laboratorio"
+        },
+        {
+          "content": "Cromatografia cartacea/TLC",
+          "module": "Tecniche analitiche e laboratorio"
+        },
+        {
+          "content": "MSDS, DPI, norme sicurezza",
+          "module": "Sicurezza, sostenibilità e applicazioni"
+        },
+        {
+          "content": "Gestione rifiuti chimici",
+          "module": "Sicurezza, sostenibilità e applicazioni"
+        }
+      ],
+      "extra_in_manual": [
+        {
+          "chapter_num": 5,
+          "title": "FOCUS 5 - L'equilibrio"
+        },
+        {
+          "chapter_num": 6,
+          "title": "FOCUS 6 - Le reazioni"
+        },
+        {
+          "chapter_num": 9,
+          "title": "FOCUS 9 - La chimica nucleare"
+        },
+        {
+          "chapter_num": 10,
+          "title": "FOCUS 10 - La chimica organica"
+        }
+      ]
+    },
+    "method": "fallback",
+    "analysis_date": "2026-01-03T12:41:51.636682"
+  }
+}

@@ -194,8 +194,8 @@ class ManualAnalyzer:
                 "core_contents": mod.get("core_contents", [])
             })
         
-        # Prompt universale per 3 livelli
-        prompt = f"""Sei un esperto di didattica universitaria. 
+        # Prompt universale per 3 livelli CON DESCRIZIONE NARRATIVA
+        prompt = f"""Sei un esperto di didattica universitaria e consulente editoriale. 
 Devi analizzare quanto un manuale universitario di "{subject.replace('_', ' ').title()}" copre i contenuti di un framework didattico.
 
 STRUTTURA DEL MANUALE (3 livelli: Capitoli > Sezioni > Sottosezioni):
@@ -208,6 +208,10 @@ ISTRUZIONI:
 Per OGNI modulo del framework, determina:
 1. Quali capitoli/sezioni/sottosezioni del manuale coprono i core_contents di quel modulo
 2. La percentuale di copertura (0-100%)
+3. Una DESCRIZIONE NARRATIVA di 2-3 frasi che spieghi chiaramente:
+   - Quali argomenti specifici il manuale tratta e in quali capitoli/sezioni si trovano
+   - Cosa eventualmente manca e se è una lacuna rilevante o marginale
+   - Il tono deve essere utile per un promotore editoriale che deve capire rapidamente il valore del manuale
 
 REGOLE DI MATCHING:
 - Analizza TUTTI I LIVELLI: capitoli, sezioni E sottosezioni
@@ -216,6 +220,12 @@ REGOLE DI MATCHING:
 - Considera sinonimi e varianti terminologiche
 - Un capitolo/sezione/sottosezione può coprire più moduli
 - Una sottosezione specifica è preferibile a un capitolo generico
+
+STILE DELLA DESCRIZIONE:
+- Evita frasi generiche come "buona copertura" o "trattazione adeguata"
+- Cita specificamente i capitoli/sezioni rilevanti (es. "Il Capitolo 3 tratta...")
+- Se manca qualcosa, indica se è grave o trascurabile (es. "Manca solo X, argomento richiesto raramente nei programmi")
+- Sii concreto e informativo
 
 Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
 {{
@@ -231,16 +241,18 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
                     "chapter_num": 1
                 }}
             ],
-            "missing_contents": ["contenuti non coperti dal manuale"]
+            "missing_contents": ["contenuti non coperti dal manuale"],
+            "description": "Il manuale dedica il Capitolo X a questo tema, trattando in dettaglio A, B e C nella sezione Y. Manca solo Z, un argomento specialistico richiesto principalmente nei corsi di laurea magistrale."
         }}
     ],
     "overall_assessment": {{
         "total_coverage": 75,
         "strengths": ["punti di forza del manuale"],
-        "gaps": ["lacune principali"]
+        "gaps": ["lacune principali"],
+        "summary": "Sintesi complessiva di 2-3 frasi sul posizionamento del manuale rispetto al framework."
     }}
 }}"""
-
+        
         try:
             client = get_llm_client(provider_id)
             
@@ -1150,29 +1162,44 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
         judgment = analysis.get("judgment", "N/D")
         gaps = analysis.get("gaps", {})
         method = analysis.get("method", "N/D")
+        overall_assessment = analysis.get("overall_assessment", {})
         
         overall_color = "#4caf50" if overall >= 70 else ("#ff9800" if overall >= 50 else "#f44336")
         judgment_class = self._judgment_to_class(judgment)
         
-        # Genera righe moduli
+        # Sintesi generale (se presente)
+        summary_html = ""
+        summary = overall_assessment.get("summary", "")
+        if summary:
+            summary_html = f"""
+    <div class="summary-narrative">
+        <h3>📝 Sintesi</h3>
+        <p>{summary}</p>
+    </div>"""
+        
+        # Genera sezioni moduli con descrizione narrativa
         modules_html = ""
         for mod in modules:
             cov = mod.get("coverage_percentage", mod.get("manual_coverage", 0))
             status = mod.get("status", "N/D")
+            description = mod.get("description", "")
             fill_class = "fill-high" if cov >= 70 else ("fill-medium" if cov >= 50 else "fill-low")
             status_icon = "🟢" if cov >= 70 else ("🟡" if cov >= 50 else "🔴")
+            border_color = "#4caf50" if cov >= 70 else ("#ff9800" if cov >= 50 else "#f44336")
             
             modules_html += f"""
-            <tr>
-                <td>{status_icon} <strong>{mod.get('module_name', 'N/D')}</strong></td>
-                <td>
-                    <div class="coverage-bar" style="height:15px;">
-                        <div class="coverage-fill {fill_class}" style="width:{cov}%;"></div>
-                    </div>
-                </td>
-                <td style="text-align:center; font-weight:bold;">{cov:.1f}%</td>
-                <td>{status}</td>
-            </tr>"""
+            <div class="module-card" style="border-left: 4px solid {border_color};">
+                <div class="module-header">
+                    <span class="module-title">{status_icon} {mod.get('module_name', 'N/D')}</span>
+                    <span class="module-coverage" style="color: {border_color};">{cov:.0f}%</span>
+                </div>
+                <div class="coverage-bar">
+                    <div class="coverage-fill {fill_class}" style="width:{cov}%;"></div>
+                </div>
+                <div class="module-description">
+                    {description if description else f"<em>Copertura {status}</em>"}
+                </div>
+            </div>"""
         
         # Genera lista gap
         gaps_html = ""
@@ -1186,6 +1213,8 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
             gaps_html += "</ul>"
         else:
             gaps_html = "<p>✅ Nessun gap significativo rilevato.</p>"
+        
+        framework_label = "IDEALE" if framework_type == "ideal" else "REALE"
         
         html = f"""<!DOCTYPE html>
 <html lang="it">
@@ -1206,6 +1235,7 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
         }}
         h1 {{ color: #1a237e; border-bottom: 3px solid #3949ab; padding-bottom: 15px; }}
         h2 {{ color: #283593; margin-top: 35px; border-left: 4px solid #3949ab; padding-left: 15px; }}
+        h3 {{ color: #3949ab; }}
         .subtitle {{ color: #666; margin-bottom: 25px; }}
         .method-badge {{ background: #e3f2fd; color: #1565c0; padding: 4px 12px; border-radius: 12px; font-size: 0.85em; }}
         
@@ -1217,12 +1247,26 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
         .summary-card .value {{ font-size: 2.5em; font-weight: bold; color: #1a237e; }}
         .summary-card .label {{ color: #666; font-size: 0.9em; }}
         
-        .modules-table {{ width: 100%; border-collapse: collapse; margin: 20px 0; }}
-        .modules-table th {{ background: #3949ab; color: white; padding: 12px; text-align: left; }}
-        .modules-table td {{ padding: 12px; border-bottom: 1px solid #e0e0e0; }}
+        .summary-narrative {{
+            background: #e8eaf6; padding: 20px; border-radius: 10px; margin: 25px 0;
+        }}
+        .summary-narrative p {{ margin: 10px 0 0 0; font-size: 1.05em; }}
         
-        .coverage-bar {{ width: 100%; height: 20px; background: #e0e0e0; border-radius: 10px; overflow: hidden; }}
-        .coverage-fill {{ height: 100%; border-radius: 10px; }}
+        .module-card {{
+            background: #fafafa; padding: 20px; border-radius: 10px; margin: 15px 0;
+        }}
+        .module-header {{
+            display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;
+        }}
+        .module-title {{ font-size: 1.1em; font-weight: 600; }}
+        .module-coverage {{ font-size: 1.4em; font-weight: bold; }}
+        .module-description {{
+            margin-top: 15px; padding-top: 15px; border-top: 1px solid #e0e0e0;
+            color: #444; font-size: 0.95em;
+        }}
+        
+        .coverage-bar {{ width: 100%; height: 12px; background: #e0e0e0; border-radius: 6px; overflow: hidden; }}
+        .coverage-fill {{ height: 100%; border-radius: 6px; }}
         .fill-high {{ background: linear-gradient(90deg, #4caf50, #8bc34a); }}
         .fill-medium {{ background: linear-gradient(90deg, #ff9800, #ffc107); }}
         .fill-low {{ background: linear-gradient(90deg, #f44336, #ff5722); }}
@@ -1248,7 +1292,7 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
     <h1>📖 Analisi Manuale</h1>
     <p class="subtitle">
         <strong>{manual_info.get('title', 'N/D')}</strong> — {manual_info.get('author', 'N/D')} ({manual_info.get('publisher', 'N/D')})<br>
-        Confronto vs Framework {framework_type.upper()} 
+        Confronto vs Framework {framework_label} 
         <span class="method-badge">Metodo: {method.upper()}</span>
     </p>
     
@@ -1271,24 +1315,14 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
         </div>
     </div>
     
+    {summary_html}
+    
     <div class="recommendation">
         <strong>📋 Raccomandazione:</strong> {analysis.get('recommendation', 'N/D')}
     </div>
     
-    <h2>📊 Copertura per Modulo</h2>
-    <table class="modules-table">
-        <thead>
-            <tr>
-                <th>Modulo</th>
-                <th style="width:300px;">Copertura</th>
-                <th style="width:80px;">%</th>
-                <th style="width:120px;">Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            {modules_html}
-        </tbody>
-    </table>
+    <h2>📊 Analisi per Modulo</h2>
+    {modules_html}
     
     <div class="gaps-section">
         <h3>⚠️ Gap Rilevati</h3>
@@ -1302,10 +1336,8 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
 </div>
 </body>
 </html>"""
-        
         return html
-    
-    def generate_comparison_report_html(self, comparison_result: Dict) -> str:
+     
         """Genera report HTML per confronto manuali"""
         
         ranking = comparison_result.get("ranking", [])
