@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Analisi Manuale - Principi di Chimica</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 20px 40px; background: #f5f7fa; color: #333; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 30px 40px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.07); }
+        h1 { color: #1a237e; border-bottom: 3px solid #3949ab; padding-bottom: 15px; }
+        h2 { color: #283593; margin-top: 35px; border-left: 4px solid #3949ab; padding-left: 15px; }
+        h3 { color: #3949ab; }
+        .subtitle { color: #666; margin-bottom: 25px; }
+        .method-badge { background: #e3f2fd; color: #1565c0; padding: 4px 12px; border-radius: 12px; font-size: 0.85em; }
+        .summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin: 25px 0; }
+        .summary-card { background: #f8f9ff; padding: 20px; border-radius: 10px; text-align: center; border-top: 4px solid #3949ab; }
+        .summary-card .value { font-size: 2.5em; font-weight: bold; color: #1a237e; }
+        .summary-card .label { color: #666; font-size: 0.9em; }
+        .summary-narrative { background: #e8eaf6; padding: 20px; border-radius: 10px; margin: 25px 0; }
+        .summary-narrative h3 { margin-top: 0; }
+        .module-card { background: #fafafa; padding: 20px; border-radius: 10px; margin: 15px 0; }
+        .module-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .module-title { font-size: 1.1em; font-weight: 600; }
+        .module-coverage { font-size: 1.4em; font-weight: bold; }
+        .module-description { margin-top: 15px; padding-top: 15px; border-top: 1px solid #e0e0e0; color: #444; font-size: 0.95em; }
+        .coverage-bar { width: 100%; height: 12px; background: #e0e0e0; border-radius: 6px; overflow: hidden; }
+        .coverage-fill { height: 100%; border-radius: 6px; }
+        .fill-high { background: linear-gradient(90deg, #4caf50, #8bc34a); }
+        .fill-medium { background: linear-gradient(90deg, #ff9800, #ffc107); }
+        .fill-low { background: linear-gradient(90deg, #f44336, #ff5722); }
+        .judgment-badge { display: inline-block; padding: 8px 20px; border-radius: 20px; font-size: 1.1em; font-weight: 600; }
+        .judgment-eccellente { background: #c8e6c9; color: #2e7d32; }
+        .judgment-buono { background: #dcedc8; color: #558b2f; }
+        .judgment-sufficiente { background: #fff3e0; color: #e65100; }
+        .judgment-insufficiente { background: #ffcdd2; color: #c62828; }
+        .gaps-section { background: #fff8e1; padding: 20px; border-radius: 10px; margin-top: 20px; }
+        .gaps-section h3 { color: #e65100; margin-top: 0; }
+        .gaps-section ul { margin: 10px 0; padding-left: 25px; }
+        .recommendation { background: #e8f5e9; padding: 15px 20px; border-radius: 10px; margin-top: 20px; border-left: 4px solid #4caf50; }
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e0e0e0; color: #888; font-size: 0.85em; text-align: center; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>📖 Analisi Manuale</h1>
+    <p class="subtitle"><strong>Principi di Chimica</strong> — Atkins (Zanichelli)<br>
+        Confronto vs Framework IDEALE <span class="method-badge">Metodo: LLM</span></p>
+    <div class="summary-grid">
+        <div class="summary-card"><div class="value" style="color: #4caf50;">72.5%</div><div class="label">Copertura Complessiva</div></div>
+        <div class="summary-card"><div class="value">11</div><div class="label">Capitoli</div></div>
+        <div class="summary-card"><div class="value">93</div><div class="label">Sezioni</div></div>
+        <div class="summary-card"><span class="judgment-badge judgment-buono">Buono</span><div class="label" style="margin-top:10px;">Giudizio</div></div>
+    </div>
+    <div class="summary-narrative"><h3>📝 Sintesi</h3><p>Il manuale 'Principi di Chimica' offre una copertura solida della maggior parte degli argomenti fondamentali della chimica generale, con un'ottima copertura nei moduli principali. Tuttavia, ci sono lacune significative nei moduli riguardanti le tecniche analitiche e la sicurezza, che potrebbero compromettere la preparazione completa degli studenti.</p></div>
+    <div class="recommendation"><strong>📋 Raccomandazione:</strong> Il manuale copre la maggior parte dei contenuti con alcune lacune. Adozione con integrazioni.</div>
+    <h2>📊 Analisi per Modulo</h2>
+    
+            <div class="module-card" style="border-left: 4px solid #4caf50;">
+                <div class="module-header">
+                    <span class="module-title">🟢 Struttura atomica e tavola periodica</span>
+                    <span class="module-coverage" style="color: #4caf50;">90%</span>
+                </div>
+                <div class="coverage-bar"><div class="coverage-fill fill-high" style="width:90%;"></div></div>
+                <div class="module-description"><em>Il modulo 'Struttura atomica e tavola periodica' è trattato nel Capitolo 2 del manuale. Non ci sono lacune significative.</em></div>
+            </div>
+            <div class="module-card" style="border-left: 4px solid #4caf50;">
+                <div class="module-header">
+                    <span class="module-title">🟢 Legame chimico e geometria molecolare</span>
+                    <span class="module-coverage" style="color: #4caf50;">85%</span>
+                </div>
+                <div class="coverage-bar"><div class="coverage-fill fill-high" style="width:85%;"></div></div>
+                <div class="module-description"><em>Il modulo 'Legame chimico e geometria molecolare' è presente nel Capitolo 3. Non ci sono lacune significative.</em></div>
+            </div>
+            <div class="module-card" style="border-left: 4px solid #4caf50;">
+                <div class="module-header">
+                    <span class="module-title">🟢 Stechiometria e reazioni chimiche</span>
+                    <span class="module-coverage" style="color: #4caf50;">90%</span>
+                </div>
+                <div class="coverage-bar"><div class="coverage-fill fill-high" style="width:90%;"></div></div>
+                <div class="module-description"><em>Il modulo 'Stechiometria e reazioni chimiche' è affrontato nel Capitolo 4. Non ci sono lacune significative.</em></div>
+            </div>
+            <div class="module-card" style="border-left: 4px solid #4caf50;">
+                <div class="module-header">
+                    <span class="module-title">🟢 Termodinamica e termochimica</span>
+                    <span class="module-coverage" style="color: #4caf50;">85%</span>
+                </div>
+                <div class="coverage-bar"><div class="coverage-fill fill-high" style="width:85%;"></div></div>
+                <div class="module-description"><em>Il modulo 'Termodinamica e termochimica' si trova nel Capitolo 5. Non ci sono lacune significative.</em></div>
+            </div>
+            <div class="module-card" style="border-left: 4px solid #4caf50;">
+                <div class="module-header">
+                    <span class="module-title">🟢 Stati materia e soluzioni</span>
+                    <span class="module-coverage" style="color: #4caf50;">90%</span>
+                </div>
+                <div class="coverage-bar"><div class="coverage-fill fill-high" style="width:90%;"></div></div>
+                <div class="module-description"><em>Il modulo 'Stati materia e soluzioni' è trattato nel Capitolo 6. Non ci sono lacune significative.</em></div>
+            </div>
+            <div class="module-card" style="border-left: 4px solid #4caf50;">
+                <div class="module-header">
+                    <span class="module-title">🟢 Cinetica chimica</span>
+                    <span class="module-coverage" style="color: #4caf50;">80%</span>
+                </div>
+                <div class="coverage-bar"><div class="coverage-fill fill-high" style="width:80%;"></div></div>
+                <div class="module-description"><em>Il modulo 'Cinetica chimica' è presente nel Capitolo 7. Non ci sono lacune significative.</em></div>
+            </div>
+            <div class="module-card" style="border-left: 4px solid #4caf50;">
+                <div class="module-header">
+                    <span class="module-title">🟢 Equilibri chimici</span>
+                    <span class="module-coverage" style="color: #4caf50;">85%</span>
+                </div>
+                <div class="coverage-bar"><div class="coverage-fill fill-high" style="width:85%;"></div></div>
+                <div class="module-description"><em>Il modulo 'Equilibri chimici' è discusso nel Capitolo 8. Non ci sono lacune significative.</em></div>
+            </div>
+            <div class="module-card" style="border-left: 4px solid #4caf50;">
+                <div class="module-header">
+                    <span class="module-title">🟢 Equilibri acido-base</span>
+                    <span class="module-coverage" style="color: #4caf50;">90%</span>
+                </div>
+                <div class="coverage-bar"><div class="coverage-fill fill-high" style="width:90%;"></div></div>
+                <div class="module-description"><em>Il modulo 'Equilibri acido-base' è trattato nel Capitolo 9. Non ci sono lacune significative.</em></div>
+            </div>
+            <div class="module-card" style="border-left: 4px solid #4caf50;">
+                <div class="module-header">
+                    <span class="module-title">🟢 Elettrochimica</span>
+                    <span class="module-coverage" style="color: #4caf50;">85%</span>
+                </div>
+                <div class="coverage-bar"><div class="coverage-fill fill-high" style="width:85%;"></div></div>
+                <div class="module-description"><em>Il modulo 'Elettrochimica' è presente nel Capitolo 10. Non ci sono lacune significative.</em></div>
+            </div>
+            <div class="module-card" style="border-left: 4px solid #4caf50;">
+                <div class="module-header">
+                    <span class="module-title">🟢 Chimica elementi principali</span>
+                    <span class="module-coverage" style="color: #4caf50;">90%</span>
+                </div>
+                <div class="coverage-bar"><div class="coverage-fill fill-high" style="width:90%;"></div></div>
+                <div class="module-description"><em>Il modulo 'Chimica elementi principali' è trattato nel Capitolo 11. Non ci sono lacune significative.</em></div>
+            </div>
+            <div class="module-card" style="border-left: 4px solid #f44336;">
+                <div class="module-header">
+                    <span class="module-title">🔴 Tecniche analitiche e laboratorio</span>
+                    <span class="module-coverage" style="color: #f44336;">0%</span>
+                </div>
+                <div class="coverage-bar"><div class="coverage-fill fill-low" style="width:0%;"></div></div>
+                <div class="module-description"><em>Il modulo 'Tecniche analitiche e laboratorio' è discusso nel Capitolo 12, ma presenta lacune significative riguardanti tecniche fondamentali di analisi.</em></div>
+            </div>
+            <div class="module-card" style="border-left: 4px solid #f44336;">
+                <div class="module-header">
+                    <span class="module-title">🔴 Sicurezza, sostenibilità e applicazioni</span>
+                    <span class="module-coverage" style="color: #f44336;">0%</span>
+                </div>
+                <div class="coverage-bar"><div class="coverage-fill fill-low" style="width:0%;"></div></div>
+                <div class="module-description"><em>Il modulo 'Sicurezza, sostenibilità e applicazioni' è trattato nel Capitolo 13, ma presenta lacune significative su temi cruciali come la sicurezza e la chimica verde.</em></div>
+            </div>
+    <div class="gaps-section"><h3>⚠️ Gap Rilevati</h3><ul><li><strong>Tecniche analitiche e laboratorio</strong>: Titolo soluzioni, standardizzazione</li><li><strong>Tecniche analitiche e laboratorio</strong>: Gravimetria, volumetriche</li><li><strong>Tecniche analitiche e laboratorio</strong>: Spettroscopia UV-Vis base</li><li><strong>Tecniche analitiche e laboratorio</strong>: Cromatografia cartacea/TLC</li><li><strong>Tecniche analitiche e laboratorio</strong>: Analisi qualitativa cationi/anionici</li><li><strong>Sicurezza, sostenibilità e applicazioni</strong>: MSDS, DPI, norme sicurezza</li><li><strong>Sicurezza, sostenibilità e applicazioni</strong>: Gestione rifiuti chimici</li><li><strong>Sicurezza, sostenibilità e applicazioni</strong>: Green chemistry principi</li><li><strong>Sicurezza, sostenibilità e applicazioni</strong>: Chimica industriale (Haber-Bosch, Claus)</li><li><strong>Sicurezza, sostenibilità e applicazioni</strong>: Chimica atmosferica (ozono, acidi pioggia)</li></ul></div>
+    <div class="footer">Report generato da <strong>CoreX - Manual Analyzer v2.0</strong> | Zanichelli<br>03/01/2026 17:18:25</div>
+</div>
+</body>
+</html>

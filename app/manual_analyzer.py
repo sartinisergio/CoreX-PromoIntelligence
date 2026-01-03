@@ -15,14 +15,6 @@ import re
 
 
 class ManualAnalyzer:
-    """
-    Analizza indici di manuali e li confronta con:
-    - Framework IDEALE (da frameworks/)
-    - Framework REALE (da archivio analisi)
-    - Altri manuali
-    
-    Usa LLM per matching semantico avanzato (universale per qualsiasi materia).
-    """
     
     def __init__(self, manuali_dir: Path = None, frameworks_dir: Path = None, use_llm: bool = True):
         self.manuali_dir = manuali_dir or Path("data/manuali")
@@ -30,15 +22,9 @@ class ManualAnalyzer:
         self.archivio_dir = Path("archivio")
         self.use_llm = use_llm
     
-    # =========================================================
-    # GESTIONE MANUALI
-    # =========================================================
-    
     def get_available_subjects(self) -> List[str]:
-        """Restituisce le materie disponibili nella cartella manuali"""
         if not self.manuali_dir.exists():
             return []
-        
         subjects = []
         for d in sorted(self.manuali_dir.iterdir()):
             if d.is_dir() and not d.name.startswith("."):
@@ -46,22 +32,17 @@ class ManualAnalyzer:
         return subjects
     
     def get_manuals_for_subject(self, subject: str) -> Dict[str, List[Dict]]:
-        """Restituisce i manuali disponibili per una materia, divisi per tipo."""
         subject_dir = self.manuali_dir / subject / "indici"
         result = {"zanichelli": [], "competitor": []}
-        
         if not subject_dir.exists():
             return result
-        
         for type_dir in subject_dir.iterdir():
             if type_dir.is_dir():
                 dir_name_lower = type_dir.name.lower()
-                
                 if "zanichelli" in dir_name_lower:
                     manual_type = "zanichelli"
                 else:
                     manual_type = "competitor"
-                
                 for json_file in type_dir.glob("*.json"):
                     try:
                         with open(json_file, "r", encoding="utf-8") as f:
@@ -76,28 +57,9 @@ class ManualAnalyzer:
                             })
                     except Exception as e:
                         print(f"Errore caricamento {json_file}: {e}")
-        
-        for json_file in subject_dir.glob("*.json"):
-            try:
-                with open(json_file, "r", encoding="utf-8") as f:
-                    data = json.load(f)
-                    manual_type = "zanichelli" if "zanichelli" in data.get("type", "").lower() else "competitor"
-                    
-                    result[manual_type].append({
-                        "id": data.get("id", json_file.stem),
-                        "title": data.get("title", json_file.stem),
-                        "author": data.get("author", "N/D"),
-                        "publisher": data.get("publisher", "N/D"),
-                        "path": json_file,
-                        "n_chapters": len(data.get("chapters", []))
-                    })
-            except Exception as e:
-                print(f"Errore caricamento {json_file}: {e}")
-        
         return result
     
     def load_manual(self, path: Path) -> Optional[Dict]:
-        """Carica un manuale JSON"""
         try:
             with open(path, "r", encoding="utf-8") as f:
                 return json.load(f)
@@ -106,9 +68,7 @@ class ManualAnalyzer:
             return None
     
     def extract_manual_topics(self, manual: Dict) -> List[Dict]:
-        """Estrae tutti gli argomenti (capitoli + sezioni + subsections) da un manuale."""
         topics = []
-        
         for chapter in manual.get("chapters", []):
             topics.append({
                 "text": chapter.get("title", ""),
@@ -118,7 +78,6 @@ class ManualAnalyzer:
                 "subsection_num": None,
                 "page_start": chapter.get("page_start", None)
             })
-            
             for section in chapter.get("sections", []):
                 topics.append({
                     "text": section.get("title", ""),
@@ -128,7 +87,6 @@ class ManualAnalyzer:
                     "subsection_num": None,
                     "page_start": section.get("page_start", None)
                 })
-                
                 for subsection in section.get("subsections", []):
                     topics.append({
                         "text": subsection.get("title", ""),
@@ -138,58 +96,28 @@ class ManualAnalyzer:
                         "subsection_num": subsection.get("number", ""),
                         "page_start": subsection.get("page_start", None)
                     })
-        
         return topics
 
-    # =========================================================
-    # MATCHING SEMANTICO CON LLM - PROMPT 1: ANALISI TECNICA
-    # =========================================================
-    def _match_manual_to_framework_llm(
-        self, 
-        manual: Dict,
-        manual_topics: List[Dict], 
-        modules: List[Dict],
-        subject: str,
-        provider_id: str = "openai",
-        model: str = "gpt-4o-mini"
-    ) -> Optional[Dict]:
-        """
-        PROMPT 1: Analisi tecnica - matching e percentuali.
-        """
+    def _match_manual_to_framework_llm(self, manual: Dict, manual_topics: List[Dict], modules: List[Dict], subject: str, provider_id: str = "openai", model: str = "gpt-4o-mini") -> Optional[Dict]:
         try:
             from app.llm_provider import get_llm_client
         except ImportError:
             print("LLM provider non disponibile")
             return None
         
-        # Prepara struttura manuale
         manual_structure = []
         for chapter in manual.get("chapters", []):
             sections_list = []
             for section in chapter.get("sections", []):
-                section_info = {
-                    "title": section.get("title", ""),
-                    "subsections": [sub.get("title", "") for sub in section.get("subsections", [])]
-                }
+                section_info = {"title": section.get("title", ""), "subsections": [sub.get("title", "") for sub in section.get("subsections", [])]}
                 sections_list.append(section_info)
-            
-            chapter_info = {
-                "chapter_num": chapter.get("number", 0),
-                "chapter_title": chapter.get("title", ""),
-                "sections": sections_list
-            }
+            chapter_info = {"chapter_num": chapter.get("number", 0), "chapter_title": chapter.get("title", ""), "sections": sections_list}
             manual_structure.append(chapter_info)
         
-        # Prepara moduli framework
         framework_modules = []
         for mod in modules:
-            framework_modules.append({
-                "id": mod.get("id", 0),
-                "name": mod.get("name", ""),
-                "core_contents": mod.get("core_contents", [])
-            })
+            framework_modules.append({"id": mod.get("id", 0), "name": mod.get("name", ""), "core_contents": mod.get("core_contents", [])})
         
-        # PROMPT TECNICO (senza richiesta di narrative)
         prompt = f"""Sei un esperto di didattica universitaria. 
 Devi analizzare quanto un manuale universitario di "{subject.replace('_', ' ').title()}" copre i contenuti di un framework didattico.
 
@@ -206,10 +134,8 @@ Per OGNI modulo del framework, determina:
 
 REGOLE DI MATCHING:
 - Analizza TUTTI I LIVELLI: capitoli, sezioni E sottosezioni
-- Le sottosezioni contengono spesso i dettagli specifici degli argomenti
 - Sii GENEROSO: se un contenuto è trattato anche con terminologia diversa, consideralo coperto
 - Considera sinonimi e varianti terminologiche
-- Un capitolo/sezione/sottosezione può coprire più moduli
 
 Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
 {{
@@ -219,25 +145,20 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
             "module_name": "nome modulo",
             "coverage_percent": 85,
             "matched_contents": [
-                {{
-                    "content": "contenuto del framework coperto",
-                    "matched_by": "titolo capitolo/sezione/sottosezione che lo copre",
-                    "chapter_num": 1
-                }}
+                {{"content": "contenuto coperto", "matched_by": "titolo sezione", "chapter_num": 1}}
             ],
-            "missing_contents": ["contenuti non coperti dal manuale"]
+            "missing_contents": ["contenuti non coperti"]
         }}
     ],
     "overall_assessment": {{
         "total_coverage": 75,
-        "strengths": ["punti di forza del manuale"],
-        "gaps": ["lacune principali"]
+        "strengths": ["punti di forza"],
+        "gaps": ["lacune"]
     }}
 }}"""
         
         try:
             client = get_llm_client(provider_id)
-            
             response = client.chat.completions.create(
                 model=model,
                 messages=[
@@ -247,10 +168,7 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
                 temperature=0.1,
                 max_tokens=4000
             )
-            
             response_text = response.choices[0].message.content.strip()
-            
-            # Pulisci eventuale markdown
             if "```" in response_text:
                 parts = response_text.split("```")
                 for part in parts:
@@ -260,10 +178,8 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
                     elif part.strip().startswith("{"):
                         response_text = part.strip()
                         break
-            
             result = json.loads(response_text)
             return result
-            
         except json.JSONDecodeError as e:
             print(f"Errore parsing JSON risposta LLM: {e}")
             return None
@@ -271,27 +187,12 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
             print(f"Errore LLM matching: {e}")
             return None
 
-    # =========================================================
-    # PROMPT 2: GENERAZIONE NARRATIVE (NUOVO)
-    # =========================================================
-    def _generate_narrative_descriptions(
-        self,
-        analysis_result: Dict,
-        manual: Dict,
-        subject: str,
-        provider_id: str = "openai",
-        model: str = "gpt-4o-mini"
-    ) -> Dict:
-        """
-        PROMPT 2: Genera descrizioni narrative per ogni modulo
-        partendo dai risultati dell'analisi tecnica.
-        """
+    def _generate_narrative_descriptions(self, analysis_result: Dict, manual: Dict, subject: str, provider_id: str = "openai", model: str = "gpt-4o-mini") -> Dict:
         try:
             from app.llm_provider import get_llm_client
         except ImportError:
             return analysis_result
         
-        # Prepara sintesi per il prompt
         modules_summary = []
         for mod in analysis_result.get("modules_analysis", []):
             modules_summary.append({
@@ -316,23 +217,17 @@ RISULTATI ANALISI TECNICA PER MODULO:
 COMPITO:
 Genera una descrizione UTILE per un promotore editoriale per OGNI modulo.
 Ogni descrizione deve essere 1-2 frasi che spiegano:
-- Dove nel manuale viene trattato l'argomento (cita i capitoli/sezioni specifici presenti in "matched")
-- Cosa manca e se è una lacuna grave o marginale per i corsi universitari tipici
+- Dove nel manuale viene trattato l'argomento (cita i capitoli/sezioni specifici)
+- Cosa manca e se è una lacuna grave o marginale
 
 Genera anche un SUMMARY complessivo di 2-3 frasi sul posizionamento del manuale.
-
-STILE:
-- Sii concreto: cita numeri di capitolo e nomi di sezioni
-- Sii utile: indica se le lacune sono gravi o trascurabili
-- Evita frasi generiche come "buona copertura"
 
 Rispondi SOLO con JSON valido (senza markdown):
 {{
     "module_descriptions": [
-        {{"module_id": 1, "description": "Il Capitolo 2 tratta X e Y in modo completo. Manca Z, argomento raramente richiesto nei corsi base."}},
-        ...
+        {{"module_id": 1, "description": "Il Capitolo 2 tratta X e Y. Manca Z, raramente richiesto."}}
     ],
-    "summary": "Sintesi del posizionamento complessivo del manuale..."
+    "summary": "Sintesi complessiva..."
 }}"""
 
         try:
@@ -346,7 +241,6 @@ Rispondi SOLO con JSON valido (senza markdown):
                 temperature=0.3,
                 max_tokens=2500
             )
-            
             response_text = response.choices[0].message.content.strip()
             if "```" in response_text:
                 for part in response_text.split("```"):
@@ -356,73 +250,43 @@ Rispondi SOLO con JSON valido (senza markdown):
                     elif part.strip().startswith("{"):
                         response_text = part.strip()
                         break
-            
             narrative = json.loads(response_text)
-            
-            # Arricchisci i moduli con le descrizioni
             desc_map = {d["module_id"]: d["description"] for d in narrative.get("module_descriptions", [])}
             for mod in analysis_result.get("modules_analysis", []):
                 mod["description"] = desc_map.get(mod.get("module_id"), "")
-            
             analysis_result["summary"] = narrative.get("summary", "")
             analysis_result["narrative_generated"] = True
-            
         except Exception as e:
             print(f"Errore generazione narrative: {e}")
             analysis_result["narrative_generated"] = False
-        
         return analysis_result
-    # =========================================================
-    # MATCHING FALLBACK (senza LLM)
-    # =========================================================
-    
+
     def _normalize_text(self, text: str) -> str:
-        """Normalizza testo per matching"""
         text = text.lower().strip()
         text = re.sub(r'[^\w\s\-]', ' ', text)
         text = re.sub(r'\s+', ' ', text)
         return text
     
     def _text_matches_content_fallback(self, text: str, content: str, threshold: float = 0.3) -> Tuple[bool, float]:
-        """
-        Matching fallback basato su parole chiave comuni.
-        Funziona per qualsiasi materia senza dizionari specifici.
-        """
         text_norm = self._normalize_text(text)
         content_norm = self._normalize_text(content)
-        
-        # Match diretto
         if content_norm in text_norm or text_norm in content_norm:
             return True, 1.0
-        
-        # Match per parole significative (>3 caratteri)
         text_words = set(w for w in text_norm.split() if len(w) > 3)
         content_words = set(w for w in content_norm.split() if len(w) > 3)
-        
         if not content_words:
             return False, 0.0
-        
-        # Calcola sovrapposizione
         common = text_words & content_words
-        
         if common:
             score = len(common) / len(content_words)
             if score >= threshold:
                 return True, min(score, 1.0)
-        
-        # Match parziale: cerca se almeno una parola chiave del contenuto è nel testo
         for word in content_words:
             if len(word) > 4 and word in text_norm:
                 return True, 0.5
-        
         return False, 0.0
 
-    # =========================================================
-    # HELPER METHODS
-    # =========================================================
-    
     def _coverage_to_status(self, coverage: float) -> str:
-        """Converte copertura in status"""
         if coverage >= 80:
             return "completo"
         elif coverage >= 60:
@@ -433,7 +297,6 @@ Rispondi SOLO con JSON valido (senza markdown):
             return "carente"
     
     def _coverage_to_judgment(self, coverage: float) -> str:
-        """Converte copertura in giudizio"""
         if coverage >= 80:
             return "Eccellente"
         elif coverage >= 60:
@@ -444,7 +307,6 @@ Rispondi SOLO con JSON valido (senza markdown):
             return "Insufficiente"
     
     def _get_recommendation(self, coverage: float, framework_type: str) -> str:
-        """Genera raccomandazione basata sulla copertura"""
         if coverage >= 80:
             return "Il manuale copre ampiamente i contenuti richiesti. Adozione consigliata."
         elif coverage >= 60:
@@ -455,7 +317,6 @@ Rispondi SOLO con JSON valido (senza markdown):
             return "Il manuale presenta lacune importanti. Valutare alternative."
     
     def _judgment_to_class(self, judgment: str) -> str:
-        """Converte giudizio in classe CSS"""
         judgment_lower = judgment.lower()
         if "eccellente" in judgment_lower:
             return "judgment-eccellente"
@@ -465,223 +326,109 @@ Rispondi SOLO con JSON valido (senza markdown):
             return "judgment-sufficiente"
         else:
             return "judgment-insufficiente"
-    
-    # =========================================================
-    # ANALISI VS FRAMEWORK IDEALE
-    # =========================================================
-    
-    def analyze_manual_vs_ideal(
-        self, 
-        manual: Dict, 
-        ideal_framework: Dict, 
-        provider_id: str = "openai", 
-        model: str = "gpt-4o-mini"
-    ) -> Dict:
-        """
-        Confronta un manuale con il framework IDEALE.
-        Usa LLM per matching semantico, con fallback keyword-based.
-        """
+
+    def analyze_manual_vs_ideal(self, manual: Dict, ideal_framework: Dict, provider_id: str = "openai", model: str = "gpt-4o-mini") -> Dict:
         manual_topics = self.extract_manual_topics(manual)
         modules = ideal_framework.get("syllabus_modules", [])
         subject = manual.get("subject", "materia")
         
-        # Prova matching con LLM
         llm_result = None
         if self.use_llm:
-            llm_result = self._match_manual_to_framework_llm(
-                manual, manual_topics, modules, subject, provider_id, model
-            )
+            llm_result = self._match_manual_to_framework_llm(manual, manual_topics, modules, subject, provider_id, model)
         
         modules_analysis = []
         all_matched_topics = set()
         method_used = "fallback"
         
         if llm_result and "modules_coverage" in llm_result:
-            # === USA RISULTATI LLM ===
             method_used = "llm"
-            
             for mod_cov in llm_result["modules_coverage"]:
                 module_id = mod_cov.get("module_id", 0)
                 module_name = mod_cov.get("module_name", "")
                 coverage_pct = mod_cov.get("coverage_percent", 0)
-                
-                # Trova modulo originale
                 original_module = next((m for m in modules if m.get("id") == module_id), {})
                 core_contents = original_module.get("core_contents", [])
-                
                 content_matches = []
                 chapters_involved = []
-                
                 for matched in mod_cov.get("matched_contents", []):
-                    content_matches.append({
-                        "content": matched.get("content", ""),
-                        "matched_by": matched.get("matched_by", ""),
-                        "chapter": matched.get("chapter_num", 0),
-                        "score": 1.0
-                    })
+                    content_matches.append({"content": matched.get("content", ""), "matched_by": matched.get("matched_by", ""), "chapter": matched.get("chapter_num", 0), "score": 1.0})
                     if matched.get("matched_by"):
                         all_matched_topics.add(matched.get("matched_by"))
                     if matched.get("chapter_num"):
                         chapters_involved.append(matched.get("chapter_num"))
-                
                 for missing in mod_cov.get("missing_contents", []):
-                    content_matches.append({
-                        "content": missing,
-                        "matched_by": None,
-                        "score": 0
-                    })
-                
+                    content_matches.append({"content": missing, "matched_by": None, "score": 0})
                 covered = len([c for c in content_matches if c.get("matched_by")])
-                
                 modules_analysis.append({
-                    "module_id": module_id,
-                    "module_name": module_name,
-                    "coverage_percentage": round(coverage_pct, 1),
-                    "contents_covered": covered,
-                    "contents_total": len(core_contents),
-                    "content_matches": content_matches,
-                    "chapters_involved": list(set(chapters_involved)),
-                    "status": self._coverage_to_status(coverage_pct),
-                    "description": ""  # Sarà popolato dal secondo prompt
+                    "module_id": module_id, "module_name": module_name, "coverage_percentage": round(coverage_pct, 1),
+                    "contents_covered": covered, "contents_total": len(core_contents), "content_matches": content_matches,
+                    "chapters_involved": list(set(chapters_involved)), "status": self._coverage_to_status(coverage_pct), "description": ""
                 })
-        
         else:
-            # === FALLBACK: MATCHING KEYWORD-BASED ===
             method_used = "fallback"
-            
             for module in modules:
                 module_id = module.get("id", 0)
                 module_name = module.get("name", "")
                 core_contents = module.get("core_contents", [])
-                
                 content_matches = []
                 matched_topics_for_module = []
-                
                 for content in core_contents:
                     best_match = None
                     best_score = 0
-                    
                     for topic in manual_topics:
                         is_match, score = self._text_matches_content_fallback(topic["text"], content)
                         if is_match and score > best_score:
                             best_score = score
                             best_match = topic
-                    
                     if best_match:
-                        content_matches.append({
-                            "content": content,
-                            "matched_by": best_match["text"],
-                            "type": best_match["type"],
-                            "chapter": best_match["chapter_num"],
-                            "section": best_match["section_num"],
-                            "score": round(best_score, 2)
-                        })
+                        content_matches.append({"content": content, "matched_by": best_match["text"], "type": best_match["type"], "chapter": best_match["chapter_num"], "section": best_match["section_num"], "score": round(best_score, 2)})
                         all_matched_topics.add(best_match["text"])
                         matched_topics_for_module.append(best_match)
                     else:
-                        content_matches.append({
-                            "content": content,
-                            "matched_by": None,
-                            "score": 0
-                        })
-                
+                        content_matches.append({"content": content, "matched_by": None, "score": 0})
                 covered = sum(1 for cm in content_matches if cm["matched_by"])
                 coverage_pct = (covered / len(core_contents) * 100) if core_contents else 0
-                
-                chapters_involved = list(set(
-                    t["chapter_num"] for t in matched_topics_for_module
-                ))
-                
+                chapters_involved = list(set(t["chapter_num"] for t in matched_topics_for_module))
                 modules_analysis.append({
-                    "module_id": module_id,
-                    "module_name": module_name,
-                    "coverage_percentage": round(coverage_pct, 1),
-                    "contents_covered": covered,
-                    "contents_total": len(core_contents),
-                    "content_matches": content_matches,
-                    "chapters_involved": chapters_involved,
-                    "status": self._coverage_to_status(coverage_pct),
-                    "description": ""
+                    "module_id": module_id, "module_name": module_name, "coverage_percentage": round(coverage_pct, 1),
+                    "contents_covered": covered, "contents_total": len(core_contents), "content_matches": content_matches,
+                    "chapters_involved": chapters_involved, "status": self._coverage_to_status(coverage_pct), "description": ""
                 })
         
-        # Calcola copertura complessiva
         if modules_analysis:
             overall_coverage = sum(m["coverage_percentage"] for m in modules_analysis) / len(modules_analysis)
         else:
             overall_coverage = 0
         
-        # Gap analysis
         missing_contents = []
         for m in modules_analysis:
             for cm in m["content_matches"]:
                 if not cm.get("matched_by"):
-                    missing_contents.append({
-                        "content": cm["content"],
-                        "module": m["module_name"]
-                    })
+                    missing_contents.append({"content": cm["content"], "module": m["module_name"]})
         
-        # Capitoli extra (nel manuale ma non matchati)
         uncovered_chapters = []
         for topic in manual_topics:
             if topic["type"] == "chapter" and topic["text"] not in all_matched_topics:
-                chapter_sections_matched = any(
-                    t["text"] in all_matched_topics 
-                    for t in manual_topics 
-                    if t["type"] == "section" and t["chapter_num"] == topic["chapter_num"]
-                )
+                chapter_sections_matched = any(t["text"] in all_matched_topics for t in manual_topics if t["type"] == "section" and t["chapter_num"] == topic["chapter_num"])
                 if not chapter_sections_matched:
-                    uncovered_chapters.append({
-                        "chapter_num": topic["chapter_num"],
-                        "title": topic["text"]
-                    })
+                    uncovered_chapters.append({"chapter_num": topic["chapter_num"], "title": topic["text"]})
         
-        # Costruisci risultato
         result = {
-            "manual_info": {
-                "id": manual.get("id", "N/D"),
-                "title": manual.get("title", "N/D"),
-                "author": manual.get("author", "N/D"),
-                "publisher": manual.get("publisher", "N/D"),
-                "n_chapters": len(manual.get("chapters", [])),
-                "n_sections": sum(len(ch.get("sections", [])) for ch in manual.get("chapters", []))
-            },
-            "framework_info": {
-                "name": ideal_framework.get("framework", {}).get("name", "N/D"),
-                "n_modules": len(modules),
-                "total_contents": sum(len(m.get("core_contents", [])) for m in modules)
-            },
-            "overall_coverage": round(overall_coverage, 1),
-            "judgment": self._coverage_to_judgment(overall_coverage),
-            "recommendation": self._get_recommendation(overall_coverage, "ideal"),
-            "modules_analysis": modules_analysis,
-            "uncovered_chapters": uncovered_chapters,
-            "gaps": {
-                "missing_in_manual": missing_contents,
-                "extra_in_manual": uncovered_chapters
-            },
-            "method": method_used,
-            "summary": "",  # Sarà popolato dal secondo prompt
-            "narrative_generated": False,
-            "analysis_date": datetime.now().isoformat()
+            "manual_info": {"id": manual.get("id", "N/D"), "title": manual.get("title", "N/D"), "author": manual.get("author", "N/D"), "publisher": manual.get("publisher", "N/D"), "n_chapters": len(manual.get("chapters", [])), "n_sections": sum(len(ch.get("sections", [])) for ch in manual.get("chapters", []))},
+            "framework_info": {"name": ideal_framework.get("framework", {}).get("name", "N/D"), "n_modules": len(modules), "total_contents": sum(len(m.get("core_contents", [])) for m in modules)},
+            "overall_coverage": round(overall_coverage, 1), "judgment": self._coverage_to_judgment(overall_coverage),
+            "recommendation": self._get_recommendation(overall_coverage, "ideal"), "modules_analysis": modules_analysis,
+            "uncovered_chapters": uncovered_chapters, "gaps": {"missing_in_manual": missing_contents, "extra_in_manual": uncovered_chapters},
+            "method": method_used, "summary": "", "narrative_generated": False, "analysis_date": datetime.now().isoformat()
         }
         
-        # === SECONDO PROMPT: GENERA NARRATIVE ===
         if self.use_llm and method_used == "llm":
-            result = self._generate_narrative_descriptions(
-                result, manual, subject, provider_id, model
-            )
+            result = self._generate_narrative_descriptions(result, manual, subject, provider_id, model)
         
         return result
-    # =========================================================
-    # FRAMEWORK REALE - CON SUPPORTO MULTICLASSE
-    # =========================================================
-    
+
     def get_available_real_frameworks(self, subject: str = None) -> List[Dict]:
-        """
-        Restituisce le analisi archiviate che contengono framework reali.
-        """
         analyses = []
-        
         archivio_dir = Path("archivio")
         if archivio_dir.exists():
             for d in sorted(archivio_dir.iterdir(), reverse=True):
@@ -689,23 +436,17 @@ Rispondi SOLO con JSON valido (senza markdown):
                     fw_file = d / "framework_aggiornato.json"
                     if not fw_file.exists():
                         fw_file = d / "framework_multiclasse.json"
-                    
                     meta_file = d / "analisi.json"
-                    
                     if fw_file.exists() and meta_file.exists():
                         try:
                             with open(meta_file, "r", encoding="utf-8") as f:
                                 meta = json.load(f)
-                            
                             meta_materia = meta.get("materia", "").lower().replace(" ", "_")
                             subject_normalized = subject.lower().replace(" ", "_") if subject else ""
-                            
                             if subject and meta_materia != subject_normalized:
                                 continue
-                            
                             analysis_type = meta.get("type", "single")
                             type_label = "Multiclasse" if analysis_type == "multiclass" else "Singola classe"
-                            
                             if analysis_type == "multiclass":
                                 coverage_by_class = meta.get("coverage_by_class", {})
                                 classi = meta.get("classi", [])
@@ -714,43 +455,23 @@ Rispondi SOLO con JSON valido (senza markdown):
                             else:
                                 coverage = meta.get("coverage", 0)
                                 n_syllabus = meta.get("n_syllabus", 0)
-                            
-                            analyses.append({
-                                "id": d.name,
-                                "name": meta.get("name", d.name),
-                                "materia": meta.get("materia", "N/D"),
-                                "classi": meta.get("classi", []),
-                                "coverage": coverage,
-                                "n_syllabus": n_syllabus,
-                                "date": meta.get("created", "")[:10],
-                                "framework_path": fw_file,
-                                "path": d,
-                                "type": analysis_type,
-                                "type_label": type_label
-                            })
+                            analyses.append({"id": d.name, "name": meta.get("name", d.name), "materia": meta.get("materia", "N/D"), "classi": meta.get("classi", []), "coverage": coverage, "n_syllabus": n_syllabus, "date": meta.get("created", "")[:10], "framework_path": fw_file, "path": d, "type": analysis_type, "type_label": type_label})
                         except Exception as e:
                             print(f"Errore lettura {meta_file}: {e}")
-        
-        # Cerca anche in analisi_corrente
         current_dir = Path("data/analisi_corrente")
         fw_current = current_dir / "framework_aggiornato.json"
         if not fw_current.exists():
             fw_current = current_dir / "framework_multiclasse.json"
-        
         meta_current = current_dir / "analisi.json"
-        
         if fw_current.exists() and meta_current.exists():
             try:
                 with open(meta_current, "r", encoding="utf-8") as f:
                     meta = json.load(f)
-                
                 meta_materia = meta.get("materia", "").lower().replace(" ", "_")
                 subject_normalized = subject.lower().replace(" ", "_") if subject else ""
-                
                 if not subject or meta_materia == subject_normalized:
                     analysis_type = meta.get("type", "single")
                     type_label = "Multiclasse" if analysis_type == "multiclass" else "Singola classe"
-                    
                     if analysis_type == "multiclass":
                         coverage_by_class = meta.get("coverage_by_class", {})
                         classi = meta.get("classi", [])
@@ -759,113 +480,53 @@ Rispondi SOLO con JSON valido (senza markdown):
                     else:
                         coverage = meta.get("coverage", 0)
                         n_syllabus = meta.get("n_syllabus", 0)
-                    
-                    analyses.insert(0, {
-                        "id": "current",
-                        "name": f"[CORRENTE] {meta.get('name', 'Analisi')}",
-                        "materia": meta.get("materia", "N/D"),
-                        "classi": meta.get("classi", []),
-                        "coverage": coverage,
-                        "n_syllabus": n_syllabus,
-                        "date": meta.get("created", "")[:10],
-                        "framework_path": fw_current,
-                        "path": current_dir,
-                        "type": analysis_type,
-                        "type_label": type_label
-                    })
+                    analyses.insert(0, {"id": "current", "name": f"[CORRENTE] {meta.get('name', 'Analisi')}", "materia": meta.get("materia", "N/D"), "classi": meta.get("classi", []), "coverage": coverage, "n_syllabus": n_syllabus, "date": meta.get("created", "")[:10], "framework_path": fw_current, "path": current_dir, "type": analysis_type, "type_label": type_label})
             except Exception as e:
                 print(f"Errore lettura analisi corrente: {e}")
-        
         return analyses
     
     def load_real_framework(self, path: Path) -> Optional[Dict]:
-        """Carica un framework reale da un'analisi"""
         try:
             with open(path, "r", encoding="utf-8") as f:
                 return json.load(f)
         except Exception as e:
             print(f"Errore caricamento framework reale {path}: {e}")
             return None
-    
-    def analyze_manual_vs_real(
-        self, 
-        manual: Dict, 
-        real_framework: Dict,
-        provider_id: str = "openai",
-        model: str = "gpt-4o-mini"
-    ) -> Dict:
-        """
-        Confronta un manuale con il framework REALE.
-        """
+
+    def analyze_manual_vs_real(self, manual: Dict, real_framework: Dict, provider_id: str = "openai", model: str = "gpt-4o-mini") -> Dict:
         manual_topics = self.extract_manual_topics(manual)
-        
         modules = real_framework.get("modules", real_framework.get("syllabus_modules", []))
-        
         framework_info = real_framework.get("framework", {})
         classes_analyzed = framework_info.get("classes_analyzed", [])
         is_multiclass = len(classes_analyzed) > 1 or real_framework.get("summary", {}).get("n_classes", 1) > 1
-        
         modules_analysis = []
         subject = manual.get("subject", framework_info.get("materia", "materia"))
         
         llm_result = None
         if self.use_llm and modules:
-            llm_result = self._match_manual_to_framework_llm(
-                manual, manual_topics, modules, subject, provider_id, model
-            )
-        
+            llm_result = self._match_manual_to_framework_llm(manual, manual_topics, modules, subject, provider_id, model)
         method_used = "fallback"
         
         if llm_result and "modules_coverage" in llm_result:
             method_used = "llm"
-            
             for mod_cov in llm_result["modules_coverage"]:
                 module_id = mod_cov.get("module_id", 0)
                 module_name = mod_cov.get("module_name", "")
                 coverage_pct = mod_cov.get("coverage_percent", 0)
-                
                 original_module = next((m for m in modules if m.get("id") == module_id), {})
-                
                 avg_coverage_real = original_module.get("avg_coverage", 0)
                 coverage_by_class = original_module.get("coverage_by_class", {})
                 is_core = original_module.get("is_core", False)
-                
                 content_matches = []
                 for matched in mod_cov.get("matched_contents", []):
-                    content_matches.append({
-                        "content": matched.get("content", ""),
-                        "matched_by": matched.get("matched_by", ""),
-                        "chapter": matched.get("chapter_num", 0),
-                        "score": 1.0
-                    })
-                
+                    content_matches.append({"content": matched.get("content", ""), "matched_by": matched.get("matched_by", ""), "chapter": matched.get("chapter_num", 0), "score": 1.0})
                 for missing in mod_cov.get("missing_contents", []):
-                    content_matches.append({
-                        "content": missing,
-                        "matched_by": None,
-                        "score": 0
-                    })
-                
+                    content_matches.append({"content": missing, "matched_by": None, "score": 0})
                 covered = len([c for c in content_matches if c.get("matched_by")])
                 total = len(content_matches) if content_matches else len(original_module.get("core_contents", []))
-                
-                modules_analysis.append({
-                    "module_id": module_id,
-                    "module_name": module_name,
-                    "manual_coverage": round(coverage_pct, 1),
-                    "real_avg_coverage": round(avg_coverage_real, 1),
-                    "coverage_by_class": coverage_by_class,
-                    "is_core": is_core,
-                    "contents_covered": covered,
-                    "contents_total": total,
-                    "content_matches": content_matches,
-                    "status": self._coverage_to_status(coverage_pct),
-                    "description": ""
-                })
-        
+                modules_analysis.append({"module_id": module_id, "module_name": module_name, "manual_coverage": round(coverage_pct, 1), "real_avg_coverage": round(avg_coverage_real, 1), "coverage_by_class": coverage_by_class, "is_core": is_core, "contents_covered": covered, "contents_total": total, "content_matches": content_matches, "status": self._coverage_to_status(coverage_pct), "description": ""})
         else:
             method_used = "fallback"
-            
             for module in modules:
                 module_id = module.get("id", 0)
                 module_name = module.get("name", "")
@@ -874,40 +535,25 @@ Rispondi SOLO con JSON valido (senza markdown):
                 avg_coverage_real = module.get("avg_coverage", 0)
                 coverage_by_class = module.get("coverage_by_class", {})
                 is_core = module.get("is_core", False)
-                
                 all_real_concepts = set()
                 for classe, concepts in concepts_by_class.items():
                     for c in concepts:
                         all_real_concepts.add(c.lower() if isinstance(c, str) else str(c).lower())
-                
                 content_matches = []
                 matched_count = 0
-                
                 for content in core_contents:
                     best_match = None
                     best_score = 0
-                    
                     for topic in manual_topics:
                         is_match, score = self._text_matches_content_fallback(topic["text"], content)
                         if is_match and score > best_score:
                             best_score = score
                             best_match = topic
-                    
                     if best_match:
-                        content_matches.append({
-                            "content": content,
-                            "matched_by": best_match["text"],
-                            "chapter": best_match["chapter_num"],
-                            "score": round(best_score, 2)
-                        })
+                        content_matches.append({"content": content, "matched_by": best_match["text"], "chapter": best_match["chapter_num"], "score": round(best_score, 2)})
                         matched_count += 1
                     else:
-                        content_matches.append({
-                            "content": content,
-                            "matched_by": None,
-                            "score": 0
-                        })
-                
+                        content_matches.append({"content": content, "matched_by": None, "score": 0})
                 concepts_matched = 0
                 for concept in list(all_real_concepts)[:15]:
                     for topic in manual_topics:
@@ -915,33 +561,13 @@ Rispondi SOLO con JSON valido (senza markdown):
                         if is_match:
                             concepts_matched += 1
                             break
-                
                 core_coverage = (matched_count / len(core_contents) * 100) if core_contents else 0
                 concept_coverage = (concepts_matched / min(len(all_real_concepts), 15) * 100) if all_real_concepts else 0
-                
                 combined_coverage = (core_coverage * 0.6 + concept_coverage * 0.4) if all_real_concepts else core_coverage
-                
-                modules_analysis.append({
-                    "module_id": module_id,
-                    "module_name": module_name,
-                    "manual_coverage": round(combined_coverage, 1),
-                    "core_coverage": round(core_coverage, 1),
-                    "concept_coverage": round(concept_coverage, 1),
-                    "real_avg_coverage": round(avg_coverage_real, 1),
-                    "coverage_by_class": coverage_by_class,
-                    "is_core": is_core,
-                    "contents_covered": matched_count,
-                    "contents_total": len(core_contents),
-                    "concepts_matched": concepts_matched,
-                    "concepts_checked": min(len(all_real_concepts), 15),
-                    "content_matches": content_matches,
-                    "status": self._coverage_to_status(combined_coverage),
-                    "description": ""
-                })
+                modules_analysis.append({"module_id": module_id, "module_name": module_name, "manual_coverage": round(combined_coverage, 1), "core_coverage": round(core_coverage, 1), "concept_coverage": round(concept_coverage, 1), "real_avg_coverage": round(avg_coverage_real, 1), "coverage_by_class": coverage_by_class, "is_core": is_core, "contents_covered": matched_count, "contents_total": len(core_contents), "concepts_matched": concepts_matched, "concepts_checked": min(len(all_real_concepts), 15), "content_matches": content_matches, "status": self._coverage_to_status(combined_coverage), "description": ""})
         
         if modules_analysis:
             overall_coverage = sum(m["manual_coverage"] for m in modules_analysis) / len(modules_analysis)
-            
             core_modules = [m for m in modules_analysis if m.get("is_core", False)]
             core_coverage = sum(m["manual_coverage"] for m in core_modules) / len(core_modules) if core_modules else overall_coverage
         else:
@@ -952,69 +578,25 @@ Rispondi SOLO con JSON valido (senza markdown):
         for m in modules_analysis:
             for cm in m.get("content_matches", []):
                 if not cm.get("matched_by"):
-                    missing_contents.append({
-                        "content": cm["content"],
-                        "module": m["module_name"],
-                        "is_core_module": m.get("is_core", False)
-                    })
+                    missing_contents.append({"content": cm["content"], "module": m["module_name"], "is_core_module": m.get("is_core", False)})
         
         result = {
-            "manual_info": {
-                "id": manual.get("id", "N/D"),
-                "title": manual.get("title", "N/D"),
-                "author": manual.get("author", "N/D"),
-                "publisher": manual.get("publisher", "N/D"),
-                "n_chapters": len(manual.get("chapters", [])),
-                "n_sections": sum(len(ch.get("sections", [])) for ch in manual.get("chapters", []))
-            },
-            "real_framework_info": {
-                "name": framework_info.get("name", "N/D"),
-                "type": "multiclass" if is_multiclass else "single",
-                "classes_analyzed": classes_analyzed,
-                "n_modules": len(modules),
-                "n_core_modules": len([m for m in modules if m.get("is_core", False)])
-            },
-            "overall_coverage": round(overall_coverage, 1),
-            "core_modules_coverage": round(core_coverage, 1),
-            "judgment": self._coverage_to_judgment(overall_coverage),
-            "recommendation": self._get_recommendation(overall_coverage, "real"),
-            "modules_analysis": modules_analysis,
-            "gaps": {
-                "missing_in_manual": missing_contents,
-                "priority_gaps": [g for g in missing_contents if g.get("is_core_module", False)]
-            },
-            "method": method_used,
-            "summary": "",
-            "narrative_generated": False,
-            "analysis_date": datetime.now().isoformat()
+            "manual_info": {"id": manual.get("id", "N/D"), "title": manual.get("title", "N/D"), "author": manual.get("author", "N/D"), "publisher": manual.get("publisher", "N/D"), "n_chapters": len(manual.get("chapters", [])), "n_sections": sum(len(ch.get("sections", [])) for ch in manual.get("chapters", []))},
+            "real_framework_info": {"name": framework_info.get("name", "N/D"), "type": "multiclass" if is_multiclass else "single", "classes_analyzed": classes_analyzed, "n_modules": len(modules), "n_core_modules": len([m for m in modules if m.get("is_core", False)])},
+            "overall_coverage": round(overall_coverage, 1), "core_modules_coverage": round(core_coverage, 1),
+            "judgment": self._coverage_to_judgment(overall_coverage), "recommendation": self._get_recommendation(overall_coverage, "real"),
+            "modules_analysis": modules_analysis, "gaps": {"missing_in_manual": missing_contents, "priority_gaps": [g for g in missing_contents if g.get("is_core_module", False)]},
+            "method": method_used, "summary": "", "narrative_generated": False, "analysis_date": datetime.now().isoformat()
         }
         
-        # === SECONDO PROMPT: GENERA NARRATIVE ===
         if self.use_llm and method_used == "llm":
-            result = self._generate_narrative_descriptions(
-                result, manual, subject, provider_id, model
-            )
-        
+            result = self._generate_narrative_descriptions(result, manual, subject, provider_id, model)
         return result
 
-    # =========================================================
-    # CONFRONTO TRA MANUALI
-    # =========================================================
-    
-    def compare_manuals(
-        self, 
-        manuals: List[Dict], 
-        reference_framework: Dict = None,
-        framework_type: str = "ideal",
-        provider_id: str = "openai",
-        model: str = "gpt-4o-mini"
-    ) -> Dict:
-        """Confronta più manuali tra loro rispetto a un framework."""
+    def compare_manuals(self, manuals: List[Dict], reference_framework: Dict = None, framework_type: str = "ideal", provider_id: str = "openai", model: str = "gpt-4o-mini") -> Dict:
         if not manuals:
             return {"error": "Nessun manuale da confrontare"}
-        
         comparisons = []
-        
         for manual in manuals:
             if reference_framework:
                 if framework_type == "ideal":
@@ -1023,189 +605,80 @@ Rispondi SOLO con JSON valido (senza markdown):
                     analysis = self.analyze_manual_vs_real(manual, reference_framework, provider_id, model)
             else:
                 analysis = self._analyze_manual_structure(manual)
-            
-            comparisons.append({
-                "manual_id": manual.get("id", "N/D"),
-                "manual_title": manual.get("title", "N/D"),
-                "author": manual.get("author", "N/D"),
-                "publisher": manual.get("publisher", "N/D"),
-                "n_chapters": len(manual.get("chapters", [])),
-                "n_sections": sum(len(ch.get("sections", [])) for ch in manual.get("chapters", [])),
-                "coverage": analysis.get("overall_coverage", 0) if reference_framework else None,
-                "weighted_coverage": analysis.get("overall_weighted_coverage", analysis.get("overall_coverage", 0)),
-                "judgment": analysis.get("judgment", "N/D"),
-                "modules_analysis": analysis.get("modules_analysis", []),
-                "full_analysis": analysis
-            })
-        
+            comparisons.append({"manual_id": manual.get("id", "N/D"), "manual_title": manual.get("title", "N/D"), "author": manual.get("author", "N/D"), "publisher": manual.get("publisher", "N/D"), "n_chapters": len(manual.get("chapters", [])), "n_sections": sum(len(ch.get("sections", [])) for ch in manual.get("chapters", [])), "coverage": analysis.get("overall_coverage", 0) if reference_framework else None, "weighted_coverage": analysis.get("overall_weighted_coverage", analysis.get("overall_coverage", 0)), "judgment": analysis.get("judgment", "N/D"), "modules_analysis": analysis.get("modules_analysis", []), "full_analysis": analysis})
         if reference_framework:
-            comparisons.sort(
-                key=lambda x: x.get("weighted_coverage") or x.get("coverage") or 0, 
-                reverse=True
-            )
-        
+            comparisons.sort(key=lambda x: x.get("weighted_coverage") or x.get("coverage") or 0, reverse=True)
         modules_comparison = self._build_modules_comparison(comparisons, reference_framework)
-        
-        return {
-            "n_manuals": len(manuals),
-            "framework_type": framework_type if reference_framework else "none",
-            "framework_name": reference_framework.get("framework", {}).get("name", "N/D") if reference_framework else None,
-            "ranking": comparisons,
-            "modules_comparison": modules_comparison,
-            "best_manual": comparisons[0] if comparisons else None,
-            "comparison_date": datetime.now().isoformat()
-        }
+        return {"n_manuals": len(manuals), "framework_type": framework_type if reference_framework else "none", "framework_name": reference_framework.get("framework", {}).get("name", "N/D") if reference_framework else None, "ranking": comparisons, "modules_comparison": modules_comparison, "best_manual": comparisons[0] if comparisons else None, "comparison_date": datetime.now().isoformat()}
     
     def _build_modules_comparison(self, comparisons: List[Dict], reference_framework: Dict) -> List[Dict]:
-        """Costruisce tabella comparativa per modulo"""
         if not reference_framework or not comparisons:
             return []
-        
         modules = reference_framework.get("syllabus_modules", [])
         result = []
-        
         for module in modules:
             module_name = module.get("name", "")
             module_id = module.get("id", 0)
-            
             manual_scores = []
             for comp in comparisons:
-                mod_analysis = next(
-                    (m for m in comp.get("modules_analysis", []) if m.get("module_id") == module_id),
-                    None
-                )
-                
+                mod_analysis = next((m for m in comp.get("modules_analysis", []) if m.get("module_id") == module_id), None)
                 if mod_analysis:
-                    manual_scores.append({
-                        "manual": comp["manual_title"],
-                        "publisher": comp["publisher"],
-                        "coverage": mod_analysis.get("coverage_percentage", mod_analysis.get("manual_coverage", 0)),
-                        "status": mod_analysis.get("status", "N/D")
-                    })
-            
+                    manual_scores.append({"manual": comp["manual_title"], "publisher": comp["publisher"], "coverage": mod_analysis.get("coverage_percentage", mod_analysis.get("manual_coverage", 0)), "status": mod_analysis.get("status", "N/D")})
             manual_scores.sort(key=lambda x: x["coverage"], reverse=True)
-            
-            result.append({
-                "module_id": module_id,
-                "module_name": module_name,
-                "manual_scores": manual_scores,
-                "best_manual": manual_scores[0]["manual"] if manual_scores else None,
-                "avg_coverage": sum(m["coverage"] for m in manual_scores) / len(manual_scores) if manual_scores else 0
-            })
-        
+            result.append({"module_id": module_id, "module_name": module_name, "manual_scores": manual_scores, "best_manual": manual_scores[0]["manual"] if manual_scores else None, "avg_coverage": sum(m["coverage"] for m in manual_scores) / len(manual_scores) if manual_scores else 0})
         return result
     
     def _analyze_manual_structure(self, manual: Dict) -> Dict:
-        """Analisi base della struttura del manuale senza framework"""
         chapters = manual.get("chapters", [])
-        
-        return {
-            "manual_info": {
-                "id": manual.get("id", "N/D"),
-                "title": manual.get("title", "N/D"),
-                "author": manual.get("author", "N/D"),
-                "publisher": manual.get("publisher", "N/D")
-            },
-            "structure": {
-                "n_chapters": len(chapters),
-                "n_sections": sum(len(ch.get("sections", [])) for ch in chapters),
-                "chapters": [
-                    {
-                        "number": ch.get("number", 0),
-                        "title": ch.get("title", ""),
-                        "n_sections": len(ch.get("sections", []))
-                    }
-                    for ch in chapters
-                ]
-            },
-            "overall_coverage": 0,
-            "judgment": "Analisi strutturale"
-        }
+        return {"manual_info": {"id": manual.get("id", "N/D"), "title": manual.get("title", "N/D"), "author": manual.get("author", "N/D"), "publisher": manual.get("publisher", "N/D")}, "structure": {"n_chapters": len(chapters), "n_sections": sum(len(ch.get("sections", [])) for ch in chapters), "chapters": [{"number": ch.get("number", 0), "title": ch.get("title", ""), "n_sections": len(ch.get("sections", []))} for ch in chapters]}, "overall_coverage": 0, "judgment": "Analisi strutturale"}
 
-    # =========================================================
-    # SALVATAGGIO E RECUPERO ANALISI
-    # =========================================================
-
-    def save_analysis(
-        self, 
-        analysis: Dict, 
-        materia: str, 
-        manual_name: str,
-        manual_type: str = "zanichelli"
-    ) -> Path:
-        """Salva l'analisi in archivio/analisi_manuali/{materia}/"""
+    def save_analysis(self, analysis: Dict, materia: str, manual_name: str, manual_type: str = "zanichelli") -> Path:
         save_dir = Path("archivio/analisi_manuali") / materia.replace(" ", "_")
         save_dir.mkdir(parents=True, exist_ok=True)
-        
         timestamp = datetime.now().strftime("%Y-%m-%d_%H%M%S")
         safe_name = manual_name.replace(" ", "_").replace("/", "-")[:50]
         filename = f"{safe_name}_{manual_type}_{timestamp}.json"
-        
         filepath = save_dir / filename
-        
-        analysis_with_meta = {
-            "metadata": {
-                "manual_name": manual_name,
-                "manual_type": manual_type,
-                "materia": materia,
-                "saved_at": datetime.now().isoformat(),
-                "analysis_version": "2.0"
-            },
-            "analysis": analysis
-        }
-        
+        analysis_with_meta = {"metadata": {"manual_name": manual_name, "manual_type": manual_type, "materia": materia, "saved_at": datetime.now().isoformat(), "analysis_version": "2.0"}, "analysis": analysis}
         with open(filepath, "w", encoding="utf-8") as f:
             json.dump(analysis_with_meta, f, indent=2, ensure_ascii=False)
-        
         return filepath
 
     def get_saved_analyses(self, materia: str = None) -> List[Dict]:
-        """Restituisce le analisi salvate, opzionalmente filtrate per materia."""
         base_dir = Path("archivio/analisi_manuali")
         if not base_dir.exists():
             return []
-        
         analyses = []
-        
         if materia:
             materia_dir = base_dir / materia.replace(" ", "_")
             dirs_to_search = [materia_dir] if materia_dir.exists() else []
         else:
             dirs_to_search = [d for d in base_dir.iterdir() if d.is_dir()]
-        
         for materia_dir in dirs_to_search:
             for json_file in materia_dir.glob("*.json"):
                 try:
                     with open(json_file, "r", encoding="utf-8") as f:
                         data = json.load(f)
-                    
                     meta = data.get("metadata", {})
                     analysis = data.get("analysis", {})
-                    
-                    analyses.append({
-                        "path": json_file,
-                        "filename": json_file.name,
-                        "materia": meta.get("materia", materia_dir.name),
-                        "manual_name": meta.get("manual_name", json_file.stem),
-                        "manual_type": meta.get("manual_type", "unknown"),
-                        "saved_at": meta.get("saved_at", ""),
-                        "coverage": analysis.get("overall_coverage", 0),
-                        "judgment": analysis.get("judgment", "N/D")
-                    })
+                    analyses.append({"path": json_file, "filename": json_file.name, "materia": meta.get("materia", materia_dir.name), "manual_name": meta.get("manual_name", json_file.stem), "manual_type": meta.get("manual_type", "unknown"), "saved_at": meta.get("saved_at", ""), "coverage": analysis.get("overall_coverage", 0), "judgment": analysis.get("judgment", "N/D")})
                 except Exception as e:
+                    print(f"Errore lettura {json_file}: {e}")
+        analyses.sort(key=lambda x: x.get("saved_at", ""), reverse=True)
+        return analyses
 
- # =========================================================
-    # GENERAZIONE REPORT HTML
-    # =========================================================
-    
+    def load_saved_analysis(self, path: Path) -> Optional[Dict]:
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"Errore caricamento analisi {path}: {e}")
+            return None
+
     def generate_single_analysis_report_html(self, analysis: Dict, framework_type: str = "ideal") -> str:
-        """Genera report HTML per singola analisi manuale vs framework."""
-        
         manual_info = analysis.get("manual_info", {})
-        framework_info = analysis.get("framework_info", analysis.get("real_framework_info", {}))
         modules_analysis = analysis.get("modules_analysis", [])
         gaps = analysis.get("gaps", {})
-        
         coverage = analysis.get("overall_coverage", 0)
         if coverage >= 70:
             coverage_color = "#4caf50"
@@ -1213,14 +686,12 @@ Rispondi SOLO con JSON valido (senza markdown):
             coverage_color = "#ff9800"
         else:
             coverage_color = "#f44336"
-        
         judgment = analysis.get("judgment", "N/D")
         judgment_class = self._judgment_to_class(judgment)
         
         modules_html = ""
         for mod in modules_analysis:
             mod_coverage = mod.get("coverage_percentage", mod.get("manual_coverage", 0))
-            
             if mod_coverage >= 70:
                 mod_color = "#4caf50"
                 fill_class = "fill-high"
@@ -1233,50 +704,30 @@ Rispondi SOLO con JSON valido (senza markdown):
                 mod_color = "#f44336"
                 fill_class = "fill-low"
                 icon = "🔴"
-            
             description = mod.get("description", "")
             if not description:
                 description = f"Copertura {mod.get('status', 'N/D')}"
-            
             modules_html += f"""
             <div class="module-card" style="border-left: 4px solid {mod_color};">
                 <div class="module-header">
                     <span class="module-title">{icon} {mod.get('module_name', 'N/D')}</span>
                     <span class="module-coverage" style="color: {mod_color};">{mod_coverage:.0f}%</span>
                 </div>
-                <div class="coverage-bar">
-                    <div class="coverage-fill {fill_class}" style="width:{mod_coverage}%;"></div>
-                </div>
-                <div class="module-description">
-                    <em>{description}</em>
-                </div>
+                <div class="coverage-bar"><div class="coverage-fill {fill_class}" style="width:{mod_coverage}%;"></div></div>
+                <div class="module-description"><em>{description}</em></div>
             </div>"""
         
         gaps_html = ""
         missing = gaps.get("missing_in_manual", [])[:15]
         if missing:
-            gaps_items = "".join([
-                f"<li><strong>{g.get('module', 'N/D')}</strong>: {g.get('content', 'N/D')}</li>"
-                for g in missing
-            ])
+            gaps_items = "".join([f"<li><strong>{g.get('module', 'N/D')}</strong>: {g.get('content', 'N/D')}</li>" for g in missing])
             remaining = len(gaps.get("missing_in_manual", [])) - 15
             if remaining > 0:
                 gaps_items += f"<li><em>... e altri {remaining} contenuti</em></li>"
-            
-            gaps_html = f"""
-    <div class="gaps-section">
-        <h3>⚠️ Gap Rilevati</h3>
-        <ul>{gaps_items}</ul>
-    </div>"""
+            gaps_html = f"""<div class="gaps-section"><h3>⚠️ Gap Rilevati</h3><ul>{gaps_items}</ul></div>"""
         
         summary = analysis.get("summary", "")
-        summary_html = ""
-        if summary:
-            summary_html = f"""
-    <div class="summary-narrative">
-        <h3>📝 Sintesi</h3>
-        <p>{summary}</p>
-    </div>"""
+        summary_html = f"""<div class="summary-narrative"><h3>📝 Sintesi</h3><p>{summary}</p></div>""" if summary else ""
         
         html = f"""<!DOCTYPE html>
 <html lang="it">
@@ -1298,7 +749,6 @@ Rispondi SOLO con JSON valido (senza markdown):
         .summary-card .label {{ color: #666; font-size: 0.9em; }}
         .summary-narrative {{ background: #e8eaf6; padding: 20px; border-radius: 10px; margin: 25px 0; }}
         .summary-narrative h3 {{ margin-top: 0; }}
-        .summary-narrative p {{ margin: 10px 0 0 0; font-size: 1.05em; }}
         .module-card {{ background: #fafafa; padding: 20px; border-radius: 10px; margin: 15px 0; }}
         .module-header {{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }}
         .module-title {{ font-size: 1.1em; font-weight: 600; }}
@@ -1317,7 +767,6 @@ Rispondi SOLO con JSON valido (senza markdown):
         .gaps-section {{ background: #fff8e1; padding: 20px; border-radius: 10px; margin-top: 20px; }}
         .gaps-section h3 {{ color: #e65100; margin-top: 0; }}
         .gaps-section ul {{ margin: 10px 0; padding-left: 25px; }}
-        .gaps-section li {{ margin: 8px 0; }}
         .recommendation {{ background: #e8f5e9; padding: 15px 20px; border-radius: 10px; margin-top: 20px; border-left: 4px solid #4caf50; }}
         .footer {{ margin-top: 40px; padding-top: 20px; border-top: 1px solid #e0e0e0; color: #888; font-size: 0.85em; text-align: center; }}
     </style>
@@ -1325,47 +774,21 @@ Rispondi SOLO con JSON valido (senza markdown):
 <body>
 <div class="container">
     <h1>📖 Analisi Manuale</h1>
-    <p class="subtitle">
-        <strong>{manual_info.get('title', 'N/D')}</strong> — {manual_info.get('author', 'N/D')} ({manual_info.get('publisher', 'N/D')})<br>
-        Confronto vs Framework {'IDEALE' if framework_type == 'ideal' else 'REALE'} 
-        <span class="method-badge">Metodo: {analysis.get('method', 'N/D').upper()}</span>
-    </p>
-    
+    <p class="subtitle"><strong>{manual_info.get('title', 'N/D')}</strong> — {manual_info.get('author', 'N/D')} ({manual_info.get('publisher', 'N/D')})<br>
+        Confronto vs Framework {'IDEALE' if framework_type == 'ideal' else 'REALE'} <span class="method-badge">Metodo: {analysis.get('method', 'N/D').upper()}</span></p>
     <div class="summary-grid">
-        <div class="summary-card">
-            <div class="value" style="color: {coverage_color};">{coverage:.1f}%</div>
-            <div class="label">Copertura Complessiva</div>
-        </div>
-        <div class="summary-card">
-            <div class="value">{manual_info.get('n_chapters', 0)}</div>
-            <div class="label">Capitoli</div>
-        </div>
-        <div class="summary-card">
-            <div class="value">{manual_info.get('n_sections', 0)}</div>
-            <div class="label">Sezioni</div>
-        </div>
-        <div class="summary-card">
-            <span class="judgment-badge {judgment_class}">{judgment}</span>
-            <div class="label" style="margin-top:10px;">Giudizio</div>
-        </div>
+        <div class="summary-card"><div class="value" style="color: {coverage_color};">{coverage:.1f}%</div><div class="label">Copertura Complessiva</div></div>
+        <div class="summary-card"><div class="value">{manual_info.get('n_chapters', 0)}</div><div class="label">Capitoli</div></div>
+        <div class="summary-card"><div class="value">{manual_info.get('n_sections', 0)}</div><div class="label">Sezioni</div></div>
+        <div class="summary-card"><span class="judgment-badge {judgment_class}">{judgment}</span><div class="label" style="margin-top:10px;">Giudizio</div></div>
     </div>
-    
     {summary_html}
-    
-    <div class="recommendation">
-        <strong>📋 Raccomandazione:</strong> {analysis.get('recommendation', 'N/D')}
-    </div>
-    
+    <div class="recommendation"><strong>📋 Raccomandazione:</strong> {analysis.get('recommendation', 'N/D')}</div>
     <h2>📊 Analisi per Modulo</h2>
     {modules_html}
     {gaps_html}
-    
-    <div class="footer">
-        Report generato da <strong>CoreX - Manual Analyzer v2.0</strong> | Zanichelli<br>
-        {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}
-    </div>
+    <div class="footer">Report generato da <strong>CoreX - Manual Analyzer v2.0</strong> | Zanichelli<br>{datetime.now().strftime('%d/%m/%Y %H:%M:%S')}</div>
 </div>
 </body>
 </html>"""
-        
-    return html
+        return html
