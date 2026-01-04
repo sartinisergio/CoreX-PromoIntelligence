@@ -186,48 +186,104 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
         except Exception as e:
             print(f"Errore LLM matching: {e}")
             return None
-
     def _generate_narrative_descriptions(self, analysis_result: Dict, manual: Dict, subject: str, provider_id: str = "openai", model: str = "gpt-4o-mini") -> Dict:
+        """
+        Genera descrizioni narrative UTILI per il promotore.
+        v2.0 - Passa TUTTI i dati del matching per descrizioni specifiche.
+        """
         try:
             from app.llm_provider import get_llm_client
         except ImportError:
             return analysis_result
         
-        modules_summary = []
+        # Costruisce la struttura capitoli per riferimento rapido
+        chapters_index = {}
+        for ch in manual.get("chapters", []):
+            ch_num = ch.get("number", 0)
+            chapters_index[ch_num] = {
+                "title": ch.get("title", ""),
+                "sections": {s.get("number", ""): s.get("title", "") for s in ch.get("sections", [])}
+            }
+        
+        # Prepara dati COMPLETI per ogni modulo (non riassunti!)
+        modules_detailed = []
         for mod in analysis_result.get("modules_analysis", []):
-            modules_summary.append({
+            # Separa contenuti coperti da quelli mancanti CON DETTAGLI
+            covered_details = []
+            missing_details = []
+            
+            for cm in mod.get("content_matches", []):
+                if cm.get("matched_by"):
+                    ch_num = cm.get("chapter", 0)
+                    ch_info = chapters_index.get(ch_num, {})
+                    covered_details.append({
+                        "content": cm.get("content", ""),
+                        "where": cm.get("matched_by", ""),
+                        "chapter_num": ch_num,
+                        "chapter_title": ch_info.get("title", ""),
+                        "section": cm.get("section", "")
+                    })
+                else:
+                    missing_details.append(cm.get("content", ""))
+            
+            modules_detailed.append({
                 "id": mod.get("module_id"),
                 "name": mod.get("module_name"),
-                "coverage": mod.get("coverage_percentage", 0),
-                "matched": [cm.get("matched_by") for cm in mod.get("content_matches", []) if cm.get("matched_by")],
-                "missing": [cm.get("content") for cm in mod.get("content_matches", []) if not cm.get("matched_by")]
+                "coverage_percent": mod.get("coverage_percentage", mod.get("manual_coverage", 0)),
+                "is_core": mod.get("is_core", False),
+                "covered": covered_details,
+                "missing": missing_details,
+                "chapters_involved": mod.get("chapters_involved", [])
             })
         
         manual_title = manual.get("title", "N/D")
+        manual_author = manual.get("author", "N/D")
         overall_coverage = analysis_result.get("overall_coverage", 0)
         
-        prompt = f"""Sei un consulente editoriale esperto di manuali universitari di {subject.replace('_', ' ').title()}.
+        prompt = f"""Sei un PROMOTORE EDITORIALE ESPERTO di manuali universitari di {subject.replace('_', ' ').title()}.
+Devi generare descrizioni che userai per ARGOMENTARE con i docenti.
 
-MANUALE ANALIZZATO: {manual_title}
-COPERTURA COMPLESSIVA: {overall_coverage}%
+MANUALE: "{manual_title}" di {manual_author}
+COPERTURA COMPLESSIVA: {overall_coverage:.0f}%
 
-RISULTATI ANALISI TECNICA PER MODULO:
-{json.dumps(modules_summary, indent=2, ensure_ascii=False)}
+ANALISI DETTAGLIATA PER MODULO:
+{json.dumps(modules_detailed, indent=2, ensure_ascii=False)}
 
-COMPITO:
-Genera una descrizione UTILE per un promotore editoriale per OGNI modulo.
-Ogni descrizione deve essere 1-2 frasi che spiegano:
-- Dove nel manuale viene trattato l'argomento (cita i capitoli/sezioni specifici)
-- Cosa manca e se è una lacuna grave o marginale
+ISTRUZIONI PER LE DESCRIZIONI:
+Per OGNI modulo genera una descrizione di 2-3 frasi che:
 
-Genera anche un SUMMARY complessivo di 2-3 frasi sul posizionamento del manuale.
+1. CITI ESATTAMENTE dove viene trattato:
+   - "Nel Capitolo 3 'Cinetica chimica' (sezioni 3.1-3.4)" 
+   - NON "viene trattato nel manuale" (troppo generico!)
 
-Rispondi SOLO con JSON valido (senza markdown):
+2. SPECIFICHI i contenuti coperti:
+   - "tratta velocità di reazione, ordine di reazione e meccanismi"
+   - NON "copre i contenuti del modulo"
+
+3. Per i CONTENUTI MANCANTI, valuta se sono:
+   - LACUNA GRAVE: argomento fondamentale richiesto in quasi tutti i corsi
+   - LACUNA MARGINALE: argomento avanzato/specialistico, spesso non richiesto nei corsi base
+   - Spiega PERCHÉ in 5-10 parole
+
+4. Se coverage > 90%, evidenzia il PUNTO DI FORZA per la vendita
+
+TONO: Professionale ma diretto. Frasi utili in una visita commerciale.
+
+GENERA ANCHE UN SUMMARY (3-4 frasi) che:
+- Identifichi il POSIZIONAMENTO del manuale (base/intermedio/avanzato)
+- Indichi i 2-3 PUNTI DI FORZA principali
+- Segnali la LACUNA PIÙ CRITICA (se presente)
+- Suggerisca il TARGET IDEALE (es: "Ottimo per corsi di Chimica Generale per Biologi")
+
+Rispondi SOLO con JSON valido:
 {{
     "module_descriptions": [
-        {{"module_id": 1, "description": "Il Capitolo 2 tratta X e Y. Manca Z, raramente richiesto."}}
+        {{
+            "module_id": 1,
+            "description": "Trattato nel Capitolo 2 'Struttura atomica' (sez. 2.1-2.5): modello atomico, numeri quantici, configurazioni elettroniche. Manca la trattazione degli spettri atomici - lacuna marginale, argomento raramente richiesto nei corsi base di Chimica Generale."
+        }}
     ],
-    "summary": "Sintesi complessiva..."
+    "summary": "Manuale di livello intermedio, particolarmente forte sulla termodinamica (copertura 95%) e cinetica. Punto debole: elettrochimica trattata solo superficialmente. Target ideale: corsi di Chimica Generale per CTF e Farmacia."
 }}"""
 
         try:
@@ -235,13 +291,19 @@ Rispondi SOLO con JSON valido (senza markdown):
             response = client.chat.completions.create(
                 model=model,
                 messages=[
-                    {"role": "system", "content": "Rispondi SOLO con JSON valido, senza markdown."},
+                    {
+                        "role": "system", 
+                        "content": "Sei un esperto commerciale editoriale. Genera descrizioni CONCRETE e UTILI per argomentare con i docenti. Cita sempre capitoli e sezioni specifiche. Rispondi SOLO con JSON valido."
+                    },
                     {"role": "user", "content": prompt}
                 ],
-                temperature=0.3,
-                max_tokens=2500
+                temperature=0.4,
+                max_tokens=3500
             )
+            
             response_text = response.choices[0].message.content.strip()
+            
+            # Pulizia markdown se presente
             if "```" in response_text:
                 for part in response_text.split("```"):
                     if part.strip().startswith("json"):
@@ -250,17 +312,27 @@ Rispondi SOLO con JSON valido (senza markdown):
                     elif part.strip().startswith("{"):
                         response_text = part.strip()
                         break
+            
             narrative = json.loads(response_text)
+            
+            # Mappa descrizioni ai moduli
             desc_map = {d["module_id"]: d["description"] for d in narrative.get("module_descriptions", [])}
             for mod in analysis_result.get("modules_analysis", []):
                 mod["description"] = desc_map.get(mod.get("module_id"), "")
+            
             analysis_result["summary"] = narrative.get("summary", "")
             analysis_result["narrative_generated"] = True
+            
+        except json.JSONDecodeError as e:
+            print(f"Errore parsing JSON narrative: {e}")
+            print(f"Response raw: {response_text[:500]}")
+            analysis_result["narrative_generated"] = False
         except Exception as e:
             print(f"Errore generazione narrative: {e}")
             analysis_result["narrative_generated"] = False
+        
         return analysis_result
-
+    
     def _normalize_text(self, text: str) -> str:
         text = text.lower().strip()
         text = re.sub(r'[^\w\s\-]', ' ', text)

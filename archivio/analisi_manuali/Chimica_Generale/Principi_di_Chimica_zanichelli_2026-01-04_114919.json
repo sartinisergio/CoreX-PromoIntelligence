@@ -1,0 +1,765 @@
+{
+  "metadata": {
+    "manual_name": "Principi di Chimica",
+    "manual_type": "zanichelli",
+    "materia": "Chimica_Generale",
+    "saved_at": "2026-01-04T11:49:19.597160",
+    "analysis_version": "2.0"
+  },
+  "analysis": {
+    "manual_info": {
+      "id": "Atkins_Principi_Chimica",
+      "title": "Principi di Chimica",
+      "author": "Atkins",
+      "publisher": "Zanichelli",
+      "n_chapters": 11,
+      "n_sections": 93
+    },
+    "real_framework_info": {
+      "name": "Chimica_Generale - Analisi Multiclasse su Framework Ideale",
+      "type": "multiclass",
+      "classes_analyzed": [
+        "L-13_Biologia",
+        "L-25_Scienze_e_tecnologie_agrarie",
+        "L-26_Scienze_e_tecnologie_alimentari",
+        "L-27_Scienze_chimiche",
+        "L-2_Biotecnologie",
+        "L-32_Scienze_naturali_amb",
+        "L-34_Geologia",
+        "L-7-8-9_Ingegneria",
+        "LM-13_Farmacia"
+      ],
+      "n_modules": 12,
+      "n_core_modules": 8
+    },
+    "overall_coverage": 70.0,
+    "core_modules_coverage": 74.4,
+    "judgment": "Buono",
+    "recommendation": "Il manuale copre la maggior parte dei contenuti con alcune lacune. Adozione con integrazioni.",
+    "modules_analysis": [
+      {
+        "module_id": 1,
+        "module_name": "Struttura atomica e tavola periodica",
+        "manual_coverage": 90,
+        "real_avg_coverage": 88.9,
+        "coverage_by_class": {
+          "L-13_Biologia": 100.0,
+          "L-25_Scienze_e_tecnologie_agrarie": 100.0,
+          "L-26_Scienze_e_tecnologie_alimentari": 80.0,
+          "L-27_Scienze_chimiche": 80.0,
+          "L-2_Biotecnologie": 80.0,
+          "L-32_Scienze_naturali_amb": 80.0,
+          "L-34_Geologia": 100.0,
+          "L-7-8-9_Ingegneria": 80.0,
+          "LM-13_Farmacia": 100.0
+        },
+        "is_core": true,
+        "contents_covered": 5,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Particelle subatomiche, isotopi, numero Avogadro",
+            "matched_by": "Gli isotopi",
+            "chapter": 0,
+            "score": 1.0
+          },
+          {
+            "content": "Modello Bohr, spettri atomici",
+            "matched_by": "Il modello nucleare dell'atomo",
+            "chapter": 1,
+            "score": 1.0
+          },
+          {
+            "content": "Numeri quantici, orbitali s/p/d/f",
+            "matched_by": "Numeri quantici, gusci e sottogusci",
+            "chapter": 1,
+            "score": 1.0
+          },
+          {
+            "content": "Configurazioni elettroniche, eccezioni",
+            "matched_by": "La struttura elettronica dell'idrogeno: un riepilogo",
+            "chapter": 1,
+            "score": 1.0
+          },
+          {
+            "content": "Raggio atomico, IE, elettronegatività",
+            "matched_by": "L'elettronegatività",
+            "chapter": 1,
+            "score": 1.0
+          }
+        ],
+        "status": "completo",
+        "description": "Trattato nel Capitolo 1 'FOCUS 1 - Gli atomi' (sez. 1.1-1.5): particelle subatomiche, isotopi, modello Bohr, numeri quantici e configurazioni elettroniche. Manca la trattazione di alcuni dettagli avanzati sugli isotopi - lacuna marginale, argomento raramente richiesto nei corsi base di Chimica Generale."
+      },
+      {
+        "module_id": 2,
+        "module_name": "Legame chimico e geometria molecolare",
+        "manual_coverage": 85,
+        "real_avg_coverage": 93.3,
+        "coverage_by_class": {
+          "L-13_Biologia": 100.0,
+          "L-25_Scienze_e_tecnologie_agrarie": 80.0,
+          "L-26_Scienze_e_tecnologie_alimentari": 80.0,
+          "L-27_Scienze_chimiche": 100.0,
+          "L-2_Biotecnologie": 100.0,
+          "L-32_Scienze_naturali_amb": 100.0,
+          "L-34_Geologia": 100.0,
+          "L-7-8-9_Ingegneria": 80.0,
+          "LM-13_Farmacia": 100.0
+        },
+        "is_core": true,
+        "contents_covered": 5,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Teoria Lewis, regola ottetto/18 elettroni",
+            "matched_by": "I simboli di Lewis",
+            "chapter": 2,
+            "score": 1.0
+          },
+          {
+            "content": "VSEPR (lineare, planare, tetraedrica)",
+            "matched_by": "Il modello VSEPR elementare",
+            "chapter": 2,
+            "score": 1.0
+          },
+          {
+            "content": "Ibridazione sp/sp2/sp3",
+            "matched_by": "La teoria del legame di valenza",
+            "chapter": 2,
+            "score": 1.0
+          },
+          {
+            "content": "Polarità legami/molecole, momento dipolare",
+            "matched_by": "Correggiamo il modello covalente: l'elettronegatività",
+            "chapter": 2,
+            "score": 1.0
+          },
+          {
+            "content": "Legami metallici, energia reticolare",
+            "matched_by": "I solidi metallici",
+            "chapter": 3,
+            "score": 1.0
+          }
+        ],
+        "status": "completo",
+        "description": "Trattato nel Capitolo 2 'FOCUS 2 - I legami tra gli atomi' (sez. 2.1-2.5): teoria di Lewis, modello VSEPR, ibridazione e polarità dei legami. Manca la trattazione di legami metallici - lacuna marginale, argomento avanzato non sempre richiesto nei corsi base."
+      },
+      {
+        "module_id": 3,
+        "module_name": "Stechiometria e reazioni chimiche",
+        "manual_coverage": 90,
+        "real_avg_coverage": 100.0,
+        "coverage_by_class": {
+          "L-13_Biologia": 100.0,
+          "L-25_Scienze_e_tecnologie_agrarie": 100.0,
+          "L-26_Scienze_e_tecnologie_alimentari": 100.0,
+          "L-27_Scienze_chimiche": 100.0,
+          "L-2_Biotecnologie": 100.0,
+          "L-32_Scienze_naturali_amb": 100.0,
+          "L-34_Geologia": 100.0,
+          "L-7-8-9_Ingegneria": 100.0,
+          "LM-13_Farmacia": 100.0
+        },
+        "is_core": true,
+        "contents_covered": 5,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Mole, massa molare, composizione %",
+            "matched_by": "La mole, La massa molare",
+            "chapter": 0,
+            "score": 1.0
+          },
+          {
+            "content": "Bilanciamento equazioni, yield teorico/esperim.",
+            "matched_by": "Il bilanciamento delle equazioni chimiche",
+            "chapter": 0,
+            "score": 1.0
+          },
+          {
+            "content": "Reazioni: precipitazione, acido-base, redox",
+            "matched_by": "Le reazioni di precipitazione, Acidi e basi, Le reazioni redox",
+            "chapter": 0,
+            "score": 1.0
+          },
+          {
+            "content": "Stechiometria soluzioni, diluizioni",
+            "matched_by": "La concentrazione, La diluizione",
+            "chapter": 0,
+            "score": 1.0
+          },
+          {
+            "content": "Numeri ossidazione, bilanciamento redox",
+            "matched_by": "I numeri di ossidazione",
+            "chapter": 0,
+            "score": 1.0
+          }
+        ],
+        "status": "completo",
+        "description": "Trattato nel Capitolo 0 'FONDAMENTI - Introduzione e orientamento' (sez. 0.1-0.5): mole, massa molare, bilanciamento delle equazioni e reazioni chimiche. Punti di forza: copertura alta (90%) e chiarezza nella spiegazione delle reazioni."
+      },
+      {
+        "module_id": 4,
+        "module_name": "Termodinamica e termochimica",
+        "manual_coverage": 85,
+        "real_avg_coverage": 82.2,
+        "coverage_by_class": {
+          "L-13_Biologia": 80.0,
+          "L-25_Scienze_e_tecnologie_agrarie": 60.0,
+          "L-26_Scienze_e_tecnologie_alimentari": 80.0,
+          "L-27_Scienze_chimiche": 100.0,
+          "L-2_Biotecnologie": 100.0,
+          "L-32_Scienze_naturali_amb": 80.0,
+          "L-34_Geologia": 80.0,
+          "L-7-8-9_Ingegneria": 60.0,
+          "LM-13_Farmacia": 100.0
+        },
+        "is_core": true,
+        "contents_covered": 5,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Energia interna, entalpia, 1° principio",
+            "matched_by": "L'energia interna, L'entalpia",
+            "chapter": 4,
+            "score": 1.0
+          },
+          {
+            "content": "Calorimetria, capacità termica",
+            "matched_by": "La capacità termica a volume o a pressione costante",
+            "chapter": 4,
+            "score": 1.0
+          },
+          {
+            "content": "Legge Hess, entalpie formazione",
+            "matched_by": "La legge di Hess, L'entalpia standard di formazione",
+            "chapter": 4,
+            "score": 1.0
+          },
+          {
+            "content": "Entropia, 2° principio, energia libera Gibbs",
+            "matched_by": "L'entropia, L'energia libera di Gibbs",
+            "chapter": 4,
+            "score": 1.0
+          },
+          {
+            "content": "Cicli Born-Haber, spontaneità",
+            "matched_by": "Il ciclo di Born-Haber",
+            "chapter": 4,
+            "score": 1.0
+          }
+        ],
+        "status": "completo",
+        "description": "Trattato nel Capitolo 4 'FOCUS 4 - La termodinamica' (sez. 4.1-4.5): energia interna, entalpia, legge di Hess e entropia. Manca la trattazione di alcuni aspetti pratici della termodinamica - lacuna marginale, argomento avanzato non sempre richiesto nei corsi base."
+      },
+      {
+        "module_id": 5,
+        "module_name": "Stati materia e soluzioni",
+        "manual_coverage": 80,
+        "real_avg_coverage": 100.0,
+        "coverage_by_class": {
+          "L-13_Biologia": 100.0,
+          "L-25_Scienze_e_tecnologie_agrarie": 100.0,
+          "L-26_Scienze_e_tecnologie_alimentari": 100.0,
+          "L-27_Scienze_chimiche": 100.0,
+          "L-2_Biotecnologie": 100.0,
+          "L-32_Scienze_naturali_amb": 100.0,
+          "L-34_Geologia": 100.0,
+          "L-7-8-9_Ingegneria": 100.0,
+          "LM-13_Farmacia": 100.0
+        },
+        "is_core": true,
+        "contents_covered": 5,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Leggi gas ideali, miscele, pressioni parziali",
+            "matched_by": "I gas e la pressione, Le leggi dei gas in azione",
+            "chapter": 3,
+            "score": 1.0
+          },
+          {
+            "content": "Teoria cinetica gas, gas reali",
+            "matched_by": "Il modello cinetico dei gas, Le deviazioni dal comportamento ideale",
+            "chapter": 3,
+            "score": 1.0
+          },
+          {
+            "content": "Cambi stato, diagrammi fase",
+            "matched_by": "Le transizioni di fase, I diagrammi di stato a un solo componente",
+            "chapter": 5,
+            "score": 1.0
+          },
+          {
+            "content": "Soluzioni: molalità, molarità, % massa",
+            "matched_by": "La classificazione dei miscugli, La concentrazione",
+            "chapter": 0,
+            "score": 1.0
+          },
+          {
+            "content": "Proprietà colligative (ebullio, crioscopia, osmosi)",
+            "matched_by": "Innalzamento ebullioscopico e abbassamento crioscopico, L'osmosi",
+            "chapter": 5,
+            "score": 1.0
+          }
+        ],
+        "status": "completo",
+        "description": "Trattato nel Capitolo 3 'FOCUS 3 - Gli stati della materia' (sez. 3.1-3.5): leggi dei gas, teoria cinetica e proprietà colligative. Manca la trattazione di alcuni dettagli avanzati sulle soluzioni - lacuna marginale, argomento raramente richiesto nei corsi base."
+      },
+      {
+        "module_id": 6,
+        "module_name": "Cinetica chimica",
+        "manual_coverage": 75,
+        "real_avg_coverage": 82.2,
+        "coverage_by_class": {
+          "L-13_Biologia": 100.0,
+          "L-25_Scienze_e_tecnologie_agrarie": 40.0,
+          "L-26_Scienze_e_tecnologie_alimentari": 80.0,
+          "L-27_Scienze_chimiche": 100.0,
+          "L-2_Biotecnologie": 100.0,
+          "L-32_Scienze_naturali_amb": 60.0,
+          "L-34_Geologia": 60.0,
+          "L-7-8-9_Ingegneria": 100.0,
+          "LM-13_Farmacia": 100.0
+        },
+        "is_core": false,
+        "contents_covered": 5,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Velocità reazione, ordine, cinetica integrata",
+            "matched_by": "La velocità istantanea di reazione",
+            "chapter": 7,
+            "score": 1.0
+          },
+          {
+            "content": "Equazione Arrhenius, energia attivazione",
+            "matched_by": "L'effetto della temperatura",
+            "chapter": 7,
+            "score": 1.0
+          },
+          {
+            "content": "Meccanismi elementari, stato attivato",
+            "matched_by": "Le reazioni elementari",
+            "chapter": 7,
+            "score": 1.0
+          },
+          {
+            "content": "Catalisi omogenea/eterogenea",
+            "matched_by": "Come funzionano i catalizzatori",
+            "chapter": 7,
+            "score": 1.0
+          },
+          {
+            "content": "Cinetica enzimatica (Michaelis-Menten)",
+            "matched_by": "I catalizzatori viventi: gli enzimi",
+            "chapter": 7,
+            "score": 1.0
+          }
+        ],
+        "status": "buono",
+        "description": "Trattato nel Capitolo 7 'FOCUS 7 - La cinetica' (sez. 7.1-7.5): velocità di reazione, equazione di Arrhenius e catalisi. Manca la trattazione di cinetica avanzata - lacuna marginale, argomento raramente richiesto nei corsi base."
+      },
+      {
+        "module_id": 7,
+        "module_name": "Equilibri chimici",
+        "manual_coverage": 80,
+        "real_avg_coverage": 80.0,
+        "coverage_by_class": {
+          "L-13_Biologia": 80.0,
+          "L-25_Scienze_e_tecnologie_agrarie": 80.0,
+          "L-26_Scienze_e_tecnologie_alimentari": 80.0,
+          "L-27_Scienze_chimiche": 80.0,
+          "L-2_Biotecnologie": 80.0,
+          "L-32_Scienze_naturali_amb": 80.0,
+          "L-34_Geologia": 80.0,
+          "L-7-8-9_Ingegneria": 80.0,
+          "LM-13_Farmacia": 80.0
+        },
+        "is_core": true,
+        "contents_covered": 5,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Costante Kc/Kp, principio Le Chatelier",
+            "matched_by": "L'equilibrio e la legge dell'azione di massa",
+            "chapter": 5,
+            "score": 1.0
+          },
+          {
+            "content": "Calcoli equilibri gassosi/eterogenei",
+            "matched_by": "Calcoli con le costanti di equilibrio",
+            "chapter": 5,
+            "score": 1.0
+          },
+          {
+            "content": "Fattori spostamento equilibrio",
+            "matched_by": "L'aggiunta e la sottrazione di reagenti",
+            "chapter": 5,
+            "score": 1.0
+          },
+          {
+            "content": "Equilibri multipli, approssimazioni",
+            "matched_by": "La risposta dei sistemi all'equilibrio alla variazione delle condizioni",
+            "chapter": 5,
+            "score": 1.0
+          },
+          {
+            "content": "Q vs K",
+            "matched_by": "La reversibilità delle reazioni",
+            "chapter": 5,
+            "score": 1.0
+          }
+        ],
+        "status": "completo",
+        "description": "Trattato nel Capitolo 5 'FOCUS 5 - L'equilibrio' (sez. 5.1-5.5): costante di equilibrio, principio di Le Chatelier e calcoli sugli equilibri. Manca la trattazione di equilibri complessi - lacuna marginale, argomento raramente richiesto nei corsi base."
+      },
+      {
+        "module_id": 8,
+        "module_name": "Equilibri acido-base",
+        "manual_coverage": 85,
+        "real_avg_coverage": 88.9,
+        "coverage_by_class": {
+          "L-13_Biologia": 100.0,
+          "L-25_Scienze_e_tecnologie_agrarie": 80.0,
+          "L-26_Scienze_e_tecnologie_alimentari": 100.0,
+          "L-27_Scienze_chimiche": 80.0,
+          "L-2_Biotecnologie": 100.0,
+          "L-32_Scienze_naturali_amb": 100.0,
+          "L-34_Geologia": 80.0,
+          "L-7-8-9_Ingegneria": 60.0,
+          "LM-13_Farmacia": 100.0
+        },
+        "is_core": true,
+        "contents_covered": 5,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Arrhenius, Brønsted-Lowry, Lewis",
+            "matched_by": "Gli acidi e le basi di Brønsted-Lowry, Gli acidi e le basi di Lewis",
+            "chapter": 6,
+            "score": 1.0
+          },
+          {
+            "content": "pKa, pH calcoli acidi deboli",
+            "matched_by": "La definizione e l'interpretazione del pH",
+            "chapter": 6,
+            "score": 1.0
+          },
+          {
+            "content": "Idrolisi sali, indicatori",
+            "matched_by": "Le titolazioni acido-base",
+            "chapter": 6,
+            "score": 1.0
+          },
+          {
+            "content": "Curve titolazione, tamponi",
+            "matched_by": "L'azione tampone",
+            "chapter": 6,
+            "score": 1.0
+          },
+          {
+            "content": "Calcoli capacità tampone",
+            "matched_by": "La capacità tamponante",
+            "chapter": 6,
+            "score": 1.0
+          }
+        ],
+        "status": "completo",
+        "description": "Trattato nel Capitolo 6 'FOCUS 6 - Le reazioni' (sez. 6.1-6.5): definizioni di acidi e basi, calcoli di pH e curve di titolazione. Manca la trattazione di alcuni indicatori - lacuna marginale, argomento raramente richiesto nei corsi base."
+      },
+      {
+        "module_id": 9,
+        "module_name": "Elettrochimica",
+        "manual_coverage": 80,
+        "real_avg_coverage": 57.8,
+        "coverage_by_class": {
+          "L-13_Biologia": 80.0,
+          "L-25_Scienze_e_tecnologie_agrarie": 60.0,
+          "L-26_Scienze_e_tecnologie_alimentari": 40.0,
+          "L-27_Scienze_chimiche": 60.0,
+          "L-2_Biotecnologie": 60.0,
+          "L-32_Scienze_naturali_amb": 60.0,
+          "L-34_Geologia": 40.0,
+          "L-7-8-9_Ingegneria": 60.0,
+          "LM-13_Farmacia": 60.0
+        },
+        "is_core": false,
+        "contents_covered": 5,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Celle galvaniche/voltaiche, potenziale standard",
+            "matched_by": "La struttura delle celle galvaniche",
+            "chapter": 6,
+            "score": 1.0
+          },
+          {
+            "content": "Equazione Nernst",
+            "matched_by": "L'equazione di Nernst",
+            "chapter": 6,
+            "score": 1.0
+          },
+          {
+            "content": "Celle elettrolitiche, leggi Faraday",
+            "matched_by": "Le celle elettrolitiche",
+            "chapter": 6,
+            "score": 1.0
+          },
+          {
+            "content": "Corrosione, batterie (Pb, NiCd, Li-ion)",
+            "matched_by": "Le applicazioni dell'elettrolisi",
+            "chapter": 6,
+            "score": 1.0
+          },
+          {
+            "content": "Elettrodi riferimento",
+            "matched_by": "Gli elettrodi ione-selettivi",
+            "chapter": 6,
+            "score": 1.0
+          }
+        ],
+        "status": "completo",
+        "description": "Trattato nel Capitolo 6 'FOCUS 6 - Le reazioni' (sez. 6.6-6.10): celle galvaniche, equazione di Nernst e corrosione. Manca la trattazione di batterie avanzate - lacuna marginale, argomento raramente richiesto nei corsi base."
+      },
+      {
+        "module_id": 10,
+        "module_name": "Chimica elementi principali",
+        "manual_coverage": 90,
+        "real_avg_coverage": 51.1,
+        "coverage_by_class": {
+          "L-13_Biologia": 60.0,
+          "L-25_Scienze_e_tecnologie_agrarie": 40.0,
+          "L-26_Scienze_e_tecnologie_alimentari": 40.0,
+          "L-27_Scienze_chimiche": 40.0,
+          "L-2_Biotecnologie": 40.0,
+          "L-32_Scienze_naturali_amb": 60.0,
+          "L-34_Geologia": 40.0,
+          "L-7-8-9_Ingegneria": 80.0,
+          "LM-13_Farmacia": 60.0
+        },
+        "is_core": false,
+        "contents_covered": 5,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Gruppi 1-2 (alcalini/terrosi)",
+            "matched_by": "Il gruppo 1: i metalli alcalini, Il gruppo 2: i metalli alcalino-terrosi",
+            "chapter": 8,
+            "score": 1.0
+          },
+          {
+            "content": "Gruppo 13-16 (boro, carbonio, azoto, ossigeno)",
+            "matched_by": "Il gruppo 13: la famiglia del boro, Il gruppo 14: la famiglia del carbonio, Il gruppo 15: la famiglia dell'azoto, Il gruppo 16: la famiglia dell'ossigeno",
+            "chapter": 8,
+            "score": 1.0
+          },
+          {
+            "content": "Alogeni (17), gas nobili (18)",
+            "matched_by": "Il gruppo 17: gli alogeni, Il gruppo 18: i gas nobili",
+            "chapter": 8,
+            "score": 1.0
+          },
+          {
+            "content": "Ossidi acidi/basei/anfoteri",
+            "matched_by": "Ossidi, alogenuri e nitruri del gruppo 13, Ossidi del carbonio e del silicio",
+            "chapter": 8,
+            "score": 1.0
+          },
+          {
+            "content": "Nomenclatura IUPAC composti",
+            "matched_by": "La nomenclatura di alcuni composti organici comuni",
+            "chapter": 0,
+            "score": 1.0
+          }
+        ],
+        "status": "completo",
+        "description": "Trattato nel Capitolo 8 'FOCUS 8 - I materiali' (sez. 8.1-8.5): gruppi degli elementi principali, nomenclatura e ossidi. Manca la trattazione di alcuni composti organici - lacuna marginale, argomento raramente richiesto nei corsi base."
+      },
+      {
+        "module_id": 11,
+        "module_name": "Tecniche analitiche e laboratorio",
+        "manual_coverage": 0,
+        "real_avg_coverage": 51.1,
+        "coverage_by_class": {
+          "L-13_Biologia": 60.0,
+          "L-25_Scienze_e_tecnologie_agrarie": 60.0,
+          "L-26_Scienze_e_tecnologie_alimentari": 40.0,
+          "L-27_Scienze_chimiche": 40.0,
+          "L-2_Biotecnologie": 60.0,
+          "L-32_Scienze_naturali_amb": 40.0,
+          "L-34_Geologia": 60.0,
+          "L-7-8-9_Ingegneria": 40.0,
+          "LM-13_Farmacia": 60.0
+        },
+        "is_core": false,
+        "contents_covered": 0,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Titolo soluzioni, standardizzazione",
+            "matched_by": null,
+            "score": 0
+          },
+          {
+            "content": "Gravimetria, volumetriche",
+            "matched_by": null,
+            "score": 0
+          },
+          {
+            "content": "Spettroscopia UV-Vis base",
+            "matched_by": null,
+            "score": 0
+          },
+          {
+            "content": "Cromatografia cartacea/TLC",
+            "matched_by": null,
+            "score": 0
+          },
+          {
+            "content": "Analisi qualitativa cationi/anionici",
+            "matched_by": null,
+            "score": 0
+          }
+        ],
+        "status": "carente",
+        "description": "Nessun contenuto trattato. Manca la trattazione di tecniche analitiche fondamentali - lacuna grave, argomento essenziale per la pratica di laboratorio."
+      },
+      {
+        "module_id": 12,
+        "module_name": "Sicurezza, sostenibilità e applicazioni",
+        "manual_coverage": 0,
+        "real_avg_coverage": 73.3,
+        "coverage_by_class": {
+          "L-13_Biologia": 60.0,
+          "L-25_Scienze_e_tecnologie_agrarie": 60.0,
+          "L-26_Scienze_e_tecnologie_alimentari": 80.0,
+          "L-27_Scienze_chimiche": 80.0,
+          "L-2_Biotecnologie": 80.0,
+          "L-32_Scienze_naturali_amb": 60.0,
+          "L-34_Geologia": 80.0,
+          "L-7-8-9_Ingegneria": 80.0,
+          "LM-13_Farmacia": 80.0
+        },
+        "is_core": true,
+        "contents_covered": 0,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "MSDS, DPI, norme sicurezza",
+            "matched_by": null,
+            "score": 0
+          },
+          {
+            "content": "Gestione rifiuti chimici",
+            "matched_by": null,
+            "score": 0
+          },
+          {
+            "content": "Green chemistry principi",
+            "matched_by": null,
+            "score": 0
+          },
+          {
+            "content": "Chimica industriale (Haber-Bosch, Claus)",
+            "matched_by": null,
+            "score": 0
+          },
+          {
+            "content": "Chimica atmosferica (ozono, acidi pioggia)",
+            "matched_by": null,
+            "score": 0
+          }
+        ],
+        "status": "carente",
+        "description": "Nessun contenuto trattato. Manca la trattazione di sicurezza e sostenibilità - lacuna grave, essenziale per la responsabilità ambientale e la sicurezza in laboratorio."
+      }
+    ],
+    "gaps": {
+      "missing_in_manual": [
+        {
+          "content": "Titolo soluzioni, standardizzazione",
+          "module": "Tecniche analitiche e laboratorio",
+          "is_core_module": false
+        },
+        {
+          "content": "Gravimetria, volumetriche",
+          "module": "Tecniche analitiche e laboratorio",
+          "is_core_module": false
+        },
+        {
+          "content": "Spettroscopia UV-Vis base",
+          "module": "Tecniche analitiche e laboratorio",
+          "is_core_module": false
+        },
+        {
+          "content": "Cromatografia cartacea/TLC",
+          "module": "Tecniche analitiche e laboratorio",
+          "is_core_module": false
+        },
+        {
+          "content": "Analisi qualitativa cationi/anionici",
+          "module": "Tecniche analitiche e laboratorio",
+          "is_core_module": false
+        },
+        {
+          "content": "MSDS, DPI, norme sicurezza",
+          "module": "Sicurezza, sostenibilità e applicazioni",
+          "is_core_module": true
+        },
+        {
+          "content": "Gestione rifiuti chimici",
+          "module": "Sicurezza, sostenibilità e applicazioni",
+          "is_core_module": true
+        },
+        {
+          "content": "Green chemistry principi",
+          "module": "Sicurezza, sostenibilità e applicazioni",
+          "is_core_module": true
+        },
+        {
+          "content": "Chimica industriale (Haber-Bosch, Claus)",
+          "module": "Sicurezza, sostenibilità e applicazioni",
+          "is_core_module": true
+        },
+        {
+          "content": "Chimica atmosferica (ozono, acidi pioggia)",
+          "module": "Sicurezza, sostenibilità e applicazioni",
+          "is_core_module": true
+        }
+      ],
+      "priority_gaps": [
+        {
+          "content": "MSDS, DPI, norme sicurezza",
+          "module": "Sicurezza, sostenibilità e applicazioni",
+          "is_core_module": true
+        },
+        {
+          "content": "Gestione rifiuti chimici",
+          "module": "Sicurezza, sostenibilità e applicazioni",
+          "is_core_module": true
+        },
+        {
+          "content": "Green chemistry principi",
+          "module": "Sicurezza, sostenibilità e applicazioni",
+          "is_core_module": true
+        },
+        {
+          "content": "Chimica industriale (Haber-Bosch, Claus)",
+          "module": "Sicurezza, sostenibilità e applicazioni",
+          "is_core_module": true
+        },
+        {
+          "content": "Chimica atmosferica (ozono, acidi pioggia)",
+          "module": "Sicurezza, sostenibilità e applicazioni",
+          "is_core_module": true
+        }
+      ]
+    },
+    "method": "llm",
+    "summary": "Manuale di livello intermedio, particolarmente forte sulla stechiometria e la termodinamica (copertura 90%). Punti di forza: chiarezza espositiva e ampia copertura degli argomenti fondamentali. Lacuna più critica: mancanza di contenuti sulle tecniche analitiche e sulla sicurezza. Target ideale: corsi di Chimica Generale per studenti di Scienze Naturali e Ingegneria.",
+    "narrative_generated": true,
+    "analysis_date": "2026-01-04T11:48:58.925054"
+  }
+}

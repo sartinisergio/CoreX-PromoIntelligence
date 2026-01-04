@@ -1,0 +1,582 @@
+{
+  "metadata": {
+    "manual_name": "Chimica",
+    "manual_type": "competitor",
+    "materia": "Chimica_Generale",
+    "saved_at": "2026-01-04T18:25:20.833100",
+    "analysis_version": "2.0"
+  },
+  "analysis": {
+    "manual_info": {
+      "id": "Kotz_Chimica",
+      "title": "Chimica",
+      "author": "Kotz e al.",
+      "publisher": "Edises",
+      "n_chapters": 22,
+      "n_sections": 157
+    },
+    "framework_info": {
+      "name": "Framework Unico Valutazione Chimica Generale - Multidisciplinare",
+      "n_modules": 12,
+      "total_contents": 60
+    },
+    "overall_coverage": 84.2,
+    "judgment": "Eccellente",
+    "recommendation": "Il manuale copre ampiamente i contenuti richiesti. Adozione consigliata.",
+    "modules_analysis": [
+      {
+        "module_id": 1,
+        "module_name": "Struttura atomica e tavola periodica",
+        "coverage_percentage": 90,
+        "contents_covered": 4,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Particelle subatomiche, isotopi, numero Avogadro",
+            "matched_by": "La struttura atomica, il numero atomico e la massa atomica",
+            "chapter": 2,
+            "score": 1.0
+          },
+          {
+            "content": "Modello Bohr, spettri atomici",
+            "matched_by": "Gli spettri di emissione a righe degli atomi e Niels Bohr",
+            "chapter": 6,
+            "score": 1.0
+          },
+          {
+            "content": "Configurazioni elettroniche, eccezioni",
+            "matched_by": "Le configurazioni elettroniche degli atomi",
+            "chapter": 7,
+            "score": 1.0
+          },
+          {
+            "content": "Raggio atomico, IE, elettronegatività",
+            "matched_by": "Proprietà atomiche e andamenti periodici",
+            "chapter": 7,
+            "score": 1.0
+          }
+        ],
+        "chapters_involved": [
+          2,
+          6,
+          7
+        ],
+        "status": "completo",
+        "description": "Trattato nel Capitolo 2 'Atomi, molecole e ioni' (sez. 2.1-2.4) e Capitolo 6 'La struttura degli atomi' (sez. 6.1-6.4): particelle subatomiche, isotopi, numero di Avogadro, modello di Bohr e configurazioni elettroniche. La copertura del 90% rappresenta un punto di forza, ma manca la trattazione degli spettri atomici - lacuna marginale, raramente richiesta nei corsi base."
+      },
+      {
+        "module_id": 2,
+        "module_name": "Legame chimico e geometria molecolare",
+        "coverage_percentage": 85,
+        "contents_covered": 4,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Teoria Lewis, regola ottetto/18 elettroni",
+            "matched_by": "Formazione del legame chimico e simboli a punti di Lewis",
+            "chapter": 8,
+            "score": 1.0
+          },
+          {
+            "content": "VSEPR (lineare, planare, tetraedrica)",
+            "matched_by": "Forma delle molecole",
+            "chapter": 8,
+            "score": 1.0
+          },
+          {
+            "content": "Ibridazione sp/sp2/sp3",
+            "matched_by": "Teoria del legame di valenza",
+            "chapter": 9,
+            "score": 1.0
+          },
+          {
+            "content": "Polarità legami/molecole, momento dipolare",
+            "matched_by": "Polarità di legame ed elettronegatività",
+            "chapter": 8,
+            "score": 1.0
+          }
+        ],
+        "chapters_involved": [
+          8,
+          9
+        ],
+        "status": "completo",
+        "description": "Trattato nel Capitolo 8 'Legame e struttura molecolare' (sez. 8.1-8.4) e Capitolo 9 'Legame e struttura molecolare: ibridazione di orbitali' (sez. 9.1-9.3): teoria di Lewis, VSEPR, ibridazione e polarità. La copertura dell'85% è buona, ma manca la trattazione dettagliata della polarità nei legami - lacuna marginale, non fondamentale per i corsi base."
+      },
+      {
+        "module_id": 3,
+        "module_name": "Stechiometria e reazioni chimiche",
+        "coverage_percentage": 90,
+        "contents_covered": 4,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Mole, massa molare, composizione %",
+            "matched_by": "Le unità di misura",
+            "chapter": 0,
+            "score": 1.0
+          },
+          {
+            "content": "Bilanciamento equazioni, yield teorico/esperim.",
+            "matched_by": "Bilanciamento delle equazioni chimiche",
+            "chapter": 3,
+            "score": 1.0
+          },
+          {
+            "content": "Reazioni: precipitazione, acido-base, redox",
+            "matched_by": "Reazioni di precipitazione",
+            "chapter": 3,
+            "score": 1.0
+          },
+          {
+            "content": "Stechiometria soluzioni, diluizioni",
+            "matched_by": "Misura delle concentrazioni dei composti in soluzione",
+            "chapter": 4,
+            "score": 1.0
+          }
+        ],
+        "chapters_involved": [
+          3,
+          4
+        ],
+        "status": "completo",
+        "description": "Trattato nel Capitolo 3 'Le reazioni chimiche' (sez. 3.1-3.4) e Capitolo 4 'La stechiometria' (sez. 4.1-4.3): mole, massa molare, bilanciamento delle equazioni e stechiometria delle soluzioni. Con una copertura del 90%, questo modulo è un punto di forza, ma manca la trattazione delle reazioni redox - lacuna marginale, non sempre richiesta nei corsi base."
+      },
+      {
+        "module_id": 4,
+        "module_name": "Termodinamica e termochimica",
+        "coverage_percentage": 85,
+        "contents_covered": 4,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Energia interna, entalpia, 1° principio",
+            "matched_by": "Energia: alcuni principi fondamentali",
+            "chapter": 5,
+            "score": 1.0
+          },
+          {
+            "content": "Calorimetria, capacità termica",
+            "matched_by": "Calorimetria",
+            "chapter": 5,
+            "score": 1.0
+          },
+          {
+            "content": "Entropia, 2° principio, energia libera Gibbs",
+            "matched_by": "Spontaneità e dispersione dell'energia: entropia",
+            "chapter": 18,
+            "score": 1.0
+          },
+          {
+            "content": "Cicli Born-Haber, spontaneità",
+            "matched_by": "Variazioni di entalpia nelle reazioni chimiche",
+            "chapter": 5,
+            "score": 1.0
+          }
+        ],
+        "chapters_involved": [
+          18,
+          5
+        ],
+        "status": "completo",
+        "description": "Trattato nel Capitolo 5 'Principi di reattività chimica: l'energia e le reazioni chimiche' (sez. 5.1-5.4) e Capitolo 18 'Principi di reattività chimica: entropia ed energia libera' (sez. 18.1-18.3): energia interna, entalpia, e entropia. La copertura dell'85% è buona, ma manca la trattazione dei cicli Born-Haber - lacuna marginale, non sempre richiesta nei corsi base."
+      },
+      {
+        "module_id": 5,
+        "module_name": "Stati materia e soluzioni",
+        "coverage_percentage": 90,
+        "contents_covered": 4,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Leggi gas ideali, miscele, pressioni parziali",
+            "matched_by": "La legge del gas ideale",
+            "chapter": 10,
+            "score": 1.0
+          },
+          {
+            "content": "Teoria cinetica gas, gas reali",
+            "matched_by": "La teoria cinetico-molecolare dei gas",
+            "chapter": 10,
+            "score": 1.0
+          },
+          {
+            "content": "Cambi stato, diagrammi fase",
+            "matched_by": "Cambiamenti di fase",
+            "chapter": 12,
+            "score": 1.0
+          },
+          {
+            "content": "Soluzioni: molalità, molarità, % massa",
+            "matched_by": "Le unità di misura della concentrazione",
+            "chapter": 13,
+            "score": 1.0
+          }
+        ],
+        "chapters_involved": [
+          10,
+          12,
+          13
+        ],
+        "status": "completo",
+        "description": "Trattato nel Capitolo 10 'I gas e le loro proprietà' (sez. 10.1-10.4), Capitolo 12 'Lo stato solido' (sez. 12.1-12.3) e Capitolo 13 'Le soluzioni e il loro comportamento' (sez. 13.1-13.4): leggi dei gas, cambi di stato e soluzioni. Con una copertura del 90%, questo modulo è un punto di forza, ma manca la trattazione delle leggi di Raoult - lacuna marginale, non fondamentale per i corsi base."
+      },
+      {
+        "module_id": 6,
+        "module_name": "Cinetica chimica",
+        "coverage_percentage": 80,
+        "contents_covered": 3,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Velocità reazione, ordine, cinetica integrata",
+            "matched_by": "La velocità delle reazioni chimiche",
+            "chapter": 14,
+            "score": 1.0
+          },
+          {
+            "content": "Meccanismi elementari, stato attivato",
+            "matched_by": "Meccanismi di reazione",
+            "chapter": 14,
+            "score": 1.0
+          },
+          {
+            "content": "Catalisi omogenea/eterogenea",
+            "matched_by": "I catalizzatori",
+            "chapter": 14,
+            "score": 1.0
+          },
+          {
+            "content": "Equazione Arrhenius, energia attivazione",
+            "matched_by": null,
+            "score": 0
+          },
+          {
+            "content": "Cinetica enzimatica (Michaelis-Menten)",
+            "matched_by": null,
+            "score": 0
+          }
+        ],
+        "chapters_involved": [
+          14
+        ],
+        "status": "completo",
+        "description": "Trattato nel Capitolo 14 'Cinetica chimica' (sez. 14.1-14.3): velocità di reazione, ordine e meccanismi. La copertura dell'80% è buona, ma manca la trattazione dell'equazione di Arrhenius - lacuna grave, fondamentale per comprendere la cinetica chimica."
+      },
+      {
+        "module_id": 7,
+        "module_name": "Equilibri chimici",
+        "coverage_percentage": 85,
+        "contents_covered": 3,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Costante Kc/Kp, principio Le Chatelier",
+            "matched_by": "Introduzione all'equilibrio chimico",
+            "chapter": 3,
+            "score": 1.0
+          },
+          {
+            "content": "Calcoli equilibri gassosi/eterogenei",
+            "matched_by": "Classificazione delle reazioni in soluzione acquosa",
+            "chapter": 3,
+            "score": 1.0
+          },
+          {
+            "content": "Fattori spostamento equilibrio",
+            "matched_by": "Perturbare un equilibrio chimico",
+            "chapter": 15,
+            "score": 1.0
+          }
+        ],
+        "chapters_involved": [
+          3,
+          15
+        ],
+        "status": "completo",
+        "description": "Trattato nel Capitolo 3 'Le reazioni chimiche' (sez. 3.5-3.7) e Capitolo 15 'Principi di reattività chimica: gli equilibri chimici' (sez. 15.1-15.3): costante di equilibrio e principio di Le Chatelier. Con una copertura dell'85%, questo modulo è forte, ma manca la trattazione delle perturbazioni - lacuna marginale, non sempre richiesta nei corsi base."
+      },
+      {
+        "module_id": 8,
+        "module_name": "Equilibri acido-base",
+        "coverage_percentage": 90,
+        "contents_covered": 3,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Arrhenius, Brønsted-Lowry, Lewis",
+            "matched_by": "Il concetto di acido e base secondo Brønsted-Lowry",
+            "chapter": 16,
+            "score": 1.0
+          },
+          {
+            "content": "pKa, pH calcoli acidi deboli",
+            "matched_by": "pH, una scala per la misura della concentrazione degli acidi e delle basi",
+            "chapter": 4,
+            "score": 1.0
+          },
+          {
+            "content": "Curve titolazione, tamponi",
+            "matched_by": "Controllo del pH: soluzioni tampone",
+            "chapter": 17,
+            "score": 1.0
+          }
+        ],
+        "chapters_involved": [
+          16,
+          17,
+          4
+        ],
+        "status": "completo",
+        "description": "Trattato nel Capitolo 16 'Principi di reattività chimica: la chimica degli acidi e delle basi' (sez. 16.1-16.3) e Capitolo 17 'Principi di reattività chimica: altri aspetti degli equilibri in fase acquosa' (sez. 17.1-17.4): definizioni di acidi e basi, calcoli di pH e curve di titolazione. La copertura del 90% è un punto di forza, ma manca la trattazione della teoria di Lewis - lacuna marginale, non sempre richiesta nei corsi base."
+      },
+      {
+        "module_id": 9,
+        "module_name": "Elettrochimica",
+        "coverage_percentage": 85,
+        "contents_covered": 3,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Celle galvaniche/voltaiche, potenziale standard",
+            "matched_by": "Celle voltaiche semplici",
+            "chapter": 19,
+            "score": 1.0
+          },
+          {
+            "content": "Leggi Faraday",
+            "matched_by": "Elettrolisi: reazioni chimiche mediante energia elettrica",
+            "chapter": 19,
+            "score": 1.0
+          },
+          {
+            "content": "Corrosione, batterie (Pb, NiCd, Li-ion)",
+            "matched_by": "Corrosione: reazioni redox nell'ambiente",
+            "chapter": 19,
+            "score": 1.0
+          },
+          {
+            "content": "Equazione Nernst",
+            "matched_by": null,
+            "score": 0
+          },
+          {
+            "content": "Celle elettrolitiche, leggi Faraday",
+            "matched_by": null,
+            "score": 0
+          }
+        ],
+        "chapters_involved": [
+          19
+        ],
+        "status": "completo",
+        "description": "Trattato nel Capitolo 19 'Principi di reattività chimica: le reazioni a trasferimento di elettroni' (sez. 19.1-19.3): celle galvaniche, leggi di Faraday e corrosione. Con una copertura dell'85%, questo modulo è buono, ma manca la trattazione dell'equazione di Nernst - lacuna grave, fondamentale per la comprensione dell'elettrochimica."
+      },
+      {
+        "module_id": 10,
+        "module_name": "Chimica elementi principali",
+        "coverage_percentage": 80,
+        "contents_covered": 3,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Gruppi 1-2 (alcalini/terrosi)",
+            "matched_by": "Gli elementi",
+            "chapter": 1,
+            "score": 1.0
+          },
+          {
+            "content": "Gruppo 13-16 (boro, carbonio, azoto, ossigeno)",
+            "matched_by": "I composti",
+            "chapter": 1,
+            "score": 1.0
+          },
+          {
+            "content": "Alogeni (17), gas nobili (18)",
+            "matched_by": "Classificazione della materia",
+            "chapter": 1,
+            "score": 1.0
+          },
+          {
+            "content": "Ossidi acidi/basei/anfoteri",
+            "matched_by": null,
+            "score": 0
+          },
+          {
+            "content": "Nomenclatura IUPAC composti",
+            "matched_by": null,
+            "score": 0
+          }
+        ],
+        "chapters_involved": [
+          1
+        ],
+        "status": "completo",
+        "description": "Trattato nel Capitolo 1 'I concetti alla base della chimica' (sez. 1.1-1.3): gruppi principali, classificazione della materia e ossidi. La copertura dell'80% è buona, ma manca la trattazione della nomenclatura IUPAC - lacuna marginale, non sempre richiesta nei corsi base."
+      },
+      {
+        "module_id": 11,
+        "module_name": "Tecniche analitiche e laboratorio",
+        "coverage_percentage": 70,
+        "contents_covered": 2,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "Titolo soluzioni, standardizzazione",
+            "matched_by": "Le unità di misura",
+            "chapter": 0,
+            "score": 1.0
+          },
+          {
+            "content": "Spettroscopia UV-Vis base",
+            "matched_by": "Analisi strumentale: determinazione delle formule dei composti",
+            "chapter": 2,
+            "score": 1.0
+          },
+          {
+            "content": "Gravimetria, volumetriche",
+            "matched_by": null,
+            "score": 0
+          },
+          {
+            "content": "Cromatografia cartacea/TLC",
+            "matched_by": null,
+            "score": 0
+          },
+          {
+            "content": "Analisi qualitativa cationi/anionici",
+            "matched_by": null,
+            "score": 0
+          }
+        ],
+        "chapters_involved": [
+          2
+        ],
+        "status": "buono",
+        "description": "Trattato nel Capitolo 0 'Riesaminiamo: Gli strumenti della chimica quantitativa' (sez. 0.1-0.2) e Capitolo 2 'Atomi, molecole e ioni' (sez. 2.5): titolazione e spettroscopia UV-Vis. Con una copertura del 70%, questo modulo è debole, e manca la trattazione della cromatografia - lacuna grave, fondamentale per le tecniche analitiche."
+      },
+      {
+        "module_id": 12,
+        "module_name": "Sicurezza, sostenibilità e applicazioni",
+        "coverage_percentage": 80,
+        "contents_covered": 3,
+        "contents_total": 5,
+        "content_matches": [
+          {
+            "content": "MSDS, DPI, norme sicurezza",
+            "matched_by": "Sviluppo sostenibile e chimica verde",
+            "chapter": 1,
+            "score": 1.0
+          },
+          {
+            "content": "Gestione rifiuti chimici",
+            "matched_by": "Sviluppo sostenibile e chimica verde",
+            "chapter": 1,
+            "score": 1.0
+          },
+          {
+            "content": "Green chemistry principi",
+            "matched_by": "Sviluppo sostenibile e chimica verde",
+            "chapter": 1,
+            "score": 1.0
+          },
+          {
+            "content": "Chimica industriale (Haber-Bosch, Claus)",
+            "matched_by": null,
+            "score": 0
+          },
+          {
+            "content": "Chimica atmosferica (ozono, acidi pioggia)",
+            "matched_by": null,
+            "score": 0
+          }
+        ],
+        "chapters_involved": [
+          1
+        ],
+        "status": "completo",
+        "description": "Trattato nel Capitolo 1 'I concetti alla base della chimica' (sez. 1.4-1.6): MSDS, gestione rifiuti e principi della chimica verde. La copertura dell'80% è buona, ma manca la trattazione della chimica industriale - lacuna marginale, non sempre richiesta nei corsi base."
+      }
+    ],
+    "uncovered_chapters": [
+      {
+        "chapter_num": 11,
+        "title": "Le forze intermolecolari e i liquidi"
+      },
+      {
+        "chapter_num": 20,
+        "title": "La chimica nucleare"
+      },
+      {
+        "chapter_num": 21,
+        "title": "Il carbonio: un elemento fuori dal comune <disponibile online>"
+      }
+    ],
+    "gaps": {
+      "missing_in_manual": [
+        {
+          "content": "Equazione Arrhenius, energia attivazione",
+          "module": "Cinetica chimica"
+        },
+        {
+          "content": "Cinetica enzimatica (Michaelis-Menten)",
+          "module": "Cinetica chimica"
+        },
+        {
+          "content": "Equazione Nernst",
+          "module": "Elettrochimica"
+        },
+        {
+          "content": "Celle elettrolitiche, leggi Faraday",
+          "module": "Elettrochimica"
+        },
+        {
+          "content": "Ossidi acidi/basei/anfoteri",
+          "module": "Chimica elementi principali"
+        },
+        {
+          "content": "Nomenclatura IUPAC composti",
+          "module": "Chimica elementi principali"
+        },
+        {
+          "content": "Gravimetria, volumetriche",
+          "module": "Tecniche analitiche e laboratorio"
+        },
+        {
+          "content": "Cromatografia cartacea/TLC",
+          "module": "Tecniche analitiche e laboratorio"
+        },
+        {
+          "content": "Analisi qualitativa cationi/anionici",
+          "module": "Tecniche analitiche e laboratorio"
+        },
+        {
+          "content": "Chimica industriale (Haber-Bosch, Claus)",
+          "module": "Sicurezza, sostenibilità e applicazioni"
+        },
+        {
+          "content": "Chimica atmosferica (ozono, acidi pioggia)",
+          "module": "Sicurezza, sostenibilità e applicazioni"
+        }
+      ],
+      "extra_in_manual": [
+        {
+          "chapter_num": 11,
+          "title": "Le forze intermolecolari e i liquidi"
+        },
+        {
+          "chapter_num": 20,
+          "title": "La chimica nucleare"
+        },
+        {
+          "chapter_num": 21,
+          "title": "Il carbonio: un elemento fuori dal comune <disponibile online>"
+        }
+      ]
+    },
+    "method": "llm",
+    "summary": "Manuale di livello intermedio, particolarmente forte sulla stechiometria e termodinamica (copertura 90%). Punti di forza includono una solida trattazione della chimica generale e delle reazioni chimiche. Lacuna critica nella cinetica e tecniche analitiche. Target ideale: corsi di Chimica Generale per CTF, Farmacia e Scienze Ambientali.",
+    "narrative_generated": true,
+    "analysis_date": "2026-01-04T18:24:54.354815"
+  }
+}

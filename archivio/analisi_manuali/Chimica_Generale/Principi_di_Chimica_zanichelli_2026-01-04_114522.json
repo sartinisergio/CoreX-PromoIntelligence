@@ -3,7 +3,7 @@
     "manual_name": "Principi di Chimica",
     "manual_type": "zanichelli",
     "materia": "Chimica_Generale",
-    "saved_at": "2026-01-03T17:18:25.008704",
+    "saved_at": "2026-01-04T11:45:22.495779",
     "analysis_version": "2.0"
   },
   "analysis": {
@@ -20,7 +20,7 @@
       "n_modules": 12,
       "total_contents": 60
     },
-    "overall_coverage": 72.5,
+    "overall_coverage": 70.0,
     "judgment": "Buono",
     "recommendation": "Il manuale copre la maggior parte dei contenuti con alcune lacune. Adozione con integrazioni.",
     "modules_analysis": [
@@ -57,7 +57,7 @@
           },
           {
             "content": "Raggio atomico, IE, elettronegatività",
-            "matched_by": "L'elettronegatività",
+            "matched_by": "Il raggio atomico, L'energia di ionizzazione, L'elettronegatività",
             "chapter": 1,
             "score": 1.0
           }
@@ -66,7 +66,7 @@
           1
         ],
         "status": "completo",
-        "description": "Il modulo 'Struttura atomica e tavola periodica' è trattato nel Capitolo 2 del manuale. Non ci sono lacune significative."
+        "description": "Trattato nel Capitolo 1 'FOCUS 1 - Gli atomi' (sez. 1.1-1.5): particelle subatomiche, isotopi, modello Bohr, numeri quantici e configurazioni elettroniche. Manca la trattazione degli spettri atomici - lacuna marginale, argomento raramente richiesto nei corsi base di Chimica Generale."
       },
       {
         "module_id": 2,
@@ -101,16 +101,17 @@
           },
           {
             "content": "Legami metallici, energia reticolare",
-            "matched_by": "La forza dei legami",
-            "chapter": 2,
+            "matched_by": "I solidi metallici",
+            "chapter": 3,
             "score": 1.0
           }
         ],
         "chapters_involved": [
-          2
+          2,
+          3
         ],
         "status": "completo",
-        "description": "Il modulo 'Legame chimico e geometria molecolare' è presente nel Capitolo 3. Non ci sono lacune significative."
+        "description": "Trattato nel Capitolo 2 'FOCUS 2 - I legami tra gli atomi' (sez. 2.1-2.5): teoria di Lewis, modello VSEPR, ibridazione, polarità dei legami e legami metallici. Manca la trattazione delle forze intermolecolari - lacuna marginale, argomento avanzato non sempre necessario nei corsi base."
       },
       {
         "module_id": 3,
@@ -145,14 +146,14 @@
           },
           {
             "content": "Numeri ossidazione, bilanciamento redox",
-            "matched_by": "I numeri di ossidazione",
+            "matched_by": "I numeri di ossidazione, Il bilanciamento delle equazioni redox semplici",
             "chapter": 0,
             "score": 1.0
           }
         ],
         "chapters_involved": [],
         "status": "completo",
-        "description": "Il modulo 'Stechiometria e reazioni chimiche' è affrontato nel Capitolo 4. Non ci sono lacune significative."
+        "description": "Trattato nel Capitolo 0 'FONDAMENTI - Introduzione e orientamento' (sez. 0.1-0.5): mole, massa molare, bilanciamento delle equazioni e reazioni chimiche. Copertura alta (90%) e punto di forza per la comprensione delle basi della chimica."
       },
       {
         "module_id": 4,
@@ -175,7 +176,7 @@
           },
           {
             "content": "Legge Hess, entalpie formazione",
-            "matched_by": "L'entalpia standard di reazione, La legge di Hess",
+            "matched_by": "La legge di Hess, L'entalpia standard di formazione",
             "chapter": 4,
             "score": 1.0
           },
@@ -196,18 +197,18 @@
           4
         ],
         "status": "completo",
-        "description": "Il modulo 'Termodinamica e termochimica' si trova nel Capitolo 5. Non ci sono lacune significative."
+        "description": "Trattato nel Capitolo 4 'FOCUS 4 - La termodinamica' (sez. 4.1-4.5): energia interna, entalpia, legge di Hess, entropia e spontaneità. Manca la trattazione delle applicazioni pratiche della termodinamica - lacuna marginale, argomento specialistico non sempre richiesto."
       },
       {
         "module_id": 5,
         "module_name": "Stati materia e soluzioni",
-        "coverage_percentage": 90,
+        "coverage_percentage": 80,
         "contents_covered": 5,
         "contents_total": 5,
         "content_matches": [
           {
             "content": "Leggi gas ideali, miscele, pressioni parziali",
-            "matched_by": "I gas e la pressione, Le leggi dei gas in azione",
+            "matched_by": "I gas e la pressione, La legge combinata dei gas",
             "chapter": 3,
             "score": 1.0
           },
@@ -241,18 +242,18 @@
           5
         ],
         "status": "completo",
-        "description": "Il modulo 'Stati materia e soluzioni' è trattato nel Capitolo 6. Non ci sono lacune significative."
+        "description": "Trattato nel Capitolo 3 'FOCUS 3 - Gli stati della materia' (sez. 3.1-3.5) e Capitolo 5 'FOCUS 5 - L'equilibrio' (sez. 5.1-5.5): leggi dei gas, teoria cinetica, cambi di stato e proprietà colligative. Manca la trattazione delle soluzioni non ideali - lacuna marginale, argomento avanzato per corsi specialistici."
       },
       {
         "module_id": 6,
         "module_name": "Cinetica chimica",
-        "coverage_percentage": 80,
+        "coverage_percentage": 75,
         "contents_covered": 5,
         "contents_total": 5,
         "content_matches": [
           {
             "content": "Velocità reazione, ordine, cinetica integrata",
-            "matched_by": "La velocità istantanea di reazione, Le leggi cinetiche e l'ordine di reazione",
+            "matched_by": "La velocità istantanea di reazione",
             "chapter": 7,
             "score": 1.0
           },
@@ -284,13 +285,13 @@
         "chapters_involved": [
           7
         ],
-        "status": "completo",
-        "description": "Il modulo 'Cinetica chimica' è presente nel Capitolo 7. Non ci sono lacune significative."
+        "status": "buono",
+        "description": "Trattato nel Capitolo 7 'FOCUS 7 - La cinetica' (sez. 7.1-7.5): velocità di reazione, equazione di Arrhenius e catalisi. Manca la trattazione della cinetica avanzata - lacuna grave, fondamentale per corsi di chimica applicata."
       },
       {
         "module_id": 7,
         "module_name": "Equilibri chimici",
-        "coverage_percentage": 85,
+        "coverage_percentage": 80,
         "contents_covered": 5,
         "contents_total": 5,
         "content_matches": [
@@ -302,7 +303,7 @@
           },
           {
             "content": "Calcoli equilibri gassosi/eterogenei",
-            "matched_by": "Calcoli con le costanti di equilibrio",
+            "matched_by": "Calcoli relativi agli equilibri",
             "chapter": 5,
             "score": 1.0
           },
@@ -314,13 +315,13 @@
           },
           {
             "content": "Equilibri multipli, approssimazioni",
-            "matched_by": "La risposta dei sistemi all'equilibrio alla variazione delle condizioni",
+            "matched_by": "Calcoli relativi agli equilibri",
             "chapter": 5,
             "score": 1.0
           },
           {
             "content": "Q vs K",
-            "matched_by": "L'equilibrio e la legge dell'azione di massa",
+            "matched_by": "La reversibilità delle reazioni",
             "chapter": 5,
             "score": 1.0
           }
@@ -329,12 +330,12 @@
           5
         ],
         "status": "completo",
-        "description": "Il modulo 'Equilibri chimici' è discusso nel Capitolo 8. Non ci sono lacune significative."
+        "description": "Trattato nel Capitolo 5 'FOCUS 5 - L'equilibrio' (sez. 5.1-5.5): costante di equilibrio, principio di Le Chatelier e calcoli di equilibrio. Manca la trattazione degli equilibri acido-base - lacuna marginale, utile per corsi avanzati."
       },
       {
         "module_id": 8,
         "module_name": "Equilibri acido-base",
-        "coverage_percentage": 90,
+        "coverage_percentage": 85,
         "contents_covered": 5,
         "contents_total": 5,
         "content_matches": [
@@ -373,18 +374,18 @@
           6
         ],
         "status": "completo",
-        "description": "Il modulo 'Equilibri acido-base' è trattato nel Capitolo 9. Non ci sono lacune significative."
+        "description": "Trattato nel Capitolo 6 'FOCUS 6 - Le reazioni' (sez. 6.1-6.5): definizioni di acidi e basi, calcoli di pH e curve di titolazione. Manca la trattazione delle applicazioni pratiche - lacuna marginale, non sempre richiesta nei corsi base."
       },
       {
         "module_id": 9,
         "module_name": "Elettrochimica",
-        "coverage_percentage": 85,
+        "coverage_percentage": 80,
         "contents_covered": 5,
         "contents_total": 5,
         "content_matches": [
           {
             "content": "Celle galvaniche/voltaiche, potenziale standard",
-            "matched_by": "La struttura delle celle galvaniche",
+            "matched_by": "La struttura delle celle galvaniche, Il potenziale di cella e l'energia libera di reazione",
             "chapter": 6,
             "score": 1.0
           },
@@ -417,7 +418,7 @@
           6
         ],
         "status": "completo",
-        "description": "Il modulo 'Elettrochimica' è presente nel Capitolo 10. Non ci sono lacune significative."
+        "description": "Trattato nel Capitolo 6 'FOCUS 6 - Le reazioni' (sez. 6.1-6.5): celle galvaniche, equazione di Nernst e corrosione. Manca la trattazione di elettrochimica avanzata - lacuna marginale, argomento specialistico non sempre richiesto."
       },
       {
         "module_id": 10,
@@ -428,19 +429,19 @@
         "content_matches": [
           {
             "content": "Gruppi 1-2 (alcalini/terrosi)",
-            "matched_by": "Il gruppo 1: i metalli alcalini, Il gruppo 2: i metalli alcalino-terrosi",
+            "matched_by": "Gli elementi del gruppo 1, Gli elementi del gruppo 2",
             "chapter": 8,
             "score": 1.0
           },
           {
             "content": "Gruppo 13-16 (boro, carbonio, azoto, ossigeno)",
-            "matched_by": "Il gruppo 13: la famiglia del boro, Il gruppo 14: la famiglia del carbonio, Il gruppo 15: la famiglia dell'azoto, Il gruppo 16: la famiglia dell'ossigeno",
+            "matched_by": "Gli elementi del gruppo 13, Gli elementi del gruppo 14, Gli elementi del gruppo 15, Gli elementi del gruppo 16",
             "chapter": 8,
             "score": 1.0
           },
           {
             "content": "Alogeni (17), gas nobili (18)",
-            "matched_by": "Il gruppo 17: gli alogeni, Il gruppo 18: i gas nobili",
+            "matched_by": "Gli elementi del gruppo 17, Gli elementi del gruppo 18",
             "chapter": 8,
             "score": 1.0
           },
@@ -461,7 +462,7 @@
           8
         ],
         "status": "completo",
-        "description": "Il modulo 'Chimica elementi principali' è trattato nel Capitolo 11. Non ci sono lacune significative."
+        "description": "Trattato nel Capitolo 8 'FOCUS 8 - I materiali' (sez. 8.1-8.4): gruppi di elementi, ossidi e nomenclatura IUPAC. Manca la trattazione di chimica organica - lacuna marginale, utile per corsi avanzati."
       },
       {
         "module_id": 11,
@@ -498,7 +499,7 @@
         ],
         "chapters_involved": [],
         "status": "carente",
-        "description": "Il modulo 'Tecniche analitiche e laboratorio' è discusso nel Capitolo 12, ma presenta lacune significative riguardanti tecniche fondamentali di analisi."
+        "description": "Nessun contenuto trattato. Manca la trattazione di tecniche analitiche fondamentali - lacuna grave, essenziale per corsi di laboratorio."
       },
       {
         "module_id": 12,
@@ -535,7 +536,7 @@
         ],
         "chapters_involved": [],
         "status": "carente",
-        "description": "Il modulo 'Sicurezza, sostenibilità e applicazioni' è trattato nel Capitolo 13, ma presenta lacune significative su temi cruciali come la sicurezza e la chimica verde."
+        "description": "Nessun contenuto trattato. Manca la trattazione di sicurezza e sostenibilità - lacuna grave, fondamentale per la responsabilità ambientale in chimica."
       }
     ],
     "uncovered_chapters": [
@@ -651,8 +652,8 @@
       ]
     },
     "method": "llm",
-    "summary": "Il manuale 'Principi di Chimica' offre una copertura solida della maggior parte degli argomenti fondamentali della chimica generale, con un'ottima copertura nei moduli principali. Tuttavia, ci sono lacune significative nei moduli riguardanti le tecniche analitiche e la sicurezza, che potrebbero compromettere la preparazione completa degli studenti.",
+    "summary": "Manuale di livello intermedio, particolarmente forte sulla stechiometria e termodinamica (copertura 90%). Punti di forza includono la chiarezza espositiva e l'approccio pratico. Lacuna più critica: tecniche analitiche e sicurezza, essenziali per corsi di laboratorio. Target ideale: corsi di Chimica Generale per CTF e Farmacia.",
     "narrative_generated": true,
-    "analysis_date": "2026-01-03T17:18:05.044617"
+    "analysis_date": "2026-01-04T11:44:57.433534"
   }
 }

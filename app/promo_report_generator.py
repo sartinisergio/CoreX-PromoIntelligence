@@ -1,6 +1,7 @@
 """
-CoreX PromoIntelligence - Generatore Report Promozione v2.3
+CoreX PromoIntelligence - Generatore Report Promozione v3.0
 Due modalità: ZANICHELLI (promuovere) e COMPETITOR (attaccare)
+Con Executive Summary generato da LLM
 """
 
 from datetime import datetime
@@ -336,9 +337,34 @@ class PromoReportGenerator:
         classificazione_classi = self._classifica_classi()
         
         if self.tipo_analisi == "zanichelli":
-            return self._genera_report_zanichelli(punti_forza, gap, classificazione_classi)
+            report = self._genera_report_zanichelli(punti_forza, gap, classificazione_classi)
         else:
-            return self._genera_report_competitor(punti_forza, gap, classificazione_classi)
+            report = self._genera_report_competitor(punti_forza, gap, classificazione_classi)
+        
+        # ============================================================
+        # NUOVO: Genera Executive Summary con LLM
+        # ============================================================
+        try:
+            from app.promo_narrative_generator import generate_executive_summary_for_report
+            
+            exec_summary = generate_executive_summary_for_report(
+                punti_forza=punti_forza,
+                gap=gap,
+                classificazione_classi=classificazione_classi,
+                nome_manuale=self.nome_manuale,
+                autore_manuale=self.autore_manuale,
+                editore=self.editore,
+                materia=self.materia,
+                copertura_globale=self.copertura_globale,
+                tipo_analisi=self.tipo_analisi
+            )
+            report["executive_summary"] = exec_summary
+        except Exception as e:
+            print(f"Executive summary non generato: {e}")
+            report["executive_summary"] = {"text": "", "generated_by_llm": False}
+        # ============================================================
+        
+        return report
 
     def _genera_report_zanichelli(self, punti_forza, gap, classificazione_classi) -> Dict[str, Any]:
         """Report per promuovere un manuale Zanichelli."""
@@ -377,7 +403,7 @@ class PromoReportGenerator:
                 "data_analisi": datetime.now().isoformat(),
                 "copertura_globale": round(self.copertura_globale, 1),
                 "giudizio": self._calcola_giudizio(self.copertura_globale),
-                "versione_report": "2.3"
+                "versione_report": "3.0"
             },
             
             "quick_card": {
@@ -483,7 +509,7 @@ class PromoReportGenerator:
                 "data_analisi": datetime.now().isoformat(),
                 "copertura_globale": round(self.copertura_globale, 1),
                 "giudizio": self._calcola_giudizio(self.copertura_globale),
-                "versione_report": "2.3"
+                "versione_report": "3.0"
             },
             
             "quick_card": {
@@ -570,8 +596,6 @@ class PromoReportGenerator:
             "n_moduli_core": len(self.moduli_core),
             "n_classi_analizzate": len(self.copertura_classi)
         }
-
-
 # =============================================================================
 # GENERAZIONE HTML
 # =============================================================================
@@ -626,6 +650,29 @@ def _genera_html_zanichelli(report: Dict[str, Any]) -> str:
         .giudizio-buono {{ background: #dcedc8; color: #558b2f; }}
         .giudizio-sufficiente {{ background: #fff3e0; color: #e65100; }}
         .giudizio-insufficiente {{ background: #ffcdd2; color: #c62828; }}
+        
+        .executive-summary {{
+            background: linear-gradient(135deg, #e3f2fd, #ffffff); 
+            padding: 25px 30px; 
+            border-radius: 12px; 
+            margin: 25px 0; 
+            border-left: 5px solid #1976d2; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }}
+        .executive-summary h2 {{
+            margin-top: 0; 
+            color: #1565c0; 
+            font-size: 1.3em;
+            border: none;
+            padding-left: 0;
+        }}
+        .executive-summary p {{
+            margin: 0; 
+            line-height: 1.8; 
+            font-size: 1.05em; 
+            color: #333; 
+            text-align: justify;
+        }}
         
         .quick-card {{
             display: grid; grid-template-columns: 160px 1fr; gap: 10px 20px;
@@ -693,7 +740,26 @@ def _genera_html_zanichelli(report: Dict[str, Any]) -> str:
         <strong>Copertura globale:</strong> {report['metadata']['copertura_globale']}%
         <span class="giudizio giudizio-{giudizio_class}">{report['metadata']['giudizio']}</span>
     </div>
+"""
     
+    # ============================================================
+    # NUOVO: Executive Summary
+    # ============================================================
+    exec_summary = report.get('executive_summary', {})
+    if exec_summary and exec_summary.get('text'):
+        badge_html = ""
+        if not exec_summary.get('generated_by_llm', False):
+            badge_html = '<span style="font-size: 0.75em; background: #fff3e0; color: #e65100; padding: 2px 8px; border-radius: 10px; margin-left: 10px;">Generato automaticamente</span>'
+        
+        html += f"""
+    <div class="executive-summary">
+        <h2>📋 Executive Summary {badge_html}</h2>
+        <p>{exec_summary.get('text', '')}</p>
+    </div>
+"""
+    # ============================================================
+    
+    html += f"""
     <h2>⚡ {report['quick_card']['titolo']}</h2>
     <dl class="quick-card">
         <dt>Target primario</dt>
@@ -808,8 +874,6 @@ def _genera_html_zanichelli(report: Dict[str, Any]) -> str:
 </html>
 """
     return html
-
-
 def _genera_html_competitor(report: Dict[str, Any]) -> str:
     """HTML per report Competitor."""
     
@@ -853,6 +917,29 @@ def _genera_html_competitor(report: Dict[str, Any]) -> str:
         .giudizio-sufficiente {{ background: #fff3e0; color: #e65100; }}
         .giudizio-insufficiente {{ background: #ffcdd2; color: #c62828; }}
         
+        .executive-summary {{
+            background: linear-gradient(135deg, #fff3e0, #ffffff); 
+            padding: 25px 30px; 
+            border-radius: 12px; 
+            margin: 25px 0; 
+            border-left: 5px solid #e65100; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }}
+        .executive-summary h2 {{
+            margin-top: 0; 
+            color: #e65100; 
+            font-size: 1.3em;
+            border: none;
+            padding-left: 0;
+        }}
+        .executive-summary p {{
+            margin: 0; 
+            line-height: 1.8; 
+            font-size: 1.05em; 
+            color: #333; 
+            text-align: justify;
+        }}
+        
         .quick-card {{
             display: grid; grid-template-columns: 180px 1fr; gap: 10px 20px;
             background: #fafafa; padding: 20px; border-radius: 10px; border-left: 4px solid #e65100;
@@ -893,18 +980,6 @@ def _genera_html_competitor(report: Dict[str, Any]) -> str:
         
         .section-desc {{ color: #666; font-style: italic; margin-bottom: 15px; }}
         
-        .opportunita-box {{
-            background: #e8f5e9; border: 2px solid #4caf50; border-radius: 10px;
-            padding: 15px; margin: 20px 0;
-        }}
-        .opportunita-box h3 {{ color: #2e7d32; margin-top: 0; }}
-        
-        .warning-box {{
-            background: #ffebee; border: 2px solid #f44336; border-radius: 10px;
-            padding: 15px; margin: 20px 0;
-        }}
-        .warning-box h3 {{ color: #c62828; margin-top: 0; }}
-        
         details {{ margin: 20px 0; padding: 15px; background: #fafafa; border-radius: 8px; }}
         summary {{ cursor: pointer; font-weight: 600; color: #e65100; }}
         
@@ -929,90 +1004,103 @@ def _genera_html_competitor(report: Dict[str, Any]) -> str:
         {f" — {report['metadata']['autore']}" if report['metadata']['autore'] else ""}
         ({report['metadata']['editore']})<br>
         <strong>Materia:</strong> {report['metadata']['materia']}<br>
-        <strong>Copertura globale competitor:</strong> {report['metadata']['copertura_globale']}%
+        <strong>Copertura globale:</strong> {report['metadata']['copertura_globale']}%
         <span class="giudizio giudizio-{giudizio_class}">{report['metadata']['giudizio']}</span>
     </div>
+"""
     
+    # ============================================================
+    # NUOVO: Executive Summary
+    # ============================================================
+    exec_summary = report.get('executive_summary', {})
+    if exec_summary and exec_summary.get('text'):
+        badge_html = ""
+        if not exec_summary.get('generated_by_llm', False):
+            badge_html = '<span style="font-size: 0.75em; background: #fff3e0; color: #e65100; padding: 2px 8px; border-radius: 10px; margin-left: 10px;">Generato automaticamente</span>'
+        
+        html += f"""
+    <div class="executive-summary">
+        <h2>📋 Executive Summary {badge_html}</h2>
+        <p>{exec_summary.get('text', '')}</p>
+    </div>
+"""
+    # ============================================================
+    
+    html += f"""
     <h2>⚡ {report['quick_card']['titolo']}</h2>
     <dl class="quick-card">
         <dt>Classi vulnerabili</dt>
-        <dd><strong style="color:#2e7d32;">{', '.join(report['quick_card']['classi_vulnerabili']) or 'Nessuna'}</strong></dd>
+        <dd>{', '.join(report['quick_card']['classi_vulnerabili']) or 'Nessuna identificata'}</dd>
         <dt>Classi contendibili</dt>
-        <dd>{', '.join(report['quick_card']['classi_contendibili']) or 'Nessuna'}</dd>
+        <dd>{', '.join(report['quick_card']['classi_contendibili']) or 'Nessuna identificata'}</dd>
         <dt>Classi dove è forte</dt>
-        <dd><span style="color:#c62828;">{', '.join(report['quick_card']['classi_forte']) or 'Nessuna'}</span></dd>
+        <dd>{', '.join(report['quick_card']['classi_forte']) or 'Nessuna'}</dd>
         <dt>Posizionamento</dt>
         <dd>{report['quick_card']['posizionamento']}</dd>
         <dt>Sintesi</dt>
         <dd>{report['quick_card']['sintesi']}</dd>
     </dl>
-"""
     
-    # Vulnerabilità
-    html += f"""
-    <div class="opportunita-box">
-        <h3>🎯 {report['vulnerabilita']['titolo']}</h3>
-        <p class="section-desc">{report['vulnerabilita']['descrizione']}</p>
+    <h2>🎯 {report['vulnerabilita']['titolo']}</h2>
+    <p class="section-desc">{report['vulnerabilita']['descrizione']}</p>
 """
     
     if report['vulnerabilita']['items']:
         html += """
-        <table>
-            <thead><tr><th>Modulo</th><th>Copertura Competitor</th><th>Richiesta</th><th>Gap</th><th>Opportunità</th><th>Classi Target</th></tr></thead>
-            <tbody>
+    <table>
+        <thead><tr><th>Modulo</th><th>Copertura Competitor</th><th>Richiesta media</th><th>Opportunità</th><th>Classi target</th></tr></thead>
+        <tbody>
 """
         for v in report['vulnerabilita']['items']:
-            opp_class = {'ALTA': 'tag-alta', 'MEDIA': 'tag-media', 'BASSA': 'tag-bassa'}.get(v['opportunita'], '')
             core_badge = '<span class="tag tag-core">CORE</span>' if v['is_core'] else ''
-            classi_str = ", ".join([c['classe'] for c in v['classi_target'][:3]])
+            opp_class = {'ALTA': 'tag-alta', 'MEDIA': 'tag-media', 'BASSA': 'tag-bassa'}.get(v['opportunita'], 'tag-media')
+            classi_str = ", ".join([f"{c['classe']}" for c in v['classi_target'][:3]])
             html += f"""
             <tr>
                 <td><strong>{v['modulo']}</strong> {core_badge}</td>
                 <td><span class="tag tag-gap">{v['copertura_competitor']}%</span></td>
                 <td>{v['richiesta_media']}%</td>
-                <td>-{v['gap']}%</td>
                 <td><span class="tag {opp_class}">{v['opportunita']}</span></td>
                 <td>{classi_str}</td>
             </tr>
 """
         html += "</tbody></table>"
     else:
-        html += "<p>⚠️ Nessuna vulnerabilità significativa rilevata</p>"
+        html += "<p>Nessuna vulnerabilità significativa identificata</p>"
     
-    html += "</div>"
-    
-    # Punti di forza competitor
+    # Punti forza competitor
     html += f"""
-    <div class="warning-box">
-        <h3>🛡️ {report['punti_forza_competitor']['titolo']}</h3>
-        <p class="section-desc">{report['punti_forza_competitor']['descrizione']}</p>
+    <h2>🛡️ {report['punti_forza_competitor']['titolo']}</h2>
+    <p class="section-desc">{report['punti_forza_competitor']['descrizione']}</p>
 """
     
     if report['punti_forza_competitor']['items']:
         html += """
-        <table>
-            <thead><tr><th>Modulo</th><th>Copertura Competitor</th><th>Media Classi</th><th>Note</th></tr></thead>
-            <tbody>
+    <table>
+        <thead><tr><th>Modulo</th><th>Copertura Competitor</th><th>Media Classi</th><th>Note</th></tr></thead>
+        <tbody>
 """
-        for pf in report['punti_forza_competitor']['items'][:5]:
+        for pf in report['punti_forza_competitor']['items']:
             core_badge = '<span class="tag tag-core">CORE</span>' if pf['is_core'] else ''
+            vantaggio_badge = {
+                'sopra_media': '<span class="tag tag-ok">Sopra media</span>',
+                'allineato_top': '<span class="tag tag-ok">Top</span>'
+            }.get(pf['vantaggio'], '')
             html += f"""
             <tr>
                 <td><strong>{pf['modulo']}</strong> {core_badge}</td>
                 <td><span class="tag tag-ok">{pf['copertura_competitor']}%</span></td>
                 <td>{pf['media_classi']}%</td>
-                <td>⚠️ Non attaccare</td>
+                <td>{vantaggio_badge}</td>
             </tr>
 """
         html += "</tbody></table>"
     else:
         html += "<p>Nessun punto di forza significativo</p>"
     
-    html += "</div>"
-    
     # Strategia classi
     html += f"""
-    <h2>🎯 {report['strategia_classi']['titolo']}</h2>
+    <h2>⚔️ {report['strategia_classi']['titolo']}</h2>
     <div class="strategia-section">
 """
     
@@ -1025,11 +1113,12 @@ def _genera_html_competitor(report: Dict[str, Any]) -> str:
 """
         if cat['items']:
             for c in cat['items']:
-                gap_str = ", ".join(c['gap'][:2]) if c['gap'] else "Nessuno evidente"
+                moduli = ", ".join(c['moduli_forti'][:2]) if c['moduli_forti'] else "—"
+                gap_str = ", ".join(c['gap'][:2]) if c['gap'] else "Nessuno"
                 html += f"""
             <div class="classe-item">
                 <strong>{c['classe']}</strong><span class="fit">{c['fit']}%</span>
-                <div class="dettagli">Gap competitor: {gap_str}</div>
+                <div class="dettagli">Forti: {moduli}<br>Gap: {gap_str}</div>
             </div>
 """
         else:
@@ -1044,8 +1133,7 @@ def _genera_html_competitor(report: Dict[str, Any]) -> str:
     # Footer
     html += f"""
     <div class="footer">
-        <strong>CoreX PromoIntelligence v{report['metadata']['versione_report']}</strong><br>
-        Analisi competitor: {report['metadata']['editore']}<br>
+        <strong>CoreX PromoIntelligence v{report['metadata']['versione_report']}</strong> | Analisi Competitor<br>
         Report generato il {report['metadata']['data_analisi'][:10]}
     </div>
 </div>
@@ -1056,40 +1144,58 @@ def _genera_html_competitor(report: Dict[str, Any]) -> str:
 
 
 def _genera_html_dettaglio_tecnico(report: Dict[str, Any]) -> str:
-    """Genera HTML per sezione dettaglio tecnico (comune a entrambi i report)."""
+    """Genera HTML per sezione dettaglio tecnico (espandibile)."""
+    
+    dettaglio = report.get('dettaglio_tecnico', {})
+    moduli = dettaglio.get('moduli', [])
     
     html = """
-    <h2>📋 Dettaglio Tecnico</h2>
     <details>
-        <summary>Mostra copertura completa per modulo</summary>
-        <table>
-            <thead><tr><th>Modulo</th><th>Copertura</th><th>Status</th></tr></thead>
-            <tbody>
-"""
-    for mod in report['dettaglio_tecnico']['moduli']:
-        status_config = {
-            "ok": ("tag-ok", "✅"),
-            "attenzione": ("tag-attenzione", "⚠️"),
-            "gap": ("tag-gap", "❌")
-        }
-        tag_class, icon = status_config.get(mod['status'], ("", ""))
-        html += f"""
-            <tr>
-                <td>{mod['nome']}</td>
-                <td>{mod['copertura']}%</td>
-                <td><span class="tag {tag_class}">{icon} {mod['status'].upper()}</span></td>
-            </tr>
+        <summary>📊 Dettaglio Tecnico (clicca per espandere)</summary>
+        <div style="margin-top: 15px;">
 """
     
     html += f"""
-            </tbody>
-        </table>
-        <p>
-            <strong>Moduli totali:</strong> {report['dettaglio_tecnico']['n_moduli_totali']} |
-            <strong>Coperti ≥80%:</strong> {report['dettaglio_tecnico']['n_moduli_coperti_80']} |
-            <strong>CORE:</strong> {report['dettaglio_tecnico']['n_moduli_core']} |
-            <strong>Classi analizzate:</strong> {report['dettaglio_tecnico']['n_classi_analizzate']}
-        </p>
+            <p>
+                <strong>Moduli totali:</strong> {dettaglio.get('n_moduli_totali', 0)} |
+                <strong>Moduli ≥80%:</strong> {dettaglio.get('n_moduli_coperti_80', 0)} |
+                <strong>Moduli core:</strong> {dettaglio.get('n_moduli_core', 0)} |
+                <strong>Classi analizzate:</strong> {dettaglio.get('n_classi_analizzate', 0)}
+            </p>
+"""
+    
+    if moduli:
+        html += """
+            <table style="font-size: 0.9em;">
+                <thead><tr><th>ID</th><th>Modulo</th><th>Copertura</th><th>Status</th></tr></thead>
+                <tbody>
+"""
+        for m in moduli:
+            status_class = {
+                'ok': 'tag-ok',
+                'attenzione': 'tag-attenzione',
+                'gap': 'tag-gap'
+            }.get(m['status'], '')
+            status_label = {
+                'ok': 'OK',
+                'attenzione': 'Attenzione',
+                'gap': 'Gap'
+            }.get(m['status'], m['status'])
+            html += f"""
+                <tr>
+                    <td>{m['id']}</td>
+                    <td>{m['nome']}</td>
+                    <td>{m['copertura']}%</td>
+                    <td><span class="tag {status_class}">{status_label}</span></td>
+                </tr>
+"""
+        html += """
+                </tbody>
+            </table>
+"""
+    
+    html += """
+        </div>
     </details>
 """
     return html

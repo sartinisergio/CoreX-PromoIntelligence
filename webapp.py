@@ -1483,11 +1483,12 @@ with tab6:
         analyzer = ManualAnalyzer()
         
         # Sub-tabs per le diverse funzionalità
-        man_tab1, man_tab2, man_tab3, man_tab4 = st.tabs([
+        man_tab1, man_tab2, man_tab3, man_tab4, man_tab5 = st.tabs([
             "📚 Manuali Disponibili",
             "🎯 Confronto vs Ideale",
             "📊 Confronto vs Reale", 
-            "⚖️ Confronto tra Manuali"
+            "⚖️ Confronto tra Manuali",
+            "📈 Report da Archivio"
         ])
         
         # === SUB-TAB 1: MANUALI DISPONIBILI ===
@@ -1666,6 +1667,7 @@ with tab6:
                                         # Download report base
                                         st.markdown("---")
                                         report_html = analyzer.generate_single_analysis_report_html(analysis, "ideal")
+                                        
                                         
                                         st.download_button(
                                             "📥 Scarica Report Tecnico HTML",
@@ -2202,6 +2204,263 @@ with tab6:
                                                 use_container_width=True
                                             )
     
+        # === SUB-TAB 5: REPORT PROMOZIONE DA ARCHIVIO ===
+        with man_tab5:
+            st.subheader("📈 Report Promozione da Analisi Archiviate")
+            st.markdown("Genera report di promozione da analisi manuali salvate in precedenza.")
+            
+            # Directory analisi manuali salvate
+            analisi_manuali_dir = get_archivio_dir() / "analisi_manuali"
+            
+            if not analisi_manuali_dir.exists():
+                analisi_manuali_dir.mkdir(parents=True, exist_ok=True)
+            
+            # Elenca materie con analisi salvate
+            materie_con_analisi = [d.name for d in analisi_manuali_dir.iterdir() if d.is_dir()]
+            
+            if not materie_con_analisi:
+                st.warning("Nessuna analisi manuale salvata.")
+                st.info("""
+                **Come procedere:**
+                1. Vai alla tab "Confronto vs Ideale" o "Confronto vs Reale"
+                2. Esegui un'analisi di un manuale
+                3. L'analisi viene salvata automaticamente
+                4. Torna qui per generare il Report Promozione
+                """)
+            else:
+                # Selezione materia
+                selected_materia_arch = st.selectbox(
+                    "📚 Seleziona Materia",
+                    materie_con_analisi,
+                    key="arch_materia"
+                )
+                
+                if selected_materia_arch:
+                    materia_dir = analisi_manuali_dir / selected_materia_arch
+                    analisi_files = list(materia_dir.glob("*.json"))
+                    
+                    if not analisi_files:
+                        st.warning(f"Nessuna analisi JSON trovata per {selected_materia_arch}.")
+                    else:
+                        # Costruisci opzioni leggibili
+                        analisi_options = {}
+                        for af in sorted(analisi_files, reverse=True):
+                            try:
+                                with open(af, "r", encoding="utf-8") as f:
+                                    data = json.load(f)
+                                
+                                manual_info = data.get("manual_info", {})
+                                title = manual_info.get("title", af.stem)
+                                author = manual_info.get("author", "N/D")
+                                publisher = manual_info.get("publisher", "N/D")
+                                coverage = data.get("overall_coverage", 0)
+                                
+                                # Estrai data dal nome file o dai metadati
+                                metadata = data.get("metadata", {})
+                                date_str = metadata.get("analysis_date", "")[:10] if metadata.get("analysis_date") else ""
+                                if not date_str and len(af.stem) > 10:
+                                    # Prova a estrarre da nome file tipo "Manuale_zanichelli_2026-01-03_171825"
+                                    parts = af.stem.split("_")
+                                    for p in parts:
+                                        if "-" in p and len(p) == 10:
+                                            date_str = p
+                                            break
+                                
+                                label = f"{title} - {author} ({publisher}) | {coverage:.0f}% | {date_str}"
+                                analisi_options[label] = {
+                                    "path": af,
+                                    "data": data,
+                                    "manual_info": manual_info
+                                }
+                            except Exception as e:
+                                continue
+                        
+                        if not analisi_options:
+                            st.warning("Nessuna analisi valida trovata.")
+                        else:
+                            # Selezione analisi
+                            selected_analisi_label = st.selectbox(
+                                "📋 Seleziona Analisi Salvata",
+                                list(analisi_options.keys()),
+                                key="arch_analisi"
+                            )
+                            
+                            if selected_analisi_label:
+                                selected_analisi = analisi_options[selected_analisi_label]
+                                analisi_data = selected_analisi["data"]
+                                manual_info = selected_analisi["manual_info"]
+                                
+                                # Info analisi
+                                st.markdown("---")
+                                col1, col2, col3, col4 = st.columns(4)
+                                col1.metric("Manuale", manual_info.get("title", "N/D")[:20])
+                                col2.metric("Autore", manual_info.get("author", "N/D")[:15])
+                                col3.metric("Copertura", f"{analisi_data.get('overall_coverage', 0):.1f}%")
+                                col4.metric("Giudizio", analisi_data.get("judgment", "N/D"))
+                                
+                                st.markdown("---")
+                                
+                                # Selezione framework reale
+                                st.markdown("**🎯 Seleziona Framework Reale (per classificazione classi):**")
+                                
+                                real_frameworks = analyzer.get_available_real_frameworks(selected_materia_arch)
+                                
+                                if not real_frameworks:
+                                    st.error(f"❌ Nessun framework reale disponibile per {selected_materia_arch}.")
+                                    st.info("Esegui prima un'analisi multiclasse dei programmi nella tab 'Analisi'.")
+                                else:
+                                    fw_options = {
+                                        f"{fw['name']} ({fw.get('type_label', 'N/D')}, {fw['date']})": fw 
+                                        for fw in real_frameworks
+                                    }
+                                    
+                                    selected_real_fw_arch = st.selectbox(
+                                        "Framework Reale",
+                                        list(fw_options.keys()),
+                                        key="arch_real_fw"
+                                    )
+                                    
+                                     # Tipo report - usa i dati dall'analisi salvata
+                                    analysis_content_temp = analisi_data.get("analysis", analisi_data)
+                                    manual_info_temp = analysis_content_temp.get("manual_info", {})
+                                    publisher_lower = manual_info_temp.get("publisher", "").lower()
+                                    is_zanichelli = "zanichelli" in publisher_lower or "cea" in publisher_lower
+
+                                    default_tipo = "ZANICHELLI (promuovere nostro manuale)" if is_zanichelli else "COMPETITOR (attaccare concorrente)"
+                                    altro_tipo = "COMPETITOR (attaccare concorrente)" if is_zanichelli else "ZANICHELLI (promuovere nostro manuale)"
+                                    
+                                    tipo_report_sel = st.radio(
+                                        "📊 Tipo Report",
+                                        [default_tipo, altro_tipo],
+                                        key="arch_tipo_report",
+                                        horizontal=True
+                                    )
+                                    tipo_analisi = "zanichelli" if "ZANICHELLI" in tipo_report_sel else "competitor"
+
+                                    # Avviso se selezione incongruente
+                                    if is_zanichelli and "COMPETITOR" in tipo_report_sel:
+                                        st.warning("⚠️ **Attenzione:** Stai generando un report COMPETITOR per un manuale Zanichelli/CEA. Questo report serve per analizzare le debolezze di un concorrente, non per promuovere i nostri manuali. Probabilmente vuoi usare il report ZANICHELLI.")
+                                    elif not is_zanichelli and "ZANICHELLI" in tipo_report_sel:
+                                        st.warning("⚠️ **Attenzione:** Stai generando un report ZANICHELLI per un manuale concorrente. Questo report serve per promuovere i nostri manuali, non per analizzare i competitor. Probabilmente vuoi usare il report COMPETITOR.")
+                                    
+                                    st.markdown("---")
+                                    
+                                    # Bottone genera
+                                    if st.button("🚀 Genera Report Promozione", type="primary", use_container_width=True, key="btn_arch_promo"):
+                                        
+                                        fw_info = fw_options[selected_real_fw_arch]
+                                        
+                                        with st.spinner("Generazione Report Promozione con Executive Summary..."):
+                                            try:
+                                                from app.promo_report_generator import PromoReportGenerator, genera_html_report
+                                                from app.framework_adapter import FrameworkAdapter
+                                                
+                                                # Carica frameworks
+                                                framework_reale = analyzer.load_real_framework(fw_info["framework_path"])
+                                                
+                                                adapter = FrameworkAdapter()
+                                                framework_ideale = adapter.load_framework(selected_materia_arch)
+                                                
+                                                if not framework_reale:
+                                                    st.error("❌ Errore caricamento framework reale")
+                                                else:
+                                                    # Prepara dati analisi
+                                                    # La struttura è: {"metadata": {...}, "analysis": {...}}
+                                                    analysis_content = analisi_data.get("analysis", analisi_data)
+                                                    modules_analysis = analysis_content.get("modules_analysis", [])
+                                                    
+                                                    # Estrai manual_info dalla struttura corretta
+                                                    manual_info_from_analysis = analysis_content.get("manual_info", {})
+                                                    if not manual_info_from_analysis:
+                                                        manual_info_from_analysis = manual_info  # fallback
+                                                    
+                                                    analisi_per_report = {
+                                                        "modules": [
+                                                            {
+                                                                "id": mod.get("module_id", i+1),
+                                                                "name": mod.get("module_name", f"Modulo {i+1}"),
+                                                                "coverage": mod.get("manual_coverage", mod.get("coverage_percentage", 0)),
+                                                                "status": mod.get("status", "parziale"),
+                                                                "is_core": mod.get("is_core", False),
+                                                                "real_avg_coverage": mod.get("real_avg_coverage", 0),
+                                                                "coverage_by_class": mod.get("coverage_by_class", {})
+                                                            }
+                                                            for i, mod in enumerate(modules_analysis)
+                                                        ],
+                                                        "overall_coverage": analysis_content.get("overall_coverage", 0)
+                                                    }
+
+                                                    # Genera report
+                                                    generator = PromoReportGenerator(
+                                                        analisi_manuale=analisi_per_report,
+                                                        framework_reale=framework_reale,
+                                                        framework_ideale=framework_ideale,
+                                                        nome_manuale=manual_info_from_analysis.get("title", "Manuale"),
+                                                        autore_manuale=manual_info_from_analysis.get("author", ""),
+                                                        editore=manual_info_from_analysis.get("publisher", ""),
+                                                        tipo_analisi=tipo_analisi
+                                                    )
+                                                    
+                                                    report_data = generator.genera_report()
+                                                    report_html = genera_html_report(report_data)
+                                                    
+                                                    st.success("✅ Report Promozione generato!")
+                                                    
+                                                    # Mostra Executive Summary
+                                                    exec_summary = report_data.get("executive_summary", {})
+                                                    if exec_summary and exec_summary.get("text"):
+                                                        st.markdown("### 📝 Executive Summary")
+                                                        st.info(exec_summary["text"])
+                                                        badge = "🤖 Generato da LLM" if exec_summary.get("generated_by_llm") else "📋 Fallback automatico"
+                                                        st.caption(badge)
+                                                    
+                                                    # Salva report
+                                                    report_dir = get_archivio_dir() / "report_promo" / selected_materia_arch
+                                                    report_dir.mkdir(parents=True, exist_ok=True)
+                                                    
+                                                    timestamp = datetime.now().strftime("%Y-%m-%d_%H%M%S")
+                                                    safe_name = manual_info.get("title", "manuale").replace(" ", "_")[:30]
+                                                    tipo_label = "ZANICHELLI" if tipo_analisi == "zanichelli" else "COMPETITOR"
+                                                    report_filename = f"{safe_name}_{tipo_label}_{timestamp}.html"
+                                                    report_path = report_dir / report_filename
+                                                    
+                                                    with open(report_path, "w", encoding="utf-8") as f:
+                                                        f.write(report_html)
+                                                    
+                                                    st.success(f"💾 Salvato in: `{report_path}`")
+                                                    
+                                                    # Download
+                                                    st.markdown("---")
+                                                    col1, col2 = st.columns(2)
+                                                    with col1:
+                                                        st.download_button(
+                                                            "📥 Scarica HTML",
+                                                            report_html,
+                                                            report_filename,
+                                                            "text/html",
+                                                            use_container_width=True
+                                                        )
+                                                    with col2:
+                                                        st.download_button(
+                                                            "📥 Scarica JSON",
+                                                            json.dumps(report_data, indent=2, ensure_ascii=False, default=str),
+                                                            report_filename.replace(".html", ".json"),
+                                                            "application/json",
+                                                            use_container_width=True
+                                                        )
+                                                    
+                                                    # Anteprima
+                                                    st.markdown("---")
+                                                    st.subheader("👁️ Anteprima Report")
+                                                    st.components.v1.html(report_html, height=700, scrolling=True)
+                                                    
+                                            except ImportError as e:
+                                                st.error(f"❌ Modulo mancante: {e}")
+                                                st.info("Verifica che `app/promo_report_generator.py` sia presente e corretto.")
+                                            except Exception as e:
+                                                st.error(f"❌ Errore: {e}")
+                                                import traceback
+                                                st.code(traceback.format_exc())
     except ImportError as e:
         st.error(f"❌ Errore importazione ManualAnalyzer: {e}")
         st.info("Verifica che il file `app/manual_analyzer.py` sia presente.")
@@ -2209,7 +2468,7 @@ with tab6:
         st.error(f"❌ Errore: {e}")
         import traceback
         st.code(traceback.format_exc())
-        
+                
 # === TAB 7: PROFILO DOCENTE (Report Commerciale) ===
 # === TAB 7: PROFILO DOCENTE ===
 with tab7:
