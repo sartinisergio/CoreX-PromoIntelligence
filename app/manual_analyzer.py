@@ -1,8 +1,10 @@
 """
-CoreX - Manual Analyzer v2.0
+CoreX - Manual Analyzer v2.1
 Analizza manuali rispetto a framework IDEALE e REALE
 Confronta più manuali tra loro
 UPGRADE: Matching semantico tramite LLM (universale per qualsiasi materia)
+FIX: Conteggio capitoli corretto per strutture Focus > Capitoli
+NEW: Report commerciale con talking points per promotori
 """
 
 import json
@@ -21,6 +23,31 @@ class ManualAnalyzer:
         self.frameworks_dir = frameworks_dir or Path("frameworks")
         self.archivio_dir = Path("archivio")
         self.use_llm = use_llm
+    
+    def _count_real_chapters(self, manual_data: Dict) -> int:
+        """
+        Conta i capitoli reali. Per manuali con struttura Focus > Capitoli (es. Atkins),
+        conta le sections come capitoli veri.
+        """
+        chapters = manual_data.get("chapters", [])
+        if not chapters:
+            return 0
+        # Se il primo livello ha "type": "focus", conta le sections come capitoli
+        if chapters[0].get("type") == "focus":
+            return sum(len(ch.get("sections", [])) for ch in chapters)
+        # Altrimenti conta normalmente i chapters
+        return len(chapters)
+    
+    def _get_structure_label(self, manual_data: Dict) -> str:
+        """
+        Restituisce l'etichetta corretta per la struttura del manuale.
+        """
+        chapters = manual_data.get("chapters", [])
+        if chapters and chapters[0].get("type") == "focus":
+            n_focus = len(chapters)
+            n_chapters = self._count_real_chapters(manual_data)
+            return f"{n_focus} Focus, {n_chapters} Capitoli"
+        return f"{len(chapters)} Capitoli"
     
     def get_available_subjects(self) -> List[str]:
         if not self.manuali_dir.exists():
@@ -53,7 +80,8 @@ class ManualAnalyzer:
                                 "author": data.get("author", "N/D"),
                                 "publisher": data.get("publisher", "N/D"),
                                 "path": json_file,
-                                "n_chapters": len(data.get("chapters", []))
+                                "n_chapters": self._count_real_chapters(data),
+                                "structure_label": self._get_structure_label(data)
                             })
                     except Exception as e:
                         print(f"Errore caricamento {json_file}: {e}")
@@ -186,6 +214,7 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
         except Exception as e:
             print(f"Errore LLM matching: {e}")
             return None
+
     def _generate_narrative_descriptions(self, analysis_result: Dict, manual: Dict, subject: str, provider_id: str = "openai", model: str = "gpt-4o-mini") -> Dict:
         """
         Genera descrizioni narrative UTILI per il promotore.
@@ -196,7 +225,6 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
         except ImportError:
             return analysis_result
         
-        # Costruisce la struttura capitoli per riferimento rapido
         chapters_index = {}
         for ch in manual.get("chapters", []):
             ch_num = ch.get("number", 0)
@@ -205,10 +233,8 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
                 "sections": {s.get("number", ""): s.get("title", "") for s in ch.get("sections", [])}
             }
         
-        # Prepara dati COMPLETI per ogni modulo (non riassunti!)
         modules_detailed = []
         for mod in analysis_result.get("modules_analysis", []):
-            # Separa contenuti coperti da quelli mancanti CON DETTAGLI
             covered_details = []
             missing_details = []
             
@@ -303,7 +329,6 @@ Rispondi SOLO con JSON valido:
             
             response_text = response.choices[0].message.content.strip()
             
-            # Pulizia markdown se presente
             if "```" in response_text:
                 for part in response_text.split("```"):
                     if part.strip().startswith("json"):
@@ -315,7 +340,6 @@ Rispondi SOLO con JSON valido:
             
             narrative = json.loads(response_text)
             
-            # Mappa descrizioni ai moduli
             desc_map = {d["module_id"]: d["description"] for d in narrative.get("module_descriptions", [])}
             for mod in analysis_result.get("modules_analysis", []):
                 mod["description"] = desc_map.get(mod.get("module_id"), "")
@@ -325,7 +349,6 @@ Rispondi SOLO con JSON valido:
             
         except json.JSONDecodeError as e:
             print(f"Errore parsing JSON narrative: {e}")
-            print(f"Response raw: {response_text[:500]}")
             analysis_result["narrative_generated"] = False
         except Exception as e:
             print(f"Errore generazione narrative: {e}")
@@ -486,7 +509,15 @@ Rispondi SOLO con JSON valido:
                     uncovered_chapters.append({"chapter_num": topic["chapter_num"], "title": topic["text"]})
         
         result = {
-            "manual_info": {"id": manual.get("id", "N/D"), "title": manual.get("title", "N/D"), "author": manual.get("author", "N/D"), "publisher": manual.get("publisher", "N/D"), "n_chapters": len(manual.get("chapters", [])), "n_sections": sum(len(ch.get("sections", [])) for ch in manual.get("chapters", []))},
+            "manual_info": {
+                "id": manual.get("id", "N/D"), 
+                "title": manual.get("title", "N/D"), 
+                "author": manual.get("author", "N/D"), 
+                "publisher": manual.get("publisher", "N/D"), 
+                "n_chapters": self._count_real_chapters(manual),
+                "structure_label": self._get_structure_label(manual),
+                "n_sections": sum(len(ch.get("sections", [])) for ch in manual.get("chapters", []))
+            },
             "framework_info": {"name": ideal_framework.get("framework", {}).get("name", "N/D"), "n_modules": len(modules), "total_contents": sum(len(m.get("core_contents", [])) for m in modules)},
             "overall_coverage": round(overall_coverage, 1), "judgment": self._coverage_to_judgment(overall_coverage),
             "recommendation": self._get_recommendation(overall_coverage, "ideal"), "modules_analysis": modules_analysis,
@@ -653,7 +684,15 @@ Rispondi SOLO con JSON valido:
                     missing_contents.append({"content": cm["content"], "module": m["module_name"], "is_core_module": m.get("is_core", False)})
         
         result = {
-            "manual_info": {"id": manual.get("id", "N/D"), "title": manual.get("title", "N/D"), "author": manual.get("author", "N/D"), "publisher": manual.get("publisher", "N/D"), "n_chapters": len(manual.get("chapters", [])), "n_sections": sum(len(ch.get("sections", [])) for ch in manual.get("chapters", []))},
+            "manual_info": {
+                "id": manual.get("id", "N/D"), 
+                "title": manual.get("title", "N/D"), 
+                "author": manual.get("author", "N/D"), 
+                "publisher": manual.get("publisher", "N/D"), 
+                "n_chapters": self._count_real_chapters(manual),
+                "structure_label": self._get_structure_label(manual),
+                "n_sections": sum(len(ch.get("sections", [])) for ch in manual.get("chapters", []))
+            },
             "real_framework_info": {"name": framework_info.get("name", "N/D"), "type": "multiclass" if is_multiclass else "single", "classes_analyzed": classes_analyzed, "n_modules": len(modules), "n_core_modules": len([m for m in modules if m.get("is_core", False)])},
             "overall_coverage": round(overall_coverage, 1), "core_modules_coverage": round(core_coverage, 1),
             "judgment": self._coverage_to_judgment(overall_coverage), "recommendation": self._get_recommendation(overall_coverage, "real"),
@@ -677,7 +716,20 @@ Rispondi SOLO con JSON valido:
                     analysis = self.analyze_manual_vs_real(manual, reference_framework, provider_id, model)
             else:
                 analysis = self._analyze_manual_structure(manual)
-            comparisons.append({"manual_id": manual.get("id", "N/D"), "manual_title": manual.get("title", "N/D"), "author": manual.get("author", "N/D"), "publisher": manual.get("publisher", "N/D"), "n_chapters": len(manual.get("chapters", [])), "n_sections": sum(len(ch.get("sections", [])) for ch in manual.get("chapters", [])), "coverage": analysis.get("overall_coverage", 0) if reference_framework else None, "weighted_coverage": analysis.get("overall_weighted_coverage", analysis.get("overall_coverage", 0)), "judgment": analysis.get("judgment", "N/D"), "modules_analysis": analysis.get("modules_analysis", []), "full_analysis": analysis})
+            comparisons.append({
+                "manual_id": manual.get("id", "N/D"), 
+                "manual_title": manual.get("title", "N/D"), 
+                "author": manual.get("author", "N/D"), 
+                "publisher": manual.get("publisher", "N/D"), 
+                "n_chapters": self._count_real_chapters(manual),
+                "structure_label": self._get_structure_label(manual),
+                "n_sections": sum(len(ch.get("sections", [])) for ch in manual.get("chapters", [])), 
+                "coverage": analysis.get("overall_coverage", 0) if reference_framework else None, 
+                "weighted_coverage": analysis.get("overall_weighted_coverage", analysis.get("overall_coverage", 0)), 
+                "judgment": analysis.get("judgment", "N/D"), 
+                "modules_analysis": analysis.get("modules_analysis", []), 
+                "full_analysis": analysis
+            })
         if reference_framework:
             comparisons.sort(key=lambda x: x.get("weighted_coverage") or x.get("coverage") or 0, reverse=True)
         modules_comparison = self._build_modules_comparison(comparisons, reference_framework)
@@ -702,7 +754,23 @@ Rispondi SOLO con JSON valido:
     
     def _analyze_manual_structure(self, manual: Dict) -> Dict:
         chapters = manual.get("chapters", [])
-        return {"manual_info": {"id": manual.get("id", "N/D"), "title": manual.get("title", "N/D"), "author": manual.get("author", "N/D"), "publisher": manual.get("publisher", "N/D")}, "structure": {"n_chapters": len(chapters), "n_sections": sum(len(ch.get("sections", [])) for ch in chapters), "chapters": [{"number": ch.get("number", 0), "title": ch.get("title", ""), "n_sections": len(ch.get("sections", []))} for ch in chapters]}, "overall_coverage": 0, "judgment": "Analisi strutturale"}
+        return {
+            "manual_info": {
+                "id": manual.get("id", "N/D"), 
+                "title": manual.get("title", "N/D"), 
+                "author": manual.get("author", "N/D"), 
+                "publisher": manual.get("publisher", "N/D"),
+                "n_chapters": self._count_real_chapters(manual),
+                "structure_label": self._get_structure_label(manual)
+            }, 
+            "structure": {
+                "n_chapters": self._count_real_chapters(manual), 
+                "n_sections": sum(len(ch.get("sections", [])) for ch in chapters), 
+                "chapters": [{"number": ch.get("number", 0), "title": ch.get("title", ""), "n_sections": len(ch.get("sections", []))} for ch in chapters]
+            }, 
+            "overall_coverage": 0, 
+            "judgment": "Analisi strutturale"
+        }
 
     def save_analysis(self, analysis: Dict, materia: str, manual_name: str, manual_type: str = "zanichelli") -> Path:
         save_dir = Path("archivio/analisi_manuali") / materia.replace(" ", "_")
@@ -711,7 +779,7 @@ Rispondi SOLO con JSON valido:
         safe_name = manual_name.replace(" ", "_").replace("/", "-")[:50]
         filename = f"{safe_name}_{manual_type}_{timestamp}.json"
         filepath = save_dir / filename
-        analysis_with_meta = {"metadata": {"manual_name": manual_name, "manual_type": manual_type, "materia": materia, "saved_at": datetime.now().isoformat(), "analysis_version": "2.0"}, "analysis": analysis}
+        analysis_with_meta = {"metadata": {"manual_name": manual_name, "manual_type": manual_type, "materia": materia, "saved_at": datetime.now().isoformat(), "analysis_version": "2.1"}, "analysis": analysis}
         with open(filepath, "w", encoding="utf-8") as f:
             json.dump(analysis_with_meta, f, indent=2, ensure_ascii=False)
         return filepath
@@ -760,6 +828,9 @@ Rispondi SOLO con JSON valido:
             coverage_color = "#f44336"
         judgment = analysis.get("judgment", "N/D")
         judgment_class = self._judgment_to_class(judgment)
+        
+        # Usa structure_label se disponibile
+        structure_info = manual_info.get("structure_label", f"{manual_info.get('n_chapters', 0)} Capitoli")
         
         modules_html = ""
         for mod in modules_analysis:
@@ -850,7 +921,7 @@ Rispondi SOLO con JSON valido:
         Confronto vs Framework {'IDEALE' if framework_type == 'ideal' else 'REALE'} <span class="method-badge">Metodo: {analysis.get('method', 'N/D').upper()}</span></p>
     <div class="summary-grid">
         <div class="summary-card"><div class="value" style="color: {coverage_color};">{coverage:.1f}%</div><div class="label">Copertura Complessiva</div></div>
-        <div class="summary-card"><div class="value">{manual_info.get('n_chapters', 0)}</div><div class="label">Capitoli</div></div>
+        <div class="summary-card"><div class="value">{manual_info.get('n_chapters', 0)}</div><div class="label">{structure_info}</div></div>
         <div class="summary-card"><div class="value">{manual_info.get('n_sections', 0)}</div><div class="label">Sezioni</div></div>
         <div class="summary-card"><span class="judgment-badge {judgment_class}">{judgment}</span><div class="label" style="margin-top:10px;">Giudizio</div></div>
     </div>
@@ -859,7 +930,7 @@ Rispondi SOLO con JSON valido:
     <h2>📊 Analisi per Modulo</h2>
     {modules_html}
     {gaps_html}
-    <div class="footer">Report generato da <strong>CoreX - Manual Analyzer v2.0</strong> | Zanichelli<br>{datetime.now().strftime('%d/%m/%Y %H:%M:%S')}</div>
+    <div class="footer">Report generato da <strong>CoreX - Manual Analyzer v2.1</strong> | Zanichelli<br>{datetime.now().strftime('%d/%m/%Y %H:%M:%S')}</div>
 </div>
 </body>
 </html>"""
@@ -874,7 +945,6 @@ Rispondi SOLO con JSON valido:
         framework_name = comparison.get("framework_name", "N/D")
         n_manuals = comparison.get("n_manuals", 0)
         
-        # CSS styling
         css = """
         <style>
             body { font-family: 'Segoe UI', sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; }
@@ -902,7 +972,6 @@ Rispondi SOLO con JSON valido:
         </style>
         """
         
-        # Header
         html = f"""<!DOCTYPE html>
 <html>
 <head>
@@ -918,7 +987,6 @@ Rispondi SOLO con JSON valido:
     </div>
 """
         
-        # Ranking
         html += '<h2 class="section-title">🏆 Classifica Manuali</h2>'
         
         for i, manual in enumerate(ranking):
@@ -935,12 +1003,15 @@ Rispondi SOLO con JSON valido:
             winner_class = "winner" if position == 1 else ""
             pos_class = "first" if position == 1 else ""
             
+            # Usa structure_label se disponibile
+            structure_info = manual.get("structure_label", f"{manual.get('n_chapters', 0)} capitoli")
+            
             html += f"""
     <div class="ranking-card {winner_class}">
         <div class="ranking-position {pos_class}">#{position}</div>
         <div class="ranking-details">
             <div class="ranking-title">{manual.get('manual_title', 'N/D')}</div>
-            <div class="ranking-meta">{manual.get('author', 'N/D')} • {manual.get('publisher', 'N/D')} • {manual.get('n_chapters', 0)} capitoli</div>
+            <div class="ranking-meta">{manual.get('author', 'N/D')} • {manual.get('publisher', 'N/D')} • {structure_info}</div>
             <div class="ranking-coverage {cov_class}">{coverage:.0f}% copertura</div>
             <div style="margin-top: 5px; color: #666;">{manual.get('judgment', 'N/D')}</div>
         </div>
@@ -948,7 +1019,6 @@ Rispondi SOLO con JSON valido:
     </div>
 """
         
-        # Confronto per modulo
         if modules_comparison:
             html += '<h2 class="section-title">📋 Confronto per Modulo</h2>'
             html += """
@@ -968,7 +1038,6 @@ Rispondi SOLO con JSON valido:
                 best = mod.get("best_manual", "N/D")
                 avg = mod.get("avg_coverage", 0)
                 
-                # Dettaglio manuali per questo modulo
                 detail_parts = []
                 for score in mod.get("manual_scores", [])[:3]:
                     detail_parts.append(f"{score['manual'][:20]}: {score['coverage']:.0f}%")
@@ -988,10 +1057,306 @@ Rispondi SOLO con JSON valido:
     </table>
 """
         
-        # Footer
         html += """
     <div style="margin-top: 40px; padding: 20px; background: #f5f5f5; border-radius: 10px; text-align: center; color: #666;">
         <p>Report generato da <strong>CoreX - PromoIntelligence</strong></p>
+    </div>
+</body>
+</html>
+"""
+        
+        return html
+
+    def generate_commercial_comparison_report(self, comparison: Dict, provider_id: str = "openai", model: str = "gpt-4o-mini") -> str:
+        """
+        Genera report HTML COMMERCIALE per il confronto tra manuali.
+        Include talking points, gestione obiezioni e consigli per il promotore.
+        """
+        ranking = comparison.get("ranking", [])
+        modules_comparison = comparison.get("modules_comparison", [])
+        framework_name = comparison.get("framework_name", "N/D")
+        
+        # Identifica manuale Zanichelli e competitor
+        zanichelli_manual = None
+        competitor_manuals = []
+        for m in ranking:
+            if m.get("publisher", "").lower() == "zanichelli":
+                zanichelli_manual = m
+            else:
+                competitor_manuals.append(m)
+        
+        # Se non c'è Zanichelli, usa il primo come "nostro"
+        if not zanichelli_manual and ranking:
+            zanichelli_manual = ranking[0]
+            competitor_manuals = ranking[1:]
+        
+        # Genera talking points con LLM
+        talking_points = []
+        obiezioni = []
+        target_consigliato = ""
+        executive_summary = ""
+        
+        if self.use_llm and zanichelli_manual:
+            try:
+                from app.llm_provider import get_llm_client
+                
+                # Prepara dati per LLM
+                zan_data = {
+                    "title": zanichelli_manual.get("manual_title"),
+                    "author": zanichelli_manual.get("author"),
+                    "coverage": zanichelli_manual.get("coverage", 0),
+                    "n_chapters": zanichelli_manual.get("n_chapters", 0),
+                    "structure": zanichelli_manual.get("structure_label", ""),
+                    "judgment": zanichelli_manual.get("judgment", "")
+                }
+                
+                comp_data = []
+                for c in competitor_manuals[:2]:
+                    comp_data.append({
+                        "title": c.get("manual_title"),
+                        "author": c.get("author"),
+                        "publisher": c.get("publisher"),
+                        "coverage": c.get("coverage", 0),
+                        "n_chapters": c.get("n_chapters", 0),
+                        "structure": c.get("structure_label", "")
+                    })
+                
+                # Trova moduli dove Zanichelli vince/perde
+                zan_wins = []
+                zan_loses = []
+                for mod in modules_comparison:
+                    scores = mod.get("manual_scores", [])
+                    if len(scores) >= 2:
+                        zan_score = next((s for s in scores if "zanichelli" in s.get("publisher", "").lower()), None)
+                        if zan_score:
+                            best = scores[0]
+                            if zan_score["coverage"] >= best["coverage"]:
+                                zan_wins.append({"module": mod["module_name"], "coverage": zan_score["coverage"]})
+                            elif best["coverage"] - zan_score["coverage"] > 10:
+                                zan_loses.append({"module": mod["module_name"], "zan_coverage": zan_score["coverage"], "best_coverage": best["coverage"], "best_manual": best["manual"]})
+                
+                prompt = f"""Sei un CONSULENTE COMMERCIALE ESPERTO per Zanichelli. Devi preparare un brief per il promotore editoriale.
+
+NOSTRO MANUALE (ZANICHELLI):
+{json.dumps(zan_data, indent=2, ensure_ascii=False)}
+
+MANUALI COMPETITOR:
+{json.dumps(comp_data, indent=2, ensure_ascii=False)}
+
+MODULI DOVE VINCIAMO:
+{json.dumps(zan_wins[:5], indent=2, ensure_ascii=False)}
+
+MODULI DOVE PERDIAMO:
+{json.dumps(zan_loses[:5], indent=2, ensure_ascii=False)}
+
+GENERA UN BRIEF COMMERCIALE con:
+
+1. EXECUTIVE SUMMARY (2-3 frasi): Situazione competitiva in sintesi. Siamo avanti o indietro? Su cosa puntare?
+
+2. TALKING POINTS (3-5 punti): Argomenti da usare in visita con il docente. Frasi CONCRETE e PRONTE ALL'USO. Esempio:
+   - "Il nostro manuale dedica un intero Focus alla termodinamica, con 45 pagine di esercizi svolti - ideale per corsi da 9 CFU"
+
+3. GESTIONE OBIEZIONI (2-3): Obiezioni probabili del docente e come rispondere. Esempio:
+   - Obiezione: "Il Kotz ha più capitoli"
+   - Risposta: "Vero, ma l'Atkins ha una struttura modulare per Focus che permette di selezionare solo i contenuti necessari al corso"
+
+4. TARGET CONSIGLIATO: Per quali corsi/classi di laurea è più adatto il nostro manuale?
+
+5. LACUNE DA CONOSCERE: Cosa manca nel nostro manuale? (per non farsi cogliere impreparati)
+
+TONO: Diretto, pratico, orientato alla vendita. NO gergo tecnico inutile.
+
+Rispondi in JSON:
+{{
+    "executive_summary": "...",
+    "talking_points": ["punto 1", "punto 2", ...],
+    "obiezioni": [
+        {{"obiezione": "...", "risposta": "..."}}
+    ],
+    "target_consigliato": "...",
+    "lacune": ["lacuna 1", "lacuna 2"]
+}}"""
+
+                client = get_llm_client(provider_id)
+                response = client.chat.completions.create(
+                    model=model,
+                    messages=[
+                        {"role": "system", "content": "Sei un consulente commerciale esperto. Genera contenuti PRATICI e UTILI per venditori. Rispondi SOLO con JSON valido."},
+                        {"role": "user", "content": prompt}
+                    ],
+                    temperature=0.5,
+                    max_tokens=2000
+                )
+                
+                response_text = response.choices[0].message.content.strip()
+                if "```" in response_text:
+                    for part in response_text.split("```"):
+                        if part.strip().startswith("json"):
+                            response_text = part.strip()[4:].strip()
+                            break
+                        elif part.strip().startswith("{"):
+                            response_text = part.strip()
+                            break
+                
+                commercial_data = json.loads(response_text)
+                executive_summary = commercial_data.get("executive_summary", "")
+                talking_points = commercial_data.get("talking_points", [])
+                obiezioni = commercial_data.get("obiezioni", [])
+                target_consigliato = commercial_data.get("target_consigliato", "")
+                lacune = commercial_data.get("lacune", [])
+                
+            except Exception as e:
+                print(f"Errore generazione contenuti commerciali: {e}")
+                executive_summary = "Analisi automatica non disponibile. Verificare i dati manualmente."
+                talking_points = []
+                obiezioni = []
+                lacune = []
+        
+        # Genera HTML
+        css = """
+        <style>
+            body { font-family: 'Segoe UI', sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+            .header { background: linear-gradient(135deg, #c62828, #b71c1c); color: white; padding: 30px; border-radius: 10px; margin-bottom: 30px; }
+            .header h1 { margin: 0; }
+            .header .subtitle { opacity: 0.9; margin-top: 10px; }
+            .section { background: white; border-radius: 10px; padding: 25px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+            .section h2 { color: #c62828; margin-top: 0; border-bottom: 2px solid #ffcdd2; padding-bottom: 10px; }
+            .executive-summary { background: #fff3e0; border-left: 4px solid #ff9800; padding: 20px; border-radius: 5px; font-size: 1.1em; }
+            .talking-point { background: #e8f5e9; padding: 15px 20px; border-radius: 8px; margin: 10px 0; border-left: 4px solid #4caf50; }
+            .talking-point::before { content: "💬 "; }
+            .obiezione-card { background: #fafafa; border-radius: 8px; padding: 20px; margin: 15px 0; border: 1px solid #e0e0e0; }
+            .obiezione-card .obiezione { color: #d32f2f; font-weight: 600; margin-bottom: 10px; }
+            .obiezione-card .obiezione::before { content: "❌ Obiezione: "; }
+            .obiezione-card .risposta { color: #2e7d32; }
+            .obiezione-card .risposta::before { content: "✅ Risposta: "; }
+            .target-box { background: #e3f2fd; padding: 20px; border-radius: 8px; border-left: 4px solid #1976d2; }
+            .lacuna-item { background: #fff8e1; padding: 10px 15px; border-radius: 5px; margin: 8px 0; border-left: 3px solid #ffc107; }
+            .comparison-quick { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
+            .manual-card { padding: 20px; border-radius: 10px; }
+            .manual-card.zanichelli { background: #ffebee; border: 2px solid #c62828; }
+            .manual-card.competitor { background: #f5f5f5; border: 2px solid #9e9e9e; }
+            .manual-card h3 { margin-top: 0; }
+            .coverage-big { font-size: 2.5em; font-weight: bold; }
+            .coverage-big.high { color: #4caf50; }
+            .coverage-big.medium { color: #ff9800; }
+            .coverage-big.low { color: #f44336; }
+            .footer { text-align: center; color: #888; margin-top: 30px; padding: 20px; }
+        </style>
+        """
+        
+        # Coverage class
+        def get_cov_class(cov):
+            if cov >= 70: return "high"
+            elif cov >= 50: return "medium"
+            return "low"
+        
+        html = f"""<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Brief Commerciale - {framework_name}</title>
+    {css}
+</head>
+<body>
+    <div class="header">
+        <h1>📋 Brief Commerciale per Promotore</h1>
+        <div class="subtitle">Confronto competitivo • {framework_name}</div>
+        <div class="subtitle">Generato il {datetime.now().strftime('%d/%m/%Y %H:%M')}</div>
+    </div>
+"""
+        
+        # Executive Summary
+        if executive_summary:
+            html += f"""
+    <div class="section">
+        <h2>🎯 Situazione Competitiva</h2>
+        <div class="executive-summary">{executive_summary}</div>
+    </div>
+"""
+        
+        # Quick comparison
+        if zanichelli_manual:
+            zan_cov = zanichelli_manual.get("coverage", 0)
+            html += f"""
+    <div class="section">
+        <h2>📊 Confronto Rapido</h2>
+        <div class="comparison-quick">
+            <div class="manual-card zanichelli">
+                <h3>🔴 {zanichelli_manual.get('manual_title', 'N/D')}</h3>
+                <p>{zanichelli_manual.get('author', '')} • Zanichelli</p>
+                <p>{zanichelli_manual.get('structure_label', '')}</p>
+                <div class="coverage-big {get_cov_class(zan_cov)}">{zan_cov:.0f}%</div>
+                <p>copertura framework</p>
+            </div>
+"""
+            if competitor_manuals:
+                comp = competitor_manuals[0]
+                comp_cov = comp.get("coverage", 0)
+                html += f"""
+            <div class="manual-card competitor">
+                <h3>⚪ {comp.get('manual_title', 'N/D')}</h3>
+                <p>{comp.get('author', '')} • {comp.get('publisher', '')}</p>
+                <p>{comp.get('structure_label', '')}</p>
+                <div class="coverage-big {get_cov_class(comp_cov)}">{comp_cov:.0f}%</div>
+                <p>copertura framework</p>
+            </div>
+"""
+            html += """
+        </div>
+    </div>
+"""
+        
+        # Talking Points
+        if talking_points:
+            html += """
+    <div class="section">
+        <h2>💬 Argomenti di Vendita</h2>
+        <p style="color: #666; margin-bottom: 15px;">Frasi pronte da usare in visita con il docente:</p>
+"""
+            for point in talking_points:
+                html += f'        <div class="talking-point">{point}</div>\n'
+            html += "    </div>\n"
+        
+        # Gestione Obiezioni
+        if obiezioni:
+            html += """
+    <div class="section">
+        <h2>🛡️ Gestione Obiezioni</h2>
+"""
+            for ob in obiezioni:
+                html += f"""
+        <div class="obiezione-card">
+            <div class="obiezione">{ob.get('obiezione', '')}</div>
+            <div class="risposta">{ob.get('risposta', '')}</div>
+        </div>
+"""
+            html += "    </div>\n"
+        
+        # Target Consigliato
+        if target_consigliato:
+            html += f"""
+    <div class="section">
+        <h2>🎓 Target Consigliato</h2>
+        <div class="target-box">{target_consigliato}</div>
+    </div>
+"""
+        
+        # Lacune da conoscere
+        if lacune:
+            html += """
+    <div class="section">
+        <h2>⚠️ Lacune da Conoscere</h2>
+        <p style="color: #666;">Per non farsi cogliere impreparati:</p>
+"""
+            for lac in lacune:
+                html += f'        <div class="lacuna-item">{lac}</div>\n'
+            html += "    </div>\n"
+        
+        # Footer
+        html += """
+    <div class="footer">
+        <p>Report generato da <strong>CoreX - PromoIntelligence</strong> | Zanichelli</p>
+        <p style="font-size: 0.85em;">Documento riservato ad uso interno</p>
     </div>
 </body>
 </html>

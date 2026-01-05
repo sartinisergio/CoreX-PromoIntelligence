@@ -2149,60 +2149,103 @@ with tab6:
                                             framework_type
                                         )
                                         
-                                        # Mostra risultati
-                                        st.markdown("---")
-                                        st.subheader("🏆 Ranking Manuali")
+                                        # Salva tutto in session_state
+                                        st.session_state['manual_comparison'] = comparison
+                                        st.session_state['manual_comparison_subject'] = selected_subject
+                                        st.session_state['report_html'] = analyzer.generate_comparison_report_html(comparison)
+                                        st.session_state['comparison_json'] = json.dumps(comparison, indent=2, ensure_ascii=False, default=str)
                                         
-                                        for i, m in enumerate(comparison['ranking']):
-                                            rank = i + 1
-                                            medal = "🥇" if rank == 1 else ("🥈" if rank == 2 else ("🥉" if rank == 3 else f"{rank}."))
-                                            cov = m.get('weighted_coverage', m.get('coverage', 0)) or 0
-                                            
-                                            col1, col2, col3, col4 = st.columns([0.5, 2.5, 1, 1])
-                                            with col1:
-                                                st.write(medal)
-                                            with col2:
-                                                st.write(f"**{m['manual_title']}**")
-                                                st.caption(f"{m['author']} — {m['publisher']}")
-                                            with col3:
-                                                if cov > 0:
-                                                    st.metric("Copertura", f"{cov:.0f}%")
-                                            with col4:
-                                                st.write(m.get('judgment', 'N/D'))
-                                        
-                                        # Confronto per modulo
-                                        if comparison['modules_comparison']:
-                                            st.markdown("---")
-                                            st.subheader("📊 Confronto per Modulo")
-                                            
-                                            for mod in comparison['modules_comparison']:
-                                                with st.expander(f"**{mod['module_name']}** — Media: {mod['avg_coverage']:.0f}%"):
-                                                    for ms in mod['manual_scores']:
-                                                        bar_pct = min(ms['coverage'], 100)
-                                                        st.write(f"{ms['manual']}: **{ms['coverage']:.0f}%**")
-                                                        st.progress(bar_pct / 100)
-                                        
-                                        # Download report
-                                        st.markdown("---")
-                                        report_html = analyzer.generate_comparison_report_html(comparison)
-                                        
-                                        col1, col2 = st.columns(2)
-                                        with col1:
-                                            st.download_button(
-                                                "📥 Scarica Report HTML",
-                                                report_html,
-                                                f"confronto_manuali_{selected_subject}_{datetime.now().strftime('%Y%m%d_%H%M')}.html",
-                                                "text/html",
-                                                use_container_width=True
+                                        with st.spinner("Generazione Brief Commerciale con AI..."):
+                                            st.session_state['commercial_html'] = analyzer.generate_commercial_comparison_report(
+                                                comparison, 
+                                                provider_id=selected_provider_id, 
+                                                model=selected_model
                                             )
-                                        with col2:
-                                            st.download_button(
-                                                "📥 Scarica JSON",
-                                                json.dumps(comparison, indent=2, ensure_ascii=False, default=str),
-                                                f"confronto_manuali_{selected_subject}_{datetime.now().strftime('%Y%m%d_%H%M')}.json",
-                                                "application/json",
-                                                use_container_width=True
-                                            )
+                                        
+                                        st.success("✅ Confronto completato!")
+                            
+                            # Mostra risultati se esistono
+                            if 'manual_comparison' in st.session_state:
+                                comparison = st.session_state['manual_comparison']
+                                
+                                st.markdown("---")
+                                st.subheader("🏆 Ranking Manuali")
+                                
+                                for i, m in enumerate(comparison['ranking']):
+                                    rank = i + 1
+                                    medal = "🥇" if rank == 1 else ("🥈" if rank == 2 else ("🥉" if rank == 3 else f"{rank}."))
+                                    cov = m.get('weighted_coverage', m.get('coverage', 0)) or 0
+                                    
+                                    col1, col2, col3, col4 = st.columns([0.5, 2.5, 1, 1])
+                                    with col1:
+                                        st.write(medal)
+                                    with col2:
+                                        st.write(f"**{m['manual_title']}**")
+                                        st.caption(f"{m['author']} — {m['publisher']}")
+                                    with col3:
+                                        if cov > 0:
+                                            st.metric("Copertura", f"{cov:.0f}%")
+                                    with col4:
+                                        st.write(m.get('judgment', 'N/D'))
+                                
+                                # Confronto per modulo
+                                if comparison['modules_comparison']:
+                                    st.markdown("---")
+                                    st.subheader("📊 Confronto per Modulo")
+                                    
+                                    for mod in comparison['modules_comparison']:
+                                        with st.expander(f"**{mod['module_name']}** — Media: {mod['avg_coverage']:.0f}%"):
+                                            for ms in mod['manual_scores']:
+                                                bar_pct = min(ms['coverage'], 100)
+                                                st.write(f"{ms['manual']}: **{ms['coverage']:.0f}%**")
+                                                st.progress(bar_pct / 100)
+                                
+                                # Download report
+                                st.markdown("---")
+                                st.subheader("📥 Scarica Report")
+                                
+                                col1, col2, col3 = st.columns(3)
+                                
+                                with col1:
+                                    st.download_button(
+                                        "🎯 Brief Commerciale",
+                                        st.session_state.get('commercial_html', ''),
+                                        f"brief_commerciale_{st.session_state.get('manual_comparison_subject', 'confronto')}_{datetime.now().strftime('%Y%m%d_%H%M')}.html",
+                                        "text/html",
+                                        use_container_width=True,
+                                        type="primary"
+                                    )
+                                
+                                with col2:
+                                    st.download_button(
+                                        "📊 Report Tecnico",
+                                        st.session_state.get('report_html', ''),
+                                        f"confronto_tecnico_{st.session_state.get('manual_comparison_subject', 'confronto')}_{datetime.now().strftime('%Y%m%d_%H%M')}.html",
+                                        "text/html",
+                                        use_container_width=True
+                                    )
+                                
+                                with col3:
+                                    st.download_button(
+                                        "📥 Dati JSON",
+                                        st.session_state.get('comparison_json', '{}'),
+                                        f"confronto_manuali_{st.session_state.get('manual_comparison_subject', 'confronto')}_{datetime.now().strftime('%Y%m%d_%H%M')}.json",
+                                        "application/json",
+                                        use_container_width=True
+                                    )
+                                
+                                # Anteprima
+                                with st.expander("👁️ Anteprima Brief Commerciale"):
+                                    st.components.v1.html(st.session_state.get('commercial_html', ''), height=600, scrolling=True)
+                                
+                                # Pulsante reset
+                                st.markdown("---")
+                                if st.button("🔄 Nuovo Confronto"):
+                                    for key in ['manual_comparison', 'manual_comparison_subject', 'report_html', 'comparison_json', 'commercial_html']:
+                                        if key in st.session_state:
+                                            del st.session_state[key]
+                                    st.rerun()
+                                        
     
         # === SUB-TAB 5: REPORT PROMOZIONE DA ARCHIVIO ===
         with man_tab5:
