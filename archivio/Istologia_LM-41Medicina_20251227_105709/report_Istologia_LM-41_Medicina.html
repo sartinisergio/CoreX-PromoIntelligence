@@ -1,0 +1,1334 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Analisi - Istologia</title>
+    
+        <style>
+            * { box-sizing: border-box; }
+            body { 
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+                margin: 0; 
+                padding: 20px 40px; 
+                background: #f5f7fa; 
+                color: #333;
+                line-height: 1.6;
+            }
+            .container { 
+                max-width: 1500px; 
+                margin: 0 auto; 
+                background: white; 
+                padding: 30px 40px; 
+                border-radius: 12px; 
+                box-shadow: 0 4px 6px rgba(0,0,0,0.07); 
+            }
+            h1 { 
+                color: #1a237e; 
+                border-bottom: 3px solid #3949ab; 
+                padding-bottom: 15px; 
+                margin-bottom: 10px;
+                font-size: 1.8em;
+            }
+            h2 { 
+                color: #283593; 
+                margin-top: 35px; 
+                margin-bottom: 15px;
+                font-size: 1.3em;
+                border-left: 4px solid #3949ab;
+                padding-left: 15px;
+            }
+            h3 {
+                color: #3949ab;
+                margin-top: 25px;
+                font-size: 1.1em;
+            }
+            .subtitle {
+                color: #666;
+                font-size: 1.05em;
+                margin-bottom: 25px;
+            }
+            
+            /* Summary Cards */
+            .summary-grid { 
+                display: grid; 
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+                gap: 15px; 
+                margin: 20px 0; 
+            }
+            .stat-card { 
+                background: linear-gradient(135deg, #e8eaf6, #c5cae9); 
+                padding: 18px; 
+                border-radius: 10px; 
+                text-align: center;
+            }
+            .stat-value { 
+                font-size: 2em; 
+                font-weight: bold; 
+                color: #1a237e; 
+            }
+            .stat-label { 
+                color: #5c6bc0; 
+                margin-top: 5px; 
+                font-size: 0.9em;
+            }
+            .stat-card.success { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); }
+            .stat-card.success .stat-value { color: #2e7d32; }
+            .stat-card.warning { background: linear-gradient(135deg, #fff3e0, #ffe0b2); }
+            .stat-card.warning .stat-value { color: #e65100; }
+            .stat-card.info { background: linear-gradient(135deg, #e3f2fd, #bbdefb); }
+            .stat-card.info .stat-value { color: #1565c0; }
+            
+            /* Level Badge */
+            .level-badge {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 50px;
+                padding: 4px 12px;
+                border-radius: 15px;
+                font-weight: bold;
+                font-size: 0.85em;
+            }
+            
+            /* Table Styles */
+            .data-table { 
+                width: 100%; 
+                border-collapse: collapse; 
+                margin: 15px 0; 
+                font-size: 0.92em;
+            }
+            .data-table th { 
+                background: #3949ab; 
+                color: white; 
+                padding: 12px 10px; 
+                text-align: left; 
+                font-weight: 600;
+            }
+            .data-table th:first-child { border-radius: 8px 0 0 0; }
+            .data-table th:last-child { border-radius: 0 8px 0 0; }
+            .data-table td { 
+                padding: 12px 10px; 
+                border-bottom: 1px solid #e0e0e0; 
+                vertical-align: top;
+            }
+            .data-table tr:hover { background: #f8f9ff; }
+            .data-table tr.row-high { background: #f1f8e9; }
+            .data-table tr.row-medium { background: #fffde7; }
+            .data-table tr.row-low { background: #ffebee; }
+            
+            /* Concepts Styling */
+            .concept-tag {
+                display: inline-block;
+                padding: 3px 10px;
+                margin: 2px 3px 2px 0;
+                border-radius: 12px;
+                font-size: 0.85em;
+            }
+            .freq-high { background: #c8e6c9; color: #2e7d32; }
+            .freq-medium { background: #fff3e0; color: #e65100; }
+            .freq-low { background: #e3f2fd; color: #1565c0; }
+            .no-data { color: #999; font-style: italic; }
+            .more-items {
+                color: #666;
+                font-style: italic;
+                font-size: 0.9em;
+            }
+            
+            /* Missing Items */
+            .missing-item {
+                display: inline-block;
+                padding: 3px 10px;
+                margin: 2px 3px 2px 0;
+                border-radius: 12px;
+                font-size: 0.85em;
+                background: #ffcdd2;
+                color: #c62828;
+            }
+            .all-covered {
+                color: #2e7d32;
+                font-weight: 500;
+            }
+            
+            /* Status Labels */
+            .status-high { color: #2e7d32; font-weight: 600; }
+            .status-medium { color: #f57c00; font-weight: 600; }
+            .status-low { color: #d32f2f; font-weight: 600; }
+            
+            /* Assessment Box */
+            .assessment-box {
+                padding: 20px 25px;
+                margin: 20px 0;
+                border-radius: 10px;
+                border-left: 5px solid;
+            }
+            .assessment-box.success { 
+                background: linear-gradient(135deg, #e8f5e9, #fff);
+                border-color: #4caf50;
+            }
+            .assessment-box.warning { 
+                background: linear-gradient(135deg, #fff3e0, #fff);
+                border-color: #ff9800;
+            }
+            .assessment-box.info { 
+                background: linear-gradient(135deg, #e3f2fd, #fff);
+                border-color: #2196f3;
+            }
+            .assessment-title { 
+                font-size: 1.1em; 
+                font-weight: bold; 
+                margin-bottom: 10px;
+            }
+            .assessment-score {
+                font-size: 2.8em;
+                font-weight: bold;
+                margin: 10px 0;
+            }
+            .score-high { color: #2e7d32; }
+            .score-medium { color: #f57c00; }
+            .score-low { color: #d32f2f; }
+            
+            /* Gap Section */
+            .gap-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                margin: 20px 0;
+            }
+            .gap-box {
+                padding: 20px;
+                border-radius: 10px;
+            }
+            .gap-box.reality {
+                background: #e8f5e9;
+                border: 1px solid #a5d6a7;
+            }
+            .gap-box.ideal {
+                background: #fff3e0;
+                border: 1px solid #ffcc80;
+            }
+            .gap-title {
+                font-weight: bold;
+                font-size: 1.05em;
+                margin-bottom: 10px;
+            }
+            .gap-item {
+                display: inline-block;
+                background: white;
+                padding: 4px 12px;
+                margin: 3px;
+                border-radius: 15px;
+                font-size: 0.9em;
+            }
+            
+            /* Progress Bar */
+            .progress-bar {
+                width: 100%;
+                height: 8px;
+                background: #e0e0e0;
+                border-radius: 4px;
+                overflow: hidden;
+                margin-top: 5px;
+            }
+            .progress-fill {
+                height: 100%;
+                border-radius: 4px;
+                transition: width 0.3s ease;
+            }
+            .progress-high { background: #4caf50; }
+            .progress-medium { background: #ff9800; }
+            .progress-low { background: #f44336; }
+            
+            /* Footer */
+            .report-footer {
+                margin-top: 40px;
+                padding-top: 20px;
+                border-top: 1px solid #e0e0e0;
+                color: #888;
+                font-size: 0.85em;
+                text-align: center;
+            }
+            
+            /* Syllabus Profile */
+            .profile-badge {
+                display: inline-block;
+                padding: 4px 12px;
+                border-radius: 15px;
+                font-size: 0.85em;
+                font-weight: 500;
+            }
+            .profile-completo { background: #c8e6c9; color: #2e7d32; }
+            .profile-standard { background: #fff3e0; color: #e65100; }
+            .profile-essenziale { background: #e3f2fd; color: #1565c0; }
+            .profile-ridotto { background: #ffcdd2; color: #c62828; }
+            
+            /* Responsive */
+            @media (max-width: 900px) {
+                .gap-container { grid-template-columns: 1fr; }
+                body { padding: 10px; }
+                .container { padding: 15px; }
+                .data-table { font-size: 0.85em; }
+            }
+        </style>
+        
+</head>
+<body>
+<div class="container">
+    <h1>📊 Report Analisi: Istologia</h1>
+    <p class="subtitle">
+        <strong>Classi di laurea:</strong> LM-41Medicina | 
+        <strong>Framework ideale:</strong> Framework Unico Valutazione Istologia ed Embriologia Umana - Clinico |
+        <strong>Data:</strong> 05/01/2026 13:02
+    </p>
+    
+    <!-- Valutazione Complessiva -->
+    <div class="assessment-box success">
+        <div class="assessment-title">📐 Copertura Complessiva del Framework Ideale</div>
+        <div class="assessment-score score-high">100%</div>
+        <div><strong>Buon allineamento</strong></div>
+        <div style="margin-top: 8px; color: #666;">Il framework ideale è sostanzialmente coperto, con alcune lacune</div>
+        <div class="progress-bar" style="margin-top: 15px;">
+            <div class="progress-fill progress-high" 
+                 style="width: 100.0%;"></div>
+        </div>
+    </div>
+    
+    <!-- Statistiche Riassuntive -->
+    <div class="summary-grid">
+        <div class="stat-card">
+            <div class="stat-value">40</div>
+            <div class="stat-label">Programmi analizzati</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">979</div>
+            <div class="stat-label">Concetti estratti</div>
+        </div>
+        <div class="stat-card info">
+            <div class="stat-value">182</div>
+            <div class="stat-label">Concetti mappati</div>
+        </div>
+        <div class="stat-card success">
+            <div class="stat-value">12/12</div>
+            <div class="stat-label">Contenuti coperti</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">4</div>
+            <div class="stat-label">Moduli ideali</div>
+        </div>
+    </div>
+    
+    <!-- ============================================ -->
+    <!-- TABELLA MODULI IDEALI CON COPERTURA REALE -->
+    <!-- ============================================ -->
+    
+    <h2>📚 Analisi per Modulo del Framework Ideale</h2>
+    <p>Ogni riga rappresenta un modulo del framework ideale. La copertura indica quanto di quel modulo 
+    è effettivamente presente nei programmi universitari analizzati.</p>
+    
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th style="width: 18%;">Modulo</th>
+                <th style="width: 10%;">Copertura</th>
+                <th style="width: 8%;">Livello</th>
+                <th style="width: 32%;">Concetti trovati</th>
+                <th style="width: 32%;">Contenuti mancanti</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr class="row-high">
+                <td>
+                    <strong>Metodi e Citologia Fondamentale</strong><br>
+                    <small style="color:#666;">3/3 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-high" style="font-size: 1.2em;">100%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-high" 
+                             style="width: 100.0%;"></div>
+                    </div>
+                </td>
+                <td style="text-align: center;">
+                    🟢 <span class="level-badge" style="background:#2e7d32;color:white;">5/5</span>
+                </td>
+                <td><span class="concept-tag freq-low">microscopia ottica (15%)</span> <span class="concept-tag freq-low">microscopia elettronica (10%)</span> <span class="concept-tag freq-low">classificazioni istologiche (8%)</span> <span class="concept-tag freq-low">analisi istologiche (8%)</span> <span class="concept-tag freq-low">attività formativa (8%)</span> <span class="concept-tag freq-low">tecniche di istochimica (5%)</span> <span class="more-items">+20 altri</span></td>
+                <td><span class="all-covered">✓ Tutti coperti</span></td>
+            </tr>
+
+            <tr class="row-high">
+                <td>
+                    <strong>Istologia Generale I: Epiteli e Dinamiche</strong><br>
+                    <small style="color:#666;">3/3 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-high" style="font-size: 1.2em;">100%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-high" 
+                             style="width: 100.0%;"></div>
+                    </div>
+                </td>
+                <td style="text-align: center;">
+                    🟢 <span class="level-badge" style="background:#2e7d32;color:white;">5/5</span>
+                </td>
+                <td><span class="concept-tag freq-medium">istogenesi (35%)</span> <span class="concept-tag freq-low">epiteli di rivestimento (25%)</span> <span class="concept-tag freq-low">cellule staminali (22%)</span> <span class="concept-tag freq-low">classificazione epiteli (15%)</span> <span class="concept-tag freq-low">precursori staminali (10%)</span> <span class="concept-tag freq-low">cellule gliali (10%)</span> <span class="more-items">+48 altri</span></td>
+                <td><span class="all-covered">✓ Tutti coperti</span></td>
+            </tr>
+
+            <tr class="row-high">
+                <td>
+                    <strong>Istologia Generale II: Tessuti Speciali</strong><br>
+                    <small style="color:#666;">3/3 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-high" style="font-size: 1.2em;">100%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-high" 
+                             style="width: 100.0%;"></div>
+                    </div>
+                </td>
+                <td style="text-align: center;">
+                    🟢 <span class="level-badge" style="background:#2e7d32;color:white;">5/5</span>
+                </td>
+                <td><span class="concept-tag freq-medium">tessuto nervoso (45%)</span> <span class="concept-tag freq-medium">tessuto muscolare (35%)</span> <span class="concept-tag freq-medium">tessuto connettivo (35%)</span> <span class="concept-tag freq-medium">tessuto adiposo (32%)</span> <span class="concept-tag freq-low">tessuto osseo (28%)</span> <span class="concept-tag freq-low">tessuto cartilagineo (20%)</span> <span class="more-items">+35 altri</span></td>
+                <td><span class="all-covered">✓ Tutti coperti</span></td>
+            </tr>
+
+            <tr class="row-high">
+                <td>
+                    <strong>Embriologia Umana</strong><br>
+                    <small style="color:#666;">3/3 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-high" style="font-size: 1.2em;">100%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-high" 
+                             style="width: 100.0%;"></div>
+                    </div>
+                </td>
+                <td style="text-align: center;">
+                    🟢 <span class="level-badge" style="background:#2e7d32;color:white;">5/5</span>
+                </td>
+                <td><span class="concept-tag freq-high">sviluppo embrionale (62%)</span> <span class="concept-tag freq-low">gametogenesi (25%)</span> <span class="concept-tag freq-low">annessi embrionali (15%)</span> <span class="concept-tag freq-low">difetti di sviluppo (12%)</span> <span class="concept-tag freq-low">sviluppo fetale (12%)</span> <span class="concept-tag freq-low">malformazioni congenite (10%)</span> <span class="more-items">+55 altri</span></td>
+                <td><span class="all-covered">✓ Tutti coperti</span></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <h2>📈 Riepilogo per Livello di Copertura</h2>
+    <div class="summary-grid">
+        <div class="stat-card success">
+            <div class="stat-value">4</div>
+            <div class="stat-label">Ben coperti (≥70%)</div>
+        </div>
+        <div class="stat-card warning">
+            <div class="stat-value">0</div>
+            <div class="stat-label">Parzialmente (40-70%)</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">0</div>
+            <div class="stat-label">Poco coperti (<40%)</div>
+        </div>
+    </div>
+
+    <h2>🔍 Analisi dei Gap</h2>
+    <div class="gap-container">
+
+        <div class="gap-box reality">
+            <div class="gap-title">✅ Nella REALTÀ ma non nell'IDEALE</div>
+            <p style="font-size: 0.9em; color: #666; margin-bottom: 10px;">
+                Questi argomenti sono insegnati frequentemente ma non previsti nel modello
+            </p>
+            <div>
+<span class="gap-item">istologia (42%)</span>
+<span class="gap-item">fecondazione (42%)</span>
+
+            </div>
+            <p style="font-size: 0.85em; color: #2e7d32; margin-top: 10px;">
+                <strong>Azione:</strong> Valutare l'inserimento nel framework ideale
+            </p>
+        </div>
+
+    </div>
+
+    <h2>📄 Dettaglio Programmi Analizzati</h2>
+    <p>Per ogni programma vengono mostrate due metriche:</p>
+    <ul style="margin: 10px 0 20px 20px; color: #666;">
+        <li><strong>Ampiezza:</strong> Numero di concetti estratti da questo programma (rispetto alla media)</li>
+        <li><strong>Copertura Framework Ideale:</strong> Percentuale di contenuti del framework ideale coperti da questo specifico programma</li>
+    </ul>
+    
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Università</th>
+                <th>Docente</th>
+                <th>Classe</th>
+                <th style="width: 12%;">Ampiezza</th>
+                <th style="width: 18%;">Copertura Framework Ideale</th>
+                <th style="width: 12%;">Profilo</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>Unknown</td>
+                <td>Roma Tor Vergata</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-low">Ridotto</span><br>
+                    <small style="color: #999;">32 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-medium" style="font-size: 1.1em;">25%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-medium" 
+                             style="width: 25.0%;"></div>
+                    </div>
+                    <small style="color: #999;">3/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-essenziale">essenziale</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Ancona</td>
+                <td>Politecnica</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-high">Molto ampio</span><br>
+                    <small style="color: #999;">105 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-high" style="font-size: 1.1em;">75%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-high" 
+                             style="width: 75.0%;"></div>
+                    </div>
+                    <small style="color: #999;">9/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-completo">completo</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Istologia</td>
+                <td>2</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-high">Molto ampio</span><br>
+                    <small style="color: #999;">60 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-medium" style="font-size: 1.1em;">33%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-medium" 
+                             style="width: 33.3%;"></div>
+                    </div>
+                    <small style="color: #999;">4/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-essenziale">essenziale</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Roma</td>
+                <td>Cattolica</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-low">Ridotto</span><br>
+                    <small style="color: #999;">32 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-medium" style="font-size: 1.1em;">33%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-medium" 
+                             style="width: 33.3%;"></div>
+                    </div>
+                    <small style="color: #999;">4/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-essenziale">essenziale</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Firenze</td>
+                <td>canale 2</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-low">Ridotto</span><br>
+                    <small style="color: #999;">22 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-low" style="font-size: 1.1em;">17%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-low" 
+                             style="width: 16.7%;"></div>
+                    </div>
+                    <small style="color: #999;">2/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-ridotto">ridotto</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Roma Sapienza</td>
+                <td>HT</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-high">Molto ampio</span><br>
+                    <small style="color: #999;">96 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-high" style="font-size: 1.1em;">83%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-high" 
+                             style="width: 83.3%;"></div>
+                    </div>
+                    <small style="color: #999;">10/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-completo">completo</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Unknown</td>
+                <td>Foggia</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-medium">Nella media</span><br>
+                    <small style="color: #999;">49 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-low" style="font-size: 1.1em;">17%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-low" 
+                             style="width: 16.7%;"></div>
+                    </div>
+                    <small style="color: #999;">2/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-ridotto">ridotto</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Bologna</td>
+                <td>L-Z</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-high">Molto ampio</span><br>
+                    <small style="color: #999;">91 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-medium" style="font-size: 1.1em;">50%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-medium" 
+                             style="width: 50.0%;"></div>
+                    </div>
+                    <small style="color: #999;">6/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-standard">standard</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Unknown</td>
+                <td>Siena</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-medium">Nella media</span><br>
+                    <small style="color: #999;">49 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-medium" style="font-size: 1.1em;">25%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-medium" 
+                             style="width: 25.0%;"></div>
+                    </div>
+                    <small style="color: #999;">3/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-essenziale">essenziale</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Unknown</td>
+                <td>Padova</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-low">Ridotto</span><br>
+                    <small style="color: #999;">34 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-low" style="font-size: 1.1em;">17%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-low" 
+                             style="width: 16.7%;"></div>
+                    </div>
+                    <small style="color: #999;">2/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-ridotto">ridotto</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Vanvitelli</td>
+                <td>NA</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-medium">Nella media</span><br>
+                    <small style="color: #999;">55 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-medium" style="font-size: 1.1em;">42%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-medium" 
+                             style="width: 41.7%;"></div>
+                    </div>
+                    <small style="color: #999;">5/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-standard">standard</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Vanvitelli</td>
+                <td>CE</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-medium">Nella media</span><br>
+                    <small style="color: #999;">42 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-medium" style="font-size: 1.1em;">50%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-medium" 
+                             style="width: 50.0%;"></div>
+                    </div>
+                    <small style="color: #999;">6/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-standard">standard</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Brescia</td>
+                <td>canale M-Z</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-low">Ridotto</span><br>
+                    <small style="color: #999;">38 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-medium" style="font-size: 1.1em;">25%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-medium" 
+                             style="width: 25.0%;"></div>
+                    </div>
+                    <small style="color: #999;">3/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-essenziale">essenziale</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Polo Centrale</td>
+                <td>Policlinico</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-high">Molto ampio</span><br>
+                    <small style="color: #999;">68 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-high" style="font-size: 1.1em;">58%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-high" 
+                             style="width: 58.3%;"></div>
+                    </div>
+                    <small style="color: #999;">7/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-completo">completo</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Polo Centrale</td>
+                <td>San Donato</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-high">Molto ampio</span><br>
+                    <small style="color: #999;">68 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-high" style="font-size: 1.1em;">58%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-high" 
+                             style="width: 58.3%;"></div>
+                    </div>
+                    <small style="color: #999;">7/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-completo">completo</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Istologia</td>
+                <td>1</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-medium">Nella media</span><br>
+                    <small style="color: #999;">52 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-medium" style="font-size: 1.1em;">42%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-medium" 
+                             style="width: 41.7%;"></div>
+                    </div>
+                    <small style="color: #999;">5/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-standard">standard</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Varese</td>
+                <td>Insubria</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-medium">Nella media</span><br>
+                    <small style="color: #999;">39 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-high" style="font-size: 1.1em;">67%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-high" 
+                             style="width: 66.7%;"></div>
+                    </div>
+                    <small style="color: #999;">8/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-completo">completo</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Unknown</td>
+                <td>Udine</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-low">Ridotto</span><br>
+                    <small style="color: #999;">36 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-medium" style="font-size: 1.1em;">42%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-medium" 
+                             style="width: 41.7%;"></div>
+                    </div>
+                    <small style="color: #999;">5/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-standard">standard</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Palermo</td>
+                <td>CL</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-low">Ridotto</span><br>
+                    <small style="color: #999;">27 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-low" style="font-size: 1.1em;">17%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-low" 
+                             style="width: 16.7%;"></div>
+                    </div>
+                    <small style="color: #999;">2/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-ridotto">ridotto</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Unknown</td>
+                <td>Perugia</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-low">Ridotto</span><br>
+                    <small style="color: #999;">23 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-low" style="font-size: 1.1em;">17%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-low" 
+                             style="width: 16.7%;"></div>
+                    </div>
+                    <small style="color: #999;">2/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-ridotto">ridotto</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Milano</td>
+                <td>Polo Vialba</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-medium">Nella media</span><br>
+                    <small style="color: #999;">44 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-medium" style="font-size: 1.1em;">25%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-medium" 
+                             style="width: 25.0%;"></div>
+                    </div>
+                    <small style="color: #999;">3/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-essenziale">essenziale</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Unknown</td>
+                <td>Piemonte Orientale</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-low">Ridotto</span><br>
+                    <small style="color: #999;">30 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-medium" style="font-size: 1.1em;">25%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-medium" 
+                             style="width: 25.0%;"></div>
+                    </div>
+                    <small style="color: #999;">3/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-essenziale">essenziale</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Bari</td>
+                <td>A-K</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-low">Ridotto</span><br>
+                    <small style="color: #999;">38 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-high" style="font-size: 1.1em;">58%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-high" 
+                             style="width: 58.3%;"></div>
+                    </div>
+                    <small style="color: #999;">7/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-completo">completo</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Pisa</td>
+                <td>M-Z</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-medium">Nella media</span><br>
+                    <small style="color: #999;">50 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-medium" style="font-size: 1.1em;">42%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-medium" 
+                             style="width: 41.7%;"></div>
+                    </div>
+                    <small style="color: #999;">5/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-standard">standard</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Bari</td>
+                <td>L-Z</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-low">Ridotto</span><br>
+                    <small style="color: #999;">37 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-high" style="font-size: 1.1em;">58%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-high" 
+                             style="width: 58.3%;"></div>
+                    </div>
+                    <small style="color: #999;">7/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-completo">completo</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Unknown</td>
+                <td>Istologia ed Embriologia, Genetica CI</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-medium">Nella media</span><br>
+                    <small style="color: #999;">43 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-low" style="font-size: 1.1em;">17%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-low" 
+                             style="width: 16.7%;"></div>
+                    </div>
+                    <small style="color: #999;">2/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-ridotto">ridotto</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Unknown</td>
+                <td>Genova</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-medium">Nella media</span><br>
+                    <small style="color: #999;">54 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-medium" style="font-size: 1.1em;">50%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-medium" 
+                             style="width: 50.0%;"></div>
+                    </div>
+                    <small style="color: #999;">6/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-standard">standard</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Unknown</td>
+                <td>Salerno</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-high">Molto ampio</span><br>
+                    <small style="color: #999;">78 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-high" style="font-size: 1.1em;">75%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-high" 
+                             style="width: 75.0%;"></div>
+                    </div>
+                    <small style="color: #999;">9/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-completo">completo</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Enna</td>
+                <td>canale 2</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-medium">Nella media</span><br>
+                    <small style="color: #999;">48 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-medium" style="font-size: 1.1em;">25%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-medium" 
+                             style="width: 25.0%;"></div>
+                    </div>
+                    <small style="color: #999;">3/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-essenziale">essenziale</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Pavia</td>
+                <td>(no programma)</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-low">Ridotto</span><br>
+                    <small style="color: #999;">22 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-low" style="font-size: 1.1em;">8%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-low" 
+                             style="width: 8.3%;"></div>
+                    </div>
+                    <small style="color: #999;">1/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-ridotto">ridotto</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Unknown</td>
+                <td>Napoli Federico II</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-high">Molto ampio</span><br>
+                    <small style="color: #999;">62 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-high" style="font-size: 1.1em;">75%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-high" 
+                             style="width: 75.0%;"></div>
+                    </div>
+                    <small style="color: #999;">9/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-completo">completo</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Unknown</td>
+                <td>Trieste</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-low">Ridotto</span><br>
+                    <small style="color: #999;">19 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-low" style="font-size: 1.1em;">8%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-low" 
+                             style="width: 8.3%;"></div>
+                    </div>
+                    <small style="color: #999;">1/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-ridotto">ridotto</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Torino</td>
+                <td>canale D</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-medium">Nella media</span><br>
+                    <small style="color: #999;">50 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-high" style="font-size: 1.1em;">67%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-high" 
+                             style="width: 66.7%;"></div>
+                    </div>
+                    <small style="color: #999;">8/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-completo">completo</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Unknown</td>
+                <td>Palermo</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-low">Ridotto</span><br>
+                    <small style="color: #999;">35 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-low" style="font-size: 1.1em;">8%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-low" 
+                             style="width: 8.3%;"></div>
+                    </div>
+                    <small style="color: #999;">1/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-ridotto">ridotto</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Unknown</td>
+                <td>Ferrara</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-medium">Nella media</span><br>
+                    <small style="color: #999;">55 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-high" style="font-size: 1.1em;">58%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-high" 
+                             style="width: 58.3%;"></div>
+                    </div>
+                    <small style="color: #999;">7/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-completo">completo</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>A-K</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-medium">Nella media</span><br>
+                    <small style="color: #999;">56 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-medium" style="font-size: 1.1em;">50%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-medium" 
+                             style="width: 50.0%;"></div>
+                    </div>
+                    <small style="color: #999;">6/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-standard">standard</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Pisa</td>
+                <td>A-K</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-medium">Nella media</span><br>
+                    <small style="color: #999;">56 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-medium" style="font-size: 1.1em;">42%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-medium" 
+                             style="width: 41.7%;"></div>
+                    </div>
+                    <small style="color: #999;">5/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-standard">standard</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Unknown</td>
+                <td>L'Aquila</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-low">Ridotto</span><br>
+                    <small style="color: #999;">28 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-medium" style="font-size: 1.1em;">25%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-medium" 
+                             style="width: 25.0%;"></div>
+                    </div>
+                    <small style="color: #999;">3/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-essenziale">essenziale</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Unknown</td>
+                <td>Milano Bicocca</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-high">Molto ampio</span><br>
+                    <small style="color: #999;">88 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-high" style="font-size: 1.1em;">83%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-high" 
+                             style="width: 83.3%;"></div>
+                    </div>
+                    <small style="color: #999;">10/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-completo">completo</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Unknown</td>
+                <td>Verona</td>
+                <td>LM-41Medicina</td>
+                <td style="text-align: center;">
+                    <span class="status-low">Ridotto</span><br>
+                    <small style="color: #999;">30 concetti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="status-medium" style="font-size: 1.1em;">25%</span>
+                    <div class="progress-bar" style="margin-top: 5px;">
+                        <div class="progress-fill progress-medium" 
+                             style="width: 25.0%;"></div>
+                    </div>
+                    <small style="color: #999;">3/12 contenuti</small>
+                </td>
+                <td style="text-align: center;">
+                    <span class="profile-badge profile-essenziale">essenziale</span>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    
+    <div style="background: #f5f5f5; padding: 15px; border-radius: 8px; margin-top: 15px;">
+        <strong>Legenda Profili:</strong><br>
+        <span class="profile-badge profile-completo" style="margin: 5px;">Completo</span> Copertura ≥55% del framework ideale<br>
+        <span class="profile-badge profile-standard" style="margin: 5px;">Standard</span> Copertura 40-55%<br>
+        <span class="profile-badge profile-essenziale" style="margin: 5px;">Essenziale</span> Copertura 25-40%<br>
+        <span class="profile-badge profile-ridotto" style="margin: 5px;">Ridotto</span> Copertura <25%
+    </div>
+
+    <div class="report-footer">
+        Report generato da <strong>CoreX v3.2</strong> — Zanichelli<br>
+        Mapping su Framework Ideale: Framework Unico Valutazione Istologia ed Embriologia Umana - Clinico<br>
+        05/01/2026 13:02:13
+    </div>
+</div>
+</body>
+</html>

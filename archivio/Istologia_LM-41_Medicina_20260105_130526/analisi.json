@@ -1,0 +1,14 @@
+{
+  "name": "Istologia_LM-41_Medicina",
+  "materia": "Istologia",
+  "classi": [
+    "LM-41Medicina"
+  ],
+  "type": "single",
+  "created": "2026-01-05T13:02:13.655838",
+  "n_syllabus": 40,
+  "n_concepts": 979,
+  "n_modules": 15,
+  "coverage": 100.0,
+  "judgment": "Buon allineamento"
+}
