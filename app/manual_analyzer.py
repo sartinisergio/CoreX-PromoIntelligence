@@ -193,7 +193,7 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
                     {"role": "system", "content": "Sei un analista esperto di manuali universitari. Rispondi SOLO con JSON valido."},
                     {"role": "user", "content": prompt}
                 ],
-                temperature=0.1,
+                temperature=0.0,
                 max_tokens=4000
             )
             response_text = response.choices[0].message.content.strip()
@@ -323,7 +323,7 @@ Rispondi SOLO con JSON valido:
                     },
                     {"role": "user", "content": prompt}
                 ],
-                temperature=0.4,
+                temperature=0.0,
                 max_tokens=3500
             )
             
@@ -1067,128 +1067,365 @@ Rispondi SOLO con JSON valido:
         
         return html
 
-    def generate_commercial_comparison_report(self, comparison: Dict, provider_id: str = "openai", model: str = "gpt-4o-mini") -> str:
+    def generate_commercial_comparison_report(self, comparison: Dict, zanichelli_manual: Dict = None, competitor_manual: Dict = None, provider_id: str = "openai", model: str = "gpt-4o-mini") -> str:
         """
         Genera report HTML COMMERCIALE per il confronto tra manuali.
-        Include talking points, gestione obiezioni e consigli per il promotore.
+        v4.1 - Con gestione sicura delle chiavi mancanti.
         """
         ranking = comparison.get("ranking", [])
         modules_comparison = comparison.get("modules_comparison", [])
         framework_name = comparison.get("framework_name", "N/D")
         
-        # Identifica manuale Zanichelli e competitor
-        zanichelli_manual = None
-        competitor_manuals = []
-        for m in ranking:
-            if m.get("publisher", "").lower() == "zanichelli":
-                zanichelli_manual = m
-            else:
-                competitor_manuals.append(m)
+        if len(ranking) < 2:
+            return "<div class='error'>Servono almeno 2 manuali per il confronto commerciale</div>"
         
-        # Se non c'è Zanichelli, usa il primo come "nostro"
-        if not zanichelli_manual and ranking:
-            zanichelli_manual = ranking[0]
-            competitor_manuals = ranking[1:]
+        # =====================================================================
+        # STEP 1: Identifica Zanichelli e Competitor
+        # =====================================================================
+        zan_data = None
+        comp_data = None
         
-        # Genera talking points con LLM
+        for r in ranking:
+            publisher_lower = r.get("publisher", "").lower()
+            if "zanichelli" in publisher_lower:
+                zan_data = r
+            elif comp_data is None:
+                comp_data = r
+        
+        if not zan_data:
+            zan_data = ranking[0]
+        if not comp_data:
+            comp_data = ranking[1] if len(ranking) > 1 else ranking[0]
+        
+        # =====================================================================
+        # STEP 2: Estrai struttura COMPLETA dei manuali (se disponibili)
+        # =====================================================================
+        def extract_chapter_details(manual_dict):
+            if not manual_dict:
+                return {}
+            chapters_index = {}
+            for ch in manual_dict.get("chapters", []):
+                ch_num = ch.get("number", 0)
+                if ch_num is None:
+                    continue
+                ch_title = ch.get("title", "")
+                sections_info = []
+                for sec in ch.get("sections", [])[:10]:
+                    sec_title = sec.get("title", "")
+                    if sec_title:
+                        sections_info.append(sec_title)
+                chapters_index[ch_num] = {
+                    "num": ch_num,
+                    "title": ch_title,
+                    "sections": sections_info
+                }
+            return chapters_index
+        
+        zan_ch_index = extract_chapter_details(zanichelli_manual)
+        comp_ch_index = extract_chapter_details(competitor_manual)
+        
+        # =====================================================================
+        # STEP 3: Costruisci analisi DETTAGLIATA per ogni modulo
+        # =====================================================================
+        zan_modules = zan_data.get("modules_analysis", [])
+        comp_modules = comp_data.get("modules_analysis", [])
+        
+        rich_module_analysis = []
+        
+        for mod_comp in modules_comparison:
+            module_id = mod_comp.get("module_id")
+            module_name = mod_comp.get("module_name", "")
+            
+            zan_mod = next((m for m in zan_modules if m.get("module_id") == module_id), {})
+            comp_mod = next((m for m in comp_modules if m.get("module_id") == module_id), {})
+            
+            zan_coverage = zan_mod.get("coverage_percentage", zan_mod.get("manual_coverage", 0))
+            comp_coverage = comp_mod.get("coverage_percentage", comp_mod.get("manual_coverage", 0))
+            
+            # Estrai contenuti Zanichelli
+            zan_contents = []
+            zan_missing = []
+            zan_chapter_nums = set()
+            
+            for cm in zan_mod.get("content_matches", []):
+                if cm.get("matched_by"):
+                    ch_num = cm.get("chapter", 0)
+                    ch_info = zan_ch_index.get(ch_num, {})
+                    zan_contents.append({
+                        "content": cm.get("content", ""),
+                        "found_in": cm.get("matched_by", ""),
+                        "chapter_num": ch_num,
+                        "chapter_title": ch_info.get("title", "")
+                    })
+                    if ch_num:
+                        zan_chapter_nums.add(ch_num)
+                else:
+                    content = cm.get("content", "")
+                    if content:
+                        zan_missing.append(content)
+            
+            # Estrai contenuti Competitor
+            comp_contents = []
+            comp_missing = []
+            comp_chapter_nums = set()
+            
+            for cm in comp_mod.get("content_matches", []):
+                if cm.get("matched_by"):
+                    ch_num = cm.get("chapter", 0)
+                    ch_info = comp_ch_index.get(ch_num, {})
+                    comp_contents.append({
+                        "content": cm.get("content", ""),
+                        "found_in": cm.get("matched_by", ""),
+                        "chapter_num": ch_num,
+                        "chapter_title": ch_info.get("title", "")
+                    })
+                    if ch_num:
+                        comp_chapter_nums.add(ch_num)
+                else:
+                    content = cm.get("content", "")
+                    if content:
+                        comp_missing.append(content)
+            
+            # Trova contenuti ESCLUSIVI
+            zan_content_texts = set(c["content"].lower() for c in zan_contents if c.get("content"))
+            comp_content_texts = set(c["content"].lower() for c in comp_contents if c.get("content"))
+            
+            only_zan = [c for c in zan_contents if c.get("content", "").lower() not in comp_content_texts]
+            only_comp = [c for c in comp_contents if c.get("content", "").lower() not in zan_content_texts]
+            
+            # Costruisci lista capitoli con titoli
+            zan_chapters_list = []
+            for ch_num in sorted(zan_chapter_nums):
+                ch_info = zan_ch_index.get(ch_num, {})
+                zan_chapters_list.append({
+                    "num": ch_num,
+                    "title": ch_info.get("title", "")
+                })
+            
+            comp_chapters_list = []
+            for ch_num in sorted(comp_chapter_nums):
+                ch_info = comp_ch_index.get(ch_num, {})
+                comp_chapters_list.append({
+                    "num": ch_num,
+                    "title": ch_info.get("title", "")
+                })
+            
+            diff = zan_coverage - comp_coverage
+            
+            rich_module_analysis.append({
+                "module_name": module_name,
+                "zan_coverage": zan_coverage,
+                "comp_coverage": comp_coverage,
+                "diff": diff,
+                "zan_contents": zan_contents[:8],
+                "comp_contents": comp_contents[:8],
+                "only_in_zan": only_zan[:5],
+                "only_in_comp": only_comp[:5],
+                "zan_missing": zan_missing[:4],
+                "comp_missing": comp_missing[:4],
+                "zan_chapters": zan_chapters_list[:5],
+                "comp_chapters": comp_chapters_list[:5],
+                "is_significant": abs(diff) >= 10 or len(only_zan) >= 2 or len(only_comp) >= 2
+            })
+        
+        # =====================================================================
+        # STEP 4: Seleziona moduli rilevanti per il brief
+        # =====================================================================
+        zan_wins = [m for m in rich_module_analysis if m["diff"] > 5 or len(m["only_in_zan"]) >= 2]
+        zan_wins.sort(key=lambda x: (len(x["only_in_zan"]), x["diff"]), reverse=True)
+        
+        zan_loses = [m for m in rich_module_analysis if m["diff"] < -5 or len(m["only_in_comp"]) >= 2]
+        zan_loses.sort(key=lambda x: (len(x["only_in_comp"]), -x["diff"]), reverse=True)
+        
+        zan_info = {
+            "title": zan_data.get("manual_title", "N/D"),
+            "author": zan_data.get("author", "N/D"),
+            "structure": zan_data.get("structure_label", ""),
+            "n_chapters": zan_data.get("n_chapters", 0)
+        }
+        
+        comp_info = {
+            "title": comp_data.get("manual_title", "N/D"),
+            "author": comp_data.get("author", "N/D"),
+            "publisher": comp_data.get("publisher", "N/D"),
+            "structure": comp_data.get("structure_label", ""),
+            "n_chapters": comp_data.get("n_chapters", 0)
+        }
+        
+        # =====================================================================
+        # STEP 5: Genera brief con LLM
+        # =====================================================================
+        executive_summary = ""
         talking_points = []
         obiezioni = []
-        target_consigliato = ""
-        executive_summary = ""
+        target_recommendations = []
+        lacune = []
         
-        if self.use_llm and zanichelli_manual:
+        if self.use_llm:
             try:
                 from app.llm_provider import get_llm_client
                 
-                # Prepara dati per LLM
-                zan_data = {
-                    "title": zanichelli_manual.get("manual_title"),
-                    "author": zanichelli_manual.get("author"),
-                    "coverage": zanichelli_manual.get("coverage", 0),
-                    "n_chapters": zanichelli_manual.get("n_chapters", 0),
-                    "structure": zanichelli_manual.get("structure_label", ""),
-                    "judgment": zanichelli_manual.get("judgment", "")
-                }
-                
-                comp_data = []
-                for c in competitor_manuals[:2]:
-                    comp_data.append({
-                        "title": c.get("manual_title"),
-                        "author": c.get("author"),
-                        "publisher": c.get("publisher"),
-                        "coverage": c.get("coverage", 0),
-                        "n_chapters": c.get("n_chapters", 0),
-                        "structure": c.get("structure_label", "")
+                # Prepara dati per prompt - WINS
+                wins_for_prompt = []
+                for m in zan_wins[:5]:
+                    nostri_cap = []
+                    for c in m["zan_chapters"][:3]:
+                        cap_str = f"Cap. {c.get('num', '?')}"
+                        if c.get('title'):
+                            cap_str += f" '{c.get('title')}'"
+                        nostri_cap.append(cap_str)
+                    
+                    loro_cap = []
+                    for c in m["comp_chapters"][:3]:
+                        cap_str = f"Cap. {c.get('num', '?')}"
+                        if c.get('title'):
+                            cap_str += f" '{c.get('title')}'"
+                        loro_cap.append(cap_str)
+                    
+                    contenuti_esclusivi = []
+                    for c in m["only_in_zan"][:4]:
+                        desc = f"'{c.get('content', '')}'"
+                        if c.get('chapter_num'):
+                            desc += f" → Cap. {c.get('chapter_num')}"
+                        if c.get('chapter_title'):
+                            desc += f" '{c.get('chapter_title')}'"
+                        if c.get('found_in'):
+                            desc += f", sezione '{c.get('found_in')}'"
+                        contenuti_esclusivi.append(desc)
+                    
+                    wins_for_prompt.append({
+                        "modulo": m["module_name"],
+                        "nostri_capitoli": nostri_cap,
+                        "loro_capitoli": loro_cap,
+                        "contenuti_esclusivi_nostri": contenuti_esclusivi,
+                        "manca_al_competitor": m["comp_missing"][:3]
                     })
                 
-                # Trova moduli dove Zanichelli vince/perde
-                zan_wins = []
-                zan_loses = []
-                for mod in modules_comparison:
-                    scores = mod.get("manual_scores", [])
-                    if len(scores) >= 2:
-                        zan_score = next((s for s in scores if "zanichelli" in s.get("publisher", "").lower()), None)
-                        if zan_score:
-                            best = scores[0]
-                            if zan_score["coverage"] >= best["coverage"]:
-                                zan_wins.append({"module": mod["module_name"], "coverage": zan_score["coverage"]})
-                            elif best["coverage"] - zan_score["coverage"] > 10:
-                                zan_loses.append({"module": mod["module_name"], "zan_coverage": zan_score["coverage"], "best_coverage": best["coverage"], "best_manual": best["manual"]})
+                # Prepara dati per prompt - LOSES
+                loses_for_prompt = []
+                for m in zan_loses[:4]:
+                    nostri_cap = []
+                    for c in m["zan_chapters"][:3]:
+                        cap_str = f"Cap. {c.get('num', '?')}"
+                        if c.get('title'):
+                            cap_str += f" '{c.get('title')}'"
+                        nostri_cap.append(cap_str)
+                    
+                    loro_cap = []
+                    for c in m["comp_chapters"][:3]:
+                        cap_str = f"Cap. {c.get('num', '?')}"
+                        if c.get('title'):
+                            cap_str += f" '{c.get('title')}'"
+                        loro_cap.append(cap_str)
+                    
+                    contenuti_competitor = []
+                    for c in m["only_in_comp"][:4]:
+                        desc = f"'{c.get('content', '')}'"
+                        if c.get('chapter_num'):
+                            desc += f" → loro Cap. {c.get('chapter_num')}"
+                        if c.get('chapter_title'):
+                            desc += f" '{c.get('chapter_title')}'"
+                        contenuti_competitor.append(desc)
+                    
+                    loses_for_prompt.append({
+                        "modulo": m["module_name"],
+                        "nostri_capitoli": nostri_cap,
+                        "loro_capitoli": loro_cap,
+                        "contenuti_esclusivi_competitor": contenuti_competitor,
+                        "manca_a_noi": m["zan_missing"][:3]
+                    })
                 
-                prompt = f"""Sei un CONSULENTE COMMERCIALE ESPERTO per Zanichelli. Devi preparare un brief per il promotore editoriale.
+                prompt = f"""Sei un PROMOTORE EDITORIALE ESPERTO Zanichelli che prepara una visita a un docente universitario.
 
-NOSTRO MANUALE (ZANICHELLI):
-{json.dumps(zan_data, indent=2, ensure_ascii=False)}
+HAI QUESTI DATI CONCRETI DA USARE:
 
-MANUALI COMPETITOR:
-{json.dumps(comp_data, indent=2, ensure_ascii=False)}
+═══════════════════════════════════════════════════════════════════════
+NOSTRO MANUALE: "{zan_info['title']}" di {zan_info['author']}
+Struttura: {zan_info['structure']}
+═══════════════════════════════════════════════════════════════════════
 
-MODULI DOVE VINCIAMO:
-{json.dumps(zan_wins[:5], indent=2, ensure_ascii=False)}
+═══════════════════════════════════════════════════════════════════════
+COMPETITOR: "{comp_info['title']}" di {comp_info['author']} ({comp_info['publisher']})
+Struttura: {comp_info['structure']}
+═══════════════════════════════════════════════════════════════════════
 
-MODULI DOVE PERDIAMO:
-{json.dumps(zan_loses[:5], indent=2, ensure_ascii=False)}
+═══════════════════════════════════════════════════════════════════════
+MODULI DOVE SIAMO PIÙ FORTI (usa questi per i TALKING POINTS):
+{json.dumps(wins_for_prompt, indent=2, ensure_ascii=False)}
+═══════════════════════════════════════════════════════════════════════
 
-GENERA UN BRIEF COMMERCIALE con:
+═══════════════════════════════════════════════════════════════════════
+MODULI DOVE IL COMPETITOR È PIÙ FORTE (usa questi per OBIEZIONI e LACUNE):
+{json.dumps(loses_for_prompt, indent=2, ensure_ascii=False)}
+═══════════════════════════════════════════════════════════════════════
 
-1. EXECUTIVE SUMMARY (2-3 frasi): Situazione competitiva in sintesi. Siamo avanti o indietro? Su cosa puntare?
+GENERA UN BRIEF COMMERCIALE seguendo RIGOROSAMENTE queste regole:
 
-2. TALKING POINTS (3-5 punti): Argomenti da usare in visita con il docente. Frasi CONCRETE e PRONTE ALL'USO. Esempio:
-   - "Il nostro manuale dedica un intero Focus alla termodinamica, con 45 pagine di esercizi svolti - ideale per corsi da 9 CFU"
+1. **TALKING POINTS**: Frasi pronte da dire al docente. DEVI citare:
+   - Il TITOLO esatto del capitolo/sezione (es: "Nel nostro Cap. 6 'Equilibri ionici'...")
+   - Il CONTENUTO specifico (es: "...trattiamo la solubilità dei sali poco solubili")
+   - PERCHÉ è un vantaggio didattico
 
-3. GESTIONE OBIEZIONI (2-3): Obiezioni probabili del docente e come rispondere. Esempio:
-   - Obiezione: "Il Kotz ha più capitoli"
-   - Risposta: "Vero, ma l'Atkins ha una struttura modulare per Focus che permette di selezionare solo i contenuti necessari al corso"
+2. **GESTIONE OBIEZIONI**: Il docente potrebbe dire "Il competitor ha X". Tu rispondi:
+   - Ammetti il punto se vero
+   - Contestualizza
+   - Offri alternativa con riferimento ai nostri capitoli
 
-4. TARGET CONSIGLIATO: Per quali corsi/classi di laurea è più adatto il nostro manuale?
+3. **TARGET**: Per quali corsi è meglio il NOSTRO, per quali il COMPETITOR. Sii onesto.
 
-5. LACUNE DA CONOSCERE: Cosa manca nel nostro manuale? (per non farsi cogliere impreparati)
+4. **LACUNE**: Cosa manca davvero al nostro manuale. Il promotore DEVE saperlo.
 
-TONO: Diretto, pratico, orientato alla vendita. NO gergo tecnico inutile.
+DIVIETI ASSOLUTI:
+- NON usare percentuali
+- NON inventare contenuti - usa SOLO quelli che ti ho dato
+- NON usare frasi generiche
 
-Rispondi in JSON:
+FORMATO OUTPUT (JSON):
 {{
-    "executive_summary": "...",
-    "talking_points": ["punto 1", "punto 2", ...],
-    "obiezioni": [
-        {{"obiezione": "...", "risposta": "..."}}
+    "executive_summary": "2-3 frasi: dove siamo forti, dove deboli, strategia",
+    "talking_points": [
+        {{
+            "titolo": "Titolo breve",
+            "frase_per_docente": "Frase ESATTA da dire con Cap. e contenuto specifico",
+            "contesto_uso": "Quando usare"
+        }}
     ],
-    "target_consigliato": "...",
-    "lacune": ["lacuna 1", "lacuna 2"]
+    "obiezioni": [
+        {{
+            "cosa_dira_docente": "Obiezione probabile",
+            "tua_risposta": "Risposta con riferimenti specifici",
+            "nota_interna": "Info extra per il promotore"
+        }}
+    ],
+    "target": [
+        {{
+            "tipo_corso": "Es: Chimica per Biologi",
+            "consigliato": "nostro" oppure "competitor",
+            "motivazione": "Perché"
+        }}
+    ],
+    "nostre_lacune": [
+        {{
+            "cosa_manca": "Argomento",
+            "quanto_grave": "alta/media/bassa",
+            "come_gestire": "Cosa dire se il docente lo nota"
+        }}
+    ]
 }}"""
 
                 client = get_llm_client(provider_id)
                 response = client.chat.completions.create(
                     model=model,
                     messages=[
-                        {"role": "system", "content": "Sei un consulente commerciale esperto. Genera contenuti PRATICI e UTILI per venditori. Rispondi SOLO con JSON valido."},
+                        {"role": "system", "content": "Sei un consulente commerciale editoriale esperto. Generi brief CONCRETI con riferimenti specifici a capitoli e contenuti. Mai frasi generiche. Rispondi SOLO con JSON valido."},
                         {"role": "user", "content": prompt}
                     ],
-                    temperature=0.5,
-                    max_tokens=2000
+                    temperature=0.0,
+                    max_tokens=3500
                 )
                 
                 response_text = response.choices[0].message.content.strip()
+                
                 if "```" in response_text:
                     for part in response_text.split("```"):
                         if part.strip().startswith("json"):
@@ -1198,165 +1435,259 @@ Rispondi in JSON:
                             response_text = part.strip()
                             break
                 
-                commercial_data = json.loads(response_text)
-                executive_summary = commercial_data.get("executive_summary", "")
-                talking_points = commercial_data.get("talking_points", [])
-                obiezioni = commercial_data.get("obiezioni", [])
-                target_consigliato = commercial_data.get("target_consigliato", "")
-                lacune = commercial_data.get("lacune", [])
+                brief_data = json.loads(response_text)
+                executive_summary = brief_data.get("executive_summary", "")
+                talking_points = brief_data.get("talking_points", [])
+                obiezioni = brief_data.get("obiezioni", [])
+                target_recommendations = brief_data.get("target", [])
+                lacune = brief_data.get("nostre_lacune", [])
                 
+            except json.JSONDecodeError as e:
+                print(f"Errore parsing JSON: {e}")
+                executive_summary = "Errore nella generazione del brief."
             except Exception as e:
-                print(f"Errore generazione contenuti commerciali: {e}")
-                executive_summary = "Analisi automatica non disponibile. Verificare i dati manualmente."
-                talking_points = []
-                obiezioni = []
-                lacune = []
+                print(f"Errore LLM: {e}")
+                executive_summary = f"Errore: {str(e)}"
         
-        # Genera HTML
+        # =====================================================================
+        # STEP 6: Genera HTML
+        # =====================================================================
+        zan_cov = zan_data.get("coverage", 0)
+        comp_cov = comp_data.get("coverage", 0)
+        
+        if zan_cov > comp_cov + 5:
+            status_color = "#4caf50"
+            status_icon = "✓"
+            status_text = "VANTAGGIO"
+        elif comp_cov > zan_cov + 5:
+            status_color = "#f44336"
+            status_icon = "⚠"
+            status_text = "SVANTAGGIO"
+        else:
+            status_color = "#ff9800"
+            status_icon = "≈"
+            status_text = "EQUILIBRIO"
+        
         css = """
         <style>
-            body { font-family: 'Segoe UI', sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
-            .header { background: linear-gradient(135deg, #c62828, #b71c1c); color: white; padding: 30px; border-radius: 10px; margin-bottom: 30px; }
-            .header h1 { margin: 0; }
-            .header .subtitle { opacity: 0.9; margin-top: 10px; }
-            .section { background: white; border-radius: 10px; padding: 25px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-            .section h2 { color: #c62828; margin-top: 0; border-bottom: 2px solid #ffcdd2; padding-bottom: 10px; }
-            .executive-summary { background: #fff3e0; border-left: 4px solid #ff9800; padding: 20px; border-radius: 5px; font-size: 1.1em; }
-            .talking-point { background: #e8f5e9; padding: 15px 20px; border-radius: 8px; margin: 10px 0; border-left: 4px solid #4caf50; }
-            .talking-point::before { content: "💬 "; }
-            .obiezione-card { background: #fafafa; border-radius: 8px; padding: 20px; margin: 15px 0; border: 1px solid #e0e0e0; }
-            .obiezione-card .obiezione { color: #d32f2f; font-weight: 600; margin-bottom: 10px; }
-            .obiezione-card .obiezione::before { content: "❌ Obiezione: "; }
-            .obiezione-card .risposta { color: #2e7d32; }
-            .obiezione-card .risposta::before { content: "✅ Risposta: "; }
-            .target-box { background: #e3f2fd; padding: 20px; border-radius: 8px; border-left: 4px solid #1976d2; }
-            .lacuna-item { background: #fff8e1; padding: 10px 15px; border-radius: 5px; margin: 8px 0; border-left: 3px solid #ffc107; }
-            .comparison-quick { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
-            .manual-card { padding: 20px; border-radius: 10px; }
-            .manual-card.zanichelli { background: #ffebee; border: 2px solid #c62828; }
-            .manual-card.competitor { background: #f5f5f5; border: 2px solid #9e9e9e; }
-            .manual-card h3 { margin-top: 0; }
-            .coverage-big { font-size: 2.5em; font-weight: bold; }
-            .coverage-big.high { color: #4caf50; }
-            .coverage-big.medium { color: #ff9800; }
-            .coverage-big.low { color: #f44336; }
-            .footer { text-align: center; color: #888; margin-top: 30px; padding: 20px; }
+            * { box-sizing: border-box; }
+            body { font-family: 'Segoe UI', sans-serif; max-width: 1100px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+            .header { background: linear-gradient(135deg, #1a237e, #3949ab); color: white; padding: 25px 30px; border-radius: 12px; margin-bottom: 20px; }
+            .header h1 { margin: 0 0 5px 0; font-size: 20px; }
+            .header-sub { opacity: 0.85; font-size: 13px; }
+            .status-bar { display: flex; align-items: center; gap: 12px; padding: 12px 18px; border-radius: 8px; margin-bottom: 18px; }
+            .status-icon { font-size: 28px; }
+            .status-label { font-weight: 600; }
+            .section { background: white; border-radius: 10px; padding: 22px; margin-bottom: 18px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+            .section h2 { color: #1a237e; margin: 0 0 18px 0; font-size: 16px; padding-bottom: 10px; border-bottom: 2px solid #e8eaf6; }
+            .cards-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+            .card { padding: 18px; border-radius: 8px; }
+            .card.ours { background: #e8eaf6; border-left: 4px solid #3949ab; }
+            .card.theirs { background: #fafafa; border-left: 4px solid #9e9e9e; }
+            .card-label { font-size: 11px; text-transform: uppercase; font-weight: 600; color: #666; margin-bottom: 6px; }
+            .card-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+            .card-meta { font-size: 13px; color: #666; }
+            .summary-box { background: #fffde7; padding: 18px; border-radius: 8px; border-left: 4px solid #fbc02d; line-height: 1.6; }
+            .tp-item { background: #f1f8e9; padding: 18px; border-radius: 8px; margin-bottom: 12px; border-left: 4px solid #7cb342; }
+            .tp-title { font-weight: 600; color: #33691e; margin-bottom: 10px; }
+            .tp-quote { background: white; padding: 12px 15px; border-radius: 6px; margin-bottom: 10px; line-height: 1.5; font-style: italic; }
+            .tp-context { font-size: 12px; color: #666; }
+            .obj-item { background: #fff3e0; padding: 18px; border-radius: 8px; margin-bottom: 12px; border-left: 4px solid #ff9800; }
+            .obj-q { background: #ffe0b2; padding: 10px 14px; border-radius: 6px; margin-bottom: 10px; }
+            .obj-a { background: white; padding: 10px 14px; border-radius: 6px; margin-bottom: 8px; }
+            .obj-note { font-size: 12px; color: #888; padding-left: 10px; border-left: 2px solid #ddd; }
+            .target-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
+            .target-item { padding: 16px; border-radius: 8px; }
+            .target-item.us { background: #e8f5e9; border: 2px solid #66bb6a; }
+            .target-item.them { background: #fce4ec; border: 2px solid #ec407a; }
+            .target-type { font-weight: 600; margin-bottom: 6px; }
+            .target-badge { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 8px; border-radius: 4px; margin-bottom: 6px; }
+            .target-item.us .target-badge { background: #c8e6c9; color: #2e7d32; }
+            .target-item.them .target-badge { background: #f8bbd9; color: #c2185b; }
+            .target-why { font-size: 13px; color: #555; }
+            .gap-item { padding: 14px 16px; border-radius: 8px; margin-bottom: 10px; }
+            .gap-item.alta { background: #ffebee; border-left: 4px solid #e53935; }
+            .gap-item.media { background: #fff8e1; border-left: 4px solid #fdd835; }
+            .gap-item.bassa { background: #e8f5e9; border-left: 4px solid #66bb6a; }
+            .gap-head { display: flex; justify-content: space-between; margin-bottom: 6px; }
+            .gap-name { font-weight: 600; }
+            .gap-sev { font-size: 11px; padding: 2px 6px; border-radius: 4px; }
+            .gap-item.alta .gap-sev { background: #ffcdd2; color: #c62828; }
+            .gap-item.media .gap-sev { background: #fff9c4; color: #f57f17; }
+            .gap-item.bassa .gap-sev { background: #c8e6c9; color: #2e7d32; }
+            .gap-how { font-size: 13px; color: #666; }
+            .mod-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+            .mod-table th { background: #3949ab; color: white; padding: 10px 8px; text-align: left; }
+            .mod-table td { padding: 9px 8px; border-bottom: 1px solid #eee; }
+            .mod-table tr:hover { background: #f5f5f5; }
+            .win { color: #2e7d32; font-weight: 600; }
+            .lose { color: #c62828; font-weight: 600; }
+            .tie { color: #757575; }
+            .footer { text-align: center; padding: 20px; color: #999; font-size: 12px; }
         </style>
         """
         
-        # Coverage class
-        def get_cov_class(cov):
-            if cov >= 70: return "high"
-            elif cov >= 50: return "medium"
-            return "low"
-        
         html = f"""<!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Brief Commerciale - {framework_name}</title>
+    <title>Brief Commerciale</title>
     {css}
 </head>
 <body>
     <div class="header">
-        <h1>📋 Brief Commerciale per Promotore</h1>
-        <div class="subtitle">Confronto competitivo • {framework_name}</div>
-        <div class="subtitle">Generato il {datetime.now().strftime('%d/%m/%Y %H:%M')}</div>
+        <h1>📋 Brief Commerciale</h1>
+        <div class="header-sub">{framework_name} • {datetime.now().strftime('%d/%m/%Y')}</div>
+    </div>
+    
+    <div class="status-bar" style="background: {status_color}20; border: 2px solid {status_color};">
+        <span class="status-icon" style="color: {status_color};">{status_icon}</span>
+        <span class="status-label" style="color: {status_color};">{status_text}: {zan_info['title']} vs {comp_info['title']}</span>
+    </div>
+    
+    <div class="section">
+        <h2>📚 Manuali a Confronto</h2>
+        <div class="cards-row">
+            <div class="card ours">
+                <div class="card-label">📘 Nostro</div>
+                <div class="card-title">{zan_info['title']}</div>
+                <div class="card-meta">{zan_info['author']} • {zan_info['structure']}</div>
+            </div>
+            <div class="card theirs">
+                <div class="card-label">📕 Competitor</div>
+                <div class="card-title">{comp_info['title']}</div>
+                <div class="card-meta">{comp_info['author']} • {comp_info['publisher']}</div>
+            </div>
+        </div>
     </div>
 """
         
-        # Executive Summary
         if executive_summary:
             html += f"""
     <div class="section">
-        <h2>🎯 Situazione Competitiva</h2>
-        <div class="executive-summary">{executive_summary}</div>
+        <h2>🎯 Strategia</h2>
+        <div class="summary-box">{executive_summary}</div>
     </div>
 """
         
-        # Quick comparison
-        if zanichelli_manual:
-            zan_cov = zanichelli_manual.get("coverage", 0)
-            html += f"""
-    <div class="section">
-        <h2>📊 Confronto Rapido</h2>
-        <div class="comparison-quick">
-            <div class="manual-card zanichelli">
-                <h3>🔴 {zanichelli_manual.get('manual_title', 'N/D')}</h3>
-                <p>{zanichelli_manual.get('author', '')} • Zanichelli</p>
-                <p>{zanichelli_manual.get('structure_label', '')}</p>
-                <div class="coverage-big {get_cov_class(zan_cov)}">{zan_cov:.0f}%</div>
-                <p>copertura framework</p>
-            </div>
-"""
-            if competitor_manuals:
-                comp = competitor_manuals[0]
-                comp_cov = comp.get("coverage", 0)
-                html += f"""
-            <div class="manual-card competitor">
-                <h3>⚪ {comp.get('manual_title', 'N/D')}</h3>
-                <p>{comp.get('author', '')} • {comp.get('publisher', '')}</p>
-                <p>{comp.get('structure_label', '')}</p>
-                <div class="coverage-big {get_cov_class(comp_cov)}">{comp_cov:.0f}%</div>
-                <p>copertura framework</p>
-            </div>
-"""
-            html += """
-        </div>
-    </div>
-"""
-        
-        # Talking Points
         if talking_points:
             html += """
     <div class="section">
-        <h2>💬 Argomenti di Vendita</h2>
-        <p style="color: #666; margin-bottom: 15px;">Frasi pronte da usare in visita con il docente:</p>
+        <h2>💬 Cosa Dire al Docente</h2>
 """
-            for point in talking_points:
-                html += f'        <div class="talking-point">{point}</div>\n'
-            html += "    </div>\n"
-        
-        # Gestione Obiezioni
-        if obiezioni:
-            html += """
-    <div class="section">
-        <h2>🛡️ Gestione Obiezioni</h2>
-"""
-            for ob in obiezioni:
-                html += f"""
-        <div class="obiezione-card">
-            <div class="obiezione">{ob.get('obiezione', '')}</div>
-            <div class="risposta">{ob.get('risposta', '')}</div>
+            for tp in talking_points:
+                if isinstance(tp, dict):
+                    html += f"""
+        <div class="tp-item">
+            <div class="tp-title">{tp.get('titolo', '')}</div>
+            <div class="tp-quote">"{tp.get('frase_per_docente', '')}"</div>
+            <div class="tp-context">📍 {tp.get('contesto_uso', '')}</div>
         </div>
 """
             html += "    </div>\n"
         
-        # Target Consigliato
-        if target_consigliato:
-            html += f"""
+        if obiezioni:
+            html += """
     <div class="section">
-        <h2>🎓 Target Consigliato</h2>
-        <div class="target-box">{target_consigliato}</div>
+        <h2>🛡️ Se il Docente Obietta</h2>
+"""
+            for ob in obiezioni:
+                if isinstance(ob, dict):
+                    html += f"""
+        <div class="obj-item">
+            <div class="obj-q">👤 "{ob.get('cosa_dira_docente', '')}"</div>
+            <div class="obj-a">💬 {ob.get('tua_risposta', '')}</div>
+            <div class="obj-note">📝 {ob.get('nota_interna', '')}</div>
+        </div>
+"""
+            html += "    </div>\n"
+        
+        if target_recommendations:
+            html += """
+    <div class="section">
+        <h2>🎯 Per Quali Corsi</h2>
+        <div class="target-row">
+"""
+            for t in target_recommendations:
+                if isinstance(t, dict):
+                    is_us = t.get('consigliato', '').lower() in ['nostro', 'zanichelli']
+                    cls = "us" if is_us else "them"
+                    badge = "→ NOSTRO" if is_us else "→ COMPETITOR"
+                    html += f"""
+            <div class="target-item {cls}">
+                <div class="target-type">{t.get('tipo_corso', '')}</div>
+                <div class="target-badge">{badge}</div>
+                <div class="target-why">{t.get('motivazione', '')}</div>
+            </div>
+"""
+            html += """
+        </div>
     </div>
 """
         
-        # Lacune da conoscere
         if lacune:
             html += """
     <div class="section">
-        <h2>⚠️ Lacune da Conoscere</h2>
-        <p style="color: #666;">Per non farsi cogliere impreparati:</p>
+        <h2>⚠️ Da Sapere Prima della Visita</h2>
 """
-            for lac in lacune:
-                html += f'        <div class="lacuna-item">{lac}</div>\n'
+            for g in lacune:
+                if isinstance(g, dict):
+                    sev = g.get('quanto_grave', 'media').lower()
+                    sev_txt = {'alta': '🔴 Critica', 'media': '🟡 Media', 'bassa': '🟢 Minore'}.get(sev, '🟡 Media')
+                    html += f"""
+        <div class="gap-item {sev}">
+            <div class="gap-head">
+                <span class="gap-name">{g.get('cosa_manca', '')}</span>
+                <span class="gap-sev">{sev_txt}</span>
+            </div>
+            <div class="gap-how">💡 {g.get('come_gestire', '')}</div>
+        </div>
+"""
             html += "    </div>\n"
         
-        # Footer
         html += """
+    <div class="section">
+        <h2>📊 Riepilogo Moduli</h2>
+        <table class="mod-table">
+            <thead><tr><th>Modulo</th><th>Esito</th><th>Nostri Capitoli</th></tr></thead>
+            <tbody>
+"""
+        
+        for m in rich_module_analysis[:10]:
+            diff = m['diff']
+            if diff > 10:
+                cls = "win"
+                sym = "✓ Noi"
+            elif diff < -10:
+                cls = "lose"
+                sym = "✗ Loro"
+            else:
+                cls = "tie"
+                sym = "= Pari"
+            
+            caps = []
+            for c in m['zan_chapters'][:3]:
+                cap_str = f"Cap. {c.get('num', '?')}"
+                if c.get('title'):
+                    cap_str += f" ({c.get('title')[:20]}...)" if len(c.get('title', '')) > 20 else f" ({c.get('title')})"
+                caps.append(cap_str)
+            caps_str = ", ".join(caps) if caps else "-"
+            
+            html += f"""
+                <tr>
+                    <td>{m['module_name']}</td>
+                    <td class="{cls}">{sym}</td>
+                    <td style="font-size:12px; color:#666;">{caps_str}</td>
+                </tr>
+"""
+        
+        html += """
+            </tbody>
+        </table>
+    </div>
+    
     <div class="footer">
-        <p>Report generato da <strong>CoreX - PromoIntelligence</strong> | Zanichelli</p>
-        <p style="font-size: 0.85em;">Documento riservato ad uso interno</p>
+        CoreX PromoIntelligence v4.1 • Zanichelli
     </div>
 </body>
 </html>

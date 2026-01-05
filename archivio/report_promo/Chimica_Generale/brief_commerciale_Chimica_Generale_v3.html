@@ -1,112 +1,242 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Brief Commerciale - Framework Unico Valutazione Chimica Generale - Multidisciplinare</title>
+    <title>Brief Commerciale</title>
     
         <style>
-            body { font-family: 'Segoe UI', sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
-            .header { background: linear-gradient(135deg, #c62828, #b71c1c); color: white; padding: 30px; border-radius: 10px; margin-bottom: 30px; }
-            .header h1 { margin: 0; }
-            .header .subtitle { opacity: 0.9; margin-top: 10px; }
-            .section { background: white; border-radius: 10px; padding: 25px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-            .section h2 { color: #c62828; margin-top: 0; border-bottom: 2px solid #ffcdd2; padding-bottom: 10px; }
-            .executive-summary { background: #fff3e0; border-left: 4px solid #ff9800; padding: 20px; border-radius: 5px; font-size: 1.1em; }
-            .talking-point { background: #e8f5e9; padding: 15px 20px; border-radius: 8px; margin: 10px 0; border-left: 4px solid #4caf50; }
-            .talking-point::before { content: "💬 "; }
-            .obiezione-card { background: #fafafa; border-radius: 8px; padding: 20px; margin: 15px 0; border: 1px solid #e0e0e0; }
-            .obiezione-card .obiezione { color: #d32f2f; font-weight: 600; margin-bottom: 10px; }
-            .obiezione-card .obiezione::before { content: "❌ Obiezione: "; }
-            .obiezione-card .risposta { color: #2e7d32; }
-            .obiezione-card .risposta::before { content: "✅ Risposta: "; }
-            .target-box { background: #e3f2fd; padding: 20px; border-radius: 8px; border-left: 4px solid #1976d2; }
-            .lacuna-item { background: #fff8e1; padding: 10px 15px; border-radius: 5px; margin: 8px 0; border-left: 3px solid #ffc107; }
-            .comparison-quick { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
-            .manual-card { padding: 20px; border-radius: 10px; }
-            .manual-card.zanichelli { background: #ffebee; border: 2px solid #c62828; }
-            .manual-card.competitor { background: #f5f5f5; border: 2px solid #9e9e9e; }
-            .manual-card h3 { margin-top: 0; }
-            .coverage-big { font-size: 2.5em; font-weight: bold; }
-            .coverage-big.high { color: #4caf50; }
-            .coverage-big.medium { color: #ff9800; }
-            .coverage-big.low { color: #f44336; }
-            .footer { text-align: center; color: #888; margin-top: 30px; padding: 20px; }
+            * { box-sizing: border-box; }
+            body { font-family: 'Segoe UI', sans-serif; max-width: 1100px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+            .header { background: linear-gradient(135deg, #1a237e, #3949ab); color: white; padding: 25px 30px; border-radius: 12px; margin-bottom: 20px; }
+            .header h1 { margin: 0 0 5px 0; font-size: 20px; }
+            .header-sub { opacity: 0.85; font-size: 13px; }
+            .status-bar { display: flex; align-items: center; gap: 12px; padding: 12px 18px; border-radius: 8px; margin-bottom: 18px; }
+            .status-icon { font-size: 28px; }
+            .status-label { font-weight: 600; }
+            .section { background: white; border-radius: 10px; padding: 22px; margin-bottom: 18px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+            .section h2 { color: #1a237e; margin: 0 0 18px 0; font-size: 16px; padding-bottom: 10px; border-bottom: 2px solid #e8eaf6; }
+            .cards-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+            .card { padding: 18px; border-radius: 8px; }
+            .card.ours { background: #e8eaf6; border-left: 4px solid #3949ab; }
+            .card.theirs { background: #fafafa; border-left: 4px solid #9e9e9e; }
+            .card-label { font-size: 11px; text-transform: uppercase; font-weight: 600; color: #666; margin-bottom: 6px; }
+            .card-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+            .card-meta { font-size: 13px; color: #666; }
+            .summary-box { background: #fffde7; padding: 18px; border-radius: 8px; border-left: 4px solid #fbc02d; line-height: 1.6; }
+            .tp-item { background: #f1f8e9; padding: 18px; border-radius: 8px; margin-bottom: 12px; border-left: 4px solid #7cb342; }
+            .tp-title { font-weight: 600; color: #33691e; margin-bottom: 10px; }
+            .tp-quote { background: white; padding: 12px 15px; border-radius: 6px; margin-bottom: 10px; line-height: 1.5; font-style: italic; }
+            .tp-context { font-size: 12px; color: #666; }
+            .obj-item { background: #fff3e0; padding: 18px; border-radius: 8px; margin-bottom: 12px; border-left: 4px solid #ff9800; }
+            .obj-q { background: #ffe0b2; padding: 10px 14px; border-radius: 6px; margin-bottom: 10px; }
+            .obj-a { background: white; padding: 10px 14px; border-radius: 6px; margin-bottom: 8px; }
+            .obj-note { font-size: 12px; color: #888; padding-left: 10px; border-left: 2px solid #ddd; }
+            .target-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
+            .target-item { padding: 16px; border-radius: 8px; }
+            .target-item.us { background: #e8f5e9; border: 2px solid #66bb6a; }
+            .target-item.them { background: #fce4ec; border: 2px solid #ec407a; }
+            .target-type { font-weight: 600; margin-bottom: 6px; }
+            .target-badge { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 8px; border-radius: 4px; margin-bottom: 6px; }
+            .target-item.us .target-badge { background: #c8e6c9; color: #2e7d32; }
+            .target-item.them .target-badge { background: #f8bbd9; color: #c2185b; }
+            .target-why { font-size: 13px; color: #555; }
+            .gap-item { padding: 14px 16px; border-radius: 8px; margin-bottom: 10px; }
+            .gap-item.alta { background: #ffebee; border-left: 4px solid #e53935; }
+            .gap-item.media { background: #fff8e1; border-left: 4px solid #fdd835; }
+            .gap-item.bassa { background: #e8f5e9; border-left: 4px solid #66bb6a; }
+            .gap-head { display: flex; justify-content: space-between; margin-bottom: 6px; }
+            .gap-name { font-weight: 600; }
+            .gap-sev { font-size: 11px; padding: 2px 6px; border-radius: 4px; }
+            .gap-item.alta .gap-sev { background: #ffcdd2; color: #c62828; }
+            .gap-item.media .gap-sev { background: #fff9c4; color: #f57f17; }
+            .gap-item.bassa .gap-sev { background: #c8e6c9; color: #2e7d32; }
+            .gap-how { font-size: 13px; color: #666; }
+            .mod-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+            .mod-table th { background: #3949ab; color: white; padding: 10px 8px; text-align: left; }
+            .mod-table td { padding: 9px 8px; border-bottom: 1px solid #eee; }
+            .mod-table tr:hover { background: #f5f5f5; }
+            .win { color: #2e7d32; font-weight: 600; }
+            .lose { color: #c62828; font-weight: 600; }
+            .tie { color: #757575; }
+            .footer { text-align: center; padding: 20px; color: #999; font-size: 12px; }
         </style>
         
 </head>
 <body>
     <div class="header">
-        <h1>📋 Brief Commerciale per Promotore</h1>
-        <div class="subtitle">Confronto competitivo • Framework Unico Valutazione Chimica Generale - Multidisciplinare</div>
-        <div class="subtitle">Generato il 05/01/2026 11:43</div>
+        <h1>📋 Brief Commerciale</h1>
+        <div class="header-sub">Framework Unico Valutazione Chimica Generale - Multidisciplinare • 05/01/2026</div>
+    </div>
+    
+    <div class="status-bar" style="background: #f4433620; border: 2px solid #f44336;">
+        <span class="status-icon" style="color: #f44336;">⚠</span>
+        <span class="status-label" style="color: #f44336;">SVANTAGGIO: Principi di Chimica vs Chimica</span>
+    </div>
+    
+    <div class="section">
+        <h2>📚 Manuali a Confronto</h2>
+        <div class="cards-row">
+            <div class="card ours">
+                <div class="card-label">📘 Nostro</div>
+                <div class="card-title">Principi di Chimica</div>
+                <div class="card-meta">Atkins • 11 Focus, 93 Capitoli</div>
+            </div>
+            <div class="card theirs">
+                <div class="card-label">📕 Competitor</div>
+                <div class="card-title">Chimica</div>
+                <div class="card-meta">Kotz e al. • Edises</div>
+            </div>
+        </div>
     </div>
 
     <div class="section">
-        <h2>🎯 Situazione Competitiva</h2>
-        <div class="executive-summary">Attualmente, il nostro manuale 'Principi di Chimica' ha una copertura del 72.5%, mentre il concorrente Kotz offre una copertura del 83.8%. Dobbiamo puntare sui moduli dove eccelliamo e considerare strategie per migliorare le aree in cui siamo indietro.</div>
+        <h2>🎯 Strategia</h2>
+        <div class="summary-box">Siamo forti nei moduli di Elettrochimica e Chimica degli elementi principali, con contenuti esclusivi che arricchiscono l'esperienza didattica. Tuttavia, manchiamo di sezioni importanti sulla sicurezza e tecniche analitiche, dove il competitor è più forte. La strategia è enfatizzare i nostri punti di forza e offrire alternative per le lacune.</div>
     </div>
 
     <div class="section">
-        <h2>📊 Confronto Rapido</h2>
-        <div class="comparison-quick">
-            <div class="manual-card zanichelli">
-                <h3>🔴 Principi di Chimica</h3>
-                <p>Atkins • Zanichelli</p>
-                <p>11 Focus, 93 Capitoli</p>
-                <div class="coverage-big high">72%</div>
-                <p>copertura framework</p>
+        <h2>💬 Cosa Dire al Docente</h2>
+
+        <div class="tp-item">
+            <div class="tp-title">Elettrochimica</div>
+            <div class="tp-quote">"Nel nostro Cap. 6 'Celle elettrolitiche, leggi Faraday' trattiamo le celle elettrolitiche e le leggi di Faraday, fornendo una comprensione approfondita dei processi elettrochimici."</div>
+            <div class="tp-context">📍 Quando si discute di processi elettrochimici e applicazioni pratiche.</div>
+        </div>
+
+        <div class="tp-item">
+            <div class="tp-title">Chimica elementi principali</div>
+            <div class="tp-quote">"Nel nostro Cap. 8 'Ossidi acidi/basei/anfoteri' approfondiamo gli ossidi, alogenuri e nitruri del gruppo 13, nonché gli ossidi del carbonio e del silicio."</div>
+            <div class="tp-context">📍 Quando si esplorano le proprietà chimiche degli elementi e le loro applicazioni.</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🛡️ Se il Docente Obietta</h2>
+
+        <div class="obj-item">
+            <div class="obj-q">👤 "Il competitor ha sezioni su sicurezza e sostenibilità."</div>
+            <div class="obj-a">💬 È vero, il competitor tratta argomenti come 'MSDS, DPI, norme sicurezza' nel loro Cap. 1. Tuttavia, nel nostro manuale ci concentriamo su contenuti più approfonditi in aree come l'elettrochimica, che non sono trattati in modo equivalente nel loro testo.</div>
+            <div class="obj-note">📝 Sottolineare che i nostri punti di forza possono compensare le lacune.</div>
+        </div>
+
+        <div class="obj-item">
+            <div class="obj-q">👤 "Il competitor ha tecniche analitiche più dettagliate."</div>
+            <div class="obj-a">💬 Sì, il competitor offre contenuti su 'Titolo soluzioni, standardizzazione' e 'Spettroscopia UV-Vis base'. Tuttavia, il nostro approccio in Elettrochimica e Chimica degli elementi principali fornisce una base solida per comprendere le tecniche analitiche in un contesto più ampio.</div>
+            <div class="obj-note">📝 Evidenziare l'importanza di una comprensione teorica prima di applicare tecniche pratiche.</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🎯 Per Quali Corsi</h2>
+        <div class="target-row">
+
+            <div class="target-item us">
+                <div class="target-type">Chimica per Ingegneri</div>
+                <div class="target-badge">→ NOSTRO</div>
+                <div class="target-why">I nostri contenuti su Elettrochimica e Chimica degli elementi principali sono più adatti per corsi che richiedono una comprensione approfondita di questi argomenti.</div>
             </div>
 
-            <div class="manual-card competitor">
-                <h3>⚪ Chimica</h3>
-                <p>Kotz e al. • Edises</p>
-                <p>22 Capitoli</p>
-                <div class="coverage-big high">84%</div>
-                <p>copertura framework</p>
+            <div class="target-item them">
+                <div class="target-type">Chimica per Biologi</div>
+                <div class="target-badge">→ COMPETITOR</div>
+                <div class="target-why">Il competitor offre una copertura migliore su sicurezza e sostenibilità, che sono cruciali per i corsi di biologia.</div>
             </div>
 
         </div>
     </div>
 
     <div class="section">
-        <h2>💬 Argomenti di Vendita</h2>
-        <p style="color: #666; margin-bottom: 15px;">Frasi pronte da usare in visita con il docente:</p>
-        <div class="talking-point">Il nostro manuale offre una copertura del 90% in moduli chiave come 'Struttura atomica e tavola periodica' e 'Stechiometria e reazioni chimiche', fondamentali per il successo degli studenti.</div>
-        <div class="talking-point">Con 11 Focus e 93 capitoli, il nostro manuale consente una personalizzazione dell'insegnamento, adattandosi perfettamente ai corsi di laurea.</div>
-        <div class="talking-point">La sezione dedicata alla 'Termodinamica' include esercizi pratici che aiutano gli studenti a comprendere meglio i concetti teorici.</div>
-        <div class="talking-point">Il manuale di Atkins è stato giudicato 'Buono', il che testimonia la qualità dei contenuti e l'affidabilità come risorsa didattica.</div>
-        <div class="talking-point">Siamo in grado di fornire supporto didattico aggiuntivo per gli insegnanti, rendendo la nostra offerta più completa.</div>
-    </div>
+        <h2>⚠️ Da Sapere Prima della Visita</h2>
 
-    <div class="section">
-        <h2>🛡️ Gestione Obiezioni</h2>
-
-        <div class="obiezione-card">
-            <div class="obiezione">Il Kotz ha più capitoli.</div>
-            <div class="risposta">È vero, ma il nostro manuale ha una struttura modulare che consente di concentrarsi sui contenuti più rilevanti per il corso, migliorando l'efficacia dell'insegnamento.</div>
+        <div class="gap-item alta">
+            <div class="gap-head">
+                <span class="gap-name">Sicurezza, sostenibilità e applicazioni</span>
+                <span class="gap-sev">🔴 Critica</span>
+            </div>
+            <div class="gap-how">💡 Se il docente lo nota, possiamo sottolineare che ci concentriamo su contenuti più tecnici e approfonditi in altre aree, ma siamo aperti a suggerimenti per migliorare.</div>
         </div>
 
-        <div class="obiezione-card">
-            <div class="obiezione">La copertura in alcune aree è bassa.</div>
-            <div class="risposta">Siamo consapevoli delle lacune e stiamo lavorando per migliorare. Inoltre, i moduli in cui siamo forti possono compensare queste aree.</div>
+        <div class="gap-item media">
+            <div class="gap-head">
+                <span class="gap-name">Tecniche analitiche</span>
+                <span class="gap-sev">🟡 Media</span>
+            </div>
+            <div class="gap-how">💡 Possiamo riconoscere la mancanza e proporre di integrare risorse supplementari o laboratori pratici per colmare questa lacuna.</div>
         </div>
     </div>
 
     <div class="section">
-        <h2>🎓 Target Consigliato</h2>
-        <div class="target-box">Il nostro manuale è particolarmente adatto per corsi di laurea in Chimica, Scienze Naturali e Ingegneria, dove è richiesta una solida base di chimica generale.</div>
-    </div>
+        <h2>📊 Riepilogo Moduli</h2>
+        <table class="mod-table">
+            <thead><tr><th>Modulo</th><th>Esito</th><th>Nostri Capitoli</th></tr></thead>
+            <tbody>
 
-    <div class="section">
-        <h2>⚠️ Lacune da Conoscere</h2>
-        <p style="color: #666;">Per non farsi cogliere impreparati:</p>
-        <div class="lacuna-item">Tecniche analitiche e laboratorio</div>
-        <div class="lacuna-item">Sicurezza, sostenibilità e applicazioni</div>
-    </div>
+                <tr>
+                    <td>Struttura atomica e tavola periodica</td>
+                    <td class="tie">= Pari</td>
+                    <td style="font-size:12px; color:#666;">Cap. 1</td>
+                </tr>
 
+                <tr>
+                    <td>Legame chimico e geometria molecolare</td>
+                    <td class="tie">= Pari</td>
+                    <td style="font-size:12px; color:#666;">Cap. 2, Cap. 3</td>
+                </tr>
+
+                <tr>
+                    <td>Stechiometria e reazioni chimiche</td>
+                    <td class="tie">= Pari</td>
+                    <td style="font-size:12px; color:#666;">-</td>
+                </tr>
+
+                <tr>
+                    <td>Termodinamica e termochimica</td>
+                    <td class="tie">= Pari</td>
+                    <td style="font-size:12px; color:#666;">Cap. 4</td>
+                </tr>
+
+                <tr>
+                    <td>Stati materia e soluzioni</td>
+                    <td class="tie">= Pari</td>
+                    <td style="font-size:12px; color:#666;">Cap. 3, Cap. 5</td>
+                </tr>
+
+                <tr>
+                    <td>Cinetica chimica</td>
+                    <td class="tie">= Pari</td>
+                    <td style="font-size:12px; color:#666;">Cap. 7</td>
+                </tr>
+
+                <tr>
+                    <td>Equilibri chimici</td>
+                    <td class="tie">= Pari</td>
+                    <td style="font-size:12px; color:#666;">Cap. 5</td>
+                </tr>
+
+                <tr>
+                    <td>Equilibri acido-base</td>
+                    <td class="tie">= Pari</td>
+                    <td style="font-size:12px; color:#666;">Cap. 6</td>
+                </tr>
+
+                <tr>
+                    <td>Elettrochimica</td>
+                    <td class="tie">= Pari</td>
+                    <td style="font-size:12px; color:#666;">Cap. 6</td>
+                </tr>
+
+                <tr>
+                    <td>Chimica elementi principali</td>
+                    <td class="tie">= Pari</td>
+                    <td style="font-size:12px; color:#666;">Cap. 8</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    
     <div class="footer">
-        <p>Report generato da <strong>CoreX - PromoIntelligence</strong> | Zanichelli</p>
-        <p style="font-size: 0.85em;">Documento riservato ad uso interno</p>
+        CoreX PromoIntelligence v4.1 • Zanichelli
     </div>
 </body>
 </html>
