@@ -864,3 +864,137 @@ Rispondi SOLO con JSON valido:
 </body>
 </html>"""
         return html
+
+    def generate_comparison_report_html(self, comparison: Dict) -> str:
+        """
+        Genera report HTML per il confronto tra manuali.
+        """
+        ranking = comparison.get("ranking", [])
+        modules_comparison = comparison.get("modules_comparison", [])
+        framework_name = comparison.get("framework_name", "N/D")
+        n_manuals = comparison.get("n_manuals", 0)
+        
+        # CSS styling
+        css = """
+        <style>
+            body { font-family: 'Segoe UI', sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; }
+            .header { background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 30px; border-radius: 10px; margin-bottom: 30px; }
+            .header h1 { margin: 0; }
+            .header p { margin: 5px 0 0 0; opacity: 0.9; }
+            .ranking-card { background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 20px; margin-bottom: 20px; }
+            .ranking-card.winner { border-left: 5px solid #4caf50; }
+            .ranking-position { font-size: 2em; font-weight: bold; color: #1e3c72; float: left; margin-right: 20px; width: 50px; text-align: center; }
+            .ranking-position.first { color: #ffc107; }
+            .ranking-details { overflow: hidden; }
+            .ranking-title { font-size: 1.3em; font-weight: bold; margin-bottom: 5px; }
+            .ranking-meta { color: #666; margin-bottom: 10px; }
+            .ranking-coverage { font-size: 1.5em; font-weight: bold; }
+            .coverage-high { color: #4caf50; }
+            .coverage-medium { color: #ff9800; }
+            .coverage-low { color: #f44336; }
+            .modules-table { width: 100%; border-collapse: collapse; margin-top: 30px; }
+            .modules-table th, .modules-table td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+            .modules-table th { background: #f5f5f5; font-weight: 600; }
+            .modules-table tr:hover { background: #fafafa; }
+            .badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.85em; }
+            .badge-best { background: #e8f5e9; color: #2e7d32; }
+            .section-title { font-size: 1.5em; margin: 30px 0 20px 0; padding-bottom: 10px; border-bottom: 2px solid #1e3c72; }
+        </style>
+        """
+        
+        # Header
+        html = f"""<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Confronto Manuali - {framework_name}</title>
+    {css}
+</head>
+<body>
+    <div class="header">
+        <h1>📊 Confronto tra Manuali</h1>
+        <p>Framework di riferimento: {framework_name} | {n_manuals} manuali confrontati</p>
+        <p>Generato il {datetime.now().strftime('%d/%m/%Y %H:%M')}</p>
+    </div>
+"""
+        
+        # Ranking
+        html += '<h2 class="section-title">🏆 Classifica Manuali</h2>'
+        
+        for i, manual in enumerate(ranking):
+            position = i + 1
+            coverage = manual.get("coverage", manual.get("weighted_coverage", 0))
+            
+            if coverage >= 70:
+                cov_class = "coverage-high"
+            elif coverage >= 50:
+                cov_class = "coverage-medium"
+            else:
+                cov_class = "coverage-low"
+            
+            winner_class = "winner" if position == 1 else ""
+            pos_class = "first" if position == 1 else ""
+            
+            html += f"""
+    <div class="ranking-card {winner_class}">
+        <div class="ranking-position {pos_class}">#{position}</div>
+        <div class="ranking-details">
+            <div class="ranking-title">{manual.get('manual_title', 'N/D')}</div>
+            <div class="ranking-meta">{manual.get('author', 'N/D')} • {manual.get('publisher', 'N/D')} • {manual.get('n_chapters', 0)} capitoli</div>
+            <div class="ranking-coverage {cov_class}">{coverage:.0f}% copertura</div>
+            <div style="margin-top: 5px; color: #666;">{manual.get('judgment', 'N/D')}</div>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+"""
+        
+        # Confronto per modulo
+        if modules_comparison:
+            html += '<h2 class="section-title">📋 Confronto per Modulo</h2>'
+            html += """
+    <table class="modules-table">
+        <thead>
+            <tr>
+                <th>Modulo</th>
+                <th>Miglior Manuale</th>
+                <th>Copertura Media</th>
+                <th>Dettaglio</th>
+            </tr>
+        </thead>
+        <tbody>
+"""
+            
+            for mod in modules_comparison:
+                best = mod.get("best_manual", "N/D")
+                avg = mod.get("avg_coverage", 0)
+                
+                # Dettaglio manuali per questo modulo
+                detail_parts = []
+                for score in mod.get("manual_scores", [])[:3]:
+                    detail_parts.append(f"{score['manual'][:20]}: {score['coverage']:.0f}%")
+                detail = " | ".join(detail_parts)
+                
+                html += f"""
+            <tr>
+                <td><strong>{mod.get('module_name', 'N/D')}</strong></td>
+                <td><span class="badge badge-best">{best}</span></td>
+                <td>{avg:.0f}%</td>
+                <td style="font-size: 0.9em; color: #666;">{detail}</td>
+            </tr>
+"""
+            
+            html += """
+        </tbody>
+    </table>
+"""
+        
+        # Footer
+        html += """
+    <div style="margin-top: 40px; padding: 20px; background: #f5f5f5; border-radius: 10px; text-align: center; color: #666;">
+        <p>Report generato da <strong>CoreX - PromoIntelligence</strong></p>
+    </div>
+</body>
+</html>
+"""
+        
+        return html
