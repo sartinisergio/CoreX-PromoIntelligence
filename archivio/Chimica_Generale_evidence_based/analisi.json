@@ -1,0 +1,37 @@
+{
+  "name": "Chimica_Generale_Ideale_L-13_Biologia_L-25_Scienze_e_tecnologie_agrarie_L-26_Scienze_e_tecnologie_alimentari_+6",
+  "materia": "Chimica_Generale",
+  "classi": [
+    "L-13_Biologia",
+    "L-25_Scienze_e_tecnologie_agrarie",
+    "L-26_Scienze_e_tecnologie_alimentari",
+    "L-27_Scienze_chimiche",
+    "L-2_Biotecnologie",
+    "L-32_Scienze_naturali_amb",
+    "L-34_Geologia",
+    "L-7-8-9_Ingegneria",
+    "LM-13_Farmacia"
+  ],
+  "type": "multiclass_evidence_based",
+  "framework_type": "evidence_based",
+  "created": "2026-01-07T16:48:00.635088",
+  "n_syllabus_total": 33,
+  "n_syllabus_per_class": {
+    "L-13_Biologia": 4,
+    "L-25_Scienze_e_tecnologie_agrarie": 2,
+    "L-26_Scienze_e_tecnologie_alimentari": 2,
+    "L-27_Scienze_chimiche": 4,
+    "L-2_Biotecnologie": 3,
+    "L-32_Scienze_naturali_amb": 4,
+    "L-34_Geologia": 2,
+    "L-7-8-9_Ingegneria": 4,
+    "LM-13_Farmacia": 8
+  },
+  "n_modules": 8,
+  "n_core_modules": 1,
+  "n_specific_modules": 4,
+  "thresholds": {
+    "core": 80,
+    "specific": 50
+  }
+}

@@ -1,0 +1,488 @@
+{
+  "cache_key": "bc07153a706db307172e",
+  "cached_at": "2026-01-07T15:56:56.980793",
+  "framework": {
+    "modules": [
+      {
+        "id": 1,
+        "name": "Fondamenti di Chimica",
+        "core_contents": [
+          "chimica di base",
+          "linguaggio chimico",
+          "atomi",
+          "legami chimici",
+          "reazioni chimiche",
+          "equilibrio chimico",
+          "termodinamica",
+          "elettrochimica",
+          "struttura della materia",
+          "nomenclatura",
+          "formule chimiche",
+          "stechiometria"
+        ],
+        "description": "Questo modulo introduce i concetti fondamentali della chimica, essenziali per la comprensione delle reazioni e delle interazioni chimiche.",
+        "avg_frequency": 50.0,
+        "coverage_by_class": {
+          "L-13_Biologia": 0.0,
+          "L-25_Scienze_e_tecnologie_agrarie": 0.0,
+          "L-26_Scienze_e_tecnologie_alimentari": 0.0,
+          "L-27_Scienze_chimiche": 0.0,
+          "L-2_Biotecnologie": 0.0,
+          "L-32_Scienze_naturali_amb": 0.0,
+          "L-34_Geologia": 0.0,
+          "L-7-8-9_Ingegneria": 0.0,
+          "LM-13_Farmacia": 0.0
+        },
+        "concepts_by_class": {
+          "L-13_Biologia": [],
+          "L-25_Scienze_e_tecnologie_agrarie": [],
+          "L-26_Scienze_e_tecnologie_alimentari": [],
+          "L-27_Scienze_chimiche": [],
+          "L-2_Biotecnologie": [],
+          "L-32_Scienze_naturali_amb": [],
+          "L-34_Geologia": [],
+          "L-7-8-9_Ingegneria": [],
+          "LM-13_Farmacia": []
+        },
+        "is_core": false,
+        "is_specific": true,
+        "distinctive_for": [],
+        "stats": {
+          "avg_coverage": 0.0,
+          "min_coverage": 0.0,
+          "max_coverage": 0.0,
+          "presence_in_classes": "0/9",
+          "presence_percentage": 0.0
+        }
+      },
+      {
+        "id": 2,
+        "name": "Struttura Atomica e Modelli",
+        "core_contents": [
+          "struttura atomica",
+          "nuclidi",
+          "isotopi",
+          "elementi chimici",
+          "massa atomica",
+          "massa molecolare",
+          "mole",
+          "costante di avogadro",
+          "modelli atomici",
+          "orbitali",
+          "numeri quantici",
+          "configurazione elettronica",
+          "tavola periodica",
+          "proprietà periodiche"
+        ],
+        "description": "Questo modulo esplora la struttura atomica e i modelli che descrivono il comportamento degli atomi e delle molecole.",
+        "avg_frequency": 50.0,
+        "coverage_by_class": {
+          "L-13_Biologia": 0.0,
+          "L-25_Scienze_e_tecnologie_agrarie": 0.0,
+          "L-26_Scienze_e_tecnologie_alimentari": 0.0,
+          "L-27_Scienze_chimiche": 0.0,
+          "L-2_Biotecnologie": 0.0,
+          "L-32_Scienze_naturali_amb": 0.0,
+          "L-34_Geologia": 0.0,
+          "L-7-8-9_Ingegneria": 0.0,
+          "LM-13_Farmacia": 0.0
+        },
+        "concepts_by_class": {
+          "L-13_Biologia": [],
+          "L-25_Scienze_e_tecnologie_agrarie": [],
+          "L-26_Scienze_e_tecnologie_alimentari": [],
+          "L-27_Scienze_chimiche": [],
+          "L-2_Biotecnologie": [],
+          "L-32_Scienze_naturali_amb": [],
+          "L-34_Geologia": [],
+          "L-7-8-9_Ingegneria": [],
+          "LM-13_Farmacia": []
+        },
+        "is_core": false,
+        "is_specific": true,
+        "distinctive_for": [],
+        "stats": {
+          "avg_coverage": 0.0,
+          "min_coverage": 0.0,
+          "max_coverage": 0.0,
+          "presence_in_classes": "0/9",
+          "presence_percentage": 0.0
+        }
+      },
+      {
+        "id": 3,
+        "name": "Chimica delle Soluzioni",
+        "core_contents": [
+          "soluzioni",
+          "dissociazioni",
+          "soluzioni tampone",
+          "unità di misura",
+          "concentrazione",
+          "diluizione",
+          "proprietà colligative"
+        ],
+        "description": "Questo modulo si concentra sulle soluzioni chimiche, le loro proprietà e le interazioni tra soluti e solventi.",
+        "avg_frequency": 50.0,
+        "coverage_by_class": {
+          "L-13_Biologia": 0.0,
+          "L-25_Scienze_e_tecnologie_agrarie": 0.0,
+          "L-26_Scienze_e_tecnologie_alimentari": 0.0,
+          "L-27_Scienze_chimiche": 0.0,
+          "L-2_Biotecnologie": 0.0,
+          "L-32_Scienze_naturali_amb": 0.0,
+          "L-34_Geologia": 0.0,
+          "L-7-8-9_Ingegneria": 0.0,
+          "LM-13_Farmacia": 0.0
+        },
+        "concepts_by_class": {
+          "L-13_Biologia": [],
+          "L-25_Scienze_e_tecnologie_agrarie": [],
+          "L-26_Scienze_e_tecnologie_alimentari": [],
+          "L-27_Scienze_chimiche": [],
+          "L-2_Biotecnologie": [],
+          "L-32_Scienze_naturali_amb": [],
+          "L-34_Geologia": [],
+          "L-7-8-9_Ingegneria": [],
+          "LM-13_Farmacia": []
+        },
+        "is_core": false,
+        "is_specific": true,
+        "distinctive_for": [],
+        "stats": {
+          "avg_coverage": 0.0,
+          "min_coverage": 0.0,
+          "max_coverage": 0.0,
+          "presence_in_classes": "0/9",
+          "presence_percentage": 0.0
+        }
+      },
+      {
+        "id": 4,
+        "name": "Reazioni Chimiche e Bilanciamento",
+        "core_contents": [
+          "equazioni chimiche",
+          "bilanciamento",
+          "principio di conservazione della massa",
+          "equazione ionica netta",
+          "principio di conservazione della carica",
+          "costante di equilibrio",
+          "quoziente di reazione",
+          "principio di le chatelier"
+        ],
+        "description": "Questo modulo tratta le reazioni chimiche, il bilanciamento delle equazioni e i principi che governano le reazioni.",
+        "avg_frequency": 50.0,
+        "coverage_by_class": {
+          "L-13_Biologia": 0.0,
+          "L-25_Scienze_e_tecnologie_agrarie": 0.0,
+          "L-26_Scienze_e_tecnologie_alimentari": 0.0,
+          "L-27_Scienze_chimiche": 0.0,
+          "L-2_Biotecnologie": 0.0,
+          "L-32_Scienze_naturali_amb": 0.0,
+          "L-34_Geologia": 0.0,
+          "L-7-8-9_Ingegneria": 0.0,
+          "LM-13_Farmacia": 0.0
+        },
+        "concepts_by_class": {
+          "L-13_Biologia": [],
+          "L-25_Scienze_e_tecnologie_agrarie": [],
+          "L-26_Scienze_e_tecnologie_alimentari": [],
+          "L-27_Scienze_chimiche": [],
+          "L-2_Biotecnologie": [],
+          "L-32_Scienze_naturali_amb": [],
+          "L-34_Geologia": [],
+          "L-7-8-9_Ingegneria": [],
+          "LM-13_Farmacia": []
+        },
+        "is_core": false,
+        "is_specific": true,
+        "distinctive_for": [],
+        "stats": {
+          "avg_coverage": 0.0,
+          "min_coverage": 0.0,
+          "max_coverage": 0.0,
+          "presence_in_classes": "0/9",
+          "presence_percentage": 0.0
+        }
+      },
+      {
+        "id": 5,
+        "name": "Chimica Acido-Base",
+        "core_contents": [
+          "definizioni di acido",
+          "definizioni di base",
+          "equilibri acido-base",
+          "calcolo del ph",
+          "curve di titolazione"
+        ],
+        "description": "Questo modulo esplora i concetti di acidi e basi, le loro definizioni e le reazioni che coinvolgono questi composti.",
+        "avg_frequency": 50.0,
+        "coverage_by_class": {
+          "L-13_Biologia": 0.0,
+          "L-25_Scienze_e_tecnologie_agrarie": 0.0,
+          "L-26_Scienze_e_tecnologie_alimentari": 0.0,
+          "L-27_Scienze_chimiche": 0.0,
+          "L-2_Biotecnologie": 0.0,
+          "L-32_Scienze_naturali_amb": 0.0,
+          "L-34_Geologia": 0.0,
+          "L-7-8-9_Ingegneria": 0.0,
+          "LM-13_Farmacia": 0.0
+        },
+        "concepts_by_class": {
+          "L-13_Biologia": [],
+          "L-25_Scienze_e_tecnologie_agrarie": [],
+          "L-26_Scienze_e_tecnologie_alimentari": [],
+          "L-27_Scienze_chimiche": [],
+          "L-2_Biotecnologie": [],
+          "L-32_Scienze_naturali_amb": [],
+          "L-34_Geologia": [],
+          "L-7-8-9_Ingegneria": [],
+          "LM-13_Farmacia": []
+        },
+        "is_core": false,
+        "is_specific": true,
+        "distinctive_for": [],
+        "stats": {
+          "avg_coverage": 0.0,
+          "min_coverage": 0.0,
+          "max_coverage": 0.0,
+          "presence_in_classes": "0/9",
+          "presence_percentage": 0.0
+        }
+      },
+      {
+        "id": 6,
+        "name": "Termodinamica Chimica",
+        "core_contents": [
+          "termodinamica chimica",
+          "funzioni di stato",
+          "primo principio della termodinamica",
+          "entalpia",
+          "reazioni esotermiche",
+          "reazioni endotermiche",
+          "condizioni standard",
+          "secondo principio della termodinamica",
+          "entropia",
+          "energia libera di gibbs",
+          "spontaneità di una reazione"
+        ],
+        "description": "Questo modulo si occupa dei principi della termodinamica applicati alla chimica, analizzando le energie coinvolte nelle reazioni.",
+        "avg_frequency": 50.0,
+        "coverage_by_class": {
+          "L-13_Biologia": 0.0,
+          "L-25_Scienze_e_tecnologie_agrarie": 0.0,
+          "L-26_Scienze_e_tecnologie_alimentari": 0.0,
+          "L-27_Scienze_chimiche": 0.0,
+          "L-2_Biotecnologie": 0.0,
+          "L-32_Scienze_naturali_amb": 0.0,
+          "L-34_Geologia": 0.0,
+          "L-7-8-9_Ingegneria": 0.0,
+          "LM-13_Farmacia": 0.0
+        },
+        "concepts_by_class": {
+          "L-13_Biologia": [],
+          "L-25_Scienze_e_tecnologie_agrarie": [],
+          "L-26_Scienze_e_tecnologie_alimentari": [],
+          "L-27_Scienze_chimiche": [],
+          "L-2_Biotecnologie": [],
+          "L-32_Scienze_naturali_amb": [],
+          "L-34_Geologia": [],
+          "L-7-8-9_Ingegneria": [],
+          "LM-13_Farmacia": []
+        },
+        "is_core": false,
+        "is_specific": true,
+        "distinctive_for": [],
+        "stats": {
+          "avg_coverage": 0.0,
+          "min_coverage": 0.0,
+          "max_coverage": 0.0,
+          "presence_in_classes": "0/9",
+          "presence_percentage": 0.0
+        }
+      },
+      {
+        "id": 7,
+        "name": "Cinetica Chimica",
+        "core_contents": [
+          "cinetica chimica",
+          "celle elettrochimiche",
+          "potenziali standard",
+          "potenziale di cella",
+          "equazione di nernst"
+        ],
+        "description": "Questo modulo analizza la velocità delle reazioni chimiche e i fattori che influenzano la cinetica.",
+        "avg_frequency": 50.0,
+        "coverage_by_class": {
+          "L-13_Biologia": 0.0,
+          "L-25_Scienze_e_tecnologie_agrarie": 0.0,
+          "L-26_Scienze_e_tecnologie_alimentari": 0.0,
+          "L-27_Scienze_chimiche": 0.0,
+          "L-2_Biotecnologie": 0.0,
+          "L-32_Scienze_naturali_amb": 0.0,
+          "L-34_Geologia": 0.0,
+          "L-7-8-9_Ingegneria": 0.0,
+          "LM-13_Farmacia": 0.0
+        },
+        "concepts_by_class": {
+          "L-13_Biologia": [],
+          "L-25_Scienze_e_tecnologie_agrarie": [],
+          "L-26_Scienze_e_tecnologie_alimentari": [],
+          "L-27_Scienze_chimiche": [],
+          "L-2_Biotecnologie": [],
+          "L-32_Scienze_naturali_amb": [],
+          "L-34_Geologia": [],
+          "L-7-8-9_Ingegneria": [],
+          "LM-13_Farmacia": []
+        },
+        "is_core": false,
+        "is_specific": true,
+        "distinctive_for": [],
+        "stats": {
+          "avg_coverage": 0.0,
+          "min_coverage": 0.0,
+          "max_coverage": 0.0,
+          "presence_in_classes": "0/9",
+          "presence_percentage": 0.0
+        }
+      },
+      {
+        "id": 8,
+        "name": "Interazioni Molecolari",
+        "core_contents": [
+          "interazioni intermolecolari",
+          "geometria molecolare",
+          "modello vsepr",
+          "teoria del legame di valenza"
+        ],
+        "description": "Questo modulo esplora le interazioni tra molecole e la loro influenza sulla geometria e sulle proprietà chimiche.",
+        "avg_frequency": 50.0,
+        "coverage_by_class": {
+          "L-13_Biologia": 0.0,
+          "L-25_Scienze_e_tecnologie_agrarie": 0.0,
+          "L-26_Scienze_e_tecnologie_alimentari": 0.0,
+          "L-27_Scienze_chimiche": 0.0,
+          "L-2_Biotecnologie": 0.0,
+          "L-32_Scienze_naturali_amb": 0.0,
+          "L-34_Geologia": 0.0,
+          "L-7-8-9_Ingegneria": 0.0,
+          "LM-13_Farmacia": 0.0
+        },
+        "concepts_by_class": {
+          "L-13_Biologia": [],
+          "L-25_Scienze_e_tecnologie_agrarie": [],
+          "L-26_Scienze_e_tecnologie_alimentari": [],
+          "L-27_Scienze_chimiche": [],
+          "L-2_Biotecnologie": [],
+          "L-32_Scienze_naturali_amb": [],
+          "L-34_Geologia": [],
+          "L-7-8-9_Ingegneria": [],
+          "LM-13_Farmacia": []
+        },
+        "is_core": false,
+        "is_specific": true,
+        "distinctive_for": [],
+        "stats": {
+          "avg_coverage": 0.0,
+          "min_coverage": 0.0,
+          "max_coverage": 0.0,
+          "presence_in_classes": "0/9",
+          "presence_percentage": 0.0
+        }
+      },
+      {
+        "id": 9,
+        "name": "Gas e Leggi dei Gas",
+        "core_contents": [
+          "stato gassoso",
+          "pressione",
+          "temperatura",
+          "equazione di stato dei gas",
+          "volume molare",
+          "costante universale dei gas",
+          "miscele gassose",
+          "legge di dalton",
+          "pressione parziale"
+        ],
+        "description": "Questo modulo tratta le proprietà dei gas e le leggi che governano il loro comportamento.",
+        "avg_frequency": 50.0,
+        "coverage_by_class": {
+          "L-13_Biologia": 0.0,
+          "L-25_Scienze_e_tecnologie_agrarie": 0.0,
+          "L-26_Scienze_e_tecnologie_alimentari": 0.0,
+          "L-27_Scienze_chimiche": 0.0,
+          "L-2_Biotecnologie": 0.0,
+          "L-32_Scienze_naturali_amb": 0.0,
+          "L-34_Geologia": 0.0,
+          "L-7-8-9_Ingegneria": 0.0,
+          "LM-13_Farmacia": 0.0
+        },
+        "concepts_by_class": {
+          "L-13_Biologia": [],
+          "L-25_Scienze_e_tecnologie_agrarie": [],
+          "L-26_Scienze_e_tecnologie_alimentari": [],
+          "L-27_Scienze_chimiche": [],
+          "L-2_Biotecnologie": [],
+          "L-32_Scienze_naturali_amb": [],
+          "L-34_Geologia": [],
+          "L-7-8-9_Ingegneria": [],
+          "LM-13_Farmacia": []
+        },
+        "is_core": false,
+        "is_specific": true,
+        "distinctive_for": [],
+        "stats": {
+          "avg_coverage": 0.0,
+          "min_coverage": 0.0,
+          "max_coverage": 0.0,
+          "presence_in_classes": "0/9",
+          "presence_percentage": 0.0
+        }
+      }
+    ],
+    "clustering_notes": "I moduli sono stati raggruppati in base ai temi principali della chimica generale, con un focus su concetti fondamentali, reazioni, soluzioni, termodinamica e cinetica. Ogni modulo rappresenta un'area chiave della materia, riflettendo la distribuzione dei concetti tra le classi analizzate.",
+    "framework": {
+      "name": "Evidence-Based Framework",
+      "type": "evidence_based",
+      "classes_analyzed": [
+        "L-13_Biologia",
+        "L-25_Scienze_e_tecnologie_agrarie",
+        "L-26_Scienze_e_tecnologie_alimentari",
+        "L-27_Scienze_chimiche",
+        "L-2_Biotecnologie",
+        "L-32_Scienze_naturali_amb",
+        "L-34_Geologia",
+        "L-7-8-9_Ingegneria",
+        "LM-13_Farmacia"
+      ]
+    },
+    "meta": {
+      "type": "evidence_based",
+      "name": "Evidence-Based Framework - Chimica_Generale",
+      "materia": "Chimica_Generale",
+      "classes_analyzed": [
+        "L-13_Biologia",
+        "L-25_Scienze_e_tecnologie_agrarie",
+        "L-26_Scienze_e_tecnologie_alimentari",
+        "L-27_Scienze_chimiche",
+        "L-2_Biotecnologie",
+        "L-32_Scienze_naturali_amb",
+        "L-34_Geologia",
+        "L-7-8-9_Ingegneria",
+        "LM-13_Farmacia"
+      ],
+      "n_classes": 9,
+      "generated_at": "2026-01-07T15:56:56.980615",
+      "generator_version": "1.0",
+      "thresholds": {
+        "core": 80,
+        "specific": 50
+      }
+    },
+    "summary": {
+      "n_modules": 9,
+      "n_core_modules": 0,
+      "n_specific_modules": 9,
+      "total_concepts_analyzed": 2491
+    }
+  }
+}

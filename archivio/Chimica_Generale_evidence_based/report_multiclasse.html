@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Evidence-Based Framework - Chimica_Generale</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin: 20px; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #1a237e; border-bottom: 3px solid #4caf50; padding-bottom: 15px; }
+        h2 { color: #2e7d32; margin-top: 30px; }
+        .summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin: 20px 0; }
+        .summary-card { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 20px; border-radius: 10px; text-align: center; }
+        .summary-card.core { background: linear-gradient(135deg, #4caf50, #2e7d32); }
+        .summary-card.specific { background: linear-gradient(135deg, #ff9800, #e65100); }
+        .summary-card .number { font-size: 2.5em; font-weight: bold; }
+        .summary-card .label { opacity: 0.9; }
+        .module { background: #fafafa; border-radius: 8px; padding: 20px; margin: 15px 0; border-left: 4px solid #ccc; }
+        .module.core { border-left-color: #4caf50; background: #e8f5e9; }
+        .module.specific { border-left-color: #ff9800; background: #fff3e0; }
+        .module-header { display: flex; justify-content: space-between; align-items: center; }
+        .module-name { font-size: 1.2em; font-weight: 600; }
+        .badge { padding: 4px 12px; border-radius: 15px; font-size: 0.85em; font-weight: 500; }
+        .badge-core { background: #c8e6c9; color: #2e7d32; }
+        .badge-specific { background: #ffe0b2; color: #e65100; }
+        .badge-normal { background: #e0e0e0; color: #666; }
+        .class-coverage { margin-top: 15px; }
+        .class-bar { display: flex; align-items: center; margin: 5px 0; }
+        .class-name { width: 150px; font-weight: 500; }
+        .bar-container { flex: 1; background: #e0e0e0; height: 20px; border-radius: 10px; overflow: hidden; }
+        .bar-fill { height: 100%; border-radius: 10px; }
+        .bar-fill.high { background: #4caf50; }
+        .bar-fill.medium { background: #ff9800; }
+        .bar-fill.low { background: #f44336; }
+        .contents { margin-top: 10px; padding: 10px; background: rgba(255,255,255,0.7); border-radius: 6px; }
+        .contents span { display: inline-block; background: #e3f2fd; padding: 3px 8px; margin: 2px; border-radius: 12px; font-size: 0.85em; }
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e0e0e0; color: #888; text-align: center; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>📊 Evidence-Based Framework</h1>
+    <p><strong>Materia:</strong> Chimica Generale</p>
+    <p><strong>Classi analizzate:</strong> L-13_Biologia, L-25_Scienze_e_tecnologie_agrarie, L-26_Scienze_e_tecnologie_alimentari, L-27_Scienze_chimiche, L-2_Biotecnologie, L-32_Scienze_naturali_amb, L-34_Geologia, L-7-8-9_Ingegneria, LM-13_Farmacia</p>
+    <p><strong>Soglie:</strong> CORE ≥80% | SPECIFICO <50%</p>
+    
+    <div class="summary">
+        <div class="summary-card">
+            <div class="number">8</div>
+            <div class="label">Moduli Totali</div>
+        </div>
+        <div class="summary-card core">
+            <div class="number">1</div>
+            <div class="label">Moduli CORE</div>
+        </div>
+        <div class="summary-card specific">
+            <div class="number">4</div>
+            <div class="label">Moduli SPECIFICI</div>
+        </div>
+        <div class="summary-card">
+            <div class="number">9</div>
+            <div class="label">Classi</div>
+        </div>
+    </div>
+    
+    <h2>🔷 Moduli CORE (comuni a tutte le classi)</h2>
+
+    <div class="module core">
+        <div class="module-header">
+            <span class="module-name">Fondamenti di Chimica Generale</span>
+            <span class="badge badge-core">CORE</span>
+        </div>
+        <p>Questo modulo copre i principi fondamentali della chimica, inclusi i vari tipi di legami chimici e le proprietà degli elementi.</p>
+        <div class="class-coverage">
+            <strong>Copertura per classe:</strong>
+
+            <div class="class-bar">
+                <span class="class-name">L-13_Biologia</span>
+                <div class="bar-container"><div class="bar-fill high" style="width: 77.8%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">78%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-25_Scienze_e_tecnologie_agrarie</span>
+                <div class="bar-container"><div class="bar-fill high" style="width: 88.9%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">89%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-26_Scienze_e_tecnologie_alimentari</span>
+                <div class="bar-container"><div class="bar-fill medium" style="width: 66.7%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">67%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-27_Scienze_chimiche</span>
+                <div class="bar-container"><div class="bar-fill medium" style="width: 55.6%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">56%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-2_Biotecnologie</span>
+                <div class="bar-container"><div class="bar-fill medium" style="width: 66.7%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">67%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-32_Scienze_naturali_amb</span>
+                <div class="bar-container"><div class="bar-fill medium" style="width: 55.6%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">56%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-34_Geologia</span>
+                <div class="bar-container"><div class="bar-fill medium" style="width: 55.6%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">56%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-7-8-9_Ingegneria</span>
+                <div class="bar-container"><div class="bar-fill medium" style="width: 55.6%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">56%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">LM-13_Farmacia</span>
+                <div class="bar-container"><div class="bar-fill medium" style="width: 66.7%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">67%</span>
+            </div>
+
+        </div>
+        <div class="contents"><strong>Contenuti:</strong> <span>chimica generale</span><span>legame chimico</span><span>legame ionico</span><span>legame covalente</span><span>legame metallico</span><span>legame dativo</span><span>legami secondari</span><span>proprietà chimico-fisiche</span><span>proprietà periodiche</span></div>
+    </div>
+
+    <h2>🔶 Moduli SPECIFICI (distintivi per alcune classi)</h2>
+
+    <div class="module specific">
+        <div class="module-header">
+            <span class="module-name">Cinetica Chimica</span>
+            <span class="badge badge-specific">SPECIFICO - Distintivo per: L-26_Scienze_e_tecnologie_alimentari</span>
+        </div>
+        <p>Il modulo si concentra sulla cinetica delle reazioni chimiche e sui fattori che influenzano la velocità delle reazioni.</p>
+        <div class="class-coverage">
+            <strong>Copertura per classe:</strong>
+
+            <div class="class-bar">
+                <span class="class-name">L-13_Biologia</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 25.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">25%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-25_Scienze_e_tecnologie_agrarie</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 0.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">0%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-26_Scienze_e_tecnologie_alimentari</span>
+                <div class="bar-container"><div class="bar-fill high" style="width: 100.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">100%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-27_Scienze_chimiche</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 0.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">0%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-2_Biotecnologie</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 25.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">25%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-32_Scienze_naturali_amb</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 0.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">0%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-34_Geologia</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 0.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">0%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-7-8-9_Ingegneria</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 25.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">25%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">LM-13_Farmacia</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 0.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">0%</span>
+            </div>
+
+        </div>
+        <div class="contents"><strong>Contenuti:</strong> <span>cinetica chimica</span><span>cinetiche del primo ordine</span><span>spontaneità dei processi</span><span>fattori di influenza</span></div>
+    </div>
+
+    <div class="module specific">
+        <div class="module-header">
+            <span class="module-name">Chimica Fisica e Proprietà delle Soluzioni</span>
+            <span class="badge badge-specific">SPECIFICO</span>
+        </div>
+        <p>Il modulo si occupa delle proprietà fisiche delle soluzioni e delle tecniche di preparazione e analisi delle stesse.</p>
+        <div class="class-coverage">
+            <strong>Copertura per classe:</strong>
+
+            <div class="class-bar">
+                <span class="class-name">L-13_Biologia</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 14.3%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">14%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-25_Scienze_e_tecnologie_agrarie</span>
+                <div class="bar-container"><div class="bar-fill medium" style="width: 57.1%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">57%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-26_Scienze_e_tecnologie_alimentari</span>
+                <div class="bar-container"><div class="bar-fill medium" style="width: 57.1%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">57%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-27_Scienze_chimiche</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 28.6%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">29%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-2_Biotecnologie</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 14.3%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">14%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-32_Scienze_naturali_amb</span>
+                <div class="bar-container"><div class="bar-fill medium" style="width: 57.1%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">57%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-34_Geologia</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 28.6%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">29%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-7-8-9_Ingegneria</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 14.3%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">14%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">LM-13_Farmacia</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 14.3%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">14%</span>
+            </div>
+
+        </div>
+        <div class="contents"><strong>Contenuti:</strong> <span>proprietà colligative</span><span>molarità</span><span>molalità</span><span>normalità</span><span>preparazione di soluzioni</span><span>titolazione</span><span>ph di soluzioni</span></div>
+    </div>
+
+    <div class="module specific">
+        <div class="module-header">
+            <span class="module-name">Chimica Agraria e Alimentare</span>
+            <span class="badge badge-specific">SPECIFICO - Distintivo per: L-26_Scienze_e_tecnologie_alimentari</span>
+        </div>
+        <p>Il modulo si concentra sulla chimica applicata all'agricoltura e all'alimentazione, analizzando composti e reazioni specifiche.</p>
+        <div class="class-coverage">
+            <strong>Copertura per classe:</strong>
+
+            <div class="class-bar">
+                <span class="class-name">L-13_Biologia</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 0.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">0%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-25_Scienze_e_tecnologie_agrarie</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 20.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">20%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-26_Scienze_e_tecnologie_alimentari</span>
+                <div class="bar-container"><div class="bar-fill medium" style="width: 60.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">60%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-27_Scienze_chimiche</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 20.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">20%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-2_Biotecnologie</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 0.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">0%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-32_Scienze_naturali_amb</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 0.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">0%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-34_Geologia</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 0.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">0%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-7-8-9_Ingegneria</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 0.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">0%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">LM-13_Farmacia</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 0.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">0%</span>
+            </div>
+
+        </div>
+        <div class="contents"><strong>Contenuti:</strong> <span>chimica agraria</span><span>chimica alimentare</span><span>contenuto di vitamina c</span><span>acido acetico</span><span>preparazione di soluzioni</span></div>
+    </div>
+
+    <div class="module specific">
+        <div class="module-header">
+            <span class="module-name">Laboratorio di Chimica</span>
+            <span class="badge badge-specific">SPECIFICO</span>
+        </div>
+        <p>Questo modulo fornisce competenze pratiche attraverso esercitazioni e valutazioni in laboratorio.</p>
+        <div class="class-coverage">
+            <strong>Copertura per classe:</strong>
+
+            <div class="class-bar">
+                <span class="class-name">L-13_Biologia</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 0.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">0%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-25_Scienze_e_tecnologie_agrarie</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 25.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">25%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-26_Scienze_e_tecnologie_alimentari</span>
+                <div class="bar-container"><div class="bar-fill medium" style="width: 50.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">50%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-27_Scienze_chimiche</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 0.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">0%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-2_Biotecnologie</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 25.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">25%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-32_Scienze_naturali_amb</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 0.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">0%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-34_Geologia</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 0.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">0%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">L-7-8-9_Ingegneria</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 0.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">0%</span>
+            </div>
+
+            <div class="class-bar">
+                <span class="class-name">LM-13_Farmacia</span>
+                <div class="bar-container"><div class="bar-fill low" style="width: 0.0%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">0%</span>
+            </div>
+
+        </div>
+        <div class="contents"><strong>Contenuti:</strong> <span>operazioni di laboratorio</span><span>esercitazioni di laboratorio</span><span>valutazione di laboratorio</span><span>relazione di laboratorio</span></div>
+    </div>
+
+    <h2>📋 Altri Moduli</h2>
+
+    <div class="module">
+        <div class="module-header">
+            <span class="module-name">Struttura Atomica e Teoria Atomica</span>
+            <span class="badge badge-normal">PARZIALE</span>
+        </div>
+        <p>Questo modulo tratta la struttura atomica e le teorie che descrivono il comportamento degli atomi e delle molecole.</p>
+        <div class="contents"><strong>Contenuti:</strong> <span>struttura atomica</span><span>modelli atomici</span><span>configurazione elettronica</span><span>numeri quantici</span><span>orbitali atomici ibridi</span><span>teoria del legame di valenza</span><span>teoria orbitale molecolare</span></div>
+    </div>
+
+    <div class="module">
+        <div class="module-header">
+            <span class="module-name">Termodinamica e Equilibri</span>
+            <span class="badge badge-normal">PARZIALE</span>
+        </div>
+        <p>Questo modulo esplora i principi della termodinamica e gli equilibri chimici, con un focus sulle reazioni acido-base.</p>
+        <div class="contents"><strong>Contenuti:</strong> <span>equilibrio chimico</span><span>costante di equilibrio</span><span>reazioni acido-base</span><span>soluzioni tampone</span><span>pressione osmotica</span><span>dissociazione e ph</span><span>calcolo del ph</span><span>spontaneità di una reazione</span></div>
+    </div>
+
+    <div class="module">
+        <div class="module-header">
+            <span class="module-name">Chimica Inorganica e Reazioni</span>
+            <span class="badge badge-normal">PARZIALE</span>
+        </div>
+        <p>Questo modulo esplora le reazioni chimiche inorganiche e i composti principali, con un focus sulle reazioni redox.</p>
+        <div class="contents"><strong>Contenuti:</strong> <span>reazioni chimiche</span><span>reazioni ossidoriduzione</span><span>reazione di combustione</span><span>reazioni acido-base</span><span>composti inorganici principali</span></div>
+    </div>
+
+    <div class="footer">
+        <p><strong>CoreX PromoIntelligence - Evidence-Based Framework Generator v1.0</strong></p>
+        <p>Generato il 2026-01-07 16:48</p>
+        <p>Note clustering: I moduli sono stati raggruppati in base ai temi principali della chimica generale, evidenziando le aree di sovrapposizione e le specificità delle classi analizzate.</p>
+    </div>
+</div>
+</body>
+</html>

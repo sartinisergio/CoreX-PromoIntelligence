@@ -557,47 +557,116 @@ with tab2:
                 else:
                     st.success(f"✅ {len(selected_classes)} classi selezionate: {', '.join(selected_classes)}")
                     
+                    # =============================================
+                    # SELEZIONE TIPO FRAMEWORK
+                    # =============================================
+                    st.markdown("---")
+                    st.subheader("🎯 Tipo di Framework")
+                    
+                    framework_mode = st.radio(
+                        "Seleziona come generare il framework:",
+                        [
+                            "📐 Framework Ideale (mappa i concetti sul framework Zanichelli predefinito)",
+                            "📊 Evidence-Based Framework (genera i moduli dai dati reali dei programmi)"
+                        ],
+                        key="framework_mode",
+                        help="""
+                        **Framework Ideale**: Usa il framework Zanichelli come riferimento e misura quanto i programmi lo coprono.
+                        **Evidence-Based**: I moduli emergono direttamente dai programmi analizzati, senza struttura predefinita.
+                        """
+                    )
+                    
+                    is_evidence_based = "Evidence-Based" in framework_mode
+                    
+                    if is_evidence_based:
+                        st.info("📊 **Evidence-Based Framework**: I moduli verranno generati analizzando i concetti effettivamente insegnati nei programmi. Nessun riferimento a strutture predefinite.")
+                    else:
+                        st.info("📐 **Framework Ideale**: I concetti estratti verranno mappati sui moduli del framework Zanichelli di riferimento.")
+                    
+                    st.markdown("---")
+                    
                     # Parametri soglie
                     st.markdown("**Parametri soglie:**")
+                    
+                    if is_evidence_based:
+                        # Soglie per Evidence-Based Framework
+                        col_p1, col_p2 = st.columns(2)
                         
-                    col_p1, col_p2, col_p3 = st.columns(3)
+                        with col_p1:
+                            core_threshold = st.slider(
+                                "Soglia moduli CORE (%)",
+                                min_value=60,
+                                max_value=95,
+                                value=80,
+                                step=5,
+                                help="Un modulo è CORE se presente in almeno questa % di classi",
+                                key="eb_core_threshold"
+                            )
                         
-                    with col_p1:
-                        core_threshold = st.slider(
-                            "Soglia moduli CORE (%)",
-                            min_value=50,
-                            max_value=80,
-                            value=60,
-                            step=5,
-                            help="Un modulo è CORE se ha copertura ≥ questa soglia in TUTTE le classi"
-                        )
+                        with col_p2:
+                            specific_threshold = st.slider(
+                                "Soglia moduli SPECIFICI (%)",
+                                min_value=20,
+                                max_value=60,
+                                value=50,
+                                step=5,
+                                help="Un modulo è SPECIFICO se presente in meno di questa % di classi",
+                                key="eb_specific_threshold"
+                            )
                         
-                    with col_p2:
-                        gap_threshold = st.slider(
-                            "Soglia GAP (%)",
-                            min_value=20,
-                            max_value=50,
-                            value=40,
-                            step=5,
-                            help="Un modulo è GAP per una classe se ha copertura < questa soglia"
-                        )
+                        # Mostra legenda
+                        st.caption(f"🔷 **CORE**: presente in ≥{core_threshold}% delle classi | 🔶 **SPECIFICO**: presente in <{specific_threshold}% delle classi")
                         
-                    with col_p3:
-                        distinctive_delta = st.slider(
-                            "Delta distintivo (punti)",
-                            min_value=15,
-                            max_value=40,
-                            value=25,
-                            step=5,
-                            help="Un modulo è DISTINTIVO se la differenza tra max e min copertura tra classi è ≥ questo valore"
-                        )
+                        # Imposta valori per compatibilità
+                        gap_threshold = 40
+                        distinctive_delta = 25
+                        
+                    else:
+                        # Soglie per Framework Ideale (comportamento esistente)
+                        col_p1, col_p2, col_p3 = st.columns(3)
+                        
+                        with col_p1:
+                            core_threshold = st.slider(
+                                "Soglia moduli CORE (%)",
+                                min_value=50,
+                                max_value=80,
+                                value=60,
+                                step=5,
+                                help="Un modulo è CORE se ha copertura ≥ questa soglia in TUTTE le classi"
+                            )
+                        
+                        with col_p2:
+                            gap_threshold = st.slider(
+                                "Soglia GAP (%)",
+                                min_value=20,
+                                max_value=50,
+                                value=40,
+                                step=5,
+                                help="Un modulo è GAP per una classe se ha copertura < questa soglia"
+                            )
+                        
+                        with col_p3:
+                            distinctive_delta = st.slider(
+                                "Delta distintivo (punti)",
+                                min_value=15,
+                                max_value=40,
+                                value=25,
+                                step=5,
+                                help="Un modulo è DISTINTIVO se la differenza tra max e min copertura tra classi è ≥ questo valore"
+                            )
+                        
+                        # Imposta valore per compatibilità
+                        specific_threshold = 50
                     
                     # Nome analisi
-                    default_name = f"{materia}_Multiclasse_{'_'.join(selected_classes[:3])}"
-                    if len(selected_classes) > 3:
-                        default_name += f"_+{len(selected_classes)-3}"
+                    if is_evidence_based:
+                        default_name = f"{materia}_Evidence_Based"
+                    else:
+                        default_name = f"{materia}_Ideale_{'_'.join(selected_classes[:3])}"
+                        if len(selected_classes) > 3:
+                            default_name += f"_+{len(selected_classes)-3}"
                     analysis_name = st.text_input("Nome analisi", value=default_name, key="multiclass_name")
-                    
+
                     # Verifica analisi esistente
                     current = get_current_analysis()
                     if current:
@@ -621,130 +690,470 @@ with tab2:
                     st.markdown("---")
                     
                     # === ESECUZIONE MULTICLASSE ===
-                    if st.button("🚀 Avvia Analisi Multiclasse", type="primary", use_container_width=True):
+                    btn_label = "🚀 Genera Evidence-Based Framework" if is_evidence_based else "🚀 Avvia Analisi Multiclasse"
+                    
+                    if st.button(btn_label, type="primary", use_container_width=True):
                         
                         clear_current_analysis()
                         analisi_dir = get_analisi_dir()
                         
-                        with st.spinner("Elaborazione multiclasse in corso..."):
-                            try:
-                                from app.multiclass_pipeline import MulticlassFrameworkPipeline
-                                from app.report_generator import MulticlassReportGenerator
-                                from app.framework_adapter import FrameworkAdapter
-                            
-                                # Inizializza pipeline multiclasse
-                                pipeline = MulticlassFrameworkPipeline(
-                                    materia=materia,
-                                    use_llm=True,
-                                    core_threshold=core_threshold,
-                                    gap_threshold=gap_threshold,
-                                    distinctive_delta=distinctive_delta
-                                 )   
+                        # Raccogli PDF per classe
+                        pdf_by_class = {}
+                        for classe in selected_classes:
+                            pdf_by_class[classe] = pdfs.get(classe, [])
+                        
+                        # =============================================
+                        # EVIDENCE-BASED FRAMEWORK
+                        # =============================================
+                        if is_evidence_based:
+                            with st.spinner("Generazione Evidence-Based Framework in corso..."):
+                                try:
+                                    from app.evidence_based_generator import EvidenceBasedFrameworkGenerator
+                                    from app.pdf_extractor import PDFExtractor
+                                    from app.concept_extractor import ConceptExtractor
+                                    from app.report_generator import MulticlassReportGenerator
+                                    
+                                    progress = st.progress(0, text="Inizializzazione...")
+                                    
+                                    # Step 1: Estrazione testi
+                                    progress.progress(10, text="Estrazione testi dai PDF...")
+                                    
+                                    pdf_extractor = PDFExtractor()
+                                    concept_extractor = ConceptExtractor(use_llm=True, materia=materia)
+                                    
+                                    concepts_by_class = {}
+                                    syllabus_metadata_all = {}
+                                    
+                                    total_classes = len(selected_classes)
+                                    for idx, classe in enumerate(selected_classes):
+                                        progress_pct = 10 + int((idx / total_classes) * 30)
+                                        progress.progress(progress_pct, text=f"Estrazione classe {classe}...")
+                                        
+                                        class_concepts = []
+                                        
+                                        # Raccogli tutti i testi della classe
+                                        class_texts = {}
+                                        for pdf_path in pdf_by_class.get(classe, []):
+                                            result = pdf_extractor.extract(pdf_path)
+                                            if result.success:
+                                                class_texts[f"{classe}_{pdf_path.stem}"] = result.text
+                                                syllabus_metadata_all[f"{classe}_{pdf_path.stem}"] = {
+                                                    "university": result.university,
+                                                    "professor": result.professor,
+                                                    "classe": classe
+                                                }
+                                        
+                                        # Estrai concetti aggregati per la classe
+                                        if class_texts:
+                                            collection = concept_extractor.process_multiple_syllabus(
+                                                class_texts,
+                                                f"{classe}_concepts"
+                                            )
+                                            
+                                            # Converti in formato per il generatore
+                                            class_concepts = []
+                                            for concept in collection.concepts:
+                                                class_concepts.append({
+                                                    "name": concept.canonical_name,
+                                                    "frequency": concept.frequency_percentage
+                                                })
+                                            
+                                            if class_concepts:
+                                                concepts_by_class[classe] = class_concepts
+                                        
+                                        if class_concepts:
+                                            concepts_by_class[classe] = class_concepts
+                                    
+                                    if not concepts_by_class or len(concepts_by_class) < 2:
+                                        st.error("❌ Impossibile estrarre concetti sufficienti dalle classi selezionate")
+                                        st.stop()
+                                    
+                                    # Step 2: Genera Evidence-Based Framework
+                                    progress.progress(50, text="Generazione moduli Evidence-Based...")
+                                    
+                                    generator = EvidenceBasedFrameworkGenerator(
+                                        core_threshold=core_threshold,
+                                        specific_threshold=specific_threshold
+                                    )
+                                    
+                                    current_provider = settings.get("current_provider", "openai")
+                                    current_model = settings.get("current_model", "gpt-4o-mini")
+                                    
+                                    eb_framework = generator.generate(
+                                        concepts_by_class=concepts_by_class,
+                                        materia=materia,
+                                        provider_id=current_provider,
+                                        model=current_model,
+                                        force_refresh=False
+                                    )
+                                    
+                                    if "error" in eb_framework:
+                                        st.error(f"❌ Errore generazione framework: {eb_framework.get('error')}")
+                                        st.stop()
+                                    
+                                    # Step 3: Genera report HTML
+                                    progress.progress(80, text="Generazione report...")
+                                    
+                                    # Costruisci HTML report per Evidence-Based
+                                    modules = eb_framework.get("modules", [])
+                                    n_core = len([m for m in modules if m.get("is_core")])
+                                    n_specific = len([m for m in modules if m.get("is_specific")])
+                                    
+                                    report_html = f"""<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Evidence-Based Framework - {materia}</title>
+    <style>
+        body {{ font-family: 'Segoe UI', sans-serif; margin: 20px; background: #f5f5f5; }}
+        .container {{ max-width: 1200px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }}
+        h1 {{ color: #1a237e; border-bottom: 3px solid #4caf50; padding-bottom: 15px; }}
+        h2 {{ color: #2e7d32; margin-top: 30px; }}
+        .summary {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin: 20px 0; }}
+        .summary-card {{ background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 20px; border-radius: 10px; text-align: center; }}
+        .summary-card.core {{ background: linear-gradient(135deg, #4caf50, #2e7d32); }}
+        .summary-card.specific {{ background: linear-gradient(135deg, #ff9800, #e65100); }}
+        .summary-card .number {{ font-size: 2.5em; font-weight: bold; }}
+        .summary-card .label {{ opacity: 0.9; }}
+        .module {{ background: #fafafa; border-radius: 8px; padding: 20px; margin: 15px 0; border-left: 4px solid #ccc; }}
+        .module.core {{ border-left-color: #4caf50; background: #e8f5e9; }}
+        .module.specific {{ border-left-color: #ff9800; background: #fff3e0; }}
+        .module-header {{ display: flex; justify-content: space-between; align-items: center; }}
+        .module-name {{ font-size: 1.2em; font-weight: 600; }}
+        .badge {{ padding: 4px 12px; border-radius: 15px; font-size: 0.85em; font-weight: 500; }}
+        .badge-core {{ background: #c8e6c9; color: #2e7d32; }}
+        .badge-specific {{ background: #ffe0b2; color: #e65100; }}
+        .badge-normal {{ background: #e0e0e0; color: #666; }}
+        .class-coverage {{ margin-top: 15px; }}
+        .class-bar {{ display: flex; align-items: center; margin: 5px 0; }}
+        .class-name {{ width: 150px; font-weight: 500; }}
+        .bar-container {{ flex: 1; background: #e0e0e0; height: 20px; border-radius: 10px; overflow: hidden; }}
+        .bar-fill {{ height: 100%; border-radius: 10px; }}
+        .bar-fill.high {{ background: #4caf50; }}
+        .bar-fill.medium {{ background: #ff9800; }}
+        .bar-fill.low {{ background: #f44336; }}
+        .contents {{ margin-top: 10px; padding: 10px; background: rgba(255,255,255,0.7); border-radius: 6px; }}
+        .contents span {{ display: inline-block; background: #e3f2fd; padding: 3px 8px; margin: 2px; border-radius: 12px; font-size: 0.85em; }}
+        .footer {{ margin-top: 40px; padding-top: 20px; border-top: 1px solid #e0e0e0; color: #888; text-align: center; }}
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>📊 Evidence-Based Framework</h1>
+    <p><strong>Materia:</strong> {materia.replace('_', ' ').title()}</p>
+    <p><strong>Classi analizzate:</strong> {', '.join(selected_classes)}</p>
+    <p><strong>Soglie:</strong> CORE ≥{core_threshold}% | SPECIFICO <{specific_threshold}%</p>
+    
+    <div class="summary">
+        <div class="summary-card">
+            <div class="number">{len(modules)}</div>
+            <div class="label">Moduli Totali</div>
+        </div>
+        <div class="summary-card core">
+            <div class="number">{n_core}</div>
+            <div class="label">Moduli CORE</div>
+        </div>
+        <div class="summary-card specific">
+            <div class="number">{n_specific}</div>
+            <div class="label">Moduli SPECIFICI</div>
+        </div>
+        <div class="summary-card">
+            <div class="number">{len(selected_classes)}</div>
+            <div class="label">Classi</div>
+        </div>
+    </div>
+    
+    <h2>🔷 Moduli CORE (comuni a tutte le classi)</h2>
+"""
+                                    
+                                    core_modules = [m for m in modules if m.get("is_core")]
+                                    if core_modules:
+                                        for mod in core_modules:
+                                            report_html += f"""
+    <div class="module core">
+        <div class="module-header">
+            <span class="module-name">{mod.get('name', 'N/D')}</span>
+            <span class="badge badge-core">CORE</span>
+        </div>
+        <p>{mod.get('description', '')}</p>
+        <div class="class-coverage">
+            <strong>Copertura per classe:</strong>
+"""
+                                            for classe, cov in mod.get("coverage_by_class", {}).items():
+                                                bar_class = "high" if cov >= 70 else ("medium" if cov >= 40 else "low")
+                                                report_html += f"""
+            <div class="class-bar">
+                <span class="class-name">{classe}</span>
+                <div class="bar-container"><div class="bar-fill {bar_class}" style="width: {min(cov, 100)}%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">{cov:.0f}%</span>
+            </div>
+"""
+                                            report_html += """
+        </div>
+        <div class="contents"><strong>Contenuti:</strong> """
+                                            for content in mod.get("core_contents", [])[:10]:
+                                                report_html += f"<span>{content}</span>"
+                                            report_html += """</div>
+    </div>
+"""
+                                    else:
+                                        report_html += "<p>Nessun modulo CORE identificato con le soglie attuali.</p>"
+                                    
+                                    report_html += """
+    <h2>🔶 Moduli SPECIFICI (distintivi per alcune classi)</h2>
+"""
+                                    
+                                    specific_modules = [m for m in modules if m.get("is_specific")]
+                                    if specific_modules:
+                                        for mod in specific_modules:
+                                            distinctive_for = mod.get("distinctive_for", [])
+                                            distinctive_str = f" - Distintivo per: {', '.join(distinctive_for)}" if distinctive_for else ""
+                                            
+                                            report_html += f"""
+    <div class="module specific">
+        <div class="module-header">
+            <span class="module-name">{mod.get('name', 'N/D')}</span>
+            <span class="badge badge-specific">SPECIFICO{distinctive_str}</span>
+        </div>
+        <p>{mod.get('description', '')}</p>
+        <div class="class-coverage">
+            <strong>Copertura per classe:</strong>
+"""
+                                            for classe, cov in mod.get("coverage_by_class", {}).items():
+                                                bar_class = "high" if cov >= 70 else ("medium" if cov >= 40 else "low")
+                                                report_html += f"""
+            <div class="class-bar">
+                <span class="class-name">{classe}</span>
+                <div class="bar-container"><div class="bar-fill {bar_class}" style="width: {min(cov, 100)}%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">{cov:.0f}%</span>
+            </div>
+"""
+                                            report_html += """
+        </div>
+        <div class="contents"><strong>Contenuti:</strong> """
+                                            for content in mod.get("core_contents", [])[:10]:
+                                                report_html += f"<span>{content}</span>"
+                                            report_html += """</div>
+    </div>
+"""
+                                    else:
+                                        report_html += "<p>Nessun modulo SPECIFICO identificato con le soglie attuali.</p>"
+                                    
+                                    # Moduli normali (né core né specifici)
+                                    normal_modules = [m for m in modules if not m.get("is_core") and not m.get("is_specific")]
+                                    if normal_modules:
+                                        report_html += """
+    <h2>📋 Altri Moduli</h2>
+"""
+                                        for mod in normal_modules:
+                                            report_html += f"""
+    <div class="module">
+        <div class="module-header">
+            <span class="module-name">{mod.get('name', 'N/D')}</span>
+            <span class="badge badge-normal">PARZIALE</span>
+        </div>
+        <p>{mod.get('description', '')}</p>
+        <div class="contents"><strong>Contenuti:</strong> """
+                                            for content in mod.get("core_contents", [])[:8]:
+                                                report_html += f"<span>{content}</span>"
+                                            report_html += """</div>
+    </div>
+"""
+                                    
+                                    report_html += f"""
+    <div class="footer">
+        <p><strong>CoreX PromoIntelligence - Evidence-Based Framework Generator v1.0</strong></p>
+        <p>Generato il {datetime.now().strftime('%Y-%m-%d %H:%M')}</p>
+        <p>Note clustering: {eb_framework.get('clustering_notes', 'N/D')}</p>
+    </div>
+</div>
+</body>
+</html>
+"""
+                                    
+                                    # Step 4: Salvataggio
+                                    progress.progress(90, text="Salvataggio...")
+                                    
+                                    with open(analisi_dir / "report_multiclasse.html", "w", encoding="utf-8") as f:
+                                        f.write(report_html)
+                                    
+                                    with open(analisi_dir / "framework_multiclasse.json", "w", encoding="utf-8") as f:
+                                        json.dump(eb_framework, f, indent=2, ensure_ascii=False)
+                                    
+                                    # Metadati
+                                    meta = {
+                                        "name": analysis_name,
+                                        "materia": materia,
+                                        "classi": selected_classes,
+                                        "type": "multiclass_evidence_based",
+                                        "framework_type": "evidence_based",
+                                        "created": datetime.now().isoformat(),
+                                        "n_syllabus_total": sum(len(pdf_by_class[c]) for c in selected_classes),
+                                        "n_syllabus_per_class": {c: len(pdf_by_class[c]) for c in selected_classes},
+                                        "n_modules": len(modules),
+                                        "n_core_modules": n_core,
+                                        "n_specific_modules": n_specific,
+                                        "thresholds": {
+                                            "core": core_threshold,
+                                            "specific": specific_threshold
+                                        }
+                                    }
+                                    with open(analisi_dir / "analisi.json", "w", encoding="utf-8") as f:
+                                        json.dump(meta, f, indent=2, ensure_ascii=False)
+                                    
+                                    progress.progress(100, text="✅ Completato!")
+                                    
+                                    st.success("✅ Evidence-Based Framework generato!")
+                                    
+                                    # Mostra statistiche rapide
+                                    st.markdown("---")
+                                    st.subheader("📊 Risultati")
+                                    
+                                    col1, col2, col3, col4 = st.columns(4)
+                                    col1.metric("Classi analizzate", len(selected_classes))
+                                    col2.metric("Moduli Totali", len(modules))
+                                    col3.metric("Moduli CORE", n_core)
+                                    col4.metric("Moduli SPECIFICI", n_specific)
+                                    
+                                    # Dettaglio moduli core
+                                    if core_modules:
+                                        st.markdown("**🔷 Moduli CORE (insegnati in tutte le classi):**")
+                                        for mod in core_modules[:5]:
+                                            st.write(f"  • **{mod.get('name')}** - {mod.get('stats', {}).get('presence_percentage', 0):.0f}% delle classi")
+                                    
+                                    # Dettaglio moduli specifici
+                                    if specific_modules:
+                                        st.markdown("**🔶 Moduli SPECIFICI:**")
+                                        for mod in specific_modules[:5]:
+                                            distinctive = mod.get('distinctive_for', [])
+                                            st.write(f"  • **{mod.get('name')}** - Distintivo per: {', '.join(distinctive) if distinctive else 'N/D'}")
+                                    
+                                    st.info("👉 Vai alla tab **Risultati** per visualizzare il report completo")
+                                    
+                                except Exception as e:
+                                    st.error(f"❌ Errore: {str(e)}")
+                                    import traceback
+                                    st.code(traceback.format_exc())
+                        
+                        # =============================================
+                        # FRAMEWORK IDEALE (comportamento esistente)
+                        # =============================================
+                        else:
+                            with st.spinner("Elaborazione multiclasse in corso..."):
+                                try:
+                                    from app.multiclass_pipeline import MulticlassFrameworkPipeline
+                                    from app.report_generator import MulticlassReportGenerator
+                                    from app.framework_adapter import FrameworkAdapter
+                                
+                                    # Inizializza pipeline multiclasse
+                                    pipeline = MulticlassFrameworkPipeline(
+                                        materia=materia,
+                                        use_llm=True,
+                                        core_threshold=core_threshold,
+                                        gap_threshold=gap_threshold,
+                                        distinctive_delta=distinctive_delta
+                                    )   
 
-                                progress = st.progress(0, text="Inizializzazione...")
-                                
-                                # Raccogli PDF per classe
-                                pdf_by_class = {}
-                                for classe in selected_classes:
-                                    pdf_by_class[classe] = pdfs.get(classe, [])
-                                
-                                # Step 1: Estrazione per classe
-                                progress.progress(10, text="Estrazione testi per classe...")
-                                class_data = pipeline.extract_by_class(pdf_by_class)
-                                
-                                # Step 2: Analisi per classe
-                                progress.progress(30, text="Analisi concetti per classe...")
-                                class_analyses = pipeline.analyze_by_class(
-                                    class_data, 
-                                    analysis_name, 
-                                    n_clusters
-                                )
-                                
-                                # Step 3: Confronto e nucleo comune
-                                progress.progress(50, text="Identificazione nucleo comune e specificità...")
-                                multiclass_result = pipeline.generate_multiclass_framework(
-                                    class_analyses,
-                                    selected_classes
-                                )
-                                
-                                # Step 4: Report multiclasse
-                                progress.progress(70, text="Generazione report multiclasse...")
-                                
-                                adapter = FrameworkAdapter()
-                                reference_fw = adapter.load_framework(materia)
-                                
-                                report_gen = MulticlassReportGenerator(
-                                    reference_framework=reference_fw,
-                                    core_threshold=core_threshold,
-                                    gap_threshold=gap_threshold
-                                 )
+                                    progress = st.progress(0, text="Inizializzazione...")
+                                    
+                                    # Step 1: Estrazione per classe
+                                    progress.progress(10, text="Estrazione testi per classe...")
+                                    class_data = pipeline.extract_by_class(pdf_by_class)
+                                    
+                                    # Step 2: Analisi per classe
+                                    progress.progress(30, text="Analisi concetti per classe...")
+                                    class_analyses = pipeline.analyze_by_class(
+                                        class_data, 
+                                        analysis_name, 
+                                        n_clusters
+                                    )
+                                    
+                                    # Step 3: Confronto e nucleo comune
+                                    progress.progress(50, text="Identificazione nucleo comune e specificità...")
+                                    multiclass_result = pipeline.generate_multiclass_framework(
+                                        class_analyses,
+                                        selected_classes
+                                    )
+                                    
+                                    # Step 4: Report multiclasse
+                                    progress.progress(70, text="Generazione report multiclasse...")
+                                    
+                                    adapter = FrameworkAdapter()
+                                    reference_fw = adapter.load_framework(materia)
+                                    
+                                    report_gen = MulticlassReportGenerator(
+                                        reference_framework=reference_fw,
+                                        core_threshold=core_threshold,
+                                        gap_threshold=gap_threshold
+                                    )
 
-                                report_gen = MulticlassReportGenerator(reference_framework=reference_fw)                                
-                                report_html = report_gen.generate_multiclass_report(
-                                    multiclass_result, 
-                                    materia, 
-                                    selected_classes
-                                )
-                                
-                                unified_framework = report_gen.generate_unified_framework(
-                                    multiclass_result
-                                )
-                                
-                                # Step 5: Salvataggio
-                                progress.progress(90, text="Salvataggio...")
-                                
-                                with open(analisi_dir / "report_multiclasse.html", "w", encoding="utf-8") as f:
-                                    f.write(report_html)
-                                
-                                with open(analisi_dir / "framework_multiclasse.json", "w", encoding="utf-8") as f:
-                                    json.dump(unified_framework, f, indent=2, ensure_ascii=False)
-                                
-                                # Metadati
-                                meta = {
-                                    "name": analysis_name,
-                                    "materia": materia,
-                                    "classi": selected_classes,
-                                    "type": "multiclass",
-                                    "created": datetime.now().isoformat(),
-                                    "n_syllabus_total": sum(len(pdf_by_class[c]) for c in selected_classes),
-                                    "n_syllabus_per_class": {c: len(pdf_by_class[c]) for c in selected_classes},
-                                    "core_modules": len(multiclass_result.core_modules),
-                                    "distinctive_modules": len(multiclass_result.distinctive_modules),
-                                    "gap_modules": len(multiclass_result.gap_modules),
-                                    "total_modules": multiclass_result.n_modules_total,
-                                    "coverage_by_class": multiclass_result.overall_coverage_by_class,
-                                    "core_threshold": core_threshold,
-                                    "gap_threshold": 40.0
-                                }
-                                with open(analisi_dir / "analisi.json", "w", encoding="utf-8") as f:
-                                    json.dump(meta, f, indent=2, ensure_ascii=False)
-                                
-                                progress.progress(100, text="✅ Completato!")
-                                
-                                st.success("✅ Analisi Multiclasse completata!")
-                                
-                                # Mostra statistiche rapide
-                                st.markdown("---")
-                                st.subheader("📊 Risultati Rapidi")
-                                
-                                col1, col2, col3, col4 = st.columns(4)
-                                col1.metric("Classi analizzate", len(selected_classes))
-                                col2.metric("Moduli Core", len(multiclass_result.core_modules))
-                                col3.metric("Moduli Distintivi", len(multiclass_result.distinctive_modules))
-                                col4.metric("Moduli Gap", len(multiclass_result.gap_modules))
-                                
-                                # Dettaglio per classe
-                                st.markdown("**Copertura per classe:**")
-                                for classe in selected_classes:
-                                    cov = multiclass_result.overall_coverage_by_class.get(classe, 0)
-                                    st.write(f"• **{classe}**: {cov:.1f}% copertura framework ideale")
-                                
-                                st.info("👉 Vai alla tab **Risultati** per visualizzare il report completo")
-                                
-                            except Exception as e:
-                                st.error(f"❌ Errore: {str(e)}")
-                                import traceback
-                                st.code(traceback.format_exc())
+                                    report_gen = MulticlassReportGenerator(reference_framework=reference_fw)                                
+                                    report_html = report_gen.generate_multiclass_report(
+                                        multiclass_result, 
+                                        materia, 
+                                        selected_classes
+                                    )
+                                    
+                                    unified_framework = report_gen.generate_unified_framework(
+                                        multiclass_result
+                                    )
+                                    
+                                    # Step 5: Salvataggio
+                                    progress.progress(90, text="Salvataggio...")
+                                    
+                                    with open(analisi_dir / "report_multiclasse.html", "w", encoding="utf-8") as f:
+                                        f.write(report_html)
+                                    
+                                    with open(analisi_dir / "framework_multiclasse.json", "w", encoding="utf-8") as f:
+                                        json.dump(unified_framework, f, indent=2, ensure_ascii=False)
+                                    
+                                    # Metadati
+                                    meta = {
+                                        "name": analysis_name,
+                                        "materia": materia,
+                                        "classi": selected_classes,
+                                        "type": "multiclass",
+                                        "framework_type": "ideal_mapped",
+                                        "created": datetime.now().isoformat(),
+                                        "n_syllabus_total": sum(len(pdf_by_class[c]) for c in selected_classes),
+                                        "n_syllabus_per_class": {c: len(pdf_by_class[c]) for c in selected_classes},
+                                        "core_modules": len(multiclass_result.core_modules),
+                                        "distinctive_modules": len(multiclass_result.distinctive_modules),
+                                        "gap_modules": len(multiclass_result.gap_modules),
+                                        "total_modules": multiclass_result.n_modules_total,
+                                        "coverage_by_class": multiclass_result.overall_coverage_by_class,
+                                        "core_threshold": core_threshold,
+                                        "gap_threshold": gap_threshold
+                                    }
+                                    with open(analisi_dir / "analisi.json", "w", encoding="utf-8") as f:
+                                        json.dump(meta, f, indent=2, ensure_ascii=False)
+                                    
+                                    progress.progress(100, text="✅ Completato!")
+                                    
+                                    st.success("✅ Analisi Multiclasse completata!")
+                                    
+                                    # Mostra statistiche rapide
+                                    st.markdown("---")
+                                    st.subheader("📊 Risultati Rapidi")
+                                    
+                                    col1, col2, col3, col4 = st.columns(4)
+                                    col1.metric("Classi analizzate", len(selected_classes))
+                                    col2.metric("Moduli Core", len(multiclass_result.core_modules))
+                                    col3.metric("Moduli Distintivi", len(multiclass_result.distinctive_modules))
+                                    col4.metric("Moduli Gap", len(multiclass_result.gap_modules))
+                                    
+                                    # Dettaglio per classe
+                                    st.markdown("**Copertura per classe:**")
+                                    for classe in selected_classes:
+                                        cov = multiclass_result.overall_coverage_by_class.get(classe, 0)
+                                        st.write(f"• **{classe}**: {cov:.1f}% copertura framework ideale")
+                                    
+                                    st.info("👉 Vai alla tab **Risultati** per visualizzare il report completo")
+                                    
+                                except Exception as e:
+                                    st.error(f"❌ Errore: {str(e)}")
+                                    import traceback
+                                    st.code(traceback.format_exc())
 
         # =============================================
         # MODALITÀ SINGOLA CLASSE (workflow esistente)
@@ -897,7 +1306,7 @@ with tab3:
     else:
         # Determina il tipo di analisi
         analysis_type = current.get("type", "single")
-        is_multiclass = analysis_type == "multiclass"
+        is_multiclass = analysis_type in ["multiclass", "multiclass_evidence_based"]
         
         # Info analisi
         st.subheader(f"📋 {current.get('name', 'Analisi')}")
