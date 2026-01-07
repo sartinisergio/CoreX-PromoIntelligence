@@ -1,8 +1,8 @@
 """
-CoreX - Evidence-Based Framework Generator v1.0
+CoreX - Evidence-Based Framework Generator v1.1
 Genera framework dai programmi reali senza riferimento a framework ideali.
 I moduli emergono naturalmente dall'analisi dei contenuti.
-Distingue moduli CORE (comuni a tutte le classi) da SPECIFICI (distintivi).
+Distingue moduli CORE, TRASVERSALE e SPECIFICI.
 """
 
 import json
@@ -19,9 +19,9 @@ class EvidenceBasedFrameworkGenerator:
     Approccio bottom-up: i moduli emergono dai contenuti, non da strutture predefinite.
     """
     
-    # Soglie default (modificabili dall'utente)
-    DEFAULT_CORE_THRESHOLD = 80.0      # % classi per considerare un modulo CORE
-    DEFAULT_SPECIFIC_THRESHOLD = 50.0  # Sotto questa % è SPECIFICO
+    # Soglie default AGGIORNATE (v1.1)
+    DEFAULT_CORE_THRESHOLD = 60.0       # % classi per considerare un modulo CORE
+    DEFAULT_SPECIFIC_THRESHOLD = 40.0   # Sotto questa % è SPECIFICO
     
     def __init__(
         self, 
@@ -32,8 +32,8 @@ class EvidenceBasedFrameworkGenerator:
         self.cache_dir = cache_dir or Path("cache/evidence_based_frameworks")
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         
-        self.core_threshold = core_threshold or self.DEFAULT_CORE_THRESHOLD
-        self.specific_threshold = specific_threshold or self.DEFAULT_SPECIFIC_THRESHOLD
+        self.core_threshold = core_threshold if core_threshold is not None else self.DEFAULT_CORE_THRESHOLD
+        self.specific_threshold = specific_threshold if specific_threshold is not None else self.DEFAULT_SPECIFIC_THRESHOLD
     
     def generate(
         self,
@@ -87,7 +87,7 @@ class EvidenceBasedFrameworkGenerator:
         if not llm_result:
             return {"error": "Errore nella generazione del framework", "success": False}
         
-        # Arricchisci con classificazione CORE/SPECIFICO
+        # Arricchisci con classificazione CORE/TRASVERSALE/SPECIFICO
         framework = self._enrich_with_class_analysis(
             llm_result, 
             concepts_by_class, 
@@ -102,7 +102,7 @@ class EvidenceBasedFrameworkGenerator:
             "classes_analyzed": classes,
             "n_classes": len(classes),
             "generated_at": datetime.now().isoformat(),
-            "generator_version": "1.0",
+            "generator_version": "1.1",
             "thresholds": {
                 "core": self.core_threshold,
                 "specific": self.specific_threshold
@@ -112,6 +112,7 @@ class EvidenceBasedFrameworkGenerator:
         framework["summary"] = {
             "n_modules": len(framework.get("modules", [])),
             "n_core_modules": len([m for m in framework.get("modules", []) if m.get("is_core")]),
+            "n_transversal_modules": len([m for m in framework.get("modules", []) if m.get("is_transversal")]),
             "n_specific_modules": len([m for m in framework.get("modules", []) if m.get("is_specific")]),
             "total_concepts_analyzed": len(all_concepts)
         }
@@ -300,7 +301,12 @@ Rispondi SOLO con JSON valido:
     ) -> Dict:
         """
         Arricchisce il framework con analisi per classe.
-        Determina quali moduli sono CORE e quali SPECIFICI.
+        Determina quali moduli sono CORE, TRASVERSALI o SPECIFICI.
+        
+        Logica classificazione (v1.1):
+        - CORE: presente in >= core_threshold% delle classi (default 60%)
+        - TRASVERSALE: presente tra specific_threshold% e core_threshold%
+        - SPECIFICO: presente in < specific_threshold% delle classi (default 40%)
         """
         modules = llm_result.get("modules", [])
         n_classes = len(classes)
@@ -326,24 +332,34 @@ Rispondi SOLO con JSON valido:
                 coverage_by_class[classe] = round(coverage, 1)
                 concepts_by_class_for_module[classe] = list(matched)
             
-            # Determina se CORE o SPECIFICO
+            # Determina classificazione
             coverages = list(coverage_by_class.values())
             avg_coverage = sum(coverages) / len(coverages) if coverages else 0
             min_coverage = min(coverages) if coverages else 0
             max_coverage = max(coverages) if coverages else 0
             
-            # Conta in quante classi è presente significativamente (>40%)
-            classes_with_presence = sum(1 for c in coverages if c >= 40)
+            # Conta in quante classi è presente significativamente (>30%)
+            classes_with_presence = sum(1 for c in coverages if c >= 30)
             presence_percentage = (classes_with_presence / n_classes * 100)
             
+            # Classificazione a 3 livelli
             is_core = presence_percentage >= self.core_threshold
             is_specific = presence_percentage < self.specific_threshold
+            is_transversal = (not is_core) and (not is_specific)
             
-            # Identifica per quali classi è distintivo
+            # Determina categoria testuale
+            if is_core:
+                category = "CORE"
+            elif is_transversal:
+                category = "TRASVERSALE"
+            else:
+                category = "SPECIFICO"
+            
+            # Identifica per quali classi è distintivo (se specifico o trasversale)
             distinctive_for = []
-            if is_specific:
+            if not is_core:
                 for classe, cov in coverage_by_class.items():
-                    if cov >= 60:  # Alta presenza in questa classe
+                    if cov >= 50:  # Alta presenza in questa classe
                         distinctive_for.append(classe)
             
             enriched_module = {
@@ -354,7 +370,9 @@ Rispondi SOLO con JSON valido:
                 "avg_frequency": module.get("avg_frequency", 0),
                 "coverage_by_class": coverage_by_class,
                 "concepts_by_class": concepts_by_class_for_module,
+                "category": category,
                 "is_core": is_core,
+                "is_transversal": is_transversal,
                 "is_specific": is_specific,
                 "distinctive_for": distinctive_for,
                 "stats": {
@@ -368,8 +386,9 @@ Rispondi SOLO con JSON valido:
             
             enriched_modules.append(enriched_module)
         
-        # Ordina: prima CORE, poi per frequenza
-        enriched_modules.sort(key=lambda x: (not x["is_core"], -x["avg_frequency"]))
+        # Ordina: prima CORE, poi TRASVERSALE, poi SPECIFICO, poi per frequenza
+        category_order = {"CORE": 0, "TRASVERSALE": 1, "SPECIFICO": 2}
+        enriched_modules.sort(key=lambda x: (category_order.get(x["category"], 3), -x["avg_frequency"]))
         
         # Ri-numera gli ID
         for i, mod in enumerate(enriched_modules, 1):
@@ -399,7 +418,7 @@ Rispondi SOLO con JSON valido:
             "n_concepts_per_class": {
                 k: len(v) for k, v in concepts_by_class.items()
             },
-            "version": "1.0"
+            "version": "1.1"
         }
         content = json.dumps(signature, sort_keys=True)
         return hashlib.sha256(content.encode()).hexdigest()[:20]
@@ -461,8 +480,8 @@ def generate_evidence_based_framework(
     materia: str,
     provider_id: str = "openai",
     model: str = "gpt-4o-mini",
-    core_threshold: float = 80.0,
-    specific_threshold: float = 50.0,
+    core_threshold: float = 60.0,
+    specific_threshold: float = 40.0,
     force_refresh: bool = False
 ) -> Dict:
     """
@@ -474,8 +493,8 @@ def generate_evidence_based_framework(
         materia: Nome materia
         provider_id: Provider LLM
         model: Modello LLM
-        core_threshold: Soglia % per moduli CORE (default 80%)
-        specific_threshold: Soglia % per moduli SPECIFICI (default 50%)
+        core_threshold: Soglia % per moduli CORE (default 60%)
+        specific_threshold: Soglia % per moduli SPECIFICI (default 40%)
         force_refresh: Ignora cache se True
         
     Returns:

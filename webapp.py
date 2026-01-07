@@ -365,14 +365,15 @@ with col3:
 st.markdown("---")
 
 # Tabs
-tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
-    "📂 Programmi", 
-    "🚀 Analisi", 
-    "📊 Risultati", 
+tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs([
+    "📂 Programmi",
+    "🚀 Analisi",
+    "📊 Risultati",
     "🔄 Confronta Classi",
     "⚙️ Gestione",
     "📖 Analisi Manuali",
-    "🎓 Profilo Docente"
+    "🎓 Profilo Docente",
+    "🔬 Confronto Framework"
 ])
 
 # === TAB 1: SELEZIONE PROGRAMMI ===
@@ -765,7 +766,7 @@ with tab2:
                                             concepts_by_class[classe] = class_concepts
                                     
                                     if not concepts_by_class or len(concepts_by_class) < 2:
-                                        st.error("❌ Impossibile estrarre concetti sufficienti dalle classi selezionate")
+                                        st.error("Impossibile estrarre concetti sufficienti dalle classi selezionate")
                                         st.stop()
                                     
                                     # Step 2: Genera Evidence-Based Framework
@@ -788,7 +789,7 @@ with tab2:
                                     )
                                     
                                     if "error" in eb_framework:
-                                        st.error(f"❌ Errore generazione framework: {eb_framework.get('error')}")
+                                        st.error(f"Errore generazione framework: {eb_framework.get('error')}")
                                         st.stop()
                                     
                                     # Step 3: Genera report HTML
@@ -797,6 +798,7 @@ with tab2:
                                     # Costruisci HTML report per Evidence-Based
                                     modules = eb_framework.get("modules", [])
                                     n_core = len([m for m in modules if m.get("is_core")])
+                                    n_transversal = len([m for m in modules if m.get("is_transversal")])
                                     n_specific = len([m for m in modules if m.get("is_specific")])
                                     
                                     report_html = f"""<!DOCTYPE html>
@@ -809,19 +811,22 @@ with tab2:
         .container {{ max-width: 1200px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }}
         h1 {{ color: #1a237e; border-bottom: 3px solid #4caf50; padding-bottom: 15px; }}
         h2 {{ color: #2e7d32; margin-top: 30px; }}
-        .summary {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin: 20px 0; }}
+        .summary {{ display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; margin: 20px 0; }}
         .summary-card {{ background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 20px; border-radius: 10px; text-align: center; }}
         .summary-card.core {{ background: linear-gradient(135deg, #4caf50, #2e7d32); }}
+        .summary-card.transversal {{ background: linear-gradient(135deg, #2196f3, #1565c0); }}
         .summary-card.specific {{ background: linear-gradient(135deg, #ff9800, #e65100); }}
         .summary-card .number {{ font-size: 2.5em; font-weight: bold; }}
         .summary-card .label {{ opacity: 0.9; }}
         .module {{ background: #fafafa; border-radius: 8px; padding: 20px; margin: 15px 0; border-left: 4px solid #ccc; }}
         .module.core {{ border-left-color: #4caf50; background: #e8f5e9; }}
+        .module.transversal {{ border-left-color: #2196f3; background: #e3f2fd; }}
         .module.specific {{ border-left-color: #ff9800; background: #fff3e0; }}
         .module-header {{ display: flex; justify-content: space-between; align-items: center; }}
         .module-name {{ font-size: 1.2em; font-weight: 600; }}
         .badge {{ padding: 4px 12px; border-radius: 15px; font-size: 0.85em; font-weight: 500; }}
         .badge-core {{ background: #c8e6c9; color: #2e7d32; }}
+        .badge-transversal {{ background: #bbdefb; color: #1565c0; }}
         .badge-specific {{ background: #ffe0b2; color: #e65100; }}
         .badge-normal {{ background: #e0e0e0; color: #666; }}
         .class-coverage {{ margin-top: 15px; }}
@@ -839,10 +844,10 @@ with tab2:
 </head>
 <body>
 <div class="container">
-    <h1>📊 Evidence-Based Framework</h1>
+    <h1>Evidence-Based Framework</h1>
     <p><strong>Materia:</strong> {materia.replace('_', ' ').title()}</p>
     <p><strong>Classi analizzate:</strong> {', '.join(selected_classes)}</p>
-    <p><strong>Soglie:</strong> CORE ≥{core_threshold}% | SPECIFICO <{specific_threshold}%</p>
+    <p><strong>Soglie:</strong> CORE &ge;{core_threshold}% | TRASVERSALE {specific_threshold}%-{core_threshold}% | SPECIFICO &lt;{specific_threshold}%</p>
     
     <div class="summary">
         <div class="summary-card">
@@ -851,11 +856,15 @@ with tab2:
         </div>
         <div class="summary-card core">
             <div class="number">{n_core}</div>
-            <div class="label">Moduli CORE</div>
+            <div class="label">CORE</div>
+        </div>
+        <div class="summary-card transversal">
+            <div class="number">{n_transversal}</div>
+            <div class="label">TRASVERSALE</div>
         </div>
         <div class="summary-card specific">
             <div class="number">{n_specific}</div>
-            <div class="label">Moduli SPECIFICI</div>
+            <div class="label">SPECIFICO</div>
         </div>
         <div class="summary-card">
             <div class="number">{len(selected_classes)}</div>
@@ -863,7 +872,7 @@ with tab2:
         </div>
     </div>
     
-    <h2>🔷 Moduli CORE (comuni a tutte le classi)</h2>
+    <h2>Moduli CORE (comuni alla maggioranza delle classi)</h2>
 """
                                     
                                     core_modules = [m for m in modules if m.get("is_core")]
@@ -873,7 +882,7 @@ with tab2:
     <div class="module core">
         <div class="module-header">
             <span class="module-name">{mod.get('name', 'N/D')}</span>
-            <span class="badge badge-core">CORE</span>
+            <span class="badge badge-core">CORE ({mod.get('stats', {}).get('presence_percentage', 0):.0f}%)</span>
         </div>
         <p>{mod.get('description', '')}</p>
         <div class="class-coverage">
@@ -900,7 +909,47 @@ with tab2:
                                         report_html += "<p>Nessun modulo CORE identificato con le soglie attuali.</p>"
                                     
                                     report_html += """
-    <h2>🔶 Moduli SPECIFICI (distintivi per alcune classi)</h2>
+    <h2>Moduli TRASVERSALI (presenti in diverse classi)</h2>
+"""
+                                    
+                                    transversal_modules = [m for m in modules if m.get("is_transversal")]
+                                    if transversal_modules:
+                                        for mod in transversal_modules:
+                                            distinctive_for = mod.get("distinctive_for", [])
+                                            distinctive_str = f" - Forte in: {', '.join(distinctive_for)}" if distinctive_for else ""
+                                            
+                                            report_html += f"""
+    <div class="module transversal">
+        <div class="module-header">
+            <span class="module-name">{mod.get('name', 'N/D')}</span>
+            <span class="badge badge-transversal">TRASVERSALE ({mod.get('stats', {}).get('presence_percentage', 0):.0f}%){distinctive_str}</span>
+        </div>
+        <p>{mod.get('description', '')}</p>
+        <div class="class-coverage">
+            <strong>Copertura per classe:</strong>
+"""
+                                            for classe, cov in mod.get("coverage_by_class", {}).items():
+                                                bar_class = "high" if cov >= 70 else ("medium" if cov >= 40 else "low")
+                                                report_html += f"""
+            <div class="class-bar">
+                <span class="class-name">{classe}</span>
+                <div class="bar-container"><div class="bar-fill {bar_class}" style="width: {min(cov, 100)}%;"></div></div>
+                <span style="margin-left: 10px; font-weight: 500;">{cov:.0f}%</span>
+            </div>
+"""
+                                            report_html += """
+        </div>
+        <div class="contents"><strong>Contenuti:</strong> """
+                                            for content in mod.get("core_contents", [])[:10]:
+                                                report_html += f"<span>{content}</span>"
+                                            report_html += """</div>
+    </div>
+"""
+                                    else:
+                                        report_html += "<p>Nessun modulo TRASVERSALE identificato con le soglie attuali.</p>"
+                                    
+                                    report_html += """
+    <h2>Moduli SPECIFICI (distintivi per alcune classi)</h2>
 """
                                     
                                     specific_modules = [m for m in modules if m.get("is_specific")]
@@ -913,7 +962,7 @@ with tab2:
     <div class="module specific">
         <div class="module-header">
             <span class="module-name">{mod.get('name', 'N/D')}</span>
-            <span class="badge badge-specific">SPECIFICO{distinctive_str}</span>
+            <span class="badge badge-specific">SPECIFICO ({mod.get('stats', {}).get('presence_percentage', 0):.0f}%){distinctive_str}</span>
         </div>
         <p>{mod.get('description', '')}</p>
         <div class="class-coverage">
@@ -939,30 +988,9 @@ with tab2:
                                     else:
                                         report_html += "<p>Nessun modulo SPECIFICO identificato con le soglie attuali.</p>"
                                     
-                                    # Moduli normali (né core né specifici)
-                                    normal_modules = [m for m in modules if not m.get("is_core") and not m.get("is_specific")]
-                                    if normal_modules:
-                                        report_html += """
-    <h2>📋 Altri Moduli</h2>
-"""
-                                        for mod in normal_modules:
-                                            report_html += f"""
-    <div class="module">
-        <div class="module-header">
-            <span class="module-name">{mod.get('name', 'N/D')}</span>
-            <span class="badge badge-normal">PARZIALE</span>
-        </div>
-        <p>{mod.get('description', '')}</p>
-        <div class="contents"><strong>Contenuti:</strong> """
-                                            for content in mod.get("core_contents", [])[:8]:
-                                                report_html += f"<span>{content}</span>"
-                                            report_html += """</div>
-    </div>
-"""
-                                    
                                     report_html += f"""
     <div class="footer">
-        <p><strong>CoreX PromoIntelligence - Evidence-Based Framework Generator v1.0</strong></p>
+        <p><strong>CoreX PromoIntelligence - Evidence-Based Framework Generator v1.1</strong></p>
         <p>Generato il {datetime.now().strftime('%Y-%m-%d %H:%M')}</p>
         <p>Note clustering: {eb_framework.get('clustering_notes', 'N/D')}</p>
     </div>
@@ -992,6 +1020,7 @@ with tab2:
                                         "n_syllabus_per_class": {c: len(pdf_by_class[c]) for c in selected_classes},
                                         "n_modules": len(modules),
                                         "n_core_modules": n_core,
+                                        "n_transversal_modules": n_transversal,
                                         "n_specific_modules": n_specific,
                                         "thresholds": {
                                             "core": core_threshold,
@@ -1001,37 +1030,44 @@ with tab2:
                                     with open(analisi_dir / "analisi.json", "w", encoding="utf-8") as f:
                                         json.dump(meta, f, indent=2, ensure_ascii=False)
                                     
-                                    progress.progress(100, text="✅ Completato!")
+                                    progress.progress(100, text="Completato!")
                                     
-                                    st.success("✅ Evidence-Based Framework generato!")
+                                    st.success("Evidence-Based Framework generato!")
                                     
                                     # Mostra statistiche rapide
                                     st.markdown("---")
-                                    st.subheader("📊 Risultati")
+                                    st.subheader("Risultati")
                                     
-                                    col1, col2, col3, col4 = st.columns(4)
-                                    col1.metric("Classi analizzate", len(selected_classes))
+                                    col1, col2, col3, col4, col5 = st.columns(5)
+                                    col1.metric("Classi", len(selected_classes))
                                     col2.metric("Moduli Totali", len(modules))
-                                    col3.metric("Moduli CORE", n_core)
-                                    col4.metric("Moduli SPECIFICI", n_specific)
+                                    col3.metric("CORE", n_core)
+                                    col4.metric("TRASVERSALE", n_transversal)
+                                    col5.metric("SPECIFICI", n_specific)
                                     
                                     # Dettaglio moduli core
                                     if core_modules:
-                                        st.markdown("**🔷 Moduli CORE (insegnati in tutte le classi):**")
+                                        st.markdown("**Moduli CORE (insegnati nella maggioranza delle classi):**")
                                         for mod in core_modules[:5]:
-                                            st.write(f"  • **{mod.get('name')}** - {mod.get('stats', {}).get('presence_percentage', 0):.0f}% delle classi")
+                                            st.write(f"  - **{mod.get('name')}** - {mod.get('stats', {}).get('presence_percentage', 0):.0f}% delle classi")
+                                    
+                                    # Dettaglio moduli trasversali
+                                    if transversal_modules:
+                                        st.markdown("**Moduli TRASVERSALI (presenti in diverse classi):**")
+                                        for mod in transversal_modules[:5]:
+                                            st.write(f"  - **{mod.get('name')}** - {mod.get('stats', {}).get('presence_percentage', 0):.0f}% delle classi")
                                     
                                     # Dettaglio moduli specifici
                                     if specific_modules:
-                                        st.markdown("**🔶 Moduli SPECIFICI:**")
+                                        st.markdown("**Moduli SPECIFICI:**")
                                         for mod in specific_modules[:5]:
                                             distinctive = mod.get('distinctive_for', [])
-                                            st.write(f"  • **{mod.get('name')}** - Distintivo per: {', '.join(distinctive) if distinctive else 'N/D'}")
+                                            st.write(f"  - **{mod.get('name')}** - Distintivo per: {', '.join(distinctive) if distinctive else 'N/D'}")
                                     
-                                    st.info("👉 Vai alla tab **Risultati** per visualizzare il report completo")
+                                    st.info("Vai alla tab **Risultati** per visualizzare il report completo")
                                     
                                 except Exception as e:
-                                    st.error(f"❌ Errore: {str(e)}")
+                                    st.error(f"Errore: {str(e)}")
                                     import traceback
                                     st.code(traceback.format_exc())
                         
@@ -2922,7 +2958,6 @@ with tab6:
         st.code(traceback.format_exc())
                 
 # === TAB 7: PROFILO DOCENTE (Report Commerciale) ===
-# === TAB 7: PROFILO DOCENTE ===
 with tab7:
     st.header("🎓 Analisi Profilo Docente")
     st.markdown("Genera report commerciale completo per il promotore editoriale.")
@@ -3332,6 +3367,154 @@ with tab7:
                     st.error(f"❌ Errore: {str(e)}")
                     import traceback
                     st.code(traceback.format_exc())
+
+# === TAB 8: CONFRONTO FRAMEWORK ===
+with tab8:
+    st.header("🔬 Confronto Framework")
+    
+    st.info("""
+    Confronta tre prospettive sulla stessa materia:
+    - **Framework Ideale**: struttura teorica Zanichelli
+    - **Framework Reale**: mapping dei programmi sul framework ideale
+    - **Framework Evidence-Based**: moduli emersi dai programmi senza struttura predefinita
+    """)
+    
+    # Selezione materia
+    materie_disponibili = get_materie()
+    
+    if not materie_disponibili:
+        st.warning("Nessuna materia disponibile. Carica prima dei programmi.")
+    else:
+        materia_confronto = st.selectbox(
+            "Seleziona la materia da analizzare",
+            materie_disponibili,
+            key="tab8_confronto_materia"
+        )
+        
+        if materia_confronto:
+            from app.framework_triple_comparator import FrameworkComparator
+            
+            comparator = FrameworkComparator(materia_confronto)
+            
+            # Verifica disponibilità framework
+            st.subheader("📋 Framework Disponibili")
+            
+            col1, col2, col3 = st.columns(3)
+            
+            # Check Ideale
+            ideal = comparator.load_ideal_framework()
+            with col1:
+                if ideal:
+                    n_mod = len(ideal.get("syllabus_modules", ideal.get("modules", [])))
+                    st.success(f"✅ **Ideale**\n\n{n_mod} moduli")
+                else:
+                    st.error("❌ **Ideale**\n\nNon trovato")
+            
+            # Check Reale
+            real = comparator.load_real_framework()
+            with col2:
+                if real:
+                    n_mod = len(real.get("syllabus_modules", real.get("modules", [])))
+                    st.success(f"✅ **Reale**\n\n{n_mod} moduli")
+                else:
+                    st.warning("⚠️ **Reale**\n\nNon trovato")
+            
+            # Check Evidence-Based
+            eb = comparator.load_evidence_based_framework()
+            with col3:
+                if eb:
+                    n_mod = len(eb.get("modules", []))
+                    st.success(f"✅ **Evidence-Based**\n\n{n_mod} moduli")
+                else:
+                    st.warning("⚠️ **Evidence-Based**\n\nNon trovato")
+            
+            # Conta quanti framework sono disponibili
+            available_count = sum([1 for f in [ideal, real, eb] if f is not None])
+            
+            st.markdown("---")
+            
+            if available_count < 2:
+                st.warning("Servono almeno 2 framework per il confronto. Esegui prima le analisi necessarie.")
+            else:
+                if st.button("🔬 Esegui Confronto", type="primary", use_container_width=True):
+                    with st.spinner("Analisi in corso..."):
+                        try:
+                            # Esegui confronto
+                            comparison = comparator.compare(ideal, real, eb)
+                            
+                            if "error" in comparison:
+                                st.error(comparison["error"])
+                            else:
+                                # Genera report HTML
+                                html_report = comparator.generate_html_report(comparison)
+                                
+                                # Salva report
+                                report_dir = get_data_dir() / "confronti_framework"
+                                report_dir.mkdir(exist_ok=True)
+                                
+                                timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                                report_path = report_dir / f"confronto_{materia_confronto}_{timestamp}.html"
+                                
+                                with open(report_path, "w", encoding="utf-8") as f:
+                                    f.write(html_report)
+                                
+                                # Salva anche JSON
+                                json_path = report_dir / f"confronto_{materia_confronto}_{timestamp}.json"
+                                with open(json_path, "w", encoding="utf-8") as f:
+                                    json.dump(comparison, f, indent=2, ensure_ascii=False)
+                                
+                                st.success("✅ Confronto completato!")
+                                
+                                # Mostra statistiche rapide
+                                st.subheader("📊 Risultati Rapidi")
+                                
+                                # Gap formativi
+                                gaps = comparison.get("analysis", {}).get("gap_formativi", {})
+                                if gaps:
+                                    col1, col2, col3 = st.columns(3)
+                                    col1.metric("Moduli Ideali", gaps.get("total_ideal", 0))
+                                    col2.metric("Coperti", gaps.get("covered_count", 0))
+                                    col3.metric("Gap", gaps.get("gaps_count", 0))
+                                
+                                # Opportunità
+                                opps = comparison.get("analysis", {}).get("opportunita_commerciali", {})
+                                if opps:
+                                    st.markdown("**Opportunità Commerciali:**")
+                                    col1, col2, col3 = st.columns(3)
+                                    col1.metric("Gap Formativi", opps.get("by_type", {}).get("gap_formativo", 0))
+                                    col2.metric("Contenuti Emergenti", opps.get("by_type", {}).get("contenuto_emergente", 0))
+                                    col3.metric("Nicchie", opps.get("by_type", {}).get("nicchia_specifica", 0))
+                                
+                                st.markdown("---")
+                                
+                                # Download
+                                col1, col2 = st.columns(2)
+                                with col1:
+                                    st.download_button(
+                                        "📥 Scarica Report HTML",
+                                        html_report,
+                                        f"confronto_{materia_confronto}.html",
+                                        "text/html",
+                                        use_container_width=True
+                                    )
+                                with col2:
+                                    st.download_button(
+                                        "📥 Scarica JSON",
+                                        json.dumps(comparison, indent=2, ensure_ascii=False),
+                                        f"confronto_{materia_confronto}.json",
+                                        "application/json",
+                                        use_container_width=True
+                                    )
+                                
+                                # Anteprima
+                                st.markdown("---")
+                                st.subheader("👁️ Anteprima Report")
+                                st.components.v1.html(html_report, height=800, scrolling=True)
+                        
+                        except Exception as e:
+                            st.error(f"Errore: {str(e)}")
+                            import traceback
+                            st.code(traceback.format_exc())
 
 # Footer
 st.markdown("---")

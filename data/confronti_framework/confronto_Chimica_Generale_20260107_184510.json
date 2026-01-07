@@ -1,0 +1,718 @@
+{
+  "materia": "Chimica_Generale",
+  "generated_at": "2026-01-07T18:45:10.360080",
+  "frameworks_found": {
+    "ideal": true,
+    "real": true,
+    "evidence_based": true
+  },
+  "analysis": {
+    "gap_formativi": {
+      "description": "Moduli del framework ideale non coperti dai programmi reali",
+      "total_ideal": 12,
+      "gaps_count": 12,
+      "covered_count": 0,
+      "coverage_percentage": 0.0,
+      "gaps": [
+        {
+          "module": "Struttura atomica e tavola periodica",
+          "contents": [
+            "particelle subatomiche, isotopi, numero avogadro",
+            "modello bohr, spettri atomici",
+            "numeri quantici, orbitali s/p/d/f",
+            "configurazioni elettroniche, eccezioni",
+            "raggio atomico, ie, elettronegatività"
+          ],
+          "severity": "media"
+        },
+        {
+          "module": "Legame chimico e geometria molecolare",
+          "contents": [
+            "teoria lewis, regola ottetto/18 elettroni",
+            "vsepr (lineare, planare, tetraedrica)",
+            "ibridazione sp/sp2/sp3",
+            "polarità legami/molecole, momento dipolare",
+            "legami metallici, energia reticolare"
+          ],
+          "severity": "media"
+        },
+        {
+          "module": "Stechiometria e reazioni chimiche",
+          "contents": [
+            "mole, massa molare, composizione %",
+            "bilanciamento equazioni, yield teorico/esperim.",
+            "reazioni: precipitazione, acido-base, redox",
+            "stechiometria soluzioni, diluizioni",
+            "numeri ossidazione, bilanciamento redox"
+          ],
+          "severity": "media"
+        },
+        {
+          "module": "Termodinamica e termochimica",
+          "contents": [
+            "energia interna, entalpia, 1° principio",
+            "calorimetria, capacità termica",
+            "legge hess, entalpie formazione",
+            "entropia, 2° principio, energia libera gibbs",
+            "cicli born-haber, spontaneità"
+          ],
+          "severity": "media"
+        },
+        {
+          "module": "Stati materia e soluzioni",
+          "contents": [
+            "leggi gas ideali, miscele, pressioni parziali",
+            "teoria cinetica gas, gas reali",
+            "cambi stato, diagrammi fase",
+            "soluzioni: molalità, molarità, % massa",
+            "proprietà colligative (ebullio, crioscopia, osmosi)"
+          ],
+          "severity": "media"
+        },
+        {
+          "module": "Cinetica chimica",
+          "contents": [
+            "velocità reazione, ordine, cinetica integrata",
+            "equazione arrhenius, energia attivazione",
+            "meccanismi elementari, stato attivato",
+            "catalisi omogenea/eterogenea",
+            "cinetica enzimatica (michaelis-menten)"
+          ],
+          "severity": "media"
+        },
+        {
+          "module": "Equilibri chimici",
+          "contents": [
+            "costante kc/kp, principio le chatelier",
+            "calcoli equilibri gassosi/eterogenei",
+            "fattori spostamento equilibrio",
+            "equilibri multipli, approssimazioni",
+            "q vs k"
+          ],
+          "severity": "media"
+        },
+        {
+          "module": "Equilibri acido-base",
+          "contents": [
+            "arrhenius, brønsted-lowry, lewis",
+            "pka, ph calcoli acidi deboli",
+            "idrolisi sali, indicatori",
+            "curve titolazione, tamponi",
+            "calcoli capacità tampone"
+          ],
+          "severity": "media"
+        },
+        {
+          "module": "Elettrochimica",
+          "contents": [
+            "celle galvaniche/voltaiche, potenziale standard",
+            "equazione nernst",
+            "celle elettrolitiche, leggi faraday",
+            "corrosione, batterie (pb, nicd, li-ion)",
+            "elettrodi riferimento"
+          ],
+          "severity": "media"
+        },
+        {
+          "module": "Chimica elementi principali",
+          "contents": [
+            "gruppi 1-2 (alcalini/terrosi)",
+            "gruppo 13-16 (boro, carbonio, azoto, ossigeno)",
+            "alogeni (17), gas nobili (18)",
+            "ossidi acidi/basei/anfoteri",
+            "nomenclatura iupac composti"
+          ],
+          "severity": "media"
+        },
+        {
+          "module": "Tecniche analitiche e laboratorio",
+          "contents": [
+            "titolo soluzioni, standardizzazione",
+            "gravimetria, volumetriche",
+            "spettroscopia uv-vis base",
+            "cromatografia cartacea/tlc",
+            "analisi qualitativa cationi/anionici"
+          ],
+          "severity": "media"
+        },
+        {
+          "module": "Sicurezza, sostenibilità e applicazioni",
+          "contents": [
+            "msds, dpi, norme sicurezza",
+            "gestione rifiuti chimici",
+            "green chemistry principi",
+            "chimica industriale (haber-bosch, claus)",
+            "chimica atmosferica (ozono, acidi pioggia)"
+          ],
+          "severity": "media"
+        }
+      ],
+      "covered": []
+    },
+    "contenuti_emergenti": {
+      "description": "Moduli insegnati che non sono nel framework ideale Zanichelli",
+      "total_eb": 9,
+      "emergent_count": 9,
+      "mapped_count": 0,
+      "emergent": [
+        {
+          "module": "Fondamenti di Chimica Generale",
+          "category": "CORE",
+          "presence": 100.0,
+          "contents": [
+            "chimica generale",
+            "legame chimico",
+            "legame ionico",
+            "legame covalente",
+            "legame metallico",
+            "legame dativo",
+            "legami secondari",
+            "proprietà periodiche",
+            "numero di avogadro",
+            "massa atomica"
+          ],
+          "interpretation": "Tema universalmente insegnato ma non nel framework ideale - potenziale lacuna nel framework"
+        },
+        {
+          "module": "Equilibri Chimici e Reazioni",
+          "category": "CORE",
+          "presence": 100.0,
+          "contents": [
+            "equilibrio chimico",
+            "reazioni chimiche",
+            "reazioni acido-base",
+            "costante di equilibrio",
+            "spontaneità di una reazione",
+            "quoziente di reazione",
+            "bilanciamento reazioni"
+          ],
+          "interpretation": "Tema universalmente insegnato ma non nel framework ideale - potenziale lacuna nel framework"
+        },
+        {
+          "module": "Struttura Atomica e Teoria Atomica",
+          "category": "CORE",
+          "presence": 88.9,
+          "contents": [
+            "struttura atomica",
+            "teoria atomica",
+            "modelli atomici",
+            "orbitali",
+            "numeri quantici"
+          ],
+          "interpretation": "Tema universalmente insegnato ma non nel framework ideale - potenziale lacuna nel framework"
+        },
+        {
+          "module": "Isotopi e Radioattività",
+          "category": "CORE",
+          "presence": 88.9,
+          "contents": [
+            "isotopi",
+            "nuclidi",
+            "distribuzione isotopica"
+          ],
+          "interpretation": "Tema universalmente insegnato ma non nel framework ideale - potenziale lacuna nel framework"
+        },
+        {
+          "module": "Soluzioni e Proprietà Colligative",
+          "category": "TRASVERSALE",
+          "presence": 55.6,
+          "contents": [
+            "proprietà colligative",
+            "molarità",
+            "molalità",
+            "normalità",
+            "preparazione di soluzioni"
+          ],
+          "interpretation": "Tema diffuso - potrebbe meritare inclusione nel framework ideale"
+        },
+        {
+          "module": "Termodinamica e Proprietà Fisiche",
+          "category": "SPECIFICO",
+          "presence": 22.2,
+          "contents": [
+            "termodinamica",
+            "energia interna",
+            "enthalpie di legame",
+            "tensione di vapore",
+            "temperatura di ebollizione",
+            "calcolo del ph",
+            "proprietà chimico-fisiche"
+          ],
+          "interpretation": "Tema di nicchia - specifico per alcune classi di laurea"
+        },
+        {
+          "module": "Chimica Fisica e Cinetica",
+          "category": "SPECIFICO",
+          "presence": 22.2,
+          "contents": [
+            "cinetica chimica",
+            "cinetiche del primo ordine",
+            "fattori che influenzano la reazione",
+            "teoria di arrhenius"
+          ],
+          "interpretation": "Tema di nicchia - specifico per alcune classi di laurea"
+        },
+        {
+          "module": "Chimica Inorganica e Organica",
+          "category": "SPECIFICO",
+          "presence": 22.2,
+          "contents": [
+            "chimica inorganica",
+            "reazione di combustione",
+            "acidi e basi",
+            "ossidoriduzione"
+          ],
+          "interpretation": "Tema di nicchia - specifico per alcune classi di laurea"
+        },
+        {
+          "module": "Metodologia Didattica e Pratica",
+          "category": "SPECIFICO",
+          "presence": 11.1,
+          "contents": [
+            "metodi didattici",
+            "esercitazioni in aula",
+            "esercitazioni pratiche",
+            "materiale di riferimento"
+          ],
+          "interpretation": "Tema di nicchia - specifico per alcune classi di laurea"
+        }
+      ],
+      "mapped": []
+    },
+    "validazione": {
+      "description": "Verifica coerenza tra analisi con framework ideale e analisi bottom-up",
+      "concordance_rate": 0.0,
+      "interpretation": "Bassa concordanza - le due analisi danno risultati molto diversi, rivedere il mapping",
+      "concordances": [],
+      "discrepancies": [
+        {
+          "real_module": "Struttura atomica e tavola periodica",
+          "real_coverage": 0,
+          "best_eb_match": "Nessuno",
+          "similarity": 0
+        },
+        {
+          "real_module": "Legame chimico e geometria molecolare",
+          "real_coverage": 0,
+          "best_eb_match": "Nessuno",
+          "similarity": 0
+        },
+        {
+          "real_module": "Stechiometria e reazioni chimiche",
+          "real_coverage": 0,
+          "best_eb_match": "Nessuno",
+          "similarity": 0
+        },
+        {
+          "real_module": "Termodinamica e termochimica",
+          "real_coverage": 0,
+          "best_eb_match": "Nessuno",
+          "similarity": 0
+        },
+        {
+          "real_module": "Stati materia e soluzioni",
+          "real_coverage": 0,
+          "best_eb_match": "Nessuno",
+          "similarity": 0
+        },
+        {
+          "real_module": "Cinetica chimica",
+          "real_coverage": 0,
+          "best_eb_match": "Nessuno",
+          "similarity": 0
+        },
+        {
+          "real_module": "Equilibri chimici",
+          "real_coverage": 0,
+          "best_eb_match": "Nessuno",
+          "similarity": 0
+        },
+        {
+          "real_module": "Equilibri acido-base",
+          "real_coverage": 0,
+          "best_eb_match": "Nessuno",
+          "similarity": 0
+        },
+        {
+          "real_module": "Elettrochimica",
+          "real_coverage": 0,
+          "best_eb_match": "Nessuno",
+          "similarity": 0
+        },
+        {
+          "real_module": "Chimica elementi principali",
+          "real_coverage": 0,
+          "best_eb_match": "Nessuno",
+          "similarity": 0
+        },
+        {
+          "real_module": "Tecniche analitiche e laboratorio",
+          "real_coverage": 0,
+          "best_eb_match": "Nessuno",
+          "similarity": 0
+        },
+        {
+          "real_module": "Sicurezza, sostenibilità e applicazioni",
+          "real_coverage": 0,
+          "best_eb_match": "Nessuno",
+          "similarity": 0
+        }
+      ]
+    },
+    "copertura_ideale": {
+      "description": "Quanto del framework ideale viene effettivamente insegnato",
+      "modules_covered": 12,
+      "modules_total": 12,
+      "coverage_rate": 100.0,
+      "avg_coverage_depth": 0.0,
+      "details": [
+        {
+          "module": "Struttura atomica e tavola periodica",
+          "has_match": true,
+          "match_name": "Struttura atomica e tavola periodica",
+          "similarity": 100.0,
+          "real_coverage": 0
+        },
+        {
+          "module": "Legame chimico e geometria molecolare",
+          "has_match": true,
+          "match_name": "Legame chimico e geometria molecolare",
+          "similarity": 100.0,
+          "real_coverage": 0
+        },
+        {
+          "module": "Stechiometria e reazioni chimiche",
+          "has_match": true,
+          "match_name": "Stechiometria e reazioni chimiche",
+          "similarity": 100.0,
+          "real_coverage": 0
+        },
+        {
+          "module": "Termodinamica e termochimica",
+          "has_match": true,
+          "match_name": "Termodinamica e termochimica",
+          "similarity": 100.0,
+          "real_coverage": 0
+        },
+        {
+          "module": "Stati materia e soluzioni",
+          "has_match": true,
+          "match_name": "Stati materia e soluzioni",
+          "similarity": 100.0,
+          "real_coverage": 0
+        },
+        {
+          "module": "Cinetica chimica",
+          "has_match": true,
+          "match_name": "Cinetica chimica",
+          "similarity": 100.0,
+          "real_coverage": 0
+        },
+        {
+          "module": "Equilibri chimici",
+          "has_match": true,
+          "match_name": "Equilibri chimici",
+          "similarity": 100.0,
+          "real_coverage": 0
+        },
+        {
+          "module": "Equilibri acido-base",
+          "has_match": true,
+          "match_name": "Equilibri acido-base",
+          "similarity": 100.0,
+          "real_coverage": 0
+        },
+        {
+          "module": "Elettrochimica",
+          "has_match": true,
+          "match_name": "Elettrochimica",
+          "similarity": 100.0,
+          "real_coverage": 0
+        },
+        {
+          "module": "Chimica elementi principali",
+          "has_match": true,
+          "match_name": "Chimica elementi principali",
+          "similarity": 100.0,
+          "real_coverage": 0
+        },
+        {
+          "module": "Tecniche analitiche e laboratorio",
+          "has_match": true,
+          "match_name": "Tecniche analitiche e laboratorio",
+          "similarity": 100.0,
+          "real_coverage": 0
+        },
+        {
+          "module": "Sicurezza, sostenibilità e applicazioni",
+          "has_match": true,
+          "match_name": "Sicurezza, sostenibilità e applicazioni",
+          "similarity": 100.0,
+          "real_coverage": 0
+        }
+      ]
+    },
+    "opportunita_commerciali": {
+      "description": "Opportunità commerciali identificate dal confronto",
+      "total": 17,
+      "by_type": {
+        "gap_formativo": 12,
+        "contenuto_emergente": 5,
+        "nicchia_specifica": 0
+      },
+      "opportunities": [
+        {
+          "type": "gap_formativo",
+          "priority": "alta",
+          "module": "Struttura atomica e tavola periodica",
+          "description": "Il modulo 'Struttura atomica e tavola periodica' del framework Zanichelli non viene insegnato significativamente",
+          "action": "Valutare materiale didattico specifico o integrazione nei manuali esistenti"
+        },
+        {
+          "type": "gap_formativo",
+          "priority": "alta",
+          "module": "Legame chimico e geometria molecolare",
+          "description": "Il modulo 'Legame chimico e geometria molecolare' del framework Zanichelli non viene insegnato significativamente",
+          "action": "Valutare materiale didattico specifico o integrazione nei manuali esistenti"
+        },
+        {
+          "type": "gap_formativo",
+          "priority": "alta",
+          "module": "Stechiometria e reazioni chimiche",
+          "description": "Il modulo 'Stechiometria e reazioni chimiche' del framework Zanichelli non viene insegnato significativamente",
+          "action": "Valutare materiale didattico specifico o integrazione nei manuali esistenti"
+        },
+        {
+          "type": "gap_formativo",
+          "priority": "alta",
+          "module": "Termodinamica e termochimica",
+          "description": "Il modulo 'Termodinamica e termochimica' del framework Zanichelli non viene insegnato significativamente",
+          "action": "Valutare materiale didattico specifico o integrazione nei manuali esistenti"
+        },
+        {
+          "type": "gap_formativo",
+          "priority": "alta",
+          "module": "Stati materia e soluzioni",
+          "description": "Il modulo 'Stati materia e soluzioni' del framework Zanichelli non viene insegnato significativamente",
+          "action": "Valutare materiale didattico specifico o integrazione nei manuali esistenti"
+        },
+        {
+          "type": "gap_formativo",
+          "priority": "alta",
+          "module": "Cinetica chimica",
+          "description": "Il modulo 'Cinetica chimica' del framework Zanichelli non viene insegnato significativamente",
+          "action": "Valutare materiale didattico specifico o integrazione nei manuali esistenti"
+        },
+        {
+          "type": "gap_formativo",
+          "priority": "alta",
+          "module": "Equilibri chimici",
+          "description": "Il modulo 'Equilibri chimici' del framework Zanichelli non viene insegnato significativamente",
+          "action": "Valutare materiale didattico specifico o integrazione nei manuali esistenti"
+        },
+        {
+          "type": "gap_formativo",
+          "priority": "alta",
+          "module": "Equilibri acido-base",
+          "description": "Il modulo 'Equilibri acido-base' del framework Zanichelli non viene insegnato significativamente",
+          "action": "Valutare materiale didattico specifico o integrazione nei manuali esistenti"
+        },
+        {
+          "type": "gap_formativo",
+          "priority": "alta",
+          "module": "Elettrochimica",
+          "description": "Il modulo 'Elettrochimica' del framework Zanichelli non viene insegnato significativamente",
+          "action": "Valutare materiale didattico specifico o integrazione nei manuali esistenti"
+        },
+        {
+          "type": "gap_formativo",
+          "priority": "alta",
+          "module": "Chimica elementi principali",
+          "description": "Il modulo 'Chimica elementi principali' del framework Zanichelli non viene insegnato significativamente",
+          "action": "Valutare materiale didattico specifico o integrazione nei manuali esistenti"
+        },
+        {
+          "type": "gap_formativo",
+          "priority": "alta",
+          "module": "Tecniche analitiche e laboratorio",
+          "description": "Il modulo 'Tecniche analitiche e laboratorio' del framework Zanichelli non viene insegnato significativamente",
+          "action": "Valutare materiale didattico specifico o integrazione nei manuali esistenti"
+        },
+        {
+          "type": "gap_formativo",
+          "priority": "alta",
+          "module": "Sicurezza, sostenibilità e applicazioni",
+          "description": "Il modulo 'Sicurezza, sostenibilità e applicazioni' del framework Zanichelli non viene insegnato significativamente",
+          "action": "Valutare materiale didattico specifico o integrazione nei manuali esistenti"
+        },
+        {
+          "type": "contenuto_emergente",
+          "priority": "alta",
+          "module": "Fondamenti di Chimica Generale",
+          "presence": 100.0,
+          "description": "Il tema 'Fondamenti di Chimica Generale' è insegnato nel 100% delle classi ma non è nel framework Zanichelli",
+          "action": "Considerare aggiunta al framework o creazione di materiale supplementare"
+        },
+        {
+          "type": "contenuto_emergente",
+          "priority": "alta",
+          "module": "Equilibri Chimici e Reazioni",
+          "presence": 100.0,
+          "description": "Il tema 'Equilibri Chimici e Reazioni' è insegnato nel 100% delle classi ma non è nel framework Zanichelli",
+          "action": "Considerare aggiunta al framework o creazione di materiale supplementare"
+        },
+        {
+          "type": "contenuto_emergente",
+          "priority": "alta",
+          "module": "Struttura Atomica e Teoria Atomica",
+          "presence": 88.9,
+          "description": "Il tema 'Struttura Atomica e Teoria Atomica' è insegnato nel 89% delle classi ma non è nel framework Zanichelli",
+          "action": "Considerare aggiunta al framework o creazione di materiale supplementare"
+        },
+        {
+          "type": "contenuto_emergente",
+          "priority": "alta",
+          "module": "Isotopi e Radioattività",
+          "presence": 88.9,
+          "description": "Il tema 'Isotopi e Radioattività' è insegnato nel 89% delle classi ma non è nel framework Zanichelli",
+          "action": "Considerare aggiunta al framework o creazione di materiale supplementare"
+        },
+        {
+          "type": "contenuto_emergente",
+          "priority": "media",
+          "module": "Soluzioni e Proprietà Colligative",
+          "presence": 55.6,
+          "description": "Il tema 'Soluzioni e Proprietà Colligative' è insegnato nel 56% delle classi ma non è nel framework Zanichelli",
+          "action": "Considerare aggiunta al framework o creazione di materiale supplementare"
+        }
+      ]
+    }
+  },
+  "modules_count": {
+    "ideal": 12,
+    "real": 12,
+    "evidence_based": 9
+  },
+  "comparison_matrix": [
+    {
+      "ideal_module": "Struttura atomica e tavola periodica",
+      "ideal_contents_count": 5,
+      "real_match": "Struttura atomica e tavola periodica",
+      "real_similarity": 100.0,
+      "real_coverage": 0,
+      "eb_match": null,
+      "eb_similarity": 0,
+      "eb_category": null
+    },
+    {
+      "ideal_module": "Legame chimico e geometria molecolare",
+      "ideal_contents_count": 5,
+      "real_match": "Legame chimico e geometria molecolare",
+      "real_similarity": 100.0,
+      "real_coverage": 0,
+      "eb_match": null,
+      "eb_similarity": 0,
+      "eb_category": null
+    },
+    {
+      "ideal_module": "Stechiometria e reazioni chimiche",
+      "ideal_contents_count": 5,
+      "real_match": "Stechiometria e reazioni chimiche",
+      "real_similarity": 100.0,
+      "real_coverage": 0,
+      "eb_match": null,
+      "eb_similarity": 0,
+      "eb_category": null
+    },
+    {
+      "ideal_module": "Termodinamica e termochimica",
+      "ideal_contents_count": 5,
+      "real_match": "Termodinamica e termochimica",
+      "real_similarity": 100.0,
+      "real_coverage": 0,
+      "eb_match": null,
+      "eb_similarity": 0,
+      "eb_category": null
+    },
+    {
+      "ideal_module": "Stati materia e soluzioni",
+      "ideal_contents_count": 5,
+      "real_match": "Stati materia e soluzioni",
+      "real_similarity": 100.0,
+      "real_coverage": 0,
+      "eb_match": null,
+      "eb_similarity": 0,
+      "eb_category": null
+    },
+    {
+      "ideal_module": "Cinetica chimica",
+      "ideal_contents_count": 5,
+      "real_match": "Cinetica chimica",
+      "real_similarity": 100.0,
+      "real_coverage": 0,
+      "eb_match": null,
+      "eb_similarity": 0,
+      "eb_category": null
+    },
+    {
+      "ideal_module": "Equilibri chimici",
+      "ideal_contents_count": 5,
+      "real_match": "Equilibri chimici",
+      "real_similarity": 100.0,
+      "real_coverage": 0,
+      "eb_match": null,
+      "eb_similarity": 0,
+      "eb_category": null
+    },
+    {
+      "ideal_module": "Equilibri acido-base",
+      "ideal_contents_count": 5,
+      "real_match": "Equilibri acido-base",
+      "real_similarity": 100.0,
+      "real_coverage": 0,
+      "eb_match": null,
+      "eb_similarity": 0,
+      "eb_category": null
+    },
+    {
+      "ideal_module": "Elettrochimica",
+      "ideal_contents_count": 5,
+      "real_match": "Elettrochimica",
+      "real_similarity": 100.0,
+      "real_coverage": 0,
+      "eb_match": null,
+      "eb_similarity": 0,
+      "eb_category": null
+    },
+    {
+      "ideal_module": "Chimica elementi principali",
+      "ideal_contents_count": 5,
+      "real_match": "Chimica elementi principali",
+      "real_similarity": 100.0,
+      "real_coverage": 0,
+      "eb_match": null,
+      "eb_similarity": 0,
+      "eb_category": null
+    },
+    {
+      "ideal_module": "Tecniche analitiche e laboratorio",
+      "ideal_contents_count": 5,
+      "real_match": "Tecniche analitiche e laboratorio",
+      "real_similarity": 100.0,
+      "real_coverage": 0,
+      "eb_match": null,
+      "eb_similarity": 0,
+      "eb_category": null
+    },
+    {
+      "ideal_module": "Sicurezza, sostenibilità e applicazioni",
+      "ideal_contents_count": 5,
+      "real_match": "Sicurezza, sostenibilità e applicazioni",
+      "real_similarity": 100.0,
+      "real_coverage": 0,
+      "eb_match": null,
+      "eb_similarity": 0,
+      "eb_category": null
+    }
+  ]
+}

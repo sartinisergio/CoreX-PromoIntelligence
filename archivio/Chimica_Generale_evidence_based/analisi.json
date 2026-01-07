@@ -14,7 +14,7 @@
   ],
   "type": "multiclass_evidence_based",
   "framework_type": "evidence_based",
-  "created": "2026-01-07T16:48:00.635088",
+  "created": "2026-01-07T17:55:33.965044",
   "n_syllabus_total": 33,
   "n_syllabus_per_class": {
     "L-13_Biologia": 4,
@@ -27,11 +27,12 @@
     "L-7-8-9_Ingegneria": 4,
     "LM-13_Farmacia": 8
   },
-  "n_modules": 8,
-  "n_core_modules": 1,
+  "n_modules": 9,
+  "n_core_modules": 4,
+  "n_transversal_modules": 1,
   "n_specific_modules": 4,
   "thresholds": {
-    "core": 80,
-    "specific": 50
+    "core": 60,
+    "specific": 40
   }
 }
