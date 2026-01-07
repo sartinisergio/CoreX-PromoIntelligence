@@ -1,20 +1,200 @@
 """
-CoreX - Manual Analyzer v2.1
+CoreX - Manual Analyzer v2.2
 Analizza manuali rispetto a framework IDEALE e REALE
 Confronta più manuali tra loro
 UPGRADE: Matching semantico tramite LLM (universale per qualsiasi materia)
 FIX: Conteggio capitoli corretto per strutture Focus > Capitoli
 NEW: Report commerciale con talking points per promotori
+NEW v2.2: Sistema di cache persistente per risultati LLM stabili
 """
 
 import json
 import os
+import hashlib
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple, Set
 from datetime import datetime
 from collections import defaultdict
 import re
 
+
+# =============================================================================
+# CLASSE CACHE PER RISULTATI MATCHING LLM
+# =============================================================================
+
+class MatchingCache:
+    """
+    Cache persistente per i risultati del matching LLM.
+    Garantisce che stesso input → stesso output.
+    """
+    
+    def __init__(self, cache_dir: Path = None):
+        self.cache_dir = cache_dir or Path("cache/matching_results")
+        self.cache_dir.mkdir(parents=True, exist_ok=True)
+        self._stats = {"hits": 0, "misses": 0}
+    
+    def _generate_cache_key(self, manual_data: Dict, modules: List[Dict], model: str) -> str:
+        """
+        Genera un hash univoco per la combinazione manuale + framework + modello.
+        Cambiando uno qualsiasi di questi elementi, cambia l'hash.
+        """
+        # Estrai elementi chiave del manuale
+        manual_signature = {
+            "id": manual_data.get("id", ""),
+            "title": manual_data.get("title", ""),
+            "n_chapters": len(manual_data.get("chapters", [])),
+            "chapters_hash": self._hash_chapters(manual_data.get("chapters", []))
+        }
+        
+        # Estrai elementi chiave dei moduli
+        modules_signature = []
+        for mod in modules:
+            modules_signature.append({
+                "id": mod.get("id", 0),
+                "name": mod.get("name", ""),
+                "n_contents": len(mod.get("core_contents", []))
+            })
+        
+        # Combina tutto
+        combined = {
+            "manual": manual_signature,
+            "modules": modules_signature,
+            "model": model,
+            "cache_version": "2.2"  # Incrementare se cambia il formato del prompt
+        }
+        
+        # Genera hash
+        content_str = json.dumps(combined, sort_keys=True, ensure_ascii=False)
+        return hashlib.sha256(content_str.encode('utf-8')).hexdigest()[:20]
+    
+    def _hash_chapters(self, chapters: List[Dict]) -> str:
+        """Genera hash della struttura dei capitoli"""
+        chapter_titles = []
+        for ch in chapters:
+            chapter_titles.append(ch.get("title", ""))
+            for sec in ch.get("sections", []):
+                chapter_titles.append(f"  {sec.get('title', '')}")
+        content = "\n".join(chapter_titles)
+        return hashlib.md5(content.encode('utf-8')).hexdigest()[:12]
+    
+    def get(self, manual_data: Dict, modules: List[Dict], model: str) -> Optional[Dict]:
+        """
+        Recupera risultato dalla cache se esiste.
+        Returns: Dict con risultato LLM o None se non in cache.
+        """
+        cache_key = self._generate_cache_key(manual_data, modules, model)
+        cache_file = self.cache_dir / f"{cache_key}.json"
+        
+        if cache_file.exists():
+            try:
+                with open(cache_file, "r", encoding="utf-8") as f:
+                    cached = json.load(f)
+                self._stats["hits"] += 1
+                print(f"[CACHE HIT] Risultato matching trovato in cache: {cache_key}")
+                return cached.get("result")
+            except Exception as e:
+                print(f"[CACHE] Errore lettura cache {cache_file}: {e}")
+                return None
+        
+        self._stats["misses"] += 1
+        return None
+    
+    def set(self, manual_data: Dict, modules: List[Dict], model: str, result: Dict) -> bool:
+        """
+        Salva risultato in cache.
+        Returns: True se salvato con successo.
+        """
+        cache_key = self._generate_cache_key(manual_data, modules, model)
+        cache_file = self.cache_dir / f"{cache_key}.json"
+        
+        cache_entry = {
+            "metadata": {
+                "cache_key": cache_key,
+                "manual_id": manual_data.get("id", "N/D"),
+                "manual_title": manual_data.get("title", "N/D"),
+                "n_modules": len(modules),
+                "model": model,
+                "cached_at": datetime.now().isoformat(),
+                "cache_version": "2.2"
+            },
+            "result": result
+        }
+        
+        try:
+            with open(cache_file, "w", encoding="utf-8") as f:
+                json.dump(cache_entry, f, indent=2, ensure_ascii=False)
+            print(f"[CACHE] Risultato salvato: {cache_key}")
+            return True
+        except Exception as e:
+            print(f"[CACHE] Errore salvataggio cache: {e}")
+            return False
+    
+    def invalidate(self, manual_data: Dict, modules: List[Dict], model: str) -> bool:
+        """Invalida (cancella) una entry specifica dalla cache."""
+        cache_key = self._generate_cache_key(manual_data, modules, model)
+        cache_file = self.cache_dir / f"{cache_key}.json"
+        
+        if cache_file.exists():
+            try:
+                cache_file.unlink()
+                print(f"[CACHE] Entry invalidata: {cache_key}")
+                return True
+            except Exception as e:
+                print(f"[CACHE] Errore invalidazione: {e}")
+                return False
+        return False
+    
+    def clear_all(self) -> int:
+        """Svuota tutta la cache. Returns: numero di file cancellati."""
+        count = 0
+        for cache_file in self.cache_dir.glob("*.json"):
+            try:
+                cache_file.unlink()
+                count += 1
+            except:
+                pass
+        print(f"[CACHE] Svuotata: {count} file rimossi")
+        return count
+    
+    def get_stats(self) -> Dict:
+        """Statistiche della cache per la sessione corrente."""
+        total = self._stats["hits"] + self._stats["misses"]
+        hit_rate = (self._stats["hits"] / total * 100) if total > 0 else 0
+        
+        # Conta file in cache
+        n_cached = len(list(self.cache_dir.glob("*.json")))
+        
+        return {
+            "hits": self._stats["hits"],
+            "misses": self._stats["misses"],
+            "hit_rate_percent": round(hit_rate, 1),
+            "total_cached_results": n_cached,
+            "cache_dir": str(self.cache_dir)
+        }
+    
+    def list_cached(self) -> List[Dict]:
+        """Lista tutte le entry in cache con metadata."""
+        entries = []
+        for cache_file in sorted(self.cache_dir.glob("*.json")):
+            try:
+                with open(cache_file, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                meta = data.get("metadata", {})
+                entries.append({
+                    "cache_key": meta.get("cache_key", cache_file.stem),
+                    "manual_title": meta.get("manual_title", "N/D"),
+                    "model": meta.get("model", "N/D"),
+                    "cached_at": meta.get("cached_at", "N/D"),
+                    "file": cache_file.name
+                })
+            except:
+                pass
+        return entries
+
+
+# =============================================================================
+# CLASSE PRINCIPALE MANUAL ANALYZER
+# =============================================================================
 
 class ManualAnalyzer:
     
@@ -23,6 +203,9 @@ class ManualAnalyzer:
         self.frameworks_dir = frameworks_dir or Path("frameworks")
         self.archivio_dir = Path("archivio")
         self.use_llm = use_llm
+        
+        # Inizializza cache
+        self.matching_cache = MatchingCache()
     
     def _count_real_chapters(self, manual_data: Dict) -> int:
         """
@@ -126,7 +309,51 @@ class ManualAnalyzer:
                     })
         return topics
 
-    def _match_manual_to_framework_llm(self, manual: Dict, manual_topics: List[Dict], modules: List[Dict], subject: str, provider_id: str = "openai", model: str = "gpt-4o-mini") -> Optional[Dict]:
+    def _match_manual_to_framework_llm(
+        self, 
+        manual: Dict, 
+        manual_topics: List[Dict], 
+        modules: List[Dict], 
+        subject: str, 
+        provider_id: str = "openai", 
+        model: str = "gpt-4o-mini",
+        force_refresh: bool = False
+    ) -> Optional[Dict]:
+        """
+        Matching semantico manuale vs framework tramite LLM.
+        
+        v2.2: Aggiunto sistema di cache persistente.
+        - Se il risultato è in cache, lo restituisce immediatamente
+        - Se non in cache, chiama LLM e salva il risultato
+        - force_refresh=True bypassa la cache e ricalcola
+        
+        Args:
+            manual: Dati del manuale
+            manual_topics: Topics estratti dal manuale
+            modules: Moduli del framework
+            subject: Materia
+            provider_id: Provider LLM
+            model: Modello LLM
+            force_refresh: Se True, ignora la cache e ricalcola
+            
+        Returns:
+            Dict con risultati matching o None se errore
+        """
+        
+        # =====================================================================
+        # STEP 1: Controlla cache (se non force_refresh)
+        # =====================================================================
+        if not force_refresh:
+            cached_result = self.matching_cache.get(manual, modules, model)
+            if cached_result is not None:
+                return cached_result
+        else:
+            # Invalida cache esistente se force_refresh
+            self.matching_cache.invalidate(manual, modules, model)
+        
+        # =====================================================================
+        # STEP 2: Prepara chiamata LLM
+        # =====================================================================
         try:
             from app.llm_provider import get_llm_client
         except ImportError:
@@ -137,14 +364,25 @@ class ManualAnalyzer:
         for chapter in manual.get("chapters", []):
             sections_list = []
             for section in chapter.get("sections", []):
-                section_info = {"title": section.get("title", ""), "subsections": [sub.get("title", "") for sub in section.get("subsections", [])]}
+                section_info = {
+                    "title": section.get("title", ""), 
+                    "subsections": [sub.get("title", "") for sub in section.get("subsections", [])]
+                }
                 sections_list.append(section_info)
-            chapter_info = {"chapter_num": chapter.get("number", 0), "chapter_title": chapter.get("title", ""), "sections": sections_list}
+            chapter_info = {
+                "chapter_num": chapter.get("number", 0), 
+                "chapter_title": chapter.get("title", ""), 
+                "sections": sections_list
+            }
             manual_structure.append(chapter_info)
         
         framework_modules = []
         for mod in modules:
-            framework_modules.append({"id": mod.get("id", 0), "name": mod.get("name", ""), "core_contents": mod.get("core_contents", [])})
+            framework_modules.append({
+                "id": mod.get("id", 0), 
+                "name": mod.get("name", ""), 
+                "core_contents": mod.get("core_contents", [])
+            })
         
         prompt = f"""Sei un esperto di didattica universitaria. 
 Devi analizzare quanto un manuale universitario di "{subject.replace('_', ' ').title()}" copre i contenuti di un framework didattico.
@@ -185,18 +423,31 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
     }}
 }}"""
         
+        # =====================================================================
+        # STEP 3: Chiama LLM con seed per determinismo
+        # =====================================================================
         try:
             client = get_llm_client(provider_id)
-            response = client.chat.completions.create(
-                model=model,
-                messages=[
+            
+            # Parametri chiamata con SEED per maggiore determinismo
+            call_params = {
+                "model": model,
+                "messages": [
                     {"role": "system", "content": "Sei un analista esperto di manuali universitari. Rispondi SOLO con JSON valido."},
                     {"role": "user", "content": prompt}
                 ],
-                temperature=0.0,
-                max_tokens=4000
-            )
+                "temperature": 0.0,
+                "max_tokens": 4000
+            }
+            
+            # Aggiungi seed se il provider lo supporta (OpenAI)
+            if provider_id == "openai":
+                call_params["seed"] = 42
+            
+            response = client.chat.completions.create(**call_params)
             response_text = response.choices[0].message.content.strip()
+            
+            # Pulizia risposta
             if "```" in response_text:
                 parts = response_text.split("```")
                 for part in parts:
@@ -206,8 +457,16 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
                     elif part.strip().startswith("{"):
                         response_text = part.strip()
                         break
+            
             result = json.loads(response_text)
+            
+            # =====================================================================
+            # STEP 4: Salva in cache
+            # =====================================================================
+            self.matching_cache.set(manual, modules, model, result)
+            
             return result
+            
         except json.JSONDecodeError as e:
             print(f"Errore parsing JSON risposta LLM: {e}")
             return None
@@ -215,6 +474,17 @@ Rispondi SOLO con un JSON valido (senza markdown) in questo formato:
             print(f"Errore LLM matching: {e}")
             return None
 
+    def get_cache_stats(self) -> Dict:
+        """Restituisce statistiche sulla cache dei matching."""
+        return self.matching_cache.get_stats()
+    
+    def clear_matching_cache(self) -> int:
+        """Svuota la cache dei matching. Returns: numero di entry rimosse."""
+        return self.matching_cache.clear_all()
+    
+    def list_cached_matchings(self) -> List[Dict]:
+        """Lista tutti i matching salvati in cache."""
+        return self.matching_cache.list_cached()
     def _generate_narrative_descriptions(self, analysis_result: Dict, manual: Dict, subject: str, provider_id: str = "openai", model: str = "gpt-4o-mini") -> Dict:
         """
         Genera descrizioni narrative UTILI per il promotore.
@@ -422,14 +692,29 @@ Rispondi SOLO con JSON valido:
         else:
             return "judgment-insufficiente"
 
-    def analyze_manual_vs_ideal(self, manual: Dict, ideal_framework: Dict, provider_id: str = "openai", model: str = "gpt-4o-mini") -> Dict:
+    def analyze_manual_vs_ideal(
+        self, 
+        manual: Dict, 
+        ideal_framework: Dict, 
+        provider_id: str = "openai", 
+        model: str = "gpt-4o-mini",
+        force_refresh: bool = False
+    ) -> Dict:
+        """
+        Analizza un manuale rispetto a un framework ideale.
+        
+        v2.2: Aggiunto force_refresh per bypassare la cache.
+        """
         manual_topics = self.extract_manual_topics(manual)
         modules = ideal_framework.get("syllabus_modules", [])
         subject = manual.get("subject", "materia")
         
         llm_result = None
         if self.use_llm:
-            llm_result = self._match_manual_to_framework_llm(manual, manual_topics, modules, subject, provider_id, model)
+            llm_result = self._match_manual_to_framework_llm(
+                manual, manual_topics, modules, subject, 
+                provider_id, model, force_refresh
+            )
         
         modules_analysis = []
         all_matched_topics = set()
@@ -446,7 +731,12 @@ Rispondi SOLO con JSON valido:
                 content_matches = []
                 chapters_involved = []
                 for matched in mod_cov.get("matched_contents", []):
-                    content_matches.append({"content": matched.get("content", ""), "matched_by": matched.get("matched_by", ""), "chapter": matched.get("chapter_num", 0), "score": 1.0})
+                    content_matches.append({
+                        "content": matched.get("content", ""), 
+                        "matched_by": matched.get("matched_by", ""), 
+                        "chapter": matched.get("chapter_num", 0), 
+                        "score": 1.0
+                    })
                     if matched.get("matched_by"):
                         all_matched_topics.add(matched.get("matched_by"))
                     if matched.get("chapter_num"):
@@ -455,9 +745,15 @@ Rispondi SOLO con JSON valido:
                     content_matches.append({"content": missing, "matched_by": None, "score": 0})
                 covered = len([c for c in content_matches if c.get("matched_by")])
                 modules_analysis.append({
-                    "module_id": module_id, "module_name": module_name, "coverage_percentage": round(coverage_pct, 1),
-                    "contents_covered": covered, "contents_total": len(core_contents), "content_matches": content_matches,
-                    "chapters_involved": list(set(chapters_involved)), "status": self._coverage_to_status(coverage_pct), "description": ""
+                    "module_id": module_id, 
+                    "module_name": module_name, 
+                    "coverage_percentage": round(coverage_pct, 1),
+                    "contents_covered": covered, 
+                    "contents_total": len(core_contents), 
+                    "content_matches": content_matches,
+                    "chapters_involved": list(set(chapters_involved)), 
+                    "status": self._coverage_to_status(coverage_pct), 
+                    "description": ""
                 })
         else:
             method_used = "fallback"
@@ -476,7 +772,14 @@ Rispondi SOLO con JSON valido:
                             best_score = score
                             best_match = topic
                     if best_match:
-                        content_matches.append({"content": content, "matched_by": best_match["text"], "type": best_match["type"], "chapter": best_match["chapter_num"], "section": best_match["section_num"], "score": round(best_score, 2)})
+                        content_matches.append({
+                            "content": content, 
+                            "matched_by": best_match["text"], 
+                            "type": best_match["type"], 
+                            "chapter": best_match["chapter_num"], 
+                            "section": best_match["section_num"], 
+                            "score": round(best_score, 2)
+                        })
                         all_matched_topics.add(best_match["text"])
                         matched_topics_for_module.append(best_match)
                     else:
@@ -485,9 +788,15 @@ Rispondi SOLO con JSON valido:
                 coverage_pct = (covered / len(core_contents) * 100) if core_contents else 0
                 chapters_involved = list(set(t["chapter_num"] for t in matched_topics_for_module))
                 modules_analysis.append({
-                    "module_id": module_id, "module_name": module_name, "coverage_percentage": round(coverage_pct, 1),
-                    "contents_covered": covered, "contents_total": len(core_contents), "content_matches": content_matches,
-                    "chapters_involved": chapters_involved, "status": self._coverage_to_status(coverage_pct), "description": ""
+                    "module_id": module_id, 
+                    "module_name": module_name, 
+                    "coverage_percentage": round(coverage_pct, 1),
+                    "contents_covered": covered, 
+                    "contents_total": len(core_contents), 
+                    "content_matches": content_matches,
+                    "chapters_involved": chapters_involved, 
+                    "status": self._coverage_to_status(coverage_pct), 
+                    "description": ""
                 })
         
         if modules_analysis:
@@ -504,7 +813,11 @@ Rispondi SOLO con JSON valido:
         uncovered_chapters = []
         for topic in manual_topics:
             if topic["type"] == "chapter" and topic["text"] not in all_matched_topics:
-                chapter_sections_matched = any(t["text"] in all_matched_topics for t in manual_topics if t["type"] == "section" and t["chapter_num"] == topic["chapter_num"])
+                chapter_sections_matched = any(
+                    t["text"] in all_matched_topics 
+                    for t in manual_topics 
+                    if t["type"] == "section" and t["chapter_num"] == topic["chapter_num"]
+                )
                 if not chapter_sections_matched:
                     uncovered_chapters.append({"chapter_num": topic["chapter_num"], "title": topic["text"]})
         
@@ -518,11 +831,22 @@ Rispondi SOLO con JSON valido:
                 "structure_label": self._get_structure_label(manual),
                 "n_sections": sum(len(ch.get("sections", [])) for ch in manual.get("chapters", []))
             },
-            "framework_info": {"name": ideal_framework.get("framework", {}).get("name", "N/D"), "n_modules": len(modules), "total_contents": sum(len(m.get("core_contents", [])) for m in modules)},
-            "overall_coverage": round(overall_coverage, 1), "judgment": self._coverage_to_judgment(overall_coverage),
-            "recommendation": self._get_recommendation(overall_coverage, "ideal"), "modules_analysis": modules_analysis,
-            "uncovered_chapters": uncovered_chapters, "gaps": {"missing_in_manual": missing_contents, "extra_in_manual": uncovered_chapters},
-            "method": method_used, "summary": "", "narrative_generated": False, "analysis_date": datetime.now().isoformat()
+            "framework_info": {
+                "name": ideal_framework.get("framework", {}).get("name", "N/D"), 
+                "n_modules": len(modules), 
+                "total_contents": sum(len(m.get("core_contents", [])) for m in modules)
+            },
+            "overall_coverage": round(overall_coverage, 1), 
+            "judgment": self._coverage_to_judgment(overall_coverage),
+            "recommendation": self._get_recommendation(overall_coverage, "ideal"), 
+            "modules_analysis": modules_analysis,
+            "uncovered_chapters": uncovered_chapters, 
+            "gaps": {"missing_in_manual": missing_contents, "extra_in_manual": uncovered_chapters},
+            "method": method_used, 
+            "cache_used": (method_used == "llm" and not force_refresh),
+            "summary": "", 
+            "narrative_generated": False, 
+            "analysis_date": datetime.now().isoformat()
         }
         
         if self.use_llm and method_used == "llm":
@@ -558,9 +882,22 @@ Rispondi SOLO con JSON valido:
                             else:
                                 coverage = meta.get("coverage", 0)
                                 n_syllabus = meta.get("n_syllabus", 0)
-                            analyses.append({"id": d.name, "name": meta.get("name", d.name), "materia": meta.get("materia", "N/D"), "classi": meta.get("classi", []), "coverage": coverage, "n_syllabus": n_syllabus, "date": meta.get("created", "")[:10], "framework_path": fw_file, "path": d, "type": analysis_type, "type_label": type_label})
+                            analyses.append({
+                                "id": d.name, 
+                                "name": meta.get("name", d.name), 
+                                "materia": meta.get("materia", "N/D"), 
+                                "classi": meta.get("classi", []), 
+                                "coverage": coverage, 
+                                "n_syllabus": n_syllabus, 
+                                "date": meta.get("created", "")[:10], 
+                                "framework_path": fw_file, 
+                                "path": d, 
+                                "type": analysis_type, 
+                                "type_label": type_label
+                            })
                         except Exception as e:
                             print(f"Errore lettura {meta_file}: {e}")
+        
         current_dir = Path("data/analisi_corrente")
         fw_current = current_dir / "framework_aggiornato.json"
         if not fw_current.exists():
@@ -583,7 +920,19 @@ Rispondi SOLO con JSON valido:
                     else:
                         coverage = meta.get("coverage", 0)
                         n_syllabus = meta.get("n_syllabus", 0)
-                    analyses.insert(0, {"id": "current", "name": f"[CORRENTE] {meta.get('name', 'Analisi')}", "materia": meta.get("materia", "N/D"), "classi": meta.get("classi", []), "coverage": coverage, "n_syllabus": n_syllabus, "date": meta.get("created", "")[:10], "framework_path": fw_current, "path": current_dir, "type": analysis_type, "type_label": type_label})
+                    analyses.insert(0, {
+                        "id": "current", 
+                        "name": f"[CORRENTE] {meta.get('name', 'Analisi')}", 
+                        "materia": meta.get("materia", "N/D"), 
+                        "classi": meta.get("classi", []), 
+                        "coverage": coverage, 
+                        "n_syllabus": n_syllabus, 
+                        "date": meta.get("created", "")[:10], 
+                        "framework_path": fw_current, 
+                        "path": current_dir, 
+                        "type": analysis_type, 
+                        "type_label": type_label
+                    })
             except Exception as e:
                 print(f"Errore lettura analisi corrente: {e}")
         return analyses
@@ -596,7 +945,19 @@ Rispondi SOLO con JSON valido:
             print(f"Errore caricamento framework reale {path}: {e}")
             return None
 
-    def analyze_manual_vs_real(self, manual: Dict, real_framework: Dict, provider_id: str = "openai", model: str = "gpt-4o-mini") -> Dict:
+    def analyze_manual_vs_real(
+        self, 
+        manual: Dict, 
+        real_framework: Dict, 
+        provider_id: str = "openai", 
+        model: str = "gpt-4o-mini",
+        force_refresh: bool = False
+    ) -> Dict:
+        """
+        Analizza un manuale rispetto a un framework reale (generato dai syllabus).
+        
+        v2.2: Aggiunto force_refresh per bypassare la cache.
+        """
         manual_topics = self.extract_manual_topics(manual)
         modules = real_framework.get("modules", real_framework.get("syllabus_modules", []))
         framework_info = real_framework.get("framework", {})
@@ -607,7 +968,10 @@ Rispondi SOLO con JSON valido:
         
         llm_result = None
         if self.use_llm and modules:
-            llm_result = self._match_manual_to_framework_llm(manual, manual_topics, modules, subject, provider_id, model)
+            llm_result = self._match_manual_to_framework_llm(
+                manual, manual_topics, modules, subject, 
+                provider_id, model, force_refresh
+            )
         method_used = "fallback"
         
         if llm_result and "modules_coverage" in llm_result:
@@ -622,12 +986,29 @@ Rispondi SOLO con JSON valido:
                 is_core = original_module.get("is_core", False)
                 content_matches = []
                 for matched in mod_cov.get("matched_contents", []):
-                    content_matches.append({"content": matched.get("content", ""), "matched_by": matched.get("matched_by", ""), "chapter": matched.get("chapter_num", 0), "score": 1.0})
+                    content_matches.append({
+                        "content": matched.get("content", ""), 
+                        "matched_by": matched.get("matched_by", ""), 
+                        "chapter": matched.get("chapter_num", 0), 
+                        "score": 1.0
+                    })
                 for missing in mod_cov.get("missing_contents", []):
                     content_matches.append({"content": missing, "matched_by": None, "score": 0})
                 covered = len([c for c in content_matches if c.get("matched_by")])
                 total = len(content_matches) if content_matches else len(original_module.get("core_contents", []))
-                modules_analysis.append({"module_id": module_id, "module_name": module_name, "manual_coverage": round(coverage_pct, 1), "real_avg_coverage": round(avg_coverage_real, 1), "coverage_by_class": coverage_by_class, "is_core": is_core, "contents_covered": covered, "contents_total": total, "content_matches": content_matches, "status": self._coverage_to_status(coverage_pct), "description": ""})
+                modules_analysis.append({
+                    "module_id": module_id, 
+                    "module_name": module_name, 
+                    "manual_coverage": round(coverage_pct, 1), 
+                    "real_avg_coverage": round(avg_coverage_real, 1), 
+                    "coverage_by_class": coverage_by_class, 
+                    "is_core": is_core, 
+                    "contents_covered": covered, 
+                    "contents_total": total, 
+                    "content_matches": content_matches, 
+                    "status": self._coverage_to_status(coverage_pct), 
+                    "description": ""
+                })
         else:
             method_used = "fallback"
             for module in modules:
@@ -653,7 +1034,12 @@ Rispondi SOLO con JSON valido:
                             best_score = score
                             best_match = topic
                     if best_match:
-                        content_matches.append({"content": content, "matched_by": best_match["text"], "chapter": best_match["chapter_num"], "score": round(best_score, 2)})
+                        content_matches.append({
+                            "content": content, 
+                            "matched_by": best_match["text"], 
+                            "chapter": best_match["chapter_num"], 
+                            "score": round(best_score, 2)
+                        })
                         matched_count += 1
                     else:
                         content_matches.append({"content": content, "matched_by": None, "score": 0})
@@ -667,7 +1053,23 @@ Rispondi SOLO con JSON valido:
                 core_coverage = (matched_count / len(core_contents) * 100) if core_contents else 0
                 concept_coverage = (concepts_matched / min(len(all_real_concepts), 15) * 100) if all_real_concepts else 0
                 combined_coverage = (core_coverage * 0.6 + concept_coverage * 0.4) if all_real_concepts else core_coverage
-                modules_analysis.append({"module_id": module_id, "module_name": module_name, "manual_coverage": round(combined_coverage, 1), "core_coverage": round(core_coverage, 1), "concept_coverage": round(concept_coverage, 1), "real_avg_coverage": round(avg_coverage_real, 1), "coverage_by_class": coverage_by_class, "is_core": is_core, "contents_covered": matched_count, "contents_total": len(core_contents), "concepts_matched": concepts_matched, "concepts_checked": min(len(all_real_concepts), 15), "content_matches": content_matches, "status": self._coverage_to_status(combined_coverage), "description": ""})
+                modules_analysis.append({
+                    "module_id": module_id, 
+                    "module_name": module_name, 
+                    "manual_coverage": round(combined_coverage, 1), 
+                    "core_coverage": round(core_coverage, 1), 
+                    "concept_coverage": round(concept_coverage, 1), 
+                    "real_avg_coverage": round(avg_coverage_real, 1), 
+                    "coverage_by_class": coverage_by_class, 
+                    "is_core": is_core, 
+                    "contents_covered": matched_count, 
+                    "contents_total": len(core_contents), 
+                    "concepts_matched": concepts_matched, 
+                    "concepts_checked": min(len(all_real_concepts), 15), 
+                    "content_matches": content_matches, 
+                    "status": self._coverage_to_status(combined_coverage), 
+                    "description": ""
+                })
         
         if modules_analysis:
             overall_coverage = sum(m["manual_coverage"] for m in modules_analysis) / len(modules_analysis)
@@ -681,7 +1083,11 @@ Rispondi SOLO con JSON valido:
         for m in modules_analysis:
             for cm in m.get("content_matches", []):
                 if not cm.get("matched_by"):
-                    missing_contents.append({"content": cm["content"], "module": m["module_name"], "is_core_module": m.get("is_core", False)})
+                    missing_contents.append({
+                        "content": cm["content"], 
+                        "module": m["module_name"], 
+                        "is_core_module": m.get("is_core", False)
+                    })
         
         result = {
             "manual_info": {
@@ -693,27 +1099,59 @@ Rispondi SOLO con JSON valido:
                 "structure_label": self._get_structure_label(manual),
                 "n_sections": sum(len(ch.get("sections", [])) for ch in manual.get("chapters", []))
             },
-            "real_framework_info": {"name": framework_info.get("name", "N/D"), "type": "multiclass" if is_multiclass else "single", "classes_analyzed": classes_analyzed, "n_modules": len(modules), "n_core_modules": len([m for m in modules if m.get("is_core", False)])},
-            "overall_coverage": round(overall_coverage, 1), "core_modules_coverage": round(core_coverage, 1),
-            "judgment": self._coverage_to_judgment(overall_coverage), "recommendation": self._get_recommendation(overall_coverage, "real"),
-            "modules_analysis": modules_analysis, "gaps": {"missing_in_manual": missing_contents, "priority_gaps": [g for g in missing_contents if g.get("is_core_module", False)]},
-            "method": method_used, "summary": "", "narrative_generated": False, "analysis_date": datetime.now().isoformat()
+            "real_framework_info": {
+                "name": framework_info.get("name", "N/D"), 
+                "type": "multiclass" if is_multiclass else "single", 
+                "classes_analyzed": classes_analyzed, 
+                "n_modules": len(modules), 
+                "n_core_modules": len([m for m in modules if m.get("is_core", False)])
+            },
+            "overall_coverage": round(overall_coverage, 1), 
+            "core_modules_coverage": round(core_coverage, 1),
+            "judgment": self._coverage_to_judgment(overall_coverage), 
+            "recommendation": self._get_recommendation(overall_coverage, "real"),
+            "modules_analysis": modules_analysis, 
+            "gaps": {
+                "missing_in_manual": missing_contents, 
+                "priority_gaps": [g for g in missing_contents if g.get("is_core_module", False)]
+            },
+            "method": method_used, 
+            "cache_used": (method_used == "llm" and not force_refresh),
+            "summary": "", 
+            "narrative_generated": False, 
+            "analysis_date": datetime.now().isoformat()
         }
         
         if self.use_llm and method_used == "llm":
             result = self._generate_narrative_descriptions(result, manual, subject, provider_id, model)
         return result
-
-    def compare_manuals(self, manuals: List[Dict], reference_framework: Dict = None, framework_type: str = "ideal", provider_id: str = "openai", model: str = "gpt-4o-mini") -> Dict:
+    def compare_manuals(
+        self, 
+        manuals: List[Dict], 
+        reference_framework: Dict = None, 
+        framework_type: str = "ideal", 
+        provider_id: str = "openai", 
+        model: str = "gpt-4o-mini",
+        force_refresh: bool = False
+    ) -> Dict:
+        """
+        Confronta più manuali rispetto a un framework di riferimento.
+        
+        v2.2: Aggiunto force_refresh per bypassare la cache.
+        """
         if not manuals:
             return {"error": "Nessun manuale da confrontare"}
         comparisons = []
         for manual in manuals:
             if reference_framework:
                 if framework_type == "ideal":
-                    analysis = self.analyze_manual_vs_ideal(manual, reference_framework, provider_id, model)
+                    analysis = self.analyze_manual_vs_ideal(
+                        manual, reference_framework, provider_id, model, force_refresh
+                    )
                 else:
-                    analysis = self.analyze_manual_vs_real(manual, reference_framework, provider_id, model)
+                    analysis = self.analyze_manual_vs_real(
+                        manual, reference_framework, provider_id, model, force_refresh
+                    )
             else:
                 analysis = self._analyze_manual_structure(manual)
             comparisons.append({
@@ -733,23 +1171,45 @@ Rispondi SOLO con JSON valido:
         if reference_framework:
             comparisons.sort(key=lambda x: x.get("weighted_coverage") or x.get("coverage") or 0, reverse=True)
         modules_comparison = self._build_modules_comparison(comparisons, reference_framework)
-        return {"n_manuals": len(manuals), "framework_type": framework_type if reference_framework else "none", "framework_name": reference_framework.get("framework", {}).get("name", "N/D") if reference_framework else None, "ranking": comparisons, "modules_comparison": modules_comparison, "best_manual": comparisons[0] if comparisons else None, "comparison_date": datetime.now().isoformat()}
+        return {
+            "n_manuals": len(manuals), 
+            "framework_type": framework_type if reference_framework else "none", 
+            "framework_name": reference_framework.get("framework", {}).get("name", "N/D") if reference_framework else None, 
+            "ranking": comparisons, 
+            "modules_comparison": modules_comparison, 
+            "best_manual": comparisons[0] if comparisons else None, 
+            "comparison_date": datetime.now().isoformat()
+        }
     
     def _build_modules_comparison(self, comparisons: List[Dict], reference_framework: Dict) -> List[Dict]:
         if not reference_framework or not comparisons:
             return []
-        modules = reference_framework.get("syllabus_modules", [])
+        modules = reference_framework.get("syllabus_modules", reference_framework.get("modules", []))
         result = []
         for module in modules:
             module_name = module.get("name", "")
             module_id = module.get("id", 0)
             manual_scores = []
             for comp in comparisons:
-                mod_analysis = next((m for m in comp.get("modules_analysis", []) if m.get("module_id") == module_id), None)
+                mod_analysis = next(
+                    (m for m in comp.get("modules_analysis", []) if m.get("module_id") == module_id), 
+                    None
+                )
                 if mod_analysis:
-                    manual_scores.append({"manual": comp["manual_title"], "publisher": comp["publisher"], "coverage": mod_analysis.get("coverage_percentage", mod_analysis.get("manual_coverage", 0)), "status": mod_analysis.get("status", "N/D")})
+                    manual_scores.append({
+                        "manual": comp["manual_title"], 
+                        "publisher": comp["publisher"], 
+                        "coverage": mod_analysis.get("coverage_percentage", mod_analysis.get("manual_coverage", 0)), 
+                        "status": mod_analysis.get("status", "N/D")
+                    })
             manual_scores.sort(key=lambda x: x["coverage"], reverse=True)
-            result.append({"module_id": module_id, "module_name": module_name, "manual_scores": manual_scores, "best_manual": manual_scores[0]["manual"] if manual_scores else None, "avg_coverage": sum(m["coverage"] for m in manual_scores) / len(manual_scores) if manual_scores else 0})
+            result.append({
+                "module_id": module_id, 
+                "module_name": module_name, 
+                "manual_scores": manual_scores, 
+                "best_manual": manual_scores[0]["manual"] if manual_scores else None, 
+                "avg_coverage": sum(m["coverage"] for m in manual_scores) / len(manual_scores) if manual_scores else 0
+            })
         return result
     
     def _analyze_manual_structure(self, manual: Dict) -> Dict:
@@ -766,7 +1226,14 @@ Rispondi SOLO con JSON valido:
             "structure": {
                 "n_chapters": self._count_real_chapters(manual), 
                 "n_sections": sum(len(ch.get("sections", [])) for ch in chapters), 
-                "chapters": [{"number": ch.get("number", 0), "title": ch.get("title", ""), "n_sections": len(ch.get("sections", []))} for ch in chapters]
+                "chapters": [
+                    {
+                        "number": ch.get("number", 0), 
+                        "title": ch.get("title", ""), 
+                        "n_sections": len(ch.get("sections", []))
+                    } 
+                    for ch in chapters
+                ]
             }, 
             "overall_coverage": 0, 
             "judgment": "Analisi strutturale"
@@ -779,7 +1246,16 @@ Rispondi SOLO con JSON valido:
         safe_name = manual_name.replace(" ", "_").replace("/", "-")[:50]
         filename = f"{safe_name}_{manual_type}_{timestamp}.json"
         filepath = save_dir / filename
-        analysis_with_meta = {"metadata": {"manual_name": manual_name, "manual_type": manual_type, "materia": materia, "saved_at": datetime.now().isoformat(), "analysis_version": "2.1"}, "analysis": analysis}
+        analysis_with_meta = {
+            "metadata": {
+                "manual_name": manual_name, 
+                "manual_type": manual_type, 
+                "materia": materia, 
+                "saved_at": datetime.now().isoformat(), 
+                "analysis_version": "2.2"
+            }, 
+            "analysis": analysis
+        }
         with open(filepath, "w", encoding="utf-8") as f:
             json.dump(analysis_with_meta, f, indent=2, ensure_ascii=False)
         return filepath
@@ -801,7 +1277,16 @@ Rispondi SOLO con JSON valido:
                         data = json.load(f)
                     meta = data.get("metadata", {})
                     analysis = data.get("analysis", {})
-                    analyses.append({"path": json_file, "filename": json_file.name, "materia": meta.get("materia", materia_dir.name), "manual_name": meta.get("manual_name", json_file.stem), "manual_type": meta.get("manual_type", "unknown"), "saved_at": meta.get("saved_at", ""), "coverage": analysis.get("overall_coverage", 0), "judgment": analysis.get("judgment", "N/D")})
+                    analyses.append({
+                        "path": json_file, 
+                        "filename": json_file.name, 
+                        "materia": meta.get("materia", materia_dir.name), 
+                        "manual_name": meta.get("manual_name", json_file.stem), 
+                        "manual_type": meta.get("manual_type", "unknown"), 
+                        "saved_at": meta.get("saved_at", ""), 
+                        "coverage": analysis.get("overall_coverage", 0), 
+                        "judgment": analysis.get("judgment", "N/D")
+                    })
                 except Exception as e:
                     print(f"Errore lettura {json_file}: {e}")
         analyses.sort(key=lambda x: x.get("saved_at", ""), reverse=True)
@@ -815,882 +1300,611 @@ Rispondi SOLO con JSON valido:
             print(f"Errore caricamento analisi {path}: {e}")
             return None
 
+    # =========================================================================
+    # GENERAZIONE REPORT HTML
+    # =========================================================================
+
     def generate_single_analysis_report_html(self, analysis: Dict, framework_type: str = "ideal") -> str:
         manual_info = analysis.get("manual_info", {})
         modules_analysis = analysis.get("modules_analysis", [])
         gaps = analysis.get("gaps", {})
         coverage = analysis.get("overall_coverage", 0)
+        
         if coverage >= 70:
             coverage_color = "#4caf50"
         elif coverage >= 50:
             coverage_color = "#ff9800"
         else:
             coverage_color = "#f44336"
+        
         judgment = analysis.get("judgment", "N/D")
         judgment_class = self._judgment_to_class(judgment)
         
         # Usa structure_label se disponibile
         structure_info = manual_info.get("structure_label", f"{manual_info.get('n_chapters', 0)} Capitoli")
         
+        # Info cache
+        cache_info = ""
+        if analysis.get("cache_used"):
+            cache_info = '<span style="background:#e3f2fd;color:#1565c0;padding:2px 8px;border-radius:10px;font-size:0.8em;margin-left:10px;">📦 Da cache</span>'
+        
         modules_html = ""
         for mod in modules_analysis:
             mod_coverage = mod.get("coverage_percentage", mod.get("manual_coverage", 0))
-            if mod_coverage >= 70:
+            if mod_coverage >= 80:
                 mod_color = "#4caf50"
-                fill_class = "fill-high"
-                icon = "🟢"
+                mod_bg = "#e8f5e9"
+            elif mod_coverage >= 60:
+                mod_color = "#8bc34a"
+                mod_bg = "#f1f8e9"
             elif mod_coverage >= 40:
                 mod_color = "#ff9800"
-                fill_class = "fill-medium"
-                icon = "🟡"
+                mod_bg = "#fff3e0"
             else:
                 mod_color = "#f44336"
-                fill_class = "fill-low"
-                icon = "🔴"
+                mod_bg = "#ffebee"
+            
             description = mod.get("description", "")
-            if not description:
-                description = f"Copertura {mod.get('status', 'N/D')}"
-            modules_html += f"""
-            <div class="module-card" style="border-left: 4px solid {mod_color};">
+            desc_html = f'<p class="module-description">{description}</p>' if description else ""
+            
+            # Dettaglio contenuti
+            content_matches = mod.get("content_matches", [])
+            covered_contents = [c for c in content_matches if c.get("matched_by")]
+            missing_contents = [c for c in content_matches if not c.get("matched_by")]
+            
+            contents_html = ""
+            if covered_contents or missing_contents:
+                contents_html = '<div class="contents-detail">'
+                if covered_contents:
+                    contents_html += '<div class="covered"><strong>✓ Coperti:</strong> '
+                    contents_html += ", ".join([c.get("content", "") for c in covered_contents[:5]])
+                    if len(covered_contents) > 5:
+                        contents_html += f" (+{len(covered_contents)-5} altri)"
+                    contents_html += '</div>'
+                if missing_contents:
+                    contents_html += '<div class="missing"><strong>✗ Mancanti:</strong> '
+                    contents_html += ", ".join([c.get("content", "") for c in missing_contents[:3]])
+                    if len(missing_contents) > 3:
+                        contents_html += f" (+{len(missing_contents)-3} altri)"
+                    contents_html += '</div>'
+                contents_html += '</div>'
+            
+            # Badge per moduli core (framework reale)
+            core_badge = ""
+            if mod.get("is_core"):
+                core_badge = '<span class="core-badge">CORE</span>'
+            
+            modules_html += f'''
+            <div class="module-card" style="border-left: 4px solid {mod_color}; background: {mod_bg};">
                 <div class="module-header">
-                    <span class="module-title">{icon} {mod.get('module_name', 'N/D')}</span>
+                    <span class="module-name">{mod.get("module_name", "N/D")} {core_badge}</span>
                     <span class="module-coverage" style="color: {mod_color};">{mod_coverage:.0f}%</span>
                 </div>
-                <div class="coverage-bar"><div class="coverage-fill {fill_class}" style="width:{mod_coverage}%;"></div></div>
-                <div class="module-description"><em>{description}</em></div>
-            </div>"""
+                <div class="module-bar">
+                    <div class="module-bar-fill" style="width: {mod_coverage}%; background: {mod_color};"></div>
+                </div>
+                {desc_html}
+                {contents_html}
+            </div>
+            '''
         
-        gaps_html = ""
-        missing = gaps.get("missing_in_manual", [])[:15]
-        if missing:
-            gaps_items = "".join([f"<li><strong>{g.get('module', 'N/D')}</strong>: {g.get('content', 'N/D')}</li>" for g in missing])
-            remaining = len(gaps.get("missing_in_manual", [])) - 15
-            if remaining > 0:
-                gaps_items += f"<li><em>... e altri {remaining} contenuti</em></li>"
-            gaps_html = f"""<div class="gaps-section"><h3>⚠️ Gap Rilevati</h3><ul>{gaps_items}</ul></div>"""
-        
+        # Summary generato da LLM
         summary = analysis.get("summary", "")
-        summary_html = f"""<div class="summary-narrative"><h3>📝 Sintesi</h3><p>{summary}</p></div>""" if summary else ""
+        summary_html = ""
+        if summary:
+            summary_html = f'''
+            <div class="summary-box">
+                <h3>📋 Sintesi per il Promotore</h3>
+                <p>{summary}</p>
+            </div>
+            '''
         
-        html = f"""<!DOCTYPE html>
+        # Gap analysis
+        gaps_html = ""
+        missing_in_manual = gaps.get("missing_in_manual", [])
+        if missing_in_manual:
+            priority_gaps = gaps.get("priority_gaps", [])
+            gaps_html = '<div class="gaps-section"><h3>⚠️ Contenuti Mancanti</h3>'
+            if priority_gaps:
+                gaps_html += '<div class="priority-gaps"><strong>Gap prioritari (moduli CORE):</strong><ul>'
+                for g in priority_gaps[:5]:
+                    gaps_html += f'<li><strong>{g.get("module", "")}</strong>: {g.get("content", "")}</li>'
+                gaps_html += '</ul></div>'
+            gaps_html += '<details><summary>Tutti i gap ({} contenuti)</summary><ul>'.format(len(missing_in_manual))
+            for g in missing_in_manual[:15]:
+                gaps_html += f'<li>{g.get("module", "")}: {g.get("content", "")}</li>'
+            if len(missing_in_manual) > 15:
+                gaps_html += f'<li>... e altri {len(missing_in_manual)-15}</li>'
+            gaps_html += '</ul></details></div>'
+        
+        
+        # Framework info - FIXED v2.2.1
+        if "real_framework_info" in analysis:
+            framework_info = analysis.get("real_framework_info", {})
+            framework_type_label = "Framework Reale"
+            if framework_info.get("type") == "multiclass":
+                classes = framework_info.get("classes_analyzed", [])
+                classes_str = ", ".join(classes[:3])
+                if len(classes) > 3:
+                    classes_str += "..."
+                framework_name = f"{framework_info.get('name', 'N/D')} (Multiclasse: {classes_str})"
+            else:
+                framework_name = framework_info.get("name", "N/D")
+        else:
+            framework_info = analysis.get("framework_info", {})
+            framework_type_label = "Framework Ideale"
+            framework_name = framework_info.get("name", "N/D")
+        
+        n_modules = framework_info.get("n_modules", len(modules_analysis))
+        n_core = framework_info.get("n_core_modules", 0)
+
+
+        html = f'''<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Analisi Manuale - {manual_info.get('title', 'N/D')}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisi Manuale - {manual_info.get("title", "N/D")}</title>
     <style>
         * {{ box-sizing: border-box; }}
-        body {{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 20px 40px; background: #f5f7fa; color: #333; line-height: 1.6; }}
-        .container {{ max-width: 1200px; margin: 0 auto; background: white; padding: 30px 40px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.07); }}
-        h1 {{ color: #1a237e; border-bottom: 3px solid #3949ab; padding-bottom: 15px; }}
-        h2 {{ color: #283593; margin-top: 35px; border-left: 4px solid #3949ab; padding-left: 15px; }}
-        h3 {{ color: #3949ab; }}
-        .subtitle {{ color: #666; margin-bottom: 25px; }}
-        .method-badge {{ background: #e3f2fd; color: #1565c0; padding: 4px 12px; border-radius: 12px; font-size: 0.85em; }}
-        .summary-grid {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin: 25px 0; }}
-        .summary-card {{ background: #f8f9ff; padding: 20px; border-radius: 10px; text-align: center; border-top: 4px solid #3949ab; }}
-        .summary-card .value {{ font-size: 2.5em; font-weight: bold; color: #1a237e; }}
-        .summary-card .label {{ color: #666; font-size: 0.9em; }}
-        .summary-narrative {{ background: #e8eaf6; padding: 20px; border-radius: 10px; margin: 25px 0; }}
-        .summary-narrative h3 {{ margin-top: 0; }}
-        .module-card {{ background: #fafafa; padding: 20px; border-radius: 10px; margin: 15px 0; }}
-        .module-header {{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }}
-        .module-title {{ font-size: 1.1em; font-weight: 600; }}
-        .module-coverage {{ font-size: 1.4em; font-weight: bold; }}
-        .module-description {{ margin-top: 15px; padding-top: 15px; border-top: 1px solid #e0e0e0; color: #444; font-size: 0.95em; }}
-        .coverage-bar {{ width: 100%; height: 12px; background: #e0e0e0; border-radius: 6px; overflow: hidden; }}
-        .coverage-fill {{ height: 100%; border-radius: 6px; }}
-        .fill-high {{ background: linear-gradient(90deg, #4caf50, #8bc34a); }}
-        .fill-medium {{ background: linear-gradient(90deg, #ff9800, #ffc107); }}
-        .fill-low {{ background: linear-gradient(90deg, #f44336, #ff5722); }}
-        .judgment-badge {{ display: inline-block; padding: 8px 20px; border-radius: 20px; font-size: 1.1em; font-weight: 600; }}
+        body {{ 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 20px; 
+            background: #f5f5f5; 
+            color: #333;
+            line-height: 1.6;
+        }}
+        .container {{ 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            background: white; 
+            padding: 30px; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+        }}
+        h1 {{ 
+            color: #1a237e; 
+            border-bottom: 3px solid #3f51b5; 
+            padding-bottom: 15px; 
+            margin-bottom: 20px;
+        }}
+        h2 {{ 
+            color: #303f9f; 
+            margin-top: 30px;
+            border-left: 4px solid #3f51b5;
+            padding-left: 15px;
+        }}
+        h3 {{
+            color: #3f51b5;
+            margin-top: 20px;
+        }}
+        .header-info {{ 
+            background: #e8eaf6; 
+            padding: 20px; 
+            border-radius: 8px; 
+            margin-bottom: 25px; 
+        }}
+        .header-info p {{ margin: 5px 0; }}
+        .coverage-main {{ 
+            text-align: center; 
+            padding: 25px; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            border-radius: 12px; 
+            color: white; 
+            margin: 20px 0; 
+        }}
+        .coverage-main .number {{ 
+            font-size: 3.5em; 
+            font-weight: bold; 
+            display: block;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }}
+        .coverage-main .label {{ 
+            font-size: 1.1em; 
+            opacity: 0.9; 
+        }}
+        .judgment {{ 
+            display: inline-block; 
+            padding: 8px 20px; 
+            border-radius: 20px; 
+            font-weight: bold; 
+            margin-top: 10px;
+        }}
         .judgment-eccellente {{ background: #c8e6c9; color: #2e7d32; }}
         .judgment-buono {{ background: #dcedc8; color: #558b2f; }}
-        .judgment-sufficiente {{ background: #fff3e0; color: #e65100; }}
+        .judgment-sufficiente {{ background: #fff3e0; color: #ef6c00; }}
         .judgment-insufficiente {{ background: #ffcdd2; color: #c62828; }}
-        .gaps-section {{ background: #fff8e1; padding: 20px; border-radius: 10px; margin-top: 20px; }}
-        .gaps-section h3 {{ color: #e65100; margin-top: 0; }}
-        .gaps-section ul {{ margin: 10px 0; padding-left: 25px; }}
-        .recommendation {{ background: #e8f5e9; padding: 15px 20px; border-radius: 10px; margin-top: 20px; border-left: 4px solid #4caf50; }}
-        .footer {{ margin-top: 40px; padding-top: 20px; border-top: 1px solid #e0e0e0; color: #888; font-size: 0.85em; text-align: center; }}
+        
+        .summary-box {{
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-left: 4px solid #1976d2;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }}
+        .summary-box h3 {{
+            margin-top: 0;
+            color: #1565c0;
+        }}
+        .summary-box p {{
+            margin-bottom: 0;
+            font-size: 1.05em;
+        }}
+        
+        .module-card {{ 
+            padding: 15px 20px; 
+            border-radius: 8px; 
+            margin: 12px 0; 
+        }}
+        .module-header {{ 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 8px;
+        }}
+        .module-name {{ 
+            font-weight: 600; 
+            font-size: 1.05em;
+        }}
+        .module-coverage {{ 
+            font-weight: bold; 
+            font-size: 1.2em; 
+        }}
+        .module-bar {{ 
+            height: 8px; 
+            background: rgba(0,0,0,0.1); 
+            border-radius: 4px; 
+            overflow: hidden;
+            margin-bottom: 10px;
+        }}
+        .module-bar-fill {{ 
+            height: 100%; 
+            border-radius: 4px; 
+            transition: width 0.5s ease;
+        }}
+        .module-description {{
+            font-size: 0.95em;
+            color: #555;
+            margin: 10px 0 5px 0;
+            padding: 10px;
+            background: rgba(255,255,255,0.7);
+            border-radius: 6px;
+        }}
+        .contents-detail {{
+            font-size: 0.85em;
+            margin-top: 8px;
+            padding: 8px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 4px;
+        }}
+        .contents-detail .covered {{ color: #2e7d32; margin-bottom: 4px; }}
+        .contents-detail .missing {{ color: #c62828; }}
+        
+        .core-badge {{
+            background: #1565c0;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.75em;
+            margin-left: 8px;
+            vertical-align: middle;
+        }}
+        
+        .gaps-section {{
+            background: #fff8e1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 25px;
+            border-left: 4px solid #ffa000;
+        }}
+        .gaps-section h3 {{
+            margin-top: 0;
+            color: #e65100;
+        }}
+        .priority-gaps {{
+            background: #ffecb3;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }}
+        .priority-gaps ul {{
+            margin: 10px 0 0 0;
+            padding-left: 20px;
+        }}
+        details {{
+            margin-top: 10px;
+        }}
+        details summary {{
+            cursor: pointer;
+            color: #e65100;
+            font-weight: 500;
+        }}
+        details ul {{
+            margin-top: 10px;
+            padding-left: 20px;
+        }}
+        
+        .recommendation {{
+            background: #e8f5e9;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 4px solid #4caf50;
+            margin-top: 20px;
+        }}
+        .recommendation strong {{
+            color: #2e7d32;
+        }}
+        
+        .footer {{
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            color: #666;
+            font-size: 0.85em;
+            text-align: center;
+        }}
+        
+        @media print {{
+            body {{ background: white; padding: 0; }}
+            .container {{ box-shadow: none; padding: 20px; }}
+        }}
     </style>
 </head>
 <body>
-<div class="container">
-    <h1>📖 Analisi Manuale</h1>
-    <p class="subtitle"><strong>{manual_info.get('title', 'N/D')}</strong> — {manual_info.get('author', 'N/D')} ({manual_info.get('publisher', 'N/D')})<br>
-        Confronto vs Framework {'IDEALE' if framework_type == 'ideal' else 'REALE'} <span class="method-badge">Metodo: {analysis.get('method', 'N/D').upper()}</span></p>
-    <div class="summary-grid">
-        <div class="summary-card"><div class="value" style="color: {coverage_color};">{coverage:.1f}%</div><div class="label">Copertura Complessiva</div></div>
-        <div class="summary-card"><div class="value">{manual_info.get('n_chapters', 0)}</div><div class="label">{structure_info}</div></div>
-        <div class="summary-card"><div class="value">{manual_info.get('n_sections', 0)}</div><div class="label">Sezioni</div></div>
-        <div class="summary-card"><span class="judgment-badge {judgment_class}">{judgment}</span><div class="label" style="margin-top:10px;">Giudizio</div></div>
+    <div class="container">
+        <h1>📚 Analisi Manuale vs Framework {cache_info}</h1>
+        
+        <div class="header-info">
+            <p><strong>Manuale:</strong> {manual_info.get("title", "N/D")}</p>
+            <p><strong>Autore:</strong> {manual_info.get("author", "N/D")}</p>
+            <p><strong>Editore:</strong> {manual_info.get("publisher", "N/D")}</p>
+            <p><strong>Struttura:</strong> {structure_info}, {manual_info.get("n_sections", 0)} Sezioni</p>
+            <p><strong>Framework ({framework_type_label}):</strong> {framework_name} ({n_modules} moduli{f", {n_core} core" if n_core else ""})</p>
+
+        </div>
+        
+        <div class="coverage-main">
+            <span class="number">{coverage:.0f}%</span>
+            <span class="label">Copertura Complessiva</span>
+            <div class="judgment {judgment_class}">{judgment}</div>
+        </div>
+        
+        {summary_html}
+        
+        <div class="recommendation">
+            <strong>💡 Raccomandazione:</strong> {analysis.get("recommendation", "N/D")}
+        </div>
+        
+        <h2>📊 Analisi per Modulo</h2>
+        {modules_html}
+        
+        {gaps_html}
+        
+        <div class="footer">
+            <p><strong>CoreX PromoIntelligence v2.2</strong> | Analisi generata il {analysis.get("analysis_date", datetime.now().isoformat())[:10]}</p>
+            <p>Metodo: {analysis.get("method", "N/D").upper()}</p>
+        </div>
     </div>
-    {summary_html}
-    <div class="recommendation"><strong>📋 Raccomandazione:</strong> {analysis.get('recommendation', 'N/D')}</div>
-    <h2>📊 Analisi per Modulo</h2>
-    {modules_html}
-    {gaps_html}
-    <div class="footer">Report generato da <strong>CoreX - Manual Analyzer v2.1</strong> | Zanichelli<br>{datetime.now().strftime('%d/%m/%Y %H:%M:%S')}</div>
-</div>
 </body>
-</html>"""
+</html>'''
+        
         return html
 
     def generate_comparison_report_html(self, comparison: Dict) -> str:
-        """
-        Genera report HTML per il confronto tra manuali.
-        """
+        """Genera report HTML per confronto tra più manuali."""
+        
         ranking = comparison.get("ranking", [])
         modules_comparison = comparison.get("modules_comparison", [])
         framework_name = comparison.get("framework_name", "N/D")
         n_manuals = comparison.get("n_manuals", 0)
         
-        css = """
-        <style>
-            body { font-family: 'Segoe UI', sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; }
-            .header { background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 30px; border-radius: 10px; margin-bottom: 30px; }
-            .header h1 { margin: 0; }
-            .header p { margin: 5px 0 0 0; opacity: 0.9; }
-            .ranking-card { background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 20px; margin-bottom: 20px; }
-            .ranking-card.winner { border-left: 5px solid #4caf50; }
-            .ranking-position { font-size: 2em; font-weight: bold; color: #1e3c72; float: left; margin-right: 20px; width: 50px; text-align: center; }
-            .ranking-position.first { color: #ffc107; }
-            .ranking-details { overflow: hidden; }
-            .ranking-title { font-size: 1.3em; font-weight: bold; margin-bottom: 5px; }
-            .ranking-meta { color: #666; margin-bottom: 10px; }
-            .ranking-coverage { font-size: 1.5em; font-weight: bold; }
-            .coverage-high { color: #4caf50; }
-            .coverage-medium { color: #ff9800; }
-            .coverage-low { color: #f44336; }
-            .modules-table { width: 100%; border-collapse: collapse; margin-top: 30px; }
-            .modules-table th, .modules-table td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
-            .modules-table th { background: #f5f5f5; font-weight: 600; }
-            .modules-table tr:hover { background: #fafafa; }
-            .badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.85em; }
-            .badge-best { background: #e8f5e9; color: #2e7d32; }
-            .section-title { font-size: 1.5em; margin: 30px 0 20px 0; padding-bottom: 10px; border-bottom: 2px solid #1e3c72; }
-        </style>
-        """
-        
-        html = f"""<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Confronto Manuali - {framework_name}</title>
-    {css}
-</head>
-<body>
-    <div class="header">
-        <h1>📊 Confronto tra Manuali</h1>
-        <p>Framework di riferimento: {framework_name} | {n_manuals} manuali confrontati</p>
-        <p>Generato il {datetime.now().strftime('%d/%m/%Y %H:%M')}</p>
-    </div>
-"""
-        
-        html += '<h2 class="section-title">🏆 Classifica Manuali</h2>'
-        
+        # Ranking table
+        ranking_rows = ""
         for i, manual in enumerate(ranking):
-            position = i + 1
             coverage = manual.get("coverage", manual.get("weighted_coverage", 0))
-            
             if coverage >= 70:
-                cov_class = "coverage-high"
+                row_class = "excellent"
             elif coverage >= 50:
-                cov_class = "coverage-medium"
+                row_class = "good"
             else:
-                cov_class = "coverage-low"
+                row_class = "poor"
             
-            winner_class = "winner" if position == 1 else ""
-            pos_class = "first" if position == 1 else ""
+            medal = ""
+            if i == 0:
+                medal = "🥇"
+            elif i == 1:
+                medal = "🥈"
+            elif i == 2:
+                medal = "🥉"
             
-            # Usa structure_label se disponibile
-            structure_info = manual.get("structure_label", f"{manual.get('n_chapters', 0)} capitoli")
-            
-            html += f"""
-    <div class="ranking-card {winner_class}">
-        <div class="ranking-position {pos_class}">#{position}</div>
-        <div class="ranking-details">
-            <div class="ranking-title">{manual.get('manual_title', 'N/D')}</div>
-            <div class="ranking-meta">{manual.get('author', 'N/D')} • {manual.get('publisher', 'N/D')} • {structure_info}</div>
-            <div class="ranking-coverage {cov_class}">{coverage:.0f}% copertura</div>
-            <div style="margin-top: 5px; color: #666;">{manual.get('judgment', 'N/D')}</div>
-        </div>
-        <div style="clear: both;"></div>
-    </div>
-"""
-        
-        if modules_comparison:
-            html += '<h2 class="section-title">📋 Confronto per Modulo</h2>'
-            html += """
-    <table class="modules-table">
-        <thead>
-            <tr>
-                <th>Modulo</th>
-                <th>Miglior Manuale</th>
-                <th>Copertura Media</th>
-                <th>Dettaglio</th>
+            ranking_rows += f'''
+            <tr class="{row_class}">
+                <td>{medal} {i+1}</td>
+                <td><strong>{manual.get("manual_title", "N/D")}</strong></td>
+                <td>{manual.get("author", "N/D")}</td>
+                <td>{manual.get("publisher", "N/D")}</td>
+                <td class="coverage-cell">{coverage:.0f}%</td>
+                <td>{manual.get("judgment", "N/D")}</td>
             </tr>
-        </thead>
-        <tbody>
-"""
+            '''
+        
+        # Modules comparison table
+        modules_rows = ""
+        for mod in modules_comparison:
+            manual_scores = mod.get("manual_scores", [])
+            scores_html = ""
+            for score in manual_scores[:4]:
+                if score["coverage"] >= 70:
+                    score_class = "score-high"
+                elif score["coverage"] >= 50:
+                    score_class = "score-medium"
+                else:
+                    score_class = "score-low"
+                scores_html += f'<span class="score-badge {score_class}">{score["manual"][:15]}: {score["coverage"]:.0f}%</span> '
             
-            for mod in modules_comparison:
-                best = mod.get("best_manual", "N/D")
-                avg = mod.get("avg_coverage", 0)
-                
-                detail_parts = []
-                for score in mod.get("manual_scores", [])[:3]:
-                    detail_parts.append(f"{score['manual'][:20]}: {score['coverage']:.0f}%")
-                detail = " | ".join(detail_parts)
-                
-                html += f"""
+            modules_rows += f'''
             <tr>
-                <td><strong>{mod.get('module_name', 'N/D')}</strong></td>
-                <td><span class="badge badge-best">{best}</span></td>
-                <td>{avg:.0f}%</td>
-                <td style="font-size: 0.9em; color: #666;">{detail}</td>
+                <td><strong>{mod.get("module_name", "N/D")}</strong></td>
+                <td>{mod.get("avg_coverage", 0):.0f}%</td>
+                <td>{mod.get("best_manual", "N/D")}</td>
+                <td>{scores_html}</td>
             </tr>
-"""
-            
-            html += """
-        </tbody>
-    </table>
-"""
+            '''
         
-        html += """
-    <div style="margin-top: 40px; padding: 20px; background: #f5f5f5; border-radius: 10px; text-align: center; color: #666;">
-        <p>Report generato da <strong>CoreX - PromoIntelligence</strong></p>
-    </div>
-</body>
-</html>
-"""
-        
-        return html
-
-    def generate_commercial_comparison_report(self, comparison: Dict, zanichelli_manual: Dict = None, competitor_manual: Dict = None, provider_id: str = "openai", model: str = "gpt-4o-mini") -> str:
-        """
-        Genera report HTML COMMERCIALE per il confronto tra manuali.
-        v4.1 - Con gestione sicura delle chiavi mancanti.
-        """
-        ranking = comparison.get("ranking", [])
-        modules_comparison = comparison.get("modules_comparison", [])
-        framework_name = comparison.get("framework_name", "N/D")
-        
-        if len(ranking) < 2:
-            return "<div class='error'>Servono almeno 2 manuali per il confronto commerciale</div>"
-        
-        # =====================================================================
-        # STEP 1: Identifica Zanichelli e Competitor
-        # =====================================================================
-        zan_data = None
-        comp_data = None
-        
-        for r in ranking:
-            publisher_lower = r.get("publisher", "").lower()
-            if "zanichelli" in publisher_lower:
-                zan_data = r
-            elif comp_data is None:
-                comp_data = r
-        
-        if not zan_data:
-            zan_data = ranking[0]
-        if not comp_data:
-            comp_data = ranking[1] if len(ranking) > 1 else ranking[0]
-        
-        # =====================================================================
-        # STEP 2: Estrai struttura COMPLETA dei manuali (se disponibili)
-        # =====================================================================
-        def extract_chapter_details(manual_dict):
-            if not manual_dict:
-                return {}
-            chapters_index = {}
-            for ch in manual_dict.get("chapters", []):
-                ch_num = ch.get("number", 0)
-                if ch_num is None:
-                    continue
-                ch_title = ch.get("title", "")
-                sections_info = []
-                for sec in ch.get("sections", [])[:10]:
-                    sec_title = sec.get("title", "")
-                    if sec_title:
-                        sections_info.append(sec_title)
-                chapters_index[ch_num] = {
-                    "num": ch_num,
-                    "title": ch_title,
-                    "sections": sections_info
-                }
-            return chapters_index
-        
-        zan_ch_index = extract_chapter_details(zanichelli_manual)
-        comp_ch_index = extract_chapter_details(competitor_manual)
-        
-        # =====================================================================
-        # STEP 3: Costruisci analisi DETTAGLIATA per ogni modulo
-        # =====================================================================
-        zan_modules = zan_data.get("modules_analysis", [])
-        comp_modules = comp_data.get("modules_analysis", [])
-        
-        rich_module_analysis = []
-        
-        for mod_comp in modules_comparison:
-            module_id = mod_comp.get("module_id")
-            module_name = mod_comp.get("module_name", "")
-            
-            zan_mod = next((m for m in zan_modules if m.get("module_id") == module_id), {})
-            comp_mod = next((m for m in comp_modules if m.get("module_id") == module_id), {})
-            
-            zan_coverage = zan_mod.get("coverage_percentage", zan_mod.get("manual_coverage", 0))
-            comp_coverage = comp_mod.get("coverage_percentage", comp_mod.get("manual_coverage", 0))
-            
-            # Estrai contenuti Zanichelli
-            zan_contents = []
-            zan_missing = []
-            zan_chapter_nums = set()
-            
-            for cm in zan_mod.get("content_matches", []):
-                if cm.get("matched_by"):
-                    ch_num = cm.get("chapter", 0)
-                    ch_info = zan_ch_index.get(ch_num, {})
-                    zan_contents.append({
-                        "content": cm.get("content", ""),
-                        "found_in": cm.get("matched_by", ""),
-                        "chapter_num": ch_num,
-                        "chapter_title": ch_info.get("title", "")
-                    })
-                    if ch_num:
-                        zan_chapter_nums.add(ch_num)
-                else:
-                    content = cm.get("content", "")
-                    if content:
-                        zan_missing.append(content)
-            
-            # Estrai contenuti Competitor
-            comp_contents = []
-            comp_missing = []
-            comp_chapter_nums = set()
-            
-            for cm in comp_mod.get("content_matches", []):
-                if cm.get("matched_by"):
-                    ch_num = cm.get("chapter", 0)
-                    ch_info = comp_ch_index.get(ch_num, {})
-                    comp_contents.append({
-                        "content": cm.get("content", ""),
-                        "found_in": cm.get("matched_by", ""),
-                        "chapter_num": ch_num,
-                        "chapter_title": ch_info.get("title", "")
-                    })
-                    if ch_num:
-                        comp_chapter_nums.add(ch_num)
-                else:
-                    content = cm.get("content", "")
-                    if content:
-                        comp_missing.append(content)
-            
-            # Trova contenuti ESCLUSIVI
-            zan_content_texts = set(c["content"].lower() for c in zan_contents if c.get("content"))
-            comp_content_texts = set(c["content"].lower() for c in comp_contents if c.get("content"))
-            
-            only_zan = [c for c in zan_contents if c.get("content", "").lower() not in comp_content_texts]
-            only_comp = [c for c in comp_contents if c.get("content", "").lower() not in zan_content_texts]
-            
-            # Costruisci lista capitoli con titoli
-            zan_chapters_list = []
-            for ch_num in sorted(zan_chapter_nums):
-                ch_info = zan_ch_index.get(ch_num, {})
-                zan_chapters_list.append({
-                    "num": ch_num,
-                    "title": ch_info.get("title", "")
-                })
-            
-            comp_chapters_list = []
-            for ch_num in sorted(comp_chapter_nums):
-                ch_info = comp_ch_index.get(ch_num, {})
-                comp_chapters_list.append({
-                    "num": ch_num,
-                    "title": ch_info.get("title", "")
-                })
-            
-            diff = zan_coverage - comp_coverage
-            
-            rich_module_analysis.append({
-                "module_name": module_name,
-                "zan_coverage": zan_coverage,
-                "comp_coverage": comp_coverage,
-                "diff": diff,
-                "zan_contents": zan_contents[:8],
-                "comp_contents": comp_contents[:8],
-                "only_in_zan": only_zan[:5],
-                "only_in_comp": only_comp[:5],
-                "zan_missing": zan_missing[:4],
-                "comp_missing": comp_missing[:4],
-                "zan_chapters": zan_chapters_list[:5],
-                "comp_chapters": comp_chapters_list[:5],
-                "is_significant": abs(diff) >= 10 or len(only_zan) >= 2 or len(only_comp) >= 2
-            })
-        
-        # =====================================================================
-        # STEP 4: Seleziona moduli rilevanti per il brief
-        # =====================================================================
-        zan_wins = [m for m in rich_module_analysis if m["diff"] > 5 or len(m["only_in_zan"]) >= 2]
-        zan_wins.sort(key=lambda x: (len(x["only_in_zan"]), x["diff"]), reverse=True)
-        
-        zan_loses = [m for m in rich_module_analysis if m["diff"] < -5 or len(m["only_in_comp"]) >= 2]
-        zan_loses.sort(key=lambda x: (len(x["only_in_comp"]), -x["diff"]), reverse=True)
-        
-        zan_info = {
-            "title": zan_data.get("manual_title", "N/D"),
-            "author": zan_data.get("author", "N/D"),
-            "structure": zan_data.get("structure_label", ""),
-            "n_chapters": zan_data.get("n_chapters", 0)
-        }
-        
-        comp_info = {
-            "title": comp_data.get("manual_title", "N/D"),
-            "author": comp_data.get("author", "N/D"),
-            "publisher": comp_data.get("publisher", "N/D"),
-            "structure": comp_data.get("structure_label", ""),
-            "n_chapters": comp_data.get("n_chapters", 0)
-        }
-        
-        # =====================================================================
-        # STEP 5: Genera brief con LLM
-        # =====================================================================
-        executive_summary = ""
-        talking_points = []
-        obiezioni = []
-        target_recommendations = []
-        lacune = []
-        
-        if self.use_llm:
-            try:
-                from app.llm_provider import get_llm_client
-                
-                # Prepara dati per prompt - WINS
-                wins_for_prompt = []
-                for m in zan_wins[:5]:
-                    nostri_cap = []
-                    for c in m["zan_chapters"][:3]:
-                        cap_str = f"Cap. {c.get('num', '?')}"
-                        if c.get('title'):
-                            cap_str += f" '{c.get('title')}'"
-                        nostri_cap.append(cap_str)
-                    
-                    loro_cap = []
-                    for c in m["comp_chapters"][:3]:
-                        cap_str = f"Cap. {c.get('num', '?')}"
-                        if c.get('title'):
-                            cap_str += f" '{c.get('title')}'"
-                        loro_cap.append(cap_str)
-                    
-                    contenuti_esclusivi = []
-                    for c in m["only_in_zan"][:4]:
-                        desc = f"'{c.get('content', '')}'"
-                        if c.get('chapter_num'):
-                            desc += f" → Cap. {c.get('chapter_num')}"
-                        if c.get('chapter_title'):
-                            desc += f" '{c.get('chapter_title')}'"
-                        if c.get('found_in'):
-                            desc += f", sezione '{c.get('found_in')}'"
-                        contenuti_esclusivi.append(desc)
-                    
-                    wins_for_prompt.append({
-                        "modulo": m["module_name"],
-                        "nostri_capitoli": nostri_cap,
-                        "loro_capitoli": loro_cap,
-                        "contenuti_esclusivi_nostri": contenuti_esclusivi,
-                        "manca_al_competitor": m["comp_missing"][:3]
-                    })
-                
-                # Prepara dati per prompt - LOSES
-                loses_for_prompt = []
-                for m in zan_loses[:4]:
-                    nostri_cap = []
-                    for c in m["zan_chapters"][:3]:
-                        cap_str = f"Cap. {c.get('num', '?')}"
-                        if c.get('title'):
-                            cap_str += f" '{c.get('title')}'"
-                        nostri_cap.append(cap_str)
-                    
-                    loro_cap = []
-                    for c in m["comp_chapters"][:3]:
-                        cap_str = f"Cap. {c.get('num', '?')}"
-                        if c.get('title'):
-                            cap_str += f" '{c.get('title')}'"
-                        loro_cap.append(cap_str)
-                    
-                    contenuti_competitor = []
-                    for c in m["only_in_comp"][:4]:
-                        desc = f"'{c.get('content', '')}'"
-                        if c.get('chapter_num'):
-                            desc += f" → loro Cap. {c.get('chapter_num')}"
-                        if c.get('chapter_title'):
-                            desc += f" '{c.get('chapter_title')}'"
-                        contenuti_competitor.append(desc)
-                    
-                    loses_for_prompt.append({
-                        "modulo": m["module_name"],
-                        "nostri_capitoli": nostri_cap,
-                        "loro_capitoli": loro_cap,
-                        "contenuti_esclusivi_competitor": contenuti_competitor,
-                        "manca_a_noi": m["zan_missing"][:3]
-                    })
-                
-                prompt = f"""Sei un PROMOTORE EDITORIALE ESPERTO Zanichelli che prepara una visita a un docente universitario.
-
-HAI QUESTI DATI CONCRETI DA USARE:
-
-═══════════════════════════════════════════════════════════════════════
-NOSTRO MANUALE: "{zan_info['title']}" di {zan_info['author']}
-Struttura: {zan_info['structure']}
-═══════════════════════════════════════════════════════════════════════
-
-═══════════════════════════════════════════════════════════════════════
-COMPETITOR: "{comp_info['title']}" di {comp_info['author']} ({comp_info['publisher']})
-Struttura: {comp_info['structure']}
-═══════════════════════════════════════════════════════════════════════
-
-═══════════════════════════════════════════════════════════════════════
-MODULI DOVE SIAMO PIÙ FORTI (usa questi per i TALKING POINTS):
-{json.dumps(wins_for_prompt, indent=2, ensure_ascii=False)}
-═══════════════════════════════════════════════════════════════════════
-
-═══════════════════════════════════════════════════════════════════════
-MODULI DOVE IL COMPETITOR È PIÙ FORTE (usa questi per OBIEZIONI e LACUNE):
-{json.dumps(loses_for_prompt, indent=2, ensure_ascii=False)}
-═══════════════════════════════════════════════════════════════════════
-
-GENERA UN BRIEF COMMERCIALE seguendo RIGOROSAMENTE queste regole:
-
-1. **TALKING POINTS**: Frasi pronte da dire al docente. DEVI citare:
-   - Il TITOLO esatto del capitolo/sezione (es: "Nel nostro Cap. 6 'Equilibri ionici'...")
-   - Il CONTENUTO specifico (es: "...trattiamo la solubilità dei sali poco solubili")
-   - PERCHÉ è un vantaggio didattico
-
-2. **GESTIONE OBIEZIONI**: Il docente potrebbe dire "Il competitor ha X". Tu rispondi:
-   - Ammetti il punto se vero
-   - Contestualizza
-   - Offri alternativa con riferimento ai nostri capitoli
-
-3. **TARGET**: Per quali corsi è meglio il NOSTRO, per quali il COMPETITOR. Sii onesto.
-
-4. **LACUNE**: Cosa manca davvero al nostro manuale. Il promotore DEVE saperlo.
-
-DIVIETI ASSOLUTI:
-- NON usare percentuali
-- NON inventare contenuti - usa SOLO quelli che ti ho dato
-- NON usare frasi generiche
-
-FORMATO OUTPUT (JSON):
-{{
-    "executive_summary": "2-3 frasi: dove siamo forti, dove deboli, strategia",
-    "talking_points": [
-        {{
-            "titolo": "Titolo breve",
-            "frase_per_docente": "Frase ESATTA da dire con Cap. e contenuto specifico",
-            "contesto_uso": "Quando usare"
-        }}
-    ],
-    "obiezioni": [
-        {{
-            "cosa_dira_docente": "Obiezione probabile",
-            "tua_risposta": "Risposta con riferimenti specifici",
-            "nota_interna": "Info extra per il promotore"
-        }}
-    ],
-    "target": [
-        {{
-            "tipo_corso": "Es: Chimica per Biologi",
-            "consigliato": "nostro" oppure "competitor",
-            "motivazione": "Perché"
-        }}
-    ],
-    "nostre_lacune": [
-        {{
-            "cosa_manca": "Argomento",
-            "quanto_grave": "alta/media/bassa",
-            "come_gestire": "Cosa dire se il docente lo nota"
-        }}
-    ]
-}}"""
-
-                client = get_llm_client(provider_id)
-                response = client.chat.completions.create(
-                    model=model,
-                    messages=[
-                        {"role": "system", "content": "Sei un consulente commerciale editoriale esperto. Generi brief CONCRETI con riferimenti specifici a capitoli e contenuti. Mai frasi generiche. Rispondi SOLO con JSON valido."},
-                        {"role": "user", "content": prompt}
-                    ],
-                    temperature=0.0,
-                    max_tokens=3500
-                )
-                
-                response_text = response.choices[0].message.content.strip()
-                
-                if "```" in response_text:
-                    for part in response_text.split("```"):
-                        if part.strip().startswith("json"):
-                            response_text = part.strip()[4:].strip()
-                            break
-                        elif part.strip().startswith("{"):
-                            response_text = part.strip()
-                            break
-                
-                brief_data = json.loads(response_text)
-                executive_summary = brief_data.get("executive_summary", "")
-                talking_points = brief_data.get("talking_points", [])
-                obiezioni = brief_data.get("obiezioni", [])
-                target_recommendations = brief_data.get("target", [])
-                lacune = brief_data.get("nostre_lacune", [])
-                
-            except json.JSONDecodeError as e:
-                print(f"Errore parsing JSON: {e}")
-                executive_summary = "Errore nella generazione del brief."
-            except Exception as e:
-                print(f"Errore LLM: {e}")
-                executive_summary = f"Errore: {str(e)}"
-        
-        # =====================================================================
-        # STEP 6: Genera HTML
-        # =====================================================================
-        zan_cov = zan_data.get("coverage", 0)
-        comp_cov = comp_data.get("coverage", 0)
-        
-        if zan_cov > comp_cov + 5:
-            status_color = "#4caf50"
-            status_icon = "✓"
-            status_text = "VANTAGGIO"
-        elif comp_cov > zan_cov + 5:
-            status_color = "#f44336"
-            status_icon = "⚠"
-            status_text = "SVANTAGGIO"
-        else:
-            status_color = "#ff9800"
-            status_icon = "≈"
-            status_text = "EQUILIBRIO"
-        
-        css = """
-        <style>
-            * { box-sizing: border-box; }
-            body { font-family: 'Segoe UI', sans-serif; max-width: 1100px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
-            .header { background: linear-gradient(135deg, #1a237e, #3949ab); color: white; padding: 25px 30px; border-radius: 12px; margin-bottom: 20px; }
-            .header h1 { margin: 0 0 5px 0; font-size: 20px; }
-            .header-sub { opacity: 0.85; font-size: 13px; }
-            .status-bar { display: flex; align-items: center; gap: 12px; padding: 12px 18px; border-radius: 8px; margin-bottom: 18px; }
-            .status-icon { font-size: 28px; }
-            .status-label { font-weight: 600; }
-            .section { background: white; border-radius: 10px; padding: 22px; margin-bottom: 18px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
-            .section h2 { color: #1a237e; margin: 0 0 18px 0; font-size: 16px; padding-bottom: 10px; border-bottom: 2px solid #e8eaf6; }
-            .cards-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-            .card { padding: 18px; border-radius: 8px; }
-            .card.ours { background: #e8eaf6; border-left: 4px solid #3949ab; }
-            .card.theirs { background: #fafafa; border-left: 4px solid #9e9e9e; }
-            .card-label { font-size: 11px; text-transform: uppercase; font-weight: 600; color: #666; margin-bottom: 6px; }
-            .card-title { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
-            .card-meta { font-size: 13px; color: #666; }
-            .summary-box { background: #fffde7; padding: 18px; border-radius: 8px; border-left: 4px solid #fbc02d; line-height: 1.6; }
-            .tp-item { background: #f1f8e9; padding: 18px; border-radius: 8px; margin-bottom: 12px; border-left: 4px solid #7cb342; }
-            .tp-title { font-weight: 600; color: #33691e; margin-bottom: 10px; }
-            .tp-quote { background: white; padding: 12px 15px; border-radius: 6px; margin-bottom: 10px; line-height: 1.5; font-style: italic; }
-            .tp-context { font-size: 12px; color: #666; }
-            .obj-item { background: #fff3e0; padding: 18px; border-radius: 8px; margin-bottom: 12px; border-left: 4px solid #ff9800; }
-            .obj-q { background: #ffe0b2; padding: 10px 14px; border-radius: 6px; margin-bottom: 10px; }
-            .obj-a { background: white; padding: 10px 14px; border-radius: 6px; margin-bottom: 8px; }
-            .obj-note { font-size: 12px; color: #888; padding-left: 10px; border-left: 2px solid #ddd; }
-            .target-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
-            .target-item { padding: 16px; border-radius: 8px; }
-            .target-item.us { background: #e8f5e9; border: 2px solid #66bb6a; }
-            .target-item.them { background: #fce4ec; border: 2px solid #ec407a; }
-            .target-type { font-weight: 600; margin-bottom: 6px; }
-            .target-badge { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 8px; border-radius: 4px; margin-bottom: 6px; }
-            .target-item.us .target-badge { background: #c8e6c9; color: #2e7d32; }
-            .target-item.them .target-badge { background: #f8bbd9; color: #c2185b; }
-            .target-why { font-size: 13px; color: #555; }
-            .gap-item { padding: 14px 16px; border-radius: 8px; margin-bottom: 10px; }
-            .gap-item.alta { background: #ffebee; border-left: 4px solid #e53935; }
-            .gap-item.media { background: #fff8e1; border-left: 4px solid #fdd835; }
-            .gap-item.bassa { background: #e8f5e9; border-left: 4px solid #66bb6a; }
-            .gap-head { display: flex; justify-content: space-between; margin-bottom: 6px; }
-            .gap-name { font-weight: 600; }
-            .gap-sev { font-size: 11px; padding: 2px 6px; border-radius: 4px; }
-            .gap-item.alta .gap-sev { background: #ffcdd2; color: #c62828; }
-            .gap-item.media .gap-sev { background: #fff9c4; color: #f57f17; }
-            .gap-item.bassa .gap-sev { background: #c8e6c9; color: #2e7d32; }
-            .gap-how { font-size: 13px; color: #666; }
-            .mod-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-            .mod-table th { background: #3949ab; color: white; padding: 10px 8px; text-align: left; }
-            .mod-table td { padding: 9px 8px; border-bottom: 1px solid #eee; }
-            .mod-table tr:hover { background: #f5f5f5; }
-            .win { color: #2e7d32; font-weight: 600; }
-            .lose { color: #c62828; font-weight: 600; }
-            .tie { color: #757575; }
-            .footer { text-align: center; padding: 20px; color: #999; font-size: 12px; }
-        </style>
-        """
-        
-        html = f"""<!DOCTYPE html>
+        html = f'''<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Brief Commerciale</title>
-    {css}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confronto Manuali - {framework_name}</title>
+    <style>
+        * {{ box-sizing: border-box; }}
+        body {{ 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 20px; 
+            background: #f5f5f5; 
+            color: #333;
+        }}
+        .container {{ 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            background: white; 
+            padding: 30px; 
+            border-radius: 12px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+        }}
+        h1 {{ 
+            color: #1a237e; 
+            border-bottom: 3px solid #3f51b5; 
+            padding-bottom: 15px; 
+        }}
+        h2 {{ 
+            color: #303f9f; 
+            margin-top: 30px;
+        }}
+        
+        .summary-cards {{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }}
+        .summary-card {{
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }}
+        .summary-card .number {{ font-size: 2em; font-weight: bold; }}
+        .summary-card .label {{ opacity: 0.9; }}
+        
+        table {{ 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 20px 0; 
+        }}
+        th {{ 
+            background: #3f51b5; 
+            color: white; 
+            padding: 12px; 
+            text-align: left; 
+        }}
+        td {{ 
+            padding: 12px; 
+            border-bottom: 1px solid #e0e0e0; 
+        }}
+        tr:hover {{ background: #f5f5f5; }}
+        tr.excellent {{ background: #e8f5e9; }}
+        tr.good {{ background: #fff8e1; }}
+        tr.poor {{ background: #ffebee; }}
+        
+        .coverage-cell {{ 
+            font-weight: bold; 
+            font-size: 1.1em; 
+        }}
+        
+        .score-badge {{
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            margin: 2px;
+        }}
+        .score-high {{ background: #c8e6c9; color: #2e7d32; }}
+        .score-medium {{ background: #fff3e0; color: #e65100; }}
+        .score-low {{ background: #ffcdd2; color: #c62828; }}
+        
+        .footer {{
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            color: #666;
+            font-size: 0.85em;
+            text-align: center;
+        }}
+    </style>
 </head>
 <body>
-    <div class="header">
-        <h1>📋 Brief Commerciale</h1>
-        <div class="header-sub">{framework_name} • {datetime.now().strftime('%d/%m/%Y')}</div>
-    </div>
-    
-    <div class="status-bar" style="background: {status_color}20; border: 2px solid {status_color};">
-        <span class="status-icon" style="color: {status_color};">{status_icon}</span>
-        <span class="status-label" style="color: {status_color};">{status_text}: {zan_info['title']} vs {comp_info['title']}</span>
-    </div>
-    
-    <div class="section">
-        <h2>📚 Manuali a Confronto</h2>
-        <div class="cards-row">
-            <div class="card ours">
-                <div class="card-label">📘 Nostro</div>
-                <div class="card-title">{zan_info['title']}</div>
-                <div class="card-meta">{zan_info['author']} • {zan_info['structure']}</div>
+    <div class="container">
+        <h1>📊 Confronto Manuali</h1>
+        
+        <div class="summary-cards">
+            <div class="summary-card">
+                <span class="number">{n_manuals}</span>
+                <span class="label">Manuali confrontati</span>
             </div>
-            <div class="card theirs">
-                <div class="card-label">📕 Competitor</div>
-                <div class="card-title">{comp_info['title']}</div>
-                <div class="card-meta">{comp_info['author']} • {comp_info['publisher']}</div>
+            <div class="summary-card">
+                <span class="number">{len(modules_comparison)}</span>
+                <span class="label">Moduli analizzati</span>
+            </div>
+            <div class="summary-card">
+                <span class="number">{ranking[0].get("coverage", 0) if ranking else 0:.0f}%</span>
+                <span class="label">Miglior copertura</span>
             </div>
         </div>
-    </div>
-"""
         
-        if executive_summary:
-            html += f"""
-    <div class="section">
-        <h2>🎯 Strategia</h2>
-        <div class="summary-box">{executive_summary}</div>
-    </div>
-"""
+        <h2>🏆 Ranking Manuali</h2>
+        <p>Framework di riferimento: <strong>{framework_name}</strong></p>
         
-        if talking_points:
-            html += """
-    <div class="section">
-        <h2>💬 Cosa Dire al Docente</h2>
-"""
-            for tp in talking_points:
-                if isinstance(tp, dict):
-                    html += f"""
-        <div class="tp-item">
-            <div class="tp-title">{tp.get('titolo', '')}</div>
-            <div class="tp-quote">"{tp.get('frase_per_docente', '')}"</div>
-            <div class="tp-context">📍 {tp.get('contesto_uso', '')}</div>
-        </div>
-"""
-            html += "    </div>\n"
-        
-        if obiezioni:
-            html += """
-    <div class="section">
-        <h2>🛡️ Se il Docente Obietta</h2>
-"""
-            for ob in obiezioni:
-                if isinstance(ob, dict):
-                    html += f"""
-        <div class="obj-item">
-            <div class="obj-q">👤 "{ob.get('cosa_dira_docente', '')}"</div>
-            <div class="obj-a">💬 {ob.get('tua_risposta', '')}</div>
-            <div class="obj-note">📝 {ob.get('nota_interna', '')}</div>
-        </div>
-"""
-            html += "    </div>\n"
-        
-        if target_recommendations:
-            html += """
-    <div class="section">
-        <h2>🎯 Per Quali Corsi</h2>
-        <div class="target-row">
-"""
-            for t in target_recommendations:
-                if isinstance(t, dict):
-                    is_us = t.get('consigliato', '').lower() in ['nostro', 'zanichelli']
-                    cls = "us" if is_us else "them"
-                    badge = "→ NOSTRO" if is_us else "→ COMPETITOR"
-                    html += f"""
-            <div class="target-item {cls}">
-                <div class="target-type">{t.get('tipo_corso', '')}</div>
-                <div class="target-badge">{badge}</div>
-                <div class="target-why">{t.get('motivazione', '')}</div>
-            </div>
-"""
-            html += """
-        </div>
-    </div>
-"""
-        
-        if lacune:
-            html += """
-    <div class="section">
-        <h2>⚠️ Da Sapere Prima della Visita</h2>
-"""
-            for g in lacune:
-                if isinstance(g, dict):
-                    sev = g.get('quanto_grave', 'media').lower()
-                    sev_txt = {'alta': '🔴 Critica', 'media': '🟡 Media', 'bassa': '🟢 Minore'}.get(sev, '🟡 Media')
-                    html += f"""
-        <div class="gap-item {sev}">
-            <div class="gap-head">
-                <span class="gap-name">{g.get('cosa_manca', '')}</span>
-                <span class="gap-sev">{sev_txt}</span>
-            </div>
-            <div class="gap-how">💡 {g.get('come_gestire', '')}</div>
-        </div>
-"""
-            html += "    </div>\n"
-        
-        html += """
-    <div class="section">
-        <h2>📊 Riepilogo Moduli</h2>
-        <table class="mod-table">
-            <thead><tr><th>Modulo</th><th>Esito</th><th>Nostri Capitoli</th></tr></thead>
-            <tbody>
-"""
-        
-        for m in rich_module_analysis[:10]:
-            diff = m['diff']
-            if diff > 10:
-                cls = "win"
-                sym = "✓ Noi"
-            elif diff < -10:
-                cls = "lose"
-                sym = "✗ Loro"
-            else:
-                cls = "tie"
-                sym = "= Pari"
-            
-            caps = []
-            for c in m['zan_chapters'][:3]:
-                cap_str = f"Cap. {c.get('num', '?')}"
-                if c.get('title'):
-                    cap_str += f" ({c.get('title')[:20]}...)" if len(c.get('title', '')) > 20 else f" ({c.get('title')})"
-                caps.append(cap_str)
-            caps_str = ", ".join(caps) if caps else "-"
-            
-            html += f"""
+        <table>
+            <thead>
                 <tr>
-                    <td>{m['module_name']}</td>
-                    <td class="{cls}">{sym}</td>
-                    <td style="font-size:12px; color:#666;">{caps_str}</td>
+                    <th>#</th>
+                    <th>Manuale</th>
+                    <th>Autore</th>
+                    <th>Editore</th>
+                    <th>Copertura</th>
+                    <th>Giudizio</th>
                 </tr>
-"""
-        
-        html += """
+            </thead>
+            <tbody>
+                {ranking_rows}
             </tbody>
         </table>
-    </div>
-    
-    <div class="footer">
-        CoreX PromoIntelligence v4.1 • Zanichelli
+        
+        <h2>📋 Confronto per Modulo</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Modulo</th>
+                    <th>Media</th>
+                    <th>Migliore</th>
+                    <th>Dettaglio</th>
+                </tr>
+            </thead>
+            <tbody>
+                {modules_rows}
+            </tbody>
+        </table>
+        
+        <div class="footer">
+            <p><strong>CoreX PromoIntelligence v2.2</strong> | Confronto generato il {comparison.get("comparison_date", datetime.now().isoformat())[:10]}</p>
+        </div>
     </div>
 </body>
-</html>
-"""
+</html>'''
         
         return html
