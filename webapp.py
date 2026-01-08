@@ -3471,10 +3471,15 @@ with tab8:
                                 # Gap formativi
                                 gaps = comparison.get("analysis", {}).get("gap_formativi", {})
                                 if gaps:
-                                    col1, col2, col3 = st.columns(3)
-                                    col1.metric("Moduli Ideali", gaps.get("total_ideal", 0))
-                                    col2.metric("Coperti", gaps.get("covered_count", 0))
-                                    col3.metric("Gap", gaps.get("gaps_count", 0))
+                                   col1, col2, col3, col4 = st.columns(4)
+                                   col1.metric("Moduli Ideali", gaps.get("total_ideal", 0))
+                                   col2.metric("Coperti", gaps.get("fully_covered", 0))
+                                   col3.metric("Parziali", gaps.get("partially_covered", 0))
+                                   col4.metric("Non Coperti", gaps.get("not_covered", 0))
+    
+                                   # Barra copertura
+                                   coverage_pct = gaps.get("coverage_percentage", 0)
+                                   st.progress(coverage_pct / 100, text=f"Copertura: {coverage_pct:.0f}%")
                                 
                                 # Opportunità
                                 opps = comparison.get("analysis", {}).get("opportunita_commerciali", {})
