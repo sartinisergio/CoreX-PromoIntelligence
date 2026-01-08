@@ -1,13 +1,13 @@
 """
-CoreX - Framework Triple Comparator v2.0
+CoreX - Framework Triple Comparator v2.1
 Confronta Framework Ideale, Reale e Evidence-Based con algoritmo
-di Coverage Mapping avanzato per gestire granularità diverse.
+di Coverage Mapping basato su STEMMING AUTOMATICO.
 
-NOVITÀ v2.0:
-- Matching semantico basato su parole chiave (non stringhe esatte)
+NOVITÀ v2.1:
+- Stemming italiano automatico (funziona per qualsiasi materia)
+- Non richiede dizionario sinonimi manuale per varianti morfologiche
 - Supporto relazioni 1:N e N:1 tra moduli
 - Confronto sui nomi dei moduli oltre ai contenuti
-- Calcolo copertura reale basato su concetti effettivamente coperti
 """
 
 import json
@@ -16,6 +16,14 @@ from pathlib import Path
 from typing import Dict, List, Optional, Tuple, Set
 from datetime import datetime
 from collections import defaultdict
+
+# Stemmer italiano
+try:
+    from nltk.stem.snowball import ItalianStemmer
+    STEMMER_AVAILABLE = True
+except ImportError:
+    STEMMER_AVAILABLE = False
+    print("[WARN] NLTK non installato. Esegui: pip install nltk")
 
 
 class FrameworkComparator:
@@ -32,36 +40,161 @@ class FrameworkComparator:
         self.data_dir = Path("data")
         self.archivio_dir = Path("archivio")
         
-        # Keywords per matching semantico (espandibile)
-        self.keyword_synonyms = {
-            "atomico": ["atomica", "atomo", "atomi", "atomici"],
-            "struttura": ["strutture", "strutturale"],
-            "equilibrio": ["equilibri", "equilibrata"],
-            "reazione": ["reazioni", "reagenti", "reattivi"],
-            "legame": ["legami", "legante"],
-            "termodinamica": ["termodinamiche", "termodinamico", "termochimico", "termochimica"],
-            "cinetica": ["cinetiche", "cinetico", "velocità"],
-            "acido": ["acidi", "acidità", "acida"],
-            "base": ["basi", "basico", "basica", "basicità"],
-            "ossido": ["ossidi", "ossidazione", "ossidante"],
-            "riduzione": ["riducente", "redox", "ossidoriduzione"],
-            "soluzione": ["soluzioni", "soluto", "solvente"],
-            "gas": ["gassoso", "gassosi", "aeriforme"],
-            "elettro": ["elettrochimica", "elettrolitico", "elettrolisi"],
-            "quantico": ["quantici", "quantistica", "quantistico"],
-            "orbitale": ["orbitali"],
-            "periodico": ["periodica", "periodicità", "periodiche"],
-            "molare": ["mole", "moli", "molarità"],
-            "entalpia": ["entalpico", "entalpiche", "enthalpie"],
-            "entropia": ["entropico", "entropiche"],
-            "gibbs": ["energia libera"],
-            "colligativo": ["colligative", "colligativi"],
-            "stechiometria": ["stechiometrico", "stechiometrica", "stechiometrici"],
-            "isotopo": ["isotopi", "isotopica", "isotopico"],
+        # Inizializza stemmer italiano
+        if STEMMER_AVAILABLE:
+            self.stemmer = ItalianStemmer()
+        else:
+            self.stemmer = None
+        
+        # Sinonimi VERI (solo parole con radici completamente diverse)
+        # Questi sono universali, non specifici per materia
+        self.true_synonyms = {
+            # Acronimi e forme estese
+            "ph": ["acidita", "concentrazione idrogenioni"],
+            "vsepr": ["geometria molecolare", "forma molecolare"],
+            "iupac": ["nomenclatura"],
+            "redox": ["ossidoriduzione"],
+            "fem": ["forza elettromotrice"],
+            "uv": ["ultravioletto"],
+            "ir": ["infrarosso"],
+            "nmr": ["risonanza magnetica nucleare"],
+            "hplc": ["cromatografia liquida"],
+            "gc": ["gascromatografia"],
+            
+            # Sinonimi veri (parole diverse, stesso significato)
+            "velocita": ["rapidita", "rate"],
+            "calore": ["energia termica"],
+            "lavoro": ["energia meccanica"],
+            "forza": ["interazione"],
         }
         
+        # Costruisci mappa inversa dei sinonimi
+        self._build_synonym_map()
+    
+    def _build_synonym_map(self):
+        """Costruisce mappa bidirezionale dei sinonimi."""
+        self.synonym_map = {}
+        for key, synonyms in self.true_synonyms.items():
+            # Stem della chiave
+            key_stem = self._stem_word(key)
+            for syn in synonyms:
+                syn_stem = self._stem_word(syn)
+                # Mappa in entrambe le direzioni
+                self.synonym_map[syn_stem] = key_stem
+                self.synonym_map[key_stem] = key_stem  # chiave mappa a se stessa
+    
+    def _stem_word(self, word: str) -> str:
+        """Applica stemming a una singola parola."""
+        if self.stemmer:
+            return self.stemmer.stem(word.lower().strip())
+        return word.lower().strip()
+    
+    def _normalize_text(self, text: str) -> str:
+        """Normalizza il testo per il confronto."""
+        text = text.lower()
+        text = re.sub(r'[^\w\s]', ' ', text)
+        text = re.sub(r'\s+', ' ', text).strip()
+        return text
+    
+    def _extract_keywords(self, text: str) -> Set[str]:
+        """
+        Estrae parole chiave con STEMMING automatico.
+        Funziona per qualsiasi materia senza dizionario specifico.
+        """
+        normalized = self._normalize_text(text)
+        words = normalized.split()
+        
+        # Stopwords italiane comuni
+        stopwords = {
+            'di', 'a', 'da', 'in', 'con', 'su', 'per', 'tra', 'fra', 
+            'il', 'lo', 'la', 'i', 'gli', 'le', 'un', 'uno', 'una',
+            'e', 'o', 'ma', 'che', 'del', 'della', 'dei', 'degli', 'delle',
+            'al', 'alla', 'ai', 'agli', 'alle', 'dal', 'dalla', 'nel', 'nella',
+            'sul', 'sulla', 'sono', 'essere', 'come', 'anche', 'piu',
+            'molto', 'poco', 'tutto', 'tutti', 'ogni', 'quale', 'quali',
+            'suo', 'sua', 'suoi', 'sue', 'loro', 'questo', 'questa',
+            'questi', 'queste', 'quello', 'quella', 'quelli', 'quelle'
+        }
+        
+        # Filtra stopwords e parole troppo corte
+        words = [w for w in words if w not in stopwords and len(w) > 2]
+        
+        # Applica stemming
+        stems = set()
+        for word in words:
+            stem = self._stem_word(word)
+            
+            # Controlla se ha un sinonimo mappato
+            if stem in self.synonym_map:
+                stem = self.synonym_map[stem]
+            
+            stems.add(stem)
+        
+        return stems
+    
+    def _keywords_from_contents(self, contents: List[str]) -> Set[str]:
+        """Estrae tutte le keywords da una lista di contenuti."""
+        all_keywords = set()
+        for content in contents:
+            all_keywords.update(self._extract_keywords(content))
+        return all_keywords
+    
+    def _calculate_keyword_overlap(self, keywords1: Set[str], keywords2: Set[str]) -> Tuple[float, Set[str]]:
+        """
+        Calcola la sovrapposizione tra due set di keywords.
+        Ritorna (percentuale, keywords in comune).
+        """
+        if not keywords1 or not keywords2:
+            return 0.0, set()
+        
+        intersection = keywords1 & keywords2
+        # Usiamo la media delle due percentuali per bilanciare
+        pct1 = len(intersection) / len(keywords1) * 100 if keywords1 else 0
+        pct2 = len(intersection) / len(keywords2) * 100 if keywords2 else 0
+        
+        return (pct1 + pct2) / 2, intersection
+    
+    def _calculate_semantic_similarity(
+        self, 
+        module1: Dict, 
+        module2: Dict
+    ) -> Dict:
+        """
+        Calcola similarità semantica tra due moduli considerando:
+        1. Nome del modulo
+        2. Contenuti
+        
+        Returns:
+            Dict con dettagli del matching
+        """
+        # Keywords dal nome
+        name1_kw = self._extract_keywords(module1.get("name", ""))
+        name2_kw = self._extract_keywords(module2.get("name", ""))
+        
+        # Keywords dai contenuti
+        contents1_kw = self._keywords_from_contents(module1.get("contents", []))
+        contents2_kw = self._keywords_from_contents(module2.get("contents", []))
+        
+        # Calcola overlap nomi
+        name_overlap, name_common = self._calculate_keyword_overlap(name1_kw, name2_kw)
+        
+        # Calcola overlap contenuti
+        content_overlap, content_common = self._calculate_keyword_overlap(contents1_kw, contents2_kw)
+        
+        # Score combinato (nome pesa 30%, contenuti 70%)
+        combined_score = name_overlap * 0.3 + content_overlap * 0.7
+        
+        return {
+            "combined_score": round(combined_score, 1),
+            "name_similarity": round(name_overlap, 1),
+            "content_similarity": round(content_overlap, 1),
+            "common_keywords": list(name_common | content_common)[:15],
+            "name_keywords_matched": list(name_common),
+            "content_keywords_matched": list(content_common)[:10]
+        }
+    
     # =========================================================================
-    # METODI DI CARICAMENTO (invariati)
+    # METODI DI CARICAMENTO
     # =========================================================================
     
     def load_ideal_framework(self) -> Optional[Dict]:
@@ -172,108 +305,7 @@ class FrameworkComparator:
         return None
     
     # =========================================================================
-    # NUOVO: ALGORITMO DI MATCHING SEMANTICO
-    # =========================================================================
-    
-    def _normalize_text(self, text: str) -> str:
-        """Normalizza il testo per il confronto."""
-        text = text.lower()
-        text = re.sub(r'[^\w\s]', ' ', text)
-        text = re.sub(r'\s+', ' ', text).strip()
-        return text
-    
-    def _extract_keywords(self, text: str) -> Set[str]:
-        """Estrae parole chiave significative da un testo."""
-        normalized = self._normalize_text(text)
-        words = set(normalized.split())
-        
-        # Rimuovi stopwords italiane comuni
-        stopwords = {
-            'di', 'a', 'da', 'in', 'con', 'su', 'per', 'tra', 'fra', 
-            'il', 'lo', 'la', 'i', 'gli', 'le', 'un', 'uno', 'una',
-            'e', 'o', 'ma', 'che', 'del', 'della', 'dei', 'degli', 'delle',
-            'al', 'alla', 'ai', 'agli', 'alle', 'dal', 'dalla', 'nel', 'nella',
-            'sul', 'sulla', 'è', 'sono', 'essere', 'come', 'anche', 'più',
-            'molto', 'poco', 'tutto', 'tutti', 'ogni', 'quale', 'quali'
-        }
-        words = words - stopwords
-        
-        # Espandi con sinonimi
-        expanded = set()
-        for word in words:
-            expanded.add(word)
-            # Cerca il termine base nei sinonimi
-            for base, synonyms in self.keyword_synonyms.items():
-                if word == base or word in synonyms:
-                    expanded.add(base)
-                    expanded.update(synonyms)
-                    break
-        
-        return expanded
-    
-    def _keywords_from_contents(self, contents: List[str]) -> Set[str]:
-        """Estrae tutte le keywords da una lista di contenuti."""
-        all_keywords = set()
-        for content in contents:
-            all_keywords.update(self._extract_keywords(content))
-        return all_keywords
-    
-    def _calculate_keyword_overlap(self, keywords1: Set[str], keywords2: Set[str]) -> Tuple[float, Set[str]]:
-        """
-        Calcola la sovrapposizione tra due set di keywords.
-        Ritorna (percentuale, keywords in comune).
-        """
-        if not keywords1 or not keywords2:
-            return 0.0, set()
-        
-        intersection = keywords1 & keywords2
-        # Usiamo la media delle due percentuali per bilanciare
-        pct1 = len(intersection) / len(keywords1) * 100 if keywords1 else 0
-        pct2 = len(intersection) / len(keywords2) * 100 if keywords2 else 0
-        
-        return (pct1 + pct2) / 2, intersection
-    
-    def _calculate_semantic_similarity(
-        self, 
-        module1: Dict, 
-        module2: Dict
-    ) -> Dict:
-        """
-        Calcola similarità semantica tra due moduli considerando:
-        1. Nome del modulo
-        2. Contenuti
-        
-        Returns:
-            Dict con dettagli del matching
-        """
-        # Keywords dal nome
-        name1_kw = self._extract_keywords(module1.get("name", ""))
-        name2_kw = self._extract_keywords(module2.get("name", ""))
-        
-        # Keywords dai contenuti
-        contents1_kw = self._keywords_from_contents(module1.get("contents", []))
-        contents2_kw = self._keywords_from_contents(module2.get("contents", []))
-        
-        # Calcola overlap nomi
-        name_overlap, name_common = self._calculate_keyword_overlap(name1_kw, name2_kw)
-        
-        # Calcola overlap contenuti
-        content_overlap, content_common = self._calculate_keyword_overlap(contents1_kw, contents2_kw)
-        
-        # Score combinato (nome pesa 30%, contenuti 70%)
-        combined_score = name_overlap * 0.3 + content_overlap * 0.7
-        
-        return {
-            "combined_score": round(combined_score, 1),
-            "name_similarity": round(name_overlap, 1),
-            "content_similarity": round(content_overlap, 1),
-            "common_keywords": list(name_common | content_common)[:15],
-            "name_keywords_matched": list(name_common),
-            "content_keywords_matched": list(content_common)[:10]
-        }
-    
-    # =========================================================================
-    # NUOVO: COVERAGE MAPPING (relazioni 1:N e N:1)
+    # COVERAGE MAPPING (relazioni 1:N e N:1)
     # =========================================================================
     
     def _build_coverage_map(
@@ -285,21 +317,13 @@ class FrameworkComparator:
         """
         Costruisce una mappa di copertura tra moduli source e target.
         Gestisce relazioni 1:N (un source copre più target) e N:1 (più source coprono un target).
-        
-        Args:
-            source_modules: Moduli di riferimento (es. Ideale)
-            target_modules: Moduli da mappare (es. Evidence-Based)
-            threshold: Soglia minima di similarità per considerare un match
-            
-        Returns:
-            Dict con mapping dettagliato
         """
         coverage_map = {
-            "source_to_target": {},  # 1:N - un source quali target copre
-            "target_to_source": {},  # N:1 - un target da quali source è coperto
-            "uncovered_sources": [],  # Source senza match
-            "unmapped_targets": [],   # Target senza match (emergenti)
-            "matrix": []  # Matrice completa delle similarità
+            "source_to_target": {},
+            "target_to_source": {},
+            "uncovered_sources": [],
+            "unmapped_targets": [],
+            "matrix": []
         }
         
         # Calcola matrice di similarità completa
@@ -332,7 +356,6 @@ class FrameworkComparator:
                         "common_keywords": match["common_keywords"]
                     })
             
-            # Ordina per score decrescente
             matches.sort(key=lambda x: x["score"], reverse=True)
             
             if matches:
@@ -384,7 +407,7 @@ class FrameworkComparator:
         return coverage_map
     
     # =========================================================================
-    # METODI CONFRONTO AGGIORNATI
+    # METODI CONFRONTO
     # =========================================================================
     
     def compare(
@@ -404,6 +427,7 @@ class FrameworkComparator:
         result = {
             "materia": self.materia,
             "generated_at": datetime.now().isoformat(),
+            "version": "2.1-stemming",
             "frameworks_found": {
                 "ideal": ideal is not None,
                 "real": real is not None,
@@ -423,17 +447,15 @@ class FrameworkComparator:
             "evidence_based": len(eb_modules)
         }
         
-        # NUOVO: Coverage Map Ideale vs Evidence-Based
+        # Coverage Map Ideale vs Evidence-Based
         if ideal and evidence_based:
             coverage_map = self._build_coverage_map(ideal_modules, eb_modules, threshold=15.0)
             result["coverage_map_ideal_eb"] = coverage_map
             
-            # Analisi Gap Formativi (basata su coverage map)
             result["analysis"]["gap_formativi"] = self._analyze_gaps_from_coverage(
                 coverage_map, ideal_modules, eb_modules
             )
             
-            # Analisi Contenuti Emergenti (basata su coverage map)
             result["analysis"]["contenuti_emergenti"] = self._analyze_emergent_from_coverage(
                 coverage_map, eb_modules
             )
@@ -521,7 +543,6 @@ class FrameworkComparator:
         source_to_target = coverage_map.get("source_to_target", {})
         uncovered = coverage_map.get("uncovered_sources", [])
         
-        # Moduli coperti con dettagli
         covered = []
         partial_coverage = []
         
@@ -537,7 +558,6 @@ class FrameworkComparator:
                 "common_keywords": mapping["matches"][0]["common_keywords"] if mapping["matches"] else []
             }
             
-            # Trova la categoria del best match
             for eb in eb_modules:
                 if eb["name"] == mapping["best_match"]:
                     entry["eb_category"] = eb.get("category", "N/D")
@@ -548,7 +568,6 @@ class FrameworkComparator:
             else:
                 partial_coverage.append(entry)
         
-        # Calcola statistiche
         total = len(ideal_modules)
         fully_covered = len([c for c in covered if c["best_score"] >= 40])
         partially_covered = len(partial_coverage)
@@ -556,7 +575,6 @@ class FrameworkComparator:
         
         coverage_pct = (fully_covered / total * 100) if total > 0 else 0
         
-        # Formatta gap per severità
         gaps = []
         for gap in uncovered:
             gaps.append({
@@ -597,10 +615,8 @@ class FrameworkComparator:
         target_to_source = coverage_map.get("target_to_source", {})
         unmapped = coverage_map.get("unmapped_targets", [])
         
-        # Moduli mappati
         mapped = []
         for eb_name, mapping in target_to_source.items():
-            # Trova il modulo EB completo
             eb_mod = None
             for eb in eb_modules:
                 if eb["name"] == eb_name:
@@ -616,10 +632,8 @@ class FrameworkComparator:
                 "category": eb_mod.get("category", "N/D") if eb_mod else "N/D"
             })
         
-        # Moduli emergenti (non nel framework ideale)
         emergent = []
         for em in unmapped:
-            # Trova il modulo EB completo per più dettagli
             eb_mod = None
             for eb in eb_modules:
                 if eb["name"] == em["module"]:
@@ -648,9 +662,9 @@ class FrameworkComparator:
         }
     
     def _interpret_emergent_v2(self, module: Dict) -> str:
-        """Interpreta il significato di un modulo emergente (v2)."""
+        """Interpreta il significato di un modulo emergente."""
         if module.get("is_core"):
-            return "⚠️ ATTENZIONE: Tema insegnato universalmente ma ASSENTE nel framework ideale - LACUNA CRITICA nel framework Zanichelli"
+            return "⚠️ ATTENZIONE: Tema insegnato universalmente ma ASSENTE nel framework ideale - LACUNA CRITICA"
         elif module.get("is_transversal"):
             presence = module.get("presence_percentage", 0)
             return f"📊 Tema diffuso ({presence:.0f}% classi) - Candidato per inclusione nel framework ideale"
@@ -708,13 +722,13 @@ class FrameworkComparator:
     def _interpret_concordance(self, rate: float) -> str:
         """Interpreta il tasso di concordanza."""
         if rate >= 80:
-            return "✅ Ottima concordanza - il mapping sul framework ideale riflette accuratamente i contenuti reali"
+            return "✅ Ottima concordanza - il mapping riflette accuratamente i contenuti reali"
         elif rate >= 60:
-            return "👍 Buona concordanza - il mapping è generalmente affidabile con alcune differenze"
+            return "👍 Buona concordanza - il mapping è generalmente affidabile"
         elif rate >= 40:
-            return "⚠️ Concordanza moderata - ci sono differenze significative tra le due prospettive"
+            return "⚠️ Concordanza moderata - ci sono differenze significative"
         else:
-            return "❌ Bassa concordanza - le due analisi danno risultati molto diversi, rivedere il mapping"
+            return "❌ Bassa concordanza - le due analisi danno risultati molto diversi"
     
     def _analyze_ideal_coverage(self, ideal_modules: List[Dict], real_modules: List[Dict]) -> Dict:
         """Analizza quanto del framework ideale è coperto dal reale."""
@@ -761,7 +775,6 @@ class FrameworkComparator:
         opportunities = []
         
         if coverage_map:
-            # Gap formativi dalla coverage map
             for gap in coverage_map.get("uncovered_sources", []):
                 opportunities.append({
                     "type": "gap_formativo",
@@ -771,7 +784,6 @@ class FrameworkComparator:
                     "action": "Verificare se il modulo è obsoleto o se serve materiale didattico aggiuntivo"
                 })
             
-            # Contenuti emergenti CORE
             for em in coverage_map.get("unmapped_targets", []):
                 is_core = em.get("category", "").upper() == "CORE"
                 if is_core or em.get("presence", 0) >= 50:
@@ -784,7 +796,6 @@ class FrameworkComparator:
                         "action": "AZIONE PRIORITARIA: Valutare aggiunta al framework o creazione materiale supplementare"
                     })
         
-        # Nicchie specifiche dagli EB
         for eb_mod in eb_modules:
             if eb_mod.get("is_specific") and eb_mod.get("presence_percentage", 0) >= 20:
                 distinctive = eb_mod.get("distinctive_for", [])
@@ -798,7 +809,6 @@ class FrameworkComparator:
                         "action": "Valutare materiale specifico per queste classi di laurea"
                     })
         
-        # Ordina per priorità
         priority_order = {"alta": 0, "media": 1, "bassa": 2}
         opportunities.sort(key=lambda x: priority_order.get(x.get("priority", "bassa"), 2))
         
@@ -819,7 +829,7 @@ class FrameworkComparator:
         real_modules: List[Dict],
         eb_modules: List[Dict]
     ) -> List[Dict]:
-        """Costruisce matrice di confronto con nuovo algoritmo semantico."""
+        """Costruisce matrice di confronto con stemming."""
         matrix = []
         
         for ideal_mod in ideal_modules:
@@ -829,7 +839,7 @@ class FrameworkComparator:
                 "real_match": None,
                 "real_similarity": 0,
                 "real_coverage": 0,
-                "eb_matches": [],  # Può avere più match (1:N)
+                "eb_matches": [],
                 "eb_best_match": None,
                 "eb_best_similarity": 0,
                 "eb_category": None,
@@ -846,11 +856,11 @@ class FrameworkComparator:
                     row["real_similarity"] = round(sim["combined_score"], 1)
                     row["real_coverage"] = round(real_mod.get("coverage", 0), 1)
             
-            # Match con evidence-based (può essere multiplo)
+            # Match con evidence-based
             eb_matches = []
             for eb_mod in eb_modules:
                 sim = self._calculate_semantic_similarity(ideal_mod, eb_mod)
-                if sim["combined_score"] >= 15:  # Soglia minima
+                if sim["combined_score"] >= 15:
                     eb_matches.append({
                         "name": eb_mod["name"],
                         "score": round(sim["combined_score"], 1),
@@ -861,7 +871,7 @@ class FrameworkComparator:
             eb_matches.sort(key=lambda x: x["score"], reverse=True)
             
             if eb_matches:
-                row["eb_matches"] = eb_matches[:3]  # Top 3
+                row["eb_matches"] = eb_matches[:3]
                 row["eb_best_match"] = eb_matches[0]["name"]
                 row["eb_best_similarity"] = eb_matches[0]["score"]
                 row["eb_category"] = eb_matches[0]["category"]
@@ -872,7 +882,7 @@ class FrameworkComparator:
         return matrix
     
     # =========================================================================
-    # GENERAZIONE REPORT HTML (aggiornato per v2)
+    # GENERAZIONE REPORT HTML
     # =========================================================================
     
     def generate_html_report(self, comparison: Dict) -> str:
@@ -936,8 +946,8 @@ class FrameworkComparator:
 </head>
 <body>
 <div class="container">
-    <h1>Confronto Framework - {self.materia.replace('_', ' ').title()} <span class="version-badge">v2.0</span></h1>
-    <p>Analisi comparativa con <strong>Coverage Mapping Semantico</strong> tra Framework Ideale, Reale e Evidence-Based</p>
+    <h1>Confronto Framework - {self.materia.replace('_', ' ').title()} <span class="version-badge">v2.1 Stemming</span></h1>
+    <p>Analisi comparativa con <strong>Stemming Automatico Italiano</strong> - funziona per qualsiasi materia</p>
     <p><small>Generato il {comparison.get('generated_at', '')[:16].replace('T', ' ')}</small></p>
     
     <div class="summary">
@@ -959,7 +969,7 @@ class FrameworkComparator:
     </div>
 """
         
-        # Sezione Gap Formativi (aggiornata)
+        # Sezione Gap Formativi
         gaps = comparison.get("analysis", {}).get("gap_formativi", {})
         if gaps:
             coverage_pct = gaps.get("coverage_percentage", 0)
@@ -976,7 +986,7 @@ class FrameworkComparator:
         </div>
         <div class="metric">
             <div class="value" style="color: #2e7d32;">{gaps.get('fully_covered', 0)}</div>
-            <div class="label">Coperti (&ge;40%)</div>
+            <div class="label">Coperti (≥40%)</div>
         </div>
         <div class="metric">
             <div class="value" style="color: #ff9800;">{gaps.get('partially_covered', 0)}</div>
@@ -1001,18 +1011,18 @@ class FrameworkComparator:
                 html += """
     <h3>✅ Moduli Ideali Coperti</h3>
 """
-                for cov in gaps.get("covered", [])[:5]:  # Top 5
+                for cov in gaps.get("covered", [])[:8]:
                     html += f"""
     <div class="covered-item">
         <strong>{cov.get('ideal_module', 'N/D')}</strong> → <em>{cov.get('best_match', 'N/D')}</em>
         <span class="priority-badge {'alta' if cov.get('best_score', 0) >= 60 else 'media'}">{cov.get('best_score', 0):.0f}%</span>
         <span class="type-badge">{cov.get('eb_category', 'N/D')}</span>
         <span class="type-badge">{cov.get('coverage_type', '1:1')}</span>
-        <br><small>Keywords comuni: {', '.join(cov.get('common_keywords', [])[:5])}</small>
+        <br><small>Keywords: {', '.join(str(k) for k in cov.get('common_keywords', [])[:5])}</small>
     </div>
 """
             
-            # Gap (non coperti)
+            # Gap
             if gaps.get("gaps"):
                 html += """
     <h3>❌ Moduli Non Coperti o Parziali</h3>
@@ -1027,7 +1037,7 @@ class FrameworkComparator:
     </div>
 """
         
-        # Sezione Contenuti Emergenti (aggiornata)
+        # Sezione Contenuti Emergenti
         emergent = comparison.get("analysis", {}).get("contenuti_emergenti", {})
         if emergent:
             html += f"""
@@ -1063,7 +1073,6 @@ class FrameworkComparator:
         <span class="priority-badge {'alta' if is_core else 'media'}">{em.get('presence', 0):.0f}% classi</span>
         <br><em>{em.get('interpretation', '')}</em>
         <br><small>Contenuti: {', '.join(em.get('contents', [])[:5])}</small>
-        {f"<br><small>Distintivo per: {', '.join(em.get('distinctive_for', []))}</small>" if em.get('distinctive_for') else ""}
     </div>
 """
         
@@ -1091,7 +1100,7 @@ class FrameworkComparator:
     </div>
 """
         
-        # Sezione Opportunità Commerciali
+        # Sezione Opportunità
         opportunities = comparison.get("analysis", {}).get("opportunita_commerciali", {})
         if opportunities:
             html += f"""
@@ -1118,7 +1127,7 @@ class FrameworkComparator:
     </div>
 """
             
-            for opp in opportunities.get("opportunities", [])[:10]:  # Top 10
+            for opp in opportunities.get("opportunities", [])[:10]:
                 html += f"""
     <div class="opportunity {opp.get('priority', 'media')}">
         <span class="priority-badge {opp.get('priority', 'media')}">{opp.get('priority', 'N/D').upper()}</span>
@@ -1129,21 +1138,21 @@ class FrameworkComparator:
     </div>
 """
         
-        # Matrice di Confronto (aggiornata per v2)
+        # Matrice di Confronto
         matrix = comparison.get("comparison_matrix", [])
         if matrix:
             html += """
-    <h2>📋 Matrice di Confronto Dettagliata</h2>
+    <h2>📋 Matrice di Confronto</h2>
     <table>
         <thead>
             <tr>
-                <th style="width: 20%;">Modulo Ideale</th>
-                <th style="width: 15%;">Match Reale</th>
+                <th style="width: 22%;">Modulo Ideale</th>
+                <th style="width: 18%;">Match Reale</th>
                 <th style="width: 8%;">Sim.</th>
-                <th style="width: 20%;">Match Evidence-Based</th>
+                <th style="width: 22%;">Match Evidence-Based</th>
                 <th style="width: 8%;">Sim.</th>
                 <th style="width: 10%;">Categoria</th>
-                <th style="width: 19%;">Keywords Comuni</th>
+                <th style="width: 12%;">Keywords</th>
             </tr>
         </thead>
         <tbody>
@@ -1154,11 +1163,10 @@ class FrameworkComparator:
                 real_class = "match-high" if real_sim >= 50 else ("match-medium" if real_sim >= 25 else "match-low")
                 eb_class = "match-high" if eb_sim >= 50 else ("match-medium" if eb_sim >= 25 else "match-low")
                 
-                # Multi-match indicator
                 eb_matches = row.get("eb_matches", [])
                 multi_match = f"<br><span class='multi-match'>+{len(eb_matches)-1} altri</span>" if len(eb_matches) > 1 else ""
                 
-                keywords_html = " ".join([f"<span class='keyword-tag'>{kw}</span>" for kw in row.get("common_keywords", [])[:3]])
+                keywords_html = " ".join([f"<span class='keyword-tag'>{k}</span>" for k in row.get("common_keywords", [])[:3]])
                 
                 html += f"""
             <tr>
@@ -1179,8 +1187,8 @@ class FrameworkComparator:
         # Footer
         html += f"""
     <div class="footer">
-        <p><strong>CoreX PromoIntelligence - Framework Comparator v2.0</strong></p>
-        <p>Algoritmo: Coverage Mapping Semantico con supporto relazioni 1:N / N:1</p>
+        <p><strong>CoreX PromoIntelligence - Framework Comparator v2.1</strong></p>
+        <p>Algoritmo: Stemming Italiano Automatico + Coverage Mapping 1:N / N:1</p>
         <p>Generato il {datetime.now().strftime('%Y-%m-%d %H:%M')}</p>
     </div>
 </div>
@@ -1201,9 +1209,7 @@ def compare_frameworks(
     real_path: Path = None,
     evidence_based_path: Path = None
 ) -> Dict:
-    """
-    Funzione helper per confrontare i framework.
-    """
+    """Funzione helper per confrontare i framework."""
     comparator = FrameworkComparator(materia)
     
     ideal = None
@@ -1226,9 +1232,7 @@ def compare_frameworks(
 
 
 def generate_comparison_report(materia: str, output_path: Path = None) -> Tuple[Dict, str]:
-    """
-    Genera confronto e report HTML.
-    """
+    """Genera confronto e report HTML."""
     comparator = FrameworkComparator(materia)
     comparison = comparator.compare()
     html = comparator.generate_html_report(comparison)

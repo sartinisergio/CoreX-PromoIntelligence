@@ -9,116 +9,140 @@
         "legame ionico",
         "legame covalente",
         "legame metallico",
-        "legame dativo",
-        "legami secondari",
-        "proprietà periodiche",
-        "numero di avogadro",
+        "numero atomico",
+        "numero di massa",
         "massa atomica",
-        "massa molecolare"
+        "mole",
+        "concetto di mole"
       ],
-      "description": "Questo modulo copre i concetti fondamentali della chimica generale, inclusi i vari tipi di legami chimici e le proprietà degli elementi.",
-      "avg_frequency": 63.5,
+      "description": "Questo modulo introduce i concetti fondamentali della chimica generale, inclusi i tipi di legami chimici e le proprietà atomiche.",
+      "avg_frequency": 55.0,
       "coverage_by_class": {
-        "L-13_Biologia": 90.9,
-        "L-25_Scienze_e_tecnologie_agrarie": 81.8,
-        "L-26_Scienze_e_tecnologie_alimentari": 81.8,
-        "L-27_Scienze_chimiche": 72.7,
-        "L-2_Biotecnologie": 54.5,
-        "L-32_Scienze_naturali_amb": 72.7,
-        "L-34_Geologia": 72.7,
-        "L-7-8-9_Ingegneria": 45.5,
-        "LM-13_Farmacia": 81.8
+        "L-13_Biologia": 100.0,
+        "L-25_Scienze_e_tecnologie_agrarie": 90.0,
+        "L-26_Scienze_e_tecnologie_alimentari": 100.0,
+        "L-27_Scienze_chimiche": 90.0,
+        "L-29_Scienze_farmaceutiche": 100.0,
+        "L-2_Biotecnologie": 90.0,
+        "L-32_Scienze_naturali_amb": 100.0,
+        "L-34_Geologia": 100.0,
+        "L-7-8-9_Ingegneria": 80.0,
+        "LM-13_Farmacia": 90.0
       },
       "concepts_by_class": {
         "L-13_Biologia": [
-          "legame dativo",
           "massa atomica",
-          "massa molecolare",
-          "proprietà periodiche",
-          "legami secondari",
+          "mole",
+          "concetto di mole",
           "legame chimico",
-          "legame covalente",
+          "legame ionico",
           "legame metallico",
-          "numero di avogadro",
-          "legame ionico"
+          "legame covalente",
+          "numero di massa",
+          "numero atomico",
+          "chimica generale"
         ],
         "L-25_Scienze_e_tecnologie_agrarie": [
-          "legame dativo",
-          "proprietà periodiche",
-          "legami secondari",
-          "chimica generale",
+          "massa atomica",
+          "mole",
           "legame chimico",
-          "legame covalente",
+          "legame ionico",
           "legame metallico",
-          "numero di avogadro",
-          "legame ionico"
+          "legame covalente",
+          "numero di massa",
+          "numero atomico",
+          "chimica generale"
         ],
         "L-26_Scienze_e_tecnologie_alimentari": [
-          "legame dativo",
           "massa atomica",
-          "massa molecolare",
-          "proprietà periodiche",
-          "chimica generale",
+          "mole",
+          "concetto di mole",
           "legame chimico",
+          "legame ionico",
+          "legame metallico",
           "legame covalente",
-          "numero di avogadro",
-          "legame ionico"
+          "numero di massa",
+          "numero atomico",
+          "chimica generale"
         ],
         "L-27_Scienze_chimiche": [
           "massa atomica",
-          "massa molecolare",
-          "proprietà periodiche",
-          "chimica generale",
+          "mole",
           "legame chimico",
+          "legame ionico",
+          "legame metallico",
           "legame covalente",
-          "numero di avogadro",
-          "legame ionico"
+          "numero di massa",
+          "numero atomico",
+          "chimica generale"
+        ],
+        "L-29_Scienze_farmaceutiche": [
+          "massa atomica",
+          "mole",
+          "concetto di mole",
+          "legame chimico",
+          "legame ionico",
+          "legame metallico",
+          "legame covalente",
+          "numero di massa",
+          "numero atomico",
+          "chimica generale"
         ],
         "L-2_Biotecnologie": [
           "massa atomica",
-          "proprietà periodiche",
-          "chimica generale",
+          "mole",
+          "concetto di mole",
           "legame chimico",
+          "legame ionico",
           "legame covalente",
-          "legame ionico"
+          "numero di massa",
+          "numero atomico",
+          "chimica generale"
         ],
         "L-32_Scienze_naturali_amb": [
           "massa atomica",
-          "massa molecolare",
-          "proprietà periodiche",
+          "mole",
+          "concetto di mole",
           "legame chimico",
-          "legame covalente",
+          "legame ionico",
           "legame metallico",
-          "numero di avogadro",
-          "legame ionico"
+          "legame covalente",
+          "numero di massa",
+          "numero atomico",
+          "chimica generale"
         ],
         "L-34_Geologia": [
           "massa atomica",
-          "massa molecolare",
-          "proprietà periodiche",
-          "chimica generale",
+          "mole",
+          "concetto di mole",
           "legame chimico",
+          "legame ionico",
+          "legame metallico",
           "legame covalente",
-          "numero di avogadro",
-          "legame ionico"
+          "numero di massa",
+          "numero atomico",
+          "chimica generale"
         ],
         "L-7-8-9_Ingegneria": [
-          "proprietà periodiche",
-          "chimica generale",
-          "legame covalente",
+          "mole",
+          "legame chimico",
+          "legame ionico",
           "legame metallico",
-          "legame ionico"
+          "legame covalente",
+          "numero di massa",
+          "numero atomico",
+          "chimica generale"
         ],
         "LM-13_Farmacia": [
           "massa atomica",
-          "massa molecolare",
-          "proprietà periodiche",
-          "chimica generale",
+          "mole",
           "legame chimico",
-          "legame covalente",
+          "legame ionico",
           "legame metallico",
-          "numero di avogadro",
-          "legame ionico"
+          "legame covalente",
+          "numero di massa",
+          "numero atomico",
+          "chimica generale"
         ]
       },
       "category": "CORE",
@@ -127,94 +151,107 @@
       "is_specific": false,
       "distinctive_for": [],
       "stats": {
-        "avg_coverage": 72.7,
-        "min_coverage": 45.5,
-        "max_coverage": 90.9,
-        "presence_in_classes": "9/9",
+        "avg_coverage": 94.0,
+        "min_coverage": 80.0,
+        "max_coverage": 100.0,
+        "presence_in_classes": "10/10",
         "presence_percentage": 100.0
       }
     },
     {
       "id": 2,
-      "name": "Equilibri Chimici e Reazioni",
+      "name": "Reazioni Chimiche e Stechiometria",
       "core_contents": [
-        "equilibrio chimico",
         "reazioni chimiche",
-        "reazioni acido-base",
-        "costante di equilibrio",
-        "spontaneità di una reazione",
-        "quoziente di reazione",
-        "bilanciamento reazioni"
+        "stechiometria",
+        "reagente limitante",
+        "bilanciamento reazioni",
+        "calcoli stechiometrici",
+        "problemi di stechiometria"
       ],
-      "description": "Questo modulo esplora gli equilibri chimici e le reazioni, analizzando le condizioni che influenzano la loro direzione e il loro equilibrio.",
-      "avg_frequency": 56.5,
+      "description": "Questo modulo esplora le reazioni chimiche e i principi della stechiometria, fondamentali per comprendere le trasformazioni chimiche.",
+      "avg_frequency": 50.0,
       "coverage_by_class": {
-        "L-13_Biologia": 85.7,
-        "L-25_Scienze_e_tecnologie_agrarie": 42.9,
-        "L-26_Scienze_e_tecnologie_alimentari": 42.9,
-        "L-27_Scienze_chimiche": 42.9,
-        "L-2_Biotecnologie": 57.1,
-        "L-32_Scienze_naturali_amb": 85.7,
-        "L-34_Geologia": 71.4,
-        "L-7-8-9_Ingegneria": 42.9,
-        "LM-13_Farmacia": 71.4
+        "L-13_Biologia": 83.3,
+        "L-25_Scienze_e_tecnologie_agrarie": 83.3,
+        "L-26_Scienze_e_tecnologie_alimentari": 83.3,
+        "L-27_Scienze_chimiche": 66.7,
+        "L-29_Scienze_farmaceutiche": 83.3,
+        "L-2_Biotecnologie": 83.3,
+        "L-32_Scienze_naturali_amb": 83.3,
+        "L-34_Geologia": 83.3,
+        "L-7-8-9_Ingegneria": 83.3,
+        "LM-13_Farmacia": 83.3
       },
       "concepts_by_class": {
         "L-13_Biologia": [
-          "costante di equilibrio",
-          "equilibrio chimico",
+          "reagente limitante",
+          "bilanciamento reazioni",
           "reazioni chimiche",
-          "reazioni acido-base",
-          "spontaneità di una reazione",
-          "quoziente di reazione"
+          "stechiometria",
+          "calcoli stechiometrici"
         ],
         "L-25_Scienze_e_tecnologie_agrarie": [
+          "reagente limitante",
+          "bilanciamento reazioni",
           "reazioni chimiche",
-          "equilibrio chimico",
-          "bilanciamento reazioni"
+          "stechiometria",
+          "calcoli stechiometrici"
         ],
         "L-26_Scienze_e_tecnologie_alimentari": [
-          "costante di equilibrio",
-          "equilibrio chimico",
-          "reazioni chimiche"
+          "reagente limitante",
+          "bilanciamento reazioni",
+          "reazioni chimiche",
+          "stechiometria",
+          "calcoli stechiometrici"
         ],
         "L-27_Scienze_chimiche": [
-          "costante di equilibrio",
-          "equilibrio chimico",
-          "reazioni chimiche"
+          "bilanciamento reazioni",
+          "reazioni chimiche",
+          "calcoli stechiometrici",
+          "stechiometria"
+        ],
+        "L-29_Scienze_farmaceutiche": [
+          "reagente limitante",
+          "bilanciamento reazioni",
+          "reazioni chimiche",
+          "stechiometria",
+          "calcoli stechiometrici"
         ],
         "L-2_Biotecnologie": [
-          "costante di equilibrio",
-          "equilibrio chimico",
+          "reagente limitante",
           "bilanciamento reazioni",
-          "reazioni chimiche"
+          "reazioni chimiche",
+          "stechiometria",
+          "calcoli stechiometrici"
         ],
         "L-32_Scienze_naturali_amb": [
-          "costante di equilibrio",
-          "equilibrio chimico",
-          "reazioni chimiche",
-          "reazioni acido-base",
+          "reagente limitante",
           "bilanciamento reazioni",
-          "quoziente di reazione"
+          "reazioni chimiche",
+          "stechiometria",
+          "calcoli stechiometrici"
         ],
         "L-34_Geologia": [
-          "costante di equilibrio",
-          "equilibrio chimico",
+          "reagente limitante",
+          "bilanciamento reazioni",
           "reazioni chimiche",
-          "reazioni acido-base",
-          "quoziente di reazione"
+          "stechiometria",
+          "calcoli stechiometrici"
         ],
         "L-7-8-9_Ingegneria": [
-          "costante di equilibrio",
-          "equilibrio chimico",
-          "reazioni chimiche"
+          "reagente limitante",
+          "bilanciamento reazioni",
+          "reazioni chimiche",
+          "stechiometria",
+          "calcoli stechiometrici"
         ],
         "LM-13_Farmacia": [
-          "costante di equilibrio",
-          "equilibrio chimico",
+          "reagente limitante",
+          "bilanciamento reazioni",
           "reazioni chimiche",
-          "reazioni acido-base",
-          "bilanciamento reazioni"
+          "problemi di stechiometria",
+          "stechiometria"
         ]
       },
       "category": "CORE",
@@ -223,81 +260,659 @@
       "is_specific": false,
       "distinctive_for": [],
       "stats": {
-        "avg_coverage": 60.3,
-        "min_coverage": 42.9,
-        "max_coverage": 85.7,
-        "presence_in_classes": "9/9",
+        "avg_coverage": 81.6,
+        "min_coverage": 66.7,
+        "max_coverage": 83.3,
+        "presence_in_classes": "10/10",
         "presence_percentage": 100.0
       }
     },
     {
       "id": 3,
-      "name": "Struttura Atomica e Teoria Atomica",
+      "name": "Equilibri Chimici",
       "core_contents": [
-        "struttura atomica",
-        "teoria atomica",
-        "modelli atomici",
-        "orbitali",
-        "numeri quantici"
+        "equilibrio chimico",
+        "costante di equilibrio",
+        "principio di le chatelier",
+        "equilibri acido-base",
+        "equilibri di solubilità"
       ],
-      "description": "Questo modulo analizza la struttura atomica e i modelli teorici che descrivono il comportamento degli atomi e delle molecole.",
-      "avg_frequency": 55.0,
+      "description": "Questo modulo si concentra sugli equilibri chimici e le loro applicazioni, inclusi gli equilibri acido-base e di solubilità.",
+      "avg_frequency": 45.0,
       "coverage_by_class": {
-        "L-13_Biologia": 80.0,
-        "L-25_Scienze_e_tecnologie_agrarie": 60.0,
-        "L-26_Scienze_e_tecnologie_alimentari": 20.0,
-        "L-27_Scienze_chimiche": 60.0,
-        "L-2_Biotecnologie": 60.0,
-        "L-32_Scienze_naturali_amb": 60.0,
+        "L-13_Biologia": 100.0,
+        "L-25_Scienze_e_tecnologie_agrarie": 100.0,
+        "L-26_Scienze_e_tecnologie_alimentari": 100.0,
+        "L-27_Scienze_chimiche": 100.0,
+        "L-29_Scienze_farmaceutiche": 100.0,
+        "L-2_Biotecnologie": 100.0,
+        "L-32_Scienze_naturali_amb": 100.0,
         "L-34_Geologia": 80.0,
-        "L-7-8-9_Ingegneria": 60.0,
-        "LM-13_Farmacia": 60.0
+        "L-7-8-9_Ingegneria": 80.0,
+        "LM-13_Farmacia": 100.0
       },
       "concepts_by_class": {
         "L-13_Biologia": [
-          "numeri quantici",
-          "modelli atomici",
-          "orbitali",
-          "struttura atomica"
+          "equilibri acido-base",
+          "equilibri di solubilità",
+          "costante di equilibrio",
+          "equilibrio chimico",
+          "principio di le chatelier"
         ],
         "L-25_Scienze_e_tecnologie_agrarie": [
-          "numeri quantici",
-          "modelli atomici",
-          "struttura atomica"
+          "equilibri acido-base",
+          "equilibri di solubilità",
+          "costante di equilibrio",
+          "equilibrio chimico",
+          "principio di le chatelier"
         ],
         "L-26_Scienze_e_tecnologie_alimentari": [
-          "numeri quantici"
+          "equilibri acido-base",
+          "equilibri di solubilità",
+          "costante di equilibrio",
+          "equilibrio chimico",
+          "principio di le chatelier"
         ],
         "L-27_Scienze_chimiche": [
-          "numeri quantici",
-          "orbitali",
-          "struttura atomica"
+          "equilibri acido-base",
+          "equilibri di solubilità",
+          "costante di equilibrio",
+          "equilibrio chimico",
+          "principio di le chatelier"
+        ],
+        "L-29_Scienze_farmaceutiche": [
+          "equilibri acido-base",
+          "equilibri di solubilità",
+          "costante di equilibrio",
+          "equilibrio chimico",
+          "principio di le chatelier"
         ],
         "L-2_Biotecnologie": [
-          "numeri quantici",
-          "teoria atomica",
-          "struttura atomica"
+          "equilibri acido-base",
+          "equilibri di solubilità",
+          "costante di equilibrio",
+          "equilibrio chimico",
+          "principio di le chatelier"
         ],
         "L-32_Scienze_naturali_amb": [
-          "numeri quantici",
-          "modelli atomici",
-          "orbitali"
+          "equilibri acido-base",
+          "equilibri di solubilità",
+          "costante di equilibrio",
+          "equilibrio chimico",
+          "principio di le chatelier"
         ],
         "L-34_Geologia": [
-          "numeri quantici",
-          "modelli atomici",
-          "orbitali",
-          "struttura atomica"
+          "costante di equilibrio",
+          "equilibri acido-base",
+          "equilibrio chimico",
+          "principio di le chatelier"
         ],
         "L-7-8-9_Ingegneria": [
-          "numeri quantici",
-          "modelli atomici",
-          "struttura atomica"
+          "costante di equilibrio",
+          "equilibri acido-base",
+          "equilibrio chimico",
+          "principio di le chatelier"
         ],
         "LM-13_Farmacia": [
+          "equilibri acido-base",
+          "equilibri di solubilità",
+          "costante di equilibrio",
+          "equilibrio chimico",
+          "principio di le chatelier"
+        ]
+      },
+      "category": "CORE",
+      "is_core": true,
+      "is_transversal": false,
+      "is_specific": false,
+      "distinctive_for": [],
+      "stats": {
+        "avg_coverage": 96.0,
+        "min_coverage": 80.0,
+        "max_coverage": 100.0,
+        "presence_in_classes": "10/10",
+        "presence_percentage": 100.0
+      }
+    },
+    {
+      "id": 4,
+      "name": "Proprietà Fisiche e Chimiche delle Sostanze",
+      "core_contents": [
+        "proprietà periodiche",
+        "proprietà colligative",
+        "proprietà fisiche",
+        "proprietà chimiche",
+        "solubilità",
+        "tensione di vapore"
+      ],
+      "description": "Questo modulo analizza le proprietà fisiche e chimiche delle sostanze, inclusa la solubilità e le proprietà colligative.",
+      "avg_frequency": 40.0,
+      "coverage_by_class": {
+        "L-13_Biologia": 50.0,
+        "L-25_Scienze_e_tecnologie_agrarie": 66.7,
+        "L-26_Scienze_e_tecnologie_alimentari": 83.3,
+        "L-27_Scienze_chimiche": 83.3,
+        "L-29_Scienze_farmaceutiche": 100.0,
+        "L-2_Biotecnologie": 100.0,
+        "L-32_Scienze_naturali_amb": 100.0,
+        "L-34_Geologia": 83.3,
+        "L-7-8-9_Ingegneria": 50.0,
+        "LM-13_Farmacia": 100.0
+      },
+      "concepts_by_class": {
+        "L-13_Biologia": [
+          "proprietà colligative",
+          "proprietà periodiche",
+          "solubilità"
+        ],
+        "L-25_Scienze_e_tecnologie_agrarie": [
+          "proprietà colligative",
+          "tensione di vapore",
+          "proprietà periodiche",
+          "solubilità"
+        ],
+        "L-26_Scienze_e_tecnologie_alimentari": [
+          "tensione di vapore",
+          "proprietà colligative",
+          "solubilità",
+          "proprietà chimiche",
+          "proprietà periodiche"
+        ],
+        "L-27_Scienze_chimiche": [
+          "tensione di vapore",
+          "proprietà colligative",
+          "solubilità",
+          "proprietà chimiche",
+          "proprietà periodiche"
+        ],
+        "L-29_Scienze_farmaceutiche": [
+          "tensione di vapore",
+          "proprietà fisiche",
+          "proprietà colligative",
+          "solubilità",
+          "proprietà periodiche",
+          "proprietà chimiche"
+        ],
+        "L-2_Biotecnologie": [
+          "tensione di vapore",
+          "proprietà fisiche",
+          "proprietà colligative",
+          "solubilità",
+          "proprietà periodiche",
+          "proprietà chimiche"
+        ],
+        "L-32_Scienze_naturali_amb": [
+          "tensione di vapore",
+          "proprietà fisiche",
+          "proprietà colligative",
+          "solubilità",
+          "proprietà periodiche",
+          "proprietà chimiche"
+        ],
+        "L-34_Geologia": [
+          "tensione di vapore",
+          "proprietà colligative",
+          "solubilità",
+          "proprietà chimiche",
+          "proprietà periodiche"
+        ],
+        "L-7-8-9_Ingegneria": [
+          "proprietà colligative",
+          "tensione di vapore",
+          "proprietà periodiche"
+        ],
+        "LM-13_Farmacia": [
+          "tensione di vapore",
+          "proprietà fisiche",
+          "proprietà colligative",
+          "solubilità",
+          "proprietà periodiche",
+          "proprietà chimiche"
+        ]
+      },
+      "category": "CORE",
+      "is_core": true,
+      "is_transversal": false,
+      "is_specific": false,
+      "distinctive_for": [],
+      "stats": {
+        "avg_coverage": 81.7,
+        "min_coverage": 50.0,
+        "max_coverage": 100.0,
+        "presence_in_classes": "10/10",
+        "presence_percentage": 100.0
+      }
+    },
+    {
+      "id": 5,
+      "name": "Struttura Atomica e Teoria Atomica",
+      "core_contents": [
+        "struttura atomica",
+        "configurazione elettronica",
+        "orbitali atomici",
+        "numeri quantici",
+        "spin elettronico"
+      ],
+      "description": "Questo modulo tratta la struttura atomica e la teoria atomica, inclusi gli orbitali e la configurazione elettronica.",
+      "avg_frequency": 38.0,
+      "coverage_by_class": {
+        "L-13_Biologia": 80.0,
+        "L-25_Scienze_e_tecnologie_agrarie": 80.0,
+        "L-26_Scienze_e_tecnologie_alimentari": 80.0,
+        "L-27_Scienze_chimiche": 80.0,
+        "L-29_Scienze_farmaceutiche": 100.0,
+        "L-2_Biotecnologie": 80.0,
+        "L-32_Scienze_naturali_amb": 80.0,
+        "L-34_Geologia": 80.0,
+        "L-7-8-9_Ingegneria": 80.0,
+        "LM-13_Farmacia": 100.0
+      },
+      "concepts_by_class": {
+        "L-13_Biologia": [
+          "struttura atomica",
+          "orbitali atomici",
           "numeri quantici",
-          "teoria atomica",
-          "struttura atomica"
+          "configurazione elettronica"
+        ],
+        "L-25_Scienze_e_tecnologie_agrarie": [
+          "struttura atomica",
+          "orbitali atomici",
+          "numeri quantici",
+          "configurazione elettronica"
+        ],
+        "L-26_Scienze_e_tecnologie_alimentari": [
+          "struttura atomica",
+          "orbitali atomici",
+          "numeri quantici",
+          "configurazione elettronica"
+        ],
+        "L-27_Scienze_chimiche": [
+          "struttura atomica",
+          "orbitali atomici",
+          "numeri quantici",
+          "configurazione elettronica"
+        ],
+        "L-29_Scienze_farmaceutiche": [
+          "struttura atomica",
+          "orbitali atomici",
+          "spin elettronico",
+          "numeri quantici",
+          "configurazione elettronica"
+        ],
+        "L-2_Biotecnologie": [
+          "struttura atomica",
+          "orbitali atomici",
+          "numeri quantici",
+          "configurazione elettronica"
+        ],
+        "L-32_Scienze_naturali_amb": [
+          "struttura atomica",
+          "orbitali atomici",
+          "numeri quantici",
+          "configurazione elettronica"
+        ],
+        "L-34_Geologia": [
+          "struttura atomica",
+          "orbitali atomici",
+          "numeri quantici",
+          "configurazione elettronica"
+        ],
+        "L-7-8-9_Ingegneria": [
+          "struttura atomica",
+          "orbitali atomici",
+          "numeri quantici",
+          "configurazione elettronica"
+        ],
+        "LM-13_Farmacia": [
+          "struttura atomica",
+          "orbitali atomici",
+          "spin elettronico",
+          "numeri quantici",
+          "configurazione elettronica"
+        ]
+      },
+      "category": "CORE",
+      "is_core": true,
+      "is_transversal": false,
+      "is_specific": false,
+      "distinctive_for": [],
+      "stats": {
+        "avg_coverage": 84.0,
+        "min_coverage": 80.0,
+        "max_coverage": 100.0,
+        "presence_in_classes": "10/10",
+        "presence_percentage": 100.0
+      }
+    },
+    {
+      "id": 6,
+      "name": "Cinetica Chimica",
+      "core_contents": [
+        "cinetica chimica",
+        "velocità di reazione",
+        "energia di attivazione"
+      ],
+      "description": "Questo modulo esplora la cinetica chimica e i fattori che influenzano la velocità delle reazioni chimiche.",
+      "avg_frequency": 35.0,
+      "coverage_by_class": {
+        "L-13_Biologia": 100.0,
+        "L-25_Scienze_e_tecnologie_agrarie": 66.7,
+        "L-26_Scienze_e_tecnologie_alimentari": 100.0,
+        "L-27_Scienze_chimiche": 100.0,
+        "L-29_Scienze_farmaceutiche": 100.0,
+        "L-2_Biotecnologie": 100.0,
+        "L-32_Scienze_naturali_amb": 66.7,
+        "L-34_Geologia": 33.3,
+        "L-7-8-9_Ingegneria": 100.0,
+        "LM-13_Farmacia": 100.0
+      },
+      "concepts_by_class": {
+        "L-13_Biologia": [
+          "cinetica chimica",
+          "velocità di reazione",
+          "energia di attivazione"
+        ],
+        "L-25_Scienze_e_tecnologie_agrarie": [
+          "cinetica chimica",
+          "velocità di reazione"
+        ],
+        "L-26_Scienze_e_tecnologie_alimentari": [
+          "cinetica chimica",
+          "velocità di reazione",
+          "energia di attivazione"
+        ],
+        "L-27_Scienze_chimiche": [
+          "cinetica chimica",
+          "velocità di reazione",
+          "energia di attivazione"
+        ],
+        "L-29_Scienze_farmaceutiche": [
+          "cinetica chimica",
+          "velocità di reazione",
+          "energia di attivazione"
+        ],
+        "L-2_Biotecnologie": [
+          "cinetica chimica",
+          "velocità di reazione",
+          "energia di attivazione"
+        ],
+        "L-32_Scienze_naturali_amb": [
+          "cinetica chimica",
+          "velocità di reazione"
+        ],
+        "L-34_Geologia": [
+          "cinetica chimica"
+        ],
+        "L-7-8-9_Ingegneria": [
+          "cinetica chimica",
+          "velocità di reazione",
+          "energia di attivazione"
+        ],
+        "LM-13_Farmacia": [
+          "cinetica chimica",
+          "velocità di reazione",
+          "energia di attivazione"
+        ]
+      },
+      "category": "CORE",
+      "is_core": true,
+      "is_transversal": false,
+      "is_specific": false,
+      "distinctive_for": [],
+      "stats": {
+        "avg_coverage": 86.7,
+        "min_coverage": 33.3,
+        "max_coverage": 100.0,
+        "presence_in_classes": "10/10",
+        "presence_percentage": 100.0
+      }
+    },
+    {
+      "id": 7,
+      "name": "Termodinamica Chimica",
+      "core_contents": [
+        "termodinamica",
+        "entalpia",
+        "entropia",
+        "energia libera"
+      ],
+      "description": "Questo modulo introduce i principi della termodinamica chimica, inclusi entalpia, entropia e energia libera.",
+      "avg_frequency": 30.0,
+      "coverage_by_class": {
+        "L-13_Biologia": 75.0,
+        "L-25_Scienze_e_tecnologie_agrarie": 100.0,
+        "L-26_Scienze_e_tecnologie_alimentari": 100.0,
+        "L-27_Scienze_chimiche": 100.0,
+        "L-29_Scienze_farmaceutiche": 75.0,
+        "L-2_Biotecnologie": 100.0,
+        "L-32_Scienze_naturali_amb": 100.0,
+        "L-34_Geologia": 100.0,
+        "L-7-8-9_Ingegneria": 100.0,
+        "LM-13_Farmacia": 100.0
+      },
+      "concepts_by_class": {
+        "L-13_Biologia": [
+          "entropia",
+          "entalpia",
+          "termodinamica"
+        ],
+        "L-25_Scienze_e_tecnologie_agrarie": [
+          "entropia",
+          "entalpia",
+          "energia libera",
+          "termodinamica"
+        ],
+        "L-26_Scienze_e_tecnologie_alimentari": [
+          "entropia",
+          "entalpia",
+          "energia libera",
+          "termodinamica"
+        ],
+        "L-27_Scienze_chimiche": [
+          "entropia",
+          "entalpia",
+          "energia libera",
+          "termodinamica"
+        ],
+        "L-29_Scienze_farmaceutiche": [
+          "entropia",
+          "entalpia",
+          "termodinamica"
+        ],
+        "L-2_Biotecnologie": [
+          "entropia",
+          "entalpia",
+          "energia libera",
+          "termodinamica"
+        ],
+        "L-32_Scienze_naturali_amb": [
+          "entropia",
+          "entalpia",
+          "energia libera",
+          "termodinamica"
+        ],
+        "L-34_Geologia": [
+          "entropia",
+          "entalpia",
+          "energia libera",
+          "termodinamica"
+        ],
+        "L-7-8-9_Ingegneria": [
+          "entropia",
+          "entalpia",
+          "energia libera",
+          "termodinamica"
+        ],
+        "LM-13_Farmacia": [
+          "entropia",
+          "entalpia",
+          "energia libera",
+          "termodinamica"
+        ]
+      },
+      "category": "CORE",
+      "is_core": true,
+      "is_transversal": false,
+      "is_specific": false,
+      "distinctive_for": [],
+      "stats": {
+        "avg_coverage": 95.0,
+        "min_coverage": 75.0,
+        "max_coverage": 100.0,
+        "presence_in_classes": "10/10",
+        "presence_percentage": 100.0
+      }
+    },
+    {
+      "id": 8,
+      "name": "Soluzioni e Proprietà delle Soluzioni",
+      "core_contents": [
+        "soluzioni",
+        "soluzioni tampone",
+        "concentrazione soluzioni",
+        "dissociazioni in soluzione"
+      ],
+      "description": "Questo modulo si concentra sulle soluzioni chimiche e le loro proprietà, inclusa la concentrazione e le dissociazioni.",
+      "avg_frequency": 28.0,
+      "coverage_by_class": {
+        "L-13_Biologia": 100.0,
+        "L-25_Scienze_e_tecnologie_agrarie": 50.0,
+        "L-26_Scienze_e_tecnologie_alimentari": 50.0,
+        "L-27_Scienze_chimiche": 50.0,
+        "L-29_Scienze_farmaceutiche": 75.0,
+        "L-2_Biotecnologie": 50.0,
+        "L-32_Scienze_naturali_amb": 75.0,
+        "L-34_Geologia": 50.0,
+        "L-7-8-9_Ingegneria": 50.0,
+        "LM-13_Farmacia": 75.0
+      },
+      "concepts_by_class": {
+        "L-13_Biologia": [
+          "dissociazioni in soluzione",
+          "soluzioni tampone",
+          "concentrazione soluzioni",
+          "soluzioni"
+        ],
+        "L-25_Scienze_e_tecnologie_agrarie": [
+          "soluzioni tampone",
+          "soluzioni"
+        ],
+        "L-26_Scienze_e_tecnologie_alimentari": [
+          "soluzioni tampone",
+          "soluzioni"
+        ],
+        "L-27_Scienze_chimiche": [
+          "soluzioni tampone",
+          "soluzioni"
+        ],
+        "L-29_Scienze_farmaceutiche": [
+          "soluzioni tampone",
+          "concentrazione soluzioni",
+          "soluzioni"
+        ],
+        "L-2_Biotecnologie": [
+          "soluzioni tampone",
+          "soluzioni"
+        ],
+        "L-32_Scienze_naturali_amb": [
+          "soluzioni tampone",
+          "concentrazione soluzioni",
+          "soluzioni"
+        ],
+        "L-34_Geologia": [
+          "soluzioni tampone",
+          "soluzioni"
+        ],
+        "L-7-8-9_Ingegneria": [
+          "soluzioni tampone",
+          "soluzioni"
+        ],
+        "LM-13_Farmacia": [
+          "soluzioni tampone",
+          "concentrazione soluzioni",
+          "soluzioni"
+        ]
+      },
+      "category": "CORE",
+      "is_core": true,
+      "is_transversal": false,
+      "is_specific": false,
+      "distinctive_for": [],
+      "stats": {
+        "avg_coverage": 62.5,
+        "min_coverage": 50.0,
+        "max_coverage": 100.0,
+        "presence_in_classes": "10/10",
+        "presence_percentage": 100.0
+      }
+    },
+    {
+      "id": 9,
+      "name": "Acidi e Basi",
+      "core_contents": [
+        "acidi",
+        "basi",
+        "reazioni acido-base",
+        "titolazione acido-base"
+      ],
+      "description": "Questo modulo esplora i concetti di acidi e basi, incluse le loro proprietà e le reazioni che coinvolgono.",
+      "avg_frequency": 25.0,
+      "coverage_by_class": {
+        "L-13_Biologia": 25.0,
+        "L-25_Scienze_e_tecnologie_agrarie": 50.0,
+        "L-26_Scienze_e_tecnologie_alimentari": 50.0,
+        "L-27_Scienze_chimiche": 75.0,
+        "L-29_Scienze_farmaceutiche": 75.0,
+        "L-2_Biotecnologie": 75.0,
+        "L-32_Scienze_naturali_amb": 25.0,
+        "L-34_Geologia": 50.0,
+        "L-7-8-9_Ingegneria": 75.0,
+        "LM-13_Farmacia": 100.0
+      },
+      "concepts_by_class": {
+        "L-13_Biologia": [
+          "reazioni acido-base"
+        ],
+        "L-25_Scienze_e_tecnologie_agrarie": [
+          "acidi",
+          "basi"
+        ],
+        "L-26_Scienze_e_tecnologie_alimentari": [
+          "acidi",
+          "basi"
+        ],
+        "L-27_Scienze_chimiche": [
+          "acidi",
+          "basi",
+          "reazioni acido-base"
+        ],
+        "L-29_Scienze_farmaceutiche": [
+          "acidi",
+          "basi",
+          "reazioni acido-base"
+        ],
+        "L-2_Biotecnologie": [
+          "acidi",
+          "basi",
+          "reazioni acido-base"
+        ],
+        "L-32_Scienze_naturali_amb": [
+          "reazioni acido-base"
+        ],
+        "L-34_Geologia": [
+          "acidi",
+          "reazioni acido-base"
+        ],
+        "L-7-8-9_Ingegneria": [
+          "acidi",
+          "basi",
+          "reazioni acido-base"
+        ],
+        "LM-13_Farmacia": [
+          "titolazione acido-base",
+          "acidi",
+          "basi",
+          "reazioni acido-base"
         ]
       },
       "category": "CORE",
@@ -307,62 +922,81 @@
       "distinctive_for": [],
       "stats": {
         "avg_coverage": 60.0,
-        "min_coverage": 20.0,
-        "max_coverage": 80.0,
-        "presence_in_classes": "8/9",
-        "presence_percentage": 88.9
+        "min_coverage": 25.0,
+        "max_coverage": 100.0,
+        "presence_in_classes": "8/10",
+        "presence_percentage": 80.0
       }
     },
     {
-      "id": 4,
-      "name": "Isotopi e Radioattività",
+      "id": 10,
+      "name": "Chimica Inorganica",
       "core_contents": [
-        "isotopi",
-        "nuclidi",
-        "distribuzione isotopica"
+        "chimica inorganica",
+        "metalli",
+        "non metalli",
+        "ioni"
       ],
-      "description": "Questo modulo si concentra sugli isotopi e sulla loro applicazione in chimica e scienze naturali.",
-      "avg_frequency": 50.0,
+      "description": "Questo modulo introduce i principi della chimica inorganica, inclusi metalli, non metalli e ioni.",
+      "avg_frequency": 22.0,
       "coverage_by_class": {
-        "L-13_Biologia": 66.7,
-        "L-25_Scienze_e_tecnologie_agrarie": 66.7,
-        "L-26_Scienze_e_tecnologie_alimentari": 33.3,
-        "L-27_Scienze_chimiche": 33.3,
-        "L-2_Biotecnologie": 33.3,
-        "L-32_Scienze_naturali_amb": 66.7,
-        "L-34_Geologia": 66.7,
-        "L-7-8-9_Ingegneria": 0.0,
-        "LM-13_Farmacia": 33.3
+        "L-13_Biologia": 50.0,
+        "L-25_Scienze_e_tecnologie_agrarie": 75.0,
+        "L-26_Scienze_e_tecnologie_alimentari": 50.0,
+        "L-27_Scienze_chimiche": 50.0,
+        "L-29_Scienze_farmaceutiche": 100.0,
+        "L-2_Biotecnologie": 100.0,
+        "L-32_Scienze_naturali_amb": 25.0,
+        "L-34_Geologia": 75.0,
+        "L-7-8-9_Ingegneria": 25.0,
+        "LM-13_Farmacia": 100.0
       },
       "concepts_by_class": {
         "L-13_Biologia": [
-          "isotopi",
-          "nuclidi"
+          "ioni",
+          "chimica inorganica"
         ],
         "L-25_Scienze_e_tecnologie_agrarie": [
-          "isotopi",
-          "distribuzione isotopica"
+          "ioni",
+          "chimica inorganica",
+          "metalli"
         ],
         "L-26_Scienze_e_tecnologie_alimentari": [
-          "isotopi"
+          "ioni",
+          "chimica inorganica"
         ],
         "L-27_Scienze_chimiche": [
-          "isotopi"
+          "chimica inorganica",
+          "metalli"
+        ],
+        "L-29_Scienze_farmaceutiche": [
+          "non metalli",
+          "chimica inorganica",
+          "metalli",
+          "ioni"
         ],
         "L-2_Biotecnologie": [
-          "isotopi"
+          "non metalli",
+          "chimica inorganica",
+          "metalli",
+          "ioni"
         ],
         "L-32_Scienze_naturali_amb": [
-          "isotopi",
-          "nuclidi"
+          "chimica inorganica"
         ],
         "L-34_Geologia": [
-          "isotopi",
-          "nuclidi"
+          "non metalli",
+          "chimica inorganica",
+          "metalli"
         ],
-        "L-7-8-9_Ingegneria": [],
+        "L-7-8-9_Ingegneria": [
+          "chimica inorganica"
+        ],
         "LM-13_Farmacia": [
-          "isotopi"
+          "non metalli",
+          "chimica inorganica",
+          "metalli",
+          "ioni"
         ]
       },
       "category": "CORE",
@@ -371,352 +1005,15 @@
       "is_specific": false,
       "distinctive_for": [],
       "stats": {
-        "avg_coverage": 44.4,
-        "min_coverage": 0.0,
-        "max_coverage": 66.7,
-        "presence_in_classes": "8/9",
-        "presence_percentage": 88.9
-      }
-    },
-    {
-      "id": 5,
-      "name": "Soluzioni e Proprietà Colligative",
-      "core_contents": [
-        "proprietà colligative",
-        "molarità",
-        "molalità",
-        "normalità",
-        "preparazione di soluzioni"
-      ],
-      "description": "Questo modulo esplora le soluzioni chimiche e le loro proprietà, inclusi i metodi di preparazione e le proprietà colligative.",
-      "avg_frequency": 50.0,
-      "coverage_by_class": {
-        "L-13_Biologia": 20.0,
-        "L-25_Scienze_e_tecnologie_agrarie": 80.0,
-        "L-26_Scienze_e_tecnologie_alimentari": 40.0,
-        "L-27_Scienze_chimiche": 40.0,
-        "L-2_Biotecnologie": 20.0,
-        "L-32_Scienze_naturali_amb": 80.0,
-        "L-34_Geologia": 40.0,
-        "L-7-8-9_Ingegneria": 20.0,
-        "LM-13_Farmacia": 20.0
-      },
-      "concepts_by_class": {
-        "L-13_Biologia": [
-          "proprietà colligative"
-        ],
-        "L-25_Scienze_e_tecnologie_agrarie": [
-          "normalità",
-          "molalità",
-          "molarità",
-          "proprietà colligative"
-        ],
-        "L-26_Scienze_e_tecnologie_alimentari": [
-          "preparazione di soluzioni",
-          "proprietà colligative"
-        ],
-        "L-27_Scienze_chimiche": [
-          "preparazione di soluzioni",
-          "proprietà colligative"
-        ],
-        "L-2_Biotecnologie": [
-          "proprietà colligative"
-        ],
-        "L-32_Scienze_naturali_amb": [
-          "normalità",
-          "molalità",
-          "molarità",
-          "proprietà colligative"
-        ],
-        "L-34_Geologia": [
-          "molarità",
-          "proprietà colligative"
-        ],
-        "L-7-8-9_Ingegneria": [
-          "proprietà colligative"
-        ],
-        "LM-13_Farmacia": [
-          "proprietà colligative"
-        ]
-      },
-      "category": "TRASVERSALE",
-      "is_core": false,
-      "is_transversal": true,
-      "is_specific": false,
-      "distinctive_for": [
-        "L-25_Scienze_e_tecnologie_agrarie",
-        "L-32_Scienze_naturali_amb"
-      ],
-      "stats": {
-        "avg_coverage": 40.0,
-        "min_coverage": 20.0,
-        "max_coverage": 80.0,
-        "presence_in_classes": "5/9",
-        "presence_percentage": 55.6
-      }
-    },
-    {
-      "id": 6,
-      "name": "Termodinamica e Proprietà Fisiche",
-      "core_contents": [
-        "termodinamica",
-        "energia interna",
-        "enthalpie di legame",
-        "tensione di vapore",
-        "temperatura di ebollizione",
-        "calcolo del ph",
-        "proprietà chimico-fisiche"
-      ],
-      "description": "Questo modulo tratta i principi della termodinamica e le proprietà fisiche delle sostanze, inclusi i cambiamenti di stato e le reazioni energetiche.",
-      "avg_frequency": 52.5,
-      "coverage_by_class": {
-        "L-13_Biologia": 28.6,
-        "L-25_Scienze_e_tecnologie_agrarie": 42.9,
-        "L-26_Scienze_e_tecnologie_alimentari": 71.4,
-        "L-27_Scienze_chimiche": 0.0,
-        "L-2_Biotecnologie": 28.6,
-        "L-32_Scienze_naturali_amb": 28.6,
-        "L-34_Geologia": 28.6,
-        "L-7-8-9_Ingegneria": 0.0,
-        "LM-13_Farmacia": 14.3
-      },
-      "concepts_by_class": {
-        "L-13_Biologia": [
-          "termodinamica",
-          "calcolo del ph"
-        ],
-        "L-25_Scienze_e_tecnologie_agrarie": [
-          "proprietà chimico-fisiche",
-          "temperatura di ebollizione",
-          "tensione di vapore"
-        ],
-        "L-26_Scienze_e_tecnologie_alimentari": [
-          "temperatura di ebollizione",
-          "termodinamica",
-          "tensione di vapore",
-          "energia interna",
-          "calcolo del ph"
-        ],
-        "L-27_Scienze_chimiche": [],
-        "L-2_Biotecnologie": [
-          "proprietà chimico-fisiche",
-          "termodinamica"
-        ],
-        "L-32_Scienze_naturali_amb": [
-          "tensione di vapore",
-          "calcolo del ph"
-        ],
-        "L-34_Geologia": [
-          "tensione di vapore",
-          "termodinamica"
-        ],
-        "L-7-8-9_Ingegneria": [],
-        "LM-13_Farmacia": [
-          "termodinamica"
-        ]
-      },
-      "category": "SPECIFICO",
-      "is_core": false,
-      "is_transversal": false,
-      "is_specific": true,
-      "distinctive_for": [
-        "L-26_Scienze_e_tecnologie_alimentari"
-      ],
-      "stats": {
-        "avg_coverage": 27.0,
-        "min_coverage": 0.0,
-        "max_coverage": 71.4,
-        "presence_in_classes": "2/9",
-        "presence_percentage": 22.2
-      }
-    },
-    {
-      "id": 7,
-      "name": "Chimica Fisica e Cinetica",
-      "core_contents": [
-        "cinetica chimica",
-        "cinetiche del primo ordine",
-        "fattori che influenzano la reazione",
-        "teoria di arrhenius"
-      ],
-      "description": "Questo modulo si concentra sulla cinetica chimica, analizzando i fattori che influenzano la velocità delle reazioni chimiche.",
-      "avg_frequency": 52.5,
-      "coverage_by_class": {
-        "L-13_Biologia": 25.0,
-        "L-25_Scienze_e_tecnologie_agrarie": 0.0,
-        "L-26_Scienze_e_tecnologie_alimentari": 75.0,
-        "L-27_Scienze_chimiche": 25.0,
-        "L-2_Biotecnologie": 50.0,
-        "L-32_Scienze_naturali_amb": 0.0,
-        "L-34_Geologia": 0.0,
-        "L-7-8-9_Ingegneria": 25.0,
-        "LM-13_Farmacia": 25.0
-      },
-      "concepts_by_class": {
-        "L-13_Biologia": [
-          "cinetica chimica"
-        ],
-        "L-25_Scienze_e_tecnologie_agrarie": [],
-        "L-26_Scienze_e_tecnologie_alimentari": [
-          "fattori che influenzano la reazione",
-          "cinetiche del primo ordine",
-          "cinetica chimica"
-        ],
-        "L-27_Scienze_chimiche": [
-          "teoria di arrhenius"
-        ],
-        "L-2_Biotecnologie": [
-          "teoria di arrhenius",
-          "cinetica chimica"
-        ],
-        "L-32_Scienze_naturali_amb": [],
-        "L-34_Geologia": [],
-        "L-7-8-9_Ingegneria": [
-          "cinetica chimica"
-        ],
-        "LM-13_Farmacia": [
-          "cinetica chimica"
-        ]
-      },
-      "category": "SPECIFICO",
-      "is_core": false,
-      "is_transversal": false,
-      "is_specific": true,
-      "distinctive_for": [
-        "L-26_Scienze_e_tecnologie_alimentari",
-        "L-2_Biotecnologie"
-      ],
-      "stats": {
-        "avg_coverage": 25.0,
-        "min_coverage": 0.0,
-        "max_coverage": 75.0,
-        "presence_in_classes": "2/9",
-        "presence_percentage": 22.2
-      }
-    },
-    {
-      "id": 8,
-      "name": "Chimica Inorganica e Organica",
-      "core_contents": [
-        "chimica inorganica",
-        "reazione di combustione",
-        "acidi e basi",
-        "ossidoriduzione"
-      ],
-      "description": "Questo modulo esplora i principi della chimica inorganica e organica, inclusi i tipi di reazioni chimiche e le loro applicazioni.",
-      "avg_frequency": 50.0,
-      "coverage_by_class": {
-        "L-13_Biologia": 0.0,
-        "L-25_Scienze_e_tecnologie_agrarie": 0.0,
-        "L-26_Scienze_e_tecnologie_alimentari": 100.0,
-        "L-27_Scienze_chimiche": 25.0,
-        "L-2_Biotecnologie": 25.0,
-        "L-32_Scienze_naturali_amb": 25.0,
-        "L-34_Geologia": 25.0,
-        "L-7-8-9_Ingegneria": 25.0,
-        "LM-13_Farmacia": 50.0
-      },
-      "concepts_by_class": {
-        "L-13_Biologia": [],
-        "L-25_Scienze_e_tecnologie_agrarie": [],
-        "L-26_Scienze_e_tecnologie_alimentari": [
-          "reazione di combustione",
-          "acidi e basi",
-          "ossidoriduzione",
-          "chimica inorganica"
-        ],
-        "L-27_Scienze_chimiche": [
-          "chimica inorganica"
-        ],
-        "L-2_Biotecnologie": [
-          "chimica inorganica"
-        ],
-        "L-32_Scienze_naturali_amb": [
-          "acidi e basi"
-        ],
-        "L-34_Geologia": [
-          "chimica inorganica"
-        ],
-        "L-7-8-9_Ingegneria": [
-          "chimica inorganica"
-        ],
-        "LM-13_Farmacia": [
-          "acidi e basi",
-          "chimica inorganica"
-        ]
-      },
-      "category": "SPECIFICO",
-      "is_core": false,
-      "is_transversal": false,
-      "is_specific": true,
-      "distinctive_for": [
-        "L-26_Scienze_e_tecnologie_alimentari",
-        "LM-13_Farmacia"
-      ],
-      "stats": {
-        "avg_coverage": 30.6,
-        "min_coverage": 0.0,
+        "avg_coverage": 65.0,
+        "min_coverage": 25.0,
         "max_coverage": 100.0,
-        "presence_in_classes": "2/9",
-        "presence_percentage": 22.2
-      }
-    },
-    {
-      "id": 9,
-      "name": "Metodologia Didattica e Pratica",
-      "core_contents": [
-        "metodi didattici",
-        "esercitazioni in aula",
-        "esercitazioni pratiche",
-        "materiale di riferimento"
-      ],
-      "description": "Questo modulo si concentra sulle metodologie didattiche e sulle pratiche di laboratorio utilizzate nell'insegnamento della chimica.",
-      "avg_frequency": 50.0,
-      "coverage_by_class": {
-        "L-13_Biologia": 75.0,
-        "L-25_Scienze_e_tecnologie_agrarie": 25.0,
-        "L-26_Scienze_e_tecnologie_alimentari": 0.0,
-        "L-27_Scienze_chimiche": 0.0,
-        "L-2_Biotecnologie": 0.0,
-        "L-32_Scienze_naturali_amb": 0.0,
-        "L-34_Geologia": 0.0,
-        "L-7-8-9_Ingegneria": 0.0,
-        "LM-13_Farmacia": 0.0
-      },
-      "concepts_by_class": {
-        "L-13_Biologia": [
-          "materiale di riferimento",
-          "esercitazioni in aula",
-          "metodi didattici"
-        ],
-        "L-25_Scienze_e_tecnologie_agrarie": [
-          "esercitazioni pratiche"
-        ],
-        "L-26_Scienze_e_tecnologie_alimentari": [],
-        "L-27_Scienze_chimiche": [],
-        "L-2_Biotecnologie": [],
-        "L-32_Scienze_naturali_amb": [],
-        "L-34_Geologia": [],
-        "L-7-8-9_Ingegneria": [],
-        "LM-13_Farmacia": []
-      },
-      "category": "SPECIFICO",
-      "is_core": false,
-      "is_transversal": false,
-      "is_specific": true,
-      "distinctive_for": [
-        "L-13_Biologia"
-      ],
-      "stats": {
-        "avg_coverage": 11.1,
-        "min_coverage": 0.0,
-        "max_coverage": 75.0,
-        "presence_in_classes": "1/9",
-        "presence_percentage": 11.1
+        "presence_in_classes": "8/10",
+        "presence_percentage": 80.0
       }
     }
   ],
-  "clustering_notes": "I moduli sono stati raggruppati in base ai temi principali della chimica generale, considerando la frequenza e la distribuzione dei concetti nelle diverse classi di laurea. Ogni modulo rappresenta un'area tematica coerente e significativa.",
+  "clustering_notes": "I moduli sono stati raggruppati in base ai temi principali della chimica generale, considerando la frequenza e la presenza dei concetti nelle diverse classi di laurea. Ogni modulo rappresenta un'area tematica coerente e significativa.",
   "framework": {
     "name": "Evidence-Based Framework",
     "type": "evidence_based",
@@ -725,6 +1022,7 @@
       "L-25_Scienze_e_tecnologie_agrarie",
       "L-26_Scienze_e_tecnologie_alimentari",
       "L-27_Scienze_chimiche",
+      "L-29_Scienze_farmaceutiche",
       "L-2_Biotecnologie",
       "L-32_Scienze_naturali_amb",
       "L-34_Geologia",
@@ -741,14 +1039,15 @@
       "L-25_Scienze_e_tecnologie_agrarie",
       "L-26_Scienze_e_tecnologie_alimentari",
       "L-27_Scienze_chimiche",
+      "L-29_Scienze_farmaceutiche",
       "L-2_Biotecnologie",
       "L-32_Scienze_naturali_amb",
       "L-34_Geologia",
       "L-7-8-9_Ingegneria",
       "LM-13_Farmacia"
     ],
-    "n_classes": 9,
-    "generated_at": "2026-01-07T17:55:33.943465",
+    "n_classes": 10,
+    "generated_at": "2026-01-08T17:05:55.133908",
     "generator_version": "1.1",
     "thresholds": {
       "core": 60,
@@ -756,10 +1055,10 @@
     }
   },
   "summary": {
-    "n_modules": 9,
-    "n_core_modules": 4,
-    "n_transversal_modules": 1,
-    "n_specific_modules": 4,
-    "total_concepts_analyzed": 1024
+    "n_modules": 10,
+    "n_core_modules": 10,
+    "n_transversal_modules": 0,
+    "n_specific_modules": 0,
+    "total_concepts_analyzed": 2152
   }
 }

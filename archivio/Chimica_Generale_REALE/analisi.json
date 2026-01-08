@@ -13,9 +13,9 @@
     "L-7-8-9_Ingegneria",
     "LM-13_Farmacia"
   ],
-  "type": "multiclass_evidence_based",
-  "framework_type": "evidence_based",
-  "created": "2026-01-08T17:05:55.171693",
+  "type": "multiclass",
+  "framework_type": "ideal_mapped",
+  "created": "2026-01-08T16:26:11.299228",
   "n_syllabus_total": 100,
   "n_syllabus_per_class": {
     "L-13_Biologia": 10,
@@ -29,12 +29,22 @@
     "L-7-8-9_Ingegneria": 10,
     "LM-13_Farmacia": 10
   },
-  "n_modules": 10,
-  "n_core_modules": 10,
-  "n_transversal_modules": 0,
-  "n_specific_modules": 0,
-  "thresholds": {
-    "core": 60,
-    "specific": 40
-  }
+  "core_modules": 11,
+  "distinctive_modules": 1,
+  "gap_modules": 0,
+  "total_modules": 12,
+  "coverage_by_class": {
+    "L-13_Biologia": 91.7,
+    "L-25_Scienze_e_tecnologie_agrarie": 88.3,
+    "L-26_Scienze_e_tecnologie_alimentari": 86.7,
+    "L-27_Scienze_chimiche": 90.0,
+    "L-29_Scienze_farmaceutiche": 90.0,
+    "L-2_Biotecnologie": 90.0,
+    "L-32_Scienze_naturali_amb": 90.0,
+    "L-34_Geologia": 90.0,
+    "L-7-8-9_Ingegneria": 88.3,
+    "LM-13_Farmacia": 90.0
+  },
+  "core_threshold": 60,
+  "gap_threshold": 35
 }

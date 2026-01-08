@@ -598,7 +598,7 @@ with tab2:
                                 "Soglia moduli CORE (%)",
                                 min_value=60,
                                 max_value=95,
-                                value=80,
+                                value=60,
                                 step=5,
                                 help="Un modulo è CORE se presente in almeno questa % di classi",
                                 key="eb_core_threshold"
@@ -609,7 +609,7 @@ with tab2:
                                 "Soglia moduli SPECIFICI (%)",
                                 min_value=20,
                                 max_value=60,
-                                value=50,
+                                value=40,
                                 step=5,
                                 help="Un modulo è SPECIFICO se presente in meno di questa % di classi",
                                 key="eb_specific_threshold"

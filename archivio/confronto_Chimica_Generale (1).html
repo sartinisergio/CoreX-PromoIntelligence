@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Confronto Framework - Chimica_Generale</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin: 20px; background: #f5f5f5; }
+        .container { max-width: 1400px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #1a237e; border-bottom: 3px solid #673ab7; padding-bottom: 15px; }
+        h2 { color: #4527a0; margin-top: 40px; padding-top: 20px; border-top: 1px solid #e0e0e0; }
+        h3 { color: #5e35b1; margin-top: 25px; }
+        .version-badge { background: #673ab7; color: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8em; margin-left: 10px; }
+        .summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 30px 0; }
+        .summary-card { padding: 25px; border-radius: 12px; text-align: center; color: white; }
+        .summary-card.ideal { background: linear-gradient(135deg, #3f51b5, #1a237e); }
+        .summary-card.real { background: linear-gradient(135deg, #4caf50, #2e7d32); }
+        .summary-card.evidence { background: linear-gradient(135deg, #ff9800, #e65100); }
+        .summary-card .number { font-size: 3em; font-weight: bold; }
+        .summary-card .label { font-size: 1.1em; opacity: 0.9; }
+        .summary-card .status { font-size: 0.9em; margin-top: 5px; opacity: 0.8; }
+        .metric-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin: 20px 0; }
+        .metric { background: #f8f9fa; padding: 15px; border-radius: 8px; text-align: center; }
+        .metric .value { font-size: 2em; font-weight: bold; color: #1a237e; }
+        .metric .label { color: #666; font-size: 0.9em; }
+        .section { background: #fafafa; border-radius: 10px; padding: 20px; margin: 20px 0; }
+        .gap-item { background: #ffebee; border-left: 4px solid #f44336; padding: 15px; margin: 10px 0; border-radius: 0 8px 8px 0; }
+        .gap-item.media { background: #fff8e1; border-left-color: #ff9800; }
+        .emergent-item { background: #fff3e0; border-left: 4px solid #ff9800; padding: 15px; margin: 10px 0; border-radius: 0 8px 8px 0; }
+        .emergent-item.core { background: #ffebee; border-left-color: #f44336; }
+        .covered-item { background: #e8f5e9; border-left: 4px solid #4caf50; padding: 15px; margin: 10px 0; border-radius: 0 8px 8px 0; }
+        .opportunity { background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; margin: 10px 0; }
+        .opportunity.alta { border-left: 4px solid #f44336; }
+        .opportunity.media { border-left: 4px solid #ff9800; }
+        .opportunity.bassa { border-left: 4px solid #4caf50; }
+        .priority-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 500; }
+        .priority-badge.alta { background: #ffcdd2; color: #c62828; }
+        .priority-badge.media { background: #ffe0b2; color: #e65100; }
+        .priority-badge.bassa { background: #c8e6c9; color: #2e7d32; }
+        .type-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.8em; margin-left: 10px; background: #e3f2fd; color: #1565c0; }
+        .keyword-tag { display: inline-block; background: #e8eaf6; padding: 2px 8px; margin: 2px; border-radius: 10px; font-size: 0.8em; color: #3f51b5; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.9em; }
+        th, td { padding: 12px 8px; text-align: left; border-bottom: 1px solid #e0e0e0; }
+        th { background: #f5f5f5; font-weight: 600; color: #333; }
+        tr:hover { background: #fafafa; }
+        .match-high { color: #2e7d32; font-weight: 500; }
+        .match-medium { color: #f57c00; }
+        .match-low { color: #c62828; }
+        .concordance-bar { height: 20px; background: #e0e0e0; border-radius: 10px; overflow: hidden; margin: 10px 0; }
+        .concordance-fill { height: 100%; border-radius: 10px; }
+        .concordance-fill.high { background: linear-gradient(90deg, #4caf50, #81c784); }
+        .concordance-fill.medium { background: linear-gradient(90deg, #ff9800, #ffb74d); }
+        .concordance-fill.low { background: linear-gradient(90deg, #f44336, #e57373); }
+        .multi-match { font-size: 0.85em; color: #666; }
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e0e0e0; color: #888; text-align: center; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Confronto Framework - Chimica Generale <span class="version-badge">v2.1 Stemming</span></h1>
+    <p>Analisi comparativa con <strong>Stemming Automatico Italiano</strong> - funziona per qualsiasi materia</p>
+    <p><small>Generato il 2026-01-08 17:43</small></p>
+    
+    <div class="summary">
+        <div class="summary-card ideal">
+            <div class="number">12</div>
+            <div class="label">Moduli Framework Ideale</div>
+            <div class="status">✓ Caricato</div>
+        </div>
+        <div class="summary-card real">
+            <div class="number">12</div>
+            <div class="label">Moduli Framework Reale</div>
+            <div class="status">✓ Caricato</div>
+        </div>
+        <div class="summary-card evidence">
+            <div class="number">10</div>
+            <div class="label">Moduli Evidence-Based</div>
+            <div class="status">✓ Caricato</div>
+        </div>
+    </div>
+
+    <h2>📊 Gap Formativi - Copertura Framework Ideale</h2>
+    <p>Moduli del framework ideale e loro copertura nei programmi reali</p>
+    
+    <div class="metric-row">
+        <div class="metric">
+            <div class="value">12</div>
+            <div class="label">Moduli Ideali</div>
+        </div>
+        <div class="metric">
+            <div class="value" style="color: #2e7d32;">6</div>
+            <div class="label">Coperti (≥40%)</div>
+        </div>
+        <div class="metric">
+            <div class="value" style="color: #ff9800;">5</div>
+            <div class="label">Parziali (15-40%)</div>
+        </div>
+        <div class="metric">
+            <div class="value" style="color: #f44336;">1</div>
+            <div class="label">Non Coperti</div>
+        </div>
+    </div>
+    
+    <div class="concordance-bar">
+        <div class="concordance-fill medium" style="width: 50.0%;"></div>
+    </div>
+    <p style="text-align: center; font-weight: bold; color: #ff9800;">
+        Copertura: 50%
+    </p>
+
+    <h3>✅ Moduli Ideali Coperti</h3>
+
+    <div class="covered-item">
+        <strong>Struttura atomica e tavola periodica</strong> → <em>Struttura Atomica e Teoria Atomica</em>
+        <span class="priority-badge media">57%</span>
+        <span class="type-badge">CORE</span>
+        <span class="type-badge">1:1</span>
+        <br><small>Keywords: atom, orbital, quantic, numer, configur</small>
+    </div>
+
+    <div class="covered-item">
+        <strong>Stechiometria e reazioni chimiche</strong> → <em>Reazioni Chimiche e Stechiometria</em>
+        <span class="priority-badge media">49%</span>
+        <span class="type-badge">CORE</span>
+        <span class="type-badge">1:N</span>
+        <br><small>Keywords: reazion, stechiometr, chimic, bilanc</small>
+    </div>
+
+    <div class="covered-item">
+        <strong>Termodinamica e termochimica</strong> → <em>Termodinamica Chimica</em>
+        <span class="priority-badge media">51%</span>
+        <span class="type-badge">CORE</span>
+        <span class="type-badge">1:1</span>
+        <br><small>Keywords: entalp, liber, entrop, energ, termodinam</small>
+    </div>
+
+    <div class="covered-item">
+        <strong>Cinetica chimica</strong> → <em>Cinetica Chimica</em>
+        <span class="priority-badge alta">69%</span>
+        <span class="type-badge">CORE</span>
+        <span class="type-badge">1:N</span>
+        <br><small>Keywords: veloc, cinet, reazion, chimic, energ</small>
+    </div>
+
+    <div class="covered-item">
+        <strong>Equilibri chimici</strong> → <em>Equilibri Chimici</em>
+        <span class="priority-badge alta">60%</span>
+        <span class="type-badge">CORE</span>
+        <span class="type-badge">1:N</span>
+        <br><small>Keywords: costant, equilibr, chimic, princip, chatelier</small>
+    </div>
+
+    <div class="covered-item">
+        <strong>Equilibri acido-base</strong> → <em>Acidi e Basi</em>
+        <span class="priority-badge media">47%</span>
+        <span class="type-badge">CORE</span>
+        <span class="type-badge">1:N</span>
+        <br><small>Keywords: ph, bas, titol</small>
+    </div>
+
+    <h3>❌ Moduli Non Coperti o Parziali</h3>
+
+    <div class="gap-item alta">
+        <strong>Elettrochimica</strong>
+        <span class="priority-badge alta">ALTA</span>
+        <br><small>Nessun modulo EB corrisponde</small>
+    </div>
+
+    <div class="gap-item alta">
+        <strong>Legame chimico e geometria molecolare</strong>
+        <span class="priority-badge alta">ALTA</span>
+        <br><small>Match parziale (20%) con 'Termodinamica Chimica'</small>
+    </div>
+
+    <div class="gap-item alta">
+        <strong>Stati materia e soluzioni</strong>
+        <span class="priority-badge alta">ALTA</span>
+        <br><small>Match parziale (23%) con 'Soluzioni e Proprietà delle Soluzioni'</small>
+    </div>
+
+    <div class="gap-item alta">
+        <strong>Chimica elementi principali</strong>
+        <span class="priority-badge alta">ALTA</span>
+        <br><small>Match parziale (19%) con 'Equilibri Chimici'</small>
+    </div>
+
+    <div class="gap-item alta">
+        <strong>Tecniche analitiche e laboratorio</strong>
+        <span class="priority-badge alta">ALTA</span>
+        <br><small>Match parziale (22%) con 'Acidi e Basi'</small>
+    </div>
+
+    <div class="gap-item alta">
+        <strong>Sicurezza, sostenibilità e applicazioni</strong>
+        <span class="priority-badge alta">ALTA</span>
+        <br><small>Match parziale (19%) con 'Equilibri Chimici'</small>
+    </div>
+
+    <h2>🆕 Contenuti Emergenti</h2>
+    <p>Moduli evidence-based e loro corrispondenza con il framework ideale</p>
+    
+    <div class="metric-row">
+        <div class="metric">
+            <div class="value">10</div>
+            <div class="label">Moduli Evidence-Based</div>
+        </div>
+        <div class="metric">
+            <div class="value" style="color: #2e7d32;">9</div>
+            <div class="label">Mappati su Ideale</div>
+        </div>
+        <div class="metric">
+            <div class="value" style="color: #ff9800;">1</div>
+            <div class="label">Emergenti (nuovi)</div>
+        </div>
+    </div>
+
+    <h3>⚠️ Moduli Emergenti (NON nel framework ideale)</h3>
+
+    <div class="emergent-item core">
+        <strong>Proprietà Fisiche e Chimiche delle Sostanze</strong>
+        <span class="type-badge">CORE</span>
+        <span class="priority-badge alta">100% classi</span>
+        <br><em>⚠️ ATTENZIONE: Tema insegnato universalmente ma ASSENTE nel framework ideale - LACUNA CRITICA</em>
+        <br><small>Contenuti: proprietà periodiche, proprietà colligative, proprietà fisiche, proprietà chimiche, solubilità</small>
+    </div>
+
+    <h2>🔍 Validazione Mapping</h2>
+    <p>Verifica coerenza tra analisi con framework ideale e analisi bottom-up</p>
+    
+    <div class="section">
+        <div class="metric-row">
+            <div class="metric">
+                <div class="value">50%</div>
+                <div class="label">Tasso Concordanza</div>
+            </div>
+        </div>
+        <div class="concordance-bar">
+            <div class="concordance-fill medium" style="width: 50.0%;"></div>
+        </div>
+        <p><strong>Interpretazione:</strong> ⚠️ Concordanza moderata - ci sono differenze significative</p>
+    </div>
+
+    <h2>💼 Opportunità Commerciali</h2>
+    <p>Opportunità commerciali identificate dal confronto</p>
+    
+    <div class="metric-row">
+        <div class="metric">
+            <div class="value">2</div>
+            <div class="label">Totale</div>
+        </div>
+        <div class="metric">
+            <div class="value" style="color: #f44336;">1</div>
+            <div class="label">Gap Formativi</div>
+        </div>
+        <div class="metric">
+            <div class="value" style="color: #ff9800;">1</div>
+            <div class="label">Contenuti Emergenti</div>
+        </div>
+        <div class="metric">
+            <div class="value" style="color: #2196f3;">0</div>
+            <div class="label">Nicchie</div>
+        </div>
+    </div>
+
+    <div class="opportunity alta">
+        <span class="priority-badge alta">ALTA</span>
+        <span class="type-badge">Gap Formativo</span>
+        <h4 style="margin: 10px 0 5px 0;">Elettrochimica</h4>
+        <p style="margin: 5px 0;">Il modulo 'Elettrochimica' del framework Zanichelli NON ha corrispondenza nei programmi reali</p>
+        <p style="margin: 5px 0; color: #1565c0;"><strong>Azione:</strong> Verificare se il modulo è obsoleto o se serve materiale didattico aggiuntivo</p>
+    </div>
+
+    <div class="opportunity alta">
+        <span class="priority-badge alta">ALTA</span>
+        <span class="type-badge">Contenuto Emergente</span>
+        <h4 style="margin: 10px 0 5px 0;">Proprietà Fisiche e Chimiche delle Sostanze</h4>
+        <p style="margin: 5px 0;">Il tema 'Proprietà Fisiche e Chimiche delle Sostanze' è insegnato nel 100% delle classi ma NON è nel framework Zanichelli</p>
+        <p style="margin: 5px 0; color: #1565c0;"><strong>Azione:</strong> AZIONE PRIORITARIA: Valutare aggiunta al framework o creazione materiale supplementare</p>
+    </div>
+
+    <h2>📋 Matrice di Confronto</h2>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 22%;">Modulo Ideale</th>
+                <th style="width: 18%;">Match Reale</th>
+                <th style="width: 8%;">Sim.</th>
+                <th style="width: 22%;">Match Evidence-Based</th>
+                <th style="width: 8%;">Sim.</th>
+                <th style="width: 10%;">Categoria</th>
+                <th style="width: 12%;">Keywords</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td><strong>Struttura atomica e tavola periodica</strong></td>
+                <td>Struttura atomica e tavola periodica</td>
+                <td class="match-high">100%</td>
+                <td>Struttura Atomica e Teoria Atomica</td>
+                <td class="match-high">57%</td>
+                <td>CORE</td>
+                <td><span class='keyword-tag'>atom</span> <span class='keyword-tag'>orbital</span> <span class='keyword-tag'>quantic</span></td>
+            </tr>
+
+            <tr>
+                <td><strong>Legame chimico e geometria molecolare</strong></td>
+                <td>Legame chimico e geometria molecolare</td>
+                <td class="match-high">100%</td>
+                <td>Termodinamica Chimica<br><span class='multi-match'>+2 altri</span></td>
+                <td class="match-low">20%</td>
+                <td>CORE</td>
+                <td><span class='keyword-tag'>chimic</span> <span class='keyword-tag'>energ</span></td>
+            </tr>
+
+            <tr>
+                <td><strong>Stechiometria e reazioni chimiche</strong></td>
+                <td>Stechiometria e reazioni chimiche</td>
+                <td class="match-high">100%</td>
+                <td>Reazioni Chimiche e Stechiometria<br><span class='multi-match'>+2 altri</span></td>
+                <td class="match-medium">49%</td>
+                <td>CORE</td>
+                <td><span class='keyword-tag'>reazion</span> <span class='keyword-tag'>stechiometr</span> <span class='keyword-tag'>chimic</span></td>
+            </tr>
+
+            <tr>
+                <td><strong>Termodinamica e termochimica</strong></td>
+                <td>Termodinamica e termochimica</td>
+                <td class="match-high">100%</td>
+                <td>Termodinamica Chimica</td>
+                <td class="match-high">51%</td>
+                <td>CORE</td>
+                <td><span class='keyword-tag'>entalp</span> <span class='keyword-tag'>liber</span> <span class='keyword-tag'>entrop</span></td>
+            </tr>
+
+            <tr>
+                <td><strong>Stati materia e soluzioni</strong></td>
+                <td>Stati materia e soluzioni</td>
+                <td class="match-high">100%</td>
+                <td>Soluzioni e Proprietà delle Soluzioni</td>
+                <td class="match-low">23%</td>
+                <td>CORE</td>
+                <td><span class='keyword-tag'>soluzion</span></td>
+            </tr>
+
+            <tr>
+                <td><strong>Cinetica chimica</strong></td>
+                <td>Cinetica chimica</td>
+                <td class="match-high">100%</td>
+                <td>Cinetica Chimica<br><span class='multi-match'>+2 altri</span></td>
+                <td class="match-high">69%</td>
+                <td>CORE</td>
+                <td><span class='keyword-tag'>veloc</span> <span class='keyword-tag'>cinet</span> <span class='keyword-tag'>reazion</span></td>
+            </tr>
+
+            <tr>
+                <td><strong>Equilibri chimici</strong></td>
+                <td>Equilibri chimici</td>
+                <td class="match-high">100%</td>
+                <td>Equilibri Chimici<br><span class='multi-match'>+2 altri</span></td>
+                <td class="match-high">60%</td>
+                <td>CORE</td>
+                <td><span class='keyword-tag'>costant</span> <span class='keyword-tag'>equilibr</span> <span class='keyword-tag'>chimic</span></td>
+            </tr>
+
+            <tr>
+                <td><strong>Equilibri acido-base</strong></td>
+                <td>Equilibri acido-base</td>
+                <td class="match-high">100%</td>
+                <td>Acidi e Basi<br><span class='multi-match'>+1 altri</span></td>
+                <td class="match-medium">47%</td>
+                <td>CORE</td>
+                <td><span class='keyword-tag'>ph</span> <span class='keyword-tag'>bas</span> <span class='keyword-tag'>titol</span></td>
+            </tr>
+
+            <tr>
+                <td><strong>Elettrochimica</strong></td>
+                <td>Elettrochimica</td>
+                <td class="match-high">100%</td>
+                <td>-</td>
+                <td class="match-low">0%</td>
+                <td>-</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td><strong>Chimica elementi principali</strong></td>
+                <td>Chimica elementi principali</td>
+                <td class="match-high">100%</td>
+                <td>Equilibri Chimici</td>
+                <td class="match-low">19%</td>
+                <td>CORE</td>
+                <td><span class='keyword-tag'>chimic</span> <span class='keyword-tag'>ph</span></td>
+            </tr>
+
+            <tr>
+                <td><strong>Tecniche analitiche e laboratorio</strong></td>
+                <td>Tecniche analitiche e laboratorio</td>
+                <td class="match-high">100%</td>
+                <td>Acidi e Basi</td>
+                <td class="match-low">22%</td>
+                <td>CORE</td>
+                <td><span class='keyword-tag'>titol</span> <span class='keyword-tag'>bas</span></td>
+            </tr>
+
+            <tr>
+                <td><strong>Sicurezza, sostenibilità e applicazioni</strong></td>
+                <td>Sicurezza, sostenibilità e applicazioni</td>
+                <td class="match-high">100%</td>
+                <td>Equilibri Chimici</td>
+                <td class="match-low">19%</td>
+                <td>CORE</td>
+                <td><span class='keyword-tag'>chimic</span> <span class='keyword-tag'>ph</span> <span class='keyword-tag'>princip</span></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <div class="footer">
+        <p><strong>CoreX PromoIntelligence - Framework Comparator v2.1</strong></p>
+        <p>Algoritmo: Stemming Italiano Automatico + Coverage Mapping 1:N / N:1</p>
+        <p>Generato il 2026-01-08 17:43</p>
+    </div>
+</div>
+</body>
+</html>

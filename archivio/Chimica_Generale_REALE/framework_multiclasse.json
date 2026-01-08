@@ -1,0 +1,1990 @@
+{
+  "framework": {
+    "name": "Chimica_Generale - Analisi Multiclasse su Framework Ideale",
+    "type": "multiclass_on_ideal_framework",
+    "reference_framework": "Framework Unico Valutazione Chimica Generale - Multidisciplinare",
+    "classes_analyzed": [
+      "L-13_Biologia",
+      "L-25_Scienze_e_tecnologie_agrarie",
+      "L-26_Scienze_e_tecnologie_alimentari",
+      "L-27_Scienze_chimiche",
+      "L-29_Scienze_farmaceutiche",
+      "L-2_Biotecnologie",
+      "L-32_Scienze_naturali_amb",
+      "L-34_Geologia",
+      "L-7-8-9_Ingegneria",
+      "LM-13_Farmacia"
+    ],
+    "generation_date": "2026-01-08T16:26:11.277189",
+    "thresholds": {
+      "core": 60.0,
+      "gap": 40.0
+    }
+  },
+  "summary": {
+    "n_classes": 10,
+    "n_modules_total": 12,
+    "n_modules_core": 11,
+    "n_modules_distinctive": 1,
+    "overall_coverage_by_class": {
+      "L-13_Biologia": 91.7,
+      "L-25_Scienze_e_tecnologie_agrarie": 88.3,
+      "L-26_Scienze_e_tecnologie_alimentari": 86.7,
+      "L-27_Scienze_chimiche": 90.0,
+      "L-29_Scienze_farmaceutiche": 90.0,
+      "L-2_Biotecnologie": 90.0,
+      "L-32_Scienze_naturali_amb": 90.0,
+      "L-34_Geologia": 90.0,
+      "L-7-8-9_Ingegneria": 88.3,
+      "LM-13_Farmacia": 90.0
+    }
+  },
+  "core_modules": [
+    {
+      "id": 1,
+      "name": "Struttura atomica e tavola periodica",
+      "avg_coverage": 100.0
+    },
+    {
+      "id": 2,
+      "name": "Legame chimico e geometria molecolare",
+      "avg_coverage": 98.0
+    },
+    {
+      "id": 3,
+      "name": "Stechiometria e reazioni chimiche",
+      "avg_coverage": 100.0
+    },
+    {
+      "id": 4,
+      "name": "Termodinamica e termochimica",
+      "avg_coverage": 98.0
+    },
+    {
+      "id": 5,
+      "name": "Stati materia e soluzioni",
+      "avg_coverage": 100.0
+    },
+    {
+      "id": 6,
+      "name": "Cinetica chimica",
+      "avg_coverage": 100.0
+    },
+    {
+      "id": 7,
+      "name": "Equilibri chimici",
+      "avg_coverage": 80.0
+    },
+    {
+      "id": 8,
+      "name": "Equilibri acido-base",
+      "avg_coverage": 94.0
+    },
+    {
+      "id": 9,
+      "name": "Elettrochimica",
+      "avg_coverage": 74.0
+    },
+    {
+      "id": 11,
+      "name": "Tecniche analitiche e laboratorio",
+      "avg_coverage": 68.0
+    },
+    {
+      "id": 12,
+      "name": "Sicurezza, sostenibilità e applicazioni",
+      "avg_coverage": 86.0
+    }
+  ],
+  "distinctive_modules": [
+    {
+      "id": 11,
+      "name": "Tecniche analitiche e laboratorio",
+      "distinctive_for": [
+        "L-2_Biotecnologie"
+      ],
+      "coverage_range": "60%-100%"
+    }
+  ],
+  "gap_by_class": {},
+  "class_details": {
+    "L-13_Biologia": {
+      "n_syllabus": 10,
+      "n_concepts_extracted": 414,
+      "overall_coverage": 91.7
+    },
+    "L-25_Scienze_e_tecnologie_agrarie": {
+      "n_syllabus": 10,
+      "n_concepts_extracted": 471,
+      "overall_coverage": 88.3
+    },
+    "L-26_Scienze_e_tecnologie_alimentari": {
+      "n_syllabus": 10,
+      "n_concepts_extracted": 458,
+      "overall_coverage": 86.7
+    },
+    "L-27_Scienze_chimiche": {
+      "n_syllabus": 10,
+      "n_concepts_extracted": 442,
+      "overall_coverage": 90.0
+    },
+    "L-29_Scienze_farmaceutiche": {
+      "n_syllabus": 10,
+      "n_concepts_extracted": 534,
+      "overall_coverage": 90.0
+    },
+    "L-2_Biotecnologie": {
+      "n_syllabus": 10,
+      "n_concepts_extracted": 448,
+      "overall_coverage": 90.0
+    },
+    "L-32_Scienze_naturali_amb": {
+      "n_syllabus": 10,
+      "n_concepts_extracted": 496,
+      "overall_coverage": 90.0
+    },
+    "L-34_Geologia": {
+      "n_syllabus": 10,
+      "n_concepts_extracted": 461,
+      "overall_coverage": 90.0
+    },
+    "L-7-8-9_Ingegneria": {
+      "n_syllabus": 9,
+      "n_concepts_extracted": 408,
+      "overall_coverage": 88.3
+    },
+    "LM-13_Farmacia": {
+      "n_syllabus": 10,
+      "n_concepts_extracted": 546,
+      "overall_coverage": 90.0
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "name": "Struttura atomica e tavola periodica",
+      "core_contents": [
+        "Particelle subatomiche, isotopi, numero Avogadro",
+        "Modello Bohr, spettri atomici",
+        "Numeri quantici, orbitali s/p/d/f",
+        "Configurazioni elettroniche, eccezioni",
+        "Raggio atomico, IE, elettronegatività"
+      ],
+      "coverage_by_class": {
+        "L-13_Biologia": 100.0,
+        "L-25_Scienze_e_tecnologie_agrarie": 100.0,
+        "L-26_Scienze_e_tecnologie_alimentari": 100.0,
+        "L-27_Scienze_chimiche": 100.0,
+        "L-29_Scienze_farmaceutiche": 100.0,
+        "L-2_Biotecnologie": 100.0,
+        "L-32_Scienze_naturali_amb": 100.0,
+        "L-34_Geologia": 100.0,
+        "L-7-8-9_Ingegneria": 100.0,
+        "LM-13_Farmacia": 100.0
+      },
+      "avg_coverage": 100.0,
+      "min_coverage": 100.0,
+      "max_coverage": 100.0,
+      "is_core": true,
+      "is_distinctive": false,
+      "distinctive_for": [],
+      "gap_for": [],
+      "concepts_by_class": {
+        "L-13_Biologia": [
+          "isotopi",
+          "numeri quantici",
+          "orbitali ibridi",
+          "orbitali",
+          "elettronegatività",
+          "numero atomico",
+          "costante di avogadro",
+          "modelli atomici",
+          "peso atomico",
+          "numero di massa"
+        ],
+        "L-25_Scienze_e_tecnologie_agrarie": [
+          "numeri quantici",
+          "elettronegatività",
+          "numero atomico",
+          "numero di ossidazione",
+          "numero di avogadro",
+          "orbitali atomici ibridi",
+          "modelli atomici",
+          "orbitali atomici",
+          "peso atomico",
+          "isotopi"
+        ],
+        "L-26_Scienze_e_tecnologie_alimentari": [
+          "numeri quantici",
+          "elettronegatività",
+          "isotopi",
+          "numero di avogadro",
+          "orbitali",
+          "numero atomico",
+          "numero di massa",
+          "numero di ossidazione",
+          "orbitali atomici",
+          "raggi atomici"
+        ],
+        "L-27_Scienze_chimiche": [
+          "orbitali atomici",
+          "isotopi",
+          "elettronegatività",
+          "atomi",
+          "numero atomico",
+          "numero di massa",
+          "modello vsepr",
+          "numeri quantici",
+          "configurazioni elettroniche",
+          "costante di avogadro"
+        ],
+        "L-29_Scienze_farmaceutiche": [
+          "isotopi",
+          "orbitali atomici",
+          "numero atomico",
+          "atomi",
+          "numero di massa",
+          "numeri quantici",
+          "elettronegatività",
+          "modello vsepr",
+          "elettroni",
+          "ioni"
+        ],
+        "L-2_Biotecnologie": [
+          "isotopi",
+          "orbitali ibridi",
+          "numeri quantici",
+          "numero di ossidazione",
+          "elettronegatività",
+          "orbitali atomici",
+          "ioni",
+          "orbitali",
+          "configurazioni elettroniche",
+          "atomi"
+        ],
+        "L-32_Scienze_naturali_amb": [
+          "isotopi",
+          "numeri quantici",
+          "numero di avogadro",
+          "elettronegatività",
+          "orbitali ibridi",
+          "orbitali",
+          "atomi",
+          "orbitali atomici",
+          "modelli atomici",
+          "particelle fondamentali"
+        ],
+        "L-34_Geologia": [
+          "isotopi",
+          "numeri quantici",
+          "elettronegatività",
+          "numero di ossidazione",
+          "configurazioni elettroniche",
+          "numero di avogadro",
+          "orbitali ibridi",
+          "particelle subatomiche",
+          "costante di avogadro",
+          "numero atomico"
+        ],
+        "L-7-8-9_Ingegneria": [
+          "orbitali atomici",
+          "numeri quantici",
+          "configurazioni elettroniche",
+          "elettronegatività",
+          "isotopi",
+          "ibridazione",
+          "numero di avogadro",
+          "numero atomico",
+          "numero di massa",
+          "costante di avogadro"
+        ],
+        "LM-13_Farmacia": [
+          "isotopi",
+          "orbitali atomici",
+          "numero di avogadro",
+          "ioni",
+          "elettronegatività",
+          "numeri quantici",
+          "numero di ossidazione",
+          "raggi atomici",
+          "ibridazione",
+          "teoria orbitali molecolari"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "name": "Legame chimico e geometria molecolare",
+      "core_contents": [
+        "Teoria Lewis, regola ottetto/18 elettroni",
+        "VSEPR (lineare, planare, tetraedrica)",
+        "Ibridazione sp/sp2/sp3",
+        "Polarità legami/molecole, momento dipolare",
+        "Legami metallici, energia reticolare"
+      ],
+      "coverage_by_class": {
+        "L-13_Biologia": 100.0,
+        "L-25_Scienze_e_tecnologie_agrarie": 100.0,
+        "L-26_Scienze_e_tecnologie_alimentari": 100.0,
+        "L-27_Scienze_chimiche": 100.0,
+        "L-29_Scienze_farmaceutiche": 100.0,
+        "L-2_Biotecnologie": 100.0,
+        "L-32_Scienze_naturali_amb": 100.0,
+        "L-34_Geologia": 100.0,
+        "L-7-8-9_Ingegneria": 80.0,
+        "LM-13_Farmacia": 100.0
+      },
+      "avg_coverage": 98.0,
+      "min_coverage": 80.0,
+      "max_coverage": 100.0,
+      "is_core": true,
+      "is_distinctive": false,
+      "distinctive_for": [],
+      "gap_for": [],
+      "concepts_by_class": {
+        "L-13_Biologia": [
+          "legame chimico",
+          "equilibrio chimico",
+          "mole",
+          "legame covalente",
+          "legame ionico",
+          "teoria vsepr",
+          "teoria del legame di valenza",
+          "orbitali ibridi",
+          "orbitali",
+          "regola dell'ottetto"
+        ],
+        "L-25_Scienze_e_tecnologie_agrarie": [
+          "legame chimico",
+          "legame covalente",
+          "legame ionico",
+          "equilibrio chimico",
+          "mole",
+          "legame metallico",
+          "teoria del legame di valenza",
+          "formule di lewis",
+          "orbitali atomici ibridi",
+          "orbitali atomici"
+        ],
+        "L-26_Scienze_e_tecnologie_alimentari": [
+          "legame ionico",
+          "legame chimico",
+          "legame covalente",
+          "teoria atomica",
+          "regola dell'ottetto",
+          "orbitali",
+          "legami chimici",
+          "legame metallico",
+          "teoria del legame di valenza",
+          "teoria vsepr"
+        ],
+        "L-27_Scienze_chimiche": [
+          "equilibrio chimico",
+          "legame chimico",
+          "mole",
+          "orbitali atomici",
+          "modello vsepr",
+          "legame ionico",
+          "energia libera",
+          "formule di lewis",
+          "teoria vsepr",
+          "regola di hund"
+        ],
+        "L-29_Scienze_farmaceutiche": [
+          "legame chimico",
+          "legame ionico",
+          "mole",
+          "orbitali atomici",
+          "legame covalente",
+          "strutture di lewis",
+          "molecole",
+          "equilibrio chimico",
+          "teoria del legame di valenza",
+          "teoria atomica"
+        ],
+        "L-2_Biotecnologie": [
+          "legame ionico",
+          "legame covalente",
+          "orbitali ibridi",
+          "strutture di lewis",
+          "teoria atomica",
+          "teoria vsepr",
+          "mole",
+          "equilibrio chimico",
+          "teoria del legame di valenza",
+          "orbitali atomici"
+        ],
+        "L-32_Scienze_naturali_amb": [
+          "legame ionico",
+          "legame covalente",
+          "legame chimico",
+          "legame metallico",
+          "teoria del legame di valenza",
+          "teoria vsepr",
+          "orbitali ibridi",
+          "orbitali",
+          "mole",
+          "equilibrio chimico"
+        ],
+        "L-34_Geologia": [
+          "legame chimico",
+          "equilibrio chimico",
+          "legame ionico",
+          "legame covalente",
+          "teoria del legame di valenza",
+          "orbitali ibridi",
+          "energia di ionizzazione",
+          "regola dell'ottetto",
+          "strutture di lewis",
+          "elettroni"
+        ],
+        "L-7-8-9_Ingegneria": [
+          "legame chimico",
+          "legame ionico",
+          "legame metallico",
+          "equilibrio chimico",
+          "orbitali atomici",
+          "legame covalente",
+          "legami deboli",
+          "energia reticolare",
+          "regola di hund",
+          "teoria del legame di valenza"
+        ],
+        "LM-13_Farmacia": [
+          "legame ionico",
+          "equilibrio chimico",
+          "orbitali atomici",
+          "legame covalente",
+          "strutture di lewis",
+          "molecole",
+          "teoria vsepr",
+          "regola dell'ottetto",
+          "legame chimico",
+          "legame metallico"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "name": "Stechiometria e reazioni chimiche",
+      "core_contents": [
+        "Mole, massa molare, composizione %",
+        "Bilanciamento equazioni, yield teorico/esperim.",
+        "Reazioni: precipitazione, acido-base, redox",
+        "Stechiometria soluzioni, diluizioni",
+        "Numeri ossidazione, bilanciamento redox"
+      ],
+      "coverage_by_class": {
+        "L-13_Biologia": 100.0,
+        "L-25_Scienze_e_tecnologie_agrarie": 100.0,
+        "L-26_Scienze_e_tecnologie_alimentari": 100.0,
+        "L-27_Scienze_chimiche": 100.0,
+        "L-29_Scienze_farmaceutiche": 100.0,
+        "L-2_Biotecnologie": 100.0,
+        "L-32_Scienze_naturali_amb": 100.0,
+        "L-34_Geologia": 100.0,
+        "L-7-8-9_Ingegneria": 100.0,
+        "LM-13_Farmacia": 100.0
+      },
+      "avg_coverage": 100.0,
+      "min_coverage": 100.0,
+      "max_coverage": 100.0,
+      "is_core": true,
+      "is_distinctive": false,
+      "distinctive_for": [],
+      "gap_for": [],
+      "concepts_by_class": {
+        "L-13_Biologia": [
+          "legame chimico",
+          "reazioni chimiche",
+          "mole",
+          "legame covalente",
+          "legame ionico",
+          "equilibri acido-base",
+          "soluzioni tampone",
+          "numeri quantici",
+          "teoria del legame di valenza",
+          "stechiometria"
+        ],
+        "L-25_Scienze_e_tecnologie_agrarie": [
+          "legame chimico",
+          "legame covalente",
+          "legame ionico",
+          "mole",
+          "legame metallico",
+          "reazioni chimiche",
+          "soluzioni",
+          "numeri quantici",
+          "massa atomica",
+          "teoria del legame di valenza"
+        ],
+        "L-26_Scienze_e_tecnologie_alimentari": [
+          "reazioni chimiche",
+          "numeri quantici",
+          "legame ionico",
+          "legame chimico",
+          "legame covalente",
+          "soluzioni",
+          "massa atomica",
+          "legame metallico",
+          "concetto di mole",
+          "soluzioni tampone"
+        ],
+        "L-27_Scienze_chimiche": [
+          "legame chimico",
+          "mole",
+          "reazioni chimiche",
+          "legame ionico",
+          "numero di massa",
+          "massa molecolare",
+          "massa atomica",
+          "reazioni redox",
+          "soluzioni",
+          "soluzioni tampone"
+        ],
+        "L-29_Scienze_farmaceutiche": [
+          "legame chimico",
+          "legame ionico",
+          "mole",
+          "soluzioni",
+          "legame covalente",
+          "reazioni chimiche",
+          "soluzioni tampone",
+          "numero di massa",
+          "teoria del legame di valenza",
+          "composizione percentuale"
+        ],
+        "L-2_Biotecnologie": [
+          "legame ionico",
+          "legame covalente",
+          "numeri quantici",
+          "mole",
+          "numero di ossidazione",
+          "teoria del legame di valenza",
+          "forze intermolecolari",
+          "ioni",
+          "bilanciamento reazioni",
+          "stechiometria"
+        ],
+        "L-32_Scienze_naturali_amb": [
+          "legame ionico",
+          "legame covalente",
+          "legame chimico",
+          "reazioni chimiche",
+          "numeri quantici",
+          "legame metallico",
+          "teoria del legame di valenza",
+          "massa molecolare",
+          "mole",
+          "massa atomica"
+        ],
+        "L-34_Geologia": [
+          "legame chimico",
+          "reazioni chimiche",
+          "concetto di mole",
+          "legame ionico",
+          "legame covalente",
+          "stechiometria",
+          "numeri quantici",
+          "bilanciamento reazioni",
+          "equilibri acido-base",
+          "numero di ossidazione"
+        ],
+        "L-7-8-9_Ingegneria": [
+          "reazioni chimiche",
+          "legame chimico",
+          "legame ionico",
+          "legame metallico",
+          "legame covalente",
+          "bilanciamento reazioni",
+          "soluzioni tampone",
+          "numeri quantici",
+          "energia di legame",
+          "teoria del legame di valenza"
+        ],
+        "LM-13_Farmacia": [
+          "legame ionico",
+          "legame covalente",
+          "reazioni chimiche",
+          "ioni",
+          "reazioni acido-base",
+          "soluzioni tampone",
+          "massa atomica",
+          "legame chimico",
+          "legame metallico",
+          "stechiometria"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "name": "Termodinamica e termochimica",
+      "core_contents": [
+        "Energia interna, entalpia, 1° principio",
+        "Calorimetria, capacità termica",
+        "Legge Hess, entalpie formazione",
+        "Entropia, 2° principio, energia libera Gibbs",
+        "Cicli Born-Haber, spontaneità"
+      ],
+      "coverage_by_class": {
+        "L-13_Biologia": 100.0,
+        "L-25_Scienze_e_tecnologie_agrarie": 100.0,
+        "L-26_Scienze_e_tecnologie_alimentari": 80.0,
+        "L-27_Scienze_chimiche": 100.0,
+        "L-29_Scienze_farmaceutiche": 100.0,
+        "L-2_Biotecnologie": 100.0,
+        "L-32_Scienze_naturali_amb": 100.0,
+        "L-34_Geologia": 100.0,
+        "L-7-8-9_Ingegneria": 100.0,
+        "LM-13_Farmacia": 100.0
+      },
+      "avg_coverage": 98.0,
+      "min_coverage": 80.0,
+      "max_coverage": 100.0,
+      "is_core": true,
+      "is_distinctive": false,
+      "distinctive_for": [],
+      "gap_for": [],
+      "concepts_by_class": {
+        "L-13_Biologia": [
+          "principio di le chatelier",
+          "energia di ionizzazione",
+          "energia libera di gibbs",
+          "energia di legame",
+          "energia di attivazione",
+          "principio di esclusione di pauli",
+          "quantizzazione dell'energia",
+          "entalpia",
+          "legge di raoult",
+          "legge di dalton"
+        ],
+        "L-25_Scienze_e_tecnologie_agrarie": [
+          "quantizzazione dell'energia",
+          "entropia",
+          "energia di ionizzazione",
+          "principio di le châtelier",
+          "principio di le chatelier",
+          "entalpia",
+          "energia libera",
+          "principio di indeterminazione",
+          "legge di dalton",
+          "principio di pauli"
+        ],
+        "L-26_Scienze_e_tecnologie_alimentari": [
+          "energia di legame",
+          "entalpia",
+          "energia legame",
+          "principio di le chatelier",
+          "principio di esclusione di pauli",
+          "energia di ionizzazione",
+          "principio di indeterminazione",
+          "principio di pauli",
+          "energia interna",
+          "energia libera"
+        ],
+        "L-27_Scienze_chimiche": [
+          "entalpia",
+          "principio di le chatelier",
+          "energia libera",
+          "legge di hess",
+          "legge di raoult",
+          "entropia",
+          "primo principio termodinamica",
+          "energia di ionizzazione",
+          "criteri di spontaneità",
+          "energia reticolare"
+        ],
+        "L-29_Scienze_farmaceutiche": [
+          "energia di ionizzazione",
+          "principio di le chatelier",
+          "principio di indeterminazione",
+          "quantizzazione dell'energia",
+          "energia interna",
+          "entalpia",
+          "energia libera di gibbs",
+          "principio di esclusione di pauli",
+          "energia di attivazione",
+          "legge di raoult"
+        ],
+        "L-2_Biotecnologie": [
+          "entalpia",
+          "principio di le chatelier",
+          "quantizzazione dell'energia",
+          "energia di attivazione",
+          "energia libera",
+          "entropia",
+          "energia di ionizzazione",
+          "energia interna",
+          "energia libera di gibbs",
+          "principio di indeterminazione"
+        ],
+        "L-32_Scienze_naturali_amb": [
+          "principio di indeterminazione",
+          "legge di dalton",
+          "entropia",
+          "energia di legame",
+          "energia libera",
+          "variazione di energia libera",
+          "quantizzazione dell'energia",
+          "legge di hess",
+          "legge di boyle",
+          "legge di charles"
+        ],
+        "L-34_Geologia": [
+          "energia di ionizzazione",
+          "energia reticolare",
+          "principio di indeterminazione",
+          "principio di le chatelier",
+          "legge di azione di massa",
+          "principio di lechatelier",
+          "principio di avogadro",
+          "energia di legame",
+          "energia degli orbitali",
+          "quantizzazione dell'energia"
+        ],
+        "L-7-8-9_Ingegneria": [
+          "energia reticolare",
+          "energia di legame",
+          "principio di esclusione di pauli",
+          "energia interna",
+          "entalpia",
+          "energia di ionizzazione",
+          "legge di hess",
+          "entropia",
+          "principio di esclusione",
+          "principio di indeterminazione"
+        ],
+        "LM-13_Farmacia": [
+          "energia di ionizzazione",
+          "principio di heisenberg",
+          "principio di le châtelier",
+          "entropia",
+          "entalpia",
+          "energia libera",
+          "energia reazioni",
+          "entalpia reazioni",
+          "energia ionizzazione",
+          "energia libera di gibbs"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "name": "Stati materia e soluzioni",
+      "core_contents": [
+        "Leggi gas ideali, miscele, pressioni parziali",
+        "Teoria cinetica gas, gas reali",
+        "Cambi stato, diagrammi fase",
+        "Soluzioni: molalità, molarità, % massa",
+        "Proprietà colligative (ebullio, crioscopia, osmosi)"
+      ],
+      "coverage_by_class": {
+        "L-13_Biologia": 100.0,
+        "L-25_Scienze_e_tecnologie_agrarie": 100.0,
+        "L-26_Scienze_e_tecnologie_alimentari": 100.0,
+        "L-27_Scienze_chimiche": 100.0,
+        "L-29_Scienze_farmaceutiche": 100.0,
+        "L-2_Biotecnologie": 100.0,
+        "L-32_Scienze_naturali_amb": 100.0,
+        "L-34_Geologia": 100.0,
+        "L-7-8-9_Ingegneria": 100.0,
+        "LM-13_Farmacia": 100.0
+      },
+      "avg_coverage": 100.0,
+      "min_coverage": 100.0,
+      "max_coverage": 100.0,
+      "is_core": true,
+      "is_distinctive": false,
+      "distinctive_for": [],
+      "gap_for": [],
+      "concepts_by_class": {
+        "L-13_Biologia": [
+          "proprietà periodiche",
+          "soluzioni tampone",
+          "proprietà colligative",
+          "teoria vsepr",
+          "teoria del legame di valenza",
+          "soluzioni",
+          "equilibri di solubilità",
+          "cinetica chimica",
+          "stato gassoso",
+          "soluzioni acquose"
+        ],
+        "L-25_Scienze_e_tecnologie_agrarie": [
+          "stato gassoso",
+          "soluzioni",
+          "proprietà periodiche",
+          "proprietà colligative",
+          "teoria del legame di valenza",
+          "stato liquido",
+          "massa atomica",
+          "cinetica chimica",
+          "diagrammi di stato",
+          "stato solido"
+        ],
+        "L-26_Scienze_e_tecnologie_alimentari": [
+          "soluzioni",
+          "proprietà colligative",
+          "teoria atomica",
+          "cinetica chimica",
+          "stato gassoso",
+          "stato liquido",
+          "stato solido",
+          "massa atomica",
+          "soluzioni tampone",
+          "proprietà periodiche"
+        ],
+        "L-27_Scienze_chimiche": [
+          "proprietà periodiche",
+          "soluzioni",
+          "numero di massa",
+          "massa molecolare",
+          "massa atomica",
+          "soluzioni tampone",
+          "proprietà colligative",
+          "miscele di gas",
+          "miscele omogenee",
+          "miscele eterogenee"
+        ],
+        "L-29_Scienze_farmaceutiche": [
+          "soluzioni",
+          "proprietà colligative",
+          "soluzioni tampone",
+          "proprietà periodiche",
+          "miscele",
+          "teoria del legame di valenza",
+          "teoria atomica",
+          "numero di massa",
+          "massa atomica",
+          "ioni"
+        ],
+        "L-2_Biotecnologie": [
+          "proprietà periodiche",
+          "prodotto di solubilità",
+          "cinetica chimica",
+          "teoria atomica",
+          "teoria vsepr",
+          "proprietà colligative",
+          "ioni",
+          "teoria del legame di valenza",
+          "soluzioni",
+          "soluzioni tampone"
+        ],
+        "L-32_Scienze_naturali_amb": [
+          "proprietà colligative",
+          "teoria del legame di valenza",
+          "massa molecolare",
+          "proprietà periodiche",
+          "gas ideali",
+          "teoria vsepr",
+          "soluzioni",
+          "soluzioni tampone",
+          "massa atomica",
+          "cinetica chimica"
+        ],
+        "L-34_Geologia": [
+          "proprietà periodiche",
+          "solubilità",
+          "proprietà colligative",
+          "teoria del legame di valenza",
+          "massa atomica",
+          "massa molecolare",
+          "leggi dei gas",
+          "gas ideali",
+          "cinetica chimica",
+          "stato gassoso"
+        ],
+        "L-7-8-9_Ingegneria": [
+          "cinetica chimica",
+          "proprietà periodiche",
+          "stato gassoso",
+          "diagrammi di stato",
+          "soluzioni tampone",
+          "proprietà colligative",
+          "teoria del legame di valenza",
+          "gas reali",
+          "stato solido",
+          "stato liquido"
+        ],
+        "LM-13_Farmacia": [
+          "proprietà periodiche",
+          "proprietà colligative",
+          "ioni",
+          "soluzioni tampone",
+          "miscele",
+          "leggi dei gas",
+          "miscele di gas",
+          "teoria vsepr",
+          "diagrammi di fase",
+          "massa atomica"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "name": "Cinetica chimica",
+      "core_contents": [
+        "Velocità reazione, ordine, cinetica integrata",
+        "Equazione Arrhenius, energia attivazione",
+        "Meccanismi elementari, stato attivato",
+        "Catalisi omogenea/eterogenea",
+        "Cinetica enzimatica (Michaelis-Menten)"
+      ],
+      "coverage_by_class": {
+        "L-13_Biologia": 100.0,
+        "L-25_Scienze_e_tecnologie_agrarie": 100.0,
+        "L-26_Scienze_e_tecnologie_alimentari": 100.0,
+        "L-27_Scienze_chimiche": 100.0,
+        "L-29_Scienze_farmaceutiche": 100.0,
+        "L-2_Biotecnologie": 100.0,
+        "L-32_Scienze_naturali_amb": 100.0,
+        "L-34_Geologia": 100.0,
+        "L-7-8-9_Ingegneria": 100.0,
+        "LM-13_Farmacia": 100.0
+      },
+      "avg_coverage": 100.0,
+      "min_coverage": 100.0,
+      "max_coverage": 100.0,
+      "is_core": true,
+      "is_distinctive": false,
+      "distinctive_for": [],
+      "gap_for": [],
+      "concepts_by_class": {
+        "L-13_Biologia": [
+          "velocità di reazione",
+          "cinetica chimica",
+          "energia di ionizzazione",
+          "energia libera di gibbs",
+          "stato gassoso",
+          "quoziente di reazione",
+          "curve di titolazione",
+          "spontaneità di una reazione",
+          "energia di legame",
+          "energia di attivazione"
+        ],
+        "L-25_Scienze_e_tecnologie_agrarie": [
+          "stato gassoso",
+          "stato liquido",
+          "cinetica chimica",
+          "quantizzazione dell'energia",
+          "diagrammi di stato",
+          "stato solido",
+          "velocità di reazione",
+          "meccanismi di reazione",
+          "energia di ionizzazione",
+          "equazione di stato"
+        ],
+        "L-26_Scienze_e_tecnologie_alimentari": [
+          "cinetica chimica",
+          "stato gassoso",
+          "stato liquido",
+          "stato solido",
+          "resa di reazione",
+          "energia di legame",
+          "diagrammi di stato",
+          "teoria cinetica gas",
+          "quoziente reazione",
+          "velocità delle reazioni"
+        ],
+        "L-27_Scienze_chimiche": [
+          "velocità di reazione",
+          "energia libera",
+          "cinetica chimica",
+          "quoziente di reazione",
+          "calore di reazione",
+          "equazione di nernst",
+          "teoria di arrhenius",
+          "energia di ionizzazione",
+          "stato gassoso",
+          "stato solido"
+        ],
+        "L-29_Scienze_farmaceutiche": [
+          "resa di reazione",
+          "energia di ionizzazione",
+          "diagrammi di stato",
+          "cinetica chimica",
+          "quantizzazione dell'energia",
+          "energia interna",
+          "energia libera di gibbs",
+          "equazione d'onda",
+          "energia di attivazione",
+          "cambiamenti di stato"
+        ],
+        "L-2_Biotecnologie": [
+          "cinetica chimica",
+          "equazione di nernst",
+          "velocità di reazione",
+          "quantizzazione dell'energia",
+          "equazione di stato",
+          "energia di attivazione",
+          "teoria di arrhenius",
+          "energia libera",
+          "resa di reazione",
+          "energia di ionizzazione"
+        ],
+        "L-32_Scienze_naturali_amb": [
+          "cinetica chimica",
+          "equazione di stato",
+          "stato liquido",
+          "stato solido",
+          "energia di legame",
+          "energia libera",
+          "variazione di energia libera",
+          "quantizzazione dell'energia",
+          "equazione ionica netta",
+          "stato gassoso"
+        ],
+        "L-34_Geologia": [
+          "energia di ionizzazione",
+          "quoziente di reazione",
+          "cinetica chimica",
+          "energia reticolare",
+          "stato gassoso",
+          "cambiamenti di stato",
+          "diagrammi di stato",
+          "stato liquido",
+          "stato solido",
+          "resa di reazione"
+        ],
+        "L-7-8-9_Ingegneria": [
+          "cinetica chimica",
+          "velocità di reazione",
+          "energia reticolare",
+          "stato gassoso",
+          "diagrammi di stato",
+          "ordine di reazione",
+          "meccanismi di reazione",
+          "energia di legame",
+          "equazione di van der waals",
+          "energia interna"
+        ],
+        "LM-13_Farmacia": [
+          "resa di reazione",
+          "teoria cinetica molecolare",
+          "energia di ionizzazione",
+          "equazione di nernst",
+          "equazione di arrhenius",
+          "cinetica chimica",
+          "equazione di schrödinger",
+          "energia libera",
+          "equazione gas ideali",
+          "energia reazioni"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "name": "Equilibri chimici",
+      "core_contents": [
+        "Costante Kc/Kp, principio Le Chatelier",
+        "Calcoli equilibri gassosi/eterogenei",
+        "Fattori spostamento equilibrio",
+        "Equilibri multipli, approssimazioni",
+        "Q vs K"
+      ],
+      "coverage_by_class": {
+        "L-13_Biologia": 80.0,
+        "L-25_Scienze_e_tecnologie_agrarie": 80.0,
+        "L-26_Scienze_e_tecnologie_alimentari": 80.0,
+        "L-27_Scienze_chimiche": 80.0,
+        "L-29_Scienze_farmaceutiche": 80.0,
+        "L-2_Biotecnologie": 80.0,
+        "L-32_Scienze_naturali_amb": 80.0,
+        "L-34_Geologia": 80.0,
+        "L-7-8-9_Ingegneria": 80.0,
+        "LM-13_Farmacia": 80.0
+      },
+      "avg_coverage": 80.0,
+      "min_coverage": 80.0,
+      "max_coverage": 80.0,
+      "is_core": true,
+      "is_distinctive": false,
+      "distinctive_for": [],
+      "gap_for": [],
+      "concepts_by_class": {
+        "L-13_Biologia": [
+          "equilibrio chimico",
+          "equilibri acido-base",
+          "principio di le chatelier",
+          "equilibri di solubilità",
+          "costante di avogadro",
+          "costante di equilibrio",
+          "principio di esclusione di pauli",
+          "costante universale dei gas",
+          "gas",
+          "calcoli stechiometrici"
+        ],
+        "L-25_Scienze_e_tecnologie_agrarie": [
+          "equilibrio chimico",
+          "calcoli stechiometrici",
+          "costante di equilibrio",
+          "equilibri acido-base",
+          "principio di le châtelier",
+          "principio di le chatelier",
+          "principio di indeterminazione",
+          "equilibri di solubilità",
+          "equilibri ionici",
+          "ioni"
+        ],
+        "L-26_Scienze_e_tecnologie_alimentari": [
+          "equilibri di solubilità",
+          "equilibrio chimico",
+          "costante equilibrio",
+          "principio di le chatelier",
+          "principio di esclusione di pauli",
+          "principio di indeterminazione",
+          "principio di pauli",
+          "costante di equilibrio",
+          "costante di avogadro",
+          "equilibri fase"
+        ],
+        "L-27_Scienze_chimiche": [
+          "equilibrio chimico",
+          "principio di le chatelier",
+          "costante di equilibrio",
+          "primo principio termodinamica",
+          "costante di avogadro",
+          "principio di pauli",
+          "secondo principio termodinamica",
+          "terzo principio termodinamica",
+          "principio di indeterminazione",
+          "principio dell'aufbau"
+        ],
+        "L-29_Scienze_farmaceutiche": [
+          "costante di equilibrio",
+          "equilibrio chimico",
+          "principio di le chatelier",
+          "principio di indeterminazione",
+          "equilibri di solubilità",
+          "calcoli stechiometrici",
+          "ioni",
+          "principio di esclusione di pauli",
+          "equilibri omogenei",
+          "sistemi eterogenei"
+        ],
+        "L-2_Biotecnologie": [
+          "costante di equilibrio",
+          "equilibrio chimico",
+          "principio di le chatelier",
+          "equilibri chimici",
+          "ioni",
+          "equilibri di complessazione",
+          "principio di indeterminazione",
+          "equilibri acido-base",
+          "equilibri eterogenei",
+          "equilibri di solubilità"
+        ],
+        "L-32_Scienze_naturali_amb": [
+          "principio di indeterminazione",
+          "costante di equilibrio",
+          "equilibri eterogenei",
+          "equilibri acido-base",
+          "equilibrio chimico",
+          "calcoli stechiometrici",
+          "equilibri di solubilità",
+          "equilibri chimici",
+          "miscugli gassosi",
+          "legami multipli"
+        ],
+        "L-34_Geologia": [
+          "equilibrio chimico",
+          "equilibri acido-base",
+          "costante di equilibrio",
+          "costante di avogadro",
+          "principio di indeterminazione",
+          "principio di le chatelier",
+          "equilibri in soluzione",
+          "sistemi eterogenei",
+          "calcoli stechiometrici",
+          "legami multipli"
+        ],
+        "L-7-8-9_Ingegneria": [
+          "calcoli stechiometrici",
+          "equilibrio chimico",
+          "costante di equilibrio",
+          "equilibri ionici",
+          "principio di esclusione di pauli",
+          "equilibri tra fasi",
+          "principio di esclusione",
+          "principio di indeterminazione",
+          "principio di le chatelier",
+          "costante cinetica"
+        ],
+        "LM-13_Farmacia": [
+          "equilibrio chimico",
+          "ioni",
+          "costante di equilibrio",
+          "equilibri chimici",
+          "principio di heisenberg",
+          "principio di le châtelier",
+          "principio aufbau",
+          "principio di le chatelier",
+          "equilibri di solubilità",
+          "equilibri eterogenei"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "name": "Equilibri acido-base",
+      "core_contents": [
+        "Arrhenius, Brønsted-Lowry, Lewis",
+        "pKa, pH calcoli acidi deboli",
+        "Idrolisi sali, indicatori",
+        "Curve titolazione, tamponi",
+        "Calcoli capacità tampone"
+      ],
+      "coverage_by_class": {
+        "L-13_Biologia": 100.0,
+        "L-25_Scienze_e_tecnologie_agrarie": 100.0,
+        "L-26_Scienze_e_tecnologie_alimentari": 100.0,
+        "L-27_Scienze_chimiche": 80.0,
+        "L-29_Scienze_farmaceutiche": 80.0,
+        "L-2_Biotecnologie": 100.0,
+        "L-32_Scienze_naturali_amb": 100.0,
+        "L-34_Geologia": 100.0,
+        "L-7-8-9_Ingegneria": 80.0,
+        "LM-13_Farmacia": 100.0
+      },
+      "avg_coverage": 94.0,
+      "min_coverage": 80.0,
+      "max_coverage": 100.0,
+      "is_core": true,
+      "is_distinctive": false,
+      "distinctive_for": [],
+      "gap_for": [],
+      "concepts_by_class": {
+        "L-13_Biologia": [
+          "legame chimico",
+          "legame covalente",
+          "legame ionico",
+          "soluzioni tampone",
+          "teoria del legame di valenza",
+          "struttura atomica",
+          "legame metallico",
+          "struttura della materia",
+          "strutture di lewis",
+          "formule di lewis"
+        ],
+        "L-25_Scienze_e_tecnologie_agrarie": [
+          "legame chimico",
+          "legame covalente",
+          "legame ionico",
+          "legame metallico",
+          "struttura della materia",
+          "teoria del legame di valenza",
+          "calcoli stechiometrici",
+          "formule di lewis",
+          "struttura dell'atomo",
+          "acidi e basi"
+        ],
+        "L-26_Scienze_e_tecnologie_alimentari": [
+          "legame ionico",
+          "legame chimico",
+          "legame covalente",
+          "struttura elettronica",
+          "legame metallico",
+          "struttura della materia",
+          "struttura dell'atomo",
+          "soluzioni tampone",
+          "acidi",
+          "legame idrogeno"
+        ],
+        "L-27_Scienze_chimiche": [
+          "legame chimico",
+          "struttura atomica",
+          "struttura molecolare",
+          "legame ionico",
+          "soluzioni tampone",
+          "formule di lewis",
+          "teoria di arrhenius",
+          "legame metallico",
+          "formula di struttura",
+          "struttura della materia"
+        ],
+        "L-29_Scienze_farmaceutiche": [
+          "legame chimico",
+          "legame ionico",
+          "legame covalente",
+          "soluzioni tampone",
+          "strutture di lewis",
+          "struttura atomica",
+          "struttura molecolare",
+          "struttura dell'atomo",
+          "teoria del legame di valenza",
+          "acidi"
+        ],
+        "L-2_Biotecnologie": [
+          "legame ionico",
+          "legame covalente",
+          "strutture di lewis",
+          "struttura atomica",
+          "teoria del legame di valenza",
+          "struttura elettronica",
+          "idrolisi",
+          "soluzioni tampone",
+          "teoria di arrhenius",
+          "legame chimico"
+        ],
+        "L-32_Scienze_naturali_amb": [
+          "legame ionico",
+          "legame covalente",
+          "legame chimico",
+          "legame metallico",
+          "struttura elettronica",
+          "teoria del legame di valenza",
+          "soluzioni tampone",
+          "calcoli stechiometrici",
+          "strutture di lewis",
+          "formule di lewis"
+        ],
+        "L-34_Geologia": [
+          "legame chimico",
+          "legame ionico",
+          "legame covalente",
+          "struttura atomica",
+          "struttura elettronica",
+          "teoria del legame di valenza",
+          "strutture di lewis",
+          "legame metallico",
+          "struttura dell'atomo",
+          "polarità del legame"
+        ],
+        "L-7-8-9_Ingegneria": [
+          "struttura atomica",
+          "calcoli stechiometrici",
+          "legame chimico",
+          "legame ionico",
+          "legame metallico",
+          "struttura elettronica",
+          "legame covalente",
+          "legami deboli",
+          "soluzioni tampone",
+          "equazione di arrhenius"
+        ],
+        "LM-13_Farmacia": [
+          "legame ionico",
+          "legame covalente",
+          "strutture di lewis",
+          "soluzioni tampone",
+          "legame chimico",
+          "legame metallico",
+          "indicatori",
+          "equazione di arrhenius",
+          "teoria del legame di valenza",
+          "struttura atomi"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "name": "Elettrochimica",
+      "core_contents": [
+        "Celle galvaniche/voltaiche, potenziale standard",
+        "Equazione Nernst",
+        "Celle elettrolitiche, leggi Faraday",
+        "Corrosione, batterie (Pb, NiCd, Li-ion)",
+        "Elettrodi riferimento"
+      ],
+      "coverage_by_class": {
+        "L-13_Biologia": 80.0,
+        "L-25_Scienze_e_tecnologie_agrarie": 80.0,
+        "L-26_Scienze_e_tecnologie_alimentari": 60.0,
+        "L-27_Scienze_chimiche": 60.0,
+        "L-29_Scienze_farmaceutiche": 80.0,
+        "L-2_Biotecnologie": 80.0,
+        "L-32_Scienze_naturali_amb": 60.0,
+        "L-34_Geologia": 80.0,
+        "L-7-8-9_Ingegneria": 80.0,
+        "LM-13_Farmacia": 80.0
+      },
+      "avg_coverage": 74.0,
+      "min_coverage": 60.0,
+      "max_coverage": 80.0,
+      "is_core": true,
+      "is_distinctive": false,
+      "distinctive_for": [],
+      "gap_for": [],
+      "concepts_by_class": {
+        "L-13_Biologia": [
+          "potenziali standard",
+          "celle elettrochimiche",
+          "condizioni standard",
+          "potenziale di cella",
+          "equazione ionica netta",
+          "equazione di stato dei gas",
+          "equazione di nernst",
+          "elettroliti",
+          "grandezze standard",
+          "equazione chimica"
+        ],
+        "L-25_Scienze_e_tecnologie_agrarie": [
+          "equazione di stato",
+          "stati standard",
+          "celle galvaniche",
+          "potenziale elettrodico",
+          "tabella dei potenziali standard",
+          "potenziale di ionizzazione",
+          "equazione d'onda di schrödinger",
+          "equazione di van der waals",
+          "equazione di nernst",
+          "ione"
+        ],
+        "L-26_Scienze_e_tecnologie_alimentari": [
+          "condizioni standard",
+          "potenziale di ionizzazione",
+          "equazione di stato dei gas",
+          "equazione di van der waals",
+          "equazione di stato",
+          "leggi chimiche",
+          "leggi chimico-fisiche",
+          "leggi di boyle",
+          "leggi di charles",
+          "leggi di gay-lussac"
+        ],
+        "L-27_Scienze_chimiche": [
+          "potenziali standard",
+          "equazione di nernst",
+          "celle elettrochimiche",
+          "potenziale elettrochimico",
+          "potenziale redox",
+          "celle galvaniche",
+          "celle elettrolitiche",
+          "equazione di stato",
+          "equazione di schrödinger",
+          "equazione di van der waals"
+        ],
+        "L-29_Scienze_farmaceutiche": [
+          "elettroliti",
+          "equazione d'onda",
+          "energia potenziale",
+          "potenziale di ionizzazione",
+          "stati standard",
+          "equazione di planck-einstein",
+          "equazione di de broglie",
+          "equazione di schrödinger",
+          "equazione di stato",
+          "equazione chimica"
+        ],
+        "L-2_Biotecnologie": [
+          "equazione di nernst",
+          "equazione di stato",
+          "leggi dei gas ideali",
+          "celle elettrochimiche",
+          "equazione d'onda",
+          "energia potenziale",
+          "equazione di planck-einstein",
+          "equazione di de broglie",
+          "equazione di schrödinger",
+          "equazione chimica"
+        ],
+        "L-32_Scienze_naturali_amb": [
+          "equazione di stato",
+          "celle elementari",
+          "equazione ionica netta",
+          "leggi dei gas",
+          "elettroliti",
+          "potenziale redox",
+          "stati standard",
+          "variazioni di entalpia standard",
+          "celle elettrolitiche",
+          "celle galvaniche"
+        ],
+        "L-34_Geologia": [
+          "leggi dei gas",
+          "potenziali standard",
+          "elettrodi standard",
+          "celle galvaniche",
+          "equazione di stato",
+          "equazione ionica netta",
+          "equazione di stato dei gas ideali",
+          "equazione di nernst",
+          "leggi combinazioni chimiche",
+          "leggi di combinazione"
+        ],
+        "L-7-8-9_Ingegneria": [
+          "equazione di van der waals",
+          "equazione di arrhenius",
+          "celle galvaniche",
+          "entalpie standard",
+          "potenziale semielemento",
+          "equazione dei gas perfetti",
+          "equazione stechiometrica",
+          "equazione di schrödinger",
+          "equazione di stato",
+          "equazione di clapeyron"
+        ],
+        "LM-13_Farmacia": [
+          "leggi dei gas",
+          "equazione di nernst",
+          "equazione di arrhenius",
+          "celle elettrochimiche",
+          "equazione di schrödinger",
+          "equazione gas ideali",
+          "equazione di stato",
+          "equazione chimica",
+          "energia potenziale",
+          "celle voltaiche"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "name": "Chimica elementi principali",
+      "core_contents": [
+        "Gruppi 1-2 (alcalini/terrosi)",
+        "Gruppo 13-16 (boro, carbonio, azoto, ossigeno)",
+        "Alogeni (17), gas nobili (18)",
+        "Ossidi acidi/basei/anfoteri",
+        "Nomenclatura IUPAC composti"
+      ],
+      "coverage_by_class": {
+        "L-13_Biologia": 100.0,
+        "L-25_Scienze_e_tecnologie_agrarie": 60.0,
+        "L-26_Scienze_e_tecnologie_alimentari": 60.0,
+        "L-27_Scienze_chimiche": 100.0,
+        "L-29_Scienze_farmaceutiche": 80.0,
+        "L-2_Biotecnologie": 40.0,
+        "L-32_Scienze_naturali_amb": 100.0,
+        "L-34_Geologia": 80.0,
+        "L-7-8-9_Ingegneria": 80.0,
+        "LM-13_Farmacia": 60.0
+      },
+      "avg_coverage": 76.0,
+      "min_coverage": 40.0,
+      "max_coverage": 100.0,
+      "is_core": false,
+      "is_distinctive": false,
+      "distinctive_for": [],
+      "gap_for": [],
+      "concepts_by_class": {
+        "L-13_Biologia": [
+          "legame chimico",
+          "legame covalente",
+          "legame ionico",
+          "teoria del legame di valenza",
+          "struttura atomica",
+          "nomenclatura",
+          "legame metallico",
+          "struttura della materia",
+          "gas",
+          "energia di legame"
+        ],
+        "L-25_Scienze_e_tecnologie_agrarie": [
+          "legame chimico",
+          "legame covalente",
+          "legame ionico",
+          "legame metallico",
+          "struttura della materia",
+          "teoria del legame di valenza",
+          "struttura dell'atomo",
+          "acidi e basi",
+          "nomenclatura composti inorganici",
+          "struttura elettronica"
+        ],
+        "L-26_Scienze_e_tecnologie_alimentari": [
+          "legame ionico",
+          "legame chimico",
+          "legame covalente",
+          "struttura elettronica",
+          "legame metallico",
+          "struttura della materia",
+          "struttura dell'atomo",
+          "gruppi funzionali",
+          "acidi",
+          "legame idrogeno"
+        ],
+        "L-27_Scienze_chimiche": [
+          "legame chimico",
+          "struttura atomica",
+          "struttura molecolare",
+          "legame ionico",
+          "legame metallico",
+          "formula di struttura",
+          "struttura della materia",
+          "legame covalente",
+          "acidi",
+          "struttura dell'atomo"
+        ],
+        "L-29_Scienze_farmaceutiche": [
+          "legame chimico",
+          "legame ionico",
+          "legame covalente",
+          "composti",
+          "struttura atomica",
+          "struttura molecolare",
+          "struttura dell'atomo",
+          "teoria del legame di valenza",
+          "acidi",
+          "struttura della materia"
+        ],
+        "L-2_Biotecnologie": [
+          "legame ionico",
+          "legame covalente",
+          "composti",
+          "struttura atomica",
+          "teoria del legame di valenza",
+          "struttura elettronica",
+          "legame chimico",
+          "legame idrogeno",
+          "acidi",
+          "nomenclatura composti inorganici"
+        ],
+        "L-32_Scienze_naturali_amb": [
+          "legame ionico",
+          "legame covalente",
+          "legame chimico",
+          "legame metallico",
+          "struttura elettronica",
+          "teoria del legame di valenza",
+          "composti",
+          "ibridazione del carbonio",
+          "allotropi del carbonio",
+          "energia di legame"
+        ],
+        "L-34_Geologia": [
+          "legame chimico",
+          "legame ionico",
+          "legame covalente",
+          "struttura atomica",
+          "struttura elettronica",
+          "teoria del legame di valenza",
+          "composti chimici",
+          "legame metallico",
+          "struttura dell'atomo",
+          "polarità del legame"
+        ],
+        "L-7-8-9_Ingegneria": [
+          "struttura atomica",
+          "legame chimico",
+          "legame ionico",
+          "legame metallico",
+          "struttura elettronica",
+          "legame covalente",
+          "nomenclatura composti inorganici",
+          "energia di legame",
+          "teoria del legame di valenza",
+          "struttura della materia"
+        ],
+        "LM-13_Farmacia": [
+          "legame ionico",
+          "legame covalente",
+          "legame chimico",
+          "legame metallico",
+          "teoria del legame di valenza",
+          "struttura atomi",
+          "acidi",
+          "acidi e basi",
+          "struttura molecole",
+          "struttura dell'atomo"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "name": "Tecniche analitiche e laboratorio",
+      "core_contents": [
+        "Titolo soluzioni, standardizzazione",
+        "Gravimetria, volumetriche",
+        "Spettroscopia UV-Vis base",
+        "Cromatografia cartacea/TLC",
+        "Analisi qualitativa cationi/anionici"
+      ],
+      "coverage_by_class": {
+        "L-13_Biologia": 60.0,
+        "L-25_Scienze_e_tecnologie_agrarie": 60.0,
+        "L-26_Scienze_e_tecnologie_alimentari": 60.0,
+        "L-27_Scienze_chimiche": 60.0,
+        "L-29_Scienze_farmaceutiche": 80.0,
+        "L-2_Biotecnologie": 100.0,
+        "L-32_Scienze_naturali_amb": 60.0,
+        "L-34_Geologia": 60.0,
+        "L-7-8-9_Ingegneria": 60.0,
+        "LM-13_Farmacia": 80.0
+      },
+      "avg_coverage": 68.0,
+      "min_coverage": 60.0,
+      "max_coverage": 100.0,
+      "is_core": true,
+      "is_distinctive": true,
+      "distinctive_for": [
+        "L-2_Biotecnologie"
+      ],
+      "gap_for": [],
+      "concepts_by_class": {
+        "L-13_Biologia": [
+          "soluzioni tampone",
+          "equilibri acido-base",
+          "soluzioni",
+          "risonanza",
+          "soluzioni acquose",
+          "reazioni acido-base",
+          "chimica di base",
+          "concentrazione delle soluzioni",
+          "base",
+          "definizioni di acido e base"
+        ],
+        "L-25_Scienze_e_tecnologie_agrarie": [
+          "soluzioni",
+          "soluzioni tampone",
+          "equilibri acido-base",
+          "ioni",
+          "soluzioni ideali",
+          "risonanza",
+          "soluzioni non ideali",
+          "preparazione di soluzioni",
+          "soluzioni elettrolitiche",
+          "concentrazione delle soluzioni"
+        ],
+        "L-26_Scienze_e_tecnologie_alimentari": [
+          "soluzioni",
+          "soluzioni tampone",
+          "comportamento soluzioni",
+          "concentrazioni soluzioni",
+          "soluzioni chimiche",
+          "preparazione di soluzioni",
+          "composizione soluzioni",
+          "preparazione soluzioni",
+          "preparazione soluzioni titolo noto",
+          "equilibri acido-base"
+        ],
+        "L-27_Scienze_chimiche": [
+          "soluzioni",
+          "soluzioni tampone",
+          "risonanza",
+          "ioni",
+          "soluzioni sature",
+          "soluzioni acquose",
+          "preparazione di soluzioni",
+          "preparazione soluzioni",
+          "reazioni acido-base",
+          "chimica nucleare"
+        ],
+        "L-29_Scienze_farmaceutiche": [
+          "soluzioni",
+          "soluzioni tampone",
+          "risonanza",
+          "ioni",
+          "reazioni acido-base",
+          "proprietà acido-base",
+          "spettri di assorbimento",
+          "titolazioni acido-base",
+          "miscugli e soluzioni",
+          "stechiometria soluzioni"
+        ],
+        "L-2_Biotecnologie": [
+          "ioni",
+          "soluzioni",
+          "soluzioni tampone",
+          "titolazioni acido-base",
+          "soluzioni di elettroliti",
+          "soluzioni acquose",
+          "equilibri acido-base",
+          "formule di risonanza",
+          "spettroscopia uv-vis",
+          "strutture di risonanza"
+        ],
+        "L-32_Scienze_naturali_amb": [
+          "soluzioni",
+          "soluzioni tampone",
+          "reazioni acido-base",
+          "equilibri acido-base",
+          "risonanza",
+          "definizione di base",
+          "formule di risonanza",
+          "concentrazioni delle soluzioni",
+          "proprietà delle soluzioni",
+          "soluzioni acquose"
+        ],
+        "L-34_Geologia": [
+          "equilibri acido-base",
+          "risonanza",
+          "reazioni acido-base",
+          "soluzioni tampone",
+          "soluzioni",
+          "definizione di base",
+          "comportamento delle soluzioni",
+          "soluzioni chimiche",
+          "soluzioni ideali",
+          "soluzioni acquose"
+        ],
+        "L-7-8-9_Ingegneria": [
+          "soluzioni tampone",
+          "risonanza",
+          "reazioni acido-base",
+          "fissione nucleare",
+          "fusione nucleare",
+          "proprietà chimiche soluzioni",
+          "proprietà fisiche soluzioni",
+          "soluzioni",
+          "composizione soluzioni",
+          "proprietà delle soluzioni"
+        ],
+        "LM-13_Farmacia": [
+          "soluzioni tampone",
+          "ioni",
+          "reazioni acido-base",
+          "risonanza",
+          "soluzioni",
+          "titolazione acido-base",
+          "proprietà delle soluzioni",
+          "concentrazione soluzioni",
+          "stechiometria soluzioni",
+          "diluizione di soluzioni"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "name": "Sicurezza, sostenibilità e applicazioni",
+      "core_contents": [
+        "MSDS, DPI, norme sicurezza",
+        "Gestione rifiuti chimici",
+        "Green chemistry principi",
+        "Chimica industriale (Haber-Bosch, Claus)",
+        "Chimica atmosferica (ozono, acidi pioggia)"
+      ],
+      "coverage_by_class": {
+        "L-13_Biologia": 80.0,
+        "L-25_Scienze_e_tecnologie_agrarie": 80.0,
+        "L-26_Scienze_e_tecnologie_alimentari": 100.0,
+        "L-27_Scienze_chimiche": 100.0,
+        "L-29_Scienze_farmaceutiche": 80.0,
+        "L-2_Biotecnologie": 80.0,
+        "L-32_Scienze_naturali_amb": 80.0,
+        "L-34_Geologia": 80.0,
+        "L-7-8-9_Ingegneria": 100.0,
+        "LM-13_Farmacia": 80.0
+      },
+      "avg_coverage": 86.0,
+      "min_coverage": 80.0,
+      "max_coverage": 100.0,
+      "is_core": true,
+      "is_distinctive": false,
+      "distinctive_for": [],
+      "gap_for": [],
+      "concepts_by_class": {
+        "L-13_Biologia": [
+          "legame chimico",
+          "legame covalente",
+          "legame ionico",
+          "chimica generale",
+          "teoria del legame di valenza",
+          "struttura atomica",
+          "metodi didattici",
+          "cinetica chimica",
+          "chimica inorganica",
+          "chimica di base"
+        ],
+        "L-25_Scienze_e_tecnologie_agrarie": [
+          "legame chimico",
+          "legame covalente",
+          "legame ionico",
+          "legame metallico",
+          "struttura della materia",
+          "teoria del legame di valenza",
+          "cinetica chimica",
+          "chimica generale",
+          "struttura dell'atomo",
+          "acidi e basi"
+        ],
+        "L-26_Scienze_e_tecnologie_alimentari": [
+          "chimica generale",
+          "legame ionico",
+          "chimica inorganica",
+          "legame chimico",
+          "legame covalente",
+          "legami chimici",
+          "cinetica chimica",
+          "struttura elettronica",
+          "legame metallico",
+          "struttura della materia"
+        ],
+        "L-27_Scienze_chimiche": [
+          "legame chimico",
+          "chimica generale",
+          "struttura atomica",
+          "chimica inorganica",
+          "struttura molecolare",
+          "legame ionico",
+          "composti chimici",
+          "cinetica chimica",
+          "laboratorio di chimica",
+          "legame metallico"
+        ],
+        "L-29_Scienze_farmaceutiche": [
+          "legame chimico",
+          "legame ionico",
+          "legame covalente",
+          "chimica generale",
+          "chimica inorganica",
+          "struttura atomica",
+          "struttura molecolare",
+          "struttura dell'atomo",
+          "teoria del legame di valenza",
+          "acidi"
+        ],
+        "L-2_Biotecnologie": [
+          "legame ionico",
+          "chimica generale",
+          "legame covalente",
+          "chimica inorganica",
+          "cinetica chimica",
+          "struttura atomica",
+          "equilibri chimici",
+          "teoria del legame di valenza",
+          "struttura elettronica",
+          "legami chimici"
+        ],
+        "L-32_Scienze_naturali_amb": [
+          "legame ionico",
+          "legame covalente",
+          "legame chimico",
+          "legame metallico",
+          "struttura elettronica",
+          "teoria del legame di valenza",
+          "chimica generale",
+          "reattività chimica",
+          "cinetica chimica",
+          "equilibri chimici"
+        ],
+        "L-34_Geologia": [
+          "legame chimico",
+          "legame ionico",
+          "legame covalente",
+          "struttura atomica",
+          "chimica generale",
+          "chimica inorganica",
+          "composti chimici",
+          "struttura elettronica",
+          "teoria del legame di valenza",
+          "cinetica chimica"
+        ],
+        "L-7-8-9_Ingegneria": [
+          "struttura atomica",
+          "cinetica chimica",
+          "chimica generale",
+          "legame chimico",
+          "legame ionico",
+          "legame metallico",
+          "termodinamica chimica",
+          "struttura elettronica",
+          "legame covalente",
+          "energia di legame"
+        ],
+        "LM-13_Farmacia": [
+          "chimica generale",
+          "chimica inorganica",
+          "legame ionico",
+          "legame covalente",
+          "equilibri chimici",
+          "legame chimico",
+          "legame metallico",
+          "teoria del legame di valenza",
+          "struttura atomi",
+          "acidi"
+        ]
+      }
+    }
+  ]
+}

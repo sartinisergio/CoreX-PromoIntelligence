@@ -1,0 +1,3405 @@
+{
+  "materia": "Chimica_Generale",
+  "generated_at": "2026-01-08T17:43:08.446146",
+  "version": "2.1-stemming",
+  "frameworks_found": {
+    "ideal": true,
+    "real": true,
+    "evidence_based": true
+  },
+  "analysis": {
+    "gap_formativi": {
+      "description": "Moduli del framework ideale e loro copertura nei programmi reali",
+      "total_ideal": 12,
+      "fully_covered": 6,
+      "partially_covered": 5,
+      "not_covered": 1,
+      "coverage_percentage": 50.0,
+      "gaps": [
+        {
+          "module": "Elettrochimica",
+          "contents": [
+            "celle galvaniche/voltaiche, potenziale standard",
+            "equazione nernst",
+            "celle elettrolitiche, leggi faraday",
+            "corrosione, batterie (pb, nicd, li-ion)",
+            "elettrodi riferimento"
+          ],
+          "severity": "alta",
+          "reason": "Nessun modulo EB corrisponde"
+        },
+        {
+          "module": "Legame chimico e geometria molecolare",
+          "best_eb_match": "Termodinamica Chimica",
+          "score": 20.0,
+          "severity": "alta",
+          "reason": "Match parziale (20%) con 'Termodinamica Chimica'"
+        },
+        {
+          "module": "Stati materia e soluzioni",
+          "best_eb_match": "Soluzioni e Proprietà delle Soluzioni",
+          "score": 22.8,
+          "severity": "alta",
+          "reason": "Match parziale (23%) con 'Soluzioni e Proprietà delle Soluzioni'"
+        },
+        {
+          "module": "Chimica elementi principali",
+          "best_eb_match": "Equilibri Chimici",
+          "score": 19.1,
+          "severity": "alta",
+          "reason": "Match parziale (19%) con 'Equilibri Chimici'"
+        },
+        {
+          "module": "Tecniche analitiche e laboratorio",
+          "best_eb_match": "Acidi e Basi",
+          "score": 22.2,
+          "severity": "alta",
+          "reason": "Match parziale (22%) con 'Acidi e Basi'"
+        },
+        {
+          "module": "Sicurezza, sostenibilità e applicazioni",
+          "best_eb_match": "Equilibri Chimici",
+          "score": 19.0,
+          "severity": "alta",
+          "reason": "Match parziale (19%) con 'Equilibri Chimici'"
+        }
+      ],
+      "covered": [
+        {
+          "ideal_module": "Struttura atomica e tavola periodica",
+          "eb_matches": [
+            "Struttura Atomica e Teoria Atomica"
+          ],
+          "best_match": "Struttura Atomica e Teoria Atomica",
+          "best_score": 56.9,
+          "coverage_type": "1:1",
+          "common_keywords": [
+            "atom",
+            "orbital",
+            "quantic",
+            "numer",
+            "configur",
+            "struttur",
+            "elettron"
+          ],
+          "eb_category": "CORE"
+        },
+        {
+          "ideal_module": "Stechiometria e reazioni chimiche",
+          "eb_matches": [
+            "Reazioni Chimiche e Stechiometria",
+            "Acidi e Basi",
+            "Fondamenti di Chimica Generale",
+            "Equilibri Chimici",
+            "Cinetica Chimica"
+          ],
+          "best_match": "Reazioni Chimiche e Stechiometria",
+          "best_score": 49.0,
+          "coverage_type": "1:N",
+          "common_keywords": [
+            "reazion",
+            "stechiometr",
+            "chimic",
+            "bilanc"
+          ],
+          "eb_category": "CORE"
+        },
+        {
+          "ideal_module": "Termodinamica e termochimica",
+          "eb_matches": [
+            "Termodinamica Chimica"
+          ],
+          "best_match": "Termodinamica Chimica",
+          "best_score": 51.2,
+          "coverage_type": "1:1",
+          "common_keywords": [
+            "entalp",
+            "liber",
+            "entrop",
+            "energ",
+            "termodinam"
+          ],
+          "eb_category": "CORE"
+        },
+        {
+          "ideal_module": "Cinetica chimica",
+          "eb_matches": [
+            "Cinetica Chimica",
+            "Termodinamica Chimica",
+            "Reazioni Chimiche e Stechiometria",
+            "Equilibri Chimici",
+            "Chimica Inorganica"
+          ],
+          "best_match": "Cinetica Chimica",
+          "best_score": 68.9,
+          "coverage_type": "1:N",
+          "common_keywords": [
+            "veloc",
+            "cinet",
+            "reazion",
+            "chimic",
+            "energ",
+            "attiv"
+          ],
+          "eb_category": "CORE"
+        },
+        {
+          "ideal_module": "Equilibri chimici",
+          "eb_matches": [
+            "Equilibri Chimici",
+            "Reazioni Chimiche e Stechiometria",
+            "Cinetica Chimica",
+            "Termodinamica Chimica",
+            "Chimica Inorganica"
+          ],
+          "best_match": "Equilibri Chimici",
+          "best_score": 60.2,
+          "coverage_type": "1:N",
+          "common_keywords": [
+            "costant",
+            "equilibr",
+            "chimic",
+            "princip",
+            "chatelier"
+          ],
+          "eb_category": "CORE"
+        },
+        {
+          "ideal_module": "Equilibri acido-base",
+          "eb_matches": [
+            "Acidi e Basi",
+            "Equilibri Chimici"
+          ],
+          "best_match": "Acidi e Basi",
+          "best_score": 47.2,
+          "coverage_type": "1:N",
+          "common_keywords": [
+            "ph",
+            "bas",
+            "titol"
+          ],
+          "eb_category": "CORE"
+        }
+      ],
+      "partial": [
+        {
+          "ideal_module": "Legame chimico e geometria molecolare",
+          "eb_matches": [
+            "Termodinamica Chimica",
+            "Chimica Inorganica",
+            "Cinetica Chimica",
+            "Fondamenti di Chimica Generale"
+          ],
+          "best_match": "Termodinamica Chimica",
+          "best_score": 20.0,
+          "coverage_type": "1:N",
+          "common_keywords": [
+            "chimic",
+            "energ"
+          ],
+          "eb_category": "CORE"
+        },
+        {
+          "ideal_module": "Stati materia e soluzioni",
+          "eb_matches": [
+            "Soluzioni e Proprietà delle Soluzioni"
+          ],
+          "best_match": "Soluzioni e Proprietà delle Soluzioni",
+          "best_score": 22.8,
+          "coverage_type": "1:1",
+          "common_keywords": [
+            "soluzion"
+          ],
+          "eb_category": "CORE"
+        },
+        {
+          "ideal_module": "Chimica elementi principali",
+          "eb_matches": [
+            "Equilibri Chimici"
+          ],
+          "best_match": "Equilibri Chimici",
+          "best_score": 19.1,
+          "coverage_type": "1:1",
+          "common_keywords": [
+            "chimic",
+            "ph"
+          ],
+          "eb_category": "CORE"
+        },
+        {
+          "ideal_module": "Tecniche analitiche e laboratorio",
+          "eb_matches": [
+            "Acidi e Basi"
+          ],
+          "best_match": "Acidi e Basi",
+          "best_score": 22.2,
+          "coverage_type": "1:1",
+          "common_keywords": [
+            "titol",
+            "bas"
+          ],
+          "eb_category": "CORE"
+        },
+        {
+          "ideal_module": "Sicurezza, sostenibilità e applicazioni",
+          "eb_matches": [
+            "Equilibri Chimici"
+          ],
+          "best_match": "Equilibri Chimici",
+          "best_score": 19.0,
+          "coverage_type": "1:1",
+          "common_keywords": [
+            "chimic",
+            "ph",
+            "princip"
+          ],
+          "eb_category": "CORE"
+        }
+      ]
+    },
+    "contenuti_emergenti": {
+      "description": "Moduli evidence-based e loro corrispondenza con il framework ideale",
+      "total_eb": 10,
+      "mapped_count": 9,
+      "emergent_count": 1,
+      "mapped": [
+        {
+          "eb_module": "Fondamenti di Chimica Generale",
+          "ideal_matches": [
+            "Stechiometria e reazioni chimiche",
+            "Legame chimico e geometria molecolare"
+          ],
+          "primary_source": "Stechiometria e reazioni chimiche",
+          "primary_score": 25.4,
+          "coverage_type": "N:1",
+          "category": "CORE"
+        },
+        {
+          "eb_module": "Reazioni Chimiche e Stechiometria",
+          "ideal_matches": [
+            "Stechiometria e reazioni chimiche",
+            "Equilibri chimici",
+            "Cinetica chimica"
+          ],
+          "primary_source": "Stechiometria e reazioni chimiche",
+          "primary_score": 49.0,
+          "coverage_type": "N:1",
+          "category": "CORE"
+        },
+        {
+          "eb_module": "Equilibri Chimici",
+          "ideal_matches": [
+            "Equilibri chimici",
+            "Stechiometria e reazioni chimiche",
+            "Equilibri acido-base",
+            "Chimica elementi principali",
+            "Sicurezza, sostenibilità e applicazioni",
+            "Cinetica chimica"
+          ],
+          "primary_source": "Equilibri chimici",
+          "primary_score": 60.2,
+          "coverage_type": "N:1",
+          "category": "CORE"
+        },
+        {
+          "eb_module": "Struttura Atomica e Teoria Atomica",
+          "ideal_matches": [
+            "Struttura atomica e tavola periodica"
+          ],
+          "primary_source": "Struttura atomica e tavola periodica",
+          "primary_score": 56.9,
+          "coverage_type": "1:1",
+          "category": "CORE"
+        },
+        {
+          "eb_module": "Cinetica Chimica",
+          "ideal_matches": [
+            "Cinetica chimica",
+            "Stechiometria e reazioni chimiche",
+            "Legame chimico e geometria molecolare",
+            "Equilibri chimici"
+          ],
+          "primary_source": "Cinetica chimica",
+          "primary_score": 68.9,
+          "coverage_type": "N:1",
+          "category": "CORE"
+        },
+        {
+          "eb_module": "Termodinamica Chimica",
+          "ideal_matches": [
+            "Termodinamica e termochimica",
+            "Cinetica chimica",
+            "Legame chimico e geometria molecolare",
+            "Equilibri chimici"
+          ],
+          "primary_source": "Termodinamica e termochimica",
+          "primary_score": 51.2,
+          "coverage_type": "N:1",
+          "category": "CORE"
+        },
+        {
+          "eb_module": "Soluzioni e Proprietà delle Soluzioni",
+          "ideal_matches": [
+            "Stati materia e soluzioni"
+          ],
+          "primary_source": "Stati materia e soluzioni",
+          "primary_score": 22.8,
+          "coverage_type": "1:1",
+          "category": "CORE"
+        },
+        {
+          "eb_module": "Acidi e Basi",
+          "ideal_matches": [
+            "Equilibri acido-base",
+            "Stechiometria e reazioni chimiche",
+            "Tecniche analitiche e laboratorio"
+          ],
+          "primary_source": "Equilibri acido-base",
+          "primary_score": 47.2,
+          "coverage_type": "N:1",
+          "category": "CORE"
+        },
+        {
+          "eb_module": "Chimica Inorganica",
+          "ideal_matches": [
+            "Legame chimico e geometria molecolare",
+            "Cinetica chimica",
+            "Equilibri chimici"
+          ],
+          "primary_source": "Legame chimico e geometria molecolare",
+          "primary_score": 20.0,
+          "coverage_type": "N:1",
+          "category": "CORE"
+        }
+      ],
+      "emergent": [
+        {
+          "module": "Proprietà Fisiche e Chimiche delle Sostanze",
+          "category": "CORE",
+          "presence": 100.0,
+          "contents": [
+            "proprietà periodiche",
+            "proprietà colligative",
+            "proprietà fisiche",
+            "proprietà chimiche",
+            "solubilità"
+          ],
+          "interpretation": "⚠️ ATTENZIONE: Tema insegnato universalmente ma ASSENTE nel framework ideale - LACUNA CRITICA",
+          "is_core": true,
+          "distinctive_for": []
+        }
+      ]
+    },
+    "validazione": {
+      "description": "Verifica coerenza tra analisi con framework ideale e analisi bottom-up",
+      "concordance_rate": 50.0,
+      "interpretation": "⚠️ Concordanza moderata - ci sono differenze significative",
+      "concordances": [
+        {
+          "real_module": "Struttura atomica e tavola periodica",
+          "eb_module": "Struttura Atomica e Teoria Atomica",
+          "similarity": 56.9,
+          "real_coverage": 0,
+          "eb_presence": 100.0,
+          "common_keywords": [
+            "atom",
+            "orbital",
+            "quantic",
+            "numer",
+            "configur",
+            "struttur",
+            "elettron"
+          ]
+        },
+        {
+          "real_module": "Stechiometria e reazioni chimiche",
+          "eb_module": "Reazioni Chimiche e Stechiometria",
+          "similarity": 49.0,
+          "real_coverage": 0,
+          "eb_presence": 100.0,
+          "common_keywords": [
+            "reazion",
+            "stechiometr",
+            "chimic",
+            "bilanc"
+          ]
+        },
+        {
+          "real_module": "Termodinamica e termochimica",
+          "eb_module": "Termodinamica Chimica",
+          "similarity": 51.2,
+          "real_coverage": 0,
+          "eb_presence": 100.0,
+          "common_keywords": [
+            "entalp",
+            "liber",
+            "entrop",
+            "energ",
+            "termodinam"
+          ]
+        },
+        {
+          "real_module": "Cinetica chimica",
+          "eb_module": "Cinetica Chimica",
+          "similarity": 68.9,
+          "real_coverage": 0,
+          "eb_presence": 100.0,
+          "common_keywords": [
+            "veloc",
+            "cinet",
+            "reazion",
+            "chimic",
+            "energ",
+            "attiv"
+          ]
+        },
+        {
+          "real_module": "Equilibri chimici",
+          "eb_module": "Equilibri Chimici",
+          "similarity": 60.2,
+          "real_coverage": 0,
+          "eb_presence": 100.0,
+          "common_keywords": [
+            "costant",
+            "equilibr",
+            "chimic",
+            "princip",
+            "chatelier"
+          ]
+        },
+        {
+          "real_module": "Equilibri acido-base",
+          "eb_module": "Acidi e Basi",
+          "similarity": 47.2,
+          "real_coverage": 0,
+          "eb_presence": 80.0,
+          "common_keywords": [
+            "ph",
+            "bas",
+            "titol"
+          ]
+        }
+      ],
+      "discrepancies": [
+        {
+          "real_module": "Legame chimico e geometria molecolare",
+          "real_coverage": 0,
+          "best_eb_match": "Termodinamica Chimica",
+          "similarity": 20.0
+        },
+        {
+          "real_module": "Stati materia e soluzioni",
+          "real_coverage": 0,
+          "best_eb_match": "Soluzioni e Proprietà delle Soluzioni",
+          "similarity": 22.8
+        },
+        {
+          "real_module": "Elettrochimica",
+          "real_coverage": 0,
+          "best_eb_match": "Chimica Inorganica",
+          "similarity": 9.2
+        },
+        {
+          "real_module": "Chimica elementi principali",
+          "real_coverage": 0,
+          "best_eb_match": "Equilibri Chimici",
+          "similarity": 19.1
+        },
+        {
+          "real_module": "Tecniche analitiche e laboratorio",
+          "real_coverage": 0,
+          "best_eb_match": "Acidi e Basi",
+          "similarity": 22.2
+        },
+        {
+          "real_module": "Sicurezza, sostenibilità e applicazioni",
+          "real_coverage": 0,
+          "best_eb_match": "Equilibri Chimici",
+          "similarity": 19.0
+        }
+      ]
+    },
+    "copertura_ideale": {
+      "description": "Quanto del framework ideale viene effettivamente insegnato",
+      "modules_covered": 12,
+      "modules_total": 12,
+      "coverage_rate": 100.0,
+      "avg_coverage_depth": 0.0,
+      "details": [
+        {
+          "module": "Struttura atomica e tavola periodica",
+          "has_match": true,
+          "match_name": "Struttura atomica e tavola periodica",
+          "similarity": 100.0,
+          "real_coverage": 0
+        },
+        {
+          "module": "Legame chimico e geometria molecolare",
+          "has_match": true,
+          "match_name": "Legame chimico e geometria molecolare",
+          "similarity": 100.0,
+          "real_coverage": 0
+        },
+        {
+          "module": "Stechiometria e reazioni chimiche",
+          "has_match": true,
+          "match_name": "Stechiometria e reazioni chimiche",
+          "similarity": 100.0,
+          "real_coverage": 0
+        },
+        {
+          "module": "Termodinamica e termochimica",
+          "has_match": true,
+          "match_name": "Termodinamica e termochimica",
+          "similarity": 100.0,
+          "real_coverage": 0
+        },
+        {
+          "module": "Stati materia e soluzioni",
+          "has_match": true,
+          "match_name": "Stati materia e soluzioni",
+          "similarity": 100.0,
+          "real_coverage": 0
+        },
+        {
+          "module": "Cinetica chimica",
+          "has_match": true,
+          "match_name": "Cinetica chimica",
+          "similarity": 100.0,
+          "real_coverage": 0
+        },
+        {
+          "module": "Equilibri chimici",
+          "has_match": true,
+          "match_name": "Equilibri chimici",
+          "similarity": 100.0,
+          "real_coverage": 0
+        },
+        {
+          "module": "Equilibri acido-base",
+          "has_match": true,
+          "match_name": "Equilibri acido-base",
+          "similarity": 100.0,
+          "real_coverage": 0
+        },
+        {
+          "module": "Elettrochimica",
+          "has_match": true,
+          "match_name": "Elettrochimica",
+          "similarity": 100.0,
+          "real_coverage": 0
+        },
+        {
+          "module": "Chimica elementi principali",
+          "has_match": true,
+          "match_name": "Chimica elementi principali",
+          "similarity": 100.0,
+          "real_coverage": 0
+        },
+        {
+          "module": "Tecniche analitiche e laboratorio",
+          "has_match": true,
+          "match_name": "Tecniche analitiche e laboratorio",
+          "similarity": 100.0,
+          "real_coverage": 0
+        },
+        {
+          "module": "Sicurezza, sostenibilità e applicazioni",
+          "has_match": true,
+          "match_name": "Sicurezza, sostenibilità e applicazioni",
+          "similarity": 100.0,
+          "real_coverage": 0
+        }
+      ]
+    },
+    "opportunita_commerciali": {
+      "description": "Opportunità commerciali identificate dal confronto",
+      "total": 2,
+      "by_type": {
+        "gap_formativo": 1,
+        "contenuto_emergente": 1,
+        "nicchia_specifica": 0
+      },
+      "opportunities": [
+        {
+          "type": "gap_formativo",
+          "priority": "alta",
+          "module": "Elettrochimica",
+          "description": "Il modulo 'Elettrochimica' del framework Zanichelli NON ha corrispondenza nei programmi reali",
+          "action": "Verificare se il modulo è obsoleto o se serve materiale didattico aggiuntivo"
+        },
+        {
+          "type": "contenuto_emergente",
+          "priority": "alta",
+          "module": "Proprietà Fisiche e Chimiche delle Sostanze",
+          "presence": 100.0,
+          "description": "Il tema 'Proprietà Fisiche e Chimiche delle Sostanze' è insegnato nel 100% delle classi ma NON è nel framework Zanichelli",
+          "action": "AZIONE PRIORITARIA: Valutare aggiunta al framework o creazione materiale supplementare"
+        }
+      ]
+    }
+  },
+  "modules_count": {
+    "ideal": 12,
+    "real": 12,
+    "evidence_based": 10
+  },
+  "coverage_map_ideal_eb": {
+    "source_to_target": {
+      "Struttura atomica e tavola periodica": {
+        "matches": [
+          {
+            "target": "Struttura Atomica e Teoria Atomica",
+            "score": 56.9,
+            "name_sim": 58.3,
+            "content_sim": 56.2,
+            "common_keywords": [
+              "atom",
+              "orbital",
+              "quantic",
+              "numer",
+              "configur",
+              "struttur",
+              "elettron"
+            ]
+          }
+        ],
+        "best_match": "Struttura Atomica e Teoria Atomica",
+        "best_score": 56.9,
+        "total_matches": 1,
+        "coverage_type": "1:1"
+      },
+      "Legame chimico e geometria molecolare": {
+        "matches": [
+          {
+            "target": "Termodinamica Chimica",
+            "score": 20.0,
+            "name_sim": 37.5,
+            "content_sim": 12.5,
+            "common_keywords": [
+              "chimic",
+              "energ"
+            ]
+          },
+          {
+            "target": "Chimica Inorganica",
+            "score": 20.0,
+            "name_sim": 37.5,
+            "content_sim": 12.5,
+            "common_keywords": [
+              "chimic",
+              "metall"
+            ]
+          },
+          {
+            "target": "Cinetica Chimica",
+            "score": 18.8,
+            "name_sim": 37.5,
+            "content_sim": 10.8,
+            "common_keywords": [
+              "chimic",
+              "energ"
+            ]
+          },
+          {
+            "target": "Fondamenti di Chimica Generale",
+            "score": 18.6,
+            "name_sim": 29.2,
+            "content_sim": 14.1,
+            "common_keywords": [
+              "chimic",
+              "legam",
+              "metall"
+            ]
+          }
+        ],
+        "best_match": "Termodinamica Chimica",
+        "best_score": 20.0,
+        "total_matches": 4,
+        "coverage_type": "1:N"
+      },
+      "Stechiometria e reazioni chimiche": {
+        "matches": [
+          {
+            "target": "Reazioni Chimiche e Stechiometria",
+            "score": 49.0,
+            "name_sim": 100.0,
+            "content_sim": 27.1,
+            "common_keywords": [
+              "reazion",
+              "stechiometr",
+              "chimic",
+              "bilanc"
+            ]
+          },
+          {
+            "target": "Acidi e Basi",
+            "score": 32.1,
+            "name_sim": 0.0,
+            "content_sim": 45.8,
+            "common_keywords": [
+              "ph",
+              "bas",
+              "reazion"
+            ]
+          },
+          {
+            "target": "Fondamenti di Chimica Generale",
+            "score": 25.4,
+            "name_sim": 33.3,
+            "content_sim": 22.0,
+            "common_keywords": [
+              "chimic",
+              "mol",
+              "numer",
+              "mass"
+            ]
+          },
+          {
+            "target": "Equilibri Chimici",
+            "score": 25.1,
+            "name_sim": 41.7,
+            "content_sim": 18.1,
+            "common_keywords": [
+              "chimic",
+              "ph",
+              "bas"
+            ]
+          },
+          {
+            "target": "Cinetica Chimica",
+            "score": 20.3,
+            "name_sim": 41.7,
+            "content_sim": 11.1,
+            "common_keywords": [
+              "chimic",
+              "reazion"
+            ]
+          }
+        ],
+        "best_match": "Reazioni Chimiche e Stechiometria",
+        "best_score": 49.0,
+        "total_matches": 5,
+        "coverage_type": "1:N"
+      },
+      "Termodinamica e termochimica": {
+        "matches": [
+          {
+            "target": "Termodinamica Chimica",
+            "score": 51.2,
+            "name_sim": 50.0,
+            "content_sim": 51.8,
+            "common_keywords": [
+              "entalp",
+              "liber",
+              "entrop",
+              "energ",
+              "termodinam"
+            ]
+          }
+        ],
+        "best_match": "Termodinamica Chimica",
+        "best_score": 51.2,
+        "total_matches": 1,
+        "coverage_type": "1:1"
+      },
+      "Stati materia e soluzioni": {
+        "matches": [
+          {
+            "target": "Soluzioni e Proprietà delle Soluzioni",
+            "score": 22.8,
+            "name_sim": 41.7,
+            "content_sim": 14.8,
+            "common_keywords": [
+              "soluzion"
+            ]
+          }
+        ],
+        "best_match": "Soluzioni e Proprietà delle Soluzioni",
+        "best_score": 22.8,
+        "total_matches": 1,
+        "coverage_type": "1:1"
+      },
+      "Cinetica chimica": {
+        "matches": [
+          {
+            "target": "Cinetica Chimica",
+            "score": 68.9,
+            "name_sim": 100.0,
+            "content_sim": 55.6,
+            "common_keywords": [
+              "veloc",
+              "cinet",
+              "reazion",
+              "chimic",
+              "energ",
+              "attiv"
+            ]
+          },
+          {
+            "target": "Termodinamica Chimica",
+            "score": 23.9,
+            "name_sim": 50.0,
+            "content_sim": 12.8,
+            "common_keywords": [
+              "chimic",
+              "energ"
+            ]
+          },
+          {
+            "target": "Reazioni Chimiche e Stechiometria",
+            "score": 18.8,
+            "name_sim": 41.7,
+            "content_sim": 9.0,
+            "common_keywords": [
+              "chimic",
+              "reazion"
+            ]
+          },
+          {
+            "target": "Equilibri Chimici",
+            "score": 15.0,
+            "name_sim": 50.0,
+            "content_sim": 0.0,
+            "common_keywords": [
+              "chimic"
+            ]
+          },
+          {
+            "target": "Chimica Inorganica",
+            "score": 15.0,
+            "name_sim": 50.0,
+            "content_sim": 0.0,
+            "common_keywords": [
+              "chimic"
+            ]
+          }
+        ],
+        "best_match": "Cinetica Chimica",
+        "best_score": 68.9,
+        "total_matches": 5,
+        "coverage_type": "1:N"
+      },
+      "Equilibri chimici": {
+        "matches": [
+          {
+            "target": "Equilibri Chimici",
+            "score": 60.2,
+            "name_sim": 100.0,
+            "content_sim": 43.2,
+            "common_keywords": [
+              "costant",
+              "equilibr",
+              "chimic",
+              "princip",
+              "chatelier"
+            ]
+          },
+          {
+            "target": "Reazioni Chimiche e Stechiometria",
+            "score": 20.1,
+            "name_sim": 41.7,
+            "content_sim": 10.8,
+            "common_keywords": [
+              "chimic",
+              "calcol"
+            ]
+          },
+          {
+            "target": "Cinetica Chimica",
+            "score": 15.0,
+            "name_sim": 50.0,
+            "content_sim": 0.0,
+            "common_keywords": [
+              "chimic"
+            ]
+          },
+          {
+            "target": "Termodinamica Chimica",
+            "score": 15.0,
+            "name_sim": 50.0,
+            "content_sim": 0.0,
+            "common_keywords": [
+              "chimic"
+            ]
+          },
+          {
+            "target": "Chimica Inorganica",
+            "score": 15.0,
+            "name_sim": 50.0,
+            "content_sim": 0.0,
+            "common_keywords": [
+              "chimic"
+            ]
+          }
+        ],
+        "best_match": "Equilibri Chimici",
+        "best_score": 60.2,
+        "total_matches": 5,
+        "coverage_type": "1:N"
+      },
+      "Equilibri acido-base": {
+        "matches": [
+          {
+            "target": "Acidi e Basi",
+            "score": 47.2,
+            "name_sim": 83.3,
+            "content_sim": 31.7,
+            "common_keywords": [
+              "ph",
+              "bas",
+              "titol"
+            ]
+          },
+          {
+            "target": "Equilibri Chimici",
+            "score": 19.2,
+            "name_sim": 41.7,
+            "content_sim": 9.6,
+            "common_keywords": [
+              "ph",
+              "equilibr"
+            ]
+          }
+        ],
+        "best_match": "Acidi e Basi",
+        "best_score": 47.2,
+        "total_matches": 2,
+        "coverage_type": "1:N"
+      },
+      "Chimica elementi principali": {
+        "matches": [
+          {
+            "target": "Equilibri Chimici",
+            "score": 19.1,
+            "name_sim": 41.7,
+            "content_sim": 9.4,
+            "common_keywords": [
+              "chimic",
+              "ph"
+            ]
+          }
+        ],
+        "best_match": "Equilibri Chimici",
+        "best_score": 19.1,
+        "total_matches": 1,
+        "coverage_type": "1:1"
+      },
+      "Tecniche analitiche e laboratorio": {
+        "matches": [
+          {
+            "target": "Acidi e Basi",
+            "score": 22.2,
+            "name_sim": 0.0,
+            "content_sim": 31.7,
+            "common_keywords": [
+              "titol",
+              "bas"
+            ]
+          }
+        ],
+        "best_match": "Acidi e Basi",
+        "best_score": 22.2,
+        "total_matches": 1,
+        "coverage_type": "1:1"
+      },
+      "Sicurezza, sostenibilità e applicazioni": {
+        "matches": [
+          {
+            "target": "Equilibri Chimici",
+            "score": 19.0,
+            "name_sim": 0.0,
+            "content_sim": 27.1,
+            "common_keywords": [
+              "chimic",
+              "ph",
+              "princip"
+            ]
+          }
+        ],
+        "best_match": "Equilibri Chimici",
+        "best_score": 19.0,
+        "total_matches": 1,
+        "coverage_type": "1:1"
+      }
+    },
+    "target_to_source": {
+      "Fondamenti di Chimica Generale": {
+        "covered_by": [
+          {
+            "source": "Stechiometria e reazioni chimiche",
+            "score": 25.4,
+            "common_keywords": [
+              "chimic",
+              "mol",
+              "numer",
+              "mass"
+            ]
+          },
+          {
+            "source": "Legame chimico e geometria molecolare",
+            "score": 18.6,
+            "common_keywords": [
+              "chimic",
+              "legam",
+              "metall"
+            ]
+          }
+        ],
+        "primary_source": "Stechiometria e reazioni chimiche",
+        "primary_score": 25.4,
+        "total_sources": 2,
+        "coverage_type": "N:1"
+      },
+      "Reazioni Chimiche e Stechiometria": {
+        "covered_by": [
+          {
+            "source": "Stechiometria e reazioni chimiche",
+            "score": 49.0,
+            "common_keywords": [
+              "reazion",
+              "stechiometr",
+              "chimic",
+              "bilanc"
+            ]
+          },
+          {
+            "source": "Equilibri chimici",
+            "score": 20.1,
+            "common_keywords": [
+              "chimic",
+              "calcol"
+            ]
+          },
+          {
+            "source": "Cinetica chimica",
+            "score": 18.8,
+            "common_keywords": [
+              "chimic",
+              "reazion"
+            ]
+          }
+        ],
+        "primary_source": "Stechiometria e reazioni chimiche",
+        "primary_score": 49.0,
+        "total_sources": 3,
+        "coverage_type": "N:1"
+      },
+      "Equilibri Chimici": {
+        "covered_by": [
+          {
+            "source": "Equilibri chimici",
+            "score": 60.2,
+            "common_keywords": [
+              "costant",
+              "equilibr",
+              "chimic",
+              "princip",
+              "chatelier"
+            ]
+          },
+          {
+            "source": "Stechiometria e reazioni chimiche",
+            "score": 25.1,
+            "common_keywords": [
+              "chimic",
+              "ph",
+              "bas"
+            ]
+          },
+          {
+            "source": "Equilibri acido-base",
+            "score": 19.2,
+            "common_keywords": [
+              "ph",
+              "equilibr"
+            ]
+          },
+          {
+            "source": "Chimica elementi principali",
+            "score": 19.1,
+            "common_keywords": [
+              "chimic",
+              "ph"
+            ]
+          },
+          {
+            "source": "Sicurezza, sostenibilità e applicazioni",
+            "score": 19.0,
+            "common_keywords": [
+              "chimic",
+              "ph",
+              "princip"
+            ]
+          },
+          {
+            "source": "Cinetica chimica",
+            "score": 15.0,
+            "common_keywords": [
+              "chimic"
+            ]
+          }
+        ],
+        "primary_source": "Equilibri chimici",
+        "primary_score": 60.2,
+        "total_sources": 6,
+        "coverage_type": "N:1"
+      },
+      "Struttura Atomica e Teoria Atomica": {
+        "covered_by": [
+          {
+            "source": "Struttura atomica e tavola periodica",
+            "score": 56.9,
+            "common_keywords": [
+              "atom",
+              "orbital",
+              "quantic",
+              "numer",
+              "configur",
+              "struttur",
+              "elettron"
+            ]
+          }
+        ],
+        "primary_source": "Struttura atomica e tavola periodica",
+        "primary_score": 56.9,
+        "total_sources": 1,
+        "coverage_type": "1:1"
+      },
+      "Cinetica Chimica": {
+        "covered_by": [
+          {
+            "source": "Cinetica chimica",
+            "score": 68.9,
+            "common_keywords": [
+              "veloc",
+              "cinet",
+              "reazion",
+              "chimic",
+              "energ",
+              "attiv"
+            ]
+          },
+          {
+            "source": "Stechiometria e reazioni chimiche",
+            "score": 20.3,
+            "common_keywords": [
+              "chimic",
+              "reazion"
+            ]
+          },
+          {
+            "source": "Legame chimico e geometria molecolare",
+            "score": 18.8,
+            "common_keywords": [
+              "chimic",
+              "energ"
+            ]
+          },
+          {
+            "source": "Equilibri chimici",
+            "score": 15.0,
+            "common_keywords": [
+              "chimic"
+            ]
+          }
+        ],
+        "primary_source": "Cinetica chimica",
+        "primary_score": 68.9,
+        "total_sources": 4,
+        "coverage_type": "N:1"
+      },
+      "Termodinamica Chimica": {
+        "covered_by": [
+          {
+            "source": "Termodinamica e termochimica",
+            "score": 51.2,
+            "common_keywords": [
+              "entalp",
+              "liber",
+              "entrop",
+              "energ",
+              "termodinam"
+            ]
+          },
+          {
+            "source": "Cinetica chimica",
+            "score": 23.9,
+            "common_keywords": [
+              "chimic",
+              "energ"
+            ]
+          },
+          {
+            "source": "Legame chimico e geometria molecolare",
+            "score": 20.0,
+            "common_keywords": [
+              "chimic",
+              "energ"
+            ]
+          },
+          {
+            "source": "Equilibri chimici",
+            "score": 15.0,
+            "common_keywords": [
+              "chimic"
+            ]
+          }
+        ],
+        "primary_source": "Termodinamica e termochimica",
+        "primary_score": 51.2,
+        "total_sources": 4,
+        "coverage_type": "N:1"
+      },
+      "Soluzioni e Proprietà delle Soluzioni": {
+        "covered_by": [
+          {
+            "source": "Stati materia e soluzioni",
+            "score": 22.8,
+            "common_keywords": [
+              "soluzion"
+            ]
+          }
+        ],
+        "primary_source": "Stati materia e soluzioni",
+        "primary_score": 22.8,
+        "total_sources": 1,
+        "coverage_type": "1:1"
+      },
+      "Acidi e Basi": {
+        "covered_by": [
+          {
+            "source": "Equilibri acido-base",
+            "score": 47.2,
+            "common_keywords": [
+              "ph",
+              "bas",
+              "titol"
+            ]
+          },
+          {
+            "source": "Stechiometria e reazioni chimiche",
+            "score": 32.1,
+            "common_keywords": [
+              "ph",
+              "bas",
+              "reazion"
+            ]
+          },
+          {
+            "source": "Tecniche analitiche e laboratorio",
+            "score": 22.2,
+            "common_keywords": [
+              "titol",
+              "bas"
+            ]
+          }
+        ],
+        "primary_source": "Equilibri acido-base",
+        "primary_score": 47.2,
+        "total_sources": 3,
+        "coverage_type": "N:1"
+      },
+      "Chimica Inorganica": {
+        "covered_by": [
+          {
+            "source": "Legame chimico e geometria molecolare",
+            "score": 20.0,
+            "common_keywords": [
+              "chimic",
+              "metall"
+            ]
+          },
+          {
+            "source": "Cinetica chimica",
+            "score": 15.0,
+            "common_keywords": [
+              "chimic"
+            ]
+          },
+          {
+            "source": "Equilibri chimici",
+            "score": 15.0,
+            "common_keywords": [
+              "chimic"
+            ]
+          }
+        ],
+        "primary_source": "Legame chimico e geometria molecolare",
+        "primary_score": 20.0,
+        "total_sources": 3,
+        "coverage_type": "N:1"
+      }
+    },
+    "uncovered_sources": [
+      {
+        "module": "Elettrochimica",
+        "contents": [
+          "celle galvaniche/voltaiche, potenziale standard",
+          "equazione nernst",
+          "celle elettrolitiche, leggi faraday",
+          "corrosione, batterie (pb, nicd, li-ion)",
+          "elettrodi riferimento"
+        ]
+      }
+    ],
+    "unmapped_targets": [
+      {
+        "module": "Proprietà Fisiche e Chimiche delle Sostanze",
+        "category": "CORE",
+        "presence": 100.0,
+        "contents": [
+          "proprietà periodiche",
+          "proprietà colligative",
+          "proprietà fisiche",
+          "proprietà chimiche",
+          "solubilità"
+        ]
+      }
+    ],
+    "matrix": [
+      {
+        "source": "Struttura atomica e tavola periodica",
+        "matches": [
+          {
+            "target": "Fondamenti di Chimica Generale",
+            "target_idx": 0,
+            "combined_score": 10.7,
+            "name_similarity": 0.0,
+            "content_similarity": 15.3,
+            "common_keywords": [
+              "atom",
+              "numer"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "atom",
+              "numer"
+            ]
+          },
+          {
+            "target": "Reazioni Chimiche e Stechiometria",
+            "target_idx": 1,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Equilibri Chimici",
+            "target_idx": 2,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Proprietà Fisiche e Chimiche delle Sostanze",
+            "target_idx": 3,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Struttura Atomica e Teoria Atomica",
+            "target_idx": 4,
+            "combined_score": 56.9,
+            "name_similarity": 58.3,
+            "content_similarity": 56.2,
+            "common_keywords": [
+              "atom",
+              "orbital",
+              "quantic",
+              "numer",
+              "configur",
+              "struttur",
+              "elettron"
+            ],
+            "name_keywords_matched": [
+              "atom",
+              "struttur"
+            ],
+            "content_keywords_matched": [
+              "atom",
+              "orbital",
+              "quantic",
+              "numer",
+              "configur",
+              "elettron"
+            ]
+          },
+          {
+            "target": "Cinetica Chimica",
+            "target_idx": 5,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Termodinamica Chimica",
+            "target_idx": 6,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Soluzioni e Proprietà delle Soluzioni",
+            "target_idx": 7,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Acidi e Basi",
+            "target_idx": 8,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Chimica Inorganica",
+            "target_idx": 9,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          }
+        ]
+      },
+      {
+        "source": "Legame chimico e geometria molecolare",
+        "matches": [
+          {
+            "target": "Fondamenti di Chimica Generale",
+            "target_idx": 0,
+            "combined_score": 18.6,
+            "name_similarity": 29.2,
+            "content_similarity": 14.1,
+            "common_keywords": [
+              "chimic",
+              "legam",
+              "metall"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": [
+              "legam",
+              "metall"
+            ]
+          },
+          {
+            "target": "Reazioni Chimiche e Stechiometria",
+            "target_idx": 1,
+            "combined_score": 8.7,
+            "name_similarity": 29.2,
+            "content_similarity": 0.0,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Equilibri Chimici",
+            "target_idx": 2,
+            "combined_score": 11.2,
+            "name_similarity": 37.5,
+            "content_similarity": 0.0,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Proprietà Fisiche e Chimiche delle Sostanze",
+            "target_idx": 3,
+            "combined_score": 7.5,
+            "name_similarity": 25.0,
+            "content_similarity": 0.0,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Struttura Atomica e Teoria Atomica",
+            "target_idx": 4,
+            "combined_score": 6.1,
+            "name_similarity": 0.0,
+            "content_similarity": 8.8,
+            "common_keywords": [
+              "elettron"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "elettron"
+            ]
+          },
+          {
+            "target": "Cinetica Chimica",
+            "target_idx": 5,
+            "combined_score": 18.8,
+            "name_similarity": 37.5,
+            "content_similarity": 10.8,
+            "common_keywords": [
+              "chimic",
+              "energ"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": [
+              "energ"
+            ]
+          },
+          {
+            "target": "Termodinamica Chimica",
+            "target_idx": 6,
+            "combined_score": 20.0,
+            "name_similarity": 37.5,
+            "content_similarity": 12.5,
+            "common_keywords": [
+              "chimic",
+              "energ"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": [
+              "energ"
+            ]
+          },
+          {
+            "target": "Soluzioni e Proprietà delle Soluzioni",
+            "target_idx": 7,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Acidi e Basi",
+            "target_idx": 8,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Chimica Inorganica",
+            "target_idx": 9,
+            "combined_score": 20.0,
+            "name_similarity": 37.5,
+            "content_similarity": 12.5,
+            "common_keywords": [
+              "chimic",
+              "metall"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": [
+              "metall"
+            ]
+          }
+        ]
+      },
+      {
+        "source": "Stechiometria e reazioni chimiche",
+        "matches": [
+          {
+            "target": "Fondamenti di Chimica Generale",
+            "target_idx": 0,
+            "combined_score": 25.4,
+            "name_similarity": 33.3,
+            "content_similarity": 22.0,
+            "common_keywords": [
+              "chimic",
+              "mol",
+              "numer",
+              "mass"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": [
+              "mol",
+              "mass",
+              "numer"
+            ]
+          },
+          {
+            "target": "Reazioni Chimiche e Stechiometria",
+            "target_idx": 1,
+            "combined_score": 49.0,
+            "name_similarity": 100.0,
+            "content_similarity": 27.1,
+            "common_keywords": [
+              "reazion",
+              "stechiometr",
+              "chimic",
+              "bilanc"
+            ],
+            "name_keywords_matched": [
+              "chimic",
+              "reazion",
+              "stechiometr"
+            ],
+            "content_keywords_matched": [
+              "reazion",
+              "stechiometr",
+              "bilanc"
+            ]
+          },
+          {
+            "target": "Equilibri Chimici",
+            "target_idx": 2,
+            "combined_score": 25.1,
+            "name_similarity": 41.7,
+            "content_similarity": 18.1,
+            "common_keywords": [
+              "chimic",
+              "ph",
+              "bas"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": [
+              "ph",
+              "bas"
+            ]
+          },
+          {
+            "target": "Proprietà Fisiche e Chimiche delle Sostanze",
+            "target_idx": 3,
+            "combined_score": 8.7,
+            "name_similarity": 29.2,
+            "content_similarity": 0.0,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Struttura Atomica e Teoria Atomica",
+            "target_idx": 4,
+            "combined_score": 6.3,
+            "name_similarity": 0.0,
+            "content_similarity": 9.0,
+            "common_keywords": [
+              "numer"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "numer"
+            ]
+          },
+          {
+            "target": "Cinetica Chimica",
+            "target_idx": 5,
+            "combined_score": 20.3,
+            "name_similarity": 41.7,
+            "content_similarity": 11.1,
+            "common_keywords": [
+              "chimic",
+              "reazion"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": [
+              "reazion"
+            ]
+          },
+          {
+            "target": "Termodinamica Chimica",
+            "target_idx": 6,
+            "combined_score": 12.5,
+            "name_similarity": 41.7,
+            "content_similarity": 0.0,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Soluzioni e Proprietà delle Soluzioni",
+            "target_idx": 7,
+            "combined_score": 10.7,
+            "name_similarity": 0.0,
+            "content_similarity": 15.3,
+            "common_keywords": [
+              "soluzion"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "soluzion"
+            ]
+          },
+          {
+            "target": "Acidi e Basi",
+            "target_idx": 8,
+            "combined_score": 32.1,
+            "name_similarity": 0.0,
+            "content_similarity": 45.8,
+            "common_keywords": [
+              "ph",
+              "bas",
+              "reazion"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "ph",
+              "bas",
+              "reazion"
+            ]
+          },
+          {
+            "target": "Chimica Inorganica",
+            "target_idx": 9,
+            "combined_score": 12.5,
+            "name_similarity": 41.7,
+            "content_similarity": 0.0,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": []
+          }
+        ]
+      },
+      {
+        "source": "Termodinamica e termochimica",
+        "matches": [
+          {
+            "target": "Fondamenti di Chimica Generale",
+            "target_idx": 0,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Reazioni Chimiche e Stechiometria",
+            "target_idx": 1,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Equilibri Chimici",
+            "target_idx": 2,
+            "combined_score": 6.4,
+            "name_similarity": 0.0,
+            "content_similarity": 9.2,
+            "common_keywords": [
+              "princip"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "princip"
+            ]
+          },
+          {
+            "target": "Proprietà Fisiche e Chimiche delle Sostanze",
+            "target_idx": 3,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Struttura Atomica e Teoria Atomica",
+            "target_idx": 4,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Cinetica Chimica",
+            "target_idx": 5,
+            "combined_score": 7.9,
+            "name_similarity": 0.0,
+            "content_similarity": 11.3,
+            "common_keywords": [
+              "energ"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "energ"
+            ]
+          },
+          {
+            "target": "Termodinamica Chimica",
+            "target_idx": 6,
+            "combined_score": 51.2,
+            "name_similarity": 50.0,
+            "content_similarity": 51.8,
+            "common_keywords": [
+              "entalp",
+              "liber",
+              "entrop",
+              "energ",
+              "termodinam"
+            ],
+            "name_keywords_matched": [
+              "termodinam"
+            ],
+            "content_keywords_matched": [
+              "entalp",
+              "liber",
+              "entrop",
+              "energ"
+            ]
+          },
+          {
+            "target": "Soluzioni e Proprietà delle Soluzioni",
+            "target_idx": 7,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Acidi e Basi",
+            "target_idx": 8,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Chimica Inorganica",
+            "target_idx": 9,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          }
+        ]
+      },
+      {
+        "source": "Stati materia e soluzioni",
+        "matches": [
+          {
+            "target": "Fondamenti di Chimica Generale",
+            "target_idx": 0,
+            "combined_score": 4.8,
+            "name_similarity": 0.0,
+            "content_similarity": 6.8,
+            "common_keywords": [
+              "mass"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "mass"
+            ]
+          },
+          {
+            "target": "Reazioni Chimiche e Stechiometria",
+            "target_idx": 1,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Equilibri Chimici",
+            "target_idx": 2,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Proprietà Fisiche e Chimiche delle Sostanze",
+            "target_idx": 3,
+            "combined_score": 11.9,
+            "name_similarity": 0.0,
+            "content_similarity": 17.0,
+            "common_keywords": [
+              "collig",
+              "propriet"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "collig",
+              "propriet"
+            ]
+          },
+          {
+            "target": "Struttura Atomica e Teoria Atomica",
+            "target_idx": 4,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Cinetica Chimica",
+            "target_idx": 5,
+            "combined_score": 7.4,
+            "name_similarity": 0.0,
+            "content_similarity": 10.6,
+            "common_keywords": [
+              "cinet"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "cinet"
+            ]
+          },
+          {
+            "target": "Termodinamica Chimica",
+            "target_idx": 6,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Soluzioni e Proprietà delle Soluzioni",
+            "target_idx": 7,
+            "combined_score": 22.8,
+            "name_similarity": 41.7,
+            "content_similarity": 14.8,
+            "common_keywords": [
+              "soluzion"
+            ],
+            "name_keywords_matched": [
+              "soluzion"
+            ],
+            "content_keywords_matched": [
+              "soluzion"
+            ]
+          },
+          {
+            "target": "Acidi e Basi",
+            "target_idx": 8,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Chimica Inorganica",
+            "target_idx": 9,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          }
+        ]
+      },
+      {
+        "source": "Cinetica chimica",
+        "matches": [
+          {
+            "target": "Fondamenti di Chimica Generale",
+            "target_idx": 0,
+            "combined_score": 12.5,
+            "name_similarity": 41.7,
+            "content_similarity": 0.0,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Reazioni Chimiche e Stechiometria",
+            "target_idx": 1,
+            "combined_score": 18.8,
+            "name_similarity": 41.7,
+            "content_similarity": 9.0,
+            "common_keywords": [
+              "chimic",
+              "reazion"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": [
+              "reazion"
+            ]
+          },
+          {
+            "target": "Equilibri Chimici",
+            "target_idx": 2,
+            "combined_score": 15.0,
+            "name_similarity": 50.0,
+            "content_similarity": 0.0,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Proprietà Fisiche e Chimiche delle Sostanze",
+            "target_idx": 3,
+            "combined_score": 11.2,
+            "name_similarity": 37.5,
+            "content_similarity": 0.0,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Struttura Atomica e Teoria Atomica",
+            "target_idx": 4,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Cinetica Chimica",
+            "target_idx": 5,
+            "combined_score": 68.9,
+            "name_similarity": 100.0,
+            "content_similarity": 55.6,
+            "common_keywords": [
+              "veloc",
+              "cinet",
+              "reazion",
+              "chimic",
+              "energ",
+              "attiv"
+            ],
+            "name_keywords_matched": [
+              "chimic",
+              "cinet"
+            ],
+            "content_keywords_matched": [
+              "reazion",
+              "energ",
+              "attiv",
+              "veloc",
+              "cinet"
+            ]
+          },
+          {
+            "target": "Termodinamica Chimica",
+            "target_idx": 6,
+            "combined_score": 23.9,
+            "name_similarity": 50.0,
+            "content_similarity": 12.8,
+            "common_keywords": [
+              "chimic",
+              "energ"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": [
+              "energ"
+            ]
+          },
+          {
+            "target": "Soluzioni e Proprietà delle Soluzioni",
+            "target_idx": 7,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Acidi e Basi",
+            "target_idx": 8,
+            "combined_score": 10.7,
+            "name_similarity": 0.0,
+            "content_similarity": 15.3,
+            "common_keywords": [
+              "reazion"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "reazion"
+            ]
+          },
+          {
+            "target": "Chimica Inorganica",
+            "target_idx": 9,
+            "combined_score": 15.0,
+            "name_similarity": 50.0,
+            "content_similarity": 0.0,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": []
+          }
+        ]
+      },
+      {
+        "source": "Equilibri chimici",
+        "matches": [
+          {
+            "target": "Fondamenti di Chimica Generale",
+            "target_idx": 0,
+            "combined_score": 12.5,
+            "name_similarity": 41.7,
+            "content_similarity": 0.0,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Reazioni Chimiche e Stechiometria",
+            "target_idx": 1,
+            "combined_score": 20.1,
+            "name_similarity": 41.7,
+            "content_similarity": 10.8,
+            "common_keywords": [
+              "chimic",
+              "calcol"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": [
+              "calcol"
+            ]
+          },
+          {
+            "target": "Equilibri Chimici",
+            "target_idx": 2,
+            "combined_score": 60.2,
+            "name_similarity": 100.0,
+            "content_similarity": 43.2,
+            "common_keywords": [
+              "costant",
+              "equilibr",
+              "chimic",
+              "princip",
+              "chatelier"
+            ],
+            "name_keywords_matched": [
+              "chimic",
+              "equilibr"
+            ],
+            "content_keywords_matched": [
+              "chatelier",
+              "princip",
+              "costant",
+              "equilibr"
+            ]
+          },
+          {
+            "target": "Proprietà Fisiche e Chimiche delle Sostanze",
+            "target_idx": 3,
+            "combined_score": 11.2,
+            "name_similarity": 37.5,
+            "content_similarity": 0.0,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Struttura Atomica e Teoria Atomica",
+            "target_idx": 4,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Cinetica Chimica",
+            "target_idx": 5,
+            "combined_score": 15.0,
+            "name_similarity": 50.0,
+            "content_similarity": 0.0,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Termodinamica Chimica",
+            "target_idx": 6,
+            "combined_score": 15.0,
+            "name_similarity": 50.0,
+            "content_similarity": 0.0,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Soluzioni e Proprietà delle Soluzioni",
+            "target_idx": 7,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Acidi e Basi",
+            "target_idx": 8,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Chimica Inorganica",
+            "target_idx": 9,
+            "combined_score": 15.0,
+            "name_similarity": 50.0,
+            "content_similarity": 0.0,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": []
+          }
+        ]
+      },
+      {
+        "source": "Equilibri acido-base",
+        "matches": [
+          {
+            "target": "Fondamenti di Chimica Generale",
+            "target_idx": 0,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Reazioni Chimiche e Stechiometria",
+            "target_idx": 1,
+            "combined_score": 6.7,
+            "name_similarity": 0.0,
+            "content_similarity": 9.6,
+            "common_keywords": [
+              "calcol"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "calcol"
+            ]
+          },
+          {
+            "target": "Equilibri Chimici",
+            "target_idx": 2,
+            "combined_score": 19.2,
+            "name_similarity": 41.7,
+            "content_similarity": 9.6,
+            "common_keywords": [
+              "ph",
+              "equilibr"
+            ],
+            "name_keywords_matched": [
+              "equilibr"
+            ],
+            "content_keywords_matched": [
+              "ph"
+            ]
+          },
+          {
+            "target": "Proprietà Fisiche e Chimiche delle Sostanze",
+            "target_idx": 3,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Struttura Atomica e Teoria Atomica",
+            "target_idx": 4,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Cinetica Chimica",
+            "target_idx": 5,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Termodinamica Chimica",
+            "target_idx": 6,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Soluzioni e Proprietà delle Soluzioni",
+            "target_idx": 7,
+            "combined_score": 11.1,
+            "name_similarity": 0.0,
+            "content_similarity": 15.8,
+            "common_keywords": [
+              "tampon"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "tampon"
+            ]
+          },
+          {
+            "target": "Acidi e Basi",
+            "target_idx": 8,
+            "combined_score": 47.2,
+            "name_similarity": 83.3,
+            "content_similarity": 31.7,
+            "common_keywords": [
+              "ph",
+              "bas",
+              "titol"
+            ],
+            "name_keywords_matched": [
+              "ph",
+              "bas"
+            ],
+            "content_keywords_matched": [
+              "ph",
+              "titol"
+            ]
+          },
+          {
+            "target": "Chimica Inorganica",
+            "target_idx": 9,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          }
+        ]
+      },
+      {
+        "source": "Elettrochimica",
+        "matches": [
+          {
+            "target": "Fondamenti di Chimica Generale",
+            "target_idx": 0,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Reazioni Chimiche e Stechiometria",
+            "target_idx": 1,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Equilibri Chimici",
+            "target_idx": 2,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Proprietà Fisiche e Chimiche delle Sostanze",
+            "target_idx": 3,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Struttura Atomica e Teoria Atomica",
+            "target_idx": 4,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Cinetica Chimica",
+            "target_idx": 5,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Termodinamica Chimica",
+            "target_idx": 6,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Soluzioni e Proprietà delle Soluzioni",
+            "target_idx": 7,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Acidi e Basi",
+            "target_idx": 8,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Chimica Inorganica",
+            "target_idx": 9,
+            "combined_score": 9.2,
+            "name_similarity": 0.0,
+            "content_similarity": 13.1,
+            "common_keywords": [
+              "ion"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "ion"
+            ]
+          }
+        ]
+      },
+      {
+        "source": "Chimica elementi principali",
+        "matches": [
+          {
+            "target": "Fondamenti di Chimica Generale",
+            "target_idx": 0,
+            "combined_score": 10.0,
+            "name_similarity": 33.3,
+            "content_similarity": 0.0,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Reazioni Chimiche e Stechiometria",
+            "target_idx": 1,
+            "combined_score": 10.0,
+            "name_similarity": 33.3,
+            "content_similarity": 0.0,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Equilibri Chimici",
+            "target_idx": 2,
+            "combined_score": 19.1,
+            "name_similarity": 41.7,
+            "content_similarity": 9.4,
+            "common_keywords": [
+              "chimic",
+              "ph"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": [
+              "ph"
+            ]
+          },
+          {
+            "target": "Proprietà Fisiche e Chimiche delle Sostanze",
+            "target_idx": 3,
+            "combined_score": 8.7,
+            "name_similarity": 29.2,
+            "content_similarity": 0.0,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Struttura Atomica e Teoria Atomica",
+            "target_idx": 4,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Cinetica Chimica",
+            "target_idx": 5,
+            "combined_score": 12.5,
+            "name_similarity": 41.7,
+            "content_similarity": 0.0,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Termodinamica Chimica",
+            "target_idx": 6,
+            "combined_score": 12.5,
+            "name_similarity": 41.7,
+            "content_similarity": 0.0,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Soluzioni e Proprietà delle Soluzioni",
+            "target_idx": 7,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Acidi e Basi",
+            "target_idx": 8,
+            "combined_score": 10.9,
+            "name_similarity": 0.0,
+            "content_similarity": 15.6,
+            "common_keywords": [
+              "ph"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "ph"
+            ]
+          },
+          {
+            "target": "Chimica Inorganica",
+            "target_idx": 9,
+            "combined_score": 12.5,
+            "name_similarity": 41.7,
+            "content_similarity": 0.0,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [
+              "chimic"
+            ],
+            "content_keywords_matched": []
+          }
+        ]
+      },
+      {
+        "source": "Tecniche analitiche e laboratorio",
+        "matches": [
+          {
+            "target": "Fondamenti di Chimica Generale",
+            "target_idx": 0,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Reazioni Chimiche e Stechiometria",
+            "target_idx": 1,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Equilibri Chimici",
+            "target_idx": 2,
+            "combined_score": 6.7,
+            "name_similarity": 0.0,
+            "content_similarity": 9.6,
+            "common_keywords": [
+              "bas"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "bas"
+            ]
+          },
+          {
+            "target": "Proprietà Fisiche e Chimiche delle Sostanze",
+            "target_idx": 3,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Struttura Atomica e Teoria Atomica",
+            "target_idx": 4,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Cinetica Chimica",
+            "target_idx": 5,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Termodinamica Chimica",
+            "target_idx": 6,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Soluzioni e Proprietà delle Soluzioni",
+            "target_idx": 7,
+            "combined_score": 11.1,
+            "name_similarity": 0.0,
+            "content_similarity": 15.8,
+            "common_keywords": [
+              "soluzion"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "soluzion"
+            ]
+          },
+          {
+            "target": "Acidi e Basi",
+            "target_idx": 8,
+            "combined_score": 22.2,
+            "name_similarity": 0.0,
+            "content_similarity": 31.7,
+            "common_keywords": [
+              "titol",
+              "bas"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "titol",
+              "bas"
+            ]
+          },
+          {
+            "target": "Chimica Inorganica",
+            "target_idx": 9,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          }
+        ]
+      },
+      {
+        "source": "Sicurezza, sostenibilità e applicazioni",
+        "matches": [
+          {
+            "target": "Fondamenti di Chimica Generale",
+            "target_idx": 0,
+            "combined_score": 5.1,
+            "name_similarity": 0.0,
+            "content_similarity": 7.3,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "chimic"
+            ]
+          },
+          {
+            "target": "Reazioni Chimiche e Stechiometria",
+            "target_idx": 1,
+            "combined_score": 6.3,
+            "name_similarity": 0.0,
+            "content_similarity": 9.0,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "chimic"
+            ]
+          },
+          {
+            "target": "Equilibri Chimici",
+            "target_idx": 2,
+            "combined_score": 19.0,
+            "name_similarity": 0.0,
+            "content_similarity": 27.1,
+            "common_keywords": [
+              "chimic",
+              "ph",
+              "princip"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "chimic",
+              "ph",
+              "princip"
+            ]
+          },
+          {
+            "target": "Proprietà Fisiche e Chimiche delle Sostanze",
+            "target_idx": 3,
+            "combined_score": 6.3,
+            "name_similarity": 0.0,
+            "content_similarity": 9.0,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "chimic"
+            ]
+          },
+          {
+            "target": "Struttura Atomica e Teoria Atomica",
+            "target_idx": 4,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Cinetica Chimica",
+            "target_idx": 5,
+            "combined_score": 7.8,
+            "name_similarity": 0.0,
+            "content_similarity": 11.1,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "chimic"
+            ]
+          },
+          {
+            "target": "Termodinamica Chimica",
+            "target_idx": 6,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Soluzioni e Proprietà delle Soluzioni",
+            "target_idx": 7,
+            "combined_score": 0.0,
+            "name_similarity": 0.0,
+            "content_similarity": 0.0,
+            "common_keywords": [],
+            "name_keywords_matched": [],
+            "content_keywords_matched": []
+          },
+          {
+            "target": "Acidi e Basi",
+            "target_idx": 8,
+            "combined_score": 10.7,
+            "name_similarity": 0.0,
+            "content_similarity": 15.3,
+            "common_keywords": [
+              "ph"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "ph"
+            ]
+          },
+          {
+            "target": "Chimica Inorganica",
+            "target_idx": 9,
+            "combined_score": 8.9,
+            "name_similarity": 0.0,
+            "content_similarity": 12.8,
+            "common_keywords": [
+              "chimic"
+            ],
+            "name_keywords_matched": [],
+            "content_keywords_matched": [
+              "chimic"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "comparison_matrix": [
+    {
+      "ideal_module": "Struttura atomica e tavola periodica",
+      "ideal_contents_count": 5,
+      "real_match": "Struttura atomica e tavola periodica",
+      "real_similarity": 100.0,
+      "real_coverage": 0,
+      "eb_matches": [
+        {
+          "name": "Struttura Atomica e Teoria Atomica",
+          "score": 56.9,
+          "category": "CORE",
+          "keywords": [
+            "atom",
+            "orbital",
+            "quantic",
+            "numer",
+            "configur"
+          ]
+        }
+      ],
+      "eb_best_match": "Struttura Atomica e Teoria Atomica",
+      "eb_best_similarity": 56.9,
+      "eb_category": "CORE",
+      "common_keywords": [
+        "atom",
+        "orbital",
+        "quantic",
+        "numer",
+        "configur"
+      ]
+    },
+    {
+      "ideal_module": "Legame chimico e geometria molecolare",
+      "ideal_contents_count": 5,
+      "real_match": "Legame chimico e geometria molecolare",
+      "real_similarity": 100.0,
+      "real_coverage": 0,
+      "eb_matches": [
+        {
+          "name": "Termodinamica Chimica",
+          "score": 20.0,
+          "category": "CORE",
+          "keywords": [
+            "chimic",
+            "energ"
+          ]
+        },
+        {
+          "name": "Chimica Inorganica",
+          "score": 20.0,
+          "category": "CORE",
+          "keywords": [
+            "chimic",
+            "metall"
+          ]
+        },
+        {
+          "name": "Cinetica Chimica",
+          "score": 18.8,
+          "category": "CORE",
+          "keywords": [
+            "chimic",
+            "energ"
+          ]
+        }
+      ],
+      "eb_best_match": "Termodinamica Chimica",
+      "eb_best_similarity": 20.0,
+      "eb_category": "CORE",
+      "common_keywords": [
+        "chimic",
+        "energ"
+      ]
+    },
+    {
+      "ideal_module": "Stechiometria e reazioni chimiche",
+      "ideal_contents_count": 5,
+      "real_match": "Stechiometria e reazioni chimiche",
+      "real_similarity": 100.0,
+      "real_coverage": 0,
+      "eb_matches": [
+        {
+          "name": "Reazioni Chimiche e Stechiometria",
+          "score": 49.0,
+          "category": "CORE",
+          "keywords": [
+            "reazion",
+            "stechiometr",
+            "chimic",
+            "bilanc"
+          ]
+        },
+        {
+          "name": "Acidi e Basi",
+          "score": 32.1,
+          "category": "CORE",
+          "keywords": [
+            "ph",
+            "bas",
+            "reazion"
+          ]
+        },
+        {
+          "name": "Fondamenti di Chimica Generale",
+          "score": 25.4,
+          "category": "CORE",
+          "keywords": [
+            "chimic",
+            "mol",
+            "numer",
+            "mass"
+          ]
+        }
+      ],
+      "eb_best_match": "Reazioni Chimiche e Stechiometria",
+      "eb_best_similarity": 49.0,
+      "eb_category": "CORE",
+      "common_keywords": [
+        "reazion",
+        "stechiometr",
+        "chimic",
+        "bilanc"
+      ]
+    },
+    {
+      "ideal_module": "Termodinamica e termochimica",
+      "ideal_contents_count": 5,
+      "real_match": "Termodinamica e termochimica",
+      "real_similarity": 100.0,
+      "real_coverage": 0,
+      "eb_matches": [
+        {
+          "name": "Termodinamica Chimica",
+          "score": 51.2,
+          "category": "CORE",
+          "keywords": [
+            "entalp",
+            "liber",
+            "entrop",
+            "energ",
+            "termodinam"
+          ]
+        }
+      ],
+      "eb_best_match": "Termodinamica Chimica",
+      "eb_best_similarity": 51.2,
+      "eb_category": "CORE",
+      "common_keywords": [
+        "entalp",
+        "liber",
+        "entrop",
+        "energ",
+        "termodinam"
+      ]
+    },
+    {
+      "ideal_module": "Stati materia e soluzioni",
+      "ideal_contents_count": 5,
+      "real_match": "Stati materia e soluzioni",
+      "real_similarity": 100.0,
+      "real_coverage": 0,
+      "eb_matches": [
+        {
+          "name": "Soluzioni e Proprietà delle Soluzioni",
+          "score": 22.8,
+          "category": "CORE",
+          "keywords": [
+            "soluzion"
+          ]
+        }
+      ],
+      "eb_best_match": "Soluzioni e Proprietà delle Soluzioni",
+      "eb_best_similarity": 22.8,
+      "eb_category": "CORE",
+      "common_keywords": [
+        "soluzion"
+      ]
+    },
+    {
+      "ideal_module": "Cinetica chimica",
+      "ideal_contents_count": 5,
+      "real_match": "Cinetica chimica",
+      "real_similarity": 100.0,
+      "real_coverage": 0,
+      "eb_matches": [
+        {
+          "name": "Cinetica Chimica",
+          "score": 68.9,
+          "category": "CORE",
+          "keywords": [
+            "veloc",
+            "cinet",
+            "reazion",
+            "chimic",
+            "energ"
+          ]
+        },
+        {
+          "name": "Termodinamica Chimica",
+          "score": 23.9,
+          "category": "CORE",
+          "keywords": [
+            "chimic",
+            "energ"
+          ]
+        },
+        {
+          "name": "Reazioni Chimiche e Stechiometria",
+          "score": 18.8,
+          "category": "CORE",
+          "keywords": [
+            "chimic",
+            "reazion"
+          ]
+        }
+      ],
+      "eb_best_match": "Cinetica Chimica",
+      "eb_best_similarity": 68.9,
+      "eb_category": "CORE",
+      "common_keywords": [
+        "veloc",
+        "cinet",
+        "reazion",
+        "chimic",
+        "energ"
+      ]
+    },
+    {
+      "ideal_module": "Equilibri chimici",
+      "ideal_contents_count": 5,
+      "real_match": "Equilibri chimici",
+      "real_similarity": 100.0,
+      "real_coverage": 0,
+      "eb_matches": [
+        {
+          "name": "Equilibri Chimici",
+          "score": 60.2,
+          "category": "CORE",
+          "keywords": [
+            "costant",
+            "equilibr",
+            "chimic",
+            "princip",
+            "chatelier"
+          ]
+        },
+        {
+          "name": "Reazioni Chimiche e Stechiometria",
+          "score": 20.1,
+          "category": "CORE",
+          "keywords": [
+            "chimic",
+            "calcol"
+          ]
+        },
+        {
+          "name": "Cinetica Chimica",
+          "score": 15.0,
+          "category": "CORE",
+          "keywords": [
+            "chimic"
+          ]
+        }
+      ],
+      "eb_best_match": "Equilibri Chimici",
+      "eb_best_similarity": 60.2,
+      "eb_category": "CORE",
+      "common_keywords": [
+        "costant",
+        "equilibr",
+        "chimic",
+        "princip",
+        "chatelier"
+      ]
+    },
+    {
+      "ideal_module": "Equilibri acido-base",
+      "ideal_contents_count": 5,
+      "real_match": "Equilibri acido-base",
+      "real_similarity": 100.0,
+      "real_coverage": 0,
+      "eb_matches": [
+        {
+          "name": "Acidi e Basi",
+          "score": 47.2,
+          "category": "CORE",
+          "keywords": [
+            "ph",
+            "bas",
+            "titol"
+          ]
+        },
+        {
+          "name": "Equilibri Chimici",
+          "score": 19.2,
+          "category": "CORE",
+          "keywords": [
+            "ph",
+            "equilibr"
+          ]
+        }
+      ],
+      "eb_best_match": "Acidi e Basi",
+      "eb_best_similarity": 47.2,
+      "eb_category": "CORE",
+      "common_keywords": [
+        "ph",
+        "bas",
+        "titol"
+      ]
+    },
+    {
+      "ideal_module": "Elettrochimica",
+      "ideal_contents_count": 5,
+      "real_match": "Elettrochimica",
+      "real_similarity": 100.0,
+      "real_coverage": 0,
+      "eb_matches": [],
+      "eb_best_match": null,
+      "eb_best_similarity": 0,
+      "eb_category": null,
+      "common_keywords": []
+    },
+    {
+      "ideal_module": "Chimica elementi principali",
+      "ideal_contents_count": 5,
+      "real_match": "Chimica elementi principali",
+      "real_similarity": 100.0,
+      "real_coverage": 0,
+      "eb_matches": [
+        {
+          "name": "Equilibri Chimici",
+          "score": 19.1,
+          "category": "CORE",
+          "keywords": [
+            "chimic",
+            "ph"
+          ]
+        }
+      ],
+      "eb_best_match": "Equilibri Chimici",
+      "eb_best_similarity": 19.1,
+      "eb_category": "CORE",
+      "common_keywords": [
+        "chimic",
+        "ph"
+      ]
+    },
+    {
+      "ideal_module": "Tecniche analitiche e laboratorio",
+      "ideal_contents_count": 5,
+      "real_match": "Tecniche analitiche e laboratorio",
+      "real_similarity": 100.0,
+      "real_coverage": 0,
+      "eb_matches": [
+        {
+          "name": "Acidi e Basi",
+          "score": 22.2,
+          "category": "CORE",
+          "keywords": [
+            "titol",
+            "bas"
+          ]
+        }
+      ],
+      "eb_best_match": "Acidi e Basi",
+      "eb_best_similarity": 22.2,
+      "eb_category": "CORE",
+      "common_keywords": [
+        "titol",
+        "bas"
+      ]
+    },
+    {
+      "ideal_module": "Sicurezza, sostenibilità e applicazioni",
+      "ideal_contents_count": 5,
+      "real_match": "Sicurezza, sostenibilità e applicazioni",
+      "real_similarity": 100.0,
+      "real_coverage": 0,
+      "eb_matches": [
+        {
+          "name": "Equilibri Chimici",
+          "score": 19.0,
+          "category": "CORE",
+          "keywords": [
+            "chimic",
+            "ph",
+            "princip"
+          ]
+        }
+      ],
+      "eb_best_match": "Equilibri Chimici",
+      "eb_best_similarity": 19.0,
+      "eb_category": "CORE",
+      "common_keywords": [
+        "chimic",
+        "ph",
+        "princip"
+      ]
+    }
+  ]
+}
