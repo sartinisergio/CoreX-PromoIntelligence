@@ -1,0 +1,320 @@
+{
+  "framework": {
+    "name": "Framework Unico Valutazione Biologia Molecolare del Gene",
+    "version": "1.0",
+    "description": "Framework integrato per valutare allineamento tra programmi di Biologia Molecolare del Gene universitaria e manuali di testo, per contesti Biologiche(L-13), Biotecnologie(L-2), Medicina(LM-41), Farmaceutiche(LM-13/L-29), Veterinarie(LM-42), Alimentari(L-26), Chimiche(L-27).",
+    "date": "2026-01-11"
+  },
+  "scale": {
+    "1": "livello minimo/assente",
+    "2": "livello molto basso/sporadico",
+    "3": "livello moderato/base",
+    "4": "livello alto/articolato",
+    "5": "livello massimo/avanzato"
+  },
+  "syllabus_modules": [
+    {
+      "id": 1,
+      "name": "Codice genetico: DNA e RNA",
+      "core_contents": ["Struttura DNA/RNA", "Basi azotate appaiamento", "Topologia DNA superavvolgimento", "Ribozimi", "RNA non-coding miRNA siRNA lncRNA"],
+      "learning_outcomes": ["Descrivere struttura/topologia DNA/RNA", "Spiegare ruolo RNA non-coding", "Interpretare qualità sequenziamento"]
+    },
+    {
+      "id": 2,
+      "name": "Genomi ed elementi mobili",
+      "core_contents": ["Organizzazione procarioti/eucarioti", "Introni/esoni", "Trasposoni retrotrasposoni", "DNA mitocondriale/plastidiale", "CNV inversioni pangenomi"],
+      "learning_outcomes": ["Confrontare genomi procarioti/eucarioti", "Analizzare duplicazioni adattative", "Identificare elementi mobili"]
+    },
+    {
+      "id": 3,
+      "name": "Replicazione riparazione ricombinazione",
+      "core_contents": ["Complesso replicazione primasi polimerasi", "Telomerasi forche", "Riparazione BER NER MMR", "Danno UV/ossidativo", "Ricombinazione omologa/non"],
+      "learning_outcomes": ["Interpretare sensibilità UV mutanti", "Spiegare accorciamento telomeri", "Descrivere vie riparazione"]
+    },
+    {
+      "id": 4,
+      "name": "Trascrizione e regolazione genica",
+      "core_contents": ["RNA polimerasi promotori enhancer", "Operoni procarioti", "Cromatina eucariotica", "Splicing editing stabilità RNA"],
+      "learning_outcomes": ["Analizzare operone lac", "Interpretare heatmap espressione", "Valutare controllo post-trascrizionale"]
+    },
+    {
+      "id": 5,
+      "name": "Traduzione e qualità proteico",
+      "core_contents": ["Ribosomi tRNA codici inizio/stop", "Cornice lettura", "Folding chaperoni", "Proteasoma autofagia"],
+      "learning_outcomes": ["Prevedere effetti mutazione nonsenso", "Tracciare DNA a proteina", "Descrivere degradazione"]
+    },
+    {
+      "id": 6,
+      "name": "Cromatina ed epigenetica",
+      "core_contents": ["Nucleosomi modificazioni istoniche", "Rimodellamento", "Metilazione DNA imprinting", "Eredità epigenetica"],
+      "learning_outcomes": ["Interpretare ChIP-seq qualitativo", "Spiegare effetti ambientali epigenetici", "Analizzare nucleosomi"]
+    },
+    {
+      "id": 7,
+      "name": "Tecnologie biologia molecolare",
+      "core_contents": ["PCR varianti elettroforesi", "Clonaggio vettori", "Sequenziamento NGS", "CRISPR editing"],
+      "learning_outcomes": ["Progettare primer concettuale", "Navigare FASTA/FASTQ", "Descrivere principi CRISPR"]
+    },
+    {
+      "id": 8,
+      "name": "Omiche e bioinformatica",
+      "core_contents": ["Genomica trascrittomica proteomica", "Allineamento sequenze", "Banche NCBI UniProt", "Statistica -omici FDR"],
+      "learning_outcomes": ["Ricercare gene Ensembl", "Analisi espressione differenziale", "Annotare sequenze"]
+    },
+    {
+      "id": 9,
+      "name": "Regolazione integrata reti sistemi",
+      "core_contents": ["Circuiti feedback", "Motivi rete toggle feed-forward", "Variabilità cellulare", "Rumore trascrizionale"],
+      "learning_outcomes": ["Simulare interruttore bistabile", "Spiegare rumore cellulare", "Analizzare reti regolative"]
+    },
+    {
+      "id": 10,
+      "name": "Riproducibilità etica sicurezza",
+      "core_contents": ["Dati FAIR", "Sicurezza laboratorio", "Livelli contenimento rifiuti", "Quadro regolatorio IP"],
+      "learning_outcomes": ["Valutare articolo bias", "Discutere uso genomiche", "Descrivere pratiche FAIR"]
+    }
+  ],
+  "criteria": [
+    {
+      "id": "copertura_moduli",
+      "name": "Copertura moduli syllabus",
+      "type": "contenuto",
+      "levels": {
+        "1": "Meno di 4 moduli sui 10 core",
+        "2": "4-6 moduli superficiali",
+        "3": "7 moduli base",
+        "4": "8-9 moduli articolati",
+        "5": "Tutti 10 moduli avanzati"
+      }
+    },
+    {
+      "id": "modulo1_dna_rna",
+      "name": "Struttura e funzioni DNA/RNA",
+      "type": "contenuto",
+      "levels": {
+        "1": "Assente",
+        "2": "Solo basi azotate",
+        "3": "Struttura doppia elica",
+        "4": "Topologia e RNA non-coding",
+        "5": "Ribozimi e mutabilità virale"
+      }
+    },
+    {
+      "id": "modulo2_genomi",
+      "name": "Organizzazione genomi mobili",
+      "type": "contenuto",
+      "levels": {
+        "1": "Solo procarioti",
+        "2": "Introni esoni",
+        "3": "Trasposoni",
+        "4": "CNV pangenomi",
+        "5": "Duplicazioni adattative"
+      }
+    },
+    {
+      "id": "modulo3_replicazione",
+      "name": "Replicazione e riparazione",
+      "type": "contenuto",
+      "levels": {
+        "1": "Replicazione base",
+        "2": "Polimerasi",
+        "3": "Riparazione BER/NER",
+        "4": "Telomerasi ricombinazione",
+        "5": "Danni specifici mutanti"
+      }
+    },
+    {
+      "id": "modulo4_trascrizione",
+      "name": "Trascrizione regolazione",
+      "type": "contenuto",
+      "levels": {
+        "1": "Promotori base",
+        "2": "Operoni",
+        "3": "Fattori trascrizione",
+        "4": "Post-trascrizionale",
+        "5": "Heatmap espressione"
+      }
+    },
+    {
+      "id": "modulo5_traduzione",
+      "name": "Traduzione qualità proteica",
+      "type": "contenuto",
+      "levels": {
+        "1": "Codice genetico",
+        "2": "Ribosomi tRNA",
+        "3": "Folding",
+        "4": "Degradazione",
+        "5": "Mutazioni nonsenso"
+      }
+    },
+    {
+      "id": "modulo6_epigenetica",
+      "name": "Cromatina epigenetica",
+      "type": "contenuto",
+      "levels": {
+        "1": "Nucleosomi",
+        "2": "Modificazioni istoniche",
+        "3": "Metilazione DNA",
+        "4": "Imprinting",
+        "5": "ChIP-seq effetti ambientali"
+      }
+    },
+    {
+      "id": "modulo7_tecniche",
+      "name": "Tecnologie molecolari",
+      "type": "didattico",
+      "levels": {
+        "1": "PCR base",
+        "2": "Clonaggio",
+        "3": "NGS principi",
+        "4": "CRISPR",
+        "5": "Progettazione primer FASTQ"
+      }
+    },
+    {
+      "id": "modulo8_omiche",
+      "name": "Omiche bioinformatica",
+      "type": "didattico",
+      "levels": {
+        "1": "Definizioni -omiche",
+        "2": "Banche dati",
+        "3": "Allineamento",
+        "4": "Statistica FDR",
+        "5": "Analisi Ensembl dataset"
+      }
+    },
+    {
+      "id": "modulo9_reti",
+      "name": "Reti regolative sistemi",
+      "type": "contenuto",
+      "levels": {
+        "1": "Feedback base",
+        "2": "Motivi rete",
+        "3": "Toggle switch",
+        "4": "Rumore trascrizionale",
+        "5": "Simulazioni bistabili"
+      }
+    },
+    {
+      "id": "modulo10_etica",
+      "name": "Etica riproducibilità sicurezza",
+      "type": "didattico",
+      "levels": {
+        "1": "Sicurezza base",
+        "2": "Dati FAIR",
+        "3": "Bias articoli",
+        "4": "Regolatorio IP",
+        "5": "Discussioni genomiche"
+      }
+    }
+  ],
+  "program_profiles": [
+    {
+      "id": "biologiche_L13",
+      "name": "Scienze Biologiche (L-13)",
+      "priority_modules": [2,3,8,9],
+      "requirements": {
+        "copertura_moduli": {"required_level": 4, "weight": 0.15},
+        "modulo2_genomi": {"required_level": 5, "weight": 0.10},
+        "modulo8_omiche": {"required_level": 5, "weight": 0.12},
+        "modulo3_replicazione": {"required_level": 4, "weight": 0.09},
+        "modulo9_reti": {"required_level": 4, "weight": 0.09},
+        "modulo1_dna_rna": {"required_level": 4, "weight": 0.07},
+        "modulo4_trascrizione": {"required_level": 4, "weight": 0.08},
+        "modulo5_traduzione": {"required_level": 3, "weight": 0.06},
+        "modulo6_epigenetica": {"required_level": 4, "weight": 0.08},
+        "modulo7_tecniche": {"required_level": 4, "weight": 0.09},
+        "modulo10_etica": {"required_level": 3, "weight": 0.07},
+        "modulo6_epigenetica": {"required_level": 3, "weight": 0.05}
+      }
+    },
+    {
+      "id": "biotecnologie_L2",
+      "name": "Biotecnologie (L-2)",
+      "priority_modules": [7,9,10],
+      "requirements": {
+        "copertura_moduli": {"required_level": 5, "weight": 0.12},
+        "modulo7_tecniche": {"required_level": 5, "weight": 0.15},
+        "modulo9_reti": {"required_level": 5, "weight": 0.12},
+        "modulo10_etica": {"required_level": 4, "weight": 0.10},
+        "modulo1_dna_rna": {"required_level": 4, "weight": 0.08},
+        "modulo2_genomi": {"required_level": 4, "weight": 0.09},
+        "modulo3_replicazione": {"required_level": 4, "weight": 0.09},
+        "modulo4_trascrizione": {"required_level": 4, "weight": 0.09},
+        "modulo5_traduzione": {"required_level": 4, "weight": 0.08},
+        "modulo6_epigenetica": {"required_level": 3, "weight": 0.06},
+        "modulo8_omiche": {"required_level": 4, "weight": 0.10},
+        "modulo3_replicazione": {"required_level": 3, "weight": 0.02}
+      }
+    },
+    {
+      "id": "medicina_LM41",
+      "name": "Medicina (LM-41)",
+      "priority_modules": [3,4,6],
+      "requirements": {
+        "copertura_moduli": {"required_level": 4, "weight": 0.14},
+        "modulo3_replicazione": {"required_level": 5, "weight": 0.12},
+        "modulo4_trascrizione": {"required_level": 5, "weight": 0.11},
+        "modulo6_epigenetica": {"required_level": 4, "weight": 0.10},
+        "modulo7_tecniche": {"required_level": 4, "weight": 0.10},
+        "modulo1_dna_rna": {"required_level": 3, "weight": 0.06},
+        "modulo2_genomi": {"required_level": 4, "weight": 0.09},
+        "modulo5_traduzione": {"required_level": 3, "weight": 0.06},
+        "modulo8_omiche": {"required_level": 4, "weight": 0.10},
+        "modulo9_reti": {"required_level": 3, "weight": 0.07},
+        "modulo10_etica": {"required_level": 4, "weight": 0.09},
+        "modulo5_traduzione": {"required_level": 3, "weight": 0.06}
+      }
+    },
+    {
+      "id": "farmaceutiche_LM13",
+      "name": "Farmaceutiche/CTF (LM-13)",
+      "priority_modules": [7,8],
+      "requirements": {
+        "copertura_moduli": {"required_level": 5, "weight": 0.13},
+        "modulo7_tecniche": {"required_level": 5, "weight": 0.12},
+        "modulo8_omiche": {"required_level": 5, "weight": 0.12},
+        "modulo4_trascrizione": {"required_level": 4, "weight": 0.09},
+        "modulo6_epigenetica": {"required_level": 4, "weight": 0.09},
+        "modulo1_dna_rna": {"required_level": 3, "weight": 0.05},
+        "modulo2_genomi": {"required_level": 4, "weight": 0.08},
+        "modulo3_replicazione": {"required_level": 4, "weight": 0.09},
+        "modulo5_traduzione": {"required_level": 3, "weight": 0.06},
+        "modulo9_reti": {"required_level": 4, "weight": 0.09},
+        "modulo10_etica": {"required_level": 4, "weight": 0.09},
+        "modulo2_genomi": {"required_level": 3, "weight": 0.05}
+      }
+    }
+  ],
+  "manual_profiles": [
+    {
+      "id": "manuale_zanichelli_biol_molec",
+      "name": "Manuale Zanichelli Biologia Molecolare",
+      "scores": {
+        "copertura_moduli": 5,
+        "modulo7_tecniche": 5,
+        "modulo3_replicazione": 4,
+        "modulo8_omiche": 4
+      }
+    }
+  ],
+  "alignment_method": {
+    "description": "Allineamento = media ponderata dei criteri: score_i = max(0, 1 - |required_level_i - offered_score_i| / 4)",
+    "formula": "alignment = Σ(weight_i × score_i) / Σ(weight_i)",
+    "interpretation": {
+      "85-100": "Eccellente - Copertura esaustiva+applicativa - Adozione consigliata",
+      "70-84": "Buono - Solido con integrazioni - Raccomandato+integrazioni",
+      "55-69": "Sufficiente - Lacune significative - Con riserva",
+      "<55": "Sconsigliato - Incompleto/superficiale - Non adottare"
+    }
+  },
+  "example_match": {
+    "program_id": "biotecnologie_L2",
+    "manual_id": "manuale_zanichelli_biol_molec",
+    "overall_alignment": 89.5,
+    "judgment": "Eccellente",
+    "recommendation": "Eccellente su tecniche e reti; ideale per biotecnologie con minime integrazioni etiche.",
+    "strong_criteria": ["modulo7_tecniche", "modulo9_reti"],
+    "weak_criteria": ["modulo10_etica"]
+  }
+}

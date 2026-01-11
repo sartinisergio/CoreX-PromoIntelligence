@@ -1,0 +1,360 @@
+{
+  "framework": {
+    "name": "Framework Unico Valutazione Biochimica Generale",
+    "version": "1.0",
+    "description": "Framework integrato per valutare allineamento tra programmi di Biochimica Generale universitaria e manuali di testo, per contesti Biotecnologie(L-2), Biologiche(L-13), Chimica(L-27), Farmaceutiche(L-29/LM-13), Medicina(LM-41/LM-42), Sanitarie(LSNT).",
+    "date": "2026-01-11"
+  },
+  "scale": {
+    "1": "livello minimo/assente",
+    "2": "livello molto basso/sporadico",
+    "3": "livello moderato/base",
+    "4": "livello alto/articolato",
+    "5": "livello massimo/avanzato"
+  },
+  "syllabus_modules": [
+    {
+      "id": 1,
+      "name": "Struttura e proprietà dell'acqua e biomolecole",
+      "core_contents": ["Legami idrogeno", "Effetti idrofobici", "pH e tamponi", "Calcolo pH tamponi fosfato", "Biomolecole base"],
+      "learning_outcomes": ["Calcolare pH di tamponi biochimici", "Spiegare effetti idrofobici in folding", "Prevedere solubilità biomolecole"]
+    },
+    {
+      "id": 2,
+      "name": "Aminoacidi e proteine",
+      "core_contents": ["Strutture 1°-4°", "Folding e chaperoni", "Emoglobina e mioglobina", "Curva dissociazione O2", "Variazioni pH/CO2"],
+      "learning_outcomes": ["Descrivere strutture proteiche", "Interpretare spostamenti curva O2", "Analizzare ruolo chaperoni"]
+    },
+    {
+      "id": 3,
+      "name": "Enzimologia",
+      "core_contents": ["Cinetica Michaelis-Menten", "Inibizioni competitiva/non competitiva", "Regolazione allosterica", "Cofattori", "Grafici Lineweaver-Burk"],
+      "learning_outcomes": ["Distinguere tipi inibizione da grafici", "Calcolare Km/Vmax", "Valutare regolazione enzimatica"]
+    },
+    {
+      "id": 4,
+      "name": "Acidi nucleici e flusso informazione",
+      "core_contents": ["Struttura DNA/RNA", "Replicazione", "Trascrizione", "Traduzione", "Mutazione missenso"],
+      "learning_outcomes": ["Prevedere effetti mutazioni enzimi", "Descrivere flusso genetico", "Analizzare replicazione"]
+    },
+    {
+      "id": 5,
+      "name": "Membrane e trasporto",
+      "core_contents": ["Lipidi e modelli membrana", "Canali ionici", "Pompe Na+/K+-ATPasi", "Trasporto attivo/passivo", "Potenziale membrana"],
+      "learning_outcomes": ["Prevedere effetti inibizione pompe", "Spiegare modelli membrana", "Calcolare gradienti ionici"]
+    },
+    {
+      "id": 6,
+      "name": "Bioenergetica e metabolismo carboidrati",
+      "core_contents": ["ATP potenziali redox", "Glicolisi", "Ciclo Krebs", "Catena respiratoria", "Shuttle citosol-mitocondrio", "Bilancio ATP"],
+      "learning_outcomes": ["Calcolare bilancio ATP glicolisi", "Tracciare elettroni catena", "Analizzare fosforilazione"]
+    },
+    {
+      "id": 7,
+      "name": "Metabolismo lipidi",
+      "core_contents": ["Beta-ossidazione", "Sintesi acidi grassi", "Corpi chetonici", "Lipoproteine", "Effetto digiuno"],
+      "learning_outcomes": ["Spiegare chetogenesi digiuno", "Descrivere beta-ossidazione", "Valutare lipoproteine"]
+    },
+    {
+      "id": 8,
+      "name": "Metabolismo aminoacidi e azoto",
+      "core_contents": ["Transaminazioni", "Ciclo urea", "Catabolismo aminoacidico", "Iperammoniemia OTC"],
+      "learning_outcomes": ["Interpretare deficit ciclo urea", "Tracciare azoto aminoacidi", "Analizzare transaminazioni"]
+    },
+    {
+      "id": 9,
+      "name": "Metabolismo nucleotidi",
+      "core_contents": ["Sintesi de novo", "Sintesi salvataggio", "Regolazione", "Inibitori metotrexato"],
+      "learning_outcomes": ["Meccanismo metotrexato", "Distinguere vie sintesi", "Valutare regolazione"]
+    },
+    {
+      "id": 10,
+      "name": "Ormoni e integrazione metabolica",
+      "core_contents": ["Insulina glucagone adrenalina", "Post-prandiale/digiuno", "Effetti fegato muscolo adiposo", "Destino carboidrati"],
+      "learning_outcomes": ["Mappare effetti ormonali", "Prevedere stati metabolici", "Analizzare integrazione"]
+    },
+    {
+      "id": 11,
+      "name": "Tecniche laboratorio biochimico",
+      "core_contents": ["Spettrofotometria", "Cromatografia", "Elettroforesi", "Saggi enzimatici", "Centrifugazione", "Curva LDH"],
+      "learning_outcomes": ["Interpretare curve enzimatiche", "Descrivere separazioni", "Progettare saggi base"]
+    },
+    {
+      "id": 12,
+      "name": "Biochimica clinica base",
+      "core_contents": ["Pannelli AST/ALT ALP/GGT", "Bilirubina totale/diretta", "ABG acido-base", "Trasporto O2 emoglobina"],
+      "learning_outcomes": ["Interpretare pattern epatici", "Analizzare ABG", "Valutare emoglobina"]
+    }
+  ],
+  "criteria": [
+    {
+      "id": "copertura_moduli",
+      "name": "Copertura moduli syllabus",
+      "type": "contenuto",
+      "levels": {
+        "1": "Meno di 4 moduli sui 12 core",
+        "2": "4-6 moduli superficiali",
+        "3": "7-9 moduli base",
+        "4": "10-11 moduli articolati",
+        "5": "Tutti 12 moduli avanzati"
+      }
+    },
+    {
+      "id": "modulo1_acqua",
+      "name": "Proprietà acqua e tamponi",
+      "type": "contenuto",
+      "levels": {
+        "1": "Assente",
+        "2": "Solo definizioni base",
+        "3": "pH e legami H",
+        "4": "Calcoli tamponi semplici",
+        "5": "Applicazioni biomolecolari complete"
+      }
+    },
+    {
+      "id": "modulo2_proteine",
+      "name": "Strutture e funzioni proteine",
+      "type": "contenuto",
+      "levels": {
+        "1": "Solo aminoacidi",
+        "2": "Struttura primaria",
+        "3": "Strutture secondarie/terziarie",
+        "4": "Folding e emoglobina",
+        "5": "Allosterismo e patologie"
+      }
+    },
+    {
+      "id": "modulo3_enzimi",
+      "name": "Cinetica e regolazione enzimi",
+      "type": "contenuto",
+      "levels": {
+        "1": "Definizione enzima",
+        "2": "Solo MM base",
+        "3": "Inibizioni semplici",
+        "4": "Allosterismo e grafici",
+        "5": "Cofattori e applicazioni"
+      }
+    },
+    {
+      "id": "modulo4_nucleici",
+      "name": "Flusso informazione genetica",
+      "type": "contenuto",
+      "levels": {
+        "1": "Solo DNA/RNA",
+        "2": "Struttura base",
+        "3": "Trascrizione/traduzione",
+        "4": "Replicazione",
+        "5": "Mutazioni effetti enzimi"
+      }
+    },
+    {
+      "id": "modulo5_membrane",
+      "name": "Trasporto membranale",
+      "type": "contenuto",
+      "levels": {
+        "1": "Modello base",
+        "2": "Diffusion passiva",
+        "3": "Canali",
+        "4": "Pompe ATPasi",
+        "5": "Potenziali e patologie"
+      }
+    },
+    {
+      "id": "modulo6_bioenergetica",
+      "name": "Metabolismo carboidrati energetici",
+      "type": "contenuto",
+      "levels": {
+        "1": "Solo glicolisi",
+        "2": "Krebs base",
+        "3": "Catena ETC",
+        "4": "Shuttle e bilancio ATP",
+        "5": "Regolazione integrata"
+      }
+    },
+    {
+      "id": "modulo7_lipidi",
+      "name": "Metabolismo lipidi",
+      "type": "contenuto",
+      "levels": {
+        "1": "Classificazione",
+        "2": "Beta-ossidazione",
+        "3": "Sintesi grassi",
+        "4": "Chetogenesi",
+        "5": "Lipoproteine e disordini"
+      }
+    },
+    {
+      "id": "modulo8_amminoacidi",
+      "name": "Ciclo urea e azoto",
+      "type": "contenuto",
+      "levels": {
+        "1": "Aminoacidi base",
+        "2": "Transaminazioni",
+        "3": "Ciclo urea",
+        "4": "Catabolismo",
+        "5": "Patologie iperammoniemia"
+      }
+    },
+    {
+      "id": "modulo9_nucleotidi",
+      "name": "Vie nucleotidi",
+      "type": "contenuto",
+      "levels": {
+        "1": "Nucleotidi base",
+        "2": "De novo",
+        "3": "Salvataggio",
+        "4": "Regolazione",
+        "5": "Inibitori farmacologici"
+      }
+    },
+    {
+      "id": "modulo10_ormoni",
+      "name": "Integrazione metabolica ormonale",
+      "type": "contenuto",
+      "levels": {
+        "1": "Ormoni principali",
+        "2": "Effetti base",
+        "3": "Stati post/digiuno",
+        "4": "Tessuti specifici",
+        "5": "Patologie endocrine"
+      }
+    },
+    {
+      "id": "modulo11_tecniche",
+      "name": "Tecniche laboratorio",
+      "type": "didattico",
+      "levels": {
+        "1": "Teoria base",
+        "2": "Spettrofotometria",
+        "3": "Elettroforesi/cromatografia",
+        "4": "Saggi enzimatici",
+        "5": "Esperimenti integrati"
+      }
+    },
+    {
+      "id": "modulo12_clinica",
+      "name": "Applicazioni cliniche biochimica",
+      "type": "didattico",
+      "levels": {
+        "1": "Enzimi sierici base",
+        "2": "Pannelli epatici",
+        "3": "ABG analisi",
+        "4": "Interpretazione pattern",
+        "5": "Casi integrati diagnostici"
+      }
+    }
+  ],
+  "program_profiles": [
+    {
+      "id": "biotecnologie_l2",
+      "name": "Biotecnologie (L-2)",
+      "priority_modules": [3,6,7,11],
+      "requirements": {
+        "copertura_moduli": {"required_level": 5, "weight": 0.15},
+        "modulo3_enzimi": {"required_level": 5, "weight": 0.12},
+        "modulo6_bioenergetica": {"required_level": 4, "weight": 0.10},
+        "modulo11_tecniche": {"required_level": 5, "weight": 0.10},
+        "modulo12_clinica": {"required_level": 3, "weight": 0.08},
+        "modulo1_acqua": {"required_level": 3, "weight": 0.05},
+        "modulo2_proteine": {"required_level": 4, "weight": 0.07},
+        "modulo4_nucleici": {"required_level": 4, "weight": 0.08},
+        "modulo5_membrane": {"required_level": 3, "weight": 0.05},
+        "modulo7_lipidi": {"required_level": 4, "weight": 0.07},
+        "modulo8_amminoacidi": {"required_level": 3, "weight": 0.05},
+        "modulo9_nucleotidi": {"required_level": 4, "weight": 0.08},
+        "modulo10_ormoni": {"required_level": 3, "weight": 0.05}
+      }
+    },
+    {
+      "id": "biologiche_l13",
+      "name": "Scienze Biologiche (L-13)",
+      "priority_modules": [2,6,10,12],
+      "requirements": {
+        "copertura_moduli": {"required_level": 4, "weight": 0.15},
+        "modulo2_proteine": {"required_level": 5, "weight": 0.10},
+        "modulo6_bioenergetica": {"required_level": 5, "weight": 0.12},
+        "modulo10_ormoni": {"required_level": 4, "weight": 0.10},
+        "modulo12_clinica": {"required_level": 4, "weight": 0.09},
+        "modulo1_acqua": {"required_level": 4, "weight": 0.07},
+        "modulo3_enzimi": {"required_level": 4, "weight": 0.08},
+        "modulo4_nucleici": {"required_level": 5, "weight": 0.10},
+        "modulo5_membrane": {"required_level": 4, "weight": 0.07},
+        "modulo7_lipidi": {"required_level": 3, "weight": 0.05},
+        "modulo8_amminoacidi": {"required_level": 4, "weight": 0.08},
+        "modulo9_nucleotidi": {"required_level": 3, "weight": 0.05},
+        "modulo11_tecniche": {"required_level": 4, "weight": 0.09}
+      }
+    },
+    {
+      "id": "farmaceutiche_lm13",
+      "name": "Farmaceutiche/CTF (LM-13/L-29)",
+      "priority_modules": [3,9,12],
+      "requirements": {
+        "copertura_moduli": {"required_level": 5, "weight": 0.12},
+        "modulo3_enzimi": {"required_level": 4, "weight": 0.10},
+        "modulo9_nucleotidi": {"required_level": 5, "weight": 0.12},
+        "modulo12_clinica": {"required_level": 5, "weight": 0.11},
+        "modulo6_bioenergetica": {"required_level": 4, "weight": 0.09},
+        "modulo1_acqua": {"required_level": 3, "weight": 0.05},
+        "modulo2_proteine": {"required_level": 3, "weight": 0.05},
+        "modulo4_nucleici": {"required_level": 4, "weight": 0.09},
+        "modulo5_membrane": {"required_level": 3, "weight": 0.05},
+        "modulo7_lipidi": {"required_level": 4, "weight": 0.08},
+        "modulo8_amminoacidi": {"required_level": 3, "weight": 0.05},
+        "modulo10_ormoni": {"required_level": 4, "weight": 0.09},
+        "modulo11_tecniche": {"required_level": 4, "weight": 0.10}
+      }
+    },
+    {
+      "id": "medicina_lsnt_lm41",
+      "name": "Medicina/Sanitarie (LM-41/LSNT)",
+      "priority_modules": [8,10,12],
+      "requirements": {
+        "copertura_moduli": {"required_level": 4, "weight": 0.15},
+        "modulo8_amminoacidi": {"required_level": 4, "weight": 0.09},
+        "modulo10_ormoni": {"required_level": 5, "weight": 0.12},
+        "modulo12_clinica": {"required_level": 5, "weight": 0.14},
+        "modulo2_proteine": {"required_level": 4, "weight": 0.08},
+        "modulo3_enzimi": {"required_level": 3, "weight": 0.06},
+        "modulo6_bioenergetica": {"required_level": 4, "weight": 0.09},
+        "modulo1_acqua": {"required_level": 3, "weight": 0.05},
+        "modulo4_nucleici": {"required_level": 3, "weight": 0.06},
+        "modulo5_membrane": {"required_level": 4, "weight": 0.08},
+        "modulo7_lipidi": {"required_level": 4, "weight": 0.09},
+        "modulo9_nucleotidi": {"required_level": 3, "weight": 0.05},
+        "modulo11_tecniche": {"required_level": 3, "weight": 0.06}
+      }
+    }
+  ],
+  "manual_profiles": [
+    {
+      "id": "manuale_zanichelli_biochimica",
+      "name": "Manuale Zanichelli Biochimica Generale",
+      "scores": {
+        "copertura_moduli": 5,
+        "modulo3_enzimi": 5,
+        "modulo6_bioenergetica": 4,
+        "modulo12_clinica": 4
+      }
+    }
+  ],
+  "alignment_method": {
+    "description": "Allineamento = media ponderata dei criteri: score_i = max(0, 1 - |required_level_i - offered_score_i| / 4)",
+    "formula": "alignment = Σ(weight_i × score_i) / Σ(weight_i)",
+    "interpretation": {
+      "85-100": "Eccellente - Copertura esaustiva+applicativa - Adozione consigliata",
+      "70-84": "Buono - Solido con integrazioni - Raccomandato+integrazioni",
+      "55-69": "Sufficiente - Lacune significative - Con riserva",
+      "<55": "Sconsigliato - Incompleto/superficiale - Non adottare"
+    }
+  },
+  "example_match": {
+    "program_id": "biotecnologie_l2",
+    "manual_id": "manuale_zanichelli_biochimica",
+    "overall_alignment": 87.2,
+    "judgment": "Buono",
+    "recommendation": "Copertura eccellente su enzimi e bioenergetica; integrare con casi biotecnologici specifici.",
+    "strong_criteria": ["modulo3_enzimi", "modulo6_bioenergetica"],
+    "weak_criteria": ["modulo12_clinica"]
+  }
+}

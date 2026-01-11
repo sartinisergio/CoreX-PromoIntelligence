@@ -1,0 +1,446 @@
+{
+  "framework": {
+    "name": "Framework Unico Valutazione Microbiologia",
+    "version": "1.0",
+    "description": "Framework integrato per valutare allineamento tra programmi di Microbiologia universitaria e manuali di testo, per contesti L-13, L-2, LM-41, LM-13, L-26, L-32, Professioni Sanitarie, LM-42.",
+    "date": "2026-01-11"
+  },
+  "scale": {
+    "1": "livello minimo/assente",
+    "2": "livello molto basso/sporadico",
+    "3": "livello moderato/base",
+    "4": "livello alto/articolato",
+    "5": "livello massimo/avanzato"
+  },
+  "syllabus_modules": [
+    {
+      "id": 1,
+      "name": "Introduzione e biodiversità microbica",
+      "core_contents": [
+        "Batteri, archea, funghi, protozoi, alghe, virus, viroidi e prioni",
+        "Ruoli in natura e nella società",
+        "Esempi applicativi (es. lattobacilli nello yogurt)"
+      ],
+      "learning_outcomes": [
+        "Classificare i microrganismi principali",
+        "Identificare ruoli ecologici ed economici",
+        "Distinguere virus DNA/RNA"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Struttura e funzione della cellula microbica",
+      "core_contents": [
+        "Parete cellulare Gram+/−, membrana, spore, flagelli",
+        "Biofilm e resistenze associate",
+        "Esempi clinici (es. Pseudomonas su cateteri)"
+      ],
+      "learning_outcomes": [
+        "Descrivere strutture chiave",
+        "Spiegare formazione biofilm",
+        "Correlare struttura a virulenza"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Crescita, metabolismo e controllo",
+      "core_contents": [
+        "Curve di crescita, requisiti nutrizionali",
+        "Fattori fisici/chimici per controllo",
+        "Sterilizzazione vs disinfezione (autoclave vs filtrazione)"
+      ],
+      "learning_outcomes": [
+        "Interpretare curve di crescita",
+        "Selezionare metodi di controllo",
+        "Applicare norme di sicurezza"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Genetica e genomica microbica",
+      "core_contents": [
+        "Mutazioni, trasferimento orizzontale (conjugazione, trasformazione, trasduzione)",
+        "NGS, metagenomica, resistoma",
+        "Plasmidi e diffusione resistenze"
+      ],
+      "learning_outcomes": [
+        "Descrivere meccanismi genetici",
+        "Interpretare resistomi",
+        "Analizzare trasferimenti genici"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Virologia di base",
+      "core_contents": [
+        "Struttura, replicazione, cicli litico/lisogeno",
+        "Coltura virale, antivirali",
+        "Es. inibitori neuraminidasi vs coronavirus"
+      ],
+      "learning_outcomes": [
+        "Classificare virus",
+        "Spiegare cicli replicativi",
+        "Valutare antivirali"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Micologia e parassitologia essenziali",
+      "core_contents": [
+        "Lieviti/muffe rilevanti, protozoi, elminti",
+        "Diagnosi differenziale (Candida vs batteri)"
+      ],
+      "learning_outcomes": [
+        "Identificare patogeni",
+        "Interpretare colture emocolture",
+        "Applicare diagnostica"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Immunologia applicata alla microbiologia",
+      "core_contents": [
+        "Immunità innata/adattativa, vaccini",
+        "Test sierologici IgM/IgG",
+        "Immunopatologia"
+      ],
+      "learning_outcomes": [
+        "Interpretare profili immunitari",
+        "Valutare vaccini",
+        "Analizzare test sierologici"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Patogenesi, epidemiologia e prevenzione",
+      "core_contents": [
+        "Fattori virulenza, trasmissione, sorveglianza",
+        "Outbreak, stewardship antibiotica",
+        "Es. focolaio Salmonella"
+      ],
+      "learning_outcomes": [
+        "Analizzare patogenesi",
+        "Tracciare epidemie",
+        "Applicare stewardship"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Microbiologia ambientale e cicli biogeochimici",
+      "core_contents": [
+        "Cicli C/N/S, biodegradazione, microbiologia acque",
+        "Fanghi attivi depuratori"
+      ],
+      "learning_outcomes": [
+        "Descrivere cicli biogeochimici",
+        "Valutare biorisanamento",
+        "Monitorare qualità acque"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Microbiologia industriale e alimentare",
+      "core_contents": [
+        "Fermentazioni, starter, HACCP",
+        "Es. Grana Padano vs Gorgonzola"
+      ],
+      "learning_outcomes": [
+        "Progettare fermentazioni",
+        "Applicare HACCP",
+        "Selezionare starter"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Metodi di laboratorio e qualità",
+      "core_contents": [
+        "Colture, colorazioni, antibiogramma EUCAST, PCR, MALDI-TOF",
+        "BSL-1/2/3, GLP, gestione rifiuti"
+      ],
+      "learning_outcomes": [
+        "Eseguire protocolli diagnostici",
+        "Interpretare risultati",
+        "Applicare norme qualità"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Bioinformatica di base per microbiologia",
+      "core_contents": [
+        "Database NCBI/ENA, filogenesi, epidemiologia genomica",
+        "Confronto genomi per clonalità"
+      ],
+      "learning_outcomes": [
+        "Usare database",
+        "Costruire alberi filogenetici",
+        "Analizzare cluster genomici"
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "id": "copertura_moduli",
+      "name": "Copertura moduli dettagliata",
+      "type": "contenuto",
+      "levels": {
+        "1": "Copre <20% moduli o solo titoli",
+        "2": "Copre 20-40%, superficiale",
+        "3": "Copre 40-60%, base",
+        "4": "Copre 60-80%, con esempi",
+        "5": "Copre >80%, approfondito con casi"
+      }
+    },
+    {
+      "id": "biodiversita_struttura",
+      "name": "Biodiversità e struttura cellulare",
+      "type": "contenuto",
+      "levels": {
+        "1": "Elenco generico",
+        "2": "Descrizioni base",
+        "3": "Differenzia Gram/biofilm",
+        "4": "Esempi virulenza",
+        "5": "Meccanismi molecolari"
+      }
+    },
+    {
+      "id": "metabolismo_controllo",
+      "name": "Metabolismo e controllo microbico",
+      "type": "contenuto",
+      "levels": {
+        "1": "Concetti generici",
+        "2": "Curve crescita base",
+        "3": "Metodi sterilizzazione",
+        "4": "Fattori specifici",
+        "5": "Applicazioni contestuali"
+      }
+    },
+    {
+      "id": "genetica_resistenze",
+      "name": "Genetica, genomica e resistenze",
+      "type": "contenuto",
+      "levels": {
+        "1": "No menzione",
+        "2": "Mutazioni semplici",
+        "3": "Trasferimento genico",
+        "4": "Resistoma/metagenomica",
+        "5": "Epidemiologia genomica"
+      }
+    },
+    {
+      "id": "virologia_micologia",
+      "name": "Virologia, micologia e parassitologia",
+      "type": "contenuto",
+      "levels": {
+        "1": "Classificazione base",
+        "2": "Cicli virali semplici",
+        "3": "Patogeni principali",
+        "4": "Diagnostica differenziale",
+        "5": "Antivirali/terapie"
+      }
+    },
+    {
+      "id": "immunologia_epidemiologia",
+      "name": "Immunologia, patogenesi e epidemiologia",
+      "type": "contenuto",
+      "levels": {
+        "1": "Concetti generici",
+        "2": "Vaccini base",
+        "3": "Trasmissione",
+        "4": "Stewardship/outbreak",
+        "5": "Immunopatologia avanzata"
+      }
+    },
+    {
+      "id": "applicazioni_ambientali_alimentari",
+      "name": "Applicazioni ambientali, industriali, alimentari",
+      "type": "contenuto",
+      "levels": {
+        "1": "Menzione generica",
+        "2": "Esempi base",
+        "3": "Cicli/HACCP",
+        "4": "Biorisanamento/fermentazioni",
+        "5": "Modelli predittivi"
+      }
+    },
+    {
+      "id": "laboratorio_diagnostica",
+      "name": "Metodi laboratorio e diagnostica",
+      "type": "contenuto",
+      "levels": {
+        "1": "No protocolli",
+        "2": "Colorazioni base",
+        "3": "Antibiogramma",
+        "4": "PCR/MALDI-TOF",
+        "5": "Algoritmi diagnostici"
+      }
+    },
+    {
+      "id": "flessibilita_disciplinare",
+      "name": "Flessibilità per lauree diverse",
+      "type": "didattico",
+      "levels": {
+        "1": "Generico unico",
+        "2": "Box opzionali",
+        "3": "Percorsi suggeriti",
+        "4": "Focus per disciplina",
+        "5": "Moduli adattabili"
+      }
+    },
+    {
+      "id": "esemplificazione_pratica",
+      "name": "Esempli pratici e casi studio",
+      "type": "didattico",
+      "levels": {
+        "1": "Teorico astratto",
+        "2": "Esempi generici",
+        "3": "Casi italiani",
+        "4": "Outbreak reali",
+        "5": "Esercizi risolvibili"
+      }
+    },
+    {
+      "id": "integrazione_apparati",
+      "name": "Integrazione con apparati/clinica",
+      "type": "didattico",
+      "levels": {
+        "1": "Nessuna",
+        "2": "Riferimenti generici",
+        "3": "Tabella patogeni",
+        "4": "Percorsi clinici",
+        "5": "Algoritmi diagnostici"
+      }
+    },
+    {
+      "id": "supporto_laboratorio",
+      "name": "Supporto laboratorio/competenze",
+      "type": "didattico",
+      "levels": {
+        "1": "Nessun supporto",
+        "2": "Protocolli base",
+        "3": "Schede esperimenti",
+        "4": "Interpretazione dati",
+        "5": "Progettazione esperimenti"
+      }
+    },
+    {
+      "id": "bioinformatica_strumenti",
+      "name": "Strumenti bioinformatici e digitali",
+      "type": "didattico",
+      "levels": {
+        "1": "Nessuno",
+        "2": "Database citati",
+        "3": "Tutorial base",
+        "4": "Analisi filogenesi",
+        "5": "Pipeline epidemiologiche"
+      }
+    }
+  ],
+  "program_profiles": [
+    {
+      "id": "L13_ScienzeBiologiche",
+      "name": "L-13 Scienze Biologiche",
+      "priority_modules": [1,4,6,9,12],
+      "requirements": {
+        "copertura_moduli": {"required_level": 5, "weight": 0.15},
+        "genetica_resistenze": {"required_level": 5, "weight": 0.12},
+        "applicazioni_ambientali_alimentari": {"required_level": 4, "weight": 0.10},
+        "bioinformatica_strumenti": {"required_level": 4, "weight": 0.10},
+        "flessibilita_disciplinare": {"required_level": 4, "weight": 0.08}
+      }
+    },
+    {
+      "id": "L2_Biotecnologie",
+      "name": "L-2 Biotecnologie",
+      "priority_modules": [3,4,10,11],
+      "requirements": {
+        "copertura_moduli": {"required_level": 5, "weight": 0.15},
+        "applicazioni_ambientali_alimentari": {"required_level": 5, "weight": 0.15},
+        "laboratorio_diagnostica": {"required_level": 5, "weight": 0.12},
+        "supporto_laboratorio": {"required_level": 4, "weight": 0.10}
+      }
+    },
+    {
+      "id": "LM41_Medicina",
+      "name": "LM-41 Medicina e Chirurgia",
+      "priority_modules": [2,5,7,8,11],
+      "requirements": {
+        "copertura_moduli": {"required_level": 5, "weight": 0.18},
+        "virologia_micologia": {"required_level": 5, "weight": 0.12},
+        "immunologia_epidemiologia": {"required_level": 5, "weight": 0.12},
+        "integrazione_apparati": {"required_level": 5, "weight": 0.10}
+      }
+    },
+    {
+      "id": "LM13_Farmacia",
+      "name": "LM-13 Farmacia / CTF",
+      "priority_modules": [3,4,8,11],
+      "requirements": {
+        "copertura_moduli": {"required_level": 4, "weight": 0.15},
+        "genetica_resistenze": {"required_level": 5, "weight": 0.15},
+        "laboratorio_diagnostica": {"required_level": 4, "weight": 0.12},
+        "esemplificazione_pratica": {"required_level": 4, "weight": 0.10}
+      }
+    },
+    {
+      "id": "L26_Alimentari",
+      "name": "L-26 Scienze e Tecnologie Alimentari",
+      "priority_modules": [1,3,10,11],
+      "requirements": {
+        "copertura_moduli": {"required_level": 5, "weight": 0.18},
+        "applicazioni_ambientali_alimentari": {"required_level": 5, "weight": 0.15},
+        "esemplificazione_pratica": {"required_level": 4, "weight": 0.10}
+      }
+    },
+    {
+      "id": "L32_Ambientali",
+      "name": "L-32 Scienze Ambientali",
+      "priority_modules": [9,11,12],
+      "requirements": {
+        "copertura_moduli": {"required_level": 4, "weight": 0.15},
+        "applicazioni_ambientali_alimentari": {"required_level": 5, "weight": 0.15},
+        "bioinformatica_strumenti": {"required_level": 4, "weight": 0.12}
+      }
+    },
+    {
+      "id": "ProfessioniSanitarie",
+      "name": "Professioni Sanitarie (SNT1/3/4)",
+      "priority_modules": [2,3,8,11],
+      "requirements": {
+        "copertura_moduli": {"required_level": 4, "weight": 0.20},
+        "supporto_laboratorio": {"required_level": 4, "weight": 0.15},
+        "esemplificazione_pratica": {"required_level": 4, "weight": 0.12}
+      }
+    },
+    {
+      "id": "LM42_Veterinaria",
+      "name": "LM-42 Medicina Veterinaria",
+      "priority_modules": [1,6,8,9],
+      "requirements": {
+        "copertura_moduli": {"required_level": 4, "weight": 0.15},
+        "virologia_micologia": {"required_level": 5, "weight": 0.15},
+        "immunologia_epidemiologia": {"required_level": 4, "weight": 0.12},
+        "flessibilita_disciplinare": {"required_level": 4, "weight": 0.10}
+      }
+    }
+  ],
+  "manual_profiles": [],
+  "alignment_method": {
+    "description": "Allineamento = media ponderata dei criteri: score_i = max(0, 1 - |required_level_i - offered_score_i| / 4)",
+    "formula": "alignment = Σ(weight_i × score_i) / Σ(weight_i)",
+    "interpretation": {
+      "85-100": "Eccellente - Copertura esaustiva+applicativa - Adozione consigliata",
+      "70-84": "Buono - Solido con integrazioni - Raccomandato+integrazioni",
+      "55-69": "Sufficiente - Lacune significative - Con riserva",
+      "<55": "Sconsigliato - Incompleto/superficiale - Non adottare"
+    }
+  },
+  "example_match": {
+    "program_id": "LM41_Medicina",
+    "manual_id": "Manuale Esempio",
+    "overall_alignment": 87.2,
+    "judgment": "Eccellente",
+    "recommendation": "Copertura completa moduli clinici con eccellenti esempi diagnostici. Ideale per curricula medici.",
+    "strong_criteria": ["copertura_moduli", "virologia_micologia", "integrazione_apparati"],
+    "weak_criteria": []
+  }
+}

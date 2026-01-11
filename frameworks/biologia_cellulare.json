@@ -1,0 +1,360 @@
+{
+  "framework": {
+    "name": "Framework Unico Valutazione Biologia Cellulare",
+    "version": "1.0",
+    "description": "Framework integrato per valutare allineamento tra programmi di Biologia Cellulare universitaria e manuali di testo, per contesti Biologiche(L-13), Biotecnologie(L-2), Medicina(LM-41), Farmaceutiche(LM-13), Sanitarie(LSNT), Ingegneria Biomedica(L-8/9).",
+    "date": "2026-01-11"
+  },
+  "scale": {
+    "1": "livello minimo/assente",
+    "2": "livello molto basso/sporadico",
+    "3": "livello moderato/base",
+    "4": "livello alto/articolato",
+    "5": "livello massimo/avanzato"
+  },
+  "syllabus_modules": [
+    {
+      "id": 1,
+      "name": "Fondamenti chimico-fisici cellula",
+      "core_contents": ["Legami energia libera cinetica", "Tamponi acqua interazioni deboli", "Calcolo pI solubilità proteine", "Preparazione tamponi"],
+      "learning_outcomes": ["Calcolare pI proteine", "Preparare tamponi cellulari", "Spiegare interazioni deboli"]
+    },
+    {
+      "id": 2,
+      "name": "Macromolecole sovramolecolari",
+      "core_contents": ["Proteine folding domini", "Carboidrati lipidi nucleici", "Membrana mosaico fluido", "Curve denaturazione", "Diagrammi fase lipidici"],
+      "learning_outcomes": ["Interpretare denaturazione", "Descrivere mosaico fluido", "Analizzare diagrammi lipidi"]
+    },
+    {
+      "id": 3,
+      "name": "Organizzazione cellulare",
+      "core_contents": ["Procarioti vs eucarioti", "Nucleo RE Golgi mitocondri lisosomi", "Compartimentazione traffico", "Percorso secretorio", "Micrografie TEM fluorescenza"],
+      "learning_outcomes": ["Mappare traffico secretorio", "Analizzare micrografie", "Confrontare procarioti eucarioti"]
+    },
+    {
+      "id": 4,
+      "name": "Espressione genica regolazione",
+      "core_contents": ["Replicazione riparazione trascrizione", "Splicing traduzione epigenetica ncRNA", "Primer PCR", "Enhancer ChIP-seq"],
+      "learning_outcomes": ["Progettare primer PCR", "Analizzare enhancer ChIP", "Descrivere regolazione epigenetica"]
+    },
+    {
+      "id": 5,
+      "name": "Membrane e trasporto",
+      "core_contents": ["Diffusione canali pompe cotrasporti", "Potenziale membrana segnali elettrici", "Trasporto facilitato", "Calcolo Nernst Goldman"],
+      "learning_outcomes": ["Simulare trasporto facilitato", "Calcolare potenziali Nernst", "Spiegare pompe cotrasporti"]
+    },
+    {
+      "id": 6,
+      "name": "Segnalazione cellulare",
+      "core_contents": ["Recettori GPCR RTK", "Secondi messaggeri MAPK PI3K", "Wnt Notch TGF-β", "Curve dose-risposta inibitori"],
+      "learning_outcomes": ["Predire effetti inibitori pathway", "Schema cascate segnali", "Analizzare integrazione segnali"]
+    },
+    {
+      "id": 7,
+      "name": "Citoscheletro adesione ECM",
+      "core_contents": ["Microtubuli actina intermedi", "Motori molecolari giunzioni", "Matrice extracellulare", "Dinamica polimerizzazione", "Saggio migrazione"],
+      "learning_outcomes": ["Analizzare polimerizzazione", "Progettare saggio migrazione", "Descrivere giunzioni ECM"]
+    },
+    {
+      "id": 8,
+      "name": "Ciclo cellulare morte differenziamento",
+      "core_contents": ["Checkpoint mitosi meiosi", "Apoptosi autofagia senescenza", "Cellule staminali", "Istogrammi FACS DNA", "Esperimento differenziamento"],
+      "learning_outcomes": ["Interpretare FACS ciclo cellulare", "Disegnare differenziamento", "Spiegare apoptosi senescenza"]
+    },
+    {
+      "id": 9,
+      "name": "Metabolismo bioenergetica cellulare",
+      "core_contents": ["Glicolisi TCA OXPHOS", "Lipidi amminoacidi controllo", "Effetto Warburg", "Bilancio energetico", "Tracciati Seahorse"],
+      "learning_outcomes": ["Bilancio energetico condizioni", "Interpretare Seahorse", "Analizzare Warburg"]
+    },
+    {
+      "id": 10,
+      "name": "Traffico proteico proteostasi",
+      "core_contents": ["Sorting ubiquitina proteasoma", "Lisosomi autofagia UPR", "Segnali localizzazione", "Saggio degradazione"],
+      "learning_outcomes": ["Predire localizzazione", "Disegnare degradazione", "Descrivere proteostasi"]
+    },
+    {
+      "id": 11,
+      "name": "Genomica proteomica tecnologie",
+      "core_contents": ["PCR qPCR clonaggio CRISPR RNAi", "NGS single-cell Western ELISA", "Imaging fluorescenza confocale", "Estrazione DNA PCR gel trasfezione IF"],
+      "learning_outcomes": ["Eseguire PCR estrazione", "Descrivere CRISPR imaging", "Analizzare Western ELISA"]
+    },
+    {
+      "id": 12,
+      "name": "Oncobiologia microambiente",
+      "core_contents": ["Hallmarks instabilità genomica", "Angiogenesi metastasi tumore-stroma", "Varianti driver passenger", "Pathway oncogenici"],
+      "learning_outcomes": ["Analizzare driver passenger", "Interpretare hallmarks", "Diagramma oncogenici"]
+    }
+  ],
+  "criteria": [
+    {
+      "id": "copertura_moduli",
+      "name": "Copertura moduli syllabus",
+      "type": "contenuto",
+      "levels": {
+        "1": "Meno di 5 moduli sui 12 core",
+        "2": "5-7 moduli superficiali",
+        "3": "8 moduli base",
+        "4": "9-11 moduli articolati",
+        "5": "Tutti 12 moduli avanzati"
+      }
+    },
+    {
+      "id": "modulo1_fondamenti",
+      "name": "Chimico-fisici cellula",
+      "type": "contenuto",
+      "levels": {
+        "1": "Assente",
+        "2": "Legami base",
+        "3": "Energia tamponi",
+        "4": "Calcoli pI solubilità",
+        "5": "Preparazione tamponi applicazioni"
+      }
+    },
+    {
+      "id": "modulo2_macromolecole",
+      "name": "Macromolecole membrana",
+      "type": "contenuto",
+      "levels": {
+        "1": "Proteine base",
+        "2": "Folding domini",
+        "3": "Mosaico fluido",
+        "4": "Denaturazione lipidi",
+        "5": "Diagrammi fase complete"
+      }
+    },
+    {
+      "id": "modulo3_organizzazione",
+      "name": "Organizzazione compartimenti",
+      "type": "contenuto",
+      "levels": {
+        "1": "Procarioti eucarioti",
+        "2": "Organelli principali",
+        "3": "Traffico secretorio",
+        "4": "Micrografie TEM",
+        "5": "Compartimentazione avanzata"
+      }
+    },
+    {
+      "id": "modulo4_espressione",
+      "name": "Espressione genica",
+      "type": "contenuto",
+      "levels": {
+        "1": "Trascrizione base",
+        "2": "PCR primer",
+        "3": "Regolazione epigenetica",
+        "4": "ChIP-seq enhancer",
+        "5": "ncRNA splicing completo"
+      }
+    },
+    {
+      "id": "modulo5_trasporto",
+      "name": "Membrane trasporto",
+      "type": "contenuto",
+      "levels": {
+        "1": "Diffusione",
+        "2": "Canali pompe",
+        "3": "Cotrasporti",
+        "4": "Nernst Goldman",
+        "5": "Segnali elettrici simulazioni"
+      }
+    },
+    {
+      "id": "modulo6_segnazione",
+      "name": "Segnalazione cellulare",
+      "type": "contenuto",
+      "levels": {
+        "1": "Recettori base",
+        "2": "Secondi messaggeri",
+        "3": "MAPK PI3K",
+        "4": "Wnt Notch",
+        "5": "Integrazione dose-risposta"
+      }
+    },
+    {
+      "id": "modulo7_citoscheletro",
+      "name": "Citoscheletro ECM",
+      "type": "contenuto",
+      "levels": {
+        "1": "Actina microtubuli",
+        "2": "Motori giunzioni",
+        "3": "Polimerizzazione",
+        "4": "Saggi migrazione",
+        "5": "ECM interazioni complete"
+      }
+    },
+    {
+      "id": "modulo8_ciclo",
+      "name": "Ciclo morte differenziamento",
+      "type": "contenuto",
+      "levels": {
+        "1": "Mitosi base",
+        "2": "Checkpoint",
+        "3": "Apoptosi autofagia",
+        "4": "FACS DNA",
+        "5": "Staminali senescenza"
+      }
+    },
+    {
+      "id": "modulo9_metabolismo",
+      "name": "Metabolismo bioenergetica",
+      "type": "contenuto",
+      "levels": {
+        "1": "Glicolisi",
+        "2": "TCA OXPHOS",
+        "3": "Controllo metabolico",
+        "4": "Warburg Seahorse",
+        "5": "Bilanci energetici integrati"
+      }
+    },
+    {
+      "id": "modulo10_proteostasi",
+      "name": "Traffico proteostasi",
+      "type": "contenuto",
+      "levels": {
+        "1": "Sorting base",
+        "2": "Proteasoma autofagia",
+        "3": "Segnali localizzazione",
+        "4": "Saggi degradazione",
+        "5": "UPR completo"
+      }
+    },
+    {
+      "id": "modulo11_tecnologie",
+      "name": "Tecnologie sperimentali",
+      "type": "didattico",
+      "levels": {
+        "1": "PCR base",
+        "2": "Clonaggio CRISPR",
+        "3": "Western imaging",
+        "4": "Trasfezione IF",
+        "5": "NGS single-cell lab"
+      }
+    },
+    {
+      "id": "modulo12_oncobiologia",
+      "name": "Oncobiologia microambiente",
+      "type": "didattico",
+      "levels": {
+        "1": "Hallmarks base",
+        "2": "Instabilità genomica",
+        "3": "Angiogenesi metastasi",
+        "4": "Driver passenger",
+        "5": "Tumore-stroma pathway"
+      }
+    }
+  ],
+  "program_profiles": [
+    {
+      "id": "biologiche_L13",
+      "name": "Scienze Biologiche (L-13)",
+      "priority_modules": [3,8,9],
+      "requirements": {
+        "copertura_moduli": {"required_level": 4, "weight": 0.12},
+        "modulo3_organizzazione": {"required_level": 5, "weight": 0.10},
+        "modulo8_ciclo": {"required_level": 4, "weight": 0.09},
+        "modulo9_metabolismo": {"required_level": 4, "weight": 0.09},
+        "modulo1_fondamenti": {"required_level": 4, "weight": 0.08},
+        "modulo2_macromolecole": {"required_level": 4, "weight": 0.08},
+        "modulo4_espressione": {"required_level": 4, "weight": 0.09},
+        "modulo5_trasporto": {"required_level": 3, "weight": 0.07},
+        "modulo6_segnazione": {"required_level": 4, "weight": 0.09},
+        "modulo7_citoscheletro": {"required_level": 4, "weight": 0.09},
+        "modulo10_proteostasi": {"required_level": 3, "weight": 0.07},
+        "modulo11_tecnologie": {"required_level": 4, "weight": 0.09},
+        "modulo12_oncobiologia": {"required_level": 3, "weight": 0.07}
+      }
+    },
+    {
+      "id": "biotecnologie_L2",
+      "name": "Biotecnologie (L-2)",
+      "priority_modules": [10,11],
+      "requirements": {
+        "copertura_moduli": {"required_level": 5, "weight": 0.13},
+        "modulo10_proteostasi": {"required_level": 5, "weight": 0.10},
+        "modulo11_tecnologie": {"required_level": 5, "weight": 0.12},
+        "modulo4_espressione": {"required_level": 5, "weight": 0.10},
+        "modulo6_segnazione": {"required_level": 4, "weight": 0.09},
+        "modulo1_fondamenti": {"required_level": 3, "weight": 0.06},
+        "modulo2_macromolecole": {"required_level": 4, "weight": 0.08},
+        "modulo3_organizzazione": {"required_level": 4, "weight": 0.08},
+        "modulo5_trasporto": {"required_level": 4, "weight": 0.08},
+        "modulo7_citoscheletro": {"required_level": 3, "weight": 0.06},
+        "modulo8_ciclo": {"required_level": 4, "weight": 0.09},
+        "modulo9_metabolismo": {"required_level": 4, "weight": 0.08},
+        "modulo12_oncobiologia": {"required_level": 3, "weight": 0.03}
+      }
+    },
+    {
+      "id": "medicina_LM41",
+      "name": "Medicina (LM-41)",
+      "priority_modules": [6,8,12],
+      "requirements": {
+        "copertura_moduli": {"required_level": 4, "weight": 0.14},
+        "modulo6_segnazione": {"required_level": 5, "weight": 0.12},
+        "modulo8_ciclo": {"required_level": 5, "weight": 0.11},
+        "modulo12_oncobiologia": {"required_level": 5, "weight": 0.12},
+        "modulo9_metabolismo": {"required_level": 4, "weight": 0.09},
+        "modulo1_fondamenti": {"required_level": 3, "weight": 0.06},
+        "modulo2_macromolecole": {"required_level": 3, "weight": 0.06},
+        "modulo3_organizzazione": {"required_level": 4, "weight": 0.08},
+        "modulo4_espressione": {"required_level": 4, "weight": 0.09},
+        "modulo5_trasporto": {"required_level": 4, "weight": 0.08},
+        "modulo7_citoscheletro": {"required_level": 3, "weight": 0.06},
+        "modulo10_proteostasi": {"required_level": 4, "weight": 0.08},
+        "modulo11_tecnologie": {"required_level": 3, "weight": 0.05}
+      }
+    },
+    {
+      "id": "farmaceutiche_LM13",
+      "name": "Farmaceutiche/CTF (LM-13)",
+      "priority_modules": [5,6,11],
+      "requirements": {
+        "copertura_moduli": {"required_level": 5, "weight": 0.12},
+        "modulo5_trasporto": {"required_level": 4, "weight": 0.10},
+        "modulo6_segnazione": {"required_level": 5, "weight": 0.12},
+        "modulo11_tecnologie": {"required_level": 5, "weight": 0.11},
+        "modulo12_oncobiologia": {"required_level": 4, "weight": 0.10},
+        "modulo1_fondamenti": {"required_level": 3, "weight": 0.06},
+        "modulo2_macromolecole": {"required_level": 3, "weight": 0.06},
+        "modulo3_organizzazione": {"required_level": 3, "weight": 0.06},
+        "modulo4_espressione": {"required_level": 4, "weight": 0.09},
+        "modulo7_citoscheletro": {"required_level": 3, "weight": 0.06},
+        "modulo8_ciclo": {"required_level": 4, "weight": 0.09},
+        "modulo9_metabolismo": {"required_level": 4, "weight": 0.08},
+        "modulo10_proteostasi": {"required_level": 3, "weight": 0.05}
+      }
+    }
+  ],
+  "manual_profiles": [
+    {
+      "id": "manuale_zanichelli_cellulare",
+      "name": "Manuale Zanichelli Biologia Cellulare",
+      "scores": {
+        "copertura_moduli": 5,
+        "modulo6_segnazione": 5,
+        "modulo11_tecnologie": 4,
+        "modulo12_oncobiologia": 4
+      }
+    }
+  ],
+  "alignment_method": {
+    "description": "Allineamento = media ponderata dei criteri: score_i = max(0, 1 - |required_level_i - offered_score_i| / 4)",
+    "formula": "alignment = Σ(weight_i × score_i) / Σ(weight_i)",
+    "interpretation": {
+      "85-100": "Eccellente - Copertura esaustiva+applicativa - Adozione consigliata",
+      "70-84": "Buono - Solido con integrazioni - Raccomandato+integrazioni",
+      "55-69": "Sufficiente - Lacune significative - Con riserva",
+      "<55": "Sconsigliato - Incompleto/superficiale - Non adottare"
+    }
+  },
+  "example_match": {
+    "program_id": "medicina_LM41",
+    "manual_id": "manuale_zanichelli_cellulare",
+    "overall_alignment": 88.3,
+    "judgment": "Buono",
+    "recommendation": "Ottimo su segnalazione e oncobiologia; integrare con casi patologici specifici.",
+    "strong_criteria": ["modulo6_segnazione", "modulo12_oncobiologia"],
+    "weak_criteria": ["modulo10_proteostasi"]
+  }
+}
