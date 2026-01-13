@@ -1,7 +1,8 @@
 """
-Framework Adapter per CoreX v3.1
+Framework Adapter per CoreX v3.2
 Mappa i concetti estratti sui MODULI del framework IDEALE
 Calcola copertura individuale per ogni syllabus
+Supporta sia formato vecchio (moduli/criteri) che nuovo (syllabus_modules/criteria)
 """
 
 import json
@@ -16,25 +17,13 @@ class FrameworkAdapter:
     """
     Mappa i concetti estratti dai programmi reali sulla struttura del framework ideale.
     Il framework ideale definisce la struttura, quello reale misura quanto è coperta.
+    Supporta due formati di framework:
+    - Formato A (vecchio): {"materia": ..., "moduli": [...], "criteri": [...]}
+    - Formato B (nuovo): {"framework": {...}, "syllabus_modules": [...], "criteria": [...]}
     """
     
     def __init__(self, frameworks_dir: Path = None):
         self.frameworks_dir = frameworks_dir or Path("frameworks")
-        self.framework_mapping = {
-            "chimica_organica": "chimica_organica.json",
-            "chimica_generale": "chimica_generale.json",
-            "analisi_matematica_1": "analisi_matematica_1.json",
-            "analisi_matematica_2": "analisi_matematica_2.json",
-            "fisica_generale_1": "fisica_generale_1.json",
-            "fisica_generale_2": "fisica_generale_2.json",
-            "fisica_generale_bioscienze": "fisica_generale_bioscienze.json",
-            "fisica_bioscienze": "fisica_generale_bioscienze.json",
-            "economia_politica": "economia_politica.json",
-            "macroeconomia": "macroeconomia.json",
-            "microeconomia": "microeconomia.json",
-            "matematica_bioscienze": "matematica_bioscienze.json",
-            "istologia": "istologia.json",
-        }
         
         # Espansione semantica: sinonimi e varianti per migliorare il matching
         self.semantic_expansions = {
@@ -112,29 +101,110 @@ class FrameworkAdapter:
         }
     
     def find_framework(self, materia: str) -> Optional[Path]:
-        """Trova il framework ideale corrispondente alla materia"""
+        """
+        Trova il framework ideale corrispondente alla materia.
+        Cerca automaticamente tutti i file JSON nella cartella frameworks.
+        """
+        if not self.frameworks_dir.exists():
+            return None
+        
         materia_lower = materia.lower().replace(" ", "_")
         
-        if materia_lower in self.framework_mapping:
-            fw_path = self.frameworks_dir / self.framework_mapping[materia_lower]
-            if fw_path.exists():
-                return fw_path
+        # Cerca corrispondenza esatta (case-insensitive)
+        for fw_file in self.frameworks_dir.glob("*.json"):
+            filename_lower = fw_file.stem.lower()
+            if filename_lower == materia_lower:
+                return fw_file
         
-        for key, filename in self.framework_mapping.items():
-            if key in materia_lower or materia_lower in key:
-                fw_path = self.frameworks_dir / filename
-                if fw_path.exists():
-                    return fw_path
+        # Cerca corrispondenza parziale
+        for fw_file in self.frameworks_dir.glob("*.json"):
+            filename_lower = fw_file.stem.lower()
+            if filename_lower in materia_lower or materia_lower in filename_lower:
+                return fw_file
+        
+        # Cerca dentro i file JSON per il campo materia/name
+        for fw_file in self.frameworks_dir.glob("*.json"):
+            try:
+                with open(fw_file, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                
+                # Formato A: campo "materia" al primo livello
+                if "materia" in data:
+                    if materia_lower in data["materia"].lower().replace(" ", "_"):
+                        return fw_file
+                
+                # Formato B: campo "framework.name"
+                if "framework" in data and "name" in data["framework"]:
+                    fw_name = data["framework"]["name"].lower()
+                    if materia_lower in fw_name.replace(" ", "_"):
+                        return fw_file
+            except:
+                continue
         
         return None
     
     def load_framework(self, materia: str) -> Optional[Dict]:
-        """Carica il framework ideale JSON per una materia"""
+        """
+        Carica il framework ideale JSON per una materia.
+        Normalizza automaticamente la struttura per supportare entrambi i formati.
+        """
         fw_path = self.find_framework(materia)
-        if fw_path:
-            with open(fw_path, "r", encoding="utf-8") as f:
-                return json.load(f)
-        return None
+        if not fw_path:
+            return None
+        
+        with open(fw_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        
+        # Normalizza la struttura
+        return self._normalize_framework(data)
+    
+    def _normalize_framework(self, data: Dict) -> Dict:
+        """
+        Normalizza il framework per avere una struttura consistente.
+        Converte Formato B (nuovo) in struttura compatibile con il resto del codice.
+        """
+        # Se ha già "syllabus_modules", è già nel formato che ci aspettiamo internamente
+        if "syllabus_modules" in data:
+            # Assicuriamoci che i moduli abbiano "core_contents"
+            for mod in data.get("syllabus_modules", []):
+                if "core_contents" not in mod and "contents" in mod:
+                    mod["core_contents"] = mod["contents"]
+            return data
+        
+        # Se ha "moduli" (Formato A vecchio), converti a "syllabus_modules"
+        if "moduli" in data:
+            normalized = data.copy()
+            
+            # Converti moduli -> syllabus_modules
+            syllabus_modules = []
+            for mod in data.get("moduli", []):
+                new_mod = {
+                    "id": mod.get("id"),
+                    "name": mod.get("nome", mod.get("name", "")),
+                    "core_contents": mod.get("sottoargomenti", mod.get("core_contents", []))
+                }
+                syllabus_modules.append(new_mod)
+            
+            normalized["syllabus_modules"] = syllabus_modules
+            
+            # Crea struttura framework se non esiste
+            if "framework" not in normalized:
+                normalized["framework"] = {
+                    "name": data.get("materia", "Framework"),
+                    "version": data.get("versione", "1.0"),
+                    "description": "",
+                    "date": data.get("data_aggiornamento", "")
+                }
+            
+            return normalized
+        
+        # Se ha "framework" ma non syllabus_modules (struttura parziale)
+        if "framework" in data and "modules" in data:
+            data["syllabus_modules"] = data["modules"]
+            return data
+        
+        # Ritorna i dati così come sono se non riconosciamo la struttura
+        return data
     
     def _normalize_text(self, text: str) -> str:
         """Normalizza il testo per il matching"""
@@ -334,13 +404,6 @@ class FrameworkAdapter:
     ) -> Tuple[float, int, int]:
         """
         Calcola la copertura del framework ideale per un singolo syllabus.
-        
-        Args:
-            syllabus_concepts: Set di concetti (lowercase) di questo syllabus
-            module_mapping: Mapping dei moduli ideali
-            
-        Returns:
-            Tuple (percentuale_copertura, contenuti_coperti, contenuti_totali)
         """
         contents_covered = 0
         total_contents = 0
@@ -349,7 +412,6 @@ class FrameworkAdapter:
             total_contents += mod_data["n_contents_total"]
             
             for content in mod_data["core_contents"]:
-                # Verifica se questo syllabus copre questo contenuto
                 for concept in syllabus_concepts:
                     if self._concept_matches_content(concept, content):
                         contents_covered += 1
@@ -420,28 +482,21 @@ class FrameworkAdapter:
         for key in modules_by_coverage:
             modules_by_coverage[key].sort(key=lambda x: x["coverage_percentage"], reverse=True)
         
-        # ========================================================
-        # CALCOLO COPERTURA INDIVIDUALE PER OGNI SYLLABUS
-        # ========================================================
-        
+        # Calcolo copertura individuale per ogni syllabus
         syllabus_details = []
         
-        # Calcola media concetti per riferimento ampiezza
         all_n_concepts = [s.get("n_concepts", 0) for s in syllabus_data]
         avg_concepts = sum(all_n_concepts) / len(all_n_concepts) if all_n_concepts else 0
         
         for i, s in enumerate(syllabus_data):
-            # Recupera i concetti di questo specifico syllabus
             syllabus_concepts = set(c.lower() for c in s.get("concepts", []))
             n_concepts = s.get("n_concepts", len(syllabus_concepts))
             
-            # Calcola copertura del framework ideale per QUESTO syllabus
             ideal_coverage, contents_covered, total_contents = self.calculate_syllabus_ideal_coverage(
                 syllabus_concepts, 
                 module_mapping
             )
             
-            # Determina profilo basato su copertura
             if ideal_coverage >= 55:
                 judgment = "Programma completo"
             elif ideal_coverage >= 40:
@@ -463,20 +518,20 @@ class FrameworkAdapter:
                 "judgment": judgment
             })
         
-        # ========================================================
-        # COSTRUISCI OUTPUT FINALE
-        # ========================================================
+        # Estrai info framework (compatibile con entrambi i formati)
+        framework_info = ideal_framework.get("framework", {})
+        framework_name = framework_info.get("name", ideal_framework.get("materia", "N/D"))
         
         output = {
             "meta": {
-                "generated_by": "CoreX v3.1",
+                "generated_by": "CoreX v3.2",
                 "date": datetime.now().isoformat(),
                 "materia": materia,
                 "classes_analyzed": classi_analizzate,
                 "analysis_type": "mapping_to_ideal_framework"
             },
             "ideal_framework_info": {
-                "name": ideal_framework.get("framework", {}).get("name", "N/D"),
+                "name": framework_name,
                 "n_modules": len(ideal_framework.get("syllabus_modules", [])),
                 "total_core_contents": sum(
                     len(m.get("core_contents", []))
@@ -565,7 +620,7 @@ class FrameworkAdapter:
         
         return {
             "meta": {
-                "generated_by": "CoreX v3.1",
+                "generated_by": "CoreX v3.2",
                 "date": datetime.now().isoformat(),
                 "materia": materia,
                 "classes_analyzed": classi_analizzate,
